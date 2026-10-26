@@ -5,9 +5,12 @@
  * nguyên nên link/bookmark cũ không vỡ. Dùng chung cho tab chương (desktop)
  * và bottom nav (mobile) để hai nơi không bao giờ lệch nhau.
  *
- * /journal/error-log và /journal/booking không có mặt ở đây vì chúng chỉ là
- * redirect sang /journal/scores và /journal/schedule — đưa vào chỉ mục thì
- * bấm xong tab sẽ sáng sai chỗ. Link cũ vẫn chạy như trước.
+ * Một route có thể chia thành nhiều mục bằng ?tab= (Nhật ký lỗi, Paraphrase,
+ * Đặt lịch) — trang đọc tham số này để quyết định mục đang xem, nên không cần
+ * thanh tab riêng bên trong và link chia sẻ được.
+ *
+ * /journal/error-log và /journal/booking chỉ là redirect sang scores/schedule
+ * nên không có mặt ở đây; link cũ vẫn chạy như trước.
  */
 
 import {

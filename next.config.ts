@@ -33,13 +33,20 @@ const nextConfig: NextConfig = {
           { key: "Referrer-Policy",            value: "strict-origin-when-cross-origin" },
         ],
       },
-      {
-        // Long-cache for immutable Next.js static assets
-        source: "/_next/static/(.*)",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
-        ],
-      },
+      // Long-cache for immutable Next.js static assets.
+      // Chỉ áp ở production: ở dev, tên chunk không đổi theo nội dung nên
+      // trình duyệt sẽ giữ JS/CSS cũ mãi, sửa code xem không thấy đổi
+      // (chính Next cũng cảnh báo "can break Next.js development behavior").
+      ...(process.env.NODE_ENV === "production"
+        ? [
+            {
+              source: "/_next/static/(.*)",
+              headers: [
+                { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+              ],
+            },
+          ]
+        : []),
       {
         // Cache SVG icons + manifest
         source: "/(icon.*\\.svg|manifest\\.json)",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { useProfile } from "@/hooks/useProfile";
@@ -484,14 +484,11 @@ function RequestForm({ onSubmit }: { onSubmit: (date: string, time: string, topi
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function SchedulePage() {
+  // Mục đang xem do ?tab= quyết định — dải mục của chương là nơi điều khiển,
+  // nên trang không giữ thêm một thanh tab riêng nữa.
   const searchParams = useSearchParams();
-  const [activeTab, setActiveTab] = useState<"schedule" | "booking">(
-    searchParams.get("tab") === "booking" ? "booking" : "schedule"
-  );
-
-  useEffect(() => {
-    if (searchParams.get("tab") === "booking") setActiveTab("booking");
-  }, [searchParams]);
+  const activeTab: "schedule" | "booking" =
+    searchParams.get("tab") === "booking" ? "booking" : "schedule";
 
   const { profile } = useProfile();
   const { student, loading: stuLoading } = useStudent(profile?.studentCode);
@@ -598,58 +595,16 @@ export default function SchedulePage() {
 
   return (
     <div style={{ maxWidth: 620, margin: "0 auto" }}>
-      <PageHeading title="Lịch học" note="Lịch cá nhân và lịch lớp gộp chung" />
-
-      {/* Tab switcher */}
-      <div style={{ display: "flex", gap: ".4rem", marginBottom: "1.2rem" }}>
-        {(["schedule", "booking"] as const).map((tab) => {
-          const active = activeTab === tab;
-          return (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              style={{
-                position: "relative",
-                padding: ".45rem 1rem",
-                fontSize: ".75rem",
-                fontWeight: 700,
-                letterSpacing: ".04em",
-                border: "1px solid",
-                borderColor: active ? "#C4622D" : "var(--border,#DDD0BC)",
-                background: active ? "rgba(196,98,45,.09)" : "transparent",
-                color: active ? "#C4622D" : "#9A8672",
-                cursor: "pointer",
-                borderRadius: 6,
-                transition: "all .15s",
-              }}
-            >
-              {tab === "schedule" ? "🗓 Lịch học" : "📅 Đặt lịch"}
-              {/* Badge for pending bookings on Đặt lịch tab */}
-              {tab === "booking" && pendingCount > 0 && (
-                <span
-                  style={{
-                    position: "absolute",
-                    top: -6,
-                    right: -6,
-                    width: 16,
-                    height: 16,
-                    borderRadius: "50%",
-                    background: "#C4622D",
-                    color: "#fff",
-                    fontSize: ".55rem",
-                    fontWeight: 700,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  {pendingCount}
-                </span>
-              )}
-            </button>
-          );
-        })}
-      </div>
+      <PageHeading
+        title={activeTab === "booking" ? "Đặt lịch" : "Lịch học"}
+        note={
+          activeTab === "booking"
+            ? pendingCount > 0
+              ? `${pendingCount} yêu cầu đang chờ thầy duyệt`
+              : "Chọn khung giờ trống hoặc đề xuất giờ học"
+            : "Lịch cá nhân và lịch lớp gộp chung"
+        }
+      />
 
       {/* ── Tab 1: Lịch học ─────────────────────────────────────────────────── */}
       {activeTab === "schedule" && (

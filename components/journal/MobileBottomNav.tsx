@@ -84,7 +84,12 @@ export function MobileBottomNav({ studentCode }: { studentCode?: string | null }
             </span>
             <span
               className="hand"
-              style={{ fontSize: "0.86rem", fontWeight: active ? 700 : 500, lineHeight: 1.1 }}
+              style={{
+                fontSize: "0.74rem",
+                fontWeight: active ? 700 : 500,
+                lineHeight: 1.1,
+                whiteSpace: "nowrap",
+              }}
             >
               {ch.labelVi}
             </span>
