@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect, useRef } from "react";
+import Link from "next/link";
 import { useProfile } from "@/hooks/useProfile";
 import { useVocab } from "@/hooks/firebase/useVocab";
 import { deleteVocabWord, saveForgottenWords, loadForgottenWords } from "@/lib/firebase/helpers";
@@ -1839,6 +1840,15 @@ export default function VocabPage() {
                   `${words.length} từ đã ghi${dueWords.length > 0 ? ` · ${dueWords.length} từ đến hạn ôn` : ""}`,
                   `${words.length} words${dueWords.length > 0 ? ` · ${dueWords.length} due for review` : ""}`
                 )
+          }
+          actions={
+            <Link
+              href="/journal/vocab/decks"
+              className="px-3 py-2 rounded-lg text-sm font-semibold"
+              style={{ background: "var(--accent-primary)", color: "#fff" }}
+            >
+              🗂️ {t("Bộ thẻ", "Decks")}
+            </Link>
           }
         />
 
