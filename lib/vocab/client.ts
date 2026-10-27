@@ -212,3 +212,14 @@ export function enrichWords(words: string[]) {
     body: JSON.stringify({ words }),
   });
 }
+
+// ── Chia sẻ ─────────────────────────────────────────────────────────────────
+
+export async function setShare(id: string, enabled: boolean) {
+  const r = await call<{ visibility: "private" | "link"; slug: string | null }>(
+    `/api/flashcards/decks/${id}/share`,
+    { method: "POST", body: JSON.stringify({ enabled }) }
+  );
+  window.dispatchEvent(new Event("decks:changed"));
+  return r;
+}

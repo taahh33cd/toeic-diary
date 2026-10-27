@@ -7,6 +7,7 @@ import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { Sheet } from "@/components/journal/paper/Sheet";
 import StudyDeck from "@/components/vocab/StudyDeck";
 import DeckEditor from "@/components/vocab/DeckEditor";
+import ShareDeck from "@/components/vocab/ShareDeck";
 import { deleteDeck, getDeck, type DeckDetail } from "@/lib/vocab/client";
 import { playWord } from "@/lib/vocab/audio";
 
@@ -141,6 +142,8 @@ export default function DeckDetailPage() {
       {deck.description && (
         <p className="text-sm" style={{ color: "var(--text-muted)" }}>{deck.description}</p>
       )}
+
+      <ShareDeck deckId={deck.id} visibility={deck.visibility} slug={deck.slug} />
 
       <div className="flex gap-3 flex-wrap">
         <button

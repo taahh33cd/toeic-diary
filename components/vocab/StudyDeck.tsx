@@ -15,6 +15,15 @@ interface Props {
   /** Chỉ học những từ đang đến hạn. */
   dueOnly?: boolean;
   onExit: () => void;
+  /**
+   * Cách ghi một lượt đánh dấu. Mặc định ghi vào Postgres qua API (cần đăng
+   * nhập). Trang chia sẻ công khai truyền hàm ghi localStorage vào đây, nên
+   * khách không đăng nhập vẫn học được mà không phải viết lại cả màn lật thẻ.
+   * Trả false khi ghi hỏng.
+   */
+  onReview?: (word: string, known: boolean) => Promise<boolean>;
+  /** Hiện ở màn kết thúc — dùng cho lời mời đăng ký trên trang công khai. */
+  ketThuc?: React.ReactNode;
 }
 
 /**
@@ -25,7 +34,15 @@ interface Props {
  * Mỗi lượt đánh dấu gọi /api/flashcards/review để đẩy lịch ôn ngay, không chờ
  * đến cuối: học viên bỏ giữa chừng thì phần đã làm vẫn được tính.
  */
-export default function StudyDeck({ title, cards, progress, dueOnly = false, onExit }: Props) {
+export default function StudyDeck({
+  title,
+  cards,
+  progress,
+  dueOnly = false,
+  onExit,
+  onReview,
+  ketThuc,
+}: Props) {
   const progressByKey = useMemo(
     () => new Map(progress.map((p) => [p.wordKey, p])),
     [progress]
@@ -57,12 +74,12 @@ export default function StudyDeck({ title, cards, progress, dueOnly = false, onE
       if (!card || dangLuu) return;
       setDangLuu(true);
       setFlipped(false);
-      const p = await recordVocabReview({
-        outcome: { kind: "flip", word: card.word, known },
-      });
+      const ok = onReview
+        ? await onReview(card.word, known)
+        : !!(await recordVocabReview({ outcome: { kind: "flip", word: card.word, known } }));
       // Ghi thất bại thì vẫn cho học tiếp, nhưng nói rõ là chưa lưu được —
       // im lặng ở đây là tệ nhất: học viên tưởng đã tính mà thực ra không.
-      setLoi(p ? null : "Chưa lưu được tiến độ (mất mạng?)");
+      setLoi(ok ? null : "Chưa lưu được tiến độ (mất mạng?)");
       if (known) {
         setThuoc((l) => [...l, card.id]);
         setQueue((q) => q.slice(1));
@@ -72,7 +89,7 @@ export default function StudyDeck({ title, cards, progress, dueOnly = false, onE
       }
       setDangLuu(false);
     },
-    [card, dangLuu]
+    [card, dangLuu, onReview]
   );
 
   // Bàn phím: Space lật, 1/2 đánh dấu — học nhanh không phải rời tay khỏi bàn phím
@@ -120,6 +137,7 @@ export default function StudyDeck({ title, cards, progress, dueOnly = false, onE
             ? `Bạn lật lại ${latLai} lần. Những từ đó sẽ quay lại sớm hơn.`
             : "Không phải lật lại lần nào — lịch ôn đã giãn ra."}
         </p>
+        {ketThuc}
         <button onClick={onExit} className="mt-4 px-4 py-2 rounded-lg text-sm font-semibold"
           style={{ background: "var(--accent-primary)", color: "#fff" }}>
           ← Về bộ thẻ
