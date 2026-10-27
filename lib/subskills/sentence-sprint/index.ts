@@ -5,6 +5,9 @@
 
 import { officeTopic } from "./data/office";
 import { meetingTopic } from "./data/meeting";
+import { ordersTopic } from "./data/orders";
+import { hrTopic } from "./data/hr";
+import { customerTopic } from "./data/customer";
 import { SPRINT_LEVELS } from "./levels";
 import type {
   Branch,
@@ -19,7 +22,13 @@ import type {
 export { SPRINT_LEVELS, BRANCHES } from "./levels";
 export { attemptPart } from "./types";
 
-export const TOPICS: SentenceTopic[] = [officeTopic, meetingTopic];
+export const TOPICS: SentenceTopic[] = [
+  officeTopic,
+  meetingTopic,
+  ordersTopic,
+  hrTopic,
+  customerTopic,
+];
 
 export function getTopic(slug: string): SentenceTopic | undefined {
   return TOPICS.find((t) => t.slug === slug);
