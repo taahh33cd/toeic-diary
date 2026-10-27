@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { Sheet } from "@/components/journal/paper/Sheet";
 import { createDeck, enrichWords, type CardDraft } from "@/lib/vocab/client";
+import FromContentPicker from "@/components/vocab/FromContentPicker";
 
 const RED = "var(--accent-red, #B94040)";
 
@@ -47,6 +48,10 @@ export default function NewDeckPage() {
   const [daDien, setDaDien] = useState<CardDraft[] | null>(null);
   const [dangDien, setDangDien] = useState(false);
   const [conLuot, setConLuot] = useState<number | null>(null);
+
+  /** "dan" = dán danh sách tay · "bai" = rút từ bài đã học */
+  const [cheDo, setCheDo] = useState<"dan" | "bai">("dan");
+  const [sourceRef, setSourceRef] = useState<string | null>(null);
 
   const cards = useMemo<CardDraft[]>(() => {
     const seen = new Set<string>();
@@ -105,8 +110,13 @@ export default function NewDeckPage() {
       setLoi("Chưa đặt tên bộ thẻ");
       return;
     }
-    if (cards.length === 0) {
-      setLoi("Chưa có từ nào — dán danh sách vào ô bên dưới");
+    const dsLuu = daDien ?? cards;
+    if (dsLuu.length === 0) {
+      setLoi(
+        cheDo === "dan"
+          ? "Chưa có từ nào — dán danh sách vào ô bên dưới"
+          : "Chưa có từ nào — chọn một bài rồi bấm Rút từ vựng"
+      );
       return;
     }
     setDangLuu(true);
@@ -116,8 +126,9 @@ export default function NewDeckPage() {
         title: title.trim(),
         description: description.trim() || undefined,
         part: part === "" ? undefined : part,
-        cards: daDien ?? cards,
-        source: daDien ? "ai_bulk" : "manual",
+        cards: dsLuu,
+        source: cheDo === "bai" ? "ai_content" : daDien ? "ai_bulk" : "manual",
+        sourceRef: sourceRef ?? undefined,
       });
       window.dispatchEvent(new Event("decks:changed"));
       router.push(`/journal/vocab/decks/${deck.id}`);
@@ -144,6 +155,30 @@ export default function NewDeckPage() {
       />
 
       <Sheet stack className="p-4 space-y-4">
+        <div className="flex gap-2">
+          {([
+            ["dan", "📋 Dán danh sách"],
+            ["bai", "✨ Rút từ bài đã học"],
+          ] as const).map(([id, nhan]) => (
+            <button
+              key={id}
+              onClick={() => {
+                setCheDo(id);
+                setDaDien(null);
+                setSourceRef(null);
+                setLoi(null);
+              }}
+              className="flex-1 px-3 py-2 rounded-lg text-xs font-bold"
+              style={{
+                background: cheDo === id ? "var(--accent-primary)" : "var(--bg-elevated)",
+                color: cheDo === id ? "#fff" : "var(--text-primary)",
+              }}
+            >
+              {nhan}
+            </button>
+          ))}
+        </div>
+
         <div>
           <label className="block text-xs font-bold mb-1.5" style={{ color: "var(--text-muted)" }}>
             TÊN BỘ THẺ *
@@ -189,40 +224,54 @@ export default function NewDeckPage() {
           </div>
         </div>
 
-        <div>
-          <label className="block text-xs font-bold mb-1.5" style={{ color: "var(--text-muted)" }}>
-            DANH SÁCH TỪ *
-          </label>
-          <textarea
-            value={danDach}
-            onChange={(e) => setDanDach(e.target.value)}
-            rows={10}
-            placeholder={"negotiate\tđàm phán\ndeadline - hạn chót\ninvoice: hoá đơn\nwarehouse"}
-            className="w-full px-3 py-2 rounded-lg text-sm font-mono outline-none"
-            style={{ background: "var(--bg-primary)", border: "1px solid var(--border)", color: "var(--text-primary)" }}
+        {cheDo === "dan" ? (
+          <div>
+            <label className="block text-xs font-bold mb-1.5" style={{ color: "var(--text-muted)" }}>
+              DANH SÁCH TỪ *
+            </label>
+            <textarea
+              value={danDach}
+              onChange={(e) => setDanDach(e.target.value)}
+              rows={10}
+              placeholder={"negotiate\tđàm phán\ndeadline - hạn chót\ninvoice: hoá đơn\nwarehouse"}
+              className="w-full px-3 py-2 rounded-lg text-sm font-mono outline-none"
+              style={{ background: "var(--bg-primary)", border: "1px solid var(--border)", color: "var(--text-primary)" }}
+            />
+            <p className="text-xs mt-1.5" style={{ color: "var(--text-muted)" }}>
+              Mỗi dòng một từ. Nghĩa đặt sau Tab, dấu <code>-</code>, <code>:</code> hoặc <code>,</code> — dán
+              thẳng từ Excel cũng được. Để trống phần nghĩa thì điền sau.
+            </p>
+          </div>
+        ) : (
+          <FromContentPicker
+            onCards={(cs, label, ref) => {
+              setDaDien(cs);
+              setSourceRef(ref);
+              // Gợi ý sẵn tên bộ theo bài, học viên sửa được
+              if (!title.trim() && label) setTitle(label);
+            }}
           />
-          <p className="text-xs mt-1.5" style={{ color: "var(--text-muted)" }}>
-            Mỗi dòng một từ. Nghĩa đặt sau Tab, dấu <code>-</code>, <code>:</code> hoặc <code>,</code> — dán
-            thẳng từ Excel cũng được. Để trống phần nghĩa thì điền sau.
-          </p>
-        </div>
+        )}
 
-        {cards.length > 0 && (
+        {(daDien ?? cards).length > 0 && (
           <div className="rounded-lg p-3" style={{ background: "var(--bg-secondary)" }}>
             <div className="flex items-start justify-between gap-3 mb-2">
               <p className="text-xs font-bold" style={{ color: "var(--text-primary)" }}>
-                Đọc được {cards.length} từ
-                {soTrung > 0 && (
+                {cheDo === "bai"
+                  ? `AI rút được ${(daDien ?? []).length} từ`
+                  : `Đọc được ${cards.length} từ`}
+                {cheDo === "dan" && soTrung > 0 && (
                   <span className="font-normal" style={{ color: "var(--text-muted)" }}>
                     {" "}· bỏ {soTrung} dòng trùng
                   </span>
                 )}
-                {thieuNghia > 0 && !daDien && (
+                {cheDo === "dan" && thieuNghia > 0 && !daDien && (
                   <span className="font-normal" style={{ color: "var(--text-muted)" }}>
                     {" "}· {thieuNghia} từ chưa có nghĩa
                   </span>
                 )}
               </p>
+              {cheDo === "dan" && (
               <button
                 onClick={dien}
                 disabled={dangDien}
@@ -235,11 +284,13 @@ export default function NewDeckPage() {
               >
                 {dangDien ? "Đang tra…" : daDien ? "✨ Điền lại" : "✨ AI điền nốt"}
               </button>
+              )}
             </div>
 
             {daDien && (
               <p className="text-xs mb-2" style={{ color: "var(--accent-green, #4A7C59)" }}>
-                Đã điền {daDien.filter((c) => c.meaningVi).length}/{daDien.length} nghĩa,
+                {cheDo === "bai" ? "Lấy được" : "Đã điền"}{" "}
+                {daDien.filter((c) => c.meaningVi).length}/{daDien.length} nghĩa,
                 {" "}{daDien.filter((c) => c.ipa).length} phiên âm,
                 {" "}{daDien.filter((c) => c.example).length} câu ví dụ.
                 {conLuot !== null && conLuot >= 0 && ` Còn ${conLuot} lượt hôm nay.`}
