@@ -6,10 +6,11 @@ import { useParams, useRouter } from "next/navigation";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { Sheet } from "@/components/journal/paper/Sheet";
 import StudyDeck from "@/components/vocab/StudyDeck";
+import DeckEditor from "@/components/vocab/DeckEditor";
 import { deleteDeck, getDeck, type DeckDetail } from "@/lib/vocab/client";
 import { playWord } from "@/lib/vocab/audio";
 
-type Man = "danhsach" | "hoc" | "hoc-den-han";
+type Man = "danhsach" | "hoc" | "hoc-den-han" | "sua";
 
 export default function DeckDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -68,6 +69,20 @@ export default function DeckDetailPage() {
   });
   const daThuoc = deck.cards.filter((c) => tdTheoKey.get(c.wordKey)?.mastered).length;
 
+  if (man === "sua") {
+    return (
+      <DeckEditor
+        deck={deck}
+        cards={deck.cards}
+        onDone={() => {
+          setMan("danhsach");
+          load();
+        }}
+        onCancel={() => setMan("danhsach")}
+      />
+    );
+  }
+
   if (man !== "danhsach") {
     return (
       <StudyDeck
@@ -105,6 +120,13 @@ export default function DeckDetailPage() {
             >
               ← Sổ từ vựng
             </Link>
+            <button
+              onClick={() => setMan("sua")}
+              className="px-3 py-2 rounded-lg text-sm font-semibold"
+              style={{ background: "var(--accent-primary)", color: "#fff" }}
+            >
+              ✏️ Sửa thẻ
+            </button>
             <button
               onClick={xoaBo}
               className="px-3 py-2 rounded-lg text-sm font-semibold"
