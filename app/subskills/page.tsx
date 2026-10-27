@@ -58,6 +58,15 @@ const SKILLS = [
     comingSoon: false,
   },
   {
+    key: "sentence-sprint",
+    emoji: "⚡",
+    label: "Đặt câu nhanh",
+    href: "/subskills/sentence-sprint",
+    description:
+      "Có từ mà không bật ra câu · cho sẵn từ, dựng câu trong thời gian đếm ngược · nhánh Viết gõ, nhánh Nói ghi âm",
+    comingSoon: false,
+  },
+  {
     key: "speaking",
     emoji: "🗣",
     label: "Speaking",
