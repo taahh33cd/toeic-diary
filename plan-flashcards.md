@@ -18,7 +18,8 @@
 | 1C.1 — AI điền nghĩa/IPA/ví dụ cho danh sách dán vào | ✅ xong | `177451a` |
 | 1C.2 — Sinh bộ từ nội dung đã học (4 nguồn) | ✅ xong | `0687234` |
 | 1C.3 — Màn sửa thẻ trong bộ đã lưu | ✅ xong | `bd171e8` |
-| 1D — Link chia sẻ + GV giao bài | ⏳ đang tới | |
+| 1D.1 — Link chia sẻ công khai | ✅ xong | `cdba9f5` |
+| 1D.2 — GV giao bộ thẻ + theo dõi tiến độ | ✅ xong | `64cf02f` |
 | 2 — Quiz 10 dạng + ảnh + thống kê | ⬜ | |
 
 **Lỗi công thức đã sửa (§5):** "nửa trọng số" ban đầu hiểu thành `ease × 0.5`,
