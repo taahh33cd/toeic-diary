@@ -5,6 +5,9 @@ import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { useHomework } from "@/hooks/firebase/useHomework";
 import { pushHomework, setHomework } from "@/lib/firebase/helpers";
 import type { Homework, HwItem } from "@/lib/firebase/types";
+import DeckAssignPicker from "@/components/vocab/DeckAssignPicker";
+import AssignmentTracker from "@/components/vocab/AssignmentTracker";
+import type { DeckSummary } from "@/lib/vocab/client";
 
 const SECTIONS = ["vocab", "listening", "reading", "practice", "other"] as const;
 const SECTION_LABELS: Record<string, string> = {
@@ -62,6 +65,8 @@ function HomeworkForm({ code, onSaved }: { code: string; onSaved: () => void }) 
     vocab: [], listening: [], reading: [], practice: [], other: [],
   });
   const [saving, setSaving] = useState(false);
+  /** Bộ thẻ đã chèn — tạo assignment sau khi lưu bài tập, để có đúng homeworkId. */
+  const [boThe, setBoThe] = useState<DeckSummary[]>([]);
 
   function addItem(section: SectionKey) {
     setSections((s) => ({ ...s, [section]: [...s[section], { text: "" }] }));
@@ -101,6 +106,22 @@ function HomeworkForm({ code, onSaved }: { code: string; onSaved: () => void }) 
 
     setSaving(true);
     await pushHomework(code, hw);
+
+    // Giao bộ thẻ sau khi bài tập đã có id. Lỗi ở đây không được làm hỏng bài
+    // tập vừa lưu — giáo viên giao lại được, còn bài tập thì không nên mất.
+    for (const d of boThe) {
+      await fetch("/api/flashcards/assignments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          deckId: d.id,
+          studentCode: code,
+          activity: "study",
+          dueDate: endDate || date,
+          homeworkId: hw.id,
+        }),
+      }).catch(() => {});
+    }
     // Fire-and-forget web push — don't block UI on delivery
     fetch("/api/push/homework-new", {
       method: "POST",
@@ -111,6 +132,7 @@ function HomeworkForm({ code, onSaved }: { code: string; onSaved: () => void }) 
 
     // Reset
     setSections({ vocab: [], listening: [], reading: [], practice: [], other: [] });
+    setBoThe([]);
     setDate(today);
     setEndDate("");
     onSaved();
@@ -141,14 +163,33 @@ function HomeworkForm({ code, onSaved }: { code: string; onSaved: () => void }) 
             <span className="text-xs font-semibold" style={{ color: "var(--text-secondary)" }}>
               {SECTION_LABELS[section]}
             </span>
-            <button
-              type="button"
-              onClick={() => addItem(section)}
-              className="text-[11px] px-2 py-1 min-h-[44px] rounded"
-              style={{ color: "var(--accent-primary)", background: "rgba(196,98,45,0.08)" }}
-            >
-              + Thêm
-            </button>
+            <div className="flex items-center gap-1.5">
+              {section === "vocab" && (
+                <DeckAssignPicker
+                  onPick={(d) => {
+                    setBoThe((b) => (b.some((x) => x.id === d.id) ? b : [...b, d]));
+                    setSections((s) => ({
+                      ...s,
+                      vocab: [
+                        ...s.vocab,
+                        {
+                          text: `Flashcard: ${d.title} (${d.cardCount} thẻ)`,
+                          link: `/flashcards/d/${d.slug}`,
+                        },
+                      ],
+                    }));
+                  }}
+                />
+              )}
+              <button
+                type="button"
+                onClick={() => addItem(section)}
+                className="text-[11px] px-2 py-1 min-h-[44px] rounded"
+                style={{ color: "var(--accent-primary)", background: "rgba(196,98,45,0.08)" }}
+              >
+                + Thêm
+              </button>
+            </div>
           </div>
           {sections[section].map((item, i) => (
             <ItemRow
@@ -225,7 +266,7 @@ function ExistingHomework({ code }: { code: string }) {
 export default function HomeworkAdminPage() {
   const { students, loading } = useAllStudents();
   const [selectedCode, setSelectedCode] = useState("");
-  const [tab, setTab] = useState<"new" | "existing">("new");
+  const [tab, setTab] = useState<"new" | "existing" | "decks">("new");
   const [savedKey, setSavedKey] = useState(0);
 
   return (
@@ -263,7 +304,7 @@ export default function HomeworkAdminPage() {
         >
           {/* Tabs */}
           <div className="flex border-b" style={{ borderColor: "var(--border)" }}>
-            {(["new", "existing"] as const).map((t) => (
+            {(["new", "existing", "decks"] as const).map((t) => (
               <button
                 key={t}
                 onClick={() => setTab(t)}
@@ -274,7 +315,7 @@ export default function HomeworkAdminPage() {
                     : { borderColor: "transparent", color: "var(--text-secondary)" }
                 }
               >
-                {t === "new" ? "➕ Giao bài mới" : "📋 Bài đã giao"}
+                {t === "new" ? "➕ Giao bài mới" : t === "existing" ? "📋 Bài đã giao" : "🗂️ Bộ thẻ đã giao"}
               </button>
             ))}
           </div>
@@ -285,8 +326,10 @@ export default function HomeworkAdminPage() {
                 code={selectedCode}
                 onSaved={() => { setSavedKey((k) => k + 1); setTab("existing"); }}
               />
-            ) : (
+            ) : tab === "existing" ? (
               <ExistingHomework key={`${selectedCode}-${savedKey}`} code={selectedCode} />
+            ) : (
+              <AssignmentTracker key={`${selectedCode}-${savedKey}`} studentCode={selectedCode} />
             )}
           </div>
         </div>
