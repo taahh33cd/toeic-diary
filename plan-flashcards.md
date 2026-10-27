@@ -17,7 +17,8 @@
 | 1B.5 — Thân trang vocab đọc Postgres | ✅ xong, trang = badge | `53ad511` |
 | 1C.1 — AI điền nghĩa/IPA/ví dụ cho danh sách dán vào | ✅ xong | `177451a` |
 | 1C.2 — Sinh bộ từ nội dung đã học (4 nguồn) | ✅ xong | `0687234` |
-| 1D — Link chia sẻ + GV giao bài | ⬜ | |
+| 1C.3 — Màn sửa thẻ trong bộ đã lưu | ✅ xong | `bd171e8` |
+| 1D — Link chia sẻ + GV giao bài | ⏳ đang tới | |
 | 2 — Quiz 10 dạng + ảnh + thống kê | ⬜ | |
 
 **Lỗi công thức đã sửa (§5):** "nửa trọng số" ban đầu hiểu thành `ease × 0.5`,
