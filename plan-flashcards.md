@@ -14,8 +14,9 @@
 | 1B.2 — Đường ghi SRS + chuyển badge/cron sang Postgres | ✅ xong, 37+14 kiểm đạt | `16d24be` |
 | 1B.3 — Trang vocab ghi vào Postgres | ✅ xong, đo trên phiên thật | `fb1d5ce` |
 | 1B.4 — 3 trang bộ thẻ (lưới, chi tiết, tạo bộ) | ✅ xong | `931c771` |
-| 1B.5 — Thân trang vocab đọc Postgres + port 3 modal luyện | ⏳ đang tới | |
-| 1C — AI tạo bộ | ⬜ | |
+| 1B.5 — Thân trang vocab đọc Postgres | ✅ xong, trang = badge | `53ad511` |
+| 1C.1 — AI điền nghĩa/IPA/ví dụ cho danh sách dán vào | ✅ xong | `177451a` |
+| 1C.2 — Sinh bộ từ nội dung đã học (4 nguồn) | ✅ xong | `0687234` |
 | 1D — Link chia sẻ + GV giao bài | ⬜ | |
 | 2 — Quiz 10 dạng + ảnh + thống kê | ⬜ | |
 
