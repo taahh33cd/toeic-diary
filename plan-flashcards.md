@@ -20,7 +20,10 @@
 | 1C.3 — Màn sửa thẻ trong bộ đã lưu | ✅ xong | `bd171e8` |
 | 1D.1 — Link chia sẻ công khai | ✅ xong | `cdba9f5` |
 | 1D.2 — GV giao bộ thẻ + theo dõi tiến độ | ✅ xong | `64cf02f` |
-| 2 — Quiz 10 dạng + ảnh + thống kê | ⬜ | |
+| 2.1 — Engine quiz 10 dạng + ghi phiên + XP | ✅ xong, 25/25 kiểm | `1a1e259e` |
+| 2.2 — Ảnh (Pexels proxy + upload Cloudinary) | ⏳ đang tới | |
+| 2.3 — Thống kê tiến độ | ⬜ | |
+| 2.4 — Cron nhắc + hiệu chỉnh ngưỡng nhanh/chậm | ⬜ | |
 
 **Lỗi công thức đã sửa (§5):** "nửa trọng số" ban đầu hiểu thành `ease × 0.5`,
 cho hệ số 0.65–1.4 nên `round(1 × 1.25) = 1` — lật thẻ không bao giờ thoát mốc
