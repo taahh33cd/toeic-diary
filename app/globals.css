@@ -1850,12 +1850,17 @@ a[aria-disabled="true"] {
 .journal-cover-shell {
   overflow: hidden;
   max-height: 72px;
-  transition: max-height .22s ease, opacity .18s ease;
+  visibility: visible;
+  transition: max-height .22s ease, opacity .18s ease, visibility 0s;
 }
+/* visibility: hidden để liên kết bên trong rời khỏi thứ tự tab — chỉ cắt
+   bằng max-height thì người dùng bàn phím vẫn tab vào được chỗ không thấy. */
 .journal-cover-shell[data-hidden="true"] {
   max-height: 0;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+  transition: max-height .22s ease, opacity .18s ease, visibility 0s linear .22s;
 }
 @media (prefers-reduced-motion: reduce) {
   .journal-cover-shell { transition: none; }

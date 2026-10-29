@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { LanguageToggle } from "@/components/journal/LanguageToggle";
 import { useLocale } from "@/hooks/useLocale";
@@ -59,6 +60,48 @@ function Badge({ count, dot }: { count: number | null; dot: boolean }) {
   return null;
 }
 
+/**
+ * Dải mục cuộn ngang trên màn hẹp.
+ *
+ * Hai việc nó phải tự lo: kéo mục đang mở vào tầm nhìn (nếu không, vào thẳng
+ * /journal/achievements trên điện thoại sẽ thấy dải không mục nào sáng), và
+ * làm mờ mép phải khi còn mục nằm ngoài khung để học viên biết còn nữa.
+ */
+function useSubStrip(activeHref: string | undefined) {
+  const stripRef = useRef<HTMLDivElement | null>(null);
+  const [conBenPhai, setConBenPhai] = useState(false);
+
+  useEffect(() => {
+    const strip = stripRef.current;
+    if (!strip) return;
+
+    const active = strip.querySelector<HTMLElement>('[aria-current="page"]');
+    if (active) {
+      const a = active.getBoundingClientRect();
+      const s = strip.getBoundingClientRect();
+      if (a.left < s.left || a.right > s.right) {
+        // block: "nearest" để không kéo cả trang trượt dọc theo
+        active.scrollIntoView({ inline: "center", block: "nearest" });
+      }
+    }
+
+    function check() {
+      const el = stripRef.current;
+      if (!el) return;
+      setConBenPhai(el.scrollWidth - el.scrollLeft - el.clientWidth > 4);
+    }
+    check();
+    strip.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+    return () => {
+      strip.removeEventListener("scroll", check);
+      window.removeEventListener("resize", check);
+    };
+  }, [activeHref]);
+
+  return { stripRef, conBenPhai };
+}
+
 export function ChapterTabs({ studentCode }: { studentCode?: string | null }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -80,6 +123,8 @@ export function ChapterTabs({ studentCode }: { studentCode?: string | null }) {
   }
 
   const subPages = current && current.pages.length > 1 ? current.pages : null;
+  const activeHref = subPages?.find((p) => pageMatches(p, pathname, tabParam))?.href;
+  const { stripRef, conBenPhai } = useSubStrip(activeHref);
 
   return (
     <div
@@ -128,8 +173,11 @@ export function ChapterTabs({ studentCode }: { studentCode?: string | null }) {
             borderBottom: "1px solid var(--border)",
           }}
         >
-          <div className="max-w-[1400px] mx-auto px-4 md:px-6">
-            <div className="flex items-center gap-1 overflow-x-auto py-1.5 no-scrollbar">
+          <div className="max-w-[1400px] mx-auto px-4 md:px-6 relative">
+            <div
+              ref={stripRef}
+              className="flex items-center gap-1 overflow-x-auto py-1.5 no-scrollbar"
+            >
               {subPages.map((p) => {
                 const active = pageMatches(p, pathname, tabParam);
                 const count = pageBadge(p.href, badges);
@@ -139,7 +187,8 @@ export function ChapterTabs({ studentCode }: { studentCode?: string | null }) {
                     key={p.href}
                     href={p.href}
                     aria-current={active ? "page" : undefined}
-                    className="flex items-center gap-1.5 px-2.5 py-1.5 text-sm whitespace-nowrap transition-colors"
+                    // min-h-10: vùng chạm đủ rộng cho ngón tay trên điện thoại
+                    className="flex items-center gap-1.5 px-2.5 py-1.5 min-h-10 text-sm whitespace-nowrap transition-colors"
                     style={{
                       color: active ? "var(--accent-primary)" : "var(--text-muted)",
                       fontWeight: active ? 600 : 500,
@@ -154,6 +203,18 @@ export function ChapterTabs({ studentCode }: { studentCode?: string | null }) {
                 );
               })}
             </div>
+
+            {/* Mờ mép phải: báo còn mục nằm ngoài khung */}
+            {conBenPhai && (
+              <div
+                aria-hidden="true"
+                className="absolute top-0 bottom-0 right-0 w-10 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(to right, transparent, var(--paper-sheet, var(--bg-elevated)))",
+                }}
+              />
+            )}
           </div>
         </nav>
       )}

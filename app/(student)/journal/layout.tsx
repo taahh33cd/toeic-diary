@@ -73,24 +73,30 @@ export default async function JournalLayout({
           ["--orange-faint" as string]: "rgba(255,122,61,0.18)",
         }}
       >
-        <div className="max-w-[1400px] mx-auto px-4 md:px-6 h-14 flex items-center relative">
-          <Brand
-            size="sm"
-            href="/journal"
-            label={`${profile?.displayName ?? user.email?.split("@")[0] ?? "My"}'s TOEIC Diary`}
-          />
+        {/* Ba vùng chia bằng flex, không canh giữa bằng absolute:
+            tên học viên dài bao nhiêu cũng không bị nav đè lên. */}
+        <div className="max-w-[1400px] mx-auto px-4 md:px-6 h-14 flex items-center gap-3">
+          {/* whitespace-nowrap: tên học viên dài thì cắt gọn, không xuống dòng
+              làm thanh bìa cao gấp đôi trên điện thoại */}
+          <div className="flex-1 min-w-0 overflow-hidden whitespace-nowrap">
+            <Brand
+              size="sm"
+              href="/journal"
+              label={`${profile?.displayName ?? user.email?.split("@")[0] ?? "My"}'s TOEIC Diary`}
+            />
+          </div>
 
-          {/* Desktop: nav centered */}
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
+          {/* Liên kết sang các khu khác — chỉ đủ chỗ từ 1024px trở lên */}
+          <div className="hidden lg:flex shrink-0 whitespace-nowrap">
             <NavSwitcher orientation="horizontal" />
           </div>
 
-          {/* Right: notification bell (all sizes) + mobile hamburger */}
-          <div className="ml-auto flex items-center gap-1">
+          {/* Chuông thông báo (mọi cỡ) + menu cho màn hẹp */}
+          <div className="flex-1 flex items-center justify-end gap-1">
             {profile.studentCode && (
               <JournalNotificationBell studentCode={profile.studentCode} />
             )}
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <JournalMobileNav />
             </div>
           </div>

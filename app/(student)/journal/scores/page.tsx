@@ -1788,7 +1788,7 @@ export default function ScoresPage() {
     return (
       <div className="space-y-4 animate-pulse">
         <div className="h-8 w-48 rounded-xl" style={{ background: "var(--border)" }} />
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="h-52 rounded-2xl" style={{ background: "var(--border)" }} />
           <div className="h-52 rounded-2xl" style={{ background: "var(--border)" }} />
         </div>
@@ -1847,7 +1847,7 @@ export default function ScoresPage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="rounded-2xl p-6" style={{ background: "var(--ink2, var(--journal-ink))" }}>
               {editingGoal ? (
                 <>
