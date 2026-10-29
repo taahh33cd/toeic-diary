@@ -896,85 +896,88 @@ export default function MissionsPage() {
         note="Bài tập thầy giao theo từng buổi, kèm chỗ nộp bằng chứng"
       />
 
-      {/* Notice: nhắc học viên lưu bằng chứng làm bài */}
-      <div style={{
-        display: "flex", alignItems: "flex-start", gap: ".6rem",
-        padding: ".7rem .9rem",
-        background: "rgba(196,98,45,.08)",
-        border: "1px solid rgba(196,98,45,.3)",
-        marginBottom: "1.25rem",
-      }}>
-        <span style={{ fontSize: "1rem", flexShrink: 0, lineHeight: 1.3 }}>📸</span>
-        <p style={{ fontSize: ".8rem", color: "var(--text-primary,#2C1E0F)", lineHeight: 1.5 }}>
-          <strong>Lưu ý:</strong> với mỗi phần bài tập, hãy chụp ảnh / quay video hoặc ghi âm lại toàn bộ bài đã làm (vở, giáo trình, ảnh chụp màn hình…) và tải lên mục <strong>Bằng chứng</strong> để được ghi nhận.
-        </p>
-      </div>
-
-      {/* Goal banner */}
-      {goalTotal(goal) !== null && (
-        <div style={{
-          display: "flex", alignItems: "center", gap: 0,
-          border: "1px solid var(--border,#DDD0BC)",
-          marginBottom: "1.25rem",
-        }}>
-          <div style={{
-            padding: ".7rem 1.2rem",
-            borderRight: "1px solid var(--border,#DDD0BC)",
+      {/* Dải trạng thái: mục tiêu + số bài, một dòng thay cho ba khối chồng nhau */}
+      {(goalTotal(goal) !== null || hwTotal > 0) && (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: ".5rem",
+            flexWrap: "wrap",
+            padding: ".55rem .85rem",
             background: "var(--bg-elevated,#FBF7F2)",
-          }}>
-            <div style={{ fontSize: ".68rem", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "#9A8672", marginBottom: ".2rem" }}>
-              Mục tiêu {EXAM_LABEL[goalExamType(goal)]}
-            </div>
-            <div style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#C4622D", lineHeight: 1 }}>
-              {goalTotal(goal)} điểm
-            </div>
-            {goalExamType(goal) === "sw" && (
-              <div style={{ fontSize: ".72rem", color: "#9A8672", marginTop: ".25rem" }}>
-                S {goal!.swTargetS ?? 0} · W {goal!.swTargetW ?? 0}
-              </div>
-            )}
-          </div>
-          {goalDeadline(goal) && (
-            <div style={{ padding: ".7rem 1.2rem", background: "var(--bg-elevated,#FBF7F2)" }}>
-              <div style={{ fontSize: ".68rem", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "#9A8672", marginBottom: ".2rem" }}>Hạn</div>
-              <div style={{ fontSize: ".9rem", fontWeight: 600, color: "var(--text-primary,#2C1E0F)" }}>
-                {new Date(goalDeadline(goal)!).toLocaleDateString("vi-VN")}
-              </div>
-            </div>
+            border: "1px solid var(--border,#DDD0BC)",
+            marginBottom: ".6rem",
+            fontSize: ".75rem",
+          }}
+        >
+          {goalTotal(goal) !== null && (
+            <>
+              <span style={{ color: "#9A8672" }}>Mục tiêu {EXAM_LABEL[goalExamType(goal)]}</span>
+              <span style={{ fontWeight: 700, color: "#C4622D" }}>{goalTotal(goal)}</span>
+              {goalDeadline(goal) && (
+                <span style={{ color: "#9A8672" }}>
+                  trước {new Date(goalDeadline(goal)!).toLocaleDateString("vi-VN")}
+                </span>
+              )}
+              {hwTotal > 0 && <span style={{ color: "var(--border,#DDD0BC)", userSelect: "none" }}>·</span>}
+            </>
+          )}
+          {hwTotal > 0 && (
+            <>
+              <span style={{ fontWeight: 700, color: "#2C1E0F" }}>{hwTotal}</span>
+              <span style={{ color: "#9A8672" }}>BTVN</span>
+              <span style={{ color: "var(--border,#DDD0BC)", userSelect: "none" }}>·</span>
+              <span style={{ fontWeight: 700, color: "#4A7C59" }}>{hwDone}</span>
+              <span style={{ color: "#9A8672" }}>hoàn thành</span>
+              {hwOverdue > 0 && (
+                <>
+                  <span style={{ color: "var(--border,#DDD0BC)", userSelect: "none" }}>·</span>
+                  <span style={{ fontWeight: 700, color: "#B03A2A" }}>{hwOverdue}</span>
+                  <span style={{ color: "#9A8672" }}>quá hạn</span>
+                </>
+              )}
+              {hwRemaining > 0 && (
+                <>
+                  <span style={{ color: "var(--border,#DDD0BC)", userSelect: "none" }}>·</span>
+                  <span style={{ fontWeight: 700, color: "#9A8672" }}>{hwRemaining}</span>
+                  <span style={{ color: "#9A8672" }}>còn lại</span>
+                </>
+              )}
+            </>
           )}
         </div>
       )}
 
-      {/* ── Progress summary chips ── */}
-      {hwTotal > 0 && (
-        <div style={{
-          display: "flex",
-          alignItems: "center",
-          gap: ".4rem",
-          flexWrap: "wrap",
-          padding: ".55rem .85rem",
-          background: "var(--bg-elevated,#FBF7F2)",
-          border: "1px solid var(--border,#DDD0BC)",
-          marginBottom: "1.25rem",
-          fontSize: ".75rem",
-        }}>
-          <span style={{ fontWeight: 700, color: "#2C1E0F" }}>{hwTotal}</span>
-          <span style={{ color: "#9A8672" }}>BTVN</span>
-          <span style={{ color: "var(--border,#DDD0BC)", userSelect: "none" }}>·</span>
-          <span style={{ fontWeight: 700, color: "#4A7C59" }}>{hwDone}</span>
-          <span style={{ color: "#9A8672" }}>hoàn thành</span>
-          {hwOverdue > 0 && (<>
-            <span style={{ color: "var(--border,#DDD0BC)", userSelect: "none" }}>·</span>
-            <span style={{ fontWeight: 700, color: "#B03A2A" }}>{hwOverdue}</span>
-            <span style={{ color: "#9A8672" }}>quá hạn</span>
-          </>)}
-          {hwRemaining > 0 && (<>
-            <span style={{ color: "var(--border,#DDD0BC)", userSelect: "none" }}>·</span>
-            <span style={{ fontWeight: 700, color: "#9A8672" }}>{hwRemaining}</span>
-            <span style={{ color: "#9A8672" }}>còn lại</span>
-          </>)}
-        </div>
-      )}
+      {/* Lưu ý về bằng chứng: gấp lại, học viên đọc một lần là đủ */}
+      <details style={{ marginBottom: "1.25rem" }}>
+        <summary
+          style={{
+            cursor: "pointer",
+            fontSize: ".75rem",
+            color: "#9A8672",
+            padding: ".35rem 0",
+            listStyle: "none",
+          }}
+        >
+          📸 Vì sao phải nộp bằng chứng? <span style={{ textDecoration: "underline" }}>Xem</span>
+        </summary>
+        <p
+          style={{
+            fontSize: ".8rem",
+            color: "var(--text-primary,#2C1E0F)",
+            lineHeight: 1.5,
+            padding: ".7rem .9rem",
+            background: "rgba(196,98,45,.08)",
+            border: "1px solid rgba(196,98,45,.3)",
+            marginTop: ".35rem",
+          }}
+        >
+          Với mỗi phần bài tập, hãy chụp ảnh / quay video hoặc ghi âm lại toàn bộ bài đã
+          làm (vở, giáo trình, ảnh chụp màn hình…) và tải lên mục <strong>Bằng chứng</strong>{" "}
+          để được ghi nhận.
+        </p>
+      </details>
 
       {/* G11: Congrats popup */}
       <AnimatePresence>

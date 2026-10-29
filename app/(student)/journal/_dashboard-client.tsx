@@ -481,6 +481,27 @@ function ScoreTile({ scores, swScores, goal }: {
         <span className="text-2xl">📊</span>
       </div>
 
+      {latest === null ? (
+        <EmptyNote
+          icon="🎯"
+          title={t("Chưa có điểm thi nào", "No test score yet")}
+          hint={
+            target !== null
+              ? t(
+                  `Mục tiêu của bạn là ${target}. Nhập điểm lần thi thử đầu tiên để biết còn cách bao xa.`,
+                  `Your goal is ${target}. Log your first mock test to see how far you are.`
+                )
+              : t(
+                  "Nhập điểm lần thi thử đầu tiên, sổ sẽ vẽ đường tiến của bạn từ đó.",
+                  "Log your first mock test and the journal starts charting your progress."
+                )
+          }
+          actionLabel={t("Nhập điểm test", "Add a score")}
+          actionHref="/journal/scores"
+        />
+      ) : (
+      <>
+
       {/* Score + delta */}
       <div className="flex items-baseline gap-2 mb-3">
         <span
@@ -556,6 +577,8 @@ function ScoreTile({ scores, swScores, goal }: {
             ? t("✓ Đã đạt mục tiêu!", "✓ Goal achieved!")
             : t(`Còn ${gap} điểm → mục tiêu ${target}`, `${gap} pts to goal ${target}`)}
         </p>
+      )}
+      </>
       )}
     </Tile>
   );
