@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/db/prisma";
 import { requireVocabUser } from "@/lib/vocab/guard";
-import { makeId } from "@/lib/vocab/deck";
+import { makeId, moTaLoi } from "@/lib/vocab/deck";
 import { normalizeWord } from "@/lib/vocab/normalize";
 import { applyReview, emptyState, type SrsState } from "@/lib/vocab/srs";
 import { recordXp, XP_RULES } from "@/lib/xp";
@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
   const parsed = input.safeParse(await req.json().catch(() => null));
   if (!parsed.success) {
     return NextResponse.json(
-      { error: parsed.error.issues[0]?.message ?? "Dữ liệu không hợp lệ" },
+      { error: moTaLoi(parsed.error) },
       { status: 400 }
     );
   }

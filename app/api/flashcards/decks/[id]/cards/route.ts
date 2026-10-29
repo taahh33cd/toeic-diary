@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/db/prisma";
 import { requireVocabUser } from "@/lib/vocab/guard";
-import { cardInput, prepareCards } from "@/lib/vocab/deck";
+import { cardInput, prepareCards, moTaLoi } from "@/lib/vocab/deck";
 
 export const dynamic = "force-dynamic";
 
@@ -29,7 +29,7 @@ export async function PUT(req: NextRequest, { params }: Ctx) {
   const parsed = putInput.safeParse(await req.json().catch(() => null));
   if (!parsed.success) {
     return NextResponse.json(
-      { error: parsed.error.issues[0]?.message ?? "Dữ liệu không hợp lệ" },
+      { error: moTaLoi(parsed.error) },
       { status: 400 }
     );
   }

@@ -30,12 +30,23 @@ export const QUIZ_TYPES: { id: QuizType; nhan: string; canAnh: boolean; canNghe:
   { id: "listen-to-image", nhan: "Nghe → chọn ảnh", canAnh: true, canNghe: true },
 ];
 
-/** Dạng nào cần thẻ có gì. Thiếu là bỏ qua thẻ đó cho dạng đó. */
-function canGi(t: QuizType): { anh: boolean; nghia: boolean } {
-  return {
-    anh: t.includes("-image"),
-    nghia: t === "word-to-meaning" || t === "meaning-to-word" || t === "meaning-to-typing" || t === "listen-to-meaning",
-  };
+/**
+ * Yêu cầu của ĐỀ BÀI và của PHƯƠNG ÁN là hai thứ khác nhau.
+ *
+ * "Ảnh → chọn từ": đề cần ảnh, nhưng phương án là chữ nên thẻ nhiễu không cần
+ * ảnh. Ngược lại "Từ → chọn ảnh": đề chỉ cần chữ, nhưng MỌI phương án là ảnh
+ * nên cả thẻ đúng lẫn thẻ nhiễu đều phải có ảnh.
+ *
+ * Trước đây gộp làm một và dò bằng t.includes("-image") — chuỗi đó không khớp
+ * "image-to-word" (gạch nối nằm ở đầu), nên hai dạng image-to-* coi như không
+ * cần ảnh: thẻ trắng vẫn sinh câu và đề bài hiện ra trống trơn.
+ */
+function canChoDe(t: QuizType): { anh: boolean; nghia: boolean } {
+  return { anh: t.startsWith("image-"), nghia: t.startsWith("meaning-") };
+}
+
+function canChoPhuongAn(t: QuizType): { anh: boolean; nghia: boolean } {
+  return { anh: t.endsWith("-to-image"), nghia: t.endsWith("-to-meaning") };
 }
 
 export function laDangGo(t: QuizType): boolean {
@@ -73,11 +84,24 @@ function tron<T>(a: T[]): T[] {
   return b;
 }
 
-/** Thẻ này dùng được cho dạng này không. */
-function dungDuoc(c: CardRow, t: QuizType): boolean {
-  const can = canGi(t);
+/** Thẻ nhiễu dùng được không — chỉ cần hiện được ở vị trí phương án. */
+function duocLamNhieu(c: CardRow, t: QuizType): boolean {
+  const can = canChoPhuongAn(t);
   if (can.anh && !c.imageUrl) return false;
   if (can.nghia && !c.meaningVi) return false;
+  return true;
+}
+
+/**
+ * Thẻ này ra được câu hỏi dạng này không: phải đủ cho ĐỀ BÀI, và nếu là câu
+ * trắc nghiệm thì còn phải hiện được ở vị trí phương án (vì đáp án đúng nằm
+ * trong đó).
+ */
+function dungDuoc(c: CardRow, t: QuizType): boolean {
+  const de = canChoDe(t);
+  if (de.anh && !c.imageUrl) return false;
+  if (de.nghia && !c.meaningVi) return false;
+  if (!laDangGo(t) && !duocLamNhieu(c, t)) return false;
   // Dạng nghe đọc chính từ đó nên thẻ nào cũng được
   return true;
 }
@@ -90,7 +114,7 @@ function dungDuoc(c: CardRow, t: QuizType): boolean {
  * thẻ khác loại.
  */
 function chonNhieu(dung: CardRow, pool: CardRow[], t: QuizType, lay = 3): CardRow[] {
-  const hopLe = pool.filter((c) => c.wordKey !== dung.wordKey && dungDuoc(c, t));
+  const hopLe = pool.filter((c) => c.wordKey !== dung.wordKey && duocLamNhieu(c, t));
   const cungLoai = hopLe.filter((c) => c.pos && dung.pos && c.pos === dung.pos);
   const khac = hopLe.filter((c) => !cungLoai.includes(c));
   return [...tron(cungLoai), ...tron(khac)].slice(0, lay);
@@ -179,9 +203,10 @@ export function sinhCauHoi(
   for (const c of pool) {
     for (const t of opt.modes) {
       if (!dungDuoc(c, t)) {
-        const can = canGi(t);
-        if (can.anh && !c.imageUrl) boQua.thieuAnh++;
-        else if (can.nghia && !c.meaningVi) boQua.thieuNghia++;
+        const de = canChoDe(t);
+        const pa = canChoPhuongAn(t);
+        if ((de.anh || pa.anh) && !c.imageUrl) boQua.thieuAnh++;
+        else if ((de.nghia || pa.nghia) && !c.meaningVi) boQua.thieuNghia++;
         continue;
       }
       const cau = taoCau(c, t, cards, stt++);

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Sheet } from "@/components/journal/paper/Sheet";
+import ImagePicker from "@/components/vocab/ImagePicker";
 import { enrichWords, patchDeck, putCards, type CardRow, type DeckSummary } from "@/lib/vocab/client";
 import { normalizeWord } from "@/lib/vocab/normalize";
 import type { CardDraft } from "@/lib/vocab/types";
@@ -59,10 +60,14 @@ export default function DeckEditor({
   const [dangDien, setDangDien] = useState(false);
   const [loi, setLoi] = useState<string | null>(null);
   const [daDien, setDaDien] = useState<number | null>(null);
+  /** Dòng đang mở hộp chọn ảnh; null = đang đóng. */
+  const [chonAnh, setChonAnh] = useState<number | null>(null);
 
   function sua(i: number, k: keyof CardDraft, v: string) {
     setDong((ds) => ds.map((d, j) => (j === i ? { ...d, [k]: v || undefined } : d)));
   }
+
+  const coAnh = useMemo(() => dong.filter((d) => d.imageUrl).length, [dong]);
 
   const thieu = useMemo(
     () => dong.filter((d) => !d.meaningVi || !d.ipa || !d.example).length,
@@ -208,8 +213,9 @@ export default function DeckEditor({
 
       <div className="flex items-center justify-between gap-3 flex-wrap">
         <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-          {dong.length} thẻ
+          {dong.length} thẻ · {coAnh} có ảnh
           {thieu > 0 && ` · ${thieu} thẻ còn thiếu nghĩa, phiên âm hoặc ví dụ`}
+          {coAnh > 0 && coAnh < 4 && " · cần ≥4 thẻ có ảnh để mở dạng quiz ảnh"}
         </p>
         <div className="flex gap-2">
           <button
@@ -258,7 +264,7 @@ export default function DeckEditor({
         <table className="w-full" style={{ fontSize: ".78rem", minWidth: 760 }}>
           <thead>
             <tr style={{ borderBottom: "1px solid var(--border)" }}>
-              {["Từ", "Phiên âm", "Loại", "Nghĩa tiếng Việt", "Ví dụ", ""].map((h) => (
+              {["Từ", "Phiên âm", "Loại", "Nghĩa tiếng Việt", "Ví dụ", "Ảnh", ""].map((h) => (
                 <th
                   key={h}
                   className="text-left px-2 py-2 font-bold"
@@ -314,6 +320,24 @@ export default function DeckEditor({
                       style={O}
                     />
                   </td>
+                  <td className="px-2 py-1.5" style={{ width: 52 }}>
+                    <button
+                      onClick={() => setChonAnh(i)}
+                      title={d.imageUrl ? "Đổi ảnh" : "Thêm ảnh"}
+                      className="w-11 h-8 rounded overflow-hidden"
+                      style={{
+                        background: "var(--bg-secondary)",
+                        border: `1px solid ${d.imageUrl ? "var(--accent-primary)" : "var(--border)"}`,
+                      }}
+                    >
+                      {d.imageUrl ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={d.imageUrl} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                      ) : (
+                        <span style={{ fontSize: ".9rem" }}>🖼️</span>
+                      )}
+                    </button>
+                  </td>
                   <td className="px-2 py-1.5" style={{ width: 34 }}>
                     <button
                       onClick={() => setDong((ds) => ds.filter((_, j) => j !== i))}
@@ -335,6 +359,24 @@ export default function DeckEditor({
         <p className="text-sm px-3 py-2 rounded-lg" style={{ background: "rgba(185,64,64,.1)", color: RED }}>
           {loi}
         </p>
+      )}
+
+      {chonAnh !== null && (
+        <ImagePicker
+          tuKhoa={dong[chonAnh]?.word ?? ""}
+          anhHienTai={dong[chonAnh]?.imageUrl}
+          onChon={(url, publicId) => {
+            setDong((ds) =>
+              ds.map((d, j) =>
+                j === chonAnh
+                  ? { ...d, imageUrl: url || undefined, imagePublicId: publicId ?? undefined }
+                  : d
+              )
+            );
+            setChonAnh(null);
+          }}
+          onDong={() => setChonAnh(null)}
+        />
       )}
 
       <div className="flex gap-3">

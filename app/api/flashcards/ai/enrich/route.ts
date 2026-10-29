@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import { requireVocabUser } from "@/lib/vocab/guard";
+import { moTaLoi } from "@/lib/vocab/deck";
 import { checkLimit } from "@/lib/vocab/ratelimit";
 import { enrichWords } from "@/lib/vocab/enrich";
 
@@ -27,7 +28,7 @@ export async function POST(req: NextRequest) {
   const parsed = input.safeParse(await req.json().catch(() => null));
   if (!parsed.success) {
     return NextResponse.json(
-      { error: parsed.error.issues[0]?.message ?? "Dữ liệu không hợp lệ" },
+      { error: moTaLoi(parsed.error) },
       { status: 400 }
     );
   }

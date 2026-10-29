@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { prisma } from "@/lib/db/prisma";
 import { requireVocabUser } from "@/lib/vocab/guard";
-import { deckPatchInput } from "@/lib/vocab/deck";
+import { deckPatchInput, moTaLoi } from "@/lib/vocab/deck";
 
 export const dynamic = "force-dynamic";
 
@@ -56,7 +56,7 @@ export async function PATCH(req: NextRequest, { params }: Ctx) {
   const parsed = deckPatchInput.safeParse(await req.json().catch(() => null));
   if (!parsed.success) {
     return NextResponse.json(
-      { error: parsed.error.issues[0]?.message ?? "Dữ liệu không hợp lệ" },
+      { error: moTaLoi(parsed.error) },
       { status: 400 }
     );
   }

@@ -177,5 +177,63 @@ console.log("\n8. Chấm dạng gõ");
   check("nhận diện đúng dạng gõ", laDangGo("listen-to-typing") && !laDangGo("listen-to-word"));
 }
 
+
+// ── Quét toàn bộ 10 dạng ────────────────────────────────────────────────────
+// Thêm sau khi lọt lỗi: canGi() dò bằng t.includes("-image") nên hai dạng
+// image-to-* không bị coi là cần ảnh — thẻ trắng vẫn sinh câu, đề bài rỗng.
+console.log("\n9. Cả 10 dạng: số câu đúng với số thẻ đủ dữ liệu");
+{
+  // 6 thẻ: 4 có ảnh, 5 có nghĩa (thẻ "zeta" thiếu cả hai)
+  const cards = [
+    the("alpha", { anh: "http://a.jpg" }),
+    the("beta", { anh: "http://b.jpg" }),
+    the("gamma", { anh: "http://c.jpg" }),
+    the("delta", { anh: "http://d.jpg" }),
+    the("epsilon"),
+    the("zeta", { nghia: null }),
+  ];
+  // mong đợi: dạng cần ảnh ở ĐỀ hoặc PHƯƠNG ÁN → 4 câu; cần nghĩa → 5 câu;
+  // chỉ cần từ → 6 câu
+  const mongDoi: Record<QuizType, number> = {
+    "word-to-image": 4,
+    "image-to-word": 4,
+    "image-to-typing": 4,
+    "listen-to-image": 4,
+    "word-to-meaning": 5,
+    "meaning-to-word": 5,
+    "meaning-to-typing": 5,
+    "listen-to-meaning": 5,
+    "listen-to-word": 6,
+    "listen-to-typing": 6,
+  };
+
+  for (const [t, n] of Object.entries(mongDoi) as [QuizType, number][]) {
+    const { cauHoi } = sinhCauHoi(cards, [], { modes: [t] });
+    check(`${t.padEnd(18)} → ${n} câu`, cauHoi.length === n, `ra ${cauHoi.length}`);
+  }
+}
+
+console.log("\n10. Đề bài không bao giờ trống");
+{
+  const cards = ["a", "b", "c", "d", "e", "f"].map((w) =>
+    the(w, { anh: `http://${w}.jpg` })
+  );
+  const tatCa = Object.keys({
+    "word-to-image": 0, "image-to-word": 0, "image-to-typing": 0, "listen-to-image": 0,
+    "word-to-meaning": 0, "meaning-to-word": 0, "meaning-to-typing": 0,
+    "listen-to-meaning": 0, "listen-to-word": 0, "listen-to-typing": 0,
+  }) as QuizType[];
+  const { cauHoi } = sinhCauHoi(cards, [], { modes: tatCa });
+  const deRong = cauHoi.filter((c) => !c.de.chu && !c.de.anh && !c.de.nghe);
+  check("mọi câu có đề bài (chữ, ảnh hoặc nghe)", deRong.length === 0,
+    deRong.map((c) => `${c.wordKey}/${c.type}`).join(", "));
+
+  const paRong = cauHoi.filter(
+    (c) => c.phuongAn && c.phuongAn.some((p) => !p.label && !p.imageUrl)
+  );
+  check("mọi phương án có nội dung hiện ra", paRong.length === 0,
+    paRong.map((c) => c.type).join(", "));
+}
+
 console.log(`\n${"─".repeat(50)}\n${pass} đạt, ${fail} lỗi`);
 process.exit(fail > 0 ? 1 : 0);

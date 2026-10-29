@@ -20,7 +20,10 @@ export function makeId(prefix: string): string {
 export const cardInput = z.object({
   word: z.string().trim().min(1, "Thiếu từ").max(120),
   ipa: z.string().trim().max(120).optional(),
-  pos: z.string().trim().max(20).optional(),
+  // 60 chứ không phải 20: dữ liệu migrate từ sổ cũ có loại từ ghi cả cụm như
+  // "noun, verb, adjective, adverb" (29 ký tự). Để 20 là 3 bộ thật không lưu
+  // nổi, mà lỗi chỉ hiện ra lúc bấm Lưu.
+  pos: z.string().trim().max(60).optional(),
   meaningVi: z.string().trim().max(300).optional(),
   definition: z.string().trim().max(1000).optional(),
   example: z.string().trim().max(1000).optional(),
@@ -28,6 +31,51 @@ export const cardInput = z.object({
   imagePublicId: z.string().trim().max(300).optional(),
   audioUrl: z.string().trim().url().max(600).optional(),
 });
+
+/** Tên tiếng Việt của từng trường, để báo lỗi nói rõ chỗ nào sai. */
+const TEN_TRUONG: Record<string, string> = {
+  word: "Từ",
+  ipa: "Phiên âm",
+  pos: "Loại từ",
+  meaningVi: "Nghĩa tiếng Việt",
+  definition: "Định nghĩa",
+  example: "Ví dụ",
+  imageUrl: "Link ảnh",
+  audioUrl: "Link audio",
+  title: "Tên bộ",
+  description: "Mô tả",
+  part: "Part",
+  cards: "Danh sách thẻ",
+};
+
+/**
+ * Đổi lỗi zod thành câu tiếng Việt chỉ đúng chỗ sai.
+ *
+ * Trả thẳng issues[0].message cho ra những câu như "Too big: expected string
+ * to have <=20 characters" — học viên đọc xong vẫn không biết sửa ô nào.
+ */
+export function moTaLoi(err: z.ZodError): string {
+  const i = err.issues[0];
+  if (!i) return "Dữ liệu không hợp lệ";
+
+  // path kiểu ["cards", 3, "pos"] → thẻ thứ 4, trường "Loại từ"
+  const truong = [...i.path].reverse().find((x) => typeof x === "string" && TEN_TRUONG[x]);
+  const chiSo = i.path.find((x) => typeof x === "number");
+  const viTri =
+    typeof chiSo === "number" ? ` (thẻ thứ ${chiSo + 1})` : "";
+  const nhan = typeof truong === "string" ? TEN_TRUONG[truong] : null;
+
+  if (i.code === "too_big" && "maximum" in i) {
+    return `${nhan ?? "Một trường"}${viTri} quá dài — tối đa ${i.maximum} ký tự.`;
+  }
+  if (i.code === "too_small") {
+    return `${nhan ?? "Một trường"}${viTri} không được để trống.`;
+  }
+  if (i.code === "invalid_format") {
+    return `${nhan ?? "Một trường"}${viTri} sai định dạng.`;
+  }
+  return nhan ? `${nhan}${viTri}: ${i.message}` : i.message;
+}
 
 export const deckCreateInput = z.object({
   title: z.string().trim().min(1, "Thiếu tiêu đề").max(150),
