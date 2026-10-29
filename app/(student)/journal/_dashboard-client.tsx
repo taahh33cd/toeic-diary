@@ -313,7 +313,11 @@ function WeekStrip({ activeDays }: { activeDays: Set<string> }) {
                 fontWeight: 700,
                 background: d.active ? "var(--accent-primary)" : "transparent",
                 color: d.active ? "#fff" : "var(--text-muted)",
-                border: `1px solid ${d.active ? "var(--accent-primary)" : "var(--border)"}`,
+                border: `1px solid ${
+                  d.active
+                    ? "var(--accent-primary)"
+                    : "color-mix(in srgb, var(--text-primary) 22%, transparent)"
+                }`,
                 outline: d.isToday ? "2px solid var(--accent-primary)" : undefined,
                 outlineOffset: 1,
               }}
