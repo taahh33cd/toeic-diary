@@ -8,10 +8,11 @@ import { Sheet } from "@/components/journal/paper/Sheet";
 import StudyDeck from "@/components/vocab/StudyDeck";
 import DeckEditor from "@/components/vocab/DeckEditor";
 import ShareDeck from "@/components/vocab/ShareDeck";
+import QuizRunner from "@/components/vocab/QuizRunner";
 import { deleteDeck, getDeck, type DeckDetail } from "@/lib/vocab/client";
 import { playWord } from "@/lib/vocab/audio";
 
-type Man = "danhsach" | "hoc" | "hoc-den-han" | "sua";
+type Man = "danhsach" | "hoc" | "hoc-den-han" | "sua" | "quiz";
 
 export default function DeckDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -69,6 +70,21 @@ export default function DeckDetailPage() {
     return p.dueAt === null || new Date(p.dueAt) <= new Date();
   });
   const daThuoc = deck.cards.filter((c) => tdTheoKey.get(c.wordKey)?.mastered).length;
+
+  if (man === "quiz") {
+    return (
+      <QuizRunner
+        deckId={deck.id}
+        title={deck.title}
+        cards={deck.cards}
+        progress={progress}
+        onExit={() => {
+          setMan("danhsach");
+          load();
+        }}
+      />
+    );
+  }
 
   if (man === "sua") {
     return (
@@ -163,6 +179,13 @@ export default function DeckDetailPage() {
           style={{ background: "var(--bg-elevated)", color: "var(--text-primary)" }}
         >
           Học cả bộ ({deck.cardCount})
+        </button>
+        <button
+          onClick={() => setMan("quiz")}
+          className="px-4 py-2.5 rounded-xl text-sm font-bold"
+          style={{ background: "var(--bg-elevated)", color: "var(--text-primary)" }}
+        >
+          📝 Quiz
         </button>
       </div>
 
