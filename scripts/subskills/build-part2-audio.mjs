@@ -82,8 +82,13 @@ function answerVoice(questionVoice, k) {
 // ─────────────────────────────────────
 
 const tidy = (s) => String(s).replace(/\s+/g, " ").trim();
-/** Phát hiện chuỗi tiếng Việt để không đọc nhầm bằng giọng tiếng Anh. */
-const isVi = (s) => /[ăâđêôơưàáạảãèéẹẻẽìíịỉĩòóọỏõùúụủũỳýỵỷỹ]/i.test(s);
+/**
+ * Phát hiện chuỗi tiếng Việt để không đọc nhầm bằng giọng tiếng Anh.
+ * Liệt kê tay từng chữ có dấu là thiếu sót (sót "ế", "ấ", "ộ"…), nên tách NFD
+ * rồi bắt dấu thanh — đủ cho dữ liệu Part 2 vì phần tiếng Anh không có dấu.
+ */
+const isVi = (s) =>
+  /[ăâđêôơưĂÂĐÊÔƠƯ]/.test(s) || /[̣̀́̃̉]/.test(s.normalize("NFD"));
 
 /** Câu hoàn chỉnh của bài điền từ: lấy phương án đầu cho mỗi ô trống. */
 function fillSentence(item) {
@@ -129,7 +134,7 @@ function targetsFor(kind, item) {
 // ─────────────────────────────────────
 
 const files = readdirSync(DATA_DIR)
-  .filter((n) => n.endsWith(".json"))
+  .filter((n) => n.endsWith(".json") && n !== "part2-audio.json") // chính file map này
   .sort();
 
 /** text → { key, voice } */
@@ -269,7 +274,8 @@ await Promise.all(
   })
 );
 
-writeFileSync(OUT_FILE, JSON.stringify(maps, null, 1) + "\n", "utf8");
+// ghi gọn: file này đi thẳng vào bundle nên không xuống dòng cho nhẹ
+writeFileSync(OUT_FILE, JSON.stringify(maps) + "\n", "utf8");
 
 console.log(`\nXong: ${uploaded} file trên Supabase (${(bytes / 1024 / 1024).toFixed(1)} MB)`);
 console.log(`Map ghi vào ${OUT_FILE} (${Object.keys(maps).length} bộ đề)`);

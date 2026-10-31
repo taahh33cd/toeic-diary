@@ -53,8 +53,13 @@ function seededShuffle<T>(arr: T[], seed: number): T[] {
 // Audio — Part 2 vốn không có tiếng, mp3 do build-part2-audio.mjs sinh sẵn
 // ─────────────────────────────────────
 
-/** Gợi ý tiếng Việt thì không bao giờ ẩn — ẩn nó là mất luôn đề bài. */
-const isViText = (s: string) => /[ăâđêôơưàáạảãèéẹẻẽìíịỉĩòóọỏõùúụủũỳýỵỷỹ]/i.test(s);
+/**
+ * Gợi ý tiếng Việt thì không bao giờ ẩn — ẩn nó là mất luôn đề bài.
+ * Bắt dấu thanh trên bản tách NFD thay vì liệt kê tay từng chữ có dấu (dễ sót
+ * "ế", "ấ", "ộ"…).
+ */
+const isViText = (s: string) =>
+  /[ăâđêôơưĂÂĐÊÔƠƯ]/.test(s) || /[̣̀́̃̉]/.test(s.normalize("NFD"));
 
 let currentAudio: HTMLAudioElement | null = null;
 
@@ -889,7 +894,7 @@ function McqPanel({
         audio={item.audio}
         hidden={hideText && !submitted}
         extraKeys={optKeys.length === displayOpts.length ? optKeys : undefined}
-        extraLabel="Nghe câu hỏi + 3 phương án"
+        extraLabel={`Nghe câu hỏi + ${displayOpts.length} phương án`}
       />
 
       {/* Options */}
@@ -972,8 +977,9 @@ function McqPanel({
         })}
       </div>
 
-      {/* Translation word-bank — shown once MCQ is selected or locked */}
-      {(choice !== null || mcqPartLocked) && (
+      {/* Tầng dịch — chỉ còn ở những bộ vẫn giữ answerChunks. Bộ nào phương án
+          đã là tiếng Anh thì bỏ tầng này: nghe rồi chọn, đúng như Part 2 thật. */}
+      {item.answerChunks.length > 0 && (choice !== null || mcqPartLocked) && (
         <div style={{ border: `1px solid ${mcqPartLocked && !submitted ? "rgba(34,197,94,0.3)" : "var(--border)"}`, borderRadius: 10, padding: "14px 16px", display: "flex", flexDirection: "column", gap: 10 }}>
           <div style={{ fontSize: FS.xs, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
             Dịch nghĩa đáp án đúng sang tiếng Việt
@@ -1042,7 +1048,7 @@ function MatchPanel({
         audio={item.audio}
         hidden={hideText && !submitted}
         extraKeys={optKeys.length === displayOpts.length ? optKeys : undefined}
-        extraLabel="Nghe câu hỏi + 5 phương án"
+        extraLabel={`Nghe câu hỏi + ${displayOpts.length} phương án`}
       />
 
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>

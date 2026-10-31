@@ -316,9 +316,12 @@ export function scoreMcq(
     const mcqScore = userChoices[i] === items[i].correct ? 1 : 0;
     const expected = items[i].answerChunks;
     const actual   = userTranslations[i] ?? [];
-    const chunkCorrect = expected.length > 0
-      ? expected.filter((c, j) => c === actual[j]).length / expected.length
-      : 0;
+    // Bộ nào bỏ tầng dịch (answerChunks rỗng) thì điểm chỉ tính phần chọn đáp án
+    if (expected.length === 0) {
+      total += mcqScore;
+      continue;
+    }
+    const chunkCorrect = expected.filter((c, j) => c === actual[j]).length / expected.length;
     total += 0.5 * mcqScore + 0.5 * chunkCorrect;
   }
   return Math.round((total / items.length) * 100);
