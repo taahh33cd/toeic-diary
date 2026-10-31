@@ -17,7 +17,12 @@ interface Row {
   mastered: number;
   percent: number;
   done: boolean;
+  /** Số ngày kể từ lần ôn gần nhất; null = chưa ôn lần nào. */
+  ngayKhongOn: number | null;
 }
+
+/** Quá ngần này ngày không ôn thì gắn cờ cho giáo viên để ý. */
+const NGUONG_BO_ON = 4;
 
 /**
  * Bộ thẻ đã giao và tiến độ từng học viên.
@@ -94,6 +99,16 @@ export default function AssignmentTracker({ studentCode }: { studentCode?: strin
                   {r.reviewed}/{r.cardCount} từ
                   {r.mastered > 0 && ` · thuộc ${r.mastered}`}
                 </span>
+                {!r.done &&
+                  (r.ngayKhongOn === null ? (
+                    <span className="text-[11px] font-semibold" style={{ color: "var(--accent-red, #B94040)" }}>
+                      · chưa bắt đầu
+                    </span>
+                  ) : r.ngayKhongOn >= NGUONG_BO_ON ? (
+                    <span className="text-[11px] font-semibold" style={{ color: "var(--accent-red, #B94040)" }}>
+                      · {r.ngayKhongOn} ngày không ôn
+                    </span>
+                  ) : null)}
               </div>
             </div>
             <span

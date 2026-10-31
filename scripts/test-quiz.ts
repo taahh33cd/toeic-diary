@@ -132,14 +132,29 @@ console.log("\n5. Bộ quá nhỏ thì bỏ câu trắc nghiệm, không ra câu
 
 console.log("\n6. Không hai câu cùng từ nằm liền nhau");
 {
-  const { cauHoi } = sinhCauHoi(SAU_THE, [], {
-    modes: ["word-to-meaning", "meaning-to-word", "meaning-to-typing"],
-  });
-  let lienNhau = 0;
-  for (let i = 1; i < cauHoi.length; i++) {
-    if (cauHoi[i].wordKey === cauHoi[i - 1].wordKey) lienNhau++;
+  // Chạy 200 lượt: phép rải có xáo ngẫu nhiên nên lỗi chỉ lộ ở một số lượt —
+  // kiểm một lần là đúng loại test lọt lỗi.
+  let tongLienNhau = 0;
+  let luotXau = 0;
+  for (let lan = 0; lan < 200; lan++) {
+    const { cauHoi: ds } = sinhCauHoi(SAU_THE, [], {
+      modes: ["word-to-meaning", "meaning-to-word", "meaning-to-typing"],
+    });
+    let n = 0;
+    for (let i = 1; i < ds.length; i++) if (ds[i].wordKey === ds[i - 1].wordKey) n++;
+    tongLienNhau += n;
+    if (n > 0) luotXau++;
   }
-  check("0 cặp liền nhau trùng từ", lienNhau === 0, `${lienNhau} cặp`);
+  check("200 lượt sinh đề: 0 cặp liền nhau trùng từ", tongLienNhau === 0,
+    `${luotXau}/200 lượt có lỗi, tổng ${tongLienNhau} cặp`);
+
+  // Trường hợp cực đoan: 2 từ × 3 dạng — vẫn tránh được hoàn toàn
+  const { cauHoi: it } = sinhCauHoi([the("x"), the("y"), the("z"), the("w")], [], {
+    modes: ["meaning-to-typing", "word-to-meaning", "meaning-to-word"],
+  });
+  let n2 = 0;
+  for (let i = 1; i < it.length; i++) if (it[i].wordKey === it[i - 1].wordKey) n2++;
+  check("bộ nhỏ 4 từ × 3 dạng cũng không có cặp liền nhau", n2 === 0, `${n2} cặp`);
 }
 
 console.log("\n7. Lọc đến hạn và ưu tiên từ hay sai");

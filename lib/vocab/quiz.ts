@@ -234,16 +234,38 @@ export function sinhCauHoi(
 /**
  * Xáo sao cho hai câu cùng một từ không nằm liền nhau — gặp "negotiate" ba
  * lần liên tiếp thì câu sau chỉ là nhớ câu trước, không đo được gì.
+ *
+ * Mỗi bước lấy từ CÒN NHIỀU CÂU NHẤT mà khác từ vừa ra. Cách tham lam cũ là
+ * "lấy phần tử đầu khác từ trước", nó dồn các từ nhiều câu về cuối rồi buộc
+ * phải xếp liền nhau — test bắt được 1 cặp liền nhau ở một lượt chạy.
+ *
+ * Cách này không bao giờ ra cặp liền nhau khi điều đó còn khả thi, tức khi từ
+ * nhiều câu nhất không quá một nửa tổng số câu.
  */
 function raiDeu(ds: CauHoi[]): CauHoi[] {
   if (ds.length < 3) return ds;
-  const conLai = tron(ds);
+
+  const nhom = new Map<string, CauHoi[]>();
+  for (const c of tron(ds)) {
+    if (!nhom.has(c.wordKey)) nhom.set(c.wordKey, []);
+    nhom.get(c.wordKey)!.push(c);
+  }
+
   const ra: CauHoi[] = [];
-  while (conLai.length > 0) {
+  while (ra.length < ds.length) {
     const truoc = ra[ra.length - 1]?.wordKey;
-    let i = conLai.findIndex((c) => c.wordKey !== truoc);
-    if (i === -1) i = 0; // chỉ còn toàn từ đó, đành chịu
-    ra.push(conLai.splice(i, 1)[0]);
+    let chon: string | null = null;
+    let nhieuNhat = 0;
+    for (const [k, v] of nhom) {
+      if (v.length === 0 || k === truoc) continue;
+      if (v.length > nhieuNhat) {
+        nhieuNhat = v.length;
+        chon = k;
+      }
+    }
+    // Chỉ còn đúng từ vừa ra — không tránh được nữa, xếp nốt cho hết.
+    if (chon === null) chon = truoc!;
+    ra.push(nhom.get(chon)!.pop()!);
   }
   return ra;
 }

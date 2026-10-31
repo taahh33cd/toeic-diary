@@ -115,16 +115,21 @@ export async function GET(req: NextRequest) {
 
     const tienDo = await prisma.vocabProgress.findMany({
       where: { userId: { in: profiles.map((p) => p.id) }, repCount: { gt: 0 } },
-      select: { userId: true, wordKey: true, mastered: true },
+      select: { userId: true, wordKey: true, mastered: true, lastReview: true },
     });
     const theoUser = new Map<string, Set<string>>();
     const thuocTheoUser = new Map<string, Set<string>>();
+    const onCuoiTheoUser = new Map<string, Date>();
     for (const t of tienDo) {
       if (!theoUser.has(t.userId)) theoUser.set(t.userId, new Set());
       theoUser.get(t.userId)!.add(t.wordKey);
       if (t.mastered) {
         if (!thuocTheoUser.has(t.userId)) thuocTheoUser.set(t.userId, new Set());
         thuocTheoUser.get(t.userId)!.add(t.wordKey);
+      }
+      if (t.lastReview) {
+        const cu = onCuoiTheoUser.get(t.userId);
+        if (!cu || t.lastReview > cu) onCuoiTheoUser.set(t.userId, t.lastReview);
       }
     }
 
@@ -153,6 +158,13 @@ export async function GET(req: NextRequest) {
         mastered: soDaThuoc,
         percent: pct,
         done: pct >= (r.minScore ?? 70),
+        // Tín hiệu "bỏ ôn" đặt ngay chỗ giáo viên nhìn, thay vì đẻ thêm một
+        // cron push nữa: daily-student đã nhắc học viên mỗi tối rồi.
+        ngayKhongOn: (() => {
+          const cuoi = p ? onCuoiTheoUser.get(p.id) : undefined;
+          if (!cuoi) return null; // chưa ôn lần nào
+          return Math.floor((Date.now() - cuoi.getTime()) / 86_400_000);
+        })(),
       };
     });
 
