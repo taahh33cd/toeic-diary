@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, JetBrains_Mono, Syne, Lora, Be_Vietnam_Pro, Noto_Serif, Plus_Jakarta_Sans, Playpen_Sans } from "next/font/google";
+import { JetBrains_Mono, Lora, Be_Vietnam_Pro, Noto_Serif, Playpen_Sans } from "next/font/google";
 import "./globals.css";
 import { FirebaseBridgeProvider } from "@/components/shared/FirebaseBridgeProvider";
 import { ToastProvider } from "@/components/shared/Toast";
@@ -9,25 +9,11 @@ import { WordLookupProvider } from "@/components/shared/WordLookupProvider";
 import { CourseUnlockCelebration } from "@/components/course/CourseUnlockCelebration";
 
 // ── Fonts ──────────────────────────────────────
-const dmSans = DM_Sans({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-dm-sans",
-  display: "swap",
-  weight: ["300", "400", "500", "600"],
-});
-
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
   display: "swap",
   weight: ["400", "500"],
-});
-
-const syne = Syne({
-  subsets: ["latin"],
-  variable: "--font-syne",
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
 });
 
 // ── Journal fonts (warm beige theme — matches STUDENT.html) ──────────────────
@@ -61,13 +47,6 @@ const playpenSans = Playpen_Sans({
 const notoSerif = Noto_Serif({
   subsets: ["latin", "vietnamese"],
   variable: "--font-noto-serif",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-plus-jakarta",
   display: "swap",
   weight: ["400", "500", "600", "700"],
 });
@@ -127,7 +106,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${dmSans.variable} ${jetbrainsMono.variable} ${syne.variable} ${lora.variable} ${beVietnamPro.variable} ${notoSerif.variable} ${plusJakarta.variable} ${playpenSans.variable}`}
+        className={`${jetbrainsMono.variable} ${lora.variable} ${beVietnamPro.variable} ${notoSerif.variable} ${playpenSans.variable}`}
         suppressHydrationWarning
       >
         <FirebaseBridgeProvider />
