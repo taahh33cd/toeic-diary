@@ -33,6 +33,13 @@ export default function DecksPage() {
               ← Tất cả từ
             </Link>
             <Link
+              href="/journal/vocab/stats"
+              className="px-3 py-2 rounded-lg text-sm font-semibold"
+              style={{ background: "var(--bg-elevated)", color: "var(--text-primary)" }}
+            >
+              📈 Tiến độ
+            </Link>
+            <Link
               href="/journal/vocab/decks/new"
               className="px-3 py-2 rounded-lg text-sm font-semibold"
               style={{ background: "var(--accent-primary)", color: "#fff" }}
