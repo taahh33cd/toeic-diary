@@ -22,8 +22,10 @@
 | 1D.2 — GV giao bộ thẻ + theo dõi tiến độ | ✅ xong | `64cf02f` |
 | 2.1 — Engine quiz 10 dạng + ghi phiên + XP | ✅ xong, 25/25 kiểm | `1a1e259e` |
 | 2.2 — Ảnh (Pexels proxy + upload + dán link) | ✅ xong, 37/37 kiểm quiz | `5f96875b` |
-| 2.3 — Thống kê tiến độ | ⏳ đang tới | |
-| 2.4 — Cron nhắc + hiệu chỉnh ngưỡng nhanh/chậm | ⬜ | |
+| 2.3 — Thống kê tiến độ | ✅ xong | `e639fed1` |
+| 2.4 — Cờ bỏ ôn + công cụ hiệu chỉnh ngưỡng | ✅ xong, 38/38 kiểm quiz | `3cc640ca` |
+
+**Phase 2 xong.** Còn lại là Phase 3 (thư viện bộ mẫu, dạng quiz TOEIC-hoá, chế độ thi, học offline).
 
 **Lỗi công thức đã sửa (§5):** "nửa trọng số" ban đầu hiểu thành `ease × 0.5`,
 cho hệ số 0.65–1.4 nên `round(1 × 1.25) = 1` — lật thẻ không bao giờ thoát mốc
