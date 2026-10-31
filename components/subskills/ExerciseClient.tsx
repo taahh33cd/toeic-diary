@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { FS } from "@/lib/ui/scale";
 import type {
   SubskillSet,
@@ -17,6 +17,7 @@ import {
   keywordItemGroupsMatched,
   freetypeItemCorrect,
   getFreetypeKeywordHint,
+  part2AudioUrl,
   type FreetypeKeywordHint,
 } from "@/lib/subskills";
 
@@ -46,6 +47,115 @@ function seededShuffle<T>(arr: T[], seed: number): T[] {
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
+}
+
+// ─────────────────────────────────────
+// Audio — Part 2 vốn không có tiếng, mp3 do build-part2-audio.mjs sinh sẵn
+// ─────────────────────────────────────
+
+/** Gợi ý tiếng Việt thì không bao giờ ẩn — ẩn nó là mất luôn đề bài. */
+const isViText = (s: string) => /[ăâđêôơưàáạảãèéẹẻẽìíịỉĩòóọỏõùúụủũỳýỵỷỹ]/i.test(s);
+
+let currentAudio: HTMLAudioElement | null = null;
+
+function stopAudio() {
+  currentAudio?.pause();
+  currentAudio = null;
+}
+
+/** Phát một file; luôn resolve kể cả khi lỗi mạng để chuỗi phát không kẹt. */
+function playKey(key: string): Promise<void> {
+  return new Promise((resolve) => {
+    stopAudio();
+    const el = new Audio(part2AudioUrl(key));
+    currentAudio = el;
+    const done = () => resolve();
+    el.onended = done;
+    el.onerror = done;
+    el.play().catch(done);
+  });
+}
+
+async function playSequence(keys: string[]) {
+  for (const k of keys) {
+    await playKey(k);
+    await new Promise((r) => setTimeout(r, 400));
+  }
+}
+
+function ListenButton({
+  keys,
+  label = "Nghe",
+  onPlayed,
+}: {
+  keys: string[];
+  label?: string;
+  onPlayed?: () => void;
+}) {
+  const [playing, setPlaying] = useState(false);
+  useEffect(() => () => stopAudio(), []);
+  if (keys.length === 0) return null;
+
+  return (
+    <button
+      type="button"
+      onClick={async () => {
+        if (playing) { stopAudio(); setPlaying(false); return; }
+        setPlaying(true);
+        await playSequence(keys);
+        setPlaying(false);
+        onPlayed?.();
+      }}
+      style={{
+        display: "inline-flex", alignItems: "center", gap: 6,
+        padding: "7px 14px", borderRadius: 999, flexShrink: 0,
+        border: `1.5px solid ${playing ? "var(--accent-primary)" : "var(--border)"}`,
+        background: playing ? "var(--accent-primary)" : "var(--bg-elevated)",
+        color: playing ? "#fff" : "var(--text-primary)",
+        fontSize: FS.sm, fontWeight: 600, cursor: "pointer",
+      }}
+    >
+      {playing ? "■" : "▶"} {label}
+    </button>
+  );
+}
+
+/**
+ * Dòng đề bài kèm nút nghe. Khi `hidden` bật thì giấu chữ tiếng Anh đi, học
+ * viên phải nghe mới làm được — chữ hiện lại sau khi chấm.
+ */
+function PromptLine({
+  text,
+  audio,
+  hidden,
+  extraKeys,
+  extraLabel,
+}: {
+  text: string;
+  audio?: string;
+  hidden?: boolean;
+  extraKeys?: string[];
+  extraLabel?: string;
+}) {
+  const box: React.CSSProperties = {
+    margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)",
+    background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10,
+    borderLeft: "3px solid var(--accent-primary)",
+    display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap",
+  };
+  const masked = hidden && !!audio;
+
+  return (
+    <div style={box}>
+      {audio && <ListenButton keys={[audio]} />}
+      {extraKeys && extraKeys.length > 0 && (
+        <ListenButton keys={[...(audio ? [audio] : []), ...extraKeys]} label={extraLabel ?? "Nghe cả bộ"} />
+      )}
+      <span style={{ flex: 1, minWidth: 0, color: masked ? "var(--text-muted)" : "var(--text-primary)", fontWeight: masked ? 500 : 600 }}>
+        {masked ? "Chữ đang ẩn — bấm Nghe để làm bài" : text}
+      </span>
+    </div>
+  );
 }
 
 type BestMap = Record<string, { score: number; passed: boolean }>;
@@ -358,6 +468,7 @@ function WordbankPanel({
   slots,
   bank,
   submitted,
+  hideText,
   onPickBank,
   onReturnSlot,
 }: {
@@ -365,15 +476,18 @@ function WordbankPanel({
   slots: (string | null)[];
   bank: string[];
   submitted: boolean;
+  hideText: boolean;
   onPickBank: (chip: string) => void;
   onReturnSlot: (i: number) => void;
 }) {
   const correct = submitted && wordbankItemCorrect(item, slots.filter(Boolean) as string[]);
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
-        {item.prompt}
-      </p>
+      <PromptLine
+        text={item.prompt}
+        audio={item.audio}
+        hidden={hideText && !submitted && !isViText(item.prompt)}
+      />
       <ChipSlots
         slots={slots}
         bank={bank}
@@ -448,6 +562,14 @@ function FillPanel({
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+      {item.audio && (
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+          <ListenButton keys={[item.audio]} label="Nghe cả câu" />
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
+            Nghe rồi điền từ nghe được vào ô trống.
+          </span>
+        </div>
+      )}
       {item.hint && (
         <div style={{ fontSize: FS.sm, color: "var(--text-muted)", fontStyle: "italic" }}>
           💡 {item.hint}
@@ -574,11 +696,13 @@ function KeywordPanel({
   item,
   input,
   submitted,
+  hideText,
   onChange,
 }: {
   item: KWItem;
   input: string;
   submitted: boolean;
+  hideText: boolean;
   onChange: (v: string) => void;
 }) {
   const groupMatches = submitted ? keywordItemGroupsMatched(item, input) : null;
@@ -587,9 +711,7 @@ function KeywordPanel({
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
-        {item.prompt}
-      </p>
+      <PromptLine text={item.prompt} audio={item.audio} hidden={hideText && !submitted} />
       <div style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
         Cần ít nhất <strong>{item.minRequired}</strong> từ khóa, cách nhau bằng dấu phẩy
       </div>
@@ -669,10 +791,13 @@ function FreetypePanel({
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-      {/* Vietnamese hint */}
-      <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
-        {item.prompt}
-      </p>
+      {/* Gợi ý tiếng Việt + nút nghe câu tiếng Anh để viết lại */}
+      <PromptLine text={item.prompt} audio={item.audio} />
+      {item.audio && (
+        <span style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: -8 }}>
+          Nghe được bao nhiêu lần tuỳ ý — viết lại đúng câu hỏi nghe được.
+        </span>
+      )}
 
       {/* Input */}
       <div style={{ position: "relative" }}>
@@ -723,6 +848,7 @@ function FreetypePanel({
 function McqPanel({
   item,
   displayOpts,
+  displayOptAudio,
   displayCorrect,
   choice,
   tSlots,
@@ -730,12 +856,14 @@ function McqPanel({
   submitted,
   disabledOpts,
   mcqPartLocked,
+  hideText,
   onChoose,
   onPickBank,
   onReturnSlot,
 }: {
   item: MCQItem;
   displayOpts: string[];
+  displayOptAudio: (string | undefined)[];
   displayCorrect: number;
   choice: number | null;
   tSlots: (string | null)[];
@@ -743,6 +871,7 @@ function McqPanel({
   submitted: boolean;
   disabledOpts: number[];
   mcqPartLocked: boolean;
+  hideText: boolean;
   onChoose: (i: number) => void;
   onPickBank: (chip: string) => void;
   onReturnSlot: (i: number) => void;
@@ -751,12 +880,17 @@ function McqPanel({
   const translation = tSlots.filter(Boolean) as string[];
   const transOk = submitted && item.answerChunks.every((c, j) => c === translation[j]);
   const allOk = mcqOk && transOk;
+  const optKeys = displayOptAudio.filter(Boolean) as string[];
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
-        {item.prompt}
-      </p>
+      <PromptLine
+        text={item.prompt}
+        audio={item.audio}
+        hidden={hideText && !submitted}
+        extraKeys={optKeys.length === displayOpts.length ? optKeys : undefined}
+        extraLabel="Nghe câu hỏi + 3 phương án"
+      />
 
       {/* Options */}
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -880,27 +1014,36 @@ function McqPanel({
 function MatchPanel({
   item,
   displayOpts,
+  displayOptAudio,
   displayCorrect,
   choice,
   submitted,
   disabledOpts,
+  hideText,
   onChoose,
 }: {
   item: MTItem;
   displayOpts: string[];
+  displayOptAudio: (string | undefined)[];
   displayCorrect: number;
   choice: number | null;
   submitted: boolean;
   disabledOpts: number[];
+  hideText: boolean;
   onChoose: (i: number) => void;
 }) {
   const isCorrect = submitted && choice === displayCorrect;
+  const optKeys = displayOptAudio.filter(Boolean) as string[];
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
-        {item.question}
-      </p>
+      <PromptLine
+        text={item.question}
+        audio={item.audio}
+        hidden={hideText && !submitted}
+        extraKeys={optKeys.length === displayOpts.length ? optKeys : undefined}
+        extraLabel="Nghe câu hỏi + 5 phương án"
+      />
 
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {displayOpts.map((opt, i) => {
@@ -1289,22 +1432,54 @@ export default function ExerciseClient({
   const [disabledOpts, setDisabledOpts] = useState<number[]>([]); // tried-wrong option indices
   const [mcqPartLocked, setMcqPartLocked] = useState(false); // MCQ correct, translate pending
 
+  // ── Chế độ ẩn chữ ────────────────────────────────────────────────
+  // Giấu câu tiếng Anh đi để bắt buộc phải nghe. Nhớ lựa chọn của học viên,
+  // mặc định tắt để người đang làm dở không bị đổi độ khó giữa chừng.
+  const [hideText, setHideText] = useState(false);
+  useEffect(() => {
+    try {
+      setHideText(localStorage.getItem("part2-hide-text") === "1");
+    } catch { /* trình duyệt chặn storage — cứ để tắt */ }
+  }, []);
+
+  function toggleHideText() {
+    setHideText((v) => {
+      const next = !v;
+      try { localStorage.setItem("part2-hide-text", next ? "1" : "0"); } catch { /* bỏ qua */ }
+      return next;
+    });
+  }
+
   const ex = set.exercises[exIdx];
+  const hasAudio = ex.items.some((it) => (it as { audio?: string }).audio);
+
+  // Chuyển câu thì tắt tiếng đang phát dở
+  useEffect(() => { stopAudio(); }, [exIdx, itemIdx]);
 
   // ── Deterministic option shuffle for MCQ and Match ────────────────
   // Seed = exIdx * 14 + itemIdx → unique per (exercise, item) pair
-  const [mcqDisplayOpts, mcqDisplayCorrect] = useMemo<[string[], number]>(() => {
-    if (ex.kind !== "mcq") return [[], 0];
+  // Audio của phương án phải đi theo thứ tự ĐÃ TRỘN, nếu không học viên bấm
+  // nghe phương án A lại ra câu của phương án khác.
+  const [mcqDisplayOpts, mcqDisplayCorrect, mcqDisplayOptAudio] = useMemo<
+    [string[], number, (string | undefined)[]]
+  >(() => {
+    if (ex.kind !== "mcq") return [[], 0, []];
     const item = ex.items[itemIdx] as MCQItem;
-    const shuffled = seededShuffle([...item.options] as string[], exIdx * 14 + itemIdx);
-    return [shuffled, shuffled.indexOf(item.options[item.correct] as string)];
+    const opts = [...item.options] as string[];
+    const shuffled = seededShuffle(opts, exIdx * 14 + itemIdx);
+    const audio = shuffled.map((o) => item.optionAudio?.[opts.indexOf(o)]);
+    return [shuffled, shuffled.indexOf(item.options[item.correct] as string), audio];
   }, [ex, exIdx, itemIdx]);
 
-  const [matchDisplayOpts, matchDisplayCorrect] = useMemo<[string[], number]>(() => {
-    if (ex.kind !== "match") return [[], 0];
+  const [matchDisplayOpts, matchDisplayCorrect, matchDisplayOptAudio] = useMemo<
+    [string[], number, (string | undefined)[]]
+  >(() => {
+    if (ex.kind !== "match") return [[], 0, []];
     const item = ex.items[itemIdx] as MTItem;
-    const shuffled = seededShuffle([...item.options] as string[], exIdx * 14 + itemIdx + 500);
-    return [shuffled, shuffled.indexOf(item.options[item.correct])];
+    const opts = [...item.options] as string[];
+    const shuffled = seededShuffle(opts, exIdx * 14 + itemIdx + 500);
+    const audio = shuffled.map((o) => item.optionAudio?.[opts.indexOf(o)]);
+    return [shuffled, shuffled.indexOf(item.options[item.correct]), audio];
   }, [ex, exIdx, itemIdx]);
 
   function resetForItem(ei: number, ii: number) {
@@ -1607,6 +1782,25 @@ export default function ExerciseClient({
         {ex.instruction}
       </div>
 
+      {/* Chế độ nghe */}
+      {hasAudio && (
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", fontSize: FS.sm, color: "var(--text-muted)" }}>
+          <span>🔊 Bài này có audio — nghe trước rồi mới làm.</span>
+          <button
+            type="button"
+            onClick={toggleHideText}
+            style={{
+              padding: "5px 12px", borderRadius: 999, cursor: "pointer", fontSize: FS.xs, fontWeight: 600,
+              border: `1.5px solid ${hideText ? "var(--accent-primary)" : "var(--border)"}`,
+              background: hideText ? "var(--accent-primary)" : "var(--bg-elevated)",
+              color: hideText ? "#fff" : "var(--text-primary)",
+            }}
+          >
+            {hideText ? "✓ Đang ẩn chữ" : "Ẩn chữ để luyện nghe"}
+          </button>
+        </div>
+      )}
+
       {/* Exercise content */}
       {ex.kind === "wordbank" && (
         <WordbankPanel
@@ -1614,6 +1808,7 @@ export default function ExerciseClient({
           slots={wbSlots}
           bank={wbBank}
           submitted={submitted}
+          hideText={hideText}
           onPickBank={wbPickBank}
           onReturnSlot={wbReturnSlot}
         />
@@ -1631,6 +1826,7 @@ export default function ExerciseClient({
           item={items[itemIdx] as KWItem}
           input={kwInput}
           submitted={submitted}
+          hideText={hideText}
           onChange={setKwInput}
         />
       )}
@@ -1649,6 +1845,7 @@ export default function ExerciseClient({
         <McqPanel
           item={items[itemIdx] as MCQItem}
           displayOpts={mcqDisplayOpts}
+          displayOptAudio={mcqDisplayOptAudio}
           displayCorrect={mcqDisplayCorrect}
           choice={mcqChoice}
           tSlots={mcqTSlots}
@@ -1656,6 +1853,7 @@ export default function ExerciseClient({
           submitted={submitted}
           disabledOpts={disabledOpts}
           mcqPartLocked={mcqPartLocked}
+          hideText={hideText}
           onChoose={c => { if (!submitted && !mcqPartLocked) setMcqChoice(c); }}
           onPickBank={mcqTPickBank}
           onReturnSlot={mcqTReturnSlot}
@@ -1665,10 +1863,12 @@ export default function ExerciseClient({
         <MatchPanel
           item={items[itemIdx] as MTItem}
           displayOpts={matchDisplayOpts}
+          displayOptAudio={matchDisplayOptAudio}
           displayCorrect={matchDisplayCorrect}
           choice={matchChoice}
           submitted={submitted}
           disabledOpts={disabledOpts}
+          hideText={hideText}
           onChoose={c => { if (!submitted) setMatchChoice(c); }}
         />
       )}

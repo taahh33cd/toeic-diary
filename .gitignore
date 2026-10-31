@@ -52,3 +52,6 @@ __pycache__/
 
 # node_modules ở mọi cấp (không chỉ root)
 node_modules/
+
+# Cache mp3 của TTS Part 2 — file thật nằm trên Supabase Storage
+scripts/data/part2-audio/

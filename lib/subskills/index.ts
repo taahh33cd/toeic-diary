@@ -2,25 +2,36 @@
 // Types
 // ─────────────────────────────────────
 
-export type WordbankItem = {
+/**
+ * Khoá file mp3 của câu tiếng Anh trong item, sinh bởi
+ * scripts/subskills/build-part2-audio.mjs. Ghép với PART2_AUDIO_BASE thành URL.
+ */
+export type AudioKeys = {
+  /** Câu học viên cần nghe (câu hỏi, hoặc câu hoàn chỉnh của bài điền từ) */
+  audio?: string;
+  /** Các phương án trả lời, cùng thứ tự với `options` trong dữ liệu gốc */
+  optionAudio?: string[];
+};
+
+export type WordbankItem = AudioKeys & {
   prompt: string;
   chunks: string[];
 };
 
-export type FillItem = {
+export type FillItem = AudioKeys & {
   template: string;
   hint: string | null;
   wordBank?: string[];
   blanks: string[][];
 };
 
-export type KeywordItem = {
+export type KeywordItem = AudioKeys & {
   prompt: string;
   minRequired: number;
   keywords: string[][];
 };
 
-export type McqItem = {
+export type McqItem = AudioKeys & {
   prompt: string;
   options: [string, string, string] | [string, string, string, string];
   correct: 0 | 1 | 2 | 3;
@@ -29,14 +40,14 @@ export type McqItem = {
   answerChunkDistractors?: string[]; // Extra wrong chips mixed into translate pool (Hard)
 };
 
-export type MatchItem = {
+export type MatchItem = AudioKeys & {
   question: string;
   options: [string, string, string, string, string];
   correct: 0 | 1 | 2 | 3 | 4;
   explanation: string;
 };
 
-export type FreetypeItem = {
+export type FreetypeItem = AudioKeys & {
   prompt: string;           // Vietnamese hint shown to user
   answer: string;           // Primary correct English sentence
   acceptedAnswers?: string[]; // Alternative acceptable forms
@@ -142,31 +153,60 @@ import yesNoHardData  from "@/lib/subskills/data/yes-no.hard.json";
 import tagHardData    from "@/lib/subskills/data/tag.hard.json";
 import choiceHardData from "@/lib/subskills/data/choice.hard.json";
 
+import part2Audio from "@/lib/subskills/data/part2-audio.json";
+
+/** Thư mục chứa mp3 do build-part2-audio.mjs đẩy lên Supabase Storage. */
+export const PART2_AUDIO_BASE =
+  "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/subskills/part2";
+
+export function part2AudioUrl(key: string): string {
+  return `${PART2_AUDIO_BASE}/${key}.mp3`;
+}
+
+type AudioMap = Record<string, { exercises: { items: AudioKeys[] }[] }>;
+
+/**
+ * Gắn khoá audio vào từng item. Map để riêng theo chỉ số thay vì ghi thẳng vào
+ * file dữ liệu, để lần sinh lại audio không làm xáo trộn 30 file bài tập.
+ */
+function withAudio(set: unknown, file: string): SubskillSet {
+  const map = (part2Audio as AudioMap)[file];
+  const s = set as SubskillSet;
+  if (!map) return s;
+  return {
+    ...s,
+    exercises: s.exercises.map((ex, ei) => ({
+      ...ex,
+      items: ex.items.map((item, ii) => ({ ...item, ...(map.exercises[ei]?.items[ii] ?? {}) })),
+    })) as SubskillSet["exercises"],
+  };
+}
+
 export const PART2_SETS: SubskillSet[] = [
-  whoData,
-  whatData,
-  whichData,
-  whereData,
-  whenData,
-  whyData,
-  howData,
-  yesNoData,
-  tagData,
-  choiceData,
-] as SubskillSet[];
+  withAudio(whoData, "who.json"),
+  withAudio(whatData, "what.json"),
+  withAudio(whichData, "which.json"),
+  withAudio(whereData, "where.json"),
+  withAudio(whenData, "when.json"),
+  withAudio(whyData, "why.json"),
+  withAudio(howData, "how.json"),
+  withAudio(yesNoData, "yes-no.json"),
+  withAudio(tagData, "tag.json"),
+  withAudio(choiceData, "choice.json"),
+];
 
 export const PART2_MEDIUM_SETS: SubskillSet[] = [
-  whoMediumData,
-  whatMediumData,
-  whichMediumData,
-  whereMediumData,
-  whenMediumData,
-  whyMediumData,
-  howMediumData,
-  yesNoMediumData,
-  tagMediumData,
-  choiceMediumData,
-] as SubskillSet[];
+  withAudio(whoMediumData, "who.medium.json"),
+  withAudio(whatMediumData, "what.medium.json"),
+  withAudio(whichMediumData, "which.medium.json"),
+  withAudio(whereMediumData, "where.medium.json"),
+  withAudio(whenMediumData, "when.medium.json"),
+  withAudio(whyMediumData, "why.medium.json"),
+  withAudio(howMediumData, "how.medium.json"),
+  withAudio(yesNoMediumData, "yes-no.medium.json"),
+  withAudio(tagMediumData, "tag.medium.json"),
+  withAudio(choiceMediumData, "choice.medium.json"),
+];
 
 export function getPart2Set(questionWord: string): SubskillSet | undefined {
   return PART2_SETS.find((s) => s.questionWord === questionWord);
@@ -177,17 +217,17 @@ export function getPart2MediumSet(questionWord: string): SubskillSet | undefined
 }
 
 export const PART2_HARD_SETS: SubskillSet[] = [
-  whoHardData,
-  whatHardData,
-  whichHardData,
-  whereHardData,
-  whenHardData,
-  whyHardData,
-  howHardData,
-  yesNoHardData,
-  tagHardData,
-  choiceHardData,
-] as SubskillSet[];
+  withAudio(whoHardData, "who.hard.json"),
+  withAudio(whatHardData, "what.hard.json"),
+  withAudio(whichHardData, "which.hard.json"),
+  withAudio(whereHardData, "where.hard.json"),
+  withAudio(whenHardData, "when.hard.json"),
+  withAudio(whyHardData, "why.hard.json"),
+  withAudio(howHardData, "how.hard.json"),
+  withAudio(yesNoHardData, "yes-no.hard.json"),
+  withAudio(tagHardData, "tag.hard.json"),
+  withAudio(choiceHardData, "choice.hard.json"),
+];
 
 export function getPart2HardSet(questionWord: string): SubskillSet | undefined {
   return PART2_HARD_SETS.find((s) => s.questionWord === questionWord);
