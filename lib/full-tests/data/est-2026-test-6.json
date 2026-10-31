@@ -1632,7 +1632,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "B",
+     "answer": "A",
      "explanation": {
       "translation": null,
       "reasoning": "Người đàn ông nhờ: 'I'm hoping you'll help me update the training materials' (tôi hy vọng bạn sẽ giúp tôi cập nhật các tài liệu đào tạo) -> Tương ứng với Help update training materials.",
@@ -1651,7 +1651,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "A",
+     "answer": "B",
      "explanation": {
       "translation": null,
       "reasoning": "Họ nhắc đến: 'will you be at the awards ceremony next week?' (bạn sẽ tham dự lễ trao giải vào tuần tới chứ?) -> Tham dự lễ trao giải (Attend an awards ceremony).\nĐoạn hội thoại (",

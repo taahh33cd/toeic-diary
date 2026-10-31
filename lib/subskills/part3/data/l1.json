@@ -473,7 +473,7 @@
       "Engineers",
       "Journalists"
      ],
-     "correct": 0,
+     "correct": 3,
      "explanation": "Người nói bắt đầu bằng: \"I've scheduled this press conference to officially respond to your inquiries\" (Tôi đã lên lịch cuộc họp báo này để chính thức trả lời các câu hỏi của các bạn). Những người tham gia họp báo (press conference) thường là nhà báo.",
      "part": 4,
      "label": "identity",
@@ -531,162 +531,162 @@
     {
      "id": "fill-0",
      "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
-     "context": "Well, I'd like to know more about them. Can you two do some ______ before our next meeting?",
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-5/q53-55.mp3",
-     "transcript": "W: The first item on today's meeting agenda is our bid to renovate the Morrisville Bridge. Do we have an update on that yet?\nM1: Yes-unfortunately we didn't get the contract.\nM2: Yes, the only explanation given was that another construction company submitted a proposal with a shorter timeline.\nW: So, what do we know about this competitor? Have they worked on other local projects?\nM1: The only thing I heard was their name-CDQ Construction Company.\nW: Well, I'd like to know more about them. Can you two do some research before our next meeting?\n53. What industry do the speakers most likely work in?\n54. What is the reason a company did not get a contract?\n55. What does the woman ask the man to do?",
-     "options": [
-      "research",
-      "opportunity",
-      "order",
-      "they're"
-     ],
-     "correct": 0,
-     "explanation": "Câu đầy đủ: \"Well, I'd like to know more about them. Can you two do some research before our next meeting?\"",
-     "part": 3
-    },
-    {
-     "id": "fill-1",
-     "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
      "context": "Good morning, and welcome to the Third Annual ______ Trade Show.",
      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q71-73.mp3",
      "transcript": "Good morning, and welcome to the Third Annual Robotics Trade Show. Please note that in order to accommodate the large number of guests who signed up for the afternoon panel discussion, that event has been moved to Exhibit Hall B. That's on the lower level, to the left of the elevators. And will the person who left a backpack at the information desk please return to the desk to claim your item? It's a silver Rugged Hiker model with a blue strap.\n71. Where most likely is the announcement being made?\n72. What does the speaker say has changed?\n73. What does the speaker say is available at the information desk?",
      "options": [
-      "qualified",
+      "hygienist",
       "robotics",
-      "suggest",
-      "given"
+      "keywords",
+      "paint"
      ],
      "correct": 1,
      "explanation": "Câu đầy đủ: \"Good morning, and welcome to the Third Annual Robotics Trade Show.\"",
      "part": 4
     },
     {
+     "id": "fill-1",
+     "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
+     "context": "We've just learned that the Natural Zoological Museum, one of ______ most popular museums, will soon close for a renovation project.",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q77-79.mp3",
+     "transcript": "Good morning, and thanks for tuning in to News at Four. We've just learned that the Natural Zoological Museum, one of Springfield's most popular museums, will soon close for a renovation project. To those who are planning to visit the exhibits in person, be aware that the workers arrive in six weeks. But if you miss that window, don't worry. You can still visit the museum virtually during the renovation period. Video tours will soon be available on the museum's Web site, and videos showing the progress of the project will also be posted regularly.\n77. What project does the speaker mention?\n78. What does the speaker imply when he says, \"the workers arrive in six weeks\"?\n79. What does the speaker assure the listeners of?",
+     "options": [
+      "architects",
+      "originally",
+      "agricultural",
+      "springfield's"
+     ],
+     "correct": 3,
+     "explanation": "Câu đầy đủ: \"We've just learned that the Natural Zoological Museum, one of Springfield's most popular museums, will soon close for a renovation project.\"",
+     "part": 4
+    },
+    {
      "id": "fill-2",
      "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
-     "context": "Yes. I learned a lot about food ______ regulations there.",
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-9/q35-37.mp3",
-     "transcript": "W: Welcome to Reynold's Ice Cream Factory. I'm so glad that you'll be joining our quality assurance team.\nM: Thanks! I'm excited to work with the rest of the group.\nW: Great! I saw on your rsum that you previously did quality control at a similar factory.\nM: Yes. I learned a lot about food manufacturing regulations there.\nW: Then you'll already be familiar with the testing we do. We test at the beginning of each shift to make sure all the equipment has been cleaned and sanitized.\n35. Who most likely is the man?\n36. What does the man say he learned from another factory?\n37. What is done at the start of each shift?",
+     "context": "OK. You can make an appointment Monday through Friday. Just bring in a copy of the application so we can see the size ______.",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3/q65-67.mp3",
+     "transcript": "W: Thanks for calling Kwon Photography Studio.\nM: Hello. I need to have a photo taken for a Canadian passport.\nW: OK. You can make an appointment Monday through Friday. Just bring in a copy of the application so we can see the size requirements.\nM: I work nine to five every day at my current job. Do you have any openings after five P.M.?\nW: No problem. We're open until six P.M. one day a week.\n65. What does the man say he needs to have done?\n66. What does the woman ask the man to bring to an appointment?\n67. Look at the graphic. Which day will the man request an appointment for?",
      "options": [
-      "manufacturing",
-      "pharmaceutical",
-      "greenchester",
-      "originally"
+      "receptionist",
+      "considering",
+      "requirements",
+      "easternmost"
      ],
-     "correct": 0,
-     "explanation": "Câu đầy đủ: \"Yes. I learned a lot about food manufacturing regulations there.\"",
+     "correct": 2,
+     "explanation": "Câu đầy đủ: \"OK. You can make an appointment Monday through Friday. Just bring in a copy of the application so we can see the size requirements.\"",
      "part": 3
     },
     {
      "id": "fill-3",
      "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
-     "context": "Apparently, a tree has fallen into the ______ lane of the road.",
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-9/q77-79.mp3",
-     "transcript": "This just in on News Channel Six: there is a traffic delay on Highway 59 with expected delays of about fifteen minutes in the direction of the sports stadium. Apparently, a tree has fallen into the easternmost lane of the road. Many residents will recognize this tree-it's been featured in many publications about the area. Join me as I interview Jingdao Wei, an area photographer who has captured some of the most iconic images of this tree. Mr. Wei, thanks for talking with me.\n77. What is the speaker reporting on?\n78. What is causing a problem?\n79. Who is Mr. Wei?",
+     "context": "Now—if you're ______ about this olive oil for the first time, you're not alone.",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-2/q92-94.mp3",
+     "transcript": "W-Am: Today, I'll be interviewing the owners of Salazar Olive Oil, one of the best in California for the past two decades. Now—if you're hearing about this olive oil for the first time, you're not alone. The Salazar family has kept the operation small. I'm interested in discussing their business philosophy as well as their new project: an olive oil tasting class on their farm. You'll find out how to register during the interview so you can sign up!\n92. Who are today's guests on the podcast?\n93. Why does the speaker say, \"The Salazar family has kept the operation small\"?\n94. What will the listeners be able to do after the podcast?",
      "options": [
-      "thursday's",
-      "easternmost",
-      "direction",
-      "reminder"
+      "hearing",
+      "squeaking",
+      "land",
+      "same"
      ],
-     "correct": 1,
-     "explanation": "Câu đầy đủ: \"Apparently, a tree has fallen into the easternmost lane of the road.\"",
+     "correct": 0,
+     "explanation": "Câu đầy đủ: \"Now—if you're hearing about this olive oil for the first time, you're not alone.\"",
      "part": 4
     },
     {
      "id": "fill-4",
      "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
-     "context": "The city of Lakepoint offers on-demand ______ in several of our neighborhoods.",
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q95-97.mp3",
-     "transcript": "Are you looking for a convenient way to get around the city? The city of Lakepoint offers on-demand transportation in several of our neighborhoods. Just download the Lakepoint City application onto your mobile phone. Once you make an appointment on the app, a shuttle will arrive within fifteen minutes. This easy-to-use service will take you to any destination within the service area, like your doctor's office or the library. And we've recently expanded service to Westbrook, so residents can take the shuttle to the soccer stadium.\n95. What type of service is being advertised?\n96. According to the speaker, how can the listeners use a new service?\n97. Look at the graphic. Which area was recently added?",
+     "context": "I'm calling to touch base with you about some of our vendor ______. It's time to renew the contracts, and I wanted to ask you to take care of that before you left.",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-4/q41-43.mp3",
+     "transcript": "M: Nisreen? This is Lewis. I heard you're going to be working for our company overseas, in the New Zealand office. What a great opportunity!\nW: Yes, thank you. I start next month, and I'm really excited.\nM: I'm calling to touch base with you about some of our vendor contracts. It's time to renew the contracts, and I wanted to ask you to take care of that before you left.\nW: No problem. I know where those files are located on our shared computer drive. I'll just need the password to access them.\n41. What will the woman do next month?\n42. What does the man want the woman to do?\n43. What does the woman ask the man for?",
      "options": [
-      "distracting",
-      "transportation",
-      "refrigerator",
-      "refreshments"
+      "repair",
+      "contracts",
+      "renewed",
+      "wedding"
      ],
      "correct": 1,
-     "explanation": "Câu đầy đủ: \"The city of Lakepoint offers on-demand transportation in several of our neighborhoods.\"",
-     "part": 4
+     "explanation": "Câu đầy đủ: \"I'm calling to touch base with you about some of our vendor contracts. It's time to renew the contracts, and I wanted to ask you to take care of that before you left.\"",
+     "part": 3
     },
     {
      "id": "fill-5",
-     "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
-     "context": "Actually, I just finished testing the game this morning. I found a problem in the third stage of the game. There were a few times when my ______ couldn't move.",
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q50-52.mp3",
-     "transcript": "W: Hi, Koji. I think our new video game is nearly ready to be released. Are you aware of any improvements that need to be made before then?\nM: Actually, I just finished testing the game this morning. I found a problem in the third stage of the game. There were a few times when my character couldn't move.\nW: Oh, that's strange!\nM: I double-checked the problem using a different controller. The same issue came up.\nW: Oh. I think Pauline had a similar problem with a game she tested. Maybe you should ask her about it.",
-     "options": [
-      "impressed",
-      "character",
-      "upgrade",
-      "consultants"
-     ],
-     "correct": 1,
-     "explanation": "Câu đầy đủ: \"Actually, I just finished testing the game this morning. I found a problem in the third stage of the game. There were a few times when my character couldn't move.\"",
-     "part": 3
-    },
-    {
-     "id": "fill-6",
-     "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
-     "context": "Yes, we're going. In fact, Alberto and I will be leading a roundtable discussion on ______ health care.",
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-9/q59-61.mp3",
-     "transcript": "W: Hi, Ji-Soo and Alberto. Are you planning on attending the pharmaceutical conference next month? I think it'll be a great opportunity for us to learn from and network with other industry professionals.\nM1: Yes, we're going. In fact, Alberto and I will be leading a roundtable discussion on sustainable health care.\nW: That's fantastic. When is it?\nM1: I can't remember the time. Alberto, do you have the schedule?\nM2: Yes, I actually just downloaded the conference's app. It should be listed there. Let's see. It looks like it's on Thursday at four.\nW: Great! I'll download the app now and sign up.\n59. Which industry do the speakers work in?\n60. What will the men be doing?\n61. What will the woman most likely do next?",
-     "options": [
-      "transportation",
-      "specifically",
-      "decision",
-      "sustainable"
-     ],
-     "correct": 3,
-     "explanation": "Câu đầy đủ: \"Yes, we're going. In fact, Alberto and I will be leading a roundtable discussion on sustainable health care.\"",
-     "part": 3
-    },
-    {
-     "id": "fill-7",
-     "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
-     "context": "Oh, I can't go now. I have a report to ______ by noon.",
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-4/q47-49.mp3",
-     "transcript": "M1: Hello, Usha. Hi, Pablo.\nW: Hey, Konstantin. We're talking about our thoughts on the new company policy for remote workers. On the days I have to come into the office, I always worry about finding an appropriate workstation.\nM2: Yeah, I don't like the unpredictability either. Why can't we just sign up for our workstation sometime in advance? What do you think about it?\nM1: These are good points. Let's all go to the director to discuss this with her.\nM2: I believe she's in her office, so now's a good time.\nW: Oh, I can't go now. I have a report to finalize by noon.\n47. What are the speakers discussing?\n48. What does the man want to do?\n49. What does the woman say she needs to do now?",
-     "options": [
-      "updating",
-      "spring",
-      "finalize",
-      "clementine"
-     ],
-     "correct": 2,
-     "explanation": "Câu đầy đủ: \"Oh, I can't go now. I have a report to finalize by noon.\"",
-     "part": 3
-    },
-    {
-     "id": "fill-8",
-     "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
-     "context": "Hi. This is Giovanni Marino's agent. I'm calling to ______ his planned appearance on the Sunday Morning Show.",
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-4/q44-46.mp3",
-     "transcript": "W: Hi. This is Giovanni Marino's agent. I'm calling to reschedule his planned appearance on the Sunday Morning Show.\nM: Right. We have him booked to appear on the show in July to promote his new movie.\nW: Unfortunately, the movie he's acting in is behind schedule, and he'll now be on location through the end of August.\nM: Hmm, I see. Let me look at our guest calendar. I have a slot I'm looking to fill on September fourteenth-would that work?\nW: Yes, that would be great, thanks.\nM: All right. I'll update the contract with the new date and e-mail it to you.\n44. Why is the woman calling?\n45. Who most likely is Giovanni Marino?\n46. What will the man send in an e-mail?",
-     "options": [
-      "correctly",
-      "apparel",
-      "reschedule",
-      "pleased"
-     ],
-     "correct": 2,
-     "explanation": "Câu đầy đủ: \"Hi. This is Giovanni Marino's agent. I'm calling to reschedule his planned appearance on the Sunday Morning Show.\"",
-     "part": 3
-    },
-    {
-     "id": "fill-9",
      "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
      "context": "I'm calling to let you know I e-mailed the price estimate you requested for the ______ of your metal roof.",
      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-8/q92-94.mp3",
      "transcript": "Hi, Ms. Alvarez. I'm calling to let you know I e-mailed the price estimate you requested for the replacement of your metal roof. I'm sure you've received lower estimates from other businesses. But you should know, I only use the highest-quality materials in my work. Please check out the reviews on my Web site if you have any doubts. I know you hoped that I'd complete the project before you go away on your vacation, but I'm completely booked for the month of March. I could start at the beginning of April, though. I look forward to hearing back from you soon.\n92. What industry does the speaker most likely work in?\n93. Why does the speaker say, \"I only use the highest-quality materials in my work\"?\n94. What does the speaker say could happen in April?",
      "options": [
-      "yesterday",
-      "surprise",
-      "consideration",
-      "replacement"
+      "receptionist",
+      "replacement",
+      "purchased",
+      "hygienists'"
      ],
-     "correct": 3,
+     "correct": 1,
      "explanation": "Câu đầy đủ: \"I'm calling to let you know I e-mailed the price estimate you requested for the replacement of your metal roof.\"",
      "part": 4
+    },
+    {
+     "id": "fill-6",
+     "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
+     "context": "This is Oleg from Sola Salon ______ your call.",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q98-100.mp3",
+     "transcript": "Hi, Marta. This is Oleg from Sola Salon returning your call. You wanted to know about my availability for haircuts-yes, I am accepting new clients. This week, I can fit you in on Wednesday at four o'clock. Please let me know whether that day and time work for you. And in case you didn't know, there's a parking garage with reasonable rates right under our building. A full styling session takes about one and a half hours, so you won't need to park for more than two hours in the garage.\n98. Where does the speaker work?\n99. What does the speaker ask the listener to do?\n100. Look at the graphic. How much will the listener most likely pay for parking?",
+     "options": [
+      "online",
+      "returning",
+      "developing",
+      "professor"
+     ],
+     "correct": 1,
+     "explanation": "Câu đầy đủ: \"This is Oleg from Sola Salon returning your call.\"",
+     "part": 4
+    },
+    {
+     "id": "fill-7",
+     "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
+     "context": "You've reached the ______ office at Hillview Apartment Complex.",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q53-55.mp3",
+     "transcript": "M: You've reached the maintenance office at Hillview Apartment Complex.\nW: Hi. This is Palavi Sen from unit 35B. I'm calling because the new thermostat in my apartment isn't working. It keeps shutting off and turning on randomly, so my apartment is getting cold.\nM: When did this issue start?\nW: A few hours ago. The thermostat was just installed yesterday.\nM: OK. I can come and take a look at it tomorrow morning.\nW: But it's supposed to be below freezing tonight!",
+     "options": [
+      "relations",
+      "maintenance",
+      "schedules",
+      "industries"
+     ],
+     "correct": 1,
+     "explanation": "Câu đầy đủ: \"You've reached the maintenance office at Hillview Apartment Complex.\"",
+     "part": 3
+    },
+    {
+     "id": "fill-8",
+     "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
+     "context": "Let's head over there now, Sergey. I'm really ______ forward to our company gala event tonight.",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3/q35-37.mp3",
+     "transcript": "M1: Excuse me, does train 1401 stop at the Lexington Street station?\nW: Yes. It's a twenty-minute ride.\nM2: Oh good, that gives us plenty of time to get to the party.\nW: The train leaves from platform twelve in three minutes.\nM2: Let's head over there now, Sergey. I'm really looking forward to our company gala event tonight.\nM1: Me too. Hey, did you happen to bring an umbrella? I forgot mine. It might rain on our walk from the station.\nM2: I did! We can share it.\n35. Where is the conversation most likely taking place?\n36. What type of event will the men attend this evening?\n37. What did Sergey forget to bring?",
+     "options": [
+      "don't",
+      "door",
+      "oleg",
+      "looking"
+     ],
+     "correct": 3,
+     "explanation": "Câu đầy đủ: \"Let's head over there now, Sergey. I'm really looking forward to our company gala event tonight.\"",
+     "part": 3
+    },
+    {
+     "id": "fill-9",
+     "question": "Nghe rồi chọn từ đúng cho chỗ trống.",
+     "context": "Great. Please keep me posted on your progress. In the meantime, we should start putting together a ______ video to show at our booth at the trade show. Who'd like to help me with that project?",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q44-46.mp3",
+     "transcript": "M: Next, I wanted to check with the design team about our water-permeable bricks for walkways. I think the bricks will be popular in areas with water drainage problems. But I'm concerned that the final design won't be ready in time for the trade show.\nW1: Right, we still need to finish the durability testing. Camille, how's that going?\nW2: So far, they seem to be as durable as we anticipated. But we still have a few tests to run.\nM: Great. Please keep me posted on your progress. In the meantime, we should start putting together a promotional video to show at our booth at the trade show. Who'd like to help me with that project?\n44. What is the man concerned about?\n45. What is Camille working on?\n46. What would the man like assistance with?",
+     "options": [
+      "confident",
+      "computer",
+      "starting",
+      "promotional"
+     ],
+     "correct": 3,
+     "explanation": "Câu đầy đủ: \"Great. Please keep me posted on your progress. In the meantime, we should start putting together a promotional video to show at our booth at the trade show. Who'd like to help me with that project?\"",
+     "part": 3
     }
    ]
   }

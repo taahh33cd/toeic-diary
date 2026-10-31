@@ -113,7 +113,7 @@
           "prompt": "Who coordinates between the legal department and the finance team during a merger?",
           "options": ["The compliance officer.", "The chief operating officer.", "The corporate secretary.", "The integration manager."],
           "correct": 3,
-          "explanation": "Integration manager chuyên phối hợp giữa các phòng ban trong quá trình M&A. Corporate secretary xử lý thủ tục pháp lý; COO quản lý vận hành chung.",
+          "explanation": "Integration manager chuyên phối hợp giữa các phòng ban trong quá trình M&“The compliance officer”. Corporate secretary xử lý thủ tục pháp lý; COO quản lý vận hành chung.",
           "answerChunks": ["Giám", "đốc", "tích", "hợp"],
           "answerChunkDistractors": ["Pháp", "lý", "tuân", "thủ"]
         },

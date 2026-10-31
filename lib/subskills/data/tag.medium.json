@@ -64,7 +64,7 @@
             "No, she hasn't been informed yet."
           ],
           "correct": 0,
-          "explanation": "Câu đuôi 'haven't they' → xác nhận với A: 'No, they haven't been changed' — dùng đúng 'they' (targets số nhiều) và 'haven't' present perfect. Các đáp án khác dùng sai chủ ngữ hoặc sai thì."
+          "explanation": "Câu đuôi 'haven't they' → xác nhận với “No, they haven't been changed”: 'No, they haven't been changed' — dùng đúng 'they' (targets số nhiều) và 'haven't' present perfect. Các đáp án khác dùng sai chủ ngữ hoặc sai thì."
         },
         {
           "question": "The meeting invitations will be sent out today, won't they?",
@@ -76,7 +76,7 @@
             "No, she hasn't been informed yet."
           ],
           "correct": 1,
-          "explanation": "Câu đuôi 'won't they' hỏi về invitations (số nhiều) → B 'Yes, they will be sent tomorrow' dùng đúng 'they' và 'will' future. Chú ý: xác nhận nhưng thay đổi thời gian (tomorrow thay today)."
+          "explanation": "Câu đuôi 'won't they' hỏi về invitations (số nhiều) → 'Yes, they will be sent tomorrow' dùng đúng 'they' và 'will' future. Chú ý: xác nhận nhưng thay đổi thời gian (tomorrow thay today)."
         },
         {
           "question": "The budget proposal wasn't approved, was it?",
@@ -88,7 +88,7 @@
             "No, she hasn't been informed yet."
           ],
           "correct": 2,
-          "explanation": "Câu đuôi 'was it' về 'proposal' (số ít) → C 'No, it wasn't approved on time' dùng đúng 'it' và 'wasn't' past. Không nhầm với D — D nói về reschedule, không phải approve."
+          "explanation": "Câu đuôi 'was it' về 'proposal' (số ít) → 'No, it wasn't approved on time' dùng đúng 'it' và 'wasn't' past. Không nhầm với “Yes, it has been rescheduled” — “Yes, it has been rescheduled” nói về reschedule, không phải approve."
         },
         {
           "question": "The conference has been rescheduled, hasn't it?",
@@ -100,7 +100,7 @@
             "No, she hasn't been informed yet."
           ],
           "correct": 3,
-          "explanation": "Câu đuôi 'hasn't it' về 'conference' (số ít) → D 'Yes, it has been rescheduled' dùng đúng 'it', 'has been' present perfect passive. Nhất quán hoàn toàn."
+          "explanation": "Câu đuôi 'hasn't it' về 'conference' (số ít) → 'Yes, it has been rescheduled' dùng đúng 'it', 'has been' present perfect passive. Nhất quán hoàn toàn."
         },
         {
           "question": "The new supervisor hasn't been informed about the team changes, has she?",
@@ -112,7 +112,7 @@
             "No, she hasn't been informed yet."
           ],
           "correct": 4,
-          "explanation": "Câu đuôi 'has she' về supervisor (she) → E 'No, she hasn't been informed yet' dùng đúng 'she' và 'hasn't' present perfect. Giới tính 'she' khớp với câu hỏi."
+          "explanation": "Câu đuôi 'has she' về supervisor (she) → 'No, she hasn't been informed yet' dùng đúng 'she' và 'hasn't' present perfect. Giới tính 'she' khớp với câu hỏi."
         }
       ]
     },
@@ -127,98 +127,98 @@
           "prompt": "The project report hasn't been submitted yet, has it?",
           "options": ["No, it hasn't been filed.", "No, they haven't submitted.", "Yes, it was sent yesterday.", "No, we have not sent it."],
           "correct": 2,
-          "explanation": "Câu hỏi đuôi âm 'hasn't it' → người hỏi nghi ngờ chưa nộp. Đáp án C 'Yes, it was sent yesterday' xác nhận đã gửi (ngược lại kỳ vọng). 'it' đúng cho 'report'. A đúng cấu trúc nhưng xác nhận chưa nộp. B sai chủ ngữ. D không tự nhiên.",
+          "explanation": "Câu hỏi đuôi âm 'hasn't it' → người hỏi nghi ngờ chưa nộp. Đáp án “Yes, it was sent yesterday” 'Yes, it was sent yesterday' xác nhận đã gửi (ngược lại kỳ vọng). 'it' đúng cho 'report'. “No, it hasn't been filed” đúng cấu trúc nhưng xác nhận chưa nộp. “No, they haven't submitted” sai chủ ngữ. “No, we have not sent it” không tự nhiên.",
           "answerChunks": ["Đúng,", "tài", "liệu", "đã", "được", "gửi", "hôm", "qua"]
         },
         {
           "prompt": "The new office lease was signed last week, wasn't it?",
           "options": ["Yes, it was finalized.", "Yes, they signed it.", "No, it will be next week.", "No, we didn't sign."],
           "correct": 0,
-          "explanation": "Câu đuôi 'wasn't it' về 'lease' (số ít) → A 'Yes, it was finalized' dùng đúng 'it' và 'was' past. B dùng 'they' cho 'lease' (sai). C sai thì (future). D sai chủ ngữ.",
+          "explanation": "Câu đuôi 'wasn't it' về 'lease' (số ít) → 'Yes, it was finalized' dùng đúng 'it' và 'was' past. “Yes, they signed it” dùng 'they' cho 'lease' (sai). “No, it will be next week” sai thì (future). “No, we didn't sign” sai chủ ngữ.",
           "answerChunks": ["Đúng,", "hợp", "đồng", "đã", "được", "hoàn", "tất"]
         },
         {
           "prompt": "All staff members can view their payslips online, can't they?",
           "options": ["Yes, they can access it online.", "Yes, it can be viewed.", "No, only managers can.", "Yes, they are all viewable."],
           "correct": 0,
-          "explanation": "Câu đuôi 'can't they' về 'all staff members' → A 'Yes, they can access it online' dùng đúng 'they' cho 'staff members' và 'can'. B sai chủ ngữ ('it'). C phủ nhận không khớp với câu đuôi âm. D dùng 'are' sai.",
+          "explanation": "Câu đuôi 'can't they' về 'all staff members' → 'Yes, they can access it online' dùng đúng 'they' cho 'staff members' và 'can'. “Yes, it can be viewed” sai chủ ngữ ('it'). “No, only managers can” phủ nhận không khớp với câu đuôi âm. “Yes, they are all viewable” dùng 'are' sai.",
           "answerChunks": ["Đúng,", "họ", "có", "thể", "truy", "cập", "trực", "tuyến"]
         },
         {
           "prompt": "The supply chain disruption hasn't affected our delivery schedule, has it?",
           "options": ["No, our schedule is on track.", "No, they have not affected it.", "Yes, it has been disrupted.", "No, we are still on time."],
           "correct": 0,
-          "explanation": "Câu đuôi 'has it' về 'disruption affecting schedule' → A 'No, our schedule is on track' xác nhận không ảnh hưởng một cách tự nhiên. B sai chủ ngữ ('they'). C xác nhận có ảnh hưởng (ngược nghĩa). D thiếu chủ ngữ cụ thể.",
+          "explanation": "Câu đuôi 'has it' về 'disruption affecting schedule' → 'No, our schedule is on track' xác nhận không ảnh hưởng một cách tự nhiên. “No, they have not affected it” sai chủ ngữ ('they'). “Yes, it has been disrupted” xác nhận có ảnh hưởng (ngược nghĩa). “No, we are still on time” thiếu chủ ngữ cụ thể.",
           "answerChunks": ["Không,", "lịch", "vẫn", "đúng", "tiến", "độ"]
         },
         {
           "prompt": "You've already spoken with the compliance team, haven't you?",
           "options": ["No, I haven't had a chance.", "No, I didn't speak.", "Yes, we have spoken.", "Yes, I already did."],
           "correct": 0,
-          "explanation": "Câu đuôi 'haven't you' present perfect → A 'No, I haven't had a chance' dùng đúng 'I' và 'haven't' perfect. B sai thì (past). C sai chủ ngữ ('we'). D sai thì (past simple 'did').",
+          "explanation": "Câu đuôi 'haven't you' present perfect → 'No, I haven't had a chance' dùng đúng 'I' và 'haven't' perfect. “No, I didn't speak” sai thì (past). “Yes, we have spoken” sai chủ ngữ ('we'). “Yes, I already did” sai thì (past simple 'did').",
           "answerChunks": ["Không,", "tôi", "chưa", "có", "cơ", "hội"]
         },
         {
           "prompt": "The new pricing structure won't affect existing contracts, will it?",
           "options": ["No, it won't apply retroactively.", "No, they won't be affected.", "Yes, it will not apply.", "No, the pricing hasn't changed."],
           "correct": 0,
-          "explanation": "Câu đuôi 'will it' về 'pricing structure' (số ít) → A 'No, it won't apply retroactively' dùng đúng 'it' và 'won't'. B sai chủ ngữ ('they'). C lặp 'will not' không tự nhiên. D sai thì (present perfect).",
+          "explanation": "Câu đuôi 'will it' về 'pricing structure' (số ít) → 'No, it won't apply retroactively' dùng đúng 'it' và 'won't'. “No, they won't be affected” sai chủ ngữ ('they'). “Yes, it will not apply” lặp 'will not' không tự nhiên. “No, the pricing hasn't changed” sai thì (present perfect).",
           "answerChunks": ["Không,", "sẽ", "không", "áp", "dụng", "hồi", "tố"]
         },
         {
           "prompt": "Nobody informed the client about the delay, did they?",
           "options": ["No, it slipped through.", "No, nobody did.", "Yes, someone told them.", "No, we didn't inform."],
           "correct": 2,
-          "explanation": "Câu đuôi 'did they' sau 'Nobody' → đáp án đúng là C 'Yes, someone told them' — khi main clause có 'nobody' (âm), xác nhận bằng Yes (khách hàng đã được thông báo). A và B xác nhận không ai thông báo. D sai chủ ngữ.",
+          "explanation": "Câu đuôi 'did they' sau 'Nobody' → đáp án đúng là 'Yes, someone told them' — khi main clause có 'nobody' (âm), xác nhận bằng Yes (khách hàng đã được thông báo). “No, it slipped through” và “No, nobody did” xác nhận không ai thông báo. “No, we didn't inform” sai chủ ngữ.",
           "answerChunks": ["Đúng,", "ai", "đó", "đã", "thông", "báo", "cho", "họ"]
         },
         {
           "prompt": "The training room has been booked for Thursday, hasn't it?",
           "options": ["Yes, I confirmed the booking.", "Yes, it has been reserved.", "No, they booked it.", "Yes, the room is available."],
           "correct": 1,
-          "explanation": "Câu đuôi 'hasn't it' present perfect passive → B 'Yes, it has been reserved' dùng đúng passive perfect và 'it' cho 'training room'. A dùng active ('I confirmed') không khớp với passive question. C sai cực tính. D không trả lời đúng câu hỏi.",
+          "explanation": "Câu đuôi 'hasn't it' present perfect passive → 'Yes, it has been reserved' dùng đúng passive perfect và 'it' cho 'training room'. “Yes, I confirmed the booking” dùng active ('I confirmed') không khớp với passive question. “No, they booked it” sai cực tính. “Yes, the room is available” không trả lời đúng câu hỏi.",
           "answerChunks": ["Đúng,", "phòng", "đã", "được", "đặt", "trước"]
         },
         {
           "prompt": "The monthly targets weren't met last quarter, were they?",
           "options": ["No, they fell short.", "Yes, they were met.", "No, we didn't meet them.", "No, it was not met."],
           "correct": 0,
-          "explanation": "Câu đuôi 'were they' về 'targets' (số nhiều) → A 'No, they fell short' dùng đúng 'they' và xác nhận không đạt mục tiêu (fell short = không đạt). B phủ nhận câu đuôi (xác nhận đã đạt). C sai chủ ngữ. D sai chủ ngữ ('it').",
+          "explanation": "Câu đuôi 'were they' về 'targets' (số nhiều) → 'No, they fell short' dùng đúng 'they' và xác nhận không đạt mục tiêu (fell short = không đạt). “Yes, they were met” phủ nhận câu đuôi (xác nhận đã đạt). “No, we didn't meet them” sai chủ ngữ. “No, it was not met” sai chủ ngữ ('it').",
           "answerChunks": ["Không,", "họ", "không", "đạt", "mục", "tiêu"]
         },
         {
           "prompt": "The guest speakers have confirmed their attendance, haven't they?",
           "options": ["Yes, both have confirmed.", "Yes, it has been confirmed.", "No, one hasn't replied.", "Yes, they did confirm."],
           "correct": 2,
-          "explanation": "Câu đuôi 'haven't they' present perfect → C 'No, one hasn't replied' là thực tế nhất — xác nhận chưa đủ confirmation. A cũng hợp lệ ngữ pháp nhưng C cho thấy vấn đề thực tế. B sai chủ ngữ. D sai thì.",
+          "explanation": "Câu đuôi 'haven't they' present perfect → 'No, one hasn't replied' là thực tế nhất — xác nhận chưa đủ confirmation. “Yes, both have confirmed” cũng hợp lệ ngữ pháp nhưng “No, one hasn't replied” cho thấy vấn đề thực tế. “Yes, it has been confirmed” sai chủ ngữ. “Yes, they did confirm” sai thì.",
           "answerChunks": ["Không,", "một", "người", "vẫn", "chưa", "trả", "lời"]
         },
         {
           "prompt": "This policy change doesn't require staff approval, does it?",
           "options": ["No, it doesn't.", "No, they don't require it.", "Yes, it does not.", "No, it wasn't required."],
           "correct": 0,
-          "explanation": "Câu đuôi 'does it' về 'policy change' (số ít) → A 'No, it doesn't' ngắn gọn, đúng trợ động từ 'doesn't' và chủ ngữ 'it'. B sai chủ ngữ. C lặp nghĩa không tự nhiên. D sai thì.",
+          "explanation": "Câu đuôi 'does it' về 'policy change' (số ít) → 'No, it doesn't' ngắn gọn, đúng trợ động từ 'doesn't' và chủ ngữ 'it'. “No, they don't require it” sai chủ ngữ. “Yes, it does not” lặp nghĩa không tự nhiên. “No, it wasn't required” sai thì.",
           "answerChunks": ["Không,", "thay", "đổi", "này", "không", "yêu", "cầu"]
         },
         {
           "prompt": "You'll send me the updated schedule before the end of today, won't you?",
           "options": ["Yes, I'll email it shortly.", "Yes, we will send it.", "No, I didn't send it.", "Yes, it will be sent."],
           "correct": 0,
-          "explanation": "Câu đuôi 'won't you' về 'you' → A 'Yes, I'll email it shortly' dùng đúng 'I' và 'will' future. B sai chủ ngữ ('we'). C sai thì (past). D passive không phù hợp khi câu hỏi hỏi trực tiếp 'you'.",
+          "explanation": "Câu đuôi 'won't you' về 'you' → 'Yes, I'll email it shortly' dùng đúng 'I' và 'will' future. “Yes, we will send it” sai chủ ngữ ('we'). “No, I didn't send it” sai thì (past). “Yes, it will be sent” passive không phù hợp khi câu hỏi hỏi trực tiếp 'you'.",
           "answerChunks": ["Đúng,", "tôi", "sẽ", "gửi", "email", "ngay"]
         },
         {
           "prompt": "The two candidates were equally qualified, weren't they?",
           "options": ["Yes, both had strong backgrounds.", "Yes, the candidates were.", "No, one was more experienced.", "Yes, they have been shortlisted."],
           "correct": 2,
-          "explanation": "Câu đuôi 'weren't they' past → C 'No, one was more experienced' dùng đúng past và 'one' để phân biệt hai ứng viên. A đúng cấu trúc nhưng C cụ thể hơn trong phân biệt. B không đủ thông tin. D sai thì.",
+          "explanation": "Câu đuôi 'weren't they' past → 'No, one was more experienced' dùng đúng past và 'one' để phân biệt hai ứng viên. “Yes, both had strong backgrounds” đúng cấu trúc nhưng “No, one was more experienced” cụ thể hơn trong phân biệt. “Yes, the candidates were” không đủ thông tin. “Yes, they have been shortlisted” sai thì.",
           "answerChunks": ["Không,", "một", "người", "có", "nhiều", "kinh", "nghiệm", "hơn"]
         },
         {
           "prompt": "The feedback forms haven't been distributed yet, have they?",
           "options": ["No, they'll go out this afternoon.", "No, we haven't distributed.", "Yes, it was handed out.", "No, it hasn't been done."],
           "correct": 0,
-          "explanation": "Câu đuôi 'have they' về 'forms' (số nhiều) → A 'No, they'll go out this afternoon' dùng đúng 'they' và cho biết kế hoạch. B sai chủ ngữ ('we' cho forms). C sai chủ ngữ ('it') và sai thì. D sai chủ ngữ ('it' cho forms số nhiều).",
+          "explanation": "Câu đuôi 'have they' về 'forms' (số nhiều) → 'No, they'll go out this afternoon' dùng đúng 'they' và cho biết kế hoạch. “No, we haven't distributed” sai chủ ngữ ('we' cho forms). “Yes, it was handed out” sai chủ ngữ ('it') và sai thì. “No, it hasn't been done” sai chủ ngữ ('it' cho forms số nhiều).",
           "answerChunks": ["Không,", "biểu", "mẫu", "sẽ", "được", "phát", "chiều", "nay"]
         }
       ]

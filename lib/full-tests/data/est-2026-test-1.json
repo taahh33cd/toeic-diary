@@ -3681,7 +3681,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "A",
+     "answer": "D",
      "explanation": {
       "translation": null,
       "reasoning": "Người nói đề cập đến sự sụt giảm doanh số bán hàng: \"drop in our clothing sales\" (sụt giảm trong doanh số bán quần áo của mình). Điều này cho thấy họ kinh doanh quần áo.",
@@ -3700,7 +3700,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "D",
+     "answer": "A",
      "explanation": {
       "translation": null,
       "reasoning": "Người nói đưa ra đề xuất: \"I'm recommending that we start manufacturing some clothing locally\" (tôi đề xuất rằng chúng ta nên bắt đầu sản xuất một số quần áo tại địa phương).",
@@ -3805,7 +3805,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "B",
+     "answer": "D",
      "explanation": {
       "translation": null,
       "reasoning": "Thông báo mở đầu bằng: \"All trains to Midway Station are delayed for track repairs\" (Tất cả các chuyến tàu đến Ga Midway đều bị hoãn để sửa chữa đường ray). delayed = a transportation delay.",
@@ -3923,7 +3923,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "C",
+     "answer": "A",
      "explanation": {
       "translation": null,
       "reasoning": "Người nói đề cập: \"the work my design team's doing\" (công việc mà nhóm thiết kế của tôi đang thực hiện). Điều này cho thấy anh ấy làm việc ở một công ty chuyên về thiết kế.",
@@ -3942,7 +3942,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "D",
+     "answer": "B",
      "explanation": {
       "translation": null,
       "reasoning": "Người nói bảo: \"I've just e-mailed two versions for you to review\" (Tôi vừa gửi email hai phiên bản để bạn xem xét). Các phiên bản này là phiên bản của \"company logo\" (logo công ty), tức là hình ảnh (images).",
@@ -3961,7 +3961,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "A",
+     "answer": "C",
      "explanation": {
       "translation": null,
       "reasoning": "Người nói thông báo: \"I'll be on vacation all next week\" (Tôi sẽ đi nghỉ lễ suốt tuần tới).",
@@ -4041,7 +4041,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "A",
+     "answer": "D",
      "explanation": {
       "translation": null,
       "reasoning": "Người nói bắt đầu bằng: \"I've scheduled this press conference to officially respond to your inquiries\" (Tôi đã lên lịch cuộc họp báo này để chính thức trả lời các câu hỏi của các bạn). Những người tham gia họp báo (press conference) thường là nhà báo.",
@@ -4079,7 +4079,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "D",
+     "answer": "C",
      "explanation": {
       "translation": null,
       "reasoning": "Ở câu cuối, cô ấy nhắc: \"e-mail our media relations department to receive a summary of the findings\" (gửi email cho bộ phận quan hệ truyền thông... để nhận bản tóm tắt các phát hiện).",
@@ -4178,7 +4178,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "C",
+     "answer": "A",
      "explanation": {
       "translation": null,
       "reasoning": "Người nói đề cập rõ: \"The main complaint about shopping at our stores is waiting in long lines to pay\" (Lời phàn nàn chính... là phải chờ đợi thanh toán xếp hàng dài).",
@@ -4315,7 +4315,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "A",
+     "answer": "D",
      "explanation": {
       "translation": null,
       "reasoning": "Ở cuối đoạn, người nói thông báo: \"A recording of the full interview is available on our Web site\" (Bản ghi âm của toàn bộ cuộc phỏng vấn có sẵn trên trang web của chúng tôi).",
@@ -4395,7 +4395,7 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "A",
+     "answer": "D",
      "explanation": {
       "translation": null,
       "reasoning": "Người nói mở đầu bằng: \"Thank you for attending this meeting for prospective investors\" (Cảm ơn các bạn đã tham dự cuộc họp này dành cho các nhà đầu tư tiềm năng).",

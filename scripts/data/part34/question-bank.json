@@ -1539,7 +1539,7 @@
       "C": "Bedding",
       "D": "Clothing"
      },
-     "answer": "A",
+     "answer": "D",
      "translation": null,
      "reasoning": "Người nói đề cập đến sự sụt giảm doanh số bán hàng: \"drop in our clothing sales\" (sụt giảm trong doanh số bán quần áo của mình). Điều này cho thấy họ kinh doanh quần áo."
     },
@@ -1557,7 +1557,7 @@
       "C": "Participating in a trade show",
       "D": "Developing a new product line"
      },
-     "answer": "D",
+     "answer": "A",
      "translation": null,
      "reasoning": "Người nói đưa ra đề xuất: \"I'm recommending that we start manufacturing some clothing locally\" (tôi đề xuất rằng chúng ta nên bắt đầu sản xuất một số quần áo tại địa phương)."
     },
@@ -1632,7 +1632,7 @@
       "C": "A building renovation",
       "D": "A travel delay"
      },
-     "answer": "B",
+     "answer": "D",
      "translation": null,
      "reasoning": "Thông báo mở đầu bằng: \"All trains to Midway Station are delayed for track repairs\" (Tất cả các chuyến tàu đến Ga Midway đều bị hoãn để sửa chữa đường ray). delayed = a transportation delay."
     },
@@ -1725,7 +1725,7 @@
       "C": "At a photography studio",
       "D": "At a museum"
      },
-     "answer": "C",
+     "answer": "A",
      "translation": null,
      "reasoning": "Người nói đề cập: \"the work my design team's doing\" (công việc mà nhóm thiết kế của tôi đang thực hiện). Điều này cho thấy anh ấy làm việc ở một công ty chuyên về thiết kế."
     },
@@ -1743,7 +1743,7 @@
       "C": "An invoice",
       "D": "Some contracts"
      },
-     "answer": "D",
+     "answer": "B",
      "translation": null,
      "reasoning": "Người nói bảo: \"I've just e-mailed two versions for you to review\" (Tôi vừa gửi email hai phiên bản để bạn xem xét). Các phiên bản này là phiên bản của \"company logo\" (logo công ty), tức là hình ảnh (images)."
     },
@@ -1761,7 +1761,7 @@
       "C": "She will be on vacation.",
       "D": "She will be at an industry conference."
      },
-     "answer": "A",
+     "answer": "C",
      "translation": null,
      "reasoning": "Người nói thông báo: \"I'll be on vacation all next week\" (Tôi sẽ đi nghỉ lễ suốt tuần tới)."
     }
@@ -1818,7 +1818,7 @@
       "C": "Engineers",
       "D": "Journalists"
      },
-     "answer": "A",
+     "answer": "D",
      "translation": null,
      "reasoning": "Người nói bắt đầu bằng: \"I've scheduled this press conference to officially respond to your inquiries\" (Tôi đã lên lịch cuộc họp báo này để chính thức trả lời các câu hỏi của các bạn). Những người tham gia họp báo (press conference) thường là nhà báo."
     },
@@ -1854,7 +1854,7 @@
       "C": "A report summary",
       "D": "A discounted ticket"
      },
-     "answer": "D",
+     "answer": "C",
      "translation": null,
      "reasoning": "Ở câu cuối, cô ấy nhắc: \"e-mail our media relations department to receive a summary of the findings\" (gửi email cho bộ phận quan hệ truyền thông... để nhận bản tóm tắt các phát hiện)."
     }
@@ -1929,7 +1929,7 @@
       "C": "Unavailable items",
       "D": "Unfriendly staff"
      },
-     "answer": "C",
+     "answer": "A",
      "translation": null,
      "reasoning": "Người nói đề cập rõ: \"The main complaint about shopping at our stores is waiting in long lines to pay\" (Lời phàn nàn chính... là phải chờ đợi thanh toán xếp hàng dài)."
     },
@@ -2040,7 +2040,7 @@
       "C": "A floor layout",
       "D": "A recorded interview"
      },
-     "answer": "A",
+     "answer": "D",
      "translation": null,
      "reasoning": "Ở cuối đoạn, người nói thông báo: \"A recording of the full interview is available on our Web site\" (Bản ghi âm của toàn bộ cuộc phỏng vấn có sẵn trên trang web của chúng tôi)."
     }
@@ -2097,7 +2097,7 @@
       "C": "Legal consultants",
       "D": "Business investors"
      },
-     "answer": "A",
+     "answer": "D",
      "translation": null,
      "reasoning": "Người nói mở đầu bằng: \"Thank you for attending this meeting for prospective investors\" (Cảm ơn các bạn đã tham dự cuộc họp này dành cho các nhà đầu tư tiềm năng)."
     },
@@ -3627,8 +3627,45 @@
    "questionEnd": 79,
    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-2/q77-79.mp3",
    "image": null,
-   "transcript": "{\n    \"transcript\":  \"M-Au Welcome to Impact Unlocked, the podcast for businesses wanting to streamline their operations with new technology. In today's episode, I'll talk about how to raise money by leveraging social media applications to get donations. I could focus on specific applications, but these things are constantly changing. Instead, I'll speak generally about how these types of applications can help you connect with potential donors. Some organizations keep using the same familiar fund-raising strategies. I see this often, but it's important to also incorporate the latest approaches.\n\\n77. What is the episode mainly about?\\n78. What does the speaker mean when he says, \\\"these things are constantly changing\\\"?\\n79. What does the speaker say is important for organizations to do?\",\n    \"keywords\":  [\n                     {\n                         \"word\":  \"advise\",\n                         \"pronunciation\":  \"/ədˈvaɪz/\",\n                         \"pos\":  \"v\",\n                         \"meaning\":  \"khuyên bảo, tư vấn\"\n                     },\n                     {\n                         \"word\":  \"decline\",\n                         \"pronunciation\":  \"/dɪˈklaɪn/\",\n                         \"pos\":  \"n/v\",\n                         \"meaning\":  \"sự giảm sút\"\n                     },\n                     {\n                         \"word\":  \"antique\",\n                         \"pronunciation\":  \"/ænˈtiːk/\",\n                         \"pos\":  \"n\",\n                         \"meaning\":  \"đồ cổ\"\n                     },\n                     {\n                         \"word\":  \"brick-and-mortar\",\n                         \"pronunciation\":  \"/ˌbrɪk ənd ˈmɔːrtər/\",\n                         \"pos\":  \"adj\",\n                         \"meaning\":  \"(cửa hàng) thực tế, bán trực tiếp\"\n                     },\n                     {\n                         \"word\":  \"browse\",\n                         \"pronunciation\":  \"/braʊz/\",\n                         \"pos\":  \"v\",\n                         \"meaning\":  \"xem lướt qua\"\n                     }\n                 ]\n}",
-   "keywords": [],
+   "transcript": "M-Au: Welcome to Impact Unlocked, the podcast for businesses wanting to streamline their operations with new technology. In today's episode, I'll talk about how to raise money by leveraging social media applications to get donations. I could focus on specific applications, but these things are constantly changing. Instead, I'll speak generally about how these types of applications can help you connect with potential donors. Some organizations keep using the same familiar fund-raising strategies. I see this often. But it's important to also incorporate the latest approaches.\n\n77. What is the episode mainly about?\n78. What does the speaker mean when he says, \"these things are constantly changing\"?\n79. What does the speaker say is important for organizations to do?",
+   "keywords": [
+    {
+     "term": "streamline",
+     "ipa": "/ˈstriːmlaɪn/",
+     "pos": "v",
+     "meaning": "tinh giản, tối ưu hoá"
+    },
+    {
+     "term": "leverage",
+     "ipa": "/ˈlevərɪdʒ/",
+     "pos": "v",
+     "meaning": "tận dụng, khai thác"
+    },
+    {
+     "term": "donation",
+     "ipa": "/doʊˈneɪʃn/",
+     "pos": "n",
+     "meaning": "khoản quyên góp"
+    },
+    {
+     "term": "potential donor",
+     "ipa": "/pəˈtenʃl ˈdoʊnər/",
+     "pos": "n",
+     "meaning": "nhà tài trợ tiềm năng"
+    },
+    {
+     "term": "fund-raising",
+     "ipa": "/ˈfʌnd reɪzɪŋ/",
+     "pos": "n/adj",
+     "meaning": "việc gây quỹ"
+    },
+    {
+     "term": "incorporate",
+     "ipa": "/ɪnˈkɔːrpəreɪt/",
+     "pos": "v",
+     "meaning": "kết hợp, đưa vào"
+    }
+   ],
    "questions": [
     {
      "number": 77,
@@ -12527,7 +12564,7 @@
       "C": "Ordering some supplies",
       "D": "Designing a Web page"
      },
-     "answer": "B",
+     "answer": "A",
      "translation": null,
      "reasoning": "Người đàn ông nhờ: 'I'm hoping you'll help me update the training materials' (tôi hy vọng bạn sẽ giúp tôi cập nhật các tài liệu đào tạo) -> Tương ứng với Help update training materials."
     },
@@ -12545,7 +12582,7 @@
       "C": "A facility inspection",
       "D": "A board meeting"
      },
-     "answer": "A",
+     "answer": "B",
      "translation": null,
      "reasoning": "Họ nhắc đến: 'will you be at the awards ceremony next week?' (bạn sẽ tham dự lễ trao giải vào tuần tới chứ?) -> Tham dự lễ trao giải (Attend an awards ceremony).\nĐoạn hội thoại ("
     }
@@ -18944,7 +18981,7 @@
       "C": "Human Resources",
       "D": "Customer Service"
      },
-     "answer": "D",
+     "answer": "B",
      "translation": null,
      "reasoning": "Người đàn ông đề cập: 'They asked if one of our graphic designers could redesign the newsletter...' (Họ hỏi liệu một trong các nhà thiết kế đồ họa của chúng ta có thể thiết kế lại bản tin không...) và giao cho người phụ nữ làm việc đó."
     },

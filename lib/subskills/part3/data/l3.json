@@ -18,212 +18,226 @@
    "items": [
     {
      "id": "evidence-0",
-     "question": "Câu hỏi: What does the speaker say is important for organizations to do?\nĐáp án đúng: Use familiar and current strategies",
+     "question": "Câu hỏi: Why do the men want to speak to the woman?\nĐáp án đúng: To discuss a loan",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-2/q77-79.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q56-58.mp3",
+     "image": null,
      "options": [
-      "\"transcript\":  \"M-Au Welcome to Impact Unlocked, the podcast for businesses wanting to streamline their operations with new technology. In today's episode, I'll talk about how to raise money by leveraging social media applications to get donations. I could focus on specific applications, but these things are constantly changing. Instead, I'll speak generally about how these types of applications can help you connect with potential donors. Some organizations keep using the same familiar fund-raising strategies. I see this often, but it's important to also incorporate the latest approaches.",
-      "\"word\":  \"brick-and-mortar\",",
-      "\"meaning\":  \"khuyên bảo, tư vấn\"",
-      "\"pronunciation\":  \"/dɪˈklaɪn/\","
+      "Why don't you tell me more about your business? I understand it's a repair shop?",
+      "Good morning! Welcome to Jasper Bank.",
+      "Thanks for meeting with us to discuss a loan for our business.",
+      "Yes, and because winter tourism has increased recently, we'd like to expand our space so that we can carry more inventory."
      ],
-     "correct": 0,
-     "explanation": "Người nói đề cập rằng một số tổ chức vẫn sử dụng các chiến lược gây quỹ quen thuộc (\"using the same familiar fund-raising strategies\") và nhấn mạnh thêm \"but it's important to also incorporate the latest approaches\" (nhưng điều quan trọng là cũng phải kết hợp các phương pháp tiếp cận mới nhất). Việc kết hợp giữa \"quen thuộc\" và \"mới nhất\" tương ứng với đáp án (D) - \"sử dụng các chiến lược quen thuộc và hiện tại\".\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
-     "part": 4
+     "correct": 2,
+     "explanation": "Người đàn ông nói ngay từ đầu: \"Thanks for meeting with us to discuss a loan for our business\" (Cảm ơn cô đã gặp chúng tôi để thảo luận về một khoản vay cho doanh nghiệp của chúng tôi).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "part": 3
     },
     {
      "id": "evidence-1",
-     "question": "Câu hỏi: What does the man invite the woman to share?\nĐáp án đúng: An e-mail address",
+     "question": "Câu hỏi: What is the man trying to do?\nĐáp án đúng: Pick up some luggage",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-8/q62-64.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q38-40.mp3",
+     "image": null,
      "options": [
-      "Yes, Ms. Popova. Your car is ready. Your bill is $133.",
-      "That's quite a bit more than listed on your Web site. I thought the cost would be $98.",
-      "Hi. I'm here to pick up my car. My name's Olga Popova. You replaced one of my tires.",
-      "Let me look at the work order. It looks like I billed you for the wrong tire. Apologies- let me fix that. Also, if you'd like to share your e-mail, I can sign you up for our rewards program."
+      "Hi. I flew in yesterday from Canada and was told that my luggage was accidentally put on a flight arriving this morning.",
+      "OK. Do you have your boarding pass?",
+      "That area is past security. I can use information on the boarding pass to locate the luggage for you.",
+      "Yes-here it is. Can I go to the unclaimed baggage area and pick up my luggage?"
      ],
      "correct": 3,
-     "explanation": "Người đàn ông nói 'if you'd like to share your e-mail, I can sign you up...'\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "explanation": "Người đàn ông hỏi 'Can I go to the unclaimed baggage area and pick up my luggage?' (Tôi có thể đến khu vực hành lý không có người nhận và lấy hành lý của mình không?).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
      "part": 3
     },
     {
      "id": "evidence-2",
-     "question": "Câu hỏi: According to the speaker, what may cause a delay?\nĐáp án đúng: Holidays",
+     "question": "Câu hỏi: According to the speaker, what will happen after Ms. Alabi receives her award?\nĐáp án đúng: Some musicians will perform.",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-5/q74-76.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-4/q89-91.mp3",
+     "image": null,
      "options": [
-      "The typical timeline for the review process is two weeks, with longer wait times expected around holidays.",
-      "Please note: it is necessary to keep your message under 60 seconds.",
-      "You've reached the communications team of Business As Usual, the talk show about starting a new business.",
-      "If you are calling because you'd like to appear on our show, we'd love to hear your story!"
+      "Alabi receives her award, some of her most famous clients will perform for us.",
+      "Over the years, she has been responsible for discovering and developing some of today's leading composers.",
+      "Welcome to the annual Soundtrack Music Awards show.",
+      "This year, we're streaming this event live over the Internet for the very first time!"
      ],
      "correct": 0,
-     "explanation": "Người nói nhắc nhở: 'The typical timeline for the review process is two weeks, with longer wait times expected around holidays.' (thời gian chờ có thể lâu hơn vào các dịp lễ). Do lưu lượng gửi tăng vào dịp lễ (Holiday traffic).\nĐoạn độc thoại (\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "explanation": "Sau khi bà nhận giải, 'some of her most famous clients will perform for us' (một số khách hàng/nhạc sĩ nổi tiếng của bà sẽ biểu diễn cho chúng ta).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
      "part": 4
     },
     {
      "id": "evidence-3",
-     "question": "Câu hỏi: What will the man do next?\nĐáp án đúng: Provide a menu",
+     "question": "Câu hỏi: What type of project is the woman working on?\nĐáp án đúng: Renovating a lobby",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-8/q50-52.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q35-37.mp3",
+     "image": null,
      "options": [
-      "Actually, that group changed their reservation to Wednesday.",
-      "We offer a special menu for large groups that charges a flat rate per person. Let me go get that for you. Sakura, can you take down the customer's reservation details?",
-      "Hi, Ms. Stewart. I'm Sakura. Unfortunately, I believe another large group reserved the patio for Thursday. Let me quickly check with the manager. Manager Gomez? Do we have a group reservation for the patio this Thursday evening?",
-      "Great! Is there a special menu for large groups?"
+      "Hi. I'm working on renovating the lobby of my office, and I'd like to get some paint for the walls.",
+      "Oh, OK. Then let's go with green.",
+      "Sure. What do you have in mind?",
+      "Do you have a copy of the logo with you? If I have the image, I can mix a custom paint to match it."
      ],
-     "correct": 3,
-     "explanation": "Người quản lý (Man) nói 'Let me go get that [special menu] for you.' (Để tôi đi lấy nó cho bạn).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "correct": 0,
+     "explanation": "Người đàn ông nói 'I want to paint the walls with one of the colors from our new logo' (Tôi muốn sơn các bức tường bằng một trong những màu từ logo mới của chúng ta). Việc sơn tường phù hợp với dự án cải tạo sảnh/căn phòng (Renovating a lobby).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
      "part": 3
     },
     {
      "id": "evidence-4",
-     "question": "Câu hỏi: What does the man suggest?\nĐáp án đúng: Offering additional options",
+     "question": "Câu hỏi: According to the men, what has changed recently?\nĐáp án đúng: Tourism has increased.",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q32-34.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q56-58.mp3",
+     "image": null,
      "options": [
-      "Hey, Oliver. Did you see the focus group results for our new spicy cheddar cheese? Everyone really liked it.",
-      "Yes. It should be a great addition to our company's line of cheeses.",
-      "I'm sure we could do that. I'll get in touch with the production manager with that request.",
-      "So maybe we should consider selling a shredded version that would melt easily when cooked."
+      "Why don't you tell me more about your business? I understand it's a repair shop?",
+      "Well, ten years ago, we opened as a snowmobile repair shop, but after a few years, we also started renting out snowmobiles and other sports equipment.",
+      "Thanks for meeting with us to discuss a loan for our business.",
+      "Yes, and because winter tourism has increased recently, we'd like to expand our space so that we can carry more inventory."
      ],
      "correct": 3,
-     "explanation": "Người đàn ông nói: \"So maybe we should consider selling a shredded version\" (Vậy nên có lẽ chúng ta nên cân nhắc việc bán phiên bản phô mai bào sợi). Việc bán thêm \"shredded version\" chính là cung cấp thêm tùy chọn (additional options) cho khách hàng.\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "explanation": "Người đàn ông nói: \"because winter tourism has increased recently\" (vì du lịch mùa đông đã gia tăng gần đây).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
      "part": 3
     },
     {
      "id": "evidence-5",
-     "question": "Câu hỏi: What does the woman ask to see?\nĐáp án đúng: A boarding pass",
+     "question": "Câu hỏi: Who most likely is the speaker?\nĐáp án đúng: A bank manager",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q38-40.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3/q86-88.mp3",
+     "image": null,
      "options": [
-      "Hi. I flew in yesterday from Canada and was told that my luggage was accidentally put on a flight arriving this morning.",
-      "That area is past security. I can use information on the boarding pass to locate the luggage for you.",
-      "Yes-here it is. Can I go to the unclaimed baggage area and pick up my luggage?",
-      "OK. Do you have your boarding pass?"
+      "However, we received low ratings on marketing our other products.",
+      "M-Cn: You may remember that our bank branch was evaluated by auditors from our headquarters last week.",
+      "I'd like all supervisors to talk to their staff about strategies to pitch our products and services to customers.",
+      "They looked at everything from how we handle recordkeeping for accounts and transactions to how our bank tellers interact with individual customers."
      ],
-     "correct": 3,
-     "explanation": "Người phụ nữ hỏi 'Do you have your boarding pass?' (Bạn có thẻ lên máy bay không?).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
-     "part": 3
-    },
-    {
-     "id": "evidence-6",
-     "question": "Câu hỏi: According to the speaker, what will Ms. Taylor do in Chicago?\nĐáp án đúng: Speak at a conference",
-     "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q83-85.mp3",
-     "options": [
-      "We are fortunate to be able to interview her today before she travels to the National Real Estate Conference in Chicago, where she has been invited to deliver the keynote speech.",
-      "On today's episode of our podcast, we'll be talking to Rebecca Taylor, the chair and founder of Real Estate Investments LLC.",
-      "Her opinion is highly valued.",
-      "Taylor is widely known for her ability to correctly predict trends in the real estate market."
-     ],
-     "correct": 0,
-     "explanation": "Người nói cho biết 'travels to the National Real Estate Conference in Chicago, where she has been invited to deliver the keynote speech' (tới Hội nghị Bất động sản Quốc gia ở Chicago, nơi cô đã được mời để phát biểu quan trọng).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "correct": 1,
+     "explanation": "Người nói đề cập đến \"our bank branch\" (chi nhánh ngân hàng của chúng ta) và ra chỉ thị cho \"all supervisors\" (tất cả các giám sát viên). Vai trò này tương ứng với người quản lý của chi nhánh ngân hàng.\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
      "part": 4
     },
     {
-     "id": "evidence-7",
-     "question": "Câu hỏi: What is the focus of the podcast?\nĐáp án đúng: Agriculture",
+     "id": "evidence-6",
+     "question": "Câu hỏi: What does the man remind the woman about?\nĐáp án đúng: Bringing business cards",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3/q80-82.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-7/q47-49.mp3",
+     "image": null,
      "options": [
-      "Welcome to Ag-Cast-a podcast all about the latest news in agriculture.",
-      "Before we get started with today's episode, I'd like to note that I provided the wrong dates for the Farming Exposition during last week's episode.",
-      "Junko Adachi is the director at Fertilizer-ONE-a nonprofit organization that provides small farms with low-cost fertilizer.",
-      "OK, let's move on to today's guest."
+      "Right. So don't forget to bring your business cards with you. You'll need a lot of them.",
+      "Me, too. And I printed out the program with all the talks and workshops.",
+      "Oh, can I take a look? This is great! It looks like there are plenty of breaks in the schedule for networking with potential clients.",
+      "Thanks for the reminder. I'd better order more."
      ],
      "correct": 0,
-     "explanation": "Ngay đầu bài nói: \"Welcome to Ag-Cast—a podcast all about the latest news in agriculture.\" (Nông nghiệp)\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "explanation": "Người đàn ông nhắc nhở 'don't forget to bring your business cards with you' (đừng quên mang theo danh thiếp) -> Mang theo danh thiếp (Bringing business cards).\nĐoạn hội thoại (\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "part": 3
+    },
+    {
+     "id": "evidence-7",
+     "question": "Câu hỏi: According to the speaker, what will be opening soon?\nĐáp án đúng: A performing arts center",
+     "context": null,
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-5/q89-91.mp3",
+     "image": null,
+     "options": [
+      "The designer won an award for the building's insulated walls.",
+      "In local news, the opening of the Stewart Performing Arts Center tomorrow night has attracted widespread attention.",
+      "On top of this, the interior decoration is magnificent.",
+      "This state-of-the-art center holds three different theaters."
+     ],
+     "correct": 1,
+     "explanation": "Tin tức phát thanh: 'In local news, the opening of the Stewart Performing Arts Center tomorrow night...' (Khai trương Trung tâm Biểu diễn Nghệ thuật Stewart vào đêm mai...). Sắp khai trương một trung tâm biểu diễn nghệ thuật (A performing arts center).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
      "part": 4
     },
     {
      "id": "evidence-8",
-     "question": "Câu hỏi: Where most likely is the announcement being made?\nĐáp án đúng: At a trade show",
+     "question": "Câu hỏi: What does the man say he will check on?\nĐáp án đúng: Some prices",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q71-73.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q32-34.mp3",
+     "image": null,
      "options": [
-      "It's a silver Rugged Hiker model with a blue strap.",
-      "Good morning, and welcome to the Third Annual Robotics Trade Show.",
-      "And will the person who left a backpack at the information desk please return to the desk to claim your item?",
-      "That's on the lower level, to the left of the elevators."
+      "I saw one of the new commercials about our business on television last week. I guess the advertising campaign has already launched.",
+      "There's still some money in the budget. We should use it to advertise our most recent package-a guided exploration of the theater district, including tickets to a performance.",
+      "That's a good idea. Let me check how much it would cost to add that information to our current commercials.",
+      "This ad campaign's coming out at a great time for us. It's our busy season-people are starting to book our tours for their vacations."
      ],
      "correct": 1,
-     "explanation": "Người nói mở đầu: 'welcome to the Third Annual Robotics Trade Show' (chào mừng đến với Triển lãm Thương mại Robot Thường niên lần thứ ba) -> Sự kiện là một triển lãm thương mại.\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
-     "part": 4
-    },
-    {
-     "id": "evidence-9",
-     "question": "Câu hỏi: What does the speaker say can be found online?\nĐáp án đúng: Volunteer information",
-     "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-2/q89-91.mp3",
-     "options": [
-      "I am currently out of the office.",
-      "You've reached Ji-Soo Yoon at the visitor center of the Pine Valley Nature Preserve.",
-      "If you are calling for information about helping to maintain our hiking trails, please refer to the volunteer page on our Web site.",
-      "For all other inquiries, please leave a message after the tone."
-     ],
-     "correct": 2,
-     "explanation": "Nếu muốn giúp bảo trì đường mòn, người nghe được yêu cầu: \"refer to the volunteer page on our Web site\" (hãy tham khảo trang tình nguyện viên trên trang web của chúng tôi).\nĐOẠN HỘI THOẠI (\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
-     "part": 4
-    },
-    {
-     "id": "evidence-10",
-     "question": "Câu hỏi: What does the speaker remind the listeners about?\nĐáp án đúng: Where to buy food",
-     "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q83-85.mp3",
-     "options": [
-      "A bus will be departing for that destination in fifteen minutes.",
-      "Also, a reminder that the station café opens at eight A.M., and there are food kiosks on platform one.",
-      "They expect to complete the repair within the hour.",
-      "All trains to Midway Station are delayed for track repairs."
-     ],
-     "correct": 1,
-     "explanation": "Cuối thông báo, người nói nhắc nhở: \"a reminder that the station café opens... and there are food kiosks on platform one\" (nhắc lại rằng quán cà phê... mở cửa... và có các quầy thực phẩm ở sân ga số một).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
-     "part": 4
-    },
-    {
-     "id": "evidence-11",
-     "question": "Câu hỏi: Why are the men traveling to Toronto?\nĐáp án đúng: To present at a conference",
-     "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-8/q56-58.mp3",
-     "options": [
-      "OK. You're all set to board flight 1216 to Toronto. Thank you for flying with us. Unfortunately, I've just learned that the flight is delayed because of inclement weather in Canada.",
-      "In the meantime, I can offer you meal vouchers if you like.",
-      "We'll be hearing from Toronto regularly. I'm sorry, but that's all we know at this point.",
-      "Oh, no! My colleague here and I are presenting at a conference in Toronto this evening. Do you have any idea how long the delay might be?"
-     ],
-     "correct": 3,
-     "explanation": "Người đàn ông 1 nói 'My colleague here and I are presenting at a conference in Toronto this evening.' (thuyết trình tại hội nghị).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "explanation": "Người đàn ông nói 'Let me check how much it would cost' (Để tôi kiểm tra xem sẽ tốn bao nhiêu chi phí) -> Kiểm tra một số mức giá (Some prices).\nĐoạn hội thoại (\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
      "part": 3
     },
     {
-     "id": "evidence-12",
-     "question": "Câu hỏi: According to the speaker, how can the listeners use a new service?\nĐáp án đúng: By using a mobile application",
+     "id": "evidence-9",
+     "question": "Câu hỏi: What does the woman say she likes?\nĐáp án đúng: The flavor of a dish",
+     "context": null,
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-7/q35-37.mp3",
+     "image": null,
+     "options": [
+      "I agree. But we don't use lemons in any other dish. Should I get in touch with our fruit and vegetable supplier?",
+      "Sure, I have time now. I think the pasta is delicious. I like the hint of fresh lemon flavor. It'll make a great addition to our summer menu.",
+      "Thanks. Just ask him what the cost difference would be if we added five kilograms of lemons to our regular delivery.",
+      "Amina, do you have a few minutes? I finished preparing the sample dish that you asked for. You can try it now if you'd like."
+     ],
+     "correct": 3,
+     "explanation": "Người phụ nữ khen 'I like the hint of fresh lemon flavor' (Tôi thích chút hương vị chanh tươi) -> Hương vị của một món ăn (The flavor of a dish).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "part": 3
+    },
+    {
+     "id": "evidence-10",
+     "question": "Câu hỏi: What is the woman's current job?\nĐáp án đúng: A consultant for film studios",
+     "context": null,
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-7/q44-46.mp3",
+     "image": null,
+     "options": [
+      "On today's podcast, we have Gabriela Espinoza, a former history professor who focuses on ancient civilizations. Recently, however, she left the university for another position-tell us about that.",
+      "Well, last year, a film company was producing a movie about the famous pyramids at Giza. They needed an expert in ancient Egypt, and they found me. Now I work full-time as a consultant for the film industry.",
+      "Do you actually work on set?",
+      "Yes. When there are last-minute changes, I make sure the changes are historically accurate. In fact, I'll be in Egypt next week, sailing down the Nile River."
+     ],
+     "correct": 1,
+     "explanation": "Người phụ nữ mô tả 'work full-time as a consultant for the film industry' (làm việc toàn thời gian như một cố vấn cho ngành công nghiệp điện ảnh) -> Cố vấn cho xưởng phim (A consultant for film studios).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "part": 3
+    },
+    {
+     "id": "evidence-11",
+     "question": "Câu hỏi: What type of service is being advertised?\nĐáp án đúng: Transportation",
      "context": null,
      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q95-97.mp3",
+     "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/95-97.png",
      "options": [
-      "Are you looking for a convenient way to get around the city?",
       "Just download the Lakepoint City application onto your mobile phone.",
+      "The city of Lakepoint offers on-demand transportation in several of our neighborhoods.",
       "And we've recently expanded service to Westbrook, so residents can take the shuttle to the soccer stadium.",
       "This easy-to-use service will take you to any destination within the service area, like your doctor's office or the library."
      ],
      "correct": 1,
-     "explanation": "Hướng dẫn sử dụng: 'Just download the Lakepoint City application onto your mobile phone' (Chỉ cần tải ứng dụng xuống điện thoại) -> Bằng cách sử dụng ứng dụng di động.\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "explanation": "Quảng cáo giới thiệu 'on-demand transportation in several of our neighborhoods' (vận chuyển theo yêu cầu) -> Dịch vụ vận chuyển (Transportation).\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "part": 4
+    },
+    {
+     "id": "evidence-12",
+     "question": "Câu hỏi: Look at the graphic. Where will a new mine be built?\nĐáp án đúng: At site 3",
+     "context": null,
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q98-100.mp3",
+     "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-1/98-100.png",
+     "options": [
+      "Thank you for attending this meeting for prospective investors.",
+      "The site with 390 grams per ton has a larger deposit, so that's where we'll build the new mine.",
+      "Our next step is to apply for the necessary permits.",
+      "ZZ Mining has been planning to expand our operations by opening an additional silver mine."
+     ],
+     "correct": 1,
+     "explanation": "Người nói nêu rõ, \"địa điểm với 390 gam trên mỗi tấn có trữ lượng lớn hơn, vì vậy đó là nơi chúng tôi sẽ xây dựng mỏ mới.\" Dựa trên ngữ cảnh câu hỏi và đáp án đúng là 'C', Vị trí 3 là địa điểm tương ứng với trữ lượng 390 gam mỗi tấn, được chọn để xây dựng mỏ mới do có quy mô lớn hơn, mặc dù có một địa điểm khác có chất lượng cao hơn (410 gam mỗi tấn). Do đó, một mỏ mới sẽ được xây dựng tại Vị trí 3.\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
      "part": 4
     },
     {
      "id": "evidence-13",
-     "question": "Câu hỏi: Where are the speakers?\nĐáp án đúng: At a trade show",
+     "question": "Câu hỏi: What does the woman plan to inquire about?\nĐáp án đúng: A funding source",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-8/q53-55.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q44-46.mp3",
+     "image": null,
      "options": [
-      "That's right. I watched a video about a machine that can transplant seedlings from small pots to bigger pots. It handles 10,000 plants in an hour?",
-      "Hi! How are you enjoying the agricultural trade show?",
-      "I've seen some great demonstrations. That being said, one of the reasons I came to this show was to visit your booth. I've been watching some promotional videos online about the machinery that you sell.",
-      "Is this our new line of automated farming technology?"
+      "OK, I'll get a camera crew together right away. I hope the mayor will provide details about the proposal to build an offshore wind farm.",
+      "Silvia, I just heard the city mayor will hold a press conference this afternoon. Can you cover it? I'll be at the opening of the new train station.",
+      "Perfect. I'm going to ask the mayor about funding for the project. The residents will want to know where the finances will come from.",
+      "Yes, that's what I heard he'll discuss. There's a lot of interest in wind energy, so this will likely be the lead story on tonight's news."
      ],
-     "correct": 1,
-     "explanation": "Người phụ nữ hỏi 'How are you enjoying the agricultural trade show?' Họ đang ở một triển lãm thương mại.\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
+     "correct": 2,
+     "explanation": "Người phụ nữ nói 'I'm going to ask the mayor about funding for the project' (Tôi sẽ hỏi thị trưởng về nguồn tài trợ cho dự án) -> Nguồn tài trợ (A funding source).\nĐoạn hội thoại (\n\nĐáp án gần như không bao giờ dùng lại nguyên từ trong bài — luôn là cách diễn đạt lại.",
      "part": 3
     }
    ]
@@ -236,50 +250,53 @@
    "items": [
     {
      "id": "trap-0",
-     "question": "Nghe đoạn. Với câu hỏi \"What type of product does the speaker's company make?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
+     "question": "Nghe đoạn. Với câu hỏi \"What will the man most likely do next?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q80-82.mp3",
-     "transcript": "The first agenda item for our board meeting is the annual sales report. We're all disappointed by the drop in our clothing sales. So I'm recommending that we start manufacturing some clothing locally. I hired a consultant to put together a list of locations we could use. He'll be at our next board meeting to explain the pros and cons of each.",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-5/q68-70.mp3",
+     "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-5/68-70.png",
+     "transcript": "M: When customers walk into Southern Regional Bank, I want them to feel confident about entrusting their money to us. As I mentioned the last time we met, I'm hoping your interior design firm can give our lobby a more polished, professional look.\nW: Our proposal does just that. Here-take a look. The cover page includes a summary of the renovations.\nM: Hmm. Do you really think we need skylights? That would be a big expense.\nW: There aren't many windows in your lobby, so it's the best way to bring more natural light into the room. Besides, our proposed renovations would actually come in under budget. If you turn to page four, you'll see the cost breakdown.\n68. Who most likely is the woman?\n69. Look at the graphic. Which step does the man ask about?\n70. What will the man most likely do next?",
      "options": [
-      "Furniture",
-      "Luggage",
-      "Bedding",
-      "Clothing"
+      "Send a contract",
+      "Go to the lobby",
+      "Look at some photographs",
+      "Review a cost estimate"
      ],
-     "correct": 3,
-     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Furniture\" — diễn đạt lại, không lặp từ.\n\nNgười nói đề cập đến sự sụt giảm doanh số bán hàng: \"drop in our clothing sales\" (sụt giảm trong doanh số bán quần áo của mình). Điều này cho thấy họ kinh doanh quần áo.",
-     "part": 4
+     "correct": 1,
+     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Review a cost estimate\" — diễn đạt lại, không lặp từ.\n\nNgười phụ nữ bảo: 'If you turn to page four, you'll see the cost breakdown.' (Nếu bạn chuyển sang trang bốn, bạn sẽ thấy bản chi tiết chi phí). Người đàn ông sẽ xem bản ước tính chi phí (Review a cost estimate).\nGIẢI THÍCH CHI TIẾT TOEIC TEST 5 - PART 4\nĐoạn độc thoại (",
+     "part": 3
     },
     {
      "id": "trap-1",
-     "question": "Nghe đoạn. Với câu hỏi \"What does the speaker recommend doing?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
+     "question": "Nghe đoạn. Với câu hỏi \"Which department does the woman most likely work in?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q80-82.mp3",
-     "transcript": "The first agenda item for our board meeting is the annual sales report. We're all disappointed by the drop in our clothing sales. So I'm recommending that we start manufacturing some clothing locally. I hired a consultant to put together a list of locations we could use. He'll be at our next board meeting to explain the pros and cons of each.",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-9/q38-40.mp3",
+     "image": null,
+     "transcript": "M: So-Jin, do you have a minute? I've got an assignment for you.\nW: Sure. What is it?\nM: The human resources department is concerned that employees aren't reading their weekly staff newsletter. They asked if one of our graphic designers could redesign the newsletter to make it more attractive.\nW: All right. I'll start working on it after I've finished with the Web site update.\nM: I'll ask Hiroki to take care of that so you're free to work on the newsletter.\n38. According to the man, what is the human resources department concerned about?\n39. Which department does the woman most likely work in?\n40. What does the man say he will do?",
      "options": [
-      "Manufacturing some products locally",
-      "Offering free shipping",
-      "Participating in a trade show",
-      "Developing a new product line"
+      "Sales",
+      "Marketing",
+      "Human Resources",
+      "Customer Service"
      ],
-     "correct": 0,
-     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Developing a new product line\" — diễn đạt lại, không lặp từ.\n\nNgười nói đưa ra đề xuất: \"I'm recommending that we start manufacturing some clothing locally\" (tôi đề xuất rằng chúng ta nên bắt đầu sản xuất một số quần áo tại địa phương).",
-     "part": 4
+     "correct": 2,
+     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Marketing\" — diễn đạt lại, không lặp từ.\n\nNgười đàn ông đề cập: 'They asked if one of our graphic designers could redesign the newsletter...' (Họ hỏi liệu một trong các nhà thiết kế đồ họa của chúng ta có thể thiết kế lại bản tin không...) và giao cho người phụ nữ làm việc đó.",
+     "part": 3
     },
     {
      "id": "trap-2",
-     "question": "Nghe đoạn. Với câu hỏi \"What does the speaker mean when he says, \"these things are constantly changing\"?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
+     "question": "Nghe đoạn. Với câu hỏi \"Look at the graphic. Which bus stop does the speaker recommend getting off at?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-2/q77-79.mp3",
-     "transcript": "{\n    \"transcript\":  \"M-Au Welcome to Impact Unlocked, the podcast for businesses wanting to streamline their operations with new technology. In today's episode, I'll talk about how to raise money by leveraging social media applications to get donations. I could focus on specific applications, but these things are constantly changing. Instead, I'll speak generally about how these types of applications can help you connect with potential donors. Some organizations keep using the same familiar fund-raising strategies. I see this often, but it's important to also incorporate the latest approaches.\n\\n77. What is the episode mainly about?\\n78. What does the speaker mean when he says, \\\"these things are constantly changing\\\"?\\n79. What does the speaker say is important for organizations to do?\",\n    \"keywords\":  [\n                     {\n                         \"word\":  \"advise\",\n                         \"pronunciation\":  \"/ədˈvaɪz/\",\n                         \"pos\":  \"v\",\n                         \"meaning\":  \"khuyên bảo, tư vấn\"\n                     },\n                     {\n                         \"word\":  \"decline\",\n                         \"pronunciation\":  \"/dɪˈklaɪn/\",\n                         \"pos\":  \"n/v\",\n                         \"meaning\":  \"sự giảm sút\"\n                     },\n                     {\n                         \"word\":  \"antique\",\n                         \"pronunciation\":  \"/ænˈtiːk/\",\n                         \"pos\":  \"n\",\n                         \"meaning\":  \"đồ cổ\"\n                     },\n                     {\n                         \"word\":  \"brick-and-mortar\",\n                         \"pronunciation\":  \"/ˌbrɪk ənd ˈmɔːrtər/\",\n                         \"pos\":  \"adj\",\n                         \"meaning\":  \"(cửa hàng) thực tế, bán trực tiếp\"\n                     },\n                     {\n                         \"word\":  \"browse\",\n                         \"pronunciation\":  \"/braʊz/\",\n                         \"pos\":  \"v\",\n                         \"meaning\":  \"xem lướt qua\"\n                     }\n                 ]\n}",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3/q98-100.mp3",
+     "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-3/98-100.png",
+     "transcript": "M-Cn: Hi, Takuma. Good news-you got your first television audition! It's for a role in a TV drama. I've sent an e-mail with the script and details. Since you're auditioning to join the cast of an ongoing show, you should watch some videos of previous episodes so you understand the role. One last note-since you're new to the city, you might be wondering about the best bus route to take. You could take the green line to Orchard, but I'd recommend taking the yellow line to the last stop. It's a longer route, but the last stop is closer to the studio.\n98. Who most likely is the listener?\n99. According to the speaker, what should the listener do to prepare?\n100. Look at the graphic. Which bus stop does the speaker recommend getting off at?",
      "options": [
-      "He recommends professional development courses.",
-      "He questions the value of an investment.",
-      "Some information will be excluded.",
-      "Using technology is important."
+      "Orchard",
+      "Heath",
+      "Grove",
+      "Meadow"
      ],
-     "correct": 3,
-     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Some information will be excluded.\" — diễn đạt lại, không lặp từ.\n\nNgười nói nhắc đến câu \"these things are constantly changing\" (những thứ này luôn thay đổi) ngay sau khi cân nhắc việc tập trung vào các ứng dụng cụ thể (\"I could focus on specific applications, but...\"). Sau đó anh ấy quyết định \"Thay vào đó, tôi sẽ nói một cách tổng quát...\". Câu nói này mang hàm ý để giải thích lý do tại sao anh ấy sẽ không đi sâu vào chi tiết các ứng dụng cụ thể, tức là một số thông tin chi tiết sẽ bị loại trừ (excluded).",
+     "correct": 0,
+     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Grove\" — diễn đạt lại, không lặp từ.\n\nNgười nói khuyên: \"recommend taking the yellow line to the last stop\" (khuyên cậu nên đi tuyến màu vàng đến điểm dừng cuối cùng). Dựa vào bản đồ xe buýt đi kèm, bạn tìm tuyến màu vàng (yellow line) và xem điểm dừng cuối cùng của nó tên là gì để đưa ra đáp án.\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 5",
      "part": 4
     },
     {
@@ -287,6 +304,7 @@
      "question": "Nghe đoạn. Với câu hỏi \"Look at the graphic. Which parking rate has been changed?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
      "context": null,
      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-9/q95-97.mp3",
+     "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-9/95-97.png",
      "transcript": "Thanks for inviting me to represent the parking authority at this month's city council meeting. As you know, parking in city parking garages will no longer be free on Saturdays. My office has updated the parking rate schedule and posted copies in all city garages. If you look at the screen, you'll see the new rates that went into effect this week. We're planning to use some of the additional revenue to cover the cost of new payment kiosks for the garages. I will provide a revenue report at next month's meeting.\n95. Who most likely is the speaker?\n96. Look at the graphic. Which parking rate has been changed?\n97. What will be presented next month?",
      "options": [
       "$22",
@@ -300,18 +318,19 @@
     },
     {
      "id": "trap-4",
-     "question": "Nghe đoạn. Với câu hỏi \"Look at the graphic. Which bus stop does the speaker recommend getting off at?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
+     "question": "Nghe đoạn. Với câu hỏi \"What does the speaker mean when he says, \"these things are constantly changing\"?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3/q98-100.mp3",
-     "transcript": "M-Cn: Hi, Takuma. Good news-you got your first television audition! It's for a role in a TV drama. I've sent an e-mail with the script and details. Since you're auditioning to join the cast of an ongoing show, you should watch some videos of previous episodes so you understand the role. One last note-since you're new to the city, you might be wondering about the best bus route to take. You could take the green line to Orchard, but I'd recommend taking the yellow line to the last stop. It's a longer route, but the last stop is closer to the studio.\n98. Who most likely is the listener?\n99. According to the speaker, what should the listener do to prepare?\n100. Look at the graphic. Which bus stop does the speaker recommend getting off at?",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-2/q77-79.mp3",
+     "image": null,
+     "transcript": "M-Au: Welcome to Impact Unlocked, the podcast for businesses wanting to streamline their operations with new technology. In today's episode, I'll talk about how to raise money by leveraging social media applications to get donations. I could focus on specific applications, but these things are constantly changing. Instead, I'll speak generally about how these types of applications can help you connect with potential donors. Some organizations keep using the same familiar fund-raising strategies. I see this often. But it's important to also incorporate the latest approaches.\n\n77. What is the episode mainly about?\n78. What does the speaker mean when he says, \"these things are constantly changing\"?\n79. What does the speaker say is important for organizations to do?",
      "options": [
-      "Orchard",
-      "Heath",
-      "Grove",
-      "Meadow"
+      "He recommends professional development courses.",
+      "He questions the value of an investment.",
+      "Some information will be excluded.",
+      "Using technology is important."
      ],
-     "correct": 0,
-     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Grove\" — diễn đạt lại, không lặp từ.\n\nNgười nói khuyên: \"recommend taking the yellow line to the last stop\" (khuyên cậu nên đi tuyến màu vàng đến điểm dừng cuối cùng). Dựa vào bản đồ xe buýt đi kèm, bạn tìm tuyến màu vàng (yellow line) và xem điểm dừng cuối cùng của nó tên là gì để đưa ra đáp án.\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 5",
+     "correct": 3,
+     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Some information will be excluded.\" — diễn đạt lại, không lặp từ.\n\nNgười nói nhắc đến câu \"these things are constantly changing\" (những thứ này luôn thay đổi) ngay sau khi cân nhắc việc tập trung vào các ứng dụng cụ thể (\"I could focus on specific applications, but...\"). Sau đó anh ấy quyết định \"Thay vào đó, tôi sẽ nói một cách tổng quát...\". Câu nói này mang hàm ý để giải thích lý do tại sao anh ấy sẽ không đi sâu vào chi tiết các ứng dụng cụ thể, tức là một số thông tin chi tiết sẽ bị loại trừ (excluded).",
      "part": 4
     },
     {
@@ -319,6 +338,7 @@
      "question": "Nghe đoạn. Với câu hỏi \"Who are the listeners?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
      "context": null,
      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-9/q92-94.mp3",
+     "image": null,
      "transcript": "I'd like to thank you all for attending Omnicom Department Store's staff meeting. As you'll recall, six months ago we made a deal with Euphoria sports clothing to sell their merchandise exclusively in our department stores. The hope is that we can attract new customers to our stores by selling this brand. Data show that foot traffic in the department stores containing Euphoria clothing is up twenty percent from last year. Keep in mind, however, that total sales revenues are still being calculated.\n92. Who are the listeners?\n93. According to the speaker, what happened six months ago?\n94. Why does the speaker say, \"total sales revenues are still being calculated\"?",
      "options": [
       "Shareholders",
@@ -332,41 +352,10 @@
     },
     {
      "id": "trap-6",
-     "question": "Nghe đoạn. Với câu hỏi \"What will take place next week?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
-     "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q38-40.mp3",
-     "transcript": "M: Polina, congratulations on being voted Nurse of the Year for our hospital. You really deserve the honor!\nW: Thanks! I'm a little embarrassed by all the attention, though.\nM: Well, you shouldn't be. After all, your patients and colleagues all felt you should be recognized for your outstanding efforts. Actually, I'm hoping you'll help me update the training materials for new nurses.\nW: I'd be happy to help! And by the way, will you be at the awards ceremony next week? All the hospital's winners will be celebrated.\nM: Of course! I'm looking forward to it.\n38. What is the woman's job?\n39. What does the man ask the woman to help with?\n40. What will take place next week?",
-     "options": [
-      "A press conference",
-      "An awards ceremony",
-      "A facility inspection",
-      "A board meeting"
-     ],
-     "correct": 1,
-     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"A press conference\" — diễn đạt lại, không lặp từ.\n\nHọ nhắc đến: 'will you be at the awards ceremony next week?' (bạn sẽ tham dự lễ trao giải vào tuần tới chứ?) -> Tham dự lễ trao giải (Attend an awards ceremony).\nĐoạn hội thoại (",
-     "part": 3
-    },
-    {
-     "id": "trap-7",
-     "question": "Nghe đoạn. Với câu hỏi \"What will the man most likely do next?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
-     "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-5/q68-70.mp3",
-     "transcript": "M: When customers walk into Southern Regional Bank, I want them to feel confident about entrusting their money to us. As I mentioned the last time we met, I'm hoping your interior design firm can give our lobby a more polished, professional look.\nW: Our proposal does just that. Here-take a look. The cover page includes a summary of the renovations.\nM: Hmm. Do you really think we need skylights? That would be a big expense.\nW: There aren't many windows in your lobby, so it's the best way to bring more natural light into the room. Besides, our proposed renovations would actually come in under budget. If you turn to page four, you'll see the cost breakdown.\n68. Who most likely is the woman?\n69. Look at the graphic. Which step does the man ask about?\n70. What will the man most likely do next?",
-     "options": [
-      "Send a contract",
-      "Go to the lobby",
-      "Look at some photographs",
-      "Review a cost estimate"
-     ],
-     "correct": 1,
-     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Review a cost estimate\" — diễn đạt lại, không lặp từ.\n\nNgười phụ nữ bảo: 'If you turn to page four, you'll see the cost breakdown.' (Nếu bạn chuyển sang trang bốn, bạn sẽ thấy bản chi tiết chi phí). Người đàn ông sẽ xem bản ước tính chi phí (Review a cost estimate).\nGIẢI THÍCH CHI TIẾT TOEIC TEST 5 - PART 4\nĐoạn độc thoại (",
-     "part": 3
-    },
-    {
-     "id": "trap-8",
      "question": "Nghe đoạn. Với câu hỏi \"Look at the graphic. Which day will the man request an appointment for?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
      "context": null,
      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3/q65-67.mp3",
+     "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-3/65-67.png",
      "transcript": "W: Thanks for calling Kwon Photography Studio.\nM: Hello. I need to have a photo taken for a Canadian passport.\nW: OK. You can make an appointment Monday through Friday. Just bring in a copy of the application so we can see the size requirements.\nM: I work nine to five every day at my current job. Do you have any openings after five P.M.?\nW: No problem. We're open until six P.M. one day a week.\n65. What does the man say he needs to have done?\n66. What does the woman ask the man to bring to an appointment?\n67. Look at the graphic. Which day will the man request an appointment for?",
      "options": [
       "Monday",
@@ -377,54 +366,6 @@
      "correct": 0,
      "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Wednesday\" — diễn đạt lại, không lặp từ.\n\nDựa vào hình ảnh lịch làm việc, bạn tìm xem ngày nào trong tuần studio mở cửa đến \"six P.M.\" (18h) theo như lời người phụ nữ nói để chọn đáp án phù hợp.\nĐOẠN HỘI THOẠI 13 (",
      "part": 3
-    },
-    {
-     "id": "trap-9",
-     "question": "Nghe đoạn. Với câu hỏi \"According to the speaker, what is the customers' main complaint?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
-     "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q92-94.mp3",
-     "transcript": "I want to explore the use of a more modernized payment system in our cosmetics stores. This system would allow any sales associate to take customer payments from a tablet anywhere in the store. The main complaint about shopping at our stores is waiting in long lines to pay. I've decided to conduct a trial run at our store in the Center City Mall.",
-     "options": [
-      "Long lines",
-      "High prices",
-      "Unavailable items",
-      "Unfriendly staff"
-     ],
-     "correct": 0,
-     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Unavailable items\" — diễn đạt lại, không lặp từ.\n\nNgười nói đề cập rõ: \"The main complaint about shopping at our stores is waiting in long lines to pay\" (Lời phàn nàn chính... là phải chờ đợi thanh toán xếp hàng dài).",
-     "part": 4
-    },
-    {
-     "id": "trap-10",
-     "question": "Nghe đoạn. Với câu hỏi \"Which department does the woman most likely work in?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
-     "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-9/q38-40.mp3",
-     "transcript": "M: So-Jin, do you have a minute? I've got an assignment for you.\nW: Sure. What is it?\nM: The human resources department is concerned that employees aren't reading their weekly staff newsletter. They asked if one of our graphic designers could redesign the newsletter to make it more attractive.\nW: All right. I'll start working on it after I've finished with the Web site update.\nM: I'll ask Hiroki to take care of that so you're free to work on the newsletter.\n38. According to the man, what is the human resources department concerned about?\n39. Which department does the woman most likely work in?\n40. What does the man say he will do?",
-     "options": [
-      "Sales",
-      "Marketing",
-      "Human Resources",
-      "Customer Service"
-     ],
-     "correct": 2,
-     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"Customer Service\" — diễn đạt lại, không lặp từ.\n\nNgười đàn ông đề cập: 'They asked if one of our graphic designers could redesign the newsletter...' (Họ hỏi liệu một trong các nhà thiết kế đồ họa của chúng ta có thể thiết kế lại bản tin không...) và giao cho người phụ nữ làm việc đó.",
-     "part": 3
-    },
-    {
-     "id": "trap-11",
-     "question": "Nghe đoạn. Với câu hỏi \"Why is the speaker unavailable next week?\", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?",
-     "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q86-88.mp3",
-     "transcript": "I'm calling about the work my design team's doing to update your company logo. I've just e-mailed two versions for you to review. Take your time to think about which one you'd like to choose. I'll be on vacation all next week, but if you call the office, my assistant will set up a meeting for when I get back.",
-     "options": [
-      "She will be working at another branch.",
-      "She will be with other clients.",
-      "She will be on vacation.",
-      "She will be at an industry conference."
-     ],
-     "correct": 2,
-     "explanation": "Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. Đáp án đúng là \"She will be working at another branch.\" — diễn đạt lại, không lặp từ.\n\nNgười nói thông báo: \"I'll be on vacation all next week\" (Tôi sẽ đi nghỉ lễ suốt tuần tới).",
-     "part": 4
     }
    ]
   },
@@ -438,128 +379,128 @@
      "id": "predict-set-0",
      "question": "Nghe 5 giây đầu. Bộ 3 câu hỏi nào đi kèm đoạn này?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-4/q59-61.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-5/q71-73.mp3",
      "audioPreviewSeconds": 8,
-     "transcript": "W: Hi, Shinji. I wanted to ask you about the order we got from the department store chain. You know, the one that placed an order for 5,000 jigsaw puzzles?\nM: Yes. They want the order in a week so they can stock them before the holiday.\nW: A week is not a long time.\nM: We've had short timelines before. Anyway, our illustrators sent some new puzzle illustrations, right? I heard they're making a special edition.\nW: Yes, and I'm so excited! I've got the sketches right here. Let me show you.\n59. What does the speakers' company manufacture?\n60. What does the woman imply when she says, \"A week is not a long time\"?\n61. What will the woman do next?",
+     "transcript": "Welcome to the monthly company staff meeting. Before I begin my report on last month's sales figures, I want to congratulate our fantastic IT team! The sales tracking system they built allows us to easily share results with colleagues from other branches. All employees are required to attend a training session on how to use it. A registration link will be sent out this afternoon. Now, let's look at last month's figures. We need to decide if we're ready to expand into more markets.\n71. Who most likely is the speaker?\n72. Why does the speaker congratulate a team?\n73. What are the listeners required to do?",
      "options": [
-      "1. Why do the men want to speak to the woman?\n2. What type of business do the men own?\n3. According to the men, what has changed recently?",
-      "1. What does the speakers' company manufacture?\n2. What does the woman imply when she says, \"A week is not a long time\"?\n3. What will the woman do next?",
-      "1. What problem does the speaker mention?\n2. What are the listeners temporarily allowed to do?\n3. Who most likely is Marion?"
+      "1. Where most likely is the announcement being made?\n2. What does the speaker say has changed?\n3. What does the speaker say is available at the information desk?",
+      "1. Who most likely is the speaker?\n2. Why does the speaker congratulate a team?\n3. What are the listeners required to do?",
+      "1. Who most likely is the man?\n2. What is the topic of the training?\n3. What is done at the start of each shift?"
      ],
      "correct": 1,
-     "explanation": "Câu mở đầu: \"Hi, Shinji. I wanted to ask you about the order we got from the department store chain. You know, the one that placed an order for 5,000 jigsaw puzzles?\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
-     "part": 3
+     "explanation": "Câu mở đầu: \"Welcome to the monthly company staff meeting.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
+     "part": 4
     },
     {
      "id": "predict-set-1",
      "question": "Nghe 5 giây đầu. Bộ 3 câu hỏi nào đi kèm đoạn này?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-2/q59-61.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-7/q77-79.mp3",
      "audioPreviewSeconds": 8,
-     "transcript": "W: Hi. I'd like to purchase some new carpeting. It's for the waiting room at my hair salon.\nM: We have many different styles. Are you looking for something different?\nW: Well, we get a lot of customers walking through, and our current carpeting is a light color.\nM: No matter what color you get, all our carpets are durable and can take high amounts of foot traffic. For businesses like yours, I recommend placing a protective mat near the door.\nW: That's a good idea.\nM: Also, I offer free cleaning services for a year for all purchases.\n59. What type of business does the woman work in?\n60. Why does the woman say, \"our current carpeting is a light color\"?\n61. What does the man's business offer?",
+     "transcript": "Attention, everyone. Tonight we're filming a live performance of the Edmunsen Symphony Orchestra, so the margin for error is zero. I know we've had a lot of adjustments to make since we just upgraded our cameras to newer models last week, but we've tested everything, and we know what we're doing. Remember, it's an important night because this is a high-profile event that will be broadcast live to viewers. If we do a great job, our services are bound to be in demand. It's noon now, so let's break for lunch. When we come back, we'll get set up.\n77. Who most likely are the listeners?\n78. What does the speaker say happened last week?\n79. What will the listeners do next?",
      "options": [
-      "1. Who is Mona Alamri?\n2. What is the focus of today's podcast episode?\n3. What does the speaker alert the listeners to?",
-      "1. What type of business does the woman work in?\n2. Why does the woman say, \"our current carpeting is a light color\"?\n3. What does the man's business offer?",
-      "1. Who most likely is the speaker?\n2. According to the speaker, what will the listeners find in a binder?\n3. What does the speaker say about department files?"
+      "1. What did the man do last month?\n2. Why will the woman be joining the man next month?\n3. What will the man send the woman a link to?",
+      "1. Who most likely are the listeners?\n2. What does the speaker say happened last week?\n3. What will the listeners do next?",
+      "1. What type of product does the speaker's company make?\n2. What does the speaker recommend doing?\n3. What will happen at the next meeting?"
      ],
      "correct": 1,
-     "explanation": "Câu mở đầu: \"Hi. I'd like to purchase some new carpeting. It's for the waiting room at my hair salon.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
-     "part": 3
+     "explanation": "Câu mở đầu: \"Tonight we're filming a live performance of the Edmunsen Symphony Orchestra, so the margin for error is zero.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
+     "part": 4
     },
     {
      "id": "predict-set-2",
      "question": "Nghe 5 giây đầu. Bộ 3 câu hỏi nào đi kèm đoạn này?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-5/q62-64.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-2/q44-46.mp3",
      "audioPreviewSeconds": 8,
-     "transcript": "W: Hi, I just got off the phone with management. They're not happy. The construction of the train tunnel isn't progressing fast enough.\nM: Yeah, I'm not surprised. The drilling is done now. The thing is, we can't start installing the support columns until we have all the materials for the concrete.\nW: When are the materials going to get here?\nM: A week, maybe two.\nW: Let's see if the shipment can be expedited. Can you do that?\nM: Sure. I'll call the supplier to ask about getting it here sooner.\nW: In the meantime, I'm going to write an e-mail to management to explain how we're attempting to resolve the situation.\n62. Look at the graphic. Which project phase was just completed?\n63. What does the woman ask the man to do?\n64. What does the woman intend to do next?",
+     "transcript": "M: Fernanda, I was just looking at the company calendar, and I noticed that the national electronics trade show is coming up soon.\nW: Oh, that's right! It'll be a great opportunity for us to showcase the product that we've been developing—our new robotic vacuum cleaner.\nM: We'll need to decide who we want to send to represent our company at the trade show.\nW: Well, I know just the right person—Kavi. Kavi does a good job of clearly explaining highly technical concepts in a way that everyone can understand.\n44. What upcoming event are the speakers discussing?\n45. What product has the speakers' company recently developed?\n46. Why does the woman recommend Kavi?",
      "options": [
-      "1. Look at the graphic. Which project phase was just completed?\n2. What does the woman ask the man to do?\n3. What does the woman intend to do next?",
-      "1. What type of company do the speakers work for?\n2. What has HMD Incorporated recently done?\n3. What does the man say he will do?",
-      "1. Who most likely is the man?\n2. Why does the woman say, \"There's a lot of traffic right now\"?\n3. What will the man most likely do next?"
+      "1. What industry does the speaker work in?\n2. According to the speaker, what has caused a problem?\n3. Why does the speaker say, \"I'll be available for the next couple of hours\"?",
+      "1. What upcoming event are the speakers discussing?\n2. What product has the speakers' company recently developed?\n3. Why does the woman recommend Kavi?",
+      "1. Where do the women most likely work?\n2. What does the man request?\n3. What will the women most likely do next?"
      ],
-     "correct": 0,
-     "explanation": "Câu mở đầu: \"Hi, I just got off the phone with management. They're not happy. The construction of the train tunnel isn't progressing fast enough.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
+     "correct": 1,
+     "explanation": "Câu mở đầu: \"Fernanda, I was just looking at the company calendar, and I noticed that the national electronics trade show is coming up soon.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
      "part": 3
     },
     {
      "id": "predict-set-3",
      "question": "Nghe 5 giây đầu. Bộ 3 câu hỏi nào đi kèm đoạn này?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q41-43.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-8/q71-73.mp3",
      "audioPreviewSeconds": 8,
-     "transcript": "M1: Hello. I'm looking for a book that's listed in your library's catalog, but I can't find it on the shelves. Could you help me?\nW: Sorry, I'm helping another patron on the phone right now. Let me get one of my coworkers for you.\nM2: Hi. How can I help you?\nM1: I'm looking for a book about abstract art called Night Canvases.\nM2: Oh! We just received several copies of that, but they're still packed in the box. If you come back tomorrow, they'll be ready to borrow.\n41. Where most likely are the speakers?\n42. Why is the woman unable to help?\n43. Why is an item unavailable?",
+     "transcript": "Thank you for attending Port Jefferson's city council meeting. We have a lot on our agenda today. The first topic up for discussion is a request from the head of the city's water system. He wants to buy two UAVs-or underwater autonomous vehicles. These remotely operated vehicles can be used to inspect, maintain, and repair equipment underwater. Now, each UAV costs 30,000 dollars, so this is a big decision for us. But for perspective, the city spends more than that every year to hire divers to repair broken equipment. Let's hear more about it from the chief engineer. He's going to give us some details about the vehicles.\n71. Who most likely is the speaker?\n72. What is the speaker mainly discussing?\n73. What will happen next?",
      "options": [
-      "1. Where most likely are the speakers?\n2. Why is the woman unable to help?\n3. Why is an item unavailable?",
-      "1. According to the speaker, why was a transit route changed?\n2. Look at the graphic. Where will the listeners find a new bus stop?\n3. Why should the listeners check a mobile phone application?",
-      "1. Where do the listeners most likely work?\n2. What problem does the speaker mention?\n3. What should the listeners remind customers about?"
+      "1. Who most likely is the speaker?\n2. What is the speaker mainly discussing?\n3. What will happen next?",
+      "1. Where is the woman?\n2. Look at the graphic. When does the woman prefer to meet with an investor?\n3. What good news does the man share?",
+      "1. Who most likely is the man?\n2. What does the woman say her company's goal is?\n3. What does the woman hope will happen?"
      ],
      "correct": 0,
-     "explanation": "Câu mở đầu: \"Hello. I'm looking for a book that's listed in your library's catalog, but I can't find it on the shelves. Could you help me?\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
-     "part": 3
+     "explanation": "Câu mở đầu: \"Thank you for attending Port Jefferson's city council meeting.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
+     "part": 4
     },
     {
      "id": "predict-set-4",
      "question": "Nghe 5 giây đầu. Bộ 3 câu hỏi nào đi kèm đoạn này?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-2/q56-58.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-4/q62-64.mp3",
      "audioPreviewSeconds": 8,
-     "transcript": "M1: Thanks for meeting with us, Ms. Azuma. This is Scott Ajibade, one of our senior project managers.\nM2: I admire your work, Ms. Azuma.\nW: Thank you. I was surprised by your invitation. I typically design jewelry, but your company's known for making computers and mobile phones.\nM1: Scott's team is currently working on a smartwatch. But there's a lot of competition, as you know.\nM2: We're hoping you can create a fresh design that will help our product stand out.\nW: Do you already have an idea of what the watch should look like, or are we starting from scratch?\nM2: I have some preliminary sketches we can look at, but none of them seem quite right.\n56. What industry do the men most likely work in?\n57. Why did the men request a meeting?\n58. What will the speakers most likely do next?",
+     "transcript": "M: Hi, Ms. Rossi. I understand you're concerned about a charge that appears on the statement for your business account.\nW: Yes, I have a question about the charge on May 3. I don't remember purchasing anything for that amount.\nM: Let me review your statement now. Hmm. It looks like that purchase was made abroad. So an international transaction fee was added to the purchase amount.\nW: Oh, yes-I was out of the country at that time. Thanks for clarifying. Can you provide me with a list of all the bank fees for transactions made abroad?\nM: Yes, of course. Here's a document that lists all the information.\n62. Where does the man most likely work?\n63. Look at the graphic. Which amount does the woman ask about?\n64. What does the man give the woman?",
      "options": [
-      "1. Where does the speaker work?\n2. What does the speaker ask the listener to do?\n3. Look at the graphic. How much will the listener most likely pay for parking?",
-      "1. What most likely is the man's job?\n2. How does the woman recommend getting to terminal A?\n3. What does the woman say is by the rental-car lot?",
-      "1. What industry do the men most likely work in?\n2. Why did the men request a meeting?\n3. What will the speakers most likely do next?"
+      "1. What has the woman recently purchased?\n2. What does the man ask the woman to do?\n3. Look at the graphic. How much will the woman probably pay for an electrical switch?",
+      "1. Where do the women most likely work?\n2. What does the man request?\n3. What will the women most likely do next?",
+      "1. Where does the man most likely work?\n2. Look at the graphic. Which amount does the woman ask about?\n3. What does the man give the woman?"
      ],
      "correct": 2,
-     "explanation": "Câu mở đầu: \"Thanks for meeting with us, Ms. Azuma. This is Scott Ajibade, one of our senior project managers.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
+     "explanation": "Câu mở đầu: \"Hi, Ms. Rossi. I understand you're concerned about a charge that appears on the statement for your business account.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
      "part": 3
     },
     {
      "id": "predict-set-5",
      "question": "Nghe 5 giây đầu. Bộ 3 câu hỏi nào đi kèm đoạn này?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-8/q95-97.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q44-46.mp3",
      "audioPreviewSeconds": 8,
-     "transcript": "The time is right for Snowville Refrigeration to begin marketing our commercial refrigerators internationally. Due to supply chain problems, many companies that manufacture refrigerators are low on inventory. Their customers are on long wait lists to receive their products. However, our most popular model is in stock-we currently have 380 of them available. Considering this, I'm going to assemble a team to come up with a viable marketing plan.\n95. What is the talk mainly about?\n96. Look at the graphic. What is the company's top-selling refrigerator model?\n97. What does the speaker say he will do?",
+     "transcript": "M: Silvia, I just heard the city mayor will hold a press conference this afternoon. Can you cover it? I'll be at the opening of the new train station.\nW: OK, I'll get a camera crew together right away. I hope the mayor will provide details about the proposal to build an offshore wind farm.\nM: Yes, that's what I heard he'll discuss. There's a lot of interest in wind energy, so this will likely be the lead story on tonight's news.\nW: Perfect. I'm going to ask the mayor about funding for the project. The residents will want to know where the finances will come from.\n44. Who most likely are the speakers?\n45. What project is being proposed?\n46. What does the woman plan to inquire about?",
      "options": [
-      "1. What is the purpose of the man's call?\n2. According to the woman, what additional service does the business offer?\n3. What does the woman ask the man to provide?",
-      "1. According to the man, what does Pelicon produce?\n2. What does the woman say she is concerned about?\n3. Why does the man recommend reading an e-mail?",
-      "1. What is the talk mainly about?\n2. Look at the graphic. What is the company's top-selling refrigerator model?\n3. What does the speaker say he will do?"
+      "1. Who most likely are the speakers?\n2. What project is being proposed?\n3. What does the woman plan to inquire about?",
+      "1. What does the woman want the man to review?\n2. What does the man imply when he says, \"the company's certainly had other priorities\"?\n3. What has the woman suggested in the past?",
+      "1. What type of company do the speakers work for?\n2. What has HMD Incorporated recently done?\n3. What does the man say he will do?"
      ],
-     "correct": 2,
-     "explanation": "Câu mở đầu: \"The time is right for Snowville Refrigeration to begin marketing our commercial refrigerators internationally.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
-     "part": 4
+     "correct": 0,
+     "explanation": "Câu mở đầu: \"Silvia, I just heard the city mayor will hold a press conference this afternoon. Can you cover it? I'll be at the opening of the new train station.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
+     "part": 3
     },
     {
      "id": "predict-set-6",
      "question": "Nghe 5 giây đầu. Bộ 3 câu hỏi nào đi kèm đoạn này?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q68-70.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-8/q62-64.mp3",
      "audioPreviewSeconds": 8,
-     "transcript": "W: Hi, Andrew. How have you enjoyed your first week here at Jebreen Farms?\nM: It's been great. I'm definitely learning a lot about commercial agriculture.\nW: So glad to hear that. Let's go over to where we'll store the upcoming corn harvest. As you know, we sell a lot of corn as feed for livestock farms in the area.\nM: Yes. I'm eager to get some hands-on experience with drying and storing the corn.\nW: Good. If the process is done right, it can be stored for long periods, but conditions inside the grain bin have to be just right.\nM: How long will the drying process take after the harvest?\nW: About four to six weeks.\n68. Who most likely is the man?\n69. Look at the graphic. Where will the upcoming harvest be stored?\n70. What does the man ask about?",
+     "transcript": "W: Hi. I'm here to pick up my car. My name's Olga Popova. You replaced one of my tires.\nM: Yes, Ms. Popova. Your car is ready. Your bill is $133.\nW: That's quite a bit more than listed on your Web site. I thought the cost would be $98.\nM: Let me look at the work order. It looks like I billed you for the wrong tire. Apologies- let me fix that. Also, if you'd like to share your e-mail, I can sign you up for our rewards program.\n62. Who most likely is the woman?\n63. Look at the graphic. Which tire model should have been listed on an invoice?\n64. What does the man invite the woman to share?",
      "options": [
-      "1. Where do the speakers most likely work?\n2. What does the woman request?\n3. What does the woman suggest the man do?",
-      "1. What industry do the speakers most likely work in?\n2. Why is the man attending a conference?\n3. Look at the graphic. Which tip does the woman point out?",
-      "1. Who most likely is the man?\n2. Look at the graphic. Where will the upcoming harvest be stored?\n3. What does the man ask about?"
+      "1. Where is the woman?\n2. Look at the graphic. When does the woman prefer to meet with an investor?\n3. What good news does the man share?",
+      "1. Who most likely is the woman?\n2. Look at the graphic. Which tire model should have been listed on an invoice?\n3. What does the man invite the woman to share?",
+      "1. What type of service is being advertised?\n2. According to the speaker, how can the listeners use a new service?\n3. Look at the graphic. Which area was recently added?"
      ],
-     "correct": 2,
-     "explanation": "Câu mở đầu: \"Hi, Andrew. How have you enjoyed your first week here at Jebreen Farms?\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
+     "correct": 1,
+     "explanation": "Câu mở đầu: \"Hi. I'm here to pick up my car. My name's Olga Popova. You replaced one of my tires.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
      "part": 3
     },
     {
      "id": "predict-set-7",
      "question": "Nghe 5 giây đầu. Bộ 3 câu hỏi nào đi kèm đoạn này?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-4/q35-37.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-8/q59-61.mp3",
      "audioPreviewSeconds": 8,
-     "transcript": "W: Chen, I hope all is going well on your first day. I saw you have some scheduled seafood deliveries across the bay in the Morgan District. Why haven't you left yet?\nM: I wasn't going to head over to that particular area for another hour. Do the restaurants in the Morgan District want their deliveries earlier than scheduled?\nW: No, but I'm concerned about Bay Bridge traffic. It's routinely congested with vehicles. So you should always add at least an extra hour to your trip out there.\nM: Thanks for the tip. I'll also check traffic Webcams on the highway agency's Web site.\n35. What most likely is the man's job?\n36. Why is the woman concerned?\n37. What does the man say he will check?",
+     "transcript": "M: So, Raquel, I've been working on repairing this tractor, but I'm not having much luck. I think it's the hydraulic system. I cleaned the pump, but it's not running any better. I've done this before, and it usually fixes it.\nW: I see. Maybe it's a problem with a piston in the hydraulic cylinder. But a repair that big should be under warranty. It was Hamdy Equipment that sold it to us.\nM: Good point. I'll give them a call later. I've spent too much time on this tractor. I need to go over to the fields to check on the peppers and cucumbers-it may be time to pick them.\n59. What has the man been doing?\n60. Why does the woman say, \"It was Hamdy Equipment that sold it to us\"?\n61. What will the man check next?",
      "options": [
-      "1. Why is the woman at the garden center?\n2. Look at the graphic. Which month's post will the woman most likely read?\n3. What kind of products will the man show to the woman?",
-      "1. What industry do the men work in?\n2. How did the men learn about the woman?\n3. What does the woman want to do next week?",
-      "1. What most likely is the man's job?\n2. Why is the woman concerned?\n3. What does the man say he will check?"
+      "1. What is the man's area of expertise?\n2. According to the man, what did he recently do?\n3. Look at the graphic. Which step of the sales process does the woman especially enjoy?",
+      "1. What is the speaker announcing?\n2. Why does the speaker say, \"I've been in this business for over twenty years\"?\n3. According to the speaker, why should the listeners raise their hands?",
+      "1. What has the man been doing?\n2. Why does the woman say, \"It was Hamdy Equipment that sold it to us\"?\n3. What will the man check next?"
      ],
      "correct": 2,
-     "explanation": "Câu mở đầu: \"Chen, I hope all is going well on your first day. I saw you have some scheduled seafood deliveries across the bay in the Morgan District. Why haven't you left yet?\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
+     "explanation": "Câu mở đầu: \"So, Raquel, I've been working on repairing this tractor, but I'm not having much luck. I think it's the hydraulic system. I cleaned the pump, but it's not running any better. I've done this before, and it usually fixes it.\" — nội dung này khoá lại bối cảnh, nên bộ câu hỏi phải xoay quanh cùng chủ đề.",
      "part": 3
     }
    ]
@@ -573,191 +514,191 @@
    "items": [
     {
      "id": "set-0",
-     "groupId": "est-2026-test-10-q74-76",
-     "question": "Where does the announcement most likely take place?",
+     "groupId": "est-2026-test-3-q62-64",
+     "question": "Look at the graphic. Which dollar amount will the man change?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q74-76.mp3",
-     "image": null,
-     "transcript": "Good afternoon. This is Captain Jeong giving you a heads-up on our plane's departure status. As you can see, there's a light dusting of snow on the ground. Air traffic control is holding us here at the gate while the snowplows clear the runway. It should take just a few minutes, then we'll be cleared for takeoff. I apologize for the delay. And a reminder: please ensure that children remain seated with their seat belts fastened throughout the flight.\n74. Where does the announcement most likely take place?\n75. What is causing a delay?\n76. What does the speaker remind the listeners to do?",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3/q62-64.mp3",
+     "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-3/62-64.png",
+     "transcript": "W: Marco, you'll be restocking the cleaning products this morning, right? While you're doing that, could you also put the updated sale-price labels on the hand soap dispensers? They're on the shelf right above the laundry detergent.\nM: No problem-that shouldn't take long. What else can I help with?\nW: Can you make room for our new international foods section at the front of the store?\nM: Oh, did the shipment finally arrive? That snowstorm up north really affected delivery schedules.\n62. Look at the graphic. Which dollar amount will the man change?\n63. What will be added at the front of the store?\n64. According to the man, why did a shipment arrive late?",
      "options": [
-      "On a train",
-      "On a ship",
-      "On an airplane",
-      "On a bus"
+      "$2.37",
+      "$4.55",
+      "$7.86",
+      "$2.91"
      ],
-     "correct": 2,
-     "explanation": "Người nói tự xưng là 'Captain Jeong giving you a heads-up on our plane's departure status' (Cơ trưởng Jeong thông báo trước cho bạn về tình trạng khởi hành của máy bay chúng ta), chứng tỏ họ đang ở trên máy bay.",
-     "part": 4,
-     "label": "place_business",
-     "labelVi": "Nơi chốn / loại hình công ty",
+     "correct": 0,
+     "explanation": "Dựa vào hình ảnh đi kèm trong đề thi, bạn tìm giá tiền tương ứng của mặt hàng \"hand soap dispensers\" (bình xịt nước rửa tay) để đưa ra đáp án.",
+     "part": 3,
+     "label": "graphic",
+     "labelVi": "Nhìn bảng biểu",
      "position": "first"
     },
     {
      "id": "set-1",
-     "groupId": "est-2026-test-10-q74-76",
-     "question": "What is causing a delay?",
+     "groupId": "est-2026-test-3-q62-64",
+     "question": "What will be added at the front of the store?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q74-76.mp3",
-     "image": null,
-     "transcript": "Good afternoon. This is Captain Jeong giving you a heads-up on our plane's departure status. As you can see, there's a light dusting of snow on the ground. Air traffic control is holding us here at the gate while the snowplows clear the runway. It should take just a few minutes, then we'll be cleared for takeoff. I apologize for the delay. And a reminder: please ensure that children remain seated with their seat belts fastened throughout the flight.\n74. Where does the announcement most likely take place?\n75. What is causing a delay?\n76. What does the speaker remind the listeners to do?",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3/q62-64.mp3",
+     "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-3/62-64.png",
+     "transcript": "W: Marco, you'll be restocking the cleaning products this morning, right? While you're doing that, could you also put the updated sale-price labels on the hand soap dispensers? They're on the shelf right above the laundry detergent.\nM: No problem-that shouldn't take long. What else can I help with?\nW: Can you make room for our new international foods section at the front of the store?\nM: Oh, did the shipment finally arrive? That snowstorm up north really affected delivery schedules.\n62. Look at the graphic. Which dollar amount will the man change?\n63. What will be added at the front of the store?\n64. According to the man, why did a shipment arrive late?",
      "options": [
-      "Weather conditions",
-      "Heavy traffic",
-      "Malfunctioning equipment",
-      "A staff shortage"
+      "An additional checkout stand",
+      "A holiday display",
+      "A special food section",
+      "A seating area"
      ],
-     "correct": 0,
-     "explanation": "Người nói giải thích 'there's a light dusting of snow on the ground... holding us here at the gate while the snowplows clear the runway' (có một lớp tuyết mỏng trên mặt đất... đang giữ chúng ta ở đây tại cổng trong khi xe dọn tuyết dọn sạch đường băng).",
-     "part": 4,
+     "correct": 2,
+     "explanation": "Người phụ nữ yêu cầu dọn chỗ cho \"our new international foods section at the front of the store\" (khu vực thực phẩm quốc tế mới ở phía trước cửa hàng).",
+     "part": 3,
      "label": "detail",
      "labelVi": "Chi tiết cụ thể",
      "position": "middle"
     },
     {
      "id": "set-2",
-     "groupId": "est-2026-test-10-q74-76",
-     "question": "What does the speaker remind the listeners to do?",
+     "groupId": "est-2026-test-3-q62-64",
+     "question": "According to the man, why did a shipment arrive late?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q74-76.mp3",
-     "image": null,
-     "transcript": "Good afternoon. This is Captain Jeong giving you a heads-up on our plane's departure status. As you can see, there's a light dusting of snow on the ground. Air traffic control is holding us here at the gate while the snowplows clear the runway. It should take just a few minutes, then we'll be cleared for takeoff. I apologize for the delay. And a reminder: please ensure that children remain seated with their seat belts fastened throughout the flight.\n74. Where does the announcement most likely take place?\n75. What is causing a delay?\n76. What does the speaker remind the listeners to do?",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3/q62-64.mp3",
+     "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-3/62-64.png",
+     "transcript": "W: Marco, you'll be restocking the cleaning products this morning, right? While you're doing that, could you also put the updated sale-price labels on the hand soap dispensers? They're on the shelf right above the laundry detergent.\nM: No problem-that shouldn't take long. What else can I help with?\nW: Can you make room for our new international foods section at the front of the store?\nM: Oh, did the shipment finally arrive? That snowstorm up north really affected delivery schedules.\n62. Look at the graphic. Which dollar amount will the man change?\n63. What will be added at the front of the store?\n64. According to the man, why did a shipment arrive late?",
      "options": [
-      "Store luggage in overhead compartments",
-      "Show tickets to an attendant",
-      "Avoid eating and drinking",
-      "Keep children in their seats"
+      "He forgot to place an order.",
+      "It was delivered to the wrong address.",
+      "Some supplies were unavailable.",
+      "Weather conditions were poor."
      ],
      "correct": 3,
-     "explanation": "Người nói nhắc nhở 'please ensure that children remain seated with their seat belts fastened' (vui lòng đảm bảo rằng trẻ em vẫn ngồi yên tại chỗ và thắt dây an toàn).",
-     "part": 4,
-     "label": "next_action",
-     "labelVi": "Hành động tiếp theo / yêu cầu",
+     "explanation": "Người đàn ông nói: \"That snowstorm up north really affected delivery schedules\" (Trận bão tuyết ở phía bắc thực sự đã ảnh hưởng đến lịch trình giao hàng). Bão tuyết chính là điều kiện thời tiết khắc nghiệt.\nĐOẠN HỘI THOẠI 12 (",
+     "part": 3,
+     "label": "detail",
+     "labelVi": "Chi tiết cụ thể",
      "position": "last"
     },
     {
      "id": "set-3",
-     "groupId": "est-2026-test-6-q47-49",
-     "question": "Why did the man miss a meeting?",
+     "groupId": "est-2026-test-10-q80-82",
+     "question": "What does the company make?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q47-49.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q80-82.mp3",
      "image": null,
-     "transcript": "W: Koji, you weren't at the team meeting this morning. Is everything OK?\nM: I had to take my car to the mechanic for repairs. What did I miss?\nW: Well, we received some good news. Our firm is planning to hire more accountants!\nM: That's great! We've been busier than ever since we started working with True Valley Industries.\nW: Yes. By the way, there's an article on our Web site about the founder of True Valley. I'd suggest reading it.\nM: I'll be sure to check it out.\n47. Why did the man miss a meeting?\n48. What good news does the woman mention?\n49. What does the man say he will do?",
+     "transcript": "At Jin-Ah's Jewelers, we create custom-made jewelry that showcases your style and celebrates the most important moments in your life. Meet for a video consultation with one of our talented artists, who can design earrings, bracelets, and more, just for you. And unlike our competitors, who only send you a sketch, we'll send you a simple metal prototype. You can approve or request changes to the sample before your final piece is made. To get your order started, just enter your information on our Web site, and one of our designers will contact you.\n80. What does the company make?\n81. How is the company different from its competitors?\n82. Why should the listeners visit a Web site?",
      "options": [
-      "His train was late.",
-      "His car was being repaired.",
-      "He had a medical appointment.",
-      "He was meeting with some clients."
+      "Clothing",
+      "Jewelry",
+      "Eyeglass frames",
+      "Ceramic vases"
      ],
      "correct": 1,
-     "explanation": "Người đàn ông nói 'I had to take my car to the mechanic for repairs' (Tôi phải mang xe đến thợ cơ khí để sửa) -> Xe anh ấy đang được sửa (His car was being repaired).",
-     "part": 3,
+     "explanation": "Người nói giới thiệu 'At Jin-Ah's Jewelers, we create custom-made jewelry' (Tại Jin-Ah's Jewelers, chúng tôi tạo ra đồ trang sức làm theo yêu cầu).",
+     "part": 4,
      "label": "detail",
      "labelVi": "Chi tiết cụ thể",
      "position": "first"
     },
     {
      "id": "set-4",
-     "groupId": "est-2026-test-6-q47-49",
-     "question": "What good news does the woman mention?",
+     "groupId": "est-2026-test-10-q80-82",
+     "question": "How is the company different from its competitors?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q47-49.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q80-82.mp3",
      "image": null,
-     "transcript": "W: Koji, you weren't at the team meeting this morning. Is everything OK?\nM: I had to take my car to the mechanic for repairs. What did I miss?\nW: Well, we received some good news. Our firm is planning to hire more accountants!\nM: That's great! We've been busier than ever since we started working with True Valley Industries.\nW: Yes. By the way, there's an article on our Web site about the founder of True Valley. I'd suggest reading it.\nM: I'll be sure to check it out.\n47. Why did the man miss a meeting?\n48. What good news does the woman mention?\n49. What does the man say he will do?",
+     "transcript": "At Jin-Ah's Jewelers, we create custom-made jewelry that showcases your style and celebrates the most important moments in your life. Meet for a video consultation with one of our talented artists, who can design earrings, bracelets, and more, just for you. And unlike our competitors, who only send you a sketch, we'll send you a simple metal prototype. You can approve or request changes to the sample before your final piece is made. To get your order started, just enter your information on our Web site, and one of our designers will contact you.\n80. What does the company make?\n81. How is the company different from its competitors?\n82. Why should the listeners visit a Web site?",
      "options": [
-      "More employees will be hired.",
-      "A facility will be remodeled.",
-      "Some equipment will be upgraded.",
-      "A permit has been approved."
+      "It uses eco-friendly materials.",
+      "It offers online consultations.",
+      "It promises one-week delivery.",
+      "It provides product prototypes."
      ],
-     "correct": 0,
-     "explanation": "Người phụ nữ nói tin tốt là 'Our firm is planning to hire more accountants!' (Công ty chúng ta đang lên kế hoạch tuyển thêm kế toán viên!) -> Sẽ tuyển thêm nhân viên (More employees will be hired).",
-     "part": 3,
+     "correct": 3,
+     "explanation": "Người nói chỉ ra sự khác biệt: 'unlike our competitors... we'll send you a simple metal prototype' (không giống như các đối thủ cạnh tranh của chúng tôi... chúng tôi sẽ gửi cho bạn một nguyên mẫu kim loại đơn giản).",
+     "part": 4,
      "label": "detail",
      "labelVi": "Chi tiết cụ thể",
      "position": "middle"
     },
     {
      "id": "set-5",
-     "groupId": "est-2026-test-6-q47-49",
-     "question": "What does the man say he will do?",
+     "groupId": "est-2026-test-10-q80-82",
+     "question": "Why should the listeners visit a Web site?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-6/q47-49.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-10/q80-82.mp3",
      "image": null,
-     "transcript": "W: Koji, you weren't at the team meeting this morning. Is everything OK?\nM: I had to take my car to the mechanic for repairs. What did I miss?\nW: Well, we received some good news. Our firm is planning to hire more accountants!\nM: That's great! We've been busier than ever since we started working with True Valley Industries.\nW: Yes. By the way, there's an article on our Web site about the founder of True Valley. I'd suggest reading it.\nM: I'll be sure to check it out.\n47. Why did the man miss a meeting?\n48. What good news does the woman mention?\n49. What does the man say he will do?",
+     "transcript": "At Jin-Ah's Jewelers, we create custom-made jewelry that showcases your style and celebrates the most important moments in your life. Meet for a video consultation with one of our talented artists, who can design earrings, bracelets, and more, just for you. And unlike our competitors, who only send you a sketch, we'll send you a simple metal prototype. You can approve or request changes to the sample before your final piece is made. To get your order started, just enter your information on our Web site, and one of our designers will contact you.\n80. What does the company make?\n81. How is the company different from its competitors?\n82. Why should the listeners visit a Web site?",
      "options": [
-      "Speak to a manager",
-      "Present at a conference",
-      "Read an article",
-      "Sign up for a training course"
+      "To enter a contest",
+      "To receive a discount code",
+      "To start an order",
+      "To view some photographs"
      ],
      "correct": 2,
-     "explanation": "Người phụ nữ gợi ý đọc một bài báo và người đàn ông đáp 'I'll be sure to check it out' (Tôi chắc chắn sẽ xem qua) -> Đọc một bài báo (Read an article).\nĐoạn hội thoại (",
-     "part": 3,
+     "explanation": "Người nói khuyên 'To get your order started, just enter your information on our Web site' (Để bắt đầu đơn hàng của bạn, chỉ cần nhập thông tin của bạn trên trang Web của chúng tôi).",
+     "part": 4,
      "label": "next_action",
      "labelVi": "Hành động tiếp theo / yêu cầu",
      "position": "last"
     },
     {
      "id": "set-6",
-     "groupId": "est-2026-test-7-q89-91",
-     "question": "What is the broadcast mainly about?",
+     "groupId": "est-2026-test-1-q38-40",
+     "question": "What event are the speakers planning?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-7/q89-91.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q38-40.mp3",
      "image": null,
-     "transcript": "A market research firm has reported that the department store chain Willoughby is partnering with the beauty retailer Rossi. By the end of the year, Rossi stores will be in place at 500 Willoughby locations. Currently, most of the beauty retailer's sales come from small shops in urban areas. By joining forces with Willoughby, Rossi hopes to meet its goal of expanding its customer base by entering suburban markets. To accommodate the new retail spaces for Rossi, participating Willoughby stores will start renovations in July.\n89. What is the broadcast mainly about?\n90. What goal does the speaker mention?\n91. What does the Willoughby store chain plan to do in July?",
+     "transcript": "W: Thanks for agreeing to help me organize the library's annual fund-raising dinner, Klaus. We hope the event brings in enough money to expand our children's book section.\nM: What task would you like me to start with?\nW: Well, I could use some help sending out the invitations.\nM: OK, I can take care of that. Is there a list of attendees available?\nW: It's in my computer files. I'll e-mail it to you.",
      "options": [
-      "A new company owner",
-      "A business partnership",
-      "Some store closings",
-      "A product rebranding"
+      "A fund-raising dinner",
+      "An art gallery opening",
+      "An awards ceremony",
+      "A children's book fair"
      ],
-     "correct": 1,
-     "explanation": "Bản tin nói 'Willoughby is partnering with the beauty retailer Rossi' (chuỗi cửa hàng bách hóa Willoughby đang hợp tác với nhà bán lẻ làm đẹp Rossi) -> Một sự hợp tác kinh doanh (A business partnership).",
-     "part": 4,
+     "correct": 0,
+     "explanation": "Người phụ nữ nói: \"help me organize the library's annual fund-raising dinner\" (giúp tôi tổ chức bữa tối gây quỹ thường niên của thư viện).",
+     "part": 3,
      "label": "purpose",
      "labelVi": "Mục đích / chủ đề",
      "position": "first"
     },
     {
      "id": "set-7",
-     "groupId": "est-2026-test-7-q89-91",
-     "question": "What goal does the speaker mention?",
+     "groupId": "est-2026-test-1-q38-40",
+     "question": "What task does the woman ask the man to help with?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-7/q89-91.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q38-40.mp3",
      "image": null,
-     "transcript": "A market research firm has reported that the department store chain Willoughby is partnering with the beauty retailer Rossi. By the end of the year, Rossi stores will be in place at 500 Willoughby locations. Currently, most of the beauty retailer's sales come from small shops in urban areas. By joining forces with Willoughby, Rossi hopes to meet its goal of expanding its customer base by entering suburban markets. To accommodate the new retail spaces for Rossi, participating Willoughby stores will start renovations in July.\n89. What is the broadcast mainly about?\n90. What goal does the speaker mention?\n91. What does the Willoughby store chain plan to do in July?",
+     "transcript": "W: Thanks for agreeing to help me organize the library's annual fund-raising dinner, Klaus. We hope the event brings in enough money to expand our children's book section.\nM: What task would you like me to start with?\nW: Well, I could use some help sending out the invitations.\nM: OK, I can take care of that. Is there a list of attendees available?\nW: It's in my computer files. I'll e-mail it to you.",
      "options": [
-      "Introducing a new product line",
-      "Becoming more environmentally friendly",
-      "Launching a social media campaign",
-      "Expanding a customer base"
+      "Arranging a shuttle service",
+      "Choosing a catering firm",
+      "Preparing a speech",
+      "Sending out invitations"
      ],
      "correct": 3,
-     "explanation": "Bản tin đề cập 'Rossi hopes to meet its goal of expanding its customer base' (Rossi hy vọng sẽ đạt được mục tiêu mở rộng cơ sở khách hàng) -> Mở rộng cơ sở khách hàng (Expanding a customer base).",
-     "part": 4,
-     "label": "detail",
-     "labelVi": "Chi tiết cụ thể",
+     "explanation": "Người phụ nữ nói: \"I could use some help sending out the invitations\" (Tôi có thể cần một chút trợ giúp trong việc gửi giấy mời).",
+     "part": 3,
+     "label": "next_action",
+     "labelVi": "Hành động tiếp theo / yêu cầu",
      "position": "middle"
     },
     {
      "id": "set-8",
-     "groupId": "est-2026-test-7-q89-91",
-     "question": "What does the Willoughby store chain plan to do in July?",
+     "groupId": "est-2026-test-1-q38-40",
+     "question": "What does the woman say she will do?",
      "context": null,
-     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-7/q89-91.mp3",
+     "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q38-40.mp3",
      "image": null,
-     "transcript": "A market research firm has reported that the department store chain Willoughby is partnering with the beauty retailer Rossi. By the end of the year, Rossi stores will be in place at 500 Willoughby locations. Currently, most of the beauty retailer's sales come from small shops in urban areas. By joining forces with Willoughby, Rossi hopes to meet its goal of expanding its customer base by entering suburban markets. To accommodate the new retail spaces for Rossi, participating Willoughby stores will start renovations in July.\n89. What is the broadcast mainly about?\n90. What goal does the speaker mention?\n91. What does the Willoughby store chain plan to do in July?",
+     "transcript": "W: Thanks for agreeing to help me organize the library's annual fund-raising dinner, Klaus. We hope the event brings in enough money to expand our children's book section.\nM: What task would you like me to start with?\nW: Well, I could use some help sending out the invitations.\nM: OK, I can take care of that. Is there a list of attendees available?\nW: It's in my computer files. I'll e-mail it to you.",
      "options": [
-      "Renovate some of its stores",
-      "Display beachwear",
-      "Host a grand opening event",
-      "Distribute a customer survey"
+      "E-mail a list",
+      "Speak with a colleague",
+      "Provide a password",
+      "Post a job opening"
      ],
      "correct": 0,
-     "explanation": "Bản tin thông báo 'Willoughby stores will start renovations in July' (các cửa hàng Willoughby tham gia sẽ bắt đầu cải tạo vào tháng Bảy) -> Cải tạo một số cửa hàng của mình (Renovate some of its stores).\nĐoạn bài nói (",
-     "part": 4,
-     "label": "detail",
-     "labelVi": "Chi tiết cụ thể",
+     "explanation": "Khi người đàn ông hỏi về danh sách người tham dự (list of attendees), người phụ nữ trả lời: \"I'll e-mail it to you\" (Tôi sẽ gửi email nó cho anh).",
+     "part": 3,
+     "label": "next_action",
+     "labelVi": "Hành động tiếp theo / yêu cầu",
      "position": "last"
     }
    ]
@@ -771,7 +712,7 @@
     {
      "id": "position-0",
      "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "Where does the man most likely work?",
+     "context": "What type of business do the women own?",
      "options": [
       "Câu 1 (câu đầu)",
       "Câu 2 (câu giữa)",
@@ -783,19 +724,7 @@
     {
      "id": "position-1",
      "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "Who will the listeners meet with at ten o'clock?",
-     "options": [
-      "Câu 1 (câu đầu)",
-      "Câu 2 (câu giữa)",
-      "Câu 3 (câu cuối)"
-     ],
-     "correct": 1,
-     "explanation": "Danh tính / nghề nghiệp — Câu giữa gần như không đoán được: chi tiết 44%, hành động 17%, bảng biểu 13%, hàm ý 13%. Đừng phí sức đoán câu giữa — dồn sức nghe."
-    },
-    {
-     "id": "position-2",
-     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "How does the man propose lowering business expenses?",
+     "context": "Why does the man recommend reading an e-mail?",
      "options": [
       "Câu 1 (câu đầu)",
       "Câu 2 (câu giữa)",
@@ -805,9 +734,45 @@
      "explanation": "Hành động tiếp theo / yêu cầu — Câu cuối là hành động tiếp theo / yêu cầu trong 47% số bộ (Part 3: 54%, Part 4: 39%). Đây là vị trí đoán được tốt thứ nhì sau câu đầu."
     },
     {
+     "id": "position-2",
+     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
+     "context": "What does the woman imply when she says, \"A week is not a long time\"?",
+     "options": [
+      "Câu 1 (câu đầu)",
+      "Câu 2 (câu giữa)",
+      "Câu 3 (câu cuối)"
+     ],
+     "correct": 1,
+     "explanation": "Hàm ý câu nói — Câu giữa gần như không đoán được: chi tiết 44%, hành động 17%, bảng biểu 13%, hàm ý 13%. Đừng phí sức đoán câu giữa — dồn sức nghe."
+    },
+    {
      "id": "position-3",
      "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "What industry does the speaker work in?",
+     "context": "What does the man remind the woman about?",
+     "options": [
+      "Câu 1 (câu đầu)",
+      "Câu 2 (câu giữa)",
+      "Câu 3 (câu cuối)"
+     ],
+     "correct": 2,
+     "explanation": "Hành động tiếp theo / yêu cầu — Câu cuối là hành động tiếp theo / yêu cầu trong 47% số bộ (Part 3: 54%, Part 4: 39%). Đây là vị trí đoán được tốt thứ nhì sau câu đầu."
+    },
+    {
+     "id": "position-4",
+     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
+     "context": "What does the woman say she will do?",
+     "options": [
+      "Câu 1 (câu đầu)",
+      "Câu 2 (câu giữa)",
+      "Câu 3 (câu cuối)"
+     ],
+     "correct": 2,
+     "explanation": "Hành động tiếp theo / yêu cầu — Câu cuối là hành động tiếp theo / yêu cầu trong 47% số bộ (Part 3: 54%, Part 4: 39%). Đây là vị trí đoán được tốt thứ nhì sau câu đầu."
+    },
+    {
+     "id": "position-5",
+     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
+     "context": "Where does the woman work?",
      "options": [
       "Câu 1 (câu đầu)",
       "Câu 2 (câu giữa)",
@@ -817,81 +782,21 @@
      "explanation": "Nơi chốn / loại hình công ty — Câu đầu đoán được ~60%: nơi chốn 29% + nghề nghiệp 18% + mục đích 14%. Còn lại 30% là hỏi chi tiết thường, nên đây là xu hướng chứ không phải luật."
     },
     {
-     "id": "position-4",
+     "id": "position-6",
      "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "According to the speaker, what will the listeners find in a binder?",
-     "options": [
-      "Câu 1 (câu đầu)",
-      "Câu 2 (câu giữa)",
-      "Câu 3 (câu cuối)"
-     ],
-     "correct": 1,
-     "explanation": "Hành động tiếp theo / yêu cầu — Câu giữa gần như không đoán được: chi tiết 44%, hành động 17%, bảng biểu 13%, hàm ý 13%. Đừng phí sức đoán câu giữa — dồn sức nghe."
-    },
-    {
-     "id": "position-5",
-     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "Who is the speaker?",
+     "context": "What problem does the woman mention?",
      "options": [
       "Câu 1 (câu đầu)",
       "Câu 2 (câu giữa)",
       "Câu 3 (câu cuối)"
      ],
      "correct": 0,
-     "explanation": "Danh tính / nghề nghiệp — Câu đầu đoán được ~60%: nơi chốn 29% + nghề nghiệp 18% + mục đích 14%. Còn lại 30% là hỏi chi tiết thường, nên đây là xu hướng chứ không phải luật."
-    },
-    {
-     "id": "position-6",
-     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "What will the man most likely do next?",
-     "options": [
-      "Câu 1 (câu đầu)",
-      "Câu 2 (câu giữa)",
-      "Câu 3 (câu cuối)"
-     ],
-     "correct": 2,
-     "explanation": "Hành động tiếp theo / yêu cầu — Câu cuối là hành động tiếp theo / yêu cầu trong 47% số bộ (Part 3: 54%, Part 4: 39%). Đây là vị trí đoán được tốt thứ nhì sau câu đầu."
+     "explanation": "Vấn đề / lo ngại — Câu đầu đoán được ~60%: nơi chốn 29% + nghề nghiệp 18% + mục đích 14%. Còn lại 30% là hỏi chi tiết thường, nên đây là xu hướng chứ không phải luật."
     },
     {
      "id": "position-7",
      "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "What does the woman suggest?",
-     "options": [
-      "Câu 1 (câu đầu)",
-      "Câu 2 (câu giữa)",
-      "Câu 3 (câu cuối)"
-     ],
-     "correct": 2,
-     "explanation": "Hành động tiếp theo / yêu cầu — Câu cuối là hành động tiếp theo / yêu cầu trong 47% số bộ (Part 3: 54%, Part 4: 39%). Đây là vị trí đoán được tốt thứ nhì sau câu đầu."
-    },
-    {
-     "id": "position-8",
-     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "How can the listeners receive a discount?",
-     "options": [
-      "Câu 1 (câu đầu)",
-      "Câu 2 (câu giữa)",
-      "Câu 3 (câu cuối)"
-     ],
-     "correct": 2,
-     "explanation": "Hành động tiếp theo / yêu cầu — Câu cuối là hành động tiếp theo / yêu cầu trong 47% số bộ (Part 3: 54%, Part 4: 39%). Đây là vị trí đoán được tốt thứ nhì sau câu đầu."
-    },
-    {
-     "id": "position-9",
-     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "What does the speaker recommend?",
-     "options": [
-      "Câu 1 (câu đầu)",
-      "Câu 2 (câu giữa)",
-      "Câu 3 (câu cuối)"
-     ],
-     "correct": 2,
-     "explanation": "Hành động tiếp theo / yêu cầu — Câu cuối là hành động tiếp theo / yêu cầu trong 47% số bộ (Part 3: 54%, Part 4: 39%). Đây là vị trí đoán được tốt thứ nhì sau câu đầu."
-    },
-    {
-     "id": "position-10",
-     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "Look at the graphic. What is the company's top-selling refrigerator model?",
+     "context": "Look at the graphic. Which assignment will Kota be responsible for?",
      "options": [
       "Câu 1 (câu đầu)",
       "Câu 2 (câu giữa)",
@@ -901,9 +806,21 @@
      "explanation": "Nhìn bảng biểu — Câu giữa gần như không đoán được: chi tiết 44%, hành động 17%, bảng biểu 13%, hàm ý 13%. Đừng phí sức đoán câu giữa — dồn sức nghe."
     },
     {
-     "id": "position-11",
+     "id": "position-8",
      "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
-     "context": "According to the speaker, how can the listeners use a new service?",
+     "context": "What does the man mean when he says, \"it takes a lot of effort to develop and launch new styles\"?",
+     "options": [
+      "Câu 1 (câu đầu)",
+      "Câu 2 (câu giữa)",
+      "Câu 3 (câu cuối)"
+     ],
+     "correct": 1,
+     "explanation": "Hàm ý câu nói — Câu giữa gần như không đoán được: chi tiết 44%, hành động 17%, bảng biểu 13%, hàm ý 13%. Đừng phí sức đoán câu giữa — dồn sức nghe."
+    },
+    {
+     "id": "position-9",
+     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
+     "context": "What does the woman recommend that the man do?",
      "options": [
       "Câu 1 (câu đầu)",
       "Câu 2 (câu giữa)",
@@ -911,6 +828,30 @@
      ],
      "correct": 1,
      "explanation": "Hành động tiếp theo / yêu cầu — Câu giữa gần như không đoán được: chi tiết 44%, hành động 17%, bảng biểu 13%, hàm ý 13%. Đừng phí sức đoán câu giữa — dồn sức nghe."
+    },
+    {
+     "id": "position-10",
+     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
+     "context": "What type of industry does the speaker most likely work in?",
+     "options": [
+      "Câu 1 (câu đầu)",
+      "Câu 2 (câu giữa)",
+      "Câu 3 (câu cuối)"
+     ],
+     "correct": 0,
+     "explanation": "Nơi chốn / loại hình công ty — Câu đầu đoán được ~60%: nơi chốn 29% + nghề nghiệp 18% + mục đích 14%. Còn lại 30% là hỏi chi tiết thường, nên đây là xu hướng chứ không phải luật."
+    },
+    {
+     "id": "position-11",
+     "question": "Câu hỏi này nhiều khả năng nằm ở đâu trong bộ 3 câu?",
+     "context": "What problem does Sakura mention?",
+     "options": [
+      "Câu 1 (câu đầu)",
+      "Câu 2 (câu giữa)",
+      "Câu 3 (câu cuối)"
+     ],
+     "correct": 1,
+     "explanation": "Vấn đề / lo ngại — Câu giữa gần như không đoán được: chi tiết 44%, hành động 17%, bảng biểu 13%, hàm ý 13%. Đừng phí sức đoán câu giữa — dồn sức nghe."
     }
    ]
   }

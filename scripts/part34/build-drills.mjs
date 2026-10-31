@@ -435,6 +435,8 @@ function drillEvidence(count, id, title) {
       question: `Câu hỏi: ${q.prompt}\nĐáp án đúng: ${answerText}`,
       context: null,
       audioUrl: group.audioUrl,
+      // Câu "Look at the graphic" không trả lời được nếu thiếu ảnh của bộ đề
+      image: group.image ?? null,
       options,
       correct,
       explanation:
@@ -479,6 +481,7 @@ function drillParaphrase(count, id, title) {
       id: `paraphrase-${items.length}`,
       question: `Câu hỏi: ${q.prompt}`,
       context: `Bạn nghe được: "${stripSpeaker(ev.line)}"`,
+      image: group.image ?? null,
       options: keys.map((k) => q.options[k]),
       correct: keys.indexOf(q.answer),
       explanation:
@@ -545,6 +548,7 @@ function drillTrap(count, id, title) {
         question: `Nghe đoạn. Với câu hỏi "${q.prompt}", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?`,
         context: null,
         audioUrl: g.audioUrl,
+        image: g.image ?? null,
         transcript: g.transcript,
         options,
         correct: keys.indexOf(top.k),

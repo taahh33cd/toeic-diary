@@ -3004,8 +3004,45 @@
    "questionEnd": 79,
    "audio": "q77-79.mp3",
    "image": null,
-   "transcript": "{\n    \"transcript\":  \"M-Au Welcome to Impact Unlocked, the podcast for businesses wanting to streamline their operations with new technology. In today's episode, I'll talk about how to raise money by leveraging social media applications to get donations. I could focus on specific applications, but these things are constantly changing. Instead, I'll speak generally about how these types of applications can help you connect with potential donors. Some organizations keep using the same familiar fund-raising strategies. I see this often, but it's important to also incorporate the latest approaches.\n\\n77. What is the episode mainly about?\\n78. What does the speaker mean when he says, \\\"these things are constantly changing\\\"?\\n79. What does the speaker say is important for organizations to do?\",\n    \"keywords\":  [\n                     {\n                         \"word\":  \"advise\",\n                         \"pronunciation\":  \"/ədˈvaɪz/\",\n                         \"pos\":  \"v\",\n                         \"meaning\":  \"khuyên bảo, tư vấn\"\n                     },\n                     {\n                         \"word\":  \"decline\",\n                         \"pronunciation\":  \"/dɪˈklaɪn/\",\n                         \"pos\":  \"n/v\",\n                         \"meaning\":  \"sự giảm sút\"\n                     },\n                     {\n                         \"word\":  \"antique\",\n                         \"pronunciation\":  \"/ænˈtiːk/\",\n                         \"pos\":  \"n\",\n                         \"meaning\":  \"đồ cổ\"\n                     },\n                     {\n                         \"word\":  \"brick-and-mortar\",\n                         \"pronunciation\":  \"/ˌbrɪk ənd ˈmɔːrtər/\",\n                         \"pos\":  \"adj\",\n                         \"meaning\":  \"(cửa hàng) thực tế, bán trực tiếp\"\n                     },\n                     {\n                         \"word\":  \"browse\",\n                         \"pronunciation\":  \"/braʊz/\",\n                         \"pos\":  \"v\",\n                         \"meaning\":  \"xem lướt qua\"\n                     }\n                 ]\n}",
-   "keywords": [],
+   "transcript": "M-Au: Welcome to Impact Unlocked, the podcast for businesses wanting to streamline their operations with new technology. In today's episode, I'll talk about how to raise money by leveraging social media applications to get donations. I could focus on specific applications, but these things are constantly changing. Instead, I'll speak generally about how these types of applications can help you connect with potential donors. Some organizations keep using the same familiar fund-raising strategies. I see this often. But it's important to also incorporate the latest approaches.\n\n77. What is the episode mainly about?\n78. What does the speaker mean when he says, \"these things are constantly changing\"?\n79. What does the speaker say is important for organizations to do?",
+   "keywords": [
+    {
+     "term": "streamline",
+     "ipa": "/ˈstriːmlaɪn/",
+     "pos": "v",
+     "meaning": "tinh giản, tối ưu hoá"
+    },
+    {
+     "term": "leverage",
+     "ipa": "/ˈlevərɪdʒ/",
+     "pos": "v",
+     "meaning": "tận dụng, khai thác"
+    },
+    {
+     "term": "donation",
+     "ipa": "/doʊˈneɪʃn/",
+     "pos": "n",
+     "meaning": "khoản quyên góp"
+    },
+    {
+     "term": "potential donor",
+     "ipa": "/pəˈtenʃl ˈdoʊnər/",
+     "pos": "n",
+     "meaning": "nhà tài trợ tiềm năng"
+    },
+    {
+     "term": "fund-raising",
+     "ipa": "/ˈfʌnd reɪzɪŋ/",
+     "pos": "n/adj",
+     "meaning": "việc gây quỹ"
+    },
+    {
+     "term": "incorporate",
+     "ipa": "/ɪnˈkɔːrpəreɪt/",
+     "pos": "v",
+     "meaning": "kết hợp, đưa vào"
+    }
+   ],
    "questions": [
     {
      "number": 77,
