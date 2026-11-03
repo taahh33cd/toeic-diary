@@ -2,7 +2,17 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { playWord } from "@/lib/vocab/audio";
-import { chamGo, laDangGo, sinhCauHoi, QUIZ_TYPES, type CauHoi, type QuizType } from "@/lib/vocab/quiz";
+import {
+  chamGo,
+  demKhoetDuoc,
+  laDangGo,
+  laDienTu,
+  sinhCauHoi,
+  QUIZ_TYPES,
+  type CauHoi,
+  type QuizType,
+} from "@/lib/vocab/quiz";
+import { O_TRONG } from "@/lib/vocab/cloze";
 import type { CardRow, ProgressRow } from "@/lib/vocab/client";
 
 const GREEN = "var(--accent-green, #4A7C59)";
@@ -34,7 +44,7 @@ export default function QuizRunner({
   const [batDau, setBatDau] = useState(false);
 
   const [cauHoi, setCauHoi] = useState<CauHoi[]>([]);
-  const [boQua, setBoQua] = useState({ thieuAnh: 0, thieuNghia: 0 });
+  const [boQua, setBoQua] = useState({ thieuAnh: 0, thieuNghia: 0, thieuViDu: 0 });
   const [idx, setIdx] = useState(0);
   const [daChon, setDaChon] = useState<string | null>(null);
   const [nhap, setNhap] = useState("");
@@ -49,6 +59,9 @@ export default function QuizRunner({
   const oNhap = useRef<HTMLInputElement>(null);
 
   const coAnh = useMemo(() => cards.filter((c) => c.imageUrl).length, [cards]);
+  // Đếm thẻ KHOÉT ĐƯỢC, không phải thẻ có ví dụ: câu ví dụ không chứa từ, hay
+  // quá ngắn, thì vẫn không ra được câu điền từ.
+  const coViDu = useMemo(() => demKhoetDuoc(cards), [cards]);
 
   const cau = cauHoi[idx];
   const daTraLoi = daChon !== null;
@@ -142,7 +155,12 @@ export default function QuizRunner({
           <div className="grid gap-1.5" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))" }}>
             {QUIZ_TYPES.map((t) => {
               const chon = modes.includes(t.id);
-              const khoa = t.canAnh && coAnh < 4;
+              const khoa = (t.canAnh && coAnh < 4) || (t.canViDu && coViDu === 0);
+              const viSao = t.canAnh && coAnh < 4
+                ? "Cần ít nhất 4 thẻ có ảnh"
+                : t.canViDu && coViDu === 0
+                  ? "Cần thẻ có câu ví dụ chứa chính từ đó"
+                  : undefined;
               return (
                 <button
                   key={t.id}
@@ -156,12 +174,13 @@ export default function QuizRunner({
                     color: chon ? "#fff" : khoa ? "var(--text-muted)" : "var(--text-primary)",
                     opacity: khoa ? 0.5 : 1,
                   }}
-                  title={khoa ? "Cần ít nhất 4 thẻ có ảnh" : undefined}
+                  title={viSao}
                 >
                   {t.canNghe && "🔊 "}
                   {t.canAnh && "🖼️ "}
+                  {t.canViDu && "✍️ "}
                   {t.nhan}
-                  {khoa && " (chưa đủ ảnh)"}
+                  {khoa && (t.canViDu ? " (chưa có ví dụ)" : " (chưa đủ ảnh)")}
                 </button>
               );
             })}
@@ -178,6 +197,8 @@ export default function QuizRunner({
           {" "}— mỗi thẻ sinh một câu cho mỗi dạng bạn chọn.
           {thu.boQua.thieuAnh > 0 && ` Bỏ qua ${thu.boQua.thieuAnh} lượt vì thẻ chưa có ảnh.`}
           {thu.boQua.thieuNghia > 0 && ` Bỏ qua ${thu.boQua.thieuNghia} lượt vì thẻ chưa có nghĩa.`}
+          {thu.boQua.thieuViDu > 0 &&
+            ` Bỏ qua ${thu.boQua.thieuViDu} lượt vì ví dụ của thẻ không khoét lỗ được.`}
         </p>
 
         <button
@@ -297,11 +318,36 @@ export default function QuizRunner({
           // eslint-disable-next-line @next/next/no-img-element
           <img src={cau.de.anh} alt="" className="mx-auto rounded-lg" style={{ maxHeight: 180, objectFit: "contain" }} />
         )}
-        {cau.de.chu && (
+        {cau.de.chu && laDienTu(cau.type) ? (
+          // Đề điền từ là cả một câu: cỡ 2rem của dạng một-từ sẽ tràn màn hình.
+          // Tách ở ô trống để tô đậm chỗ phải điền.
+          <p
+            className="text-left"
+            style={{ fontSize: "1.1rem", lineHeight: 1.7, color: "var(--text-primary)" }}
+          >
+            {cau.de.chu.split(O_TRONG).map((doan, i) => (
+              <span key={i}>
+                {i > 0 && (
+                  <span
+                    className="font-bold px-1 mx-0.5 rounded"
+                    style={{
+                      color: "var(--accent-primary)",
+                      background: "var(--bg-secondary)",
+                      borderBottom: "2px solid var(--accent-primary)",
+                    }}
+                  >
+                    {O_TRONG}
+                  </span>
+                )}
+                {doan}
+              </span>
+            ))}
+          </p>
+        ) : cau.de.chu ? (
           <p className="hand" style={{ fontSize: "2rem", color: "var(--accent-primary)", lineHeight: 1.2 }}>
             {cau.de.chu}
           </p>
-        )}
+        ) : null}
       </div>
 
       {/* Trả lời */}
@@ -380,9 +426,15 @@ export default function QuizRunner({
         </div>
       )}
 
-      {boQua.thieuAnh + boQua.thieuNghia > 0 && idx === 0 && (
+      {boQua.thieuAnh + boQua.thieuNghia + boQua.thieuViDu > 0 && idx === 0 && (
         <p className="text-xs mt-4 text-center" style={{ color: "var(--text-muted)" }}>
-          Đã bỏ {boQua.thieuAnh + boQua.thieuNghia} lượt vì thẻ chưa đủ ảnh/nghĩa.
+          {`Đã bỏ ${boQua.thieuAnh + boQua.thieuNghia + boQua.thieuViDu} lượt vì thẻ chưa đủ ${[
+            boQua.thieuAnh > 0 && "ảnh",
+            boQua.thieuNghia > 0 && "nghĩa",
+            boQua.thieuViDu > 0 && "câu ví dụ khoét lỗ được",
+          ]
+            .filter(Boolean)
+            .join(" / ")}.`}
         </p>
       )}
     </div>

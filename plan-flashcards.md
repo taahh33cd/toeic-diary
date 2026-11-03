@@ -30,7 +30,8 @@
 | Phase 3 | Trạng thái | Commit |
 |---|---|---|
 | 3.1 — Thư viện bộ mẫu | ✅ xong, 13/13 kiểm | `a7c19048` |
-| 3.2 — Dạng quiz TOEIC-hoá (điền câu Part 5, word form) | ⬜ | |
+| 3.2a — Điền vào chỗ trống kiểu Part 5 | ✅ xong, 18+48+40 kiểm | |
+| 3.2b — Chọn dạng từ (word form) | ⬜ | |
 | 3.3 — Chế độ thi (ẩn đáp án tới cuối) | ⬜ | |
 | 3.4 — Học offline | ⬜ | |
 

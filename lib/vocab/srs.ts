@@ -84,12 +84,22 @@ export const SPEED_THRESHOLD_MS = {
   choiceImage: 8_000,
   /** Gõ từ */
   typing: 15_000,
+  /**
+   * Phụ phí đọc đề của dạng điền từ — CỘNG THÊM vào ngưỡng của cách trả lời,
+   * không thay thế nó.
+   *
+   * Đề điền từ là cả một câu chứ không phải một từ. Dùng nguyên ngưỡng 6s của
+   * dạng chọn-chữ thì gần như câu đúng nào cũng bị tính là "chậm" (ease × 0.8)
+   * chỉ vì học viên còn đang đọc đề — từ sẽ không bao giờ được giãn khoảng ôn.
+   */
+  clozeRead: 6_000,
 };
 
 export function speedThresholdFor(quizType: string): number {
-  if (quizType.endsWith("-to-typing")) return SPEED_THRESHOLD_MS.typing;
-  if (quizType.endsWith("-to-image")) return SPEED_THRESHOLD_MS.choiceImage;
-  return SPEED_THRESHOLD_MS.choiceText;
+  const doc = quizType.startsWith("cloze-") ? SPEED_THRESHOLD_MS.clozeRead : 0;
+  if (quizType.endsWith("-to-typing")) return SPEED_THRESHOLD_MS.typing + doc;
+  if (quizType.endsWith("-to-image")) return SPEED_THRESHOLD_MS.choiceImage + doc;
+  return SPEED_THRESHOLD_MS.choiceText + doc;
 }
 
 /** Trạng thái SRS của một từ — khớp các cột của VocabProgress. */

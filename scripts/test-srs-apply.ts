@@ -65,6 +65,18 @@ console.log("\n2. Nhanh vs chậm");
   check("dạng gõ được ngưỡng 15s", speedThresholdFor("listen-to-typing") === SPEED_THRESHOLD_MS.typing);
   check("dạng ảnh được ngưỡng 8s", speedThresholdFor("listen-to-image") === SPEED_THRESHOLD_MS.choiceImage);
   check("không có answerMs thì coi như nhanh", cachNgay(applyReview(goc, { kind: "quiz", correct: true }, NOW)) === 18);
+
+  // Dạng điền từ: đề là cả một câu nên được cộng thêm thời gian đọc. Thiếu
+  // phần này thì câu đúng ở 9s bị tính là chậm chỉ vì học viên còn đọc đề.
+  check("điền từ + chọn: 6s + 6s = 12s",
+    speedThresholdFor("cloze-to-word") === SPEED_THRESHOLD_MS.choiceText + SPEED_THRESHOLD_MS.clozeRead,
+    `${speedThresholdFor("cloze-to-word")}`);
+  check("điền từ + gõ: 15s + 6s = 21s",
+    speedThresholdFor("cloze-to-typing") === SPEED_THRESHOLD_MS.typing + SPEED_THRESHOLD_MS.clozeRead,
+    `${speedThresholdFor("cloze-to-typing")}`);
+  const dien9s = applyReview(goc, { kind: "quiz", correct: true, answerMs: 9_000, quizType: "cloze-to-word" }, NOW);
+  check("điền từ đúng ở 9s vẫn được giãn đủ (18 ngày, không phải 14)",
+    cachNgay(dien9s) === 18, `${cachNgay(dien9s)}`);
 }
 
 console.log("\n3. Lật thẻ — nửa trọng số");

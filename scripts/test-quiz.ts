@@ -5,6 +5,7 @@
  */
 
 import { chamGo, laDangGo, sinhCauHoi, type QuizType } from "@/lib/vocab/quiz";
+import { O_TRONG } from "@/lib/vocab/cloze";
 import type { CardRow, ProgressRow } from "@/lib/vocab/client";
 
 let pass = 0;
@@ -16,7 +17,7 @@ function check(ten: string, dk: boolean, ct = "") {
 
 function the(
   word: string,
-  o: { pos?: string; nghia?: string | null; anh?: string | null } = {}
+  o: { pos?: string; nghia?: string | null; anh?: string | null; viDu?: string } = {}
 ): CardRow {
   return {
     id: `c_${word}`,
@@ -26,7 +27,7 @@ function the(
     pos: o.pos ?? "n",
     meaningVi: o.nghia === undefined ? `nghĩa ${word}` : o.nghia,
     definition: null,
-    example: null,
+    example: o.viDu ?? null,
     imageUrl: o.anh === undefined ? null : o.anh,
     audioUrl: null,
     order: 0,
@@ -196,19 +197,20 @@ console.log("\n8. Chấm dạng gõ");
 // ── Quét toàn bộ 10 dạng ────────────────────────────────────────────────────
 // Thêm sau khi lọt lỗi: canGi() dò bằng t.includes("-image") nên hai dạng
 // image-to-* không bị coi là cần ảnh — thẻ trắng vẫn sinh câu, đề bài rỗng.
-console.log("\n9. Cả 10 dạng: số câu đúng với số thẻ đủ dữ liệu");
+console.log("\n9. Cả 12 dạng: số câu đúng với số thẻ đủ dữ liệu");
 {
-  // 6 thẻ: 4 có ảnh, 5 có nghĩa (thẻ "zeta" thiếu cả hai)
+  // 6 thẻ: 4 có ảnh, 5 có nghĩa (thẻ "zeta" thiếu cả hai), 3 khoét lỗ được
+  const vd = (w: string) => `The manager will send the ${w} to our client tomorrow.`;
   const cards = [
-    the("alpha", { anh: "http://a.jpg" }),
-    the("beta", { anh: "http://b.jpg" }),
-    the("gamma", { anh: "http://c.jpg" }),
-    the("delta", { anh: "http://d.jpg" }),
+    the("alpha", { anh: "http://a.jpg", viDu: vd("alpha") }),
+    the("beta", { anh: "http://b.jpg", viDu: vd("beta") }),
+    the("gamma", { anh: "http://c.jpg", viDu: vd("gamma") }),
+    the("delta", { anh: "http://d.jpg", viDu: "Send it now." }), // quá ngắn
     the("epsilon"),
     the("zeta", { nghia: null }),
   ];
   // mong đợi: dạng cần ảnh ở ĐỀ hoặc PHƯƠNG ÁN → 4 câu; cần nghĩa → 5 câu;
-  // chỉ cần từ → 6 câu
+  // cần ví dụ khoét được → 3 câu; chỉ cần từ → 6 câu
   const mongDoi: Record<QuizType, number> = {
     "word-to-image": 4,
     "image-to-word": 4,
@@ -220,6 +222,8 @@ console.log("\n9. Cả 10 dạng: số câu đúng với số thẻ đủ dữ l
     "listen-to-meaning": 5,
     "listen-to-word": 6,
     "listen-to-typing": 6,
+    "cloze-to-word": 3,
+    "cloze-to-typing": 3,
   };
 
   for (const [t, n] of Object.entries(mongDoi) as [QuizType, number][]) {
@@ -230,13 +234,14 @@ console.log("\n9. Cả 10 dạng: số câu đúng với số thẻ đủ dữ l
 
 console.log("\n10. Đề bài không bao giờ trống");
 {
-  const cards = ["a", "b", "c", "d", "e", "f"].map((w) =>
-    the(w, { anh: `http://${w}.jpg` })
+  const cards = ["alpha", "beta", "gamma", "delta", "epsilon", "zeta"].map((w) =>
+    the(w, { anh: `http://${w}.jpg`, viDu: `Please send the ${w} to the office before Friday.` })
   );
   const tatCa = Object.keys({
     "word-to-image": 0, "image-to-word": 0, "image-to-typing": 0, "listen-to-image": 0,
     "word-to-meaning": 0, "meaning-to-word": 0, "meaning-to-typing": 0,
     "listen-to-meaning": 0, "listen-to-word": 0, "listen-to-typing": 0,
+    "cloze-to-word": 0, "cloze-to-typing": 0,
   }) as QuizType[];
   const { cauHoi } = sinhCauHoi(cards, [], { modes: tatCa });
   const deRong = cauHoi.filter((c) => !c.de.chu && !c.de.anh && !c.de.nghe);
@@ -248,6 +253,44 @@ console.log("\n10. Đề bài không bao giờ trống");
   );
   check("mọi phương án có nội dung hiện ra", paRong.length === 0,
     paRong.map((c) => c.type).join(", "));
+}
+
+console.log("\n11. Dạng điền vào chỗ trống");
+{
+  const co = ["alpha", "beta", "gamma", "delta"].map((w) =>
+    the(w, { viDu: `The manager will send the ${w} to our client tomorrow.` })
+  );
+
+  const { cauHoi } = sinhCauHoi(co, [], { modes: ["cloze-to-word"] });
+  check("4 thẻ có ví dụ → 4 câu", cauHoi.length === 4, `ra ${cauHoi.length}`);
+  check("đề bài là câu đã khoét lỗ",
+    cauHoi.every((c) => c.de.chu?.includes(O_TRONG) === true),
+    cauHoi.map((c) => c.de.chu).join(" | "));
+
+  // Lỗi chết người: đáp án vẫn nằm trong đề thì câu hỏi vô nghĩa
+  const tiengCua = (s: string) => s.toLowerCase().split(/[^a-z]+/i).filter(Boolean);
+  const lo = cauHoi.filter((c) => tiengCua(c.de.chu ?? "").includes(c.word.toLowerCase()));
+  check("đáp án không còn trong đề", lo.length === 0, lo.map((c) => c.de.chu).join(" | "));
+
+  check("phương án là từ tiếng Anh, không phải nghĩa",
+    cauHoi.every((c) => c.phuongAn?.every((p) => co.some((x) => x.word === p.label))),
+    JSON.stringify(cauHoi[0]?.phuongAn));
+
+  const go = sinhCauHoi(co, [], { modes: ["cloze-to-typing"] });
+  check("dạng gõ không có phương án", go.cauHoi.every((c) => c.phuongAn === null));
+  check("dạng gõ vẫn có đề đã khoét",
+    go.cauHoi.every((c) => c.de.chu?.includes(O_TRONG) === true));
+
+  // Thẻ không có ví dụ, và thẻ có ví dụ nhưng khoét không nổi
+  const khong = [
+    ...co,
+    the("omega"),                                              // không ví dụ
+    the("sigma", { viDu: "Send it now." }),                    // câu quá ngắn
+    the("kappa", { viDu: "The weather is nice here today." }), // ví dụ không chứa từ
+  ];
+  const r = sinhCauHoi(khong, [], { modes: ["cloze-to-word"] });
+  check("chỉ 4 thẻ khoét được ra câu", r.cauHoi.length === 4, `ra ${r.cauHoi.length}`);
+  check("3 thẻ còn lại đếm vào thieuViDu", r.boQua.thieuViDu === 3, `${r.boQua.thieuViDu}`);
 }
 
 console.log(`\n${"─".repeat(50)}\n${pass} đạt, ${fail} lỗi`);

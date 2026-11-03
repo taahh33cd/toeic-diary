@@ -1,4 +1,5 @@
 import type { CardRow, ProgressRow } from "./client";
+import { taoChoTrong } from "./cloze";
 
 /**
  * Sinh câu hỏi cho quiz từ vựng — hàm thuần, không đụng DB hay mạng, để test
@@ -15,20 +16,51 @@ export type QuizType =
   | "listen-to-word"
   | "listen-to-image"
   | "listen-to-meaning"
-  | "listen-to-typing";
+  | "listen-to-typing"
+  | "cloze-to-word"
+  | "cloze-to-typing";
 
-export const QUIZ_TYPES: { id: QuizType; nhan: string; canAnh: boolean; canNghe: boolean }[] = [
-  { id: "word-to-meaning", nhan: "Từ → chọn nghĩa", canAnh: false, canNghe: false },
-  { id: "meaning-to-word", nhan: "Nghĩa → chọn từ", canAnh: false, canNghe: false },
-  { id: "meaning-to-typing", nhan: "Nghĩa → gõ từ", canAnh: false, canNghe: false },
-  { id: "listen-to-word", nhan: "Nghe → chọn từ", canAnh: false, canNghe: true },
-  { id: "listen-to-meaning", nhan: "Nghe → chọn nghĩa", canAnh: false, canNghe: true },
-  { id: "listen-to-typing", nhan: "Nghe → gõ từ", canAnh: false, canNghe: true },
-  { id: "word-to-image", nhan: "Từ → chọn ảnh", canAnh: true, canNghe: false },
-  { id: "image-to-word", nhan: "Ảnh → chọn từ", canAnh: true, canNghe: false },
-  { id: "image-to-typing", nhan: "Ảnh → gõ từ", canAnh: true, canNghe: false },
-  { id: "listen-to-image", nhan: "Nghe → chọn ảnh", canAnh: true, canNghe: true },
+export const QUIZ_TYPES: {
+  id: QuizType;
+  nhan: string;
+  canAnh: boolean;
+  canNghe: boolean;
+  canViDu: boolean;
+}[] = [
+  { id: "word-to-meaning", nhan: "Từ → chọn nghĩa", canAnh: false, canNghe: false, canViDu: false },
+  { id: "meaning-to-word", nhan: "Nghĩa → chọn từ", canAnh: false, canNghe: false, canViDu: false },
+  { id: "meaning-to-typing", nhan: "Nghĩa → gõ từ", canAnh: false, canNghe: false, canViDu: false },
+  { id: "listen-to-word", nhan: "Nghe → chọn từ", canAnh: false, canNghe: true, canViDu: false },
+  { id: "listen-to-meaning", nhan: "Nghe → chọn nghĩa", canAnh: false, canNghe: true, canViDu: false },
+  { id: "listen-to-typing", nhan: "Nghe → gõ từ", canAnh: false, canNghe: true, canViDu: false },
+  { id: "word-to-image", nhan: "Từ → chọn ảnh", canAnh: true, canNghe: false, canViDu: false },
+  { id: "image-to-word", nhan: "Ảnh → chọn từ", canAnh: true, canNghe: false, canViDu: false },
+  { id: "image-to-typing", nhan: "Ảnh → gõ từ", canAnh: true, canNghe: false, canViDu: false },
+  { id: "listen-to-image", nhan: "Nghe → chọn ảnh", canAnh: true, canNghe: true, canViDu: false },
+  { id: "cloze-to-word", nhan: "Điền chỗ trống → chọn từ", canAnh: false, canNghe: false, canViDu: true },
+  { id: "cloze-to-typing", nhan: "Điền chỗ trống → gõ từ", canAnh: false, canNghe: false, canViDu: true },
 ];
+
+/** Dạng điền từ — đề bài là một câu, không phải một từ, nên hiện khác. */
+export function laDienTu(t: QuizType): boolean {
+  return t.startsWith("cloze-");
+}
+
+/** Số thẻ ra được câu điền từ — để màn chọn dạng biết có khoá hay không. */
+export function demKhoetDuoc(cards: CardRow[]): number {
+  return cards.filter((c) => choTrongCua(c) !== null).length;
+}
+
+/**
+ * Câu ví dụ đã khoét lỗ, hoặc null nếu thẻ này không ra được câu điền từ.
+ *
+ * Tách riêng vì phải hỏi ở hai chỗ (lọc thẻ dùng được, và dựng đề bài) mà kết
+ * quả phải giống nhau — khoét được ở bước lọc rồi bước dựng lại ra null thì
+ * câu hỏi hiện ra trống.
+ */
+function choTrongCua(c: CardRow): string | null {
+  return c.example ? taoChoTrong(c.example, c.word) : null;
+}
 
 /**
  * Yêu cầu của ĐỀ BÀI và của PHƯƠNG ÁN là hai thứ khác nhau.
@@ -41,8 +73,12 @@ export const QUIZ_TYPES: { id: QuizType; nhan: string; canAnh: boolean; canNghe:
  * "image-to-word" (gạch nối nằm ở đầu), nên hai dạng image-to-* coi như không
  * cần ảnh: thẻ trắng vẫn sinh câu và đề bài hiện ra trống trơn.
  */
-function canChoDe(t: QuizType): { anh: boolean; nghia: boolean } {
-  return { anh: t.startsWith("image-"), nghia: t.startsWith("meaning-") };
+function canChoDe(t: QuizType): { anh: boolean; nghia: boolean; viDu: boolean } {
+  return {
+    anh: t.startsWith("image-"),
+    nghia: t.startsWith("meaning-"),
+    viDu: t.startsWith("cloze-"),
+  };
 }
 
 function canChoPhuongAn(t: QuizType): { anh: boolean; nghia: boolean } {
@@ -101,6 +137,7 @@ function dungDuoc(c: CardRow, t: QuizType): boolean {
   const de = canChoDe(t);
   if (de.anh && !c.imageUrl) return false;
   if (de.nghia && !c.meaningVi) return false;
+  if (de.viDu && choTrongCua(c) === null) return false;
   if (!laDangGo(t) && !duocLamNhieu(c, t)) return false;
   // Dạng nghe đọc chính từ đó nên thẻ nào cũng được
   return true;
@@ -126,7 +163,7 @@ function nhanPhuongAn(c: CardRow, t: QuizType): PhuongAn {
   if (t === "word-to-image" || t === "listen-to-image") {
     return { id: c.wordKey, imageUrl: c.imageUrl ?? undefined, dung: false };
   }
-  if (t === "image-to-word" || t === "meaning-to-word" || t === "listen-to-word") {
+  if (t.endsWith("-to-word")) {
     return { id: c.wordKey, label: c.word, dung: false };
   }
   return { id: c.wordKey, label: c.meaningVi ?? c.word, dung: false };
@@ -140,6 +177,7 @@ function taoCau(c: CardRow, t: QuizType, pool: CardRow[], stt: number): CauHoi |
   else if (t.startsWith("image-")) de.anh = c.imageUrl ?? undefined;
   else if (t.startsWith("word-")) de.chu = c.word;
   else if (t.startsWith("meaning-")) de.chu = c.meaningVi ?? undefined;
+  else if (t.startsWith("cloze-")) de.chu = choTrongCua(c) ?? undefined;
 
   const chung = {
     id: `q${stt}_${c.wordKey}_${t}`,
@@ -185,7 +223,7 @@ export function sinhCauHoi(
   cards: CardRow[],
   progress: ProgressRow[],
   opt: TuyChonQuiz
-): { cauHoi: CauHoi[]; boQua: { thieuAnh: number; thieuNghia: number } } {
+): { cauHoi: CauHoi[]; boQua: { thieuAnh: number; thieuNghia: number; thieuViDu: number } } {
   const td = new Map(progress.map((p) => [p.wordKey, p]));
   const denHan = (c: CardRow) => {
     const p = td.get(c.wordKey);
@@ -196,7 +234,7 @@ export function sinhCauHoi(
 
   const pool = opt.chiDenHan ? cards.filter(denHan) : cards;
 
-  const boQua = { thieuAnh: 0, thieuNghia: 0 };
+  const boQua = { thieuAnh: 0, thieuNghia: 0, thieuViDu: 0 };
   let tatCa: CauHoi[] = [];
   let stt = 0;
 
@@ -207,6 +245,7 @@ export function sinhCauHoi(
         const pa = canChoPhuongAn(t);
         if ((de.anh || pa.anh) && !c.imageUrl) boQua.thieuAnh++;
         else if ((de.nghia || pa.nghia) && !c.meaningVi) boQua.thieuNghia++;
+        else if (de.viDu) boQua.thieuViDu++;
         continue;
       }
       const cau = taoCau(c, t, cards, stt++);
