@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
+import { useProfile } from "@/hooks/useProfile";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { Sheet } from "@/components/journal/paper/Sheet";
 import StudyDeck from "@/components/vocab/StudyDeck";
@@ -17,6 +18,7 @@ type Man = "danhsach" | "hoc" | "hoc-den-han" | "sua" | "quiz";
 export default function DeckDetailPage() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
+  const { profile } = useProfile();
   const [data, setData] = useState<DeckDetail | null>(null);
   const [loi, setLoi] = useState<string | null>(null);
   const [man, setMan] = useState<Man>("danhsach");
@@ -159,7 +161,12 @@ export default function DeckDetailPage() {
         <p className="text-sm" style={{ color: "var(--text-muted)" }}>{deck.description}</p>
       )}
 
-      <ShareDeck deckId={deck.id} visibility={deck.visibility} slug={deck.slug} />
+      <ShareDeck
+        deckId={deck.id}
+        visibility={deck.visibility}
+        slug={deck.slug}
+        laGiaoVien={profile?.role === "teacher" || profile?.role === "admin"}
+      />
 
       <div className="flex gap-3 flex-wrap">
         <button

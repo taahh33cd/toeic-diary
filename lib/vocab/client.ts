@@ -223,3 +223,44 @@ export async function setShare(id: string, enabled: boolean) {
   window.dispatchEvent(new Event("decks:changed"));
   return r;
 }
+
+// ── Thư viện bộ mẫu ─────────────────────────────────────────────────────────
+
+export interface LibraryDeck {
+  id: string;
+  title: string;
+  description: string | null;
+  slug: string;
+  part: number | null;
+  cardCount: number;
+  tacGia: string | null;
+  capNhat: string;
+  /** Số từ trong bộ mà mình đã học rồi — tiến độ gắn theo từ nên không mất. */
+  daHocTrongBo: number;
+  /** Id bản sao trong kho của mình, null nếu chưa lấy. */
+  banSaoCuaToi: string | null;
+}
+
+export function listLibrary(part?: number) {
+  const q = part ? `?part=${part}` : "";
+  return call<{ decks: LibraryDeck[] }>(`/api/flashcards/library${q}`);
+}
+
+export async function cloneDeck(id: string) {
+  const r = await call<{ deckId: string; daCoSan: boolean }>(
+    `/api/flashcards/decks/${id}/clone`,
+    { method: "POST" }
+  );
+  window.dispatchEvent(new Event("decks:changed"));
+  window.dispatchEvent(new Event("vocab:changed"));
+  return r;
+}
+
+export async function setVisibility(id: string, visibility: "private" | "link" | "library") {
+  const r = await call<{ visibility: "private" | "link" | "library"; slug: string | null }>(
+    `/api/flashcards/decks/${id}/share`,
+    { method: "POST", body: JSON.stringify({ visibility }) }
+  );
+  window.dispatchEvent(new Event("decks:changed"));
+  return r;
+}

@@ -8,13 +8,26 @@ export const dynamic = "force-dynamic";
 
 type Ctx = { params: Promise<{ id: string }> };
 
-const input = z.object({ enabled: z.boolean() });
+const input = z.object({
+  /** Giữ dạng cũ cho màn chia sẻ bằng link. */
+  enabled: z.boolean().optional(),
+  /** Dạng mới, nói rõ muốn đặt bộ ở mức nào. */
+  visibility: z.enum(["private", "link", "library"]).optional(),
+});
 
 /**
- * Bật/tắt chia sẻ công khai một bộ thẻ.
+ * Đổi mức chia sẻ của một bộ thẻ.
  *
- * Tắt rồi bật lại sẽ sinh slug MỚI: link cũ phải chết hẳn, nếu không thì "tắt
- * chia sẻ" chỉ là tạm ẩn — ai lưu link cũ vẫn vào được khi chủ bộ bật lại.
+ *   private — chỉ mình
+ *   link    — ai có link cũng học được
+ *   library — nằm trong thư viện bộ mẫu, mọi học viên thấy và lấy về được
+ *
+ * Chỉ giáo viên/admin đặt được mức "library": thư viện là nội dung trung tâm
+ * đứng tên, không phải chỗ ai cũng đăng lên được.
+ *
+ * Hạ từ link/library xuống private sẽ sinh slug MỚI: link cũ phải chết hẳn,
+ * nếu không thì "tắt chia sẻ" chỉ là tạm ẩn — ai lưu link cũ vẫn vào được khi
+ * chủ bộ bật lại.
  */
 export async function POST(req: NextRequest, { params }: Ctx) {
   const gate = await requireVocabUser();
@@ -25,6 +38,17 @@ export async function POST(req: NextRequest, { params }: Ctx) {
     return NextResponse.json({ error: "Dữ liệu không hợp lệ" }, { status: 400 });
   }
 
+  // Dạng cũ { enabled } vẫn chạy; dạng mới { visibility } ưu tiên hơn.
+  const muon =
+    parsed.data.visibility ?? (parsed.data.enabled === false ? "private" : "link");
+
+  if (muon === "library" && gate.role !== "teacher" && gate.role !== "admin") {
+    return NextResponse.json(
+      { error: "Chỉ giáo viên mới đăng bộ lên thư viện được" },
+      { status: 403 }
+    );
+  }
+
   const { id } = await params;
   try {
     const deck = await prisma.vocabDeck.findFirst({
@@ -33,7 +57,7 @@ export async function POST(req: NextRequest, { params }: Ctx) {
     });
     if (!deck) return NextResponse.json({ error: "Không tìm thấy bộ thẻ" }, { status: 404 });
 
-    if (!parsed.data.enabled) {
+    if (muon === "private") {
       const slugMoi = makeSlug();
       await prisma.vocabDeck.update({
         where: { id },
@@ -46,8 +70,8 @@ export async function POST(req: NextRequest, { params }: Ctx) {
       return NextResponse.json({ error: "Bộ chưa có thẻ nào để chia sẻ" }, { status: 400 });
     }
 
-    await prisma.vocabDeck.update({ where: { id }, data: { visibility: "link" } });
-    return NextResponse.json({ visibility: "link", slug: deck.slug });
+    await prisma.vocabDeck.update({ where: { id }, data: { visibility: muon } });
+    return NextResponse.json({ visibility: muon, slug: deck.slug });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     console.error("[flashcards/decks/:id/share]", msg);

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { setShare } from "@/lib/vocab/client";
+import { setShare, setVisibility } from "@/lib/vocab/client";
 
 const RED = "var(--accent-red, #B94040)";
 
@@ -15,12 +15,16 @@ export default function ShareDeck({
   deckId,
   visibility,
   slug,
+  laGiaoVien = false,
 }: {
   deckId: string;
   visibility: string;
   slug: string;
+  /** Chỉ giáo viên mới đăng được lên thư viện bộ mẫu. */
+  laGiaoVien?: boolean;
 }) {
-  const [bat, setBat] = useState(visibility === "link");
+  const [mucHienTai, setMucHienTai] = useState(visibility);
+  const [bat, setBat] = useState(visibility === "link" || visibility === "library");
   const [slugHienTai, setSlugHienTai] = useState(slug);
   const [dangDoi, setDangDoi] = useState(false);
   const [daChep, setDaChep] = useState(false);
@@ -38,7 +42,8 @@ export default function ShareDeck({
     setLoi(null);
     try {
       const r = await setShare(deckId, giaTri);
-      setBat(r.visibility === "link");
+      setBat(r.visibility !== "private");
+      setMucHienTai(r.visibility);
       if (r.slug) setSlugHienTai(r.slug);
     } catch (e) {
       setLoi(e instanceof Error ? e.message : "Không đổi được");
@@ -103,6 +108,51 @@ export default function ShareDeck({
           >
             {daChep ? "✓ Đã chép" : "Chép link"}
           </button>
+        </div>
+      )}
+
+      {laGiaoVien && (
+        <div className="mt-3 pt-3" style={{ borderTop: "1px solid var(--border)" }}>
+          <div className="flex items-center justify-between gap-3 flex-wrap">
+            <div>
+              <p className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
+                📚 Thư viện bộ mẫu
+              </p>
+              <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
+                {mucHienTai === "library"
+                  ? "Mọi học viên thấy bộ này và lấy về kho riêng được."
+                  : "Đăng lên để cả lớp lấy về dùng."}
+              </p>
+            </div>
+            <button
+              onClick={async () => {
+                if (dangDoi) return;
+                setDangDoi(true);
+                setLoi(null);
+                try {
+                  const r = await setVisibility(
+                    deckId,
+                    mucHienTai === "library" ? "link" : "library"
+                  );
+                  setMucHienTai(r.visibility);
+                  setBat(r.visibility !== "private");
+                } catch (e) {
+                  setLoi(e instanceof Error ? e.message : "Không đổi được");
+                } finally {
+                  setDangDoi(false);
+                }
+              }}
+              disabled={dangDoi}
+              className="px-3 py-1.5 rounded-lg text-xs font-bold"
+              style={{
+                background: mucHienTai === "library" ? "rgba(185,64,64,.1)" : "var(--accent-primary)",
+                color: mucHienTai === "library" ? RED : "#fff",
+                opacity: dangDoi ? 0.6 : 1,
+              }}
+            >
+              {dangDoi ? "…" : mucHienTai === "library" ? "Gỡ khỏi thư viện" : "Đăng lên thư viện"}
+            </button>
+          </div>
         </div>
       )}
 
