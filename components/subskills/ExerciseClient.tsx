@@ -883,7 +883,7 @@ function McqPanel({
 }) {
   const mcqOk = submitted && (choice === displayCorrect || mcqPartLocked);
   const translation = tSlots.filter(Boolean) as string[];
-  const transOk = submitted && item.answerChunks.every((c, j) => c === translation[j]);
+  const transOk = submitted && (item.answerChunks ?? []).every((c, j) => c === translation[j]);
   const allOk = mcqOk && transOk;
   const optKeys = displayOptAudio.filter(Boolean) as string[];
 
@@ -979,7 +979,7 @@ function McqPanel({
 
       {/* Tầng dịch — chỉ còn ở những bộ vẫn giữ answerChunks. Bộ nào phương án
           đã là tiếng Anh thì bỏ tầng này: nghe rồi chọn, đúng như Part 2 thật. */}
-      {item.answerChunks.length > 0 && (choice !== null || mcqPartLocked) && (
+      {(item.answerChunks?.length ?? 0) > 0 && (choice !== null || mcqPartLocked) && (
         <div style={{ border: `1px solid ${mcqPartLocked && !submitted ? "rgba(34,197,94,0.3)" : "var(--border)"}`, borderRadius: 10, padding: "14px 16px", display: "flex", flexDirection: "column", gap: 10 }}>
           <div style={{ fontSize: FS.xs, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
             Dịch nghĩa đáp án đúng sang tiếng Việt
@@ -987,7 +987,7 @@ function McqPanel({
           <ChipSlots
             slots={tSlots}
             bank={tBank}
-            correctOrder={item.answerChunks}
+            correctOrder={item.answerChunks ?? []}
             submitted={submitted}
             onPickBank={onPickBank}
             onReturnSlot={onReturnSlot}
@@ -1509,9 +1509,9 @@ export default function ExerciseClient({
     } else if (exercise.kind === "mcq") {
       const item = exercise.items[ii] as MCQItem;
       setMcqChoice(null);
-      setMcqTSlots(item.answerChunks.map(() => null));
+      setMcqTSlots((item.answerChunks ?? []).map(() => null));
       // Include Hard distractors in bank if present
-      const allChips = [...item.answerChunks, ...(item.answerChunkDistractors ?? [])];
+      const allChips = [...(item.answerChunks ?? []), ...(item.answerChunkDistractors ?? [])];
       setMcqTBank(shuffle(allChips));
     } else if (exercise.kind === "match") {
       setMatchChoice(null);
@@ -1604,8 +1604,8 @@ export default function ExerciseClient({
       // mcqPartLocked means MCQ was already confirmed correct; only translate matters now
       const mcqCorrect = mcqPartLocked || (mcqChoice === mcqDisplayCorrect);
       const arranged = mcqTSlots.filter(Boolean) as string[];
-      const transCorrect = item.answerChunks.every((c, j) => c === arranged[j]);
-      const allChips = [...item.answerChunks, ...(item.answerChunkDistractors ?? [])];
+      const transCorrect = (item.answerChunks ?? []).every((c, j) => c === arranged[j]);
+      const allChips = [...(item.answerChunks ?? []), ...(item.answerChunkDistractors ?? [])];
       if (mcqCorrect && transCorrect) {
         addCorrect();
       } else {
@@ -1615,12 +1615,12 @@ export default function ExerciseClient({
             const wrong = mcqChoice;
             setDisabledOpts(prev => wrong !== null ? [...prev, wrong] : prev);
             setMcqChoice(null);
-            setMcqTSlots(item.answerChunks.map(() => null));
+            setMcqTSlots((item.answerChunks ?? []).map(() => null));
             setMcqTBank(shuffle(allChips));
           } else {
             // MCQ was correct but translate wrong: lock MCQ, reset only translate
             setMcqPartLocked(true);
-            setMcqTSlots(item.answerChunks.map(() => null));
+            setMcqTSlots((item.answerChunks ?? []).map(() => null));
             setMcqTBank(shuffle(allChips));
           }
         });

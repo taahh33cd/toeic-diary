@@ -118,109 +118,23 @@
     },
     {
       "kind": "mcq",
-      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
-      "instruction": "Chọn đáp án phù hợp nhất. Chú ý: đáp án có thể là một lựa chọn, 'Neither', hoặc 'Both' — đọc kỹ ngữ cảnh.",
-      "translateMode": "always",
-      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "title": "Bài 4 — Nghe và chọn câu trả lời",
+      "instruction": "Nghe câu hỏi rồi chọn đáp án phù hợp nhất. Chú ý: đáp án có thể là một lựa chọn, 'Neither', hoặc 'Both' — nghe kỹ ngữ cảnh.",
       "items": [
-        {
-          "prompt": "Should we discuss the budget issues today or wait for the full report?",
-          "options": ["Wait for the full report.", "Today would be more urgent.", "Either — both timings work.", "Neither — let's postpone."],
-          "correct": 1,
-          "explanation": "Ngữ cảnh 'budget issues' gợi ý tính cấp bách → “today, more urgent” là lựa chọn hợp lý hơn. “Wait for the full report” trì hoãn không phù hợp với vấn đề cần giải quyết. “either works” không giải quyết được tính cấp bách của vấn đề. “neither” không phù hợp khi cần họp.",
-          "answerChunks": ["Hôm", "nay", "sẽ", "cấp", "bách", "hơn"]
-        },
-        {
-          "prompt": "Would you like the contract in English or in the local language?",
-          "options": ["In the local language.", "In English please.", "Both versions if possible.", "A bilingual version would be ideal."],
-          "correct": 2,
-          "explanation": "Hợp đồng quan trọng thường cần cả hai ngôn ngữ “both versions” để đảm bảo rõ ràng cho mọi bên. “In the local language” và “In English please” chỉ chọn một ngôn ngữ. “bilingual version” tương tự “Both versions if possible” nhưng “Both versions if possible” đã nêu rõ 'cả hai phiên bản' — đầy đủ và rõ ràng hơn.",
-          "answerChunks": ["Cả", "hai", "phiên", "bản", "nếu", "có", "thể"]
-        },
-        {
-          "prompt": "Should we renew the vendor contract for one year or two years?",
-          "options": ["Two years — it gives us stability.", "One year to review performance first.", "Neither — renegotiate the terms instead.", "Let's cancel it instead."],
-          "correct": 1,
-          "explanation": "Gia hạn 1 năm trước “to review performance” là lựa chọn thận trọng và phổ biến trong ngữ cảnh TOEIC. “2 years” hợp lý nhưng ít linh hoạt. “renegotiate” không phải gia hạn. “cancel” đi ngược với mục tiêu của câu hỏi.",
-          "answerChunks": ["Một", "năm", "để", "xem", "xét", "hiệu", "suất", "trước"]
-        },
-        {
-          "prompt": "Do you want the system upgrade done in stages or all at once?",
-          "options": ["All at once to minimize disruption.", "In stages to reduce risk.", "Either approach is acceptable.", "Neither — delay until next year."],
-          "correct": 1,
-          "explanation": "Nâng cấp hệ thống theo từng giai đoạn “in stages to reduce risk” là cách tiếp cận an toàn hơn. “all at once” có thể gây gián đoạn lớn. “either acceptable” không cân nhắc đến rủi ro. “Neither — delay until next year” không phải lựa chọn thực tế trong câu.",
-          "answerChunks": ["Theo", "từng", "giai", "đoạn", "để", "giảm", "rủi", "ro"]
-        },
-        {
-          "prompt": "Should the announcement be made before or after the board meeting?",
-          "options": ["After — once the board has confirmed.", "Before to prepare the staff.", "During the meeting itself.", "Neither — issue a memo instead."],
-          "correct": 0,
-          "explanation": "Thông báo nên được đưa ra sau khi hội đồng xác nhận “After — once the board has confirmed” — đây là quy trình chuẩn. “before” rủi ro nếu hội đồng thay đổi quyết định. “During the meeting itself” không phải lựa chọn before/after. “memo instead” bỏ qua câu hỏi thời điểm.",
-          "answerChunks": ["Sau", "khi", "hội", "đồng", "đã", "xác", "nhận"]
-        },
-        {
-          "prompt": "Should the client presentation include the financials or keep it high-level?",
-          "options": ["Keep it high-level for now.", "Include the financials — they always ask.", "Neither — skip the presentation.", "Both would make it too long."],
-          "correct": 1,
-          "explanation": "Khách hàng thường yêu cầu xem số liệu tài chính “Include the financials — they always ask” — đây là thực tế phổ biến trong kinh doanh. “Keep it high-level for now” có thể đúng nhưng “Include the financials — they always ask” cụ thể và có lý do. “Neither — skip the presentation” và “Both would make it too long” không phải lựa chọn trong câu.",
-          "answerChunks": ["Bao", "gồm", "số", "liệu", "tài", "chính", "họ", "luôn", "hỏi"]
-        },
-        {
-          "prompt": "Would you prefer to receive feedback verbally or in writing?",
-          "options": ["In writing for future reference.", "Verbally is more immediate.", "Either way is fine.", "Both formats would be most helpful."],
-          "correct": 0,
-          "explanation": "Nhận phản hồi bằng văn bản “in writing for future reference” thực tế hơn trong môi trường chuyên nghiệp — lưu làm tài liệu tham khảo. “verbally” nhanh hơn nhưng không lưu được. “Either way is fine” quá mơ hồ. “both formats” lý tưởng nhưng không thực tế khi phải chọn một.",
-          "answerChunks": ["Bằng", "văn", "bản", "để", "tham", "khảo", "sau"]
-        },
-        {
-          "prompt": "Should the team leader or the project manager present the update?",
-          "options": ["The project manager — they have the details.", "The team leader — they know the context.", "Both should co-present.", "Neither — send a written report instead."],
-          "correct": 2,
-          "explanation": "Trình bày chung “both co-present” kết hợp ưu điểm của cả hai — project manager có chi tiết, team leader có ngữ cảnh. “The project manager — they have the details” và “The team leader — they know the context” đúng nhưng ít đầy đủ hơn. “Neither — send a written report instead” không phải lựa chọn trong câu.",
-          "answerChunks": ["Cả", "hai", "nên", "cùng", "trình", "bày"]
-        },
-        {
-          "prompt": "Do you want the training delivered online or face-to-face?",
-          "options": ["Face-to-face for better engagement.", "Online — more flexible for staff.", "Either format would work.", "Neither — use self-study materials."],
-          "correct": 1,
-          "explanation": "Đào tạo trực tuyến “online, more flexible” phổ biến hơn trong ngữ cảnh doanh nghiệp hiện đại. “face-to-face” hợp lý nhưng ít linh hoạt. “Either format would work” quá trung lập. “Neither — use self-study materials” không phải lựa chọn trong câu.",
-          "answerChunks": ["Trực", "tuyến,", "linh", "hoạt", "hơn", "cho", "nhân", "viên"]
-        },
-        {
-          "prompt": "Should the new office layout be open-plan or have separate cubicles?",
-          "options": ["Open-plan for better collaboration.", "Cubicles for more privacy.", "A mix of both would be ideal.", "Neither — a hot-desking model works best."],
-          "correct": 2,
-          "explanation": "Bố cục văn phòng tốt nhất thường kết hợp cả hai “a mix of both” — không gian mở cho cộng tác và phòng riêng cho công việc cần tập trung. “Open-plan for better collaboration” và “Cubicles for more privacy” quá cực đoan. “hot-desking” là mô hình khác không liên quan đến câu hỏi open-plan vs cubicles.",
-          "answerChunks": ["Kết", "hợp", "cả", "hai", "sẽ", "là", "lý", "tưởng"]
-        },
-        {
-          "prompt": "Should we approve the overtime or ask the team to manage within hours?",
-          "options": ["Approve it — the deadline is critical.", "Manage within hours — control costs.", "Ask the team for their preference.", "Neither — reassign the tasks."],
-          "correct": 0,
-          "explanation": "Nếu deadline quan trọng, phê duyệt làm thêm giờ “Approve it — the deadline is critical” là hành động hợp lý nhất. “Manage within hours — control costs” đúng về kiểm soát chi phí nhưng không phù hợp khi deadline cấp bách. “Ask the team for their preference” và “Neither — reassign the tasks” không đáp ứng yêu cầu thực tế.",
-          "answerChunks": ["Phê", "duyệt", "vì", "deadline", "quan", "trọng"]
-        },
-        {
-          "prompt": "Would you prefer the invoice itemized or as a lump sum?",
-          "options": ["Itemized — easier for auditing.", "As a lump sum for simplicity.", "Whichever is standard practice.", "Either is fine as long as it's accurate."],
-          "correct": 0,
-          "explanation": "Hóa đơn chi tiết từng khoản “itemized, easier for auditing” được ưu tiên hơn trong môi trường doanh nghiệp vì dễ kiểm toán. “lump sum” đơn giản hơn nhưng khó kiểm tra. “Whichever is standard practice” quá trung lập. “either, if accurate” không ưu tiên rõ ràng như “Itemized — easier for auditing”.",
-          "answerChunks": ["Chi", "tiết", "từng", "khoản", "dễ", "kiểm", "toán", "hơn"]
-        },
-        {
-          "prompt": "Do you want to address the performance issue now or during the formal review?",
-          "options": ["Now — before it becomes a bigger problem.", "During the formal review — follow process.", "Neither — monitor for now.", "Both — address it now and at the review."],
-          "correct": 0,
-          "explanation": "Xử lý vấn đề hiệu suất ngay “before it becomes bigger” là cách tiếp cận chủ động. “formal review” tuân thủ quy trình nhưng trì hoãn quá lâu. “monitor” không giải quyết vấn đề. “both” lý tưởng nhưng “Now — before it becomes a bigger problem” là lựa chọn thực tế và cấp bách nhất.",
-          "answerChunks": ["Ngay", "bây", "giờ", "trước", "khi", "thành", "vấn", "đề", "lớn"]
-        },
-        {
-          "prompt": "Should we increase the marketing spend or focus on organic growth?",
-          "options": ["Increase spending — we need faster results.", "Focus on organic — more sustainable.", "Both approaches should be combined.", "Neither — pause all campaigns first."],
-          "correct": 2,
-          "explanation": "Kết hợp cả hai chiến lược “both combined” tối ưu hơn trong tiếp thị hiện đại — tăng chi tiêu tạo đà, tăng trưởng hữu cơ duy trì lâu dài. “Increase spending — we need faster results” và “Focus on organic — more sustainable” đúng nhưng đơn chiều. “pause campaigns” đi ngược lại mục tiêu tăng trưởng.",
-          "answerChunks": ["Kết", "hợp", "cả", "hai", "chiến", "lược"]
-        }
+        { "prompt": "Should we discuss the budget issues today or wait for the full report?", "options": ["Wait for the full report.", "Today would be more urgent.", "Either — both timings work.", "Neither — let's postpone."], "correct": 1, "explanation": "Ngữ cảnh 'budget issues' gợi ý tính cấp bách → “today, more urgent” là lựa chọn hợp lý hơn. “Wait for the full report” trì hoãn không phù hợp với vấn đề cần giải quyết. “either works” không giải quyết được tính cấp bách của vấn đề. “neither” không phù hợp khi cần họp." },
+        { "prompt": "Would you like the contract in English or in the local language?", "options": ["In the local language.", "In English please.", "Both versions if possible.", "A bilingual version would be ideal."], "correct": 2, "explanation": "Hợp đồng quan trọng thường cần cả hai ngôn ngữ “both versions” để đảm bảo rõ ràng cho mọi bên. “In the local language” và “In English please” chỉ chọn một ngôn ngữ. “bilingual version” tương tự “Both versions if possible” nhưng “Both versions if possible” đã nêu rõ 'cả hai phiên bản' — đầy đủ và rõ ràng hơn." },
+        { "prompt": "Should we renew the vendor contract for one year or two years?", "options": ["Two years — it gives us stability.", "One year to review performance first.", "Neither — renegotiate the terms instead.", "Let's cancel it instead."], "correct": 1, "explanation": "Gia hạn 1 năm trước “to review performance” là lựa chọn thận trọng và phổ biến trong ngữ cảnh TOEIC. “2 years” hợp lý nhưng ít linh hoạt. “renegotiate” không phải gia hạn. “cancel” đi ngược với mục tiêu của câu hỏi." },
+        { "prompt": "Do you want the system upgrade done in stages or all at once?", "options": ["All at once to minimize disruption.", "In stages to reduce risk.", "Either approach is acceptable.", "Neither — delay until next year."], "correct": 1, "explanation": "Nâng cấp hệ thống theo từng giai đoạn “in stages to reduce risk” là cách tiếp cận an toàn hơn. “all at once” có thể gây gián đoạn lớn. “either acceptable” không cân nhắc đến rủi ro. “Neither — delay until next year” không phải lựa chọn thực tế trong câu." },
+        { "prompt": "Should the announcement be made before or after the board meeting?", "options": ["After — once the board has confirmed.", "Before to prepare the staff.", "During the meeting itself.", "Neither — issue a memo instead."], "correct": 0, "explanation": "Thông báo nên được đưa ra sau khi hội đồng xác nhận “After — once the board has confirmed” — đây là quy trình chuẩn. “before” rủi ro nếu hội đồng thay đổi quyết định. “During the meeting itself” không phải lựa chọn before/after. “memo instead” bỏ qua câu hỏi thời điểm." },
+        { "prompt": "Should the client presentation include the financials or keep it high-level?", "options": ["Keep it high-level for now.", "Include the financials — they always ask.", "Neither — skip the presentation.", "Both would make it too long."], "correct": 1, "explanation": "Khách hàng thường yêu cầu xem số liệu tài chính “Include the financials — they always ask” — đây là thực tế phổ biến trong kinh doanh. “Keep it high-level for now” có thể đúng nhưng “Include the financials — they always ask” cụ thể và có lý do. “Neither — skip the presentation” và “Both would make it too long” không phải lựa chọn trong câu." },
+        { "prompt": "Would you prefer to receive feedback verbally or in writing?", "options": ["In writing for future reference.", "Verbally is more immediate.", "Either way is fine.", "Both formats would be most helpful."], "correct": 0, "explanation": "Nhận phản hồi bằng văn bản “in writing for future reference” thực tế hơn trong môi trường chuyên nghiệp — lưu làm tài liệu tham khảo. “verbally” nhanh hơn nhưng không lưu được. “Either way is fine” quá mơ hồ. “both formats” lý tưởng nhưng không thực tế khi phải chọn một." },
+        { "prompt": "Should the team leader or the project manager present the update?", "options": ["The project manager — they have the details.", "The team leader — they know the context.", "Both should co-present.", "Neither — send a written report instead."], "correct": 2, "explanation": "Trình bày chung “both co-present” kết hợp ưu điểm của cả hai — project manager có chi tiết, team leader có ngữ cảnh. “The project manager — they have the details” và “The team leader — they know the context” đúng nhưng ít đầy đủ hơn. “Neither — send a written report instead” không phải lựa chọn trong câu." },
+        { "prompt": "Do you want the training delivered online or face-to-face?", "options": ["Face-to-face for better engagement.", "Online — more flexible for staff.", "Either format would work.", "Neither — use self-study materials."], "correct": 1, "explanation": "Đào tạo trực tuyến “online, more flexible” phổ biến hơn trong ngữ cảnh doanh nghiệp hiện đại. “face-to-face” hợp lý nhưng ít linh hoạt. “Either format would work” quá trung lập. “Neither — use self-study materials” không phải lựa chọn trong câu." },
+        { "prompt": "Should the new office layout be open-plan or have separate cubicles?", "options": ["Open-plan for better collaboration.", "Cubicles for more privacy.", "A mix of both would be ideal.", "Neither — a hot-desking model works best."], "correct": 2, "explanation": "Bố cục văn phòng tốt nhất thường kết hợp cả hai “a mix of both” — không gian mở cho cộng tác và phòng riêng cho công việc cần tập trung. “Open-plan for better collaboration” và “Cubicles for more privacy” quá cực đoan. “hot-desking” là mô hình khác không liên quan đến câu hỏi open-plan vs cubicles." },
+        { "prompt": "Should we approve the overtime or ask the team to manage within hours?", "options": ["Approve it — the deadline is critical.", "Manage within hours — control costs.", "Ask the team for their preference.", "Neither — reassign the tasks."], "correct": 0, "explanation": "Nếu deadline quan trọng, phê duyệt làm thêm giờ “Approve it — the deadline is critical” là hành động hợp lý nhất. “Manage within hours — control costs” đúng về kiểm soát chi phí nhưng không phù hợp khi deadline cấp bách. “Ask the team for their preference” và “Neither — reassign the tasks” không đáp ứng yêu cầu thực tế." },
+        { "prompt": "Would you prefer the invoice itemized or as a lump sum?", "options": ["Itemized — easier for auditing.", "As a lump sum for simplicity.", "Whichever is standard practice.", "Either is fine as long as it's accurate."], "correct": 0, "explanation": "Hóa đơn chi tiết từng khoản “itemized, easier for auditing” được ưu tiên hơn trong môi trường doanh nghiệp vì dễ kiểm toán. “lump sum” đơn giản hơn nhưng khó kiểm tra. “Whichever is standard practice” quá trung lập. “either, if accurate” không ưu tiên rõ ràng như “Itemized — easier for auditing”." },
+        { "prompt": "Do you want to address the performance issue now or during the formal review?", "options": ["Now — before it becomes a bigger problem.", "During the formal review — follow process.", "Neither — monitor for now.", "Both — address it now and at the review."], "correct": 0, "explanation": "Xử lý vấn đề hiệu suất ngay “before it becomes bigger” là cách tiếp cận chủ động. “formal review” tuân thủ quy trình nhưng trì hoãn quá lâu. “monitor” không giải quyết vấn đề. “both” lý tưởng nhưng “Now — before it becomes a bigger problem” là lựa chọn thực tế và cấp bách nhất." },
+        { "prompt": "Should we increase the marketing spend or focus on organic growth?", "options": ["Increase spending — we need faster results.", "Focus on organic — more sustainable.", "Both approaches should be combined.", "Neither — pause all campaigns first."], "correct": 2, "explanation": "Kết hợp cả hai chiến lược “both combined” tối ưu hơn trong tiếp thị hiện đại — tăng chi tiêu tạo đà, tăng trưởng hữu cơ duy trì lâu dài. “Increase spending — we need faster results” và “Focus on organic — more sustainable” đúng nhưng đơn chiều. “pause campaigns” đi ngược lại mục tiêu tăng trưởng." }
       ]
     }
   ]

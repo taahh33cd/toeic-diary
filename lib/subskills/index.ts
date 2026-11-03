@@ -36,8 +36,13 @@ export type McqItem = AudioKeys & {
   options: [string, string, string] | [string, string, string, string];
   correct: 0 | 1 | 2 | 3;
   explanation: string;
-  answerChunks: string[];
-  answerChunkDistractors?: string[]; // Extra wrong chips mixed into translate pool (Hard)
+  /**
+   * Tầng dịch sau khi chọn đáp án. Khu Part 2 đã bỏ hẳn tầng này (phương án
+   * vốn đã là tiếng Anh, ghép lại bản dịch không dạy gì về nghe), nên hiện
+   * không bộ đề nào còn dùng — giữ lại để bộ đề khác bật được khi cần.
+   */
+  answerChunks?: string[];
+  answerChunkDistractors?: string[]; // Mảnh sai trộn thêm vào kho chip
 };
 
 export type MatchItem = AudioKeys & {
@@ -78,8 +83,6 @@ export type McqExercise = {
   kind: "mcq";
   title: string;
   instruction: string;
-  translateMode: "always";
-  scoring: { mcqWeight: number; translateWeight: number };
   items: McqItem[];
 };
 
@@ -314,9 +317,9 @@ export function scoreMcq(
   let total = 0;
   for (let i = 0; i < items.length; i++) {
     const mcqScore = userChoices[i] === items[i].correct ? 1 : 0;
-    const expected = items[i].answerChunks;
+    const expected = items[i].answerChunks ?? [];
     const actual   = userTranslations[i] ?? [];
-    // Bộ nào bỏ tầng dịch (answerChunks rỗng) thì điểm chỉ tính phần chọn đáp án
+    // Bộ nào không có tầng dịch thì điểm chỉ tính phần chọn đáp án
     if (expected.length === 0) {
       total += mcqScore;
       continue;

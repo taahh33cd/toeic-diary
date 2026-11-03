@@ -118,109 +118,23 @@
     },
     {
       "kind": "mcq",
-      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
-      "instruction": "Chọn đáp án phù hợp nhất. Nhiều lựa chọn đều là thông tin/vật/sự kiện — đọc kỹ ngữ cảnh để chọn đúng.",
-      "translateMode": "always",
-      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "title": "Bài 4 — Nghe và chọn câu trả lời",
+      "instruction": "Nghe câu hỏi rồi chọn đáp án phù hợp nhất. Nhiều lựa chọn đều là thông tin/vật/sự kiện — nghe kỹ ngữ cảnh để chọn đúng.",
       "items": [
-        {
-          "prompt": "What is required before a vendor can be added to the system?",
-          "options": ["A signed contract.", "Proof of insurance.", "A mandatory pre-qualification form.", "A completed vendor registration form."],
-          "correct": 3,
-          "explanation": "Để thêm nhà cung cấp vào hệ thống, cần có form đăng ký đã điền đầy đủ “A completed vendor registration form”. “A signed contract” và “Proof of insurance” là tài liệu hỗ trợ, không phải yêu cầu bắt buộc đầu tiên. “pre-qualification form” là bước sơ tuyển sớm hơn, không phải yêu cầu trực tiếp để thêm vào hệ thống.",
-          "answerChunks": ["Mẫu", "đăng", "ký", "nhà", "cung", "cấp", "hoàn", "chỉnh"]
-        },
-        {
-          "prompt": "What did the audit report reveal?",
-          "options": ["A number of policy violations.", "Several compliance gaps.", "Unrecorded financial adjustments.", "Minor accounting errors."],
-          "correct": 1,
-          "explanation": "Báo cáo kiểm toán tiết lộ thông tin cụ thể về vấn đề → “compliance gaps” và “accounting errors” đều hợp lý, nhưng “'several' gaps” cho thấy vấn đề nghiêm trọng hơn, phù hợp với 'reveal'. “policy violations” là loại vấn đề khác. “unrecorded adjustments” liên quan nhưng ít nghiêm trọng hơn.",
-          "answerChunks": ["Nhiều", "lỗ", "hổng", "tuân", "thủ"]
-        },
-        {
-          "prompt": "What is included in the standard onboarding package?",
-          "options": ["A welcome letter and equipment checklist.", "An employee handbook and IT credentials.", "A company laptop.", "A benefits guide and payroll forms."],
-          "correct": 3,
-          "explanation": "Gói onboarding tiêu chuẩn thường gồm hướng dẫn phúc lợi và biểu mẫu lương “A benefits guide and payroll forms”. “handbook + IT” và “laptop” là các thứ riêng lẻ, “A benefits guide and payroll forms” bao quát hơn. “welcome letter + checklist” là thành phần hành chính, không phải gói đầy đủ.",
-          "answerChunks": ["Hướng", "dẫn", "phúc", "lợi", "và", "biểu", "mẫu", "lương"]
-        },
-        {
-          "prompt": "What was discussed at the last board meeting?",
-          "options": ["The expansion strategy.", "The revised budget projection.", "The annual compliance review.", "The quarterly financial results."],
-          "correct": 3,
-          "explanation": "Cuộc họp hội đồng thường thảo luận kết quả tài chính hàng quý “The quarterly financial results”. “expansion strategy” có thể đúng nhưng ít cụ thể cho cuộc họp cụ thể này. “budget projection” và “compliance review” là chủ đề khác trong các cuộc họp khác nhau.",
-          "answerChunks": ["Kết", "quả", "tài", "chính", "hàng", "quý"]
-        },
-        {
-          "prompt": "What needs to be submitted with the travel reimbursement form?",
-          "options": ["All original receipts.", "A pre-approved expense limit.", "A signed authorization letter.", "A detailed expense report."],
-          "correct": 0,
-          "explanation": "Nộp biên lai gốc “All original receipts” là yêu cầu bắt buộc đi kèm form hoàn tiền. “expense report” cũng hợp lý nhưng biên lai gốc là chứng từ cụ thể hơn. “pre-approved limit” là điều kiện trước, không phải tài liệu nộp kèm. “authorization letter” là văn bản riêng biệt.",
-          "answerChunks": ["Tất", "cả", "biên", "lai", "gốc"]
-        },
-        {
-          "prompt": "What is the company's stance on workplace diversity?",
-          "options": ["The HR policy document.", "An equal opportunity employer.", "A formal inclusion and equity framework.", "A zero-tolerance policy on discrimination."],
-          "correct": 3,
-          "explanation": "Lập trường của công ty về đa dạng hóa nơi làm việc được thể hiện bằng chính sách không khoan nhượng “A zero-tolerance policy on discrimination”. “The HR policy document” là tài liệu, “An equal opportunity employer” là tuyên bố chung chung. “inclusion framework” là tài liệu chính sách cũng hợp lý nhưng “A zero-tolerance policy on discrimination” cụ thể và mạnh mẽ hơn.",
-          "answerChunks": ["Chính", "sách", "không", "khoan", "nhượng", "phân", "biệt", "đối", "xử"]
-        },
-        {
-          "prompt": "What information is missing from this contract?",
-          "options": ["The payment terms.", "The contractor's insurance certificate.", "The signatory details.", "The effective start date."],
-          "correct": 2,
-          "explanation": "Trong hợp đồng, thông tin thường bị thiếu nhất là chi tiết người ký “The signatory details”. “The payment terms” và “The effective start date” cũng có thể bị thiếu, nhưng “signatory details” phổ biến hơn trong ngữ cảnh TOEIC. “insurance certificate” là tài liệu đính kèm riêng, không phải thông tin bên trong hợp đồng.",
-          "answerChunks": ["Thông", "tin", "chi", "tiết", "người", "ký"]
-        },
-        {
-          "prompt": "What should be done if the system crashes during a presentation?",
-          "options": ["Contact IT support immediately.", "The IT helpdesk number.", "Switch to a backup device.", "Reschedule the presentation."],
-          "correct": 2,
-          "explanation": "Khi hệ thống crash trong lúc thuyết trình, biện pháp tức thì là chuyển sang thiết bị dự phòng “Switch to a backup device”. “Contact IT support immediately” là bước tiếp theo, “Reschedule the presentation” là lựa chọn cuối cùng. “The IT helpdesk number” trả lời cho WHAT (thông tin cụ thể) nhưng không phải hành động cần làm.",
-          "answerChunks": ["Chuyển", "sang", "thiết", "bị", "dự", "phòng"]
-        },
-        {
-          "prompt": "What does the new performance review process involve?",
-          "options": ["A self-assessment and peer feedback.", "A calibration session among reviewers.", "A structured competency framework.", "A written evaluation by the manager."],
-          "correct": 0,
-          "explanation": "Quy trình đánh giá hiệu suất mới thường bao gồm tự đánh giá và phản hồi đồng nghiệp “A self-assessment and peer feedback”. “A written evaluation by the manager” chỉ mô tả một phần. “calibration session” là bước kiểm chuẩn, không phải toàn bộ quy trình. “competency framework” là cơ sở đánh giá, không phải quy trình.",
-          "answerChunks": ["Tự", "đánh", "giá", "và", "phản", "hồi", "từ", "đồng", "nghiệp"]
-        },
-        {
-          "prompt": "What is the protocol for data breaches?",
-          "options": ["Report to IT within one hour.", "Initiate an urgent security breach notification.", "Change all passwords immediately.", "Notify the compliance team first."],
-          "correct": 3,
-          "explanation": "Khi có vi phạm dữ liệu, bước đầu tiên là thông báo cho compliance team “Notify the compliance team first”. “Report to IT within one hour” và “Change all passwords immediately” là hành động tiếp theo. “initiate breach notification” là cách diễn đạt tương tự nhưng không cụ thể bằng “Notify the compliance team first” về đối tượng thông báo.",
-          "answerChunks": ["Thông", "báo", "cho", "nhóm", "tuân", "thủ", "trước"]
-        },
-        {
-          "prompt": "What was the outcome of the customer satisfaction survey?",
-          "options": ["A slight decline in product satisfaction scores.", "High satisfaction with delivery times.", "Overall ratings improved by 12%.", "A drop in first-contact resolution rates."],
-          "correct": 2,
-          "explanation": "Kết quả (outcome) của khảo sát thường được thể hiện bằng số liệu cụ thể “ratings improved by 12%”. “High satisfaction with delivery times” là thông tin cụ thể nhưng chỉ một khía cạnh. “A slight decline in product satisfaction scores” và “A drop in first-contact resolution rates” là kết quả tiêu cực — không phù hợp với từ 'outcome' tích cực trong ngữ cảnh.",
-          "answerChunks": ["Điểm", "đánh", "giá", "tổng", "thể", "tăng", "12%"]
-        },
-        {
-          "prompt": "What are the eligibility criteria for the employee wellness program?",
-          "options": ["Full-time staff with over one year of service.", "All permanent employees.", "Staff who meet the enrollment criteria.", "Staff who have completed their probation."],
-          "correct": 0,
-          "explanation": "Tiêu chí cụ thể cho chương trình sức khỏe nhân viên: nhân viên toàn thời gian với hơn 1 năm làm việc “Full-time staff with over one year of service”. “All permanent employees” quá chung chung, “Staff who have completed their probation” chỉ nêu một điều kiện. “enrollment criteria” quá mơ hồ — không nêu tiêu chí cụ thể như “Full-time staff with over one year of service”.",
-          "answerChunks": ["Nhân", "viên", "toàn", "thời", "gian", "hơn", "1", "năm"]
-        },
-        {
-          "prompt": "What is the turnaround time for purchase order approvals?",
-          "options": ["Two to three business days.", "By the end of the week.", "Within the same business day.", "Within 48 hours."],
-          "correct": 3,
-          "explanation": "Thời gian phê duyệt đơn mua hàng cụ thể là 48 giờ “Within 48 hours”. “two to three days” và “end of week” ít chính xác hơn “Within 48 hours”. “same business day” quá nhanh và không thực tế cho quy trình phê duyệt đầy đủ.",
-          "answerChunks": ["Trong", "vòng", "48", "giờ"]
-        },
-        {
-          "prompt": "What format should the monthly report be submitted in?",
-          "options": ["A PDF with an Excel attachment.", "Via the internal portal.", "A structured spreadsheet with embedded charts.", "A Word document with charts."],
-          "correct": 0,
-          "explanation": "Format nộp báo cáo hàng tháng — “PDF kèm Excel” là câu trả lời về định dạng file. “A structured spreadsheet with embedded charts” và “A Word document with charts” cũng là format nhưng “A PDF with an Excel attachment” phổ biến và đầy đủ hơn trong môi trường doanh nghiệp. “via portal” trả lời cho HOW/WHERE nộp, không phải format.",
-          "answerChunks": ["File", "PDF", "kèm", "tệp", "Excel"]
-        }
+        { "prompt": "What is required before a vendor can be added to the system?", "options": ["A signed contract.", "Proof of insurance.", "A mandatory pre-qualification form.", "A completed vendor registration form."], "correct": 3, "explanation": "Để thêm nhà cung cấp vào hệ thống, cần có form đăng ký đã điền đầy đủ “A completed vendor registration form”. “A signed contract” và “Proof of insurance” là tài liệu hỗ trợ, không phải yêu cầu bắt buộc đầu tiên. “pre-qualification form” là bước sơ tuyển sớm hơn, không phải yêu cầu trực tiếp để thêm vào hệ thống." },
+        { "prompt": "What did the audit report reveal?", "options": ["A number of policy violations.", "Several compliance gaps.", "Unrecorded financial adjustments.", "Minor accounting errors."], "correct": 1, "explanation": "Báo cáo kiểm toán tiết lộ thông tin cụ thể về vấn đề → “compliance gaps” và “accounting errors” đều hợp lý, nhưng “'several' gaps” cho thấy vấn đề nghiêm trọng hơn, phù hợp với 'reveal'. “policy violations” là loại vấn đề khác. “unrecorded adjustments” liên quan nhưng ít nghiêm trọng hơn." },
+        { "prompt": "What is included in the standard onboarding package?", "options": ["A welcome letter and equipment checklist.", "An employee handbook and IT credentials.", "A company laptop.", "A benefits guide and payroll forms."], "correct": 3, "explanation": "Gói onboarding tiêu chuẩn thường gồm hướng dẫn phúc lợi và biểu mẫu lương “A benefits guide and payroll forms”. “handbook + IT” và “laptop” là các thứ riêng lẻ, “A benefits guide and payroll forms” bao quát hơn. “welcome letter + checklist” là thành phần hành chính, không phải gói đầy đủ." },
+        { "prompt": "What was discussed at the last board meeting?", "options": ["The expansion strategy.", "The revised budget projection.", "The annual compliance review.", "The quarterly financial results."], "correct": 3, "explanation": "Cuộc họp hội đồng thường thảo luận kết quả tài chính hàng quý “The quarterly financial results”. “expansion strategy” có thể đúng nhưng ít cụ thể cho cuộc họp cụ thể này. “budget projection” và “compliance review” là chủ đề khác trong các cuộc họp khác nhau." },
+        { "prompt": "What needs to be submitted with the travel reimbursement form?", "options": ["All original receipts.", "A pre-approved expense limit.", "A signed authorization letter.", "A detailed expense report."], "correct": 0, "explanation": "Nộp biên lai gốc “All original receipts” là yêu cầu bắt buộc đi kèm form hoàn tiền. “expense report” cũng hợp lý nhưng biên lai gốc là chứng từ cụ thể hơn. “pre-approved limit” là điều kiện trước, không phải tài liệu nộp kèm. “authorization letter” là văn bản riêng biệt." },
+        { "prompt": "What is the company's stance on workplace diversity?", "options": ["The HR policy document.", "An equal opportunity employer.", "A formal inclusion and equity framework.", "A zero-tolerance policy on discrimination."], "correct": 3, "explanation": "Lập trường của công ty về đa dạng hóa nơi làm việc được thể hiện bằng chính sách không khoan nhượng “A zero-tolerance policy on discrimination”. “The HR policy document” là tài liệu, “An equal opportunity employer” là tuyên bố chung chung. “inclusion framework” là tài liệu chính sách cũng hợp lý nhưng “A zero-tolerance policy on discrimination” cụ thể và mạnh mẽ hơn." },
+        { "prompt": "What information is missing from this contract?", "options": ["The payment terms.", "The contractor's insurance certificate.", "The signatory details.", "The effective start date."], "correct": 2, "explanation": "Trong hợp đồng, thông tin thường bị thiếu nhất là chi tiết người ký “The signatory details”. “The payment terms” và “The effective start date” cũng có thể bị thiếu, nhưng “signatory details” phổ biến hơn trong ngữ cảnh TOEIC. “insurance certificate” là tài liệu đính kèm riêng, không phải thông tin bên trong hợp đồng." },
+        { "prompt": "What should be done if the system crashes during a presentation?", "options": ["Contact IT support immediately.", "The IT helpdesk number.", "Switch to a backup device.", "Reschedule the presentation."], "correct": 2, "explanation": "Khi hệ thống crash trong lúc thuyết trình, biện pháp tức thì là chuyển sang thiết bị dự phòng “Switch to a backup device”. “Contact IT support immediately” là bước tiếp theo, “Reschedule the presentation” là lựa chọn cuối cùng. “The IT helpdesk number” trả lời cho WHAT (thông tin cụ thể) nhưng không phải hành động cần làm." },
+        { "prompt": "What does the new performance review process involve?", "options": ["A self-assessment and peer feedback.", "A calibration session among reviewers.", "A structured competency framework.", "A written evaluation by the manager."], "correct": 0, "explanation": "Quy trình đánh giá hiệu suất mới thường bao gồm tự đánh giá và phản hồi đồng nghiệp “A self-assessment and peer feedback”. “A written evaluation by the manager” chỉ mô tả một phần. “calibration session” là bước kiểm chuẩn, không phải toàn bộ quy trình. “competency framework” là cơ sở đánh giá, không phải quy trình." },
+        { "prompt": "What is the protocol for data breaches?", "options": ["Report to IT within one hour.", "Initiate an urgent security breach notification.", "Change all passwords immediately.", "Notify the compliance team first."], "correct": 3, "explanation": "Khi có vi phạm dữ liệu, bước đầu tiên là thông báo cho compliance team “Notify the compliance team first”. “Report to IT within one hour” và “Change all passwords immediately” là hành động tiếp theo. “initiate breach notification” là cách diễn đạt tương tự nhưng không cụ thể bằng “Notify the compliance team first” về đối tượng thông báo." },
+        { "prompt": "What was the outcome of the customer satisfaction survey?", "options": ["A slight decline in product satisfaction scores.", "High satisfaction with delivery times.", "Overall ratings improved by 12%.", "A drop in first-contact resolution rates."], "correct": 2, "explanation": "Kết quả (outcome) của khảo sát thường được thể hiện bằng số liệu cụ thể “ratings improved by 12%”. “High satisfaction with delivery times” là thông tin cụ thể nhưng chỉ một khía cạnh. “A slight decline in product satisfaction scores” và “A drop in first-contact resolution rates” là kết quả tiêu cực — không phù hợp với từ 'outcome' tích cực trong ngữ cảnh." },
+        { "prompt": "What are the eligibility criteria for the employee wellness program?", "options": ["Full-time staff with over one year of service.", "All permanent employees.", "Staff who meet the enrollment criteria.", "Staff who have completed their probation."], "correct": 0, "explanation": "Tiêu chí cụ thể cho chương trình sức khỏe nhân viên: nhân viên toàn thời gian với hơn 1 năm làm việc “Full-time staff with over one year of service”. “All permanent employees” quá chung chung, “Staff who have completed their probation” chỉ nêu một điều kiện. “enrollment criteria” quá mơ hồ — không nêu tiêu chí cụ thể như “Full-time staff with over one year of service”." },
+        { "prompt": "What is the turnaround time for purchase order approvals?", "options": ["Two to three business days.", "By the end of the week.", "Within the same business day.", "Within 48 hours."], "correct": 3, "explanation": "Thời gian phê duyệt đơn mua hàng cụ thể là 48 giờ “Within 48 hours”. “two to three days” và “end of week” ít chính xác hơn “Within 48 hours”. “same business day” quá nhanh và không thực tế cho quy trình phê duyệt đầy đủ." },
+        { "prompt": "What format should the monthly report be submitted in?", "options": ["A PDF with an Excel attachment.", "Via the internal portal.", "A structured spreadsheet with embedded charts.", "A Word document with charts."], "correct": 0, "explanation": "Format nộp báo cáo hàng tháng — “PDF kèm Excel” là câu trả lời về định dạng file. “A structured spreadsheet with embedded charts” và “A Word document with charts” cũng là format nhưng “A PDF with an Excel attachment” phổ biến và đầy đủ hơn trong môi trường doanh nghiệp. “via portal” trả lời cho HOW/WHERE nộp, không phải format." }
       ]
     }
   ]
