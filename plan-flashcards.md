@@ -25,7 +25,14 @@
 | 2.3 — Thống kê tiến độ | ✅ xong | `e639fed1` |
 | 2.4 — Cờ bỏ ôn + công cụ hiệu chỉnh ngưỡng | ✅ xong, 38/38 kiểm quiz | `3cc640ca` |
 
-**Phase 2 xong.** Còn lại là Phase 3 (thư viện bộ mẫu, dạng quiz TOEIC-hoá, chế độ thi, học offline).
+**Phase 2 xong.**
+
+| Phase 3 | Trạng thái | Commit |
+|---|---|---|
+| 3.1 — Thư viện bộ mẫu | ✅ xong, 13/13 kiểm | `a7c19048` |
+| 3.2 — Dạng quiz TOEIC-hoá (điền câu Part 5, word form) | ⬜ | |
+| 3.3 — Chế độ thi (ẩn đáp án tới cuối) | ⬜ | |
+| 3.4 — Học offline | ⬜ | |
 
 **Lỗi công thức đã sửa (§5):** "nửa trọng số" ban đầu hiểu thành `ease × 0.5`,
 cho hệ số 0.65–1.4 nên `round(1 × 1.25) = 1` — lật thẻ không bao giờ thoát mốc
