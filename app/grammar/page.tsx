@@ -149,7 +149,7 @@ export default async function GrammarPage() {
           <h2 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.01em" }}>
             Tổng quan chủ đề
           </h2>
-          <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>11 chủ đề</span>
+          <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>{TOPICS.length} chủ đề</span>
         </div>
 
         {/* Stats strip */}
