@@ -1,0 +1,997 @@
+﻿DANH ĐỘNG TỪ VÀ ĐỘNG TỪ NGUYÊN THỂ
+Test 1:
+Câu 1
+The business consultant suggests _____ the merger plan carefully before negotiations begin.
+A. review
+B. reviews
+C. reviewing
+D. reviewed
+Đáp án đúng: C. reviewing
+Giải thích ngữ pháp/ngữ nghĩa:
+* suggest + V-ing: Đề xuất làm việc gì.
+* Sau động từ suggest khi diễn tả việc đề xuất một hành động, ta dùng danh động từ (V-ing).
+* Suggest reviewing the merger plan: đề xuất xem xét kế hoạch sáp nhập.
+* A. review: Động từ nguyên mẫu, không phù hợp với cấu trúc suggest + V-ing trong câu này.
+* B. reviews: Động từ chia ngôi thứ ba số ít, không phù hợp sau suggest.
+* D. reviewed: Quá khứ đơn hoặc quá khứ phân từ, không phù hợp với cấu trúc.
+Dịch nghĩa: Chuyên gia tư vấn kinh doanh đề xuất xem xét kỹ kế hoạch sáp nhập trước khi các cuộc đàm phán bắt đầu.
+Từ vựng quan trọng:
+* business consultant: chuyên gia tư vấn kinh doanh
+* suggest: đề xuất
+* merger: sự sáp nhập
+* carefully: một cách cẩn thận
+* negotiation: cuộc đàm phán
+Câu 2
+_____ additional audio books is part of the head librarian’s plan to modernize the library’s collections.
+A. Purchases
+B. Purchasing
+C. Has purchased
+D. Will be purchasing
+Đáp án đúng: B. Purchasing
+Giải thích ngữ pháp/ngữ nghĩa:
+* V-ing làm chủ ngữ: Danh động từ có thể đứng đầu câu và đóng vai trò chủ ngữ.
+* Purchasing additional audio books là cụm danh động từ, có nghĩa là việc mua thêm sách nói.
+* Động từ chính của câu là is, phù hợp với cụm danh động từ làm chủ ngữ.
+* A. Purchases: Danh từ số nhiều hoặc động từ chia ngôi thứ ba số ít, không phù hợp với cấu trúc chủ ngữ của câu.
+* C. Has purchased: Thì hiện tại hoàn thành, không thể đứng trực tiếp làm chủ ngữ theo cấu trúc này.
+* D. Will be purchasing: Thì tương lai tiếp diễn, không thể đứng trực tiếp làm chủ ngữ theo cấu trúc này.
+Dịch nghĩa: Việc mua thêm sách nói là một phần trong kế hoạch hiện đại hóa bộ sưu tập của thư viện trưởng.
+Từ vựng quan trọng:
+* additional: bổ sung, thêm
+* audio book: sách nói
+* head librarian: trưởng thư viện
+* modernize: hiện đại hóa
+* collection: bộ sưu tập
+Câu 3
+We at the Ribeiro Agency strive _____ all communication with our clients clear and to the point.
+A. to make
+B. making
+C. to be made
+D. having made
+Đáp án đúng: A. to make
+Giải thích ngữ pháp/ngữ nghĩa:
+* strive + to V: Cố gắng, nỗ lực làm điều gì.
+* Strive to make something + adjective: Nỗ lực làm cho điều gì trở nên như thế nào.
+* Cấu trúc trong câu: strive to make all communication clear and to the point.
+* A. to make: Đúng cấu trúc strive + to V.
+* B. making: Không dùng V-ing trực tiếp sau strive trong cấu trúc này.
+* C. to be made: Dạng bị động, mang nghĩa được làm ra, không phù hợp vì chủ thể đang chủ động cố gắng thực hiện hành động.
+* D. having made: Dạng danh động từ hoàn thành, không phù hợp sau strive.
+Dịch nghĩa: Chúng tôi tại Công ty Ribeiro luôn nỗ lực làm cho mọi hoạt động giao tiếp với khách hàng trở nên rõ ràng và ngắn gọn, đúng trọng tâm.
+Từ vựng quan trọng:
+* agency: công ty, đại lý
+* strive: nỗ lực
+* communication: sự giao tiếp, hoạt động trao đổi thông tin
+* client: khách hàng
+* clear: rõ ràng
+* to the point: đúng trọng tâm, ngắn gọn
+Câu 4
+All employees of Future Styles Co. are looking forward to _____ their new designers.
+A. meet
+B. met
+C. meeting
+D. have met
+Đáp án đúng: C. meeting
+Giải thích ngữ pháp/ngữ nghĩa:
+* look forward to + V-ing/N: Mong chờ, háo hức về một việc gì.
+* Trong cấu trúc này, to là giới từ chứ không phải dấu hiệu của động từ nguyên mẫu, vì vậy động từ theo sau phải ở dạng V-ing.
+* Look forward to meeting: mong chờ được gặp.
+* A. meet: Động từ nguyên mẫu, không phù hợp sau giới từ to.
+* B. met: Quá khứ đơn hoặc quá khứ phân từ, không phù hợp.
+* D. have met: Hiện tại hoàn thành, không phù hợp sau giới từ to.
+Dịch nghĩa: Tất cả nhân viên của Công ty Future Styles đều mong chờ được gặp các nhà thiết kế mới của họ.
+Từ vựng quan trọng:
+* employee: nhân viên
+* look forward to: mong chờ
+* designer: nhà thiết kế
+* meet: gặp gỡ
+Câu 5
+The publisher’s goal is _____ the daily circulation figure of 80,000 by next year.
+A. to surpass
+B. surpassed
+C. surpass
+D. surpassing
+Đáp án đúng: A. to surpass
+Giải thích ngữ pháp/ngữ nghĩa:
+* goal is + to V: Mục tiêu là làm gì.
+* Sau danh từ goal trong cấu trúc diễn tả mục tiêu, ta thường dùng động từ nguyên mẫu có to.
+* The goal is to surpass: mục tiêu là vượt qua.
+* A. to surpass: Đúng cấu trúc.
+* B. surpassed: Quá khứ phân từ, không phù hợp.
+* C. surpass: Động từ nguyên mẫu không có to, không phù hợp sau is trong cấu trúc này.
+* D. surpassing: V-ing, không phù hợp với cách diễn đạt mục tiêu trong câu.
+Dịch nghĩa: Mục tiêu của nhà xuất bản là vượt qua con số phát hành hằng ngày 80.000 bản vào năm tới.
+Từ vựng quan trọng:
+* publisher: nhà xuất bản
+* goal: mục tiêu
+* surpass: vượt qua
+* daily: hằng ngày
+* circulation: số lượng phát hành
+* figure: con số
+Câu 6
+Mr. Jung will present the results of the marketing study to the president after he has had a chance _____ them.
+A. to review
+B. reviewer
+C. reviewed
+D. is reviewing
+Đáp án đúng: A. to review
+Giải thích ngữ pháp/ngữ nghĩa:
+* have a chance + to V: Có cơ hội làm việc gì.
+* Have a chance to review them nghĩa là có cơ hội xem xét chúng.
+* Đại từ them thay thế cho the results of the marketing study.
+* B. reviewer: Danh từ chỉ người đánh giá, không thể đứng sau a chance theo cấu trúc này.
+* C. reviewed: Quá khứ phân từ, không phù hợp.
+* D. is reviewing: Thì hiện tại tiếp diễn, không phù hợp sau a chance.
+Dịch nghĩa: Ông Jung sẽ trình bày kết quả nghiên cứu tiếp thị với chủ tịch sau khi ông ấy có cơ hội xem xét chúng.
+Từ vựng quan trọng:
+* present: trình bày
+* result: kết quả
+* marketing study: nghiên cứu tiếp thị
+* president: chủ tịch
+* have a chance to do something: có cơ hội làm gì
+* review: xem xét, đánh giá
+Câu 7
+If you wish to pay for this computer workshop by _____ your credit card, please contact Linda Wagner at 555-4236.
+A. used
+B. using
+C. usage
+D. usable
+Đáp án đúng: B. using
+Giải thích ngữ pháp/ngữ nghĩa:
+* by + V-ing: Diễn tả phương thức hoặc cách thức thực hiện một hành động.
+* Pay by using your credit card: thanh toán bằng cách sử dụng thẻ tín dụng.
+* A. used: Quá khứ hoặc quá khứ phân từ, không phù hợp sau giới từ by trong câu này.
+* C. usage: Danh từ mang nghĩa sự sử dụng, không phù hợp vì câu cần diễn tả hành động sử dụng thẻ.
+* D. usable: Tính từ mang nghĩa có thể sử dụng được, không phù hợp về từ loại.
+Dịch nghĩa: Nếu bạn muốn thanh toán cho buổi hội thảo máy tính này bằng cách sử dụng thẻ tín dụng, vui lòng liên hệ Linda Wagner theo số 555-4236.
+Từ vựng quan trọng:
+* wish to: muốn
+* pay for: thanh toán cho
+* computer workshop: buổi hội thảo về máy tính
+* credit card: thẻ tín dụng
+* contact: liên hệ
+Câu 8
+It is important for companies _____ professional development opportunities in order to retain qualified staff.
+A. offering
+B. offer
+C. to offer
+D. offered
+Đáp án đúng: C. to offer
+Giải thích ngữ pháp/ngữ nghĩa:
+* It is + adjective + for someone + to V: Cấu trúc giả chủ ngữ It, dùng để nhận xét rằng việc ai đó làm gì là như thế nào.
+* It is important for companies to offer...: Điều quan trọng đối với các công ty là cung cấp...
+* A. offering: V-ing, không phù hợp trong cấu trúc này.
+* B. offer: Động từ nguyên mẫu không có to, không phù hợp sau for companies.
+* D. offered: Quá khứ hoặc quá khứ phân từ, không phù hợp.
+Dịch nghĩa: Điều quan trọng đối với các công ty là cung cấp những cơ hội phát triển chuyên môn nhằm giữ chân đội ngũ nhân viên có trình độ.
+Từ vựng quan trọng:
+* important: quan trọng
+* professional development: phát triển chuyên môn
+* opportunity: cơ hội
+* in order to: nhằm mục đích
+* retain: giữ chân, duy trì
+* qualified: có trình độ, đủ năng lực
+* staff: đội ngũ nhân viên
+Câu 9
+Mercox Cosmetics hopes _____ its number one ranking in consumer growth by expanding its market.
+A. to defend
+B. defense
+C. defending
+D. defended
+Đáp án đúng: A. to defend
+Giải thích ngữ pháp/ngữ nghĩa:
+* hope + to V: Hy vọng làm điều gì.
+* Hope to defend its number one ranking nghĩa là hy vọng bảo vệ vị trí xếp hạng số một.
+* A. to defend: Đúng cấu trúc hope + to V.
+* B. defense: Danh từ, nghĩa là sự bảo vệ hoặc phòng thủ, không phù hợp sau hopes.
+* C. defending: V-ing, không dùng trong cấu trúc hope + to V ở câu này.
+* D. defended: Quá khứ hoặc quá khứ phân từ, không phù hợp.
+Dịch nghĩa: Mercox Cosmetics hy vọng bảo vệ vị trí xếp hạng số một về mức tăng trưởng tiêu dùng bằng cách mở rộng thị trường của mình.
+Từ vựng quan trọng:
+* cosmetics: mỹ phẩm
+* hope: hy vọng
+* defend: bảo vệ
+* ranking: thứ hạng
+* consumer: người tiêu dùng
+* growth: sự tăng trưởng
+* expand: mở rộng
+* market: thị trường
+Câu 10
+Ms. Quong is a promising bookkeeper at our firm , as she completes _____ with precision and quickness.
+A. working
+B. worker
+C. work
+D. worked
+Đáp án đúng: C. work
+Giải thích ngữ pháp/ngữ nghĩa:
+* complete + noun: Hoàn thành một công việc hoặc nhiệm vụ nào đó.
+* Sau động từ completes cần một danh từ làm tân ngữ. Work là danh từ không đếm được, mang nghĩa công việc.
+* Complete work with precision and quickness: hoàn thành công việc với sự chính xác và nhanh chóng.
+* A. working: V-ing, có thể dùng như danh động từ trong một số cấu trúc, nhưng không phù hợp với cách diễn đạt tự nhiên ở đây.
+* B. worker: Danh từ chỉ người lao động, không phù hợp về nghĩa vì người ta không thể nói complete a worker.
+* D. worked: Quá khứ hoặc quá khứ phân từ, không thể làm tân ngữ cho động từ completes.
+Dịch nghĩa: Cô Quong là một nhân viên kế toán đầy triển vọng tại công ty chúng tôi, vì cô ấy hoàn thành công việc với sự chính xác và nhanh chóng.
+Từ vựng quan trọng:
+* promising: đầy triển vọng
+* bookkeeper: nhân viên kế toán
+* firm: công ty
+* complete: hoàn thành
+* work: công việc
+* precision: sự chính xác
+* quickness: sự nhanh chóng
+Test 2:
+Câu 1
+Remember to check the spelling of Mr. Kamashi's name when _____ the document.
+A. revising
+B. revises
+C. revised
+D. revise
+Đáp án đúng: A. revising
+Giải thích ngữ pháp/ngữ nghĩa:
+* A. revising: Đúng. Sau giới từ when (khi) có thể dùng V-ing để rút gọn mệnh đề trạng ngữ khi chủ ngữ của hai hành động giống nhau. Cấu trúc: when + V-ing.
+* B. revises: Sai. Động từ chia theo ngôi thứ ba số ít, không phù hợp sau when trong cấu trúc này.
+* C. revised: Sai. Quá khứ hoặc quá khứ phân từ, không phù hợp với ý nghĩa câu.
+* D. revise: Sai. Động từ nguyên mẫu không có to không thể đứng trực tiếp sau when trong cấu trúc này.
+Dịch nghĩa: Hãy nhớ kiểm tra cách viết tên của ông Kamashi khi chỉnh sửa tài liệu.
+Từ vựng quan trọng:
+* spelling: cách viết chính tả
+* revise: chỉnh sửa, xem lại
+* document: tài liệu
+Câu 2
+Online shoppers who experience long waits for their orders tend ______ the business low ratings.
+A. have given
+B. gave
+C. to give
+D. giving
+Đáp án đúng: C. to give
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. to give: Đúng. Cấu trúc: tend + to V (có xu hướng làm gì).
+* A. have given: Sai. Thì hiện tại hoàn thành không thể đứng trực tiếp sau tend.
+* B. gave: Sai. Động từ quá khứ không phù hợp với cấu trúc tend.
+* D. giving: Sai. Sau tend không dùng V-ing trong cấu trúc này.
+Dịch nghĩa: Những người mua sắm trực tuyến phải chờ đơn hàng quá lâu thường có xu hướng đánh giá doanh nghiệp ở mức điểm thấp.
+Từ vựng quan trọng:
+* online shopper: người mua sắm trực tuyến
+* experience: trải qua
+* long wait: thời gian chờ đợi lâu
+* order: đơn hàng
+* tend to do something: có xu hướng làm gì
+* rating: điểm đánh giá
+Câu 3
+As the rental agreement with the Smith Group is set ______ soon, the available office space can be advertised.
+A. expired
+B. to expire
+C. will have expired
+D. expiring
+Đáp án đúng: B. to expire
+Giải thích ngữ pháp/ngữ nghĩa:
+* B. to expire: Đúng. Cấu trúc: be set + to V diễn tả một việc được dự kiến hoặc sắp xảy ra.
+* A. expired: Sai. Quá khứ phân từ không phù hợp sau set trong cấu trúc này.
+* C. will have expired: Sai. Không dùng một mệnh đề có trợ động từ will trực tiếp sau set.
+* D. expiring: Sai. Không dùng V-ing trong cấu trúc be set to do something.
+Dịch nghĩa: Vì hợp đồng thuê với Tập đoàn Smith dự kiến sẽ sớm hết hạn, diện tích văn phòng còn trống có thể được quảng cáo.
+Từ vựng quan trọng:
+* rental agreement: hợp đồng thuê
+* be set to do something: dự kiến sẽ làm gì
+* expire: hết hạn
+* available: có sẵn, còn trống
+* office space: diện tích văn phòng
+* advertise: quảng cáo
+Câu 4
+The management team at Ofto Corporation offers incentives ______ employee productivity.
+A. stimulate
+B. to stimulate
+C. will stimulate
+D. are stimulating
+Đáp án đúng: B. to stimulate
+Giải thích ngữ pháp/ngữ nghĩa:
+* B. to stimulate: Đúng. Dùng động từ nguyên mẫu có to để diễn tả mục đích: to V (để làm gì).
+* A. stimulate: Sai. Động từ nguyên mẫu không có to không thể trực tiếp bổ nghĩa cho incentives để diễn tả mục đích.
+* C. will stimulate: Sai. Không thể dùng một mệnh đề có will trực tiếp sau incentives.
+* D. are stimulating: Sai. Cấu trúc hiện tại tiếp diễn không phù hợp để diễn tả mục đích trong câu.
+Dịch nghĩa: Ban quản lý tại Tập đoàn Ofto đưa ra các khoản khuyến khích để thúc đẩy năng suất của nhân viên.
+Từ vựng quan trọng:
+* management team: đội ngũ quản lý
+* corporation: tập đoàn
+* offer: đưa ra, cung cấp
+* incentive: khoản khuyến khích, động lực
+* stimulate: thúc đẩy, kích thích
+* productivity: năng suất
+Câu 5
+The vice president of Chestonville Bank believes that ______ employees is vital to the company's success.
+A. empowered
+B. empower
+C. empowering
+D. empowers
+Đáp án đúng: C. empowering
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. empowering: Đúng. V-ing có thể đóng vai trò danh từ (gerund) làm chủ ngữ hoặc thành phần danh từ trong mệnh đề. Ở đây, empowering employees là cụm danh động từ làm chủ ngữ của động từ is.
+* A. empowered: Sai. Quá khứ phân từ không thể đứng độc lập làm chủ ngữ trong cấu trúc này.
+* B. empower: Sai. Động từ nguyên mẫu không có to không thể làm chủ ngữ theo cách này.
+* D. empowers: Sai. Động từ chia ngôi thứ ba số ít không thể đứng trước một tân ngữ để tạo thành chủ ngữ của mệnh đề.
+Dịch nghĩa: Phó chủ tịch Ngân hàng Chestonville tin rằng việc trao quyền cho nhân viên đóng vai trò thiết yếu đối với thành công của công ty.
+Từ vựng quan trọng:
+* vice president: phó chủ tịch
+* empower: trao quyền, trao quyền tự chủ
+* employee: nhân viên
+* vital: thiết yếu, vô cùng quan trọng
+* success: thành công
+Câu 6
+The. vice president of KWR Glassware, will soon announce his decision about _______ operations at the Seoul plant.
+A. suspending
+B. to suspend
+C. suspends
+D. suspend
+Đáp án đúng: A. suspending
+Giải thích ngữ pháp/ngữ nghĩa:
+* A. suspending: Đúng. Sau giới từ about phải dùng danh từ hoặc V-ing. Cấu trúc: about + V-ing.
+* B. to suspend: Sai. Không dùng to V ngay sau giới từ about trong trường hợp này.
+* C. suspends: Sai. Động từ chia ngôi thứ ba số ít không thể đứng sau giới từ.
+* D. suspend: Sai. Động từ nguyên mẫu không có to không thể đứng trực tiếp sau giới từ about.
+Dịch nghĩa: Phó chủ tịch của KWR Glassware sẽ sớm công bố quyết định của mình về việc tạm ngừng hoạt động tại nhà máy ở Seoul.
+Từ vựng quan trọng:
+* announce: thông báo, công bố
+* decision: quyết định
+* about: về
+* suspend: tạm ngừng, đình chỉ
+* operation: hoạt động
+* plant: nhà máy
+Câu 7
+Linden Pharmaceuticals plans to improve overall production levels by _______ its assembly-line process.
+A. updated
+B. to update
+C. updating
+D. updates
+Đáp án đúng: C. updating
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. updating: Đúng. Sau giới từ by dùng V-ing để diễn tả phương pháp hoặc cách thức thực hiện hành động. Cấu trúc: by + V-ing.
+* A. updated: Sai. Quá khứ hoặc quá khứ phân từ không phù hợp sau giới từ by.
+* B. to update: Sai. Không dùng to V sau giới từ by trong cấu trúc chỉ phương pháp.
+* D. updates: Sai. Động từ chia ngôi thứ ba số ít không thể đứng sau giới từ by.
+Dịch nghĩa: Linden Pharmaceuticals có kế hoạch cải thiện mức sản lượng tổng thể bằng cách cập nhật quy trình dây chuyền lắp ráp.
+Từ vựng quan trọng:
+* pharmaceutical: thuộc ngành dược phẩm
+* plan to do something: lên kế hoạch làm gì
+* improve: cải thiện
+* overall: tổng thể
+* production level: mức sản lượng
+* by: bằng cách
+* update: cập nhật
+* assembly-line: dây chuyền lắp ráp
+* process: quy trình
+Câu 8
+_______ probable competitor businesses is an important early step for aspiring entrepreneurs.
+A. Identify
+B. Identified
+C. Identifying
+D. Identification
+Đáp án đúng: C. Identifying
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. Identifying: Đúng. Cụm V-ing Identifying probable competitor businesses đóng vai trò chủ ngữ của câu. Cấu trúc: V-ing + ... + is + ....
+* A. Identify: Sai. Động từ nguyên mẫu không có to không thể làm chủ ngữ trong cấu trúc này.
+* B. Identified: Sai. Quá khứ phân từ không phù hợp để tạo cụm chủ ngữ mang nghĩa chủ động.
+* D. Identification: Sai về mặt ngữ pháp nếu xét theo ý định kiểm tra dạng V-ing của câu; tuy nhiên, đây cũng là một danh từ có thể làm chủ ngữ. Câu vẫn có thể đúng về ngữ pháp nếu hiểu identification of probable competitor businesses. Nhưng vì sau chỗ trống là tân ngữ trực tiếp probable competitor businesses, đáp án C phù hợp hơn.
+Dịch nghĩa: Việc xác định các doanh nghiệp có khả năng trở thành đối thủ cạnh tranh là một bước quan trọng ban đầu đối với những người có mong muốn khởi nghiệp.
+Từ vựng quan trọng:
+* identify: xác định, nhận diện
+* probable: có khả năng xảy ra
+* competitor: đối thủ cạnh tranh
+* business: doanh nghiệp
+* important: quan trọng
+* early step: bước ban đầu
+* aspiring entrepreneur: người có mong muốn trở thành doanh nhân
+Câu 9
+We at TPG Financial Planning welcome the opportunity _______ you in your business.
+A. assisting
+B. to assist
+C. assisted
+D. assistant
+Đáp án đúng: B. to assist
+Giải thích ngữ pháp/ngữ nghĩa:
+* B. to assist: Đúng. Cấu trúc: opportunity + to V (cơ hội để làm gì).
+* A. assisting: Sai. Không dùng V-ing trực tiếp sau opportunity trong cấu trúc này.
+* C. assisted: Sai. Quá khứ phân từ không phù hợp sau opportunity.
+* D. assistant: Sai. Đây là danh từ chỉ người trợ lý, không phù hợp với cấu trúc và ý nghĩa câu.
+Dịch nghĩa: Chúng tôi tại TPG Financial Planning rất hoan nghênh cơ hội được hỗ trợ bạn trong công việc kinh doanh.
+Từ vựng quan trọng:
+* financial planning: hoạch định tài chính
+* welcome: hoan nghênh, chào đón
+* opportunity: cơ hội
+* assist: hỗ trợ, giúp đỡ
+* business: công việc kinh doanh, doanh nghiệp
+Câu 10
+The board of Lee & Zhang , Inc. has concluded that it is time _______ the computer network.
+A. upgrades
+B. will upgrade
+C. to upgrade
+D. upgrading
+Đáp án đúng: C. to upgrade
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. to upgrade: Đúng. Cấu trúc: It is time + to V (đã đến lúc làm gì).
+* A. upgrades: Sai. Động từ chia ngôi thứ ba số ít không phù hợp sau cấu trúc it is time.
+* B. will upgrade: Sai. Không dùng mệnh đề có will trực tiếp sau it is time trong cấu trúc này.
+* D. upgrading: Sai. Không dùng V-ing trực tiếp sau it is time để diễn tả hành động cần thực hiện.
+Dịch nghĩa: Hội đồng quản trị của công ty Lee & Zhang, Inc. đã kết luận rằng đã đến lúc nâng cấp hệ thống mạng máy tính.
+Từ vựng quan trọng:
+* board: hội đồng quản trị
+* conclude: kết luận
+* it is time to do something: đã đến lúc làm gì
+* upgrade: nâng cấp
+* computer network: hệ thống mạng máy tính
+Test 3:
+Câu 1
+Personnel must sign the register before _______ any confidential papers from vaults.
+A. removed
+B. remover
+C. removal
+D. removing
+Đáp án đúng: D. removing
+Giải thích ngữ pháp/ngữ nghĩa:
+* D. removing: Đúng. Sau giới từ before có thể dùng V-ing. Cấu trúc: before + V-ing.
+* A. removed: Sai. Quá khứ phân từ không phù hợp sau giới từ before trong cấu trúc này.
+* B. remover: Sai. Đây là danh từ chỉ người hoặc vật loại bỏ, không phù hợp về nghĩa và cấu trúc.
+* C. removal: Sai. Đây là danh từ, nhưng không thể kết hợp trực tiếp với tân ngữ any confidential papers theo cách này.
+Dịch nghĩa: Nhân viên phải ký vào sổ đăng ký trước khi lấy bất kỳ tài liệu mật nào ra khỏi các kho lưu trữ.
+Từ vựng quan trọng:
+* personnel: nhân viên, nhân sự
+* sign: ký
+* register: sổ đăng ký
+* confidential: bảo mật, bí mật
+* paper: tài liệu, giấy tờ
+* vault: kho lưu trữ an toàn
+Câu 2
+Senior management has considered ________ a ban on the personal use of work computers.
+A. institute
+B. instituted
+C. institution
+D. instituting
+Đáp án đúng: D. instituting
+Giải thích ngữ pháp/ngữ nghĩa:
+* D. instituting: Đúng. Động từ consider khi mang nghĩa cân nhắc, xem xét một hành động thường đi với V-ing. Cấu trúc: consider + V-ing.
+* A. institute: Sai. Không dùng động từ nguyên mẫu không có to sau consider.
+* B. instituted: Sai. Quá khứ hoặc quá khứ phân từ không phù hợp sau consider.
+* C. institution: Sai. Đây là danh từ, không diễn tả hành động cần cân nhắc trong cấu trúc này.
+Dịch nghĩa: Ban lãnh đạo cấp cao đã cân nhắc việc ban hành lệnh cấm sử dụng máy tính công ty cho mục đích cá nhân.
+Từ vựng quan trọng:
+* senior management: ban lãnh đạo cấp cao
+* consider: cân nhắc, xem xét
+* institute: ban hành, thiết lập
+* ban: lệnh cấm
+* personal use: việc sử dụng cho mục đích cá nhân
+* work computer: máy tính làm việc
+Câu 3
+Maga Electronics, Inc., spent over a million dollars ______ new mobile phones last year.
+A. develop
+B. developing
+C. is developed
+D. developed
+Đáp án đúng: B. developing
+Giải thích ngữ pháp/ngữ nghĩa:
+* B. developing: Đúng. Cấu trúc: spend + money/time + V-ing (dành tiền/thời gian để làm gì).
+* A. develop: Sai. Không dùng động từ nguyên mẫu không có to sau cụm spend + money.
+* C. is developed: Sai. Đây là cấu trúc bị động, không phù hợp sau spend.
+* D. developed: Sai. Quá khứ phân từ không phù hợp trong cấu trúc này.
+Dịch nghĩa: Công ty Maga Electronics đã chi hơn một triệu đô la để phát triển điện thoại di động mới vào năm ngoái.
+Từ vựng quan trọng:
+* spend: chi tiêu, dành
+* over a million dollars: hơn một triệu đô la
+* develop: phát triển
+* mobile phone: điện thoại di động
+* last year: năm ngoái
+Câu 4
+The business consultant suggests _____ the merger plan carefully before negotiations begin.
+A. review
+B. reviews
+C. reviewing
+D. reviewed
+Đáp án đúng: C. reviewing
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. reviewing: Đúng. Động từ suggest khi đề xuất một hành động thường đi với V-ing. Cấu trúc: suggest + V-ing.
+* A. review: Sai. Không dùng động từ nguyên mẫu không có to sau suggest trong trường hợp này.
+* B. reviews: Sai. Động từ chia ngôi thứ ba số ít không phù hợp sau suggest.
+* D. reviewed: Sai. Quá khứ hoặc quá khứ phân từ không phù hợp với cấu trúc suggest + V-ing.
+Dịch nghĩa: Chuyên gia tư vấn kinh doanh đề xuất xem xét kỹ kế hoạch sáp nhập trước khi các cuộc đàm phán bắt đầu.
+Từ vựng quan trọng:
+* business consultant: chuyên gia tư vấn kinh doanh
+* suggest: đề xuất
+* review: xem xét, đánh giá
+* merger: sự sáp nhập
+* carefully: một cách cẩn thận
+* negotiation: cuộc đàm phán
+Câu 5
+The publisher’s goal is _____ the daily circulation figure of 80,000 by next year.
+A. to surpass
+B. surpassed
+C. surpass
+D. surpassing
+Đáp án đúng: A. to surpass
+Giải thích ngữ pháp/ngữ nghĩa:
+* A. to surpass: Đúng. Động từ nguyên mẫu có to được dùng sau danh từ goal để diễn tả mục tiêu. Cấu trúc: goal is + to V.
+* B. surpassed: Sai. Quá khứ phân từ không phù hợp với cấu trúc diễn tả mục tiêu.
+* C. surpass: Sai. Động từ nguyên mẫu không có to không thể đứng trực tiếp sau is trong trường hợp này.
+* D. surpassing: Sai. V-ing không phù hợp với cấu trúc goal is to do something.
+Dịch nghĩa: Mục tiêu của nhà xuất bản là vượt qua con số phát hành hằng ngày 80.000 bản vào năm tới.
+Từ vựng quan trọng:
+* publisher: nhà xuất bản
+* goal: mục tiêu
+* surpass: vượt qua, vượt mức
+* daily: hằng ngày
+* circulation: số lượng phát hành
+* figure: con số
+Câu 6
+_____ additional audio books is part of the head librarian’s plan to modernize the library’s collections.
+A. Purchases
+B. Purchasing
+C. Has purchased
+D. Will be purchasing
+Đáp án đúng: B. Purchasing
+Giải thích ngữ pháp/ngữ nghĩa:
+* B. Purchasing: Đúng. V-ing có thể đóng vai trò danh từ (gerund) làm chủ ngữ câu. Cụm Purchasing additional audio books là chủ ngữ của động từ is.
+* A. Purchases: Sai. Động từ chia ngôi thứ ba số ít không thể đứng ở vị trí chủ ngữ với tân ngữ trực tiếp theo cấu trúc này.
+* C. Has purchased: Sai. Thì hiện tại hoàn thành không thể trực tiếp làm chủ ngữ theo cấu trúc này.
+* D. Will be purchasing: Sai. Thì tương lai tiếp diễn không phù hợp để làm chủ ngữ trong câu.
+Dịch nghĩa: Việc mua thêm sách nói là một phần trong kế hoạch hiện đại hóa bộ sưu tập của trưởng thư viện.
+Từ vựng quan trọng:
+* additional: bổ sung, thêm
+* audio book: sách nói
+* head librarian: trưởng thư viện
+* plan: kế hoạch
+* modernize: hiện đại hóa
+* collection: bộ sưu tập
+Câu 7
+Mr. Jung will present the results of the marketing study to the president after he has had a chance _____ them.
+A. to review
+B. reviewer
+C. reviewed
+D. is reviewing
+Đáp án đúng: A. to review
+Giải thích ngữ pháp/ngữ nghĩa:
+* A. to review: Đúng. Cấu trúc: have a chance + to V (có cơ hội làm gì).
+* B. reviewer: Sai. Đây là danh từ chỉ người đánh giá hoặc người phản biện.
+* C. reviewed: Sai. Quá khứ phân từ không phù hợp sau chance.
+* D. is reviewing: Sai. Không dùng một mệnh đề hiện tại tiếp diễn trực tiếp sau chance trong cấu trúc này.
+Dịch nghĩa: Ông Jung sẽ trình bày kết quả nghiên cứu tiếp thị với chủ tịch sau khi ông ấy có cơ hội xem xét chúng.
+Từ vựng quan trọng:
+* present: trình bày
+* result: kết quả
+* marketing study: nghiên cứu tiếp thị
+* president: chủ tịch
+* have a chance: có cơ hội
+* review: xem xét, đánh giá
+Câu 8
+We at the Ribeiro Agency strive _____ all communication with our clients clear and to the point.
+A. to make
+B. making
+C. to be made
+D. having made
+Đáp án đúng: A. to make
+Giải thích ngữ pháp/ngữ nghĩa:
+* A. to make: Đúng. Động từ strive đi với động từ nguyên mẫu có to. Cấu trúc: strive + to V (cố gắng làm gì).
+* B. making: Sai. Không dùng V-ing trực tiếp sau strive trong cấu trúc này.
+* C. to be made: Sai. Đây là dạng bị động, không phù hợp vì chủ thể thực hiện hành động là we.
+* D. having made: Sai. Đây là dạng hoàn thành của V-ing, không phù hợp sau strive.
+Dịch nghĩa: Chúng tôi tại Công ty Ribeiro luôn nỗ lực làm cho mọi hoạt động giao tiếp với khách hàng trở nên rõ ràng và ngắn gọn, đi thẳng vào vấn đề.
+Từ vựng quan trọng:
+* agency: công ty, đại lý
+* strive: nỗ lực, cố gắng
+* communication: sự giao tiếp, trao đổi thông tin
+* client: khách hàng
+* clear: rõ ràng
+* to the point: ngắn gọn, đi thẳng vào vấn đề
+Câu 9
+If you wish to pay for this computer workshop by _____ your credit card, please contact Linda Wagner at 555-4236.
+A. used
+B. using
+C. usage
+D. usable
+Đáp án đúng: B. using
+Giải thích ngữ pháp/ngữ nghĩa:
+* B. using: Đúng. Sau giới từ by dùng V-ing để diễn tả phương thức thực hiện hành động. Cấu trúc: by + V-ing.
+* A. used: Sai. Quá khứ hoặc quá khứ phân từ không phù hợp sau giới từ by.
+* C. usage: Sai. Đây là danh từ chỉ cách sử dụng hoặc mức độ sử dụng, không phù hợp với cấu trúc có tân ngữ your credit card.
+* D. usable: Sai. Đây là tính từ có nghĩa là có thể sử dụng được.
+Dịch nghĩa: Nếu bạn muốn thanh toán cho khóa học máy tính này bằng thẻ tín dụng, vui lòng liên hệ với Linda Wagner theo số 555-4236.
+Từ vựng quan trọng:
+* wish to do something: muốn làm gì
+* pay for: thanh toán cho
+* computer workshop: khóa học máy tính
+* by: bằng cách, thông qua
+* credit card: thẻ tín dụng
+* contact: liên hệ
+Câu 10
+All employees of Future Styles Co. are looking forward to _____ their new designers.
+A. meet
+B. met
+C. meeting
+D. have met
+Đáp án đúng: C. meeting
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. meeting: Đúng. Cấu trúc: look forward to + V-ing (mong chờ làm gì). Lưu ý, to ở đây là giới từ, không phải dấu hiệu của động từ nguyên mẫu có to.
+* A. meet: Sai. Không dùng động từ nguyên mẫu sau giới từ to trong cấu trúc này.
+* B. met: Sai. Quá khứ hoặc quá khứ phân từ không phù hợp sau giới từ to.
+* D. have met: Sai. Không dùng thì hiện tại hoàn thành trực tiếp sau giới từ to.
+Dịch nghĩa: Tất cả nhân viên của Công ty Future Styles đều mong được gặp những nhà thiết kế mới của họ.
+Từ vựng quan trọng:
+* employee: nhân viên
+* look forward to: mong chờ
+* meet: gặp gỡ
+* designer: nhà thiết kế
+Test 4:
+Câu 1
+It is important for companies ______ professional development opportunities in order to retain qualified staff.
+A. offering
+B. offer
+C. to offer
+D. offered
+Đáp án đúng: C. to offer
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. to offer: Đúng. Cấu trúc: It is + adjective + for somebody + to V (Ai đó làm gì là như thế nào).
+* A. offering: Sai. Không dùng V-ing trong cấu trúc này.
+* B. offer: Sai. Động từ nguyên mẫu không có to không phù hợp sau for somebody.
+* D. offered: Sai. Quá khứ phân từ không phù hợp với cấu trúc câu.
+Dịch nghĩa: Các công ty cung cấp những cơ hội phát triển chuyên môn là điều quan trọng để giữ chân những nhân viên có năng lực.
+Từ vựng quan trọng:
+* important: quan trọng
+* professional development: phát triển chuyên môn
+* opportunity: cơ hội
+* in order to: để
+* retain: giữ chân
+* qualified staff: đội ngũ nhân viên có năng lực
+Câu 2
+Mercox Cosmetics hopes ______ its number one ranking in consumer growth by expanding its market.
+A. to defend
+B. defense
+C. defending
+D. defended
+Đáp án đúng: A. to defend
+Giải thích ngữ pháp/ngữ nghĩa:
+* A. to defend: Đúng. Động từ hope thường đi với động từ nguyên mẫu có to. Cấu trúc: hope + to V.
+* B. defense: Sai. Đây là danh từ, có nghĩa là sự bảo vệ hoặc phòng thủ.
+* C. defending: Sai. Không dùng V-ing trực tiếp sau hope trong cấu trúc này.
+* D. defended: Sai. Quá khứ hoặc quá khứ phân từ không phù hợp sau hope.
+Dịch nghĩa: Mercox Cosmetics hy vọng bảo vệ vị trí số một về mức tăng trưởng tiêu dùng bằng cách mở rộng thị trường.
+Từ vựng quan trọng:
+* hope: hy vọng
+* defend: bảo vệ, duy trì
+* ranking: thứ hạng
+* consumer: người tiêu dùng
+* growth: sự tăng trưởng
+* expand: mở rộng
+* market: thị trường
+Câu 3
+When ____ for the ZJA conference, you must provide your membership number.
+A. register
+B. registers
+C. registering
+D. was registered
+Đáp án đúng: C. registering
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. registering: Đúng. Đây là dạng rút gọn của mệnh đề trạng ngữ chỉ thời gian: When + S + be + V-ing hoặc When + V-ing khi chủ ngữ của mệnh đề phụ trùng với chủ ngữ của mệnh đề chính. Câu đầy đủ có thể hiểu là: When you are registering for the ZJA conference...
+* A. register: Sai. Không thể dùng động từ nguyên mẫu không có chủ ngữ trong mệnh đề trạng ngữ này.
+* B. registers: Sai. Động từ chia ngôi thứ ba số ít, không phù hợp với chủ ngữ you.
+* D. was registered: Sai. Dạng bị động quá khứ không phù hợp với chủ ngữ you và ý nghĩa hướng dẫn chung.
+Dịch nghĩa: Khi đăng ký tham dự hội nghị ZJA, bạn phải cung cấp mã số thành viên của mình.
+Từ vựng quan trọng:
+* conference: hội nghị
+* register: đăng ký
+* provide: cung cấp
+* membership number: mã số thành viên
+Câu 4
+The company's decision on whether or not ______ a candidate will depend on reference checks.
+A. hire
+B. hiring
+C. to hire
+D. will hire
+Đáp án đúng: C. to hire
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. to hire: Đúng. Cấu trúc: whether or not + to V diễn tả việc có nên làm gì hay không, thường đứng sau các danh từ như decision.
+* A. hire: Sai. Động từ nguyên mẫu không có to không phù hợp trong cấu trúc whether or not ở đây.
+* B. hiring: Sai. V-ing không phù hợp với cấu trúc diễn tả quyết định có nên tuyển dụng hay không.
+* D. will hire: Sai. Không dùng mệnh đề có will trực tiếp sau whether or not trong cấu trúc này.
+Dịch nghĩa: Quyết định của công ty về việc có tuyển dụng ứng viên hay không sẽ phụ thuộc vào việc kiểm tra thông tin tham chiếu.
+Từ vựng quan trọng:
+* decision: quyết định
+* whether or not: liệu có ... hay không
+* candidate: ứng viên
+* depend on: phụ thuộc vào
+* reference check: việc kiểm tra thông tin tham chiếu
+Câu 5
+The corporate officers have requested that Ms. Nguyen ______ all available options for reducing costs at the Hanoi factory.
+A. to investigate
+B. has investigated
+C. investigate
+D. is investigating
+Đáp án đúng: C. investigate
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. investigate: Đúng. Sau các động từ diễn tả yêu cầu, đề nghị hoặc mệnh lệnh như request, có thể dùng cấu trúc giả định (subjunctive): request that + S + V nguyên mẫu. Động từ giữ nguyên mẫu, không thêm -s và không dùng to.
+* A. to investigate: Sai. Không dùng to V sau request that.
+* B. has investigated: Sai. Thì hiện tại hoàn thành không phù hợp với cấu trúc giả định.
+* D. is investigating: Sai. Thì hiện tại tiếp diễn không phù hợp với cấu trúc giả định.
+Dịch nghĩa: Các cán bộ điều hành công ty đã yêu cầu bà Nguyen điều tra tất cả những phương án có sẵn để giảm chi phí tại nhà máy ở Hà Nội.
+Từ vựng quan trọng:
+* corporate officer: cán bộ điều hành công ty
+* request: yêu cầu
+* investigate: điều tra, xem xét kỹ
+* available: có sẵn
+* option: phương án, lựa chọn
+* reduce costs: giảm chi phí
+* factory: nhà máy
+Câu 6
+Please ______ your Konel Travel agent of any special requests before booking your reservation.
+A. inform
+B. informed
+C. informing
+D. informs
+Đáp án đúng: A. inform
+Giải thích ngữ pháp/ngữ nghĩa:
+* A. inform: Đúng. Đây là câu mệnh lệnh, động từ nguyên mẫu không có to đứng đầu câu. Cấu trúc: Please + V nguyên mẫu.
+* B. informed: Sai. Quá khứ hoặc quá khứ phân từ không dùng trong câu mệnh lệnh.
+* C. informing: Sai. V-ing không phù hợp với cấu trúc câu mệnh lệnh.
+* D. informs: Sai. Động từ chia ngôi thứ ba số ít không dùng trong câu mệnh lệnh.
+Dịch nghĩa: Vui lòng thông báo cho nhân viên đại lý du lịch Konel của bạn về bất kỳ yêu cầu đặc biệt nào trước khi đặt chỗ.
+Từ vựng quan trọng:
+* inform somebody of something: thông báo cho ai về điều gì
+* travel agent: nhân viên đại lý du lịch
+* special request: yêu cầu đặc biệt
+* before: trước khi
+* book a reservation: đặt chỗ
+Câu 7
+Please ______ the owner's manual before using your Kivi Craft oven for the first time.
+A. consulting
+B. consulted
+C. consults
+D. consult
+Đáp án đúng: D. consult
+Giải thích ngữ pháp/ngữ nghĩa:
+* D. consult: Đúng. Câu mệnh lệnh dùng động từ nguyên mẫu không có to. Cấu trúc: Please + V nguyên mẫu.
+* A. consulting: Sai. V-ing không dùng trực tiếp trong câu mệnh lệnh.
+* B. consulted: Sai. Quá khứ hoặc quá khứ phân từ không phù hợp.
+* C. consults: Sai. Động từ chia ngôi thứ ba số ít không dùng trong câu mệnh lệnh.
+Dịch nghĩa: Vui lòng tham khảo sách hướng dẫn sử dụng trước khi dùng lò nướng Kivi Craft lần đầu tiên.
+Từ vựng quan trọng:
+* consult: tham khảo, hỏi ý kiến
+* owner's manual: sách hướng dẫn sử dụng
+* oven: lò nướng
+* for the first time: lần đầu tiên
+Câu 8
+_________ in a foreign country can be very difficult.
+A. Live
+B. Living
+C. Lived
+D. To living
+Đáp án đúng: B. Living
+Giải thích ngữ pháp/ngữ nghĩa:
+* B. Living: Đúng. V-ing có thể đóng vai trò danh từ (gerund) làm chủ ngữ câu. Cấu trúc: V-ing + ... + can be + adjective.
+* A. Live: Sai. Động từ nguyên mẫu không có to không thể làm chủ ngữ theo cấu trúc này.
+* C. Lived: Sai. Quá khứ phân từ không phù hợp để diễn tả hành động sống như một hoạt động nói chung.
+* D. To living: Sai. Động từ nguyên mẫu có to phải là to live, không phải to living.
+Dịch nghĩa: Sống ở một đất nước xa lạ có thể rất khó khăn.
+Từ vựng quan trọng:
+* live: sống
+* foreign country: đất nước nước ngoài
+* difficult: khó khăn
+Câu 9
+We don't have enough time _________ the essay so we asked the teacher for a delay.
+A. wrote
+B. writing
+C. to write
+D. written
+Đáp án đúng: C. to write
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. to write: Đúng. Cấu trúc: enough + noun + to V hoặc have enough time + to V (có đủ thời gian để làm gì).
+* A. wrote: Sai. Động từ quá khứ không phù hợp sau cụm enough time.
+* B. writing: Sai. Không dùng V-ing trực tiếp sau enough time trong cấu trúc này.
+* D. written: Sai. Quá khứ phân từ không phù hợp về cấu trúc và ý nghĩa.
+Dịch nghĩa: Chúng tôi không có đủ thời gian để viết bài luận, vì vậy chúng tôi đã xin giáo viên gia hạn.
+Từ vựng quan trọng:
+* enough time: đủ thời gian
+* essay: bài luận
+* ask somebody for something: xin ai điều gì
+* delay: sự trì hoãn, việc chậm trễ
+* teacher: giáo viên
+Câu 10
+The hijackers threatened _________ one passenger every hour if their demands were not met.
+A. kill
+B. to kill
+C. be killed
+D. to been killing
+Đáp án đúng: B. to kill
+Giải thích ngữ pháp/ngữ nghĩa:
+* B. to kill: Đúng. Động từ threaten thường đi với động từ nguyên mẫu có to. Cấu trúc: threaten + to V (đe dọa sẽ làm gì).
+* A. kill: Sai. Không dùng động từ nguyên mẫu không có to sau threaten trong cấu trúc này.
+* C. be killed: Sai. Đây là dạng bị động, không phù hợp vì chủ thể đe dọa là người thực hiện hành động.
+* D. to been killing: Sai. Đây là cấu trúc sai ngữ pháp; sau to phải là động từ nguyên mẫu, không phải been.
+Dịch nghĩa: Những kẻ không tặc đe dọa sẽ giết một hành khách mỗi giờ nếu các yêu cầu của chúng không được đáp ứng.
+Từ vựng quan trọng:
+* hijacker: kẻ không tặc
+* threaten: đe dọa
+* passenger: hành khách
+* every hour: mỗi giờ
+* demand: yêu cầu, đòi hỏi
+* be met: được đáp ứng
+Test 5:
+Câu 1
+These workers stopped ________ some coffee because they felt sleepy.
+A. to have
+B. have
+C. having
+D. had
+Đáp án đúng: A. to have
+Giải thích ngữ pháp/ngữ nghĩa:
+* A. to have: Đúng. Cấu trúc stop + to V có nghĩa là dừng một hành động đang làm để thực hiện một hành động khác. Ở đây, những công nhân dừng công việc để uống cà phê.
+* B. have: Sai. Không dùng động từ nguyên mẫu không có to sau stop.
+* C. having: Sai. Stop + V-ing có nghĩa là ngừng hẳn một thói quen hoặc hành động đang diễn ra, khác với ý nghĩa của câu.
+* D. had: Sai. Động từ quá khứ không phù hợp sau stop.
+Dịch nghĩa: Những công nhân này đã dừng công việc để uống một chút cà phê vì họ cảm thấy buồn ngủ.
+Từ vựng quan trọng:
+* worker: công nhân, người lao động
+* stop to do something: dừng lại để làm việc khác
+* have coffee: uống cà phê
+* feel sleepy: cảm thấy buồn ngủ
+Câu 2
+Those tourists were too tired ________.
+A. continue
+B. to continue
+C. continuing
+D. continued
+Đáp án đúng: B. to continue
+Giải thích ngữ pháp/ngữ nghĩa:
+* B. to continue: Đúng. Cấu trúc: too + adjective + to V (quá ... đến mức không thể làm gì).
+* A. continue: Sai. Sau tính từ tired trong cấu trúc too ... to phải dùng to V.
+* C. continuing: Sai. Không dùng V-ing trong cấu trúc này.
+* D. continued: Sai. Quá khứ hoặc quá khứ phân từ không phù hợp sau too tired.
+Dịch nghĩa: Những du khách đó quá mệt để có thể tiếp tục.
+Từ vựng quan trọng:
+* tourist: khách du lịch
+* too ... to: quá ... đến mức không thể
+* tired: mệt mỏi
+* continue: tiếp tục
+Câu 3
+The lifeguard warned all of us _________ too far from the shore.
+A. to not swim
+B. not to swim
+C. don't swim
+D. not swim
+Đáp án đúng: B. not to swim
+Giải thích ngữ pháp/ngữ nghĩa:
+* B. not to swim: Đúng. Cấu trúc: warn + somebody + not to V (cảnh báo ai không được làm gì).
+* A. to not swim: Về ngữ pháp, dạng này đôi khi vẫn được sử dụng, nhưng trong bài kiểm tra TOEIC, dạng chuẩn thường được ưu tiên là not to V.
+* C. don't swim: Sai. Không dùng một mệnh đề mệnh lệnh trực tiếp sau động từ warn theo cấu trúc này.
+* D. not swim: Sai. Thiếu to trong cấu trúc warn somebody not to do something.
+Dịch nghĩa: Nhân viên cứu hộ đã cảnh báo tất cả chúng tôi không được bơi quá xa bờ.
+Từ vựng quan trọng:
+* lifeguard: nhân viên cứu hộ
+* warn: cảnh báo
+* shore: bờ biển, bờ hồ
+* too far: quá xa
+* swim: bơi
+Câu 4
+______ high scores in exam, you have to ________ much harder.
+A. To get/ study
+B. Get/ study
+C. Get/ be studying
+D. To get/ to study
+Đáp án đúng: A. To get / study
+Giải thích ngữ pháp/ngữ nghĩa:
+* A. To get / study: Đúng.
+   * To get high scores là cụm động từ nguyên mẫu có to diễn tả mục đích (để đạt điểm cao).
+   * have to + V nguyên mẫu diễn tả sự cần thiết hoặc bắt buộc phải làm gì.
+* B. Get / study: Sai. Get không có to không thể đứng đầu câu để diễn tả mục đích trong cấu trúc này.
+* C. Get / be studying: Sai. Phần đầu thiếu to; phần sau không phù hợp vì sau have to cần động từ nguyên mẫu, không phải dạng tiếp diễn.
+* D. To get / to study: Sai. Sau have to không dùng to lần thứ hai vì cấu trúc đã có to trong cụm have to.
+Dịch nghĩa: Để đạt điểm cao trong kỳ thi, bạn phải học tập chăm chỉ hơn nhiều.
+Từ vựng quan trọng:
+* get high scores: đạt điểm cao
+* exam: kỳ thi
+* have to: phải
+* study hard: học tập chăm chỉ
+* much harder: chăm chỉ hơn nhiều
+Câu 5
+I think your mother should let you _______ your own mind.
+A. make up
+B. to make up
+C. be making up
+D. have made up
+Đáp án đúng: A. make up
+Giải thích ngữ pháp/ngữ nghĩa:
+* A. make up: Đúng. Cấu trúc sai khiến: let + somebody + V nguyên mẫu không to. Cụm make up your mind có nghĩa là quyết định.
+* B. to make up: Sai. Sau let không dùng động từ nguyên mẫu có to.
+* C. be making up: Sai. Không dùng dạng tiếp diễn trong cấu trúc let + somebody + V ở đây.
+* D. have made up: Sai. Thì hiện tại hoàn thành không phù hợp sau let.
+Dịch nghĩa: Tôi nghĩ mẹ bạn nên để bạn tự quyết định.
+Từ vựng quan trọng:
+* let: để, cho phép
+* make up one's mind: quyết định
+* should: nên
+* your own: của chính bạn
+Câu 6
+In general, my father doesn’t mind_________ the housework, but he hates to do the cooking.
+A. do
+B. doing
+C. done
+D. to do
+Đáp án đúng: B. doing
+Giải thích ngữ pháp/ngữ nghĩa:
+* B. doing: Đúng. Động từ mind khi mang nghĩa phiền hoặc ngại làm gì phải đi với V-ing. Cấu trúc: mind + V-ing.
+* A. do: Sai. Không dùng động từ nguyên mẫu không có to sau mind.
+* C. done: Sai. Quá khứ phân từ không phù hợp với cấu trúc này.
+* D. to do: Sai. Không dùng to V sau mind.
+Dịch nghĩa: Nhìn chung, bố tôi không ngại làm việc nhà, nhưng ông ấy ghét nấu ăn.
+Từ vựng quan trọng:
+* in general: nhìn chung
+* mind doing something: ngại hoặc phiền khi làm gì
+* housework: việc nhà
+* hate: ghét
+* do the cooking: nấu ăn
+Câu 7
+Judy suggested _________ for a walk but no one else wanted to.
+A. to go
+B. go
+C. going
+D. went
+Đáp án đúng: C. going
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. going: Đúng. Động từ suggest khi đề xuất một hành động thường đi với V-ing. Cấu trúc: suggest + V-ing.
+* A. to go: Sai. Không dùng to V sau suggest trong cấu trúc này.
+* B. go: Sai. Không dùng động từ nguyên mẫu không có to sau suggest.
+* D. went: Sai. Động từ quá khứ không phù hợp sau suggest.
+Dịch nghĩa: Judy đề xuất đi dạo, nhưng không ai khác muốn đi.
+Từ vựng quan trọng:
+* suggest: đề xuất, gợi ý
+* go for a walk: đi dạo
+* no one else: không ai khác
+* want to do something: muốn làm gì
+Câu 8
+It took them two months _________ their house.
+A. renew
+B. renewed
+C. renewing
+D. to renew
+Đáp án đúng: D. to renew
+Giải thích ngữ pháp/ngữ nghĩa:
+* D. to renew: Đúng. Cấu trúc: It takes/took + somebody + time + to V (Ai đó mất bao lâu để làm việc gì).
+* A. renew: Sai. Thiếu to trong cấu trúc It took them two months to do something.
+* B. renewed: Sai. Quá khứ phân từ không phù hợp sau cụm chỉ thời gian.
+* C. renewing: Sai. Không dùng V-ing trong cấu trúc này.
+Dịch nghĩa: Họ đã mất hai tháng để cải tạo ngôi nhà của mình.
+Từ vựng quan trọng:
+* take time: mất thời gian
+* two months: hai tháng
+* renew: làm mới, cải tạo, gia hạn
+* house: ngôi nhà
+Câu 9
+I asked them to be quiet but they kept ___________.
+A. to talk
+B. talk
+C. talking
+D. to be talked
+Đáp án đúng: C. talking
+Giải thích ngữ pháp/ngữ nghĩa:
+* C. talking: Đúng. Cấu trúc: keep + V-ing có nghĩa là tiếp tục làm gì.
+* A. to talk: Sai. Không dùng to V sau keep trong cấu trúc diễn tả sự tiếp diễn.
+* B. talk: Sai. Không dùng động từ nguyên mẫu không có to sau keep.
+* D. to be talked: Sai. Đây là dạng bị động và không phù hợp với ý nghĩa câu.
+Dịch nghĩa: Tôi đã yêu cầu họ giữ im lặng nhưng họ vẫn tiếp tục nói chuyện.
+Từ vựng quan trọng:
+* ask somebody to do something: yêu cầu ai làm gì
+* quiet: yên lặng
+* keep doing something: tiếp tục làm gì
+* talk: nói chuyện
+Câu 10
+The boy accused his friend of ___________ stolen his bicycle.
+A. have
+B. to have
+C. not to have
+D. having
+Đáp án đúng: D. having
+Giải thích ngữ pháp/ngữ nghĩa:
+* D. having: Đúng. Sau giới từ of phải dùng danh từ hoặc V-ing. Cấu trúc: accuse somebody of + V-ing (buộc tội ai đã làm gì). Ở đây, having stolen là dạng danh động từ hoàn thành, nhấn mạnh hành động trộm xe xảy ra trước thời điểm buộc tội.
+* A. have: Sai. Động từ nguyên mẫu không có to không thể đứng sau giới từ of.
+* B. to have: Sai. Không dùng to V sau giới từ of.
+* C. not to have: Sai. Không phù hợp về nghĩa vì câu không mang ý phủ định; đồng thời cấu trúc sau of không dùng to have.
+Dịch nghĩa: Cậu bé buộc tội bạn mình đã lấy trộm chiếc xe đạp của cậu ấy.
+Từ vựng quan trọng:
+* accuse somebody of something: buộc tội ai về điều gì
+* having stolen: đã lấy trộm
+* steal: ăn trộm, lấy trộm
+* bicycle: xe đạp

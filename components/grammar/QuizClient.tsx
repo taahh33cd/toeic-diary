@@ -26,6 +26,13 @@ interface Props {
   testNumber: number;
 }
 
+/** Nhãn độ khó — ngưỡng tính trên toàn bank nên "Khó" ở test nào cũng cùng nghĩa. */
+const DIFFICULTY = {
+  easy: { label: "Dễ", color: "#2E7D32", bg: "rgba(46,125,50,0.10)" },
+  medium: { label: "Trung bình", color: "#B26A00", bg: "rgba(178,106,0,0.10)" },
+  hard: { label: "Khó", color: "#C0392B", bg: "rgba(192,57,43,0.10)" },
+} as const;
+
 const resumeKey = (slug: string, idx: number) => `grammar-resume-${slug}-${idx}`;
 const glossarySeenKey = (slug: string, idx: number) => `grammar-glossary-seen-${slug}-${idx}`;
 
@@ -382,6 +389,21 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
               }}
             >
               {q.grammar_type}
+            </span>
+          )}
+          {q.difficulty && (
+            <span
+              style={{
+                fontSize: FS.xs,
+                fontWeight: 700,
+                letterSpacing: "0.04em",
+                color: DIFFICULTY[q.difficulty].color,
+                background: DIFFICULTY[q.difficulty].bg,
+                padding: "2px 8px",
+                borderRadius: 99,
+              }}
+            >
+              {DIFFICULTY[q.difficulty].label}
             </span>
           )}
         </div>

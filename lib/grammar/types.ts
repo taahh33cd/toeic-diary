@@ -8,6 +8,8 @@ export interface GrammarQuestion {
   explanation_grammar: string;
   translation: string;
   core_vocabulary: Array<{ word: string; type: string; meaning: string }>;
+  /** Bậc khó theo phân vị toàn bank, do scripts/grammar/build-questions.mjs gán. */
+  difficulty?: "easy" | "medium" | "hard";
   // Allow extra fields present in raw data
   [key: string]: unknown;
 }

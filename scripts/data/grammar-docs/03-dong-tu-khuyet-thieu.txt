@@ -1,0 +1,1009 @@
+﻿ĐỘNG TỪ KHUYẾT THIẾU
+Test 1:
+Câu 1
+Before starting a business, entrepreneurs should ______ every aspect of their chosen industry.
+A. to understand
+B. understand
+C. understanding
+D. are understood
+Đáp án đúng: B. understand
+Giải thích ngữ pháp/ngữ nghĩa:
+* Sau động từ khuyết thiếu should, động từ chính phải ở dạng nguyên mẫu không có to.
+* Cấu trúc: should + V nguyên mẫu.
+* To understand: động từ nguyên mẫu có to, không phù hợp sau should.
+* Understanding: dạng V-ing.
+* Are understood: dạng bị động, không phù hợp vì các doanh nhân là người thực hiện hành động hiểu biết.
+Dịch nghĩa: Trước khi bắt đầu kinh doanh, các doanh nhân nên tìm hiểu mọi khía cạnh của ngành nghề mà họ đã lựa chọn.
+Từ vựng quan trọng:
+* Entrepreneur: doanh nhân
+* Start a business: bắt đầu kinh doanh
+* Aspect: khía cạnh
+* Chosen industry: ngành nghề đã lựa chọn
+* Understand: hiểu, tìm hiểu
+Câu 2
+The financial review board has stated that no budget proposal may ______ ten pages.
+A. excessive
+B. excess
+C. exceeding
+D. exceed
+Đáp án đúng: D. exceed
+Giải thích ngữ pháp/ngữ nghĩa:
+* Sau động từ khuyết thiếu may, động từ chính phải ở dạng nguyên mẫu không có to.
+* Cấu trúc: may + V nguyên mẫu.
+* Exceed là động từ có nghĩa là vượt quá, phù hợp với ý nghĩa câu.
+* Excessive: tính từ, quá mức.
+* Excess: danh từ hoặc tính từ, sự vượt quá/quá mức.
+* Exceeding: dạng V-ing.
+Dịch nghĩa: Hội đồng đánh giá tài chính đã tuyên bố rằng không có đề xuất ngân sách nào được vượt quá mười trang.
+Từ vựng quan trọng:
+* Financial: thuộc về tài chính
+* Review board: hội đồng đánh giá
+* State: tuyên bố
+* Budget proposal: đề xuất ngân sách
+* Exceed: vượt quá
+Câu 3
+Depending on your answers to the survey, we ______ you to collect additional information.
+A. may call
+B. are calling
+C. have been called
+D. must be calling
+Đáp án đúng: A. may call
+Giải thích ngữ pháp/ngữ nghĩa:
+* Câu diễn tả khả năng người nói sẽ liên hệ với người nghe tùy thuộc vào câu trả lời khảo sát.
+* May + V nguyên mẫu diễn tả khả năng có thể xảy ra.
+* Are calling: hiện tại tiếp diễn, diễn tả hành động đang diễn ra hoặc kế hoạch đã sắp xếp.
+* Have been called: hiện tại hoàn thành bị động, nghĩa là đã được gọi.
+* Must be calling: có thể mang nghĩa chắc hẳn đang gọi hoặc phải đang gọi, không phù hợp với ngữ cảnh.
+Dịch nghĩa: Tùy thuộc vào câu trả lời của bạn trong cuộc khảo sát, chúng tôi có thể gọi cho bạn để thu thập thêm thông tin.
+Từ vựng quan trọng:
+* Depend on: phụ thuộc vào
+* Survey: khảo sát
+* Answer: câu trả lời
+* May: có thể
+* Collect: thu thập
+* Additional information: thông tin bổ sung
+Câu 4
+Companies without information technology specialists can ______ on Vyber Software Advisers for assistance with online services.
+A. reliable
+B. reliably
+C. rely
+D. relying
+Đáp án đúng: C. rely
+Giải thích ngữ pháp/ngữ nghĩa:
+* Cấu trúc can + V nguyên mẫu: có thể làm gì.
+* Cụm rely on someone/something có nghĩa là dựa vào hoặc tin cậy ai/cái gì.
+* Rely là động từ nguyên mẫu, phù hợp sau can.
+* Reliable: tính từ, đáng tin cậy.
+* Reliably: trạng từ, một cách đáng tin cậy.
+* Relying: dạng V-ing.
+Dịch nghĩa: Các công ty không có chuyên gia công nghệ thông tin có thể dựa vào Vyber Software Advisers để được hỗ trợ về các dịch vụ trực tuyến.
+Từ vựng quan trọng:
+* Company: công ty
+* Information technology (IT): công nghệ thông tin
+* Specialist: chuyên gia
+* Rely on: dựa vào, tin cậy
+* Assistance: sự hỗ trợ
+* Online service: dịch vụ trực tuyến
+Câu 5
+Mr. Volante is working at home tomorrow so he ______ the technical report without any distractions.
+A. can finish
+B. would finish
+C. finished
+D. has been finishing
+Đáp án đúng: A. can finish
+Giải thích ngữ pháp/ngữ nghĩa:
+* Câu diễn tả khả năng hoặc điều kiện thuận lợi để ông Volante hoàn thành báo cáo vào ngày mai.
+* Can + V nguyên mẫu diễn tả khả năng có thể thực hiện hành động.
+* Would finish thường diễn tả tình huống giả định hoặc hành động trong tương lai nhìn từ quá khứ.
+* Finished: quá khứ đơn, không phù hợp với thời gian tương lai tomorrow.
+* Has been finishing: hiện tại hoàn thành tiếp diễn, không phù hợp với ý nghĩa câu.
+Dịch nghĩa: Ông Volante sẽ làm việc tại nhà vào ngày mai, vì vậy ông ấy có thể hoàn thành báo cáo kỹ thuật mà không bị bất kỳ sự xao nhãng nào.
+Từ vựng quan trọng:
+* Work at home: làm việc tại nhà
+* Technical report: báo cáo kỹ thuật
+* Finish: hoàn thành
+* Distraction: sự xao nhãng
+* Without any distractions: không bị bất kỳ sự xao nhãng nào
+Câu 6
+The fire spread through the hotel very quickly but everyone _________ get out.
+A. had to
+B. would
+C. could
+D. was able to
+Đáp án đúng: D. was able to
+Giải thích ngữ pháp/ngữ nghĩa:
+* Câu diễn tả một khả năng cụ thể đã được thực hiện thành công trong một tình huống xảy ra trong quá khứ.
+* Was able to + V diễn tả việc đã có thể làm được điều gì trong một tình huống cụ thể.
+* Could cũng diễn tả khả năng trong quá khứ, nhưng thường dùng để nói về khả năng chung. Khi nhấn mạnh một hành động cụ thể đã thành công, was able to phù hợp hơn.
+* Had to: đã phải làm gì, diễn tả sự bắt buộc.
+* Would: sẽ, thường diễn tả tương lai trong quá khứ hoặc tình huống giả định.
+Dịch nghĩa: Đám cháy lan khắp khách sạn rất nhanh nhưng mọi người vẫn đã có thể thoát ra ngoài.
+Từ vựng quan trọng:
+* Fire: đám cháy
+* Spread: lan rộng
+* Quickly: nhanh chóng
+* Everyone: mọi người
+* Be able to: có thể
+* Get out: thoát ra ngoài
+Câu 7
+Johnny, you______play with the knife, you___hurt yourself.
+A. won't/can't
+B. mustn't/may
+C. shouldn't/must
+D. can't/shouldn't
+Đáp án đúng: B. mustn't/may
+Giải thích ngữ pháp/ngữ nghĩa:
+* Vế thứ nhất cần diễn tả sự cấm đoán hoặc cảnh báo mạnh: mustn't + V (không được phép làm gì).
+* Vế thứ hai cần diễn tả khả năng xảy ra hậu quả: may + V (có thể).
+* Mustn't play: không được chơi.
+* May hurt yourself: có thể tự làm bản thân bị thương.
+* Won't: sẽ không; can't: không thể, không phù hợp với ý cảnh báo.
+* Shouldn't: không nên, mang tính khuyên nhủ nhẹ hơn sự cấm đoán trong ngữ cảnh này.
+* Phương án D dùng can't và shouldn't, không diễn đạt tốt ý cảnh báo về hậu quả có thể xảy ra.
+Dịch nghĩa: Johnny, cháu không được chơi với con dao, cháu có thể tự làm mình bị thương đấy.
+Từ vựng quan trọng:
+* Play with: chơi với
+* Knife: con dao
+* Mustn't: không được phép
+* May: có thể
+* Hurt yourself: tự làm bản thân bị thương
+Câu 8
+"I stayed at a hotel while in New York."
+– "Oh, did you? You_________with Barbara."
+A. could have stayed
+B. could stay
+C. would stay
+D. should stay
+Đáp án đúng: A. could have stayed
+Giải thích ngữ pháp/ngữ nghĩa:
+* Câu đầu sử dụng quá khứ đơn stayed, cho biết người nói đã ở khách sạn trong chuyến đi New York.
+* Người trả lời muốn nói rằng người kia đã có một lựa chọn khác trong quá khứ: có thể đã ở cùng Barbara.
+* Cấu trúc could have + V3 diễn tả một khả năng hoặc cơ hội đã có trong quá khứ nhưng không được thực hiện.
+* Could stay: có thể ở, thường diễn tả khả năng chung trong hiện tại hoặc quá khứ.
+* Would stay: sẽ ở hoặc thường ở trong một tình huống giả định.
+* Should stay: nên ở, thường đưa ra lời khuyên cho hiện tại hoặc tương lai.
+Dịch nghĩa:
+* “Tôi đã ở khách sạn khi đến New York.”
+* “Ồ, vậy à? Bạn đã có thể ở cùng Barbara mà.”
+Từ vựng quan trọng:
+* Stay at a hotel: ở khách sạn
+* While in New York: trong thời gian ở New York
+* Could have + V3: đã có thể làm gì
+* Barbara: tên riêng
+Câu 9
+"Mary looks sad. Did you tell her about the accident?" – "Yes, but I ______ her later."
+A. shouldn't have told
+B. mustn't have told
+C. must have told
+D. should have told
+Đáp án đúng: A. shouldn't have told
+Giải thích ngữ pháp/ngữ nghĩa:
+* Câu hỏi cho biết Mary trông buồn sau khi được nghe kể về vụ tai nạn.
+* Người trả lời thừa nhận đã nói với Mary nhưng cảm thấy đáng lẽ mình không nên làm như vậy.
+* Cấu trúc shouldn't have + V3 diễn tả sự hối tiếc hoặc nhận định rằng một hành động trong quá khứ lẽ ra không nên xảy ra.
+* Mustn't have told: không phải cấu trúc thông dụng để diễn tả sự hối tiếc; mustn't chủ yếu diễn tả sự cấm đoán.
+* Must have told: chắc hẳn đã nói, diễn tả sự suy đoán về quá khứ.
+* Should have told: đáng lẽ nên nói, mang ý nghĩa ngược lại với ngữ cảnh.
+Dịch nghĩa:
+* “Mary trông buồn quá. Bạn đã kể cho cô ấy nghe về vụ tai nạn à?”
+* “Rồi, nhưng đáng lẽ tôi không nên nói với cô ấy.”
+Từ vựng quan trọng:
+* Look sad: trông buồn
+* Tell someone about something: kể cho ai nghe về điều gì
+* Accident: vụ tai nạn
+* Shouldn't have + V3: lẽ ra không nên làm gì
+Câu 10
+There was a lot of fun at yesterday’s party. You _________ come, but why didn't you?
+A. must have
+B. should
+C. need have
+D. should have
+Đáp án đúng: D. should have
+Giải thích ngữ pháp/ngữ nghĩa:
+* Câu nói về một bữa tiệc đã diễn ra trong quá khứ (yesterday’s party).
+* Người nói tiếc rằng người nghe đã không đến dự, vì vậy cần cấu trúc should have + V3 để diễn tả một hành động đáng lẽ nên thực hiện trong quá khứ nhưng đã không xảy ra.
+* Should have come: đáng lẽ nên đến.
+* Must have: chắc hẳn đã, diễn tả sự suy đoán về quá khứ; không phù hợp vì người nói biết người nghe đã không đến.
+* Should: nên, thường dùng cho lời khuyên ở hiện tại hoặc tương lai; thiếu have để diễn tả sự việc trong quá khứ.
+* Need have: không phù hợp với cấu trúc và ý nghĩa của câu.
+Dịch nghĩa: Bữa tiệc hôm qua rất vui. Bạn đáng lẽ nên đến tham dự, nhưng tại sao bạn lại không đến?
+Từ vựng quan trọng:
+* A lot of fun: rất vui, nhiều niềm vui
+* Party: bữa tiệc
+* Yesterday: hôm qua
+* Should have + V3: đáng lẽ nên làm gì
+* Come: đến, tham dự
+Test 2:
+Câu 1
+There was a lot of fun at yesterday's party. You _________ come, but why didn't you?
+A. must have
+B. should
+C. need have
+D. should have
+Đáp án đúng: D. should have
+Giải thích ngữ pháp/ngữ nghĩa:
+* should have + V3: Diễn tả một việc đáng lẽ nên làm trong quá khứ nhưng đã không thực hiện.
+* Trong câu này, người nói cho rằng người nghe đáng lẽ nên đến bữa tiệc hôm qua, nhưng thực tế họ đã không đến.
+* A. must have: Diễn tả sự suy đoán chắc chắn về một việc trong quá khứ; không phù hợp với ý trách nhẹ hoặc tiếc nuối.
+* B. should: Thiếu động từ nguyên mẫu theo sau để hoàn chỉnh cấu trúc trong ngữ cảnh này.
+* C. need have: Không phù hợp về cấu trúc và ý nghĩa.
+Dịch nghĩa: Hôm qua ở bữa tiệc rất vui. Đáng lẽ bạn nên đến, nhưng tại sao bạn lại không đến?
+Từ vựng quan trọng:
+* a lot of fun: rất vui, nhiều niềm vui
+* party: bữa tiệc
+* yesterday: ngày hôm qua
+Câu 2
+– "Shall I tell John about it?"
+– "No, you ____. I've told him already."
+A. needn't
+B. wouldn't
+C. mustn't
+D. shouldn't
+Đáp án đúng: A. needn't
+Giải thích ngữ pháp/ngữ nghĩa:
+* needn't + V nguyên mẫu: Diễn tả sự không cần thiết phải làm việc gì.
+* Người nói đã kể cho John nghe rồi, vì vậy người còn lại không cần phải kể thêm.
+* B. wouldn't: Diễn tả sự từ chối hoặc giả định, không phù hợp.
+* C. mustn't: Diễn tả sự cấm đoán, mang nghĩa không được phép làm.
+* D. shouldn't: Diễn tả lời khuyên không nên làm, không nhấn mạnh sự không cần thiết.
+Dịch nghĩa:
+– Tôi có nên kể cho John nghe chuyện đó không?
+– Không cần đâu. Tôi đã kể cho anh ấy rồi.
+Từ vựng quan trọng:
+* shall I ...?: Tôi có nên ... không?
+* tell someone about something: kể cho ai nghe về điều gì
+* already: đã ... rồi
+Câu 3
+Yesterday, Jane walked away from the discussion. Otherwise, she _________ something she would regret later.
+A. had said
+B. said
+C. might say
+D. might have said
+Đáp án đúng: D. might have said
+Giải thích ngữ pháp/ngữ nghĩa:
+* might have + V3: Diễn tả một khả năng có thể đã xảy ra trong quá khứ nhưng thực tế không xảy ra.
+* Otherwise: Nếu không thì. Câu này hàm ý rằng nếu Jane không rời khỏi cuộc thảo luận, có thể cô ấy đã nói điều gì đó mà sau này sẽ hối hận.
+* A. had said: Quá khứ hoàn thành, cần một mốc hoặc hành động quá khứ khác làm cơ sở so sánh; không phù hợp ở đây.
+* B. said: Quá khứ đơn, không diễn tả khả năng giả định trong quá khứ.
+* C. might say: Diễn tả khả năng ở hiện tại hoặc tương lai, không phù hợp với tình huống đã xảy ra hôm qua.
+Dịch nghĩa: Hôm qua, Jane đã rời khỏi cuộc thảo luận. Nếu không, có thể cô ấy đã nói điều gì đó mà sau này cô ấy sẽ hối hận.
+Từ vựng quan trọng:
+* walk away from: rời khỏi
+* discussion: cuộc thảo luận
+* otherwise: nếu không thì
+* regret: hối hận
+Câu 4
+– "There were already five people in the car but they managed to take me as well."
+– "It _________ a comfortable journey."
+A. can't be
+B. shouldn't be
+C. mustn't have been
+D. couldn't have been
+Đáp án đúng: D. couldn't have been
+Giải thích ngữ pháp/ngữ nghĩa:
+* couldn't have been + danh từ/tính từ: Diễn tả sự suy đoán rằng một việc trong quá khứ chắc chắn không thể xảy ra hoặc không thể có đặc điểm nào đó.
+* Chiếc xe đã có sẵn năm người nhưng vẫn chở thêm người nói, vì vậy chuyến đi chắc chắn không thể thoải mái.
+* A. can't be: Diễn tả sự suy đoán về hiện tại, không phù hợp với chuyến đi trong quá khứ.
+* B. shouldn't be: Diễn tả điều không nên xảy ra, không phù hợp với ý suy đoán.
+* C. mustn't have been: Không phải cách diễn đạt tự nhiên để suy đoán phủ định về một sự việc trong quá khứ. Dùng couldn't have been phù hợp hơn.
+Dịch nghĩa:
+– Trong xe đã có năm người rồi nhưng họ vẫn cố gắng chở thêm tôi.
+– Chuyến đi đó chắc chắn không thể thoải mái được.
+Từ vựng quan trọng:
+* already: đã ... rồi
+* manage to do something: xoay xở để làm được việc gì
+* as well: cũng, thêm nữa
+* comfortable: thoải mái
+* journey: chuyến đi
+Câu 5
+Mr. Kent is on time for everything. How _______ it be that he was late for the opening ceremony?
+A. could
+B. should
+C. would
+D. must
+Đáp án đúng: A. could
+Giải thích ngữ pháp/ngữ nghĩa:
+* How could it be that ...?: Làm sao có thể xảy ra chuyện ...? Dùng để thể hiện sự ngạc nhiên hoặc khó tin trước một sự việc.
+* Ông Kent luôn đúng giờ, vì vậy người nói ngạc nhiên khi biết ông ấy đến muộn buổi lễ khai mạc.
+* B. should: Không phù hợp với cấu trúc diễn đạt sự ngạc nhiên trong câu này.
+* C. would: Thường diễn tả tình huống giả định hoặc tương lai trong quá khứ, không phù hợp.
+* D. must: Diễn tả sự suy đoán chắc chắn, không phù hợp với câu hỏi thể hiện sự ngạc nhiên.
+Dịch nghĩa: Ông Kent luôn đúng giờ trong mọi việc. Làm sao có thể xảy ra chuyện ông ấy đến muộn buổi lễ khai mạc được nhỉ?
+Từ vựng quan trọng:
+* on time: đúng giờ
+* opening ceremony: lễ khai mạc
+* be late for: đến muộn
+Câu 6
+The fire spread through the hotel very quickly but everyone _________ get out.
+A. had to
+B. would
+C. could
+D. was able to
+Đáp án đúng: D. was able to
+Giải thích ngữ pháp/ngữ nghĩa:
+* was/were able to + V nguyên mẫu: Diễn tả khả năng thực hiện thành công một hành động cụ thể trong quá khứ.
+* Đám cháy lan rất nhanh nhưng tất cả mọi người vẫn thoát ra ngoài được. Đây là một hành động cụ thể đã hoàn thành thành công.
+* A. had to: Diễn tả sự bắt buộc phải làm gì, không nhấn mạnh kết quả thành công.
+* B. would: Diễn tả thói quen trong quá khứ hoặc tình huống giả định, không phù hợp.
+* C. could: Thường diễn tả khả năng chung trong quá khứ. Với một hành động cụ thể đã thực hiện thành công, was able to phù hợp hơn.
+Dịch nghĩa: Đám cháy lan khắp khách sạn rất nhanh nhưng mọi người đều đã thoát ra ngoài được.
+Từ vựng quan trọng:
+* fire: đám cháy
+* spread: lan rộng
+* quickly: nhanh chóng
+* get out: thoát ra ngoài
+* be able to: có thể, có khả năng
+Câu 7
+Sorry, I’m late. I ___________ have turned off the alarm clock and gone back to sleep again.
+A. might
+B. should
+C. can
+D. will
+Đáp án đúng: A. might
+Giải thích ngữ pháp/ngữ nghĩa:
+* might have + V3: Diễn tả khả năng một việc đã xảy ra trong quá khứ nhưng người nói không chắc chắn.
+* Câu này diễn tả khả năng người nói đã tắt đồng hồ báo thức rồi ngủ tiếp, dẫn đến việc đến muộn.
+* B. should: Nếu dùng should have turned off, câu sẽ mang nghĩa đáng lẽ nên tắt đồng hồ, không phù hợp với nguyên nhân đến muộn.
+* C. can: Không dùng cấu trúc can have + V3 để diễn tả khả năng này.
+* D. will: Không dùng will have trong ngữ cảnh suy đoán về một hành động đã xảy ra như câu này.
+Dịch nghĩa: Xin lỗi vì tôi đến muộn. Có lẽ tôi đã tắt đồng hồ báo thức rồi lại ngủ tiếp.
+Từ vựng quan trọng:
+* alarm clock: đồng hồ báo thức
+* turn off: tắt
+* go back to sleep: ngủ tiếp, ngủ lại
+* again: một lần nữa
+Câu 8
+Sir, you _________ be sitting in this waiting room. It is for women and children only.
+A. oughtn’t to
+B. can’t
+C. won’t
+D. needn’t
+Đáp án đúng: A. oughtn’t to
+Giải thích ngữ pháp/ngữ nghĩa:
+* ought not to + V nguyên mẫu: Diễn tả lời khuyên rằng ai đó không nên làm gì.
+* Phòng chờ này chỉ dành cho phụ nữ và trẻ em, vì vậy người đàn ông không nên ngồi ở đây.
+* B. can't: Có thể diễn tả sự không thể hoặc không được phép, nhưng trong câu này đáp án A phù hợp với ý nhắc nhở rằng ông không nên ngồi ở đó.
+* C. won't: Diễn tả sự từ chối hoặc việc sẽ không xảy ra, không phù hợp.
+* D. needn't: Diễn tả sự không cần thiết, không phù hợp với quy định của phòng chờ.
+Dịch nghĩa: Thưa ông, ông không nên ngồi trong phòng chờ này. Phòng này chỉ dành cho phụ nữ và trẻ em.
+Từ vựng quan trọng:
+* sir: thưa ông
+* waiting room: phòng chờ
+* only: chỉ, duy nhất
+* women: phụ nữ
+* children: trẻ em
+Câu 9
+When he was there, he _________ go to that coffee shop at the corner after work every day.
+A. would
+B. should
+C. had better
+D. might
+Đáp án đúng: A. would
+Giải thích ngữ pháp/ngữ nghĩa:
+* would + V nguyên mẫu: Dùng để diễn tả một thói quen hoặc hành động lặp đi lặp lại trong quá khứ.
+* Cụm every day cho thấy đây là hành động thường xuyên xảy ra khi anh ấy còn ở đó.
+* B. should: Diễn tả lời khuyên hoặc sự nên làm, không diễn tả thói quen quá khứ.
+* C. had better: Diễn tả lời khuyên mạnh hoặc sự cần thiết trong hiện tại/tương lai.
+* D. might: Diễn tả khả năng, không phù hợp với hành động lặp lại thường xuyên.
+Dịch nghĩa: Khi còn ở đó, ngày nào anh ấy cũng thường đến quán cà phê ở góc phố sau giờ làm.
+Từ vựng quan trọng:
+* when he was there: khi anh ấy còn ở đó
+* coffee shop: quán cà phê
+* at the corner: ở góc phố
+* after work: sau giờ làm
+* every day: mỗi ngày
+Câu 10
+"Will you stay for lunch?" – "Sorry, I _________. My brother is coming to see me."
+A. must
+B. can't
+C. needn't
+D. won't
+Đáp án đúng: B. can't
+Giải thích ngữ pháp/ngữ nghĩa:
+* can't + V nguyên mẫu: Diễn tả việc không thể làm gì do có trở ngại hoặc lý do cụ thể.
+* Người nói không thể ở lại ăn trưa vì anh/em trai của mình sắp đến thăm.
+* A. must: Diễn tả sự bắt buộc hoặc cần thiết, không phù hợp.
+* C. needn't: Diễn tả sự không cần thiết, không phù hợp với lời từ chối lời mời.
+* D. won't: Diễn tả sự không muốn hoặc từ chối làm gì, trong khi câu này nhấn mạnh việc không thể ở lại vì có kế hoạch khác.
+Dịch nghĩa:
+– Bạn sẽ ở lại ăn trưa chứ?
+– Xin lỗi, tôi không thể. Anh/em trai tôi sắp đến thăm tôi.
+Từ vựng quan trọng:
+* stay for lunch: ở lại ăn trưa
+* sorry: xin lỗi
+* come to see someone: đến thăm ai đó
+Test 3:
+Câu 1
+______ it rain tomorrow, we will put off the visit to the Marble Mountains.
+A. Were
+B. Should
+C. Would
+D. Will
+Đáp án đúng: B. Should
+Giải thích ngữ pháp/ngữ nghĩa:
+* Should + S + V nguyên mẫu: Đảo ngữ của câu điều kiện loại 1, diễn tả một khả năng có thể xảy ra trong tương lai.
+* Cấu trúc đầy đủ: Should + S + V nguyên mẫu, S + will + V nguyên mẫu.
+* Câu gốc: If it should rain tomorrow, we will put off the visit...
+* A. Were: Dùng trong đảo ngữ câu điều kiện loại 2, thường có cấu trúc Were + S + to V.
+* C. Would: Không dùng would trong mệnh đề điều kiện theo cấu trúc này.
+* D. Will: Không dùng will trong mệnh đề điều kiện loại 1 thông thường.
+Dịch nghĩa: Nếu ngày mai trời mưa, chúng tôi sẽ hoãn chuyến tham quan Ngũ Hành Sơn.
+Từ vựng quan trọng:
+* put off: hoãn
+* visit: chuyến thăm, chuyến tham quan
+* Marble Mountains: Ngũ Hành Sơn
+* rain: mưa
+Câu 2
+– "Don’t forget to come to my birthday party tomorrow."
+"______"
+A. I don't
+B. I won't
+C. I can't
+D. I haven't
+Đáp án đúng: B. I won't
+Giải thích ngữ pháp/ngữ nghĩa:
+* I won't là cách trả lời rút gọn của I won't forget to come to your birthday party (Tôi sẽ không quên đến dự tiệc sinh nhật của bạn).
+* Trong giao tiếp, I won't được dùng để khẳng định rằng người nói sẽ thực hiện lời nhắc hoặc không quên việc được yêu cầu.
+* A. I don't: Không phù hợp vì câu nhắc nhở hướng đến hành động trong tương lai.
+* C. I can't: Mang nghĩa không thể, không thể hiện lời hứa sẽ không quên.
+* D. I haven't: Là hiện tại hoàn thành, không phù hợp với ngữ cảnh.
+Dịch nghĩa:
+– Đừng quên đến dự tiệc sinh nhật của tôi vào ngày mai nhé.
+– Tôi sẽ không quên đâu.
+Từ vựng quan trọng:
+* forget to do something: quên làm việc gì
+* birthday party: tiệc sinh nhật
+* tomorrow: ngày mai
+Câu 3
+There was plenty of time. She __________.
+A. mustn't have hurried
+B. couldn't have hurried
+C. must not hurry
+D. needn't have hurried
+Đáp án đúng: D. needn't have hurried
+Giải thích ngữ pháp/ngữ nghĩa:
+* needn't have + V3: Diễn tả một hành động đã thực sự xảy ra trong quá khứ nhưng không cần thiết phải làm.
+* Câu cho biết có rất nhiều thời gian, vì vậy cô ấy không cần phải vội vàng, nhưng thực tế cô ấy đã vội.
+* A. mustn't have hurried: Không phải cấu trúc thông dụng để diễn tả sự không cần thiết trong quá khứ.
+* B. couldn't have hurried: Diễn tả suy đoán rằng cô ấy không thể đã vội vàng, không phù hợp với ý câu.
+* C. must not hurry: Diễn tả sự cấm đoán hoặc yêu cầu không được vội vàng ở hiện tại/tương lai.
+Dịch nghĩa: Có rất nhiều thời gian. Cô ấy đã không cần phải vội vàng như vậy.
+Từ vựng quan trọng:
+* plenty of: nhiều, dư dả
+* time: thời gian
+* hurry: vội vàng
+* needn't have done: đã không cần phải làm (nhưng thực tế đã làm)
+Câu 4
+I told Sally how to get here, but perhaps I __________for her.
+A. had to write it out
+B. must have written it out
+C. should have written it out
+D. ought to write it out
+Đáp án đúng: C. should have written it out
+Giải thích ngữ pháp/ngữ nghĩa:
+* should have + V3: Diễn tả một việc đáng lẽ nên làm trong quá khứ nhưng đã không làm.
+* Người nói đã chỉ cho Sally cách đến đây, nhưng có lẽ đáng lẽ người nói nên viết hướng dẫn ra cho cô ấy.
+* A. had to write it out: Diễn tả sự bắt buộc phải viết ra trong quá khứ, không phù hợp với ý tiếc nuối.
+* B. must have written it out: Diễn tả sự suy đoán chắc chắn rằng người nói đã viết ra, trái với ngữ cảnh.
+* D. ought to write it out: Diễn tả lời khuyên ở hiện tại hoặc tương lai, không phù hợp với việc đã xảy ra.
+Dịch nghĩa: Tôi đã chỉ cho Sally cách đến đây, nhưng có lẽ đáng lẽ tôi nên viết hướng dẫn đường đi ra cho cô ấy.
+Từ vựng quan trọng:
+* how to get here: cách để đến đây
+* perhaps: có lẽ
+* write something out: viết đầy đủ điều gì đó ra
+* for someone: cho ai đó
+Câu 5
+Tom should not _________me your secret, but he meant no harm.
+A. have told
+B. tell
+C. be telling
+D. having told
+Đáp án đúng: A. have told
+Giải thích ngữ pháp/ngữ nghĩa:
+* should not have + V3: Diễn tả sự không nên làm một việc trong quá khứ; thường thể hiện sự trách móc hoặc tiếc nuối.
+* Should not have told nghĩa là Tom đã kể bí mật, nhưng đáng lẽ anh ấy không nên làm vậy.
+* B. tell: Sau should not có thể dùng động từ nguyên mẫu, nhưng cách này nói về hiện tại hoặc tương lai, không diễn tả sự việc đã xảy ra.
+* C. be telling: Không phù hợp với cấu trúc diễn tả sự tiếc nuối về hành động trong quá khứ.
+* D. having told: Danh động từ hoàn thành, không thể đứng sau should not theo cấu trúc này.
+Dịch nghĩa: Tom đáng lẽ không nên kể cho tôi bí mật của bạn, nhưng anh ấy không có ý xấu.
+Từ vựng quan trọng:
+* secret: bí mật
+* mean no harm: không có ý xấu, không cố ý gây hại
+* tell someone something: kể cho ai điều gì
+Câu 6
+Johnny, you_____play with the knife, you___hurt yourself.
+A. won't/can't
+B. mustn't/may
+C. shouldn't/must
+D. can't/shouldn't
+Đáp án đúng: B. mustn't/may
+Giải thích ngữ pháp/ngữ nghĩa:
+* mustn't + V nguyên mẫu: Diễn tả sự cấm đoán hoặc cảnh báo mạnh rằng không được làm gì.
+* may + V nguyên mẫu: Diễn tả khả năng một việc có thể xảy ra.
+* Mustn't play with the knife: Không được chơi với dao.
+* May hurt yourself: Có thể tự làm mình bị thương.
+* A. won't/can't: Won't không phù hợp để đưa ra lời cấm; can't diễn tả sự không thể hoặc không được phép nhưng không phù hợp với ý cảnh báo về hậu quả.
+* C. shouldn't/must: Shouldn't chỉ là lời khuyên không nên; must hurt mang nghĩa chắc chắn phải bị thương, không hợp lý.
+* D. can't/shouldn't: Không diễn tả rõ ý cấm đoán và cảnh báo khả năng xảy ra như đáp án B.
+Dịch nghĩa: Johnny, con không được chơi với con dao, con có thể tự làm mình bị thương đấy.
+Từ vựng quan trọng:
+* play with: chơi với
+* knife: con dao
+* hurt yourself: tự làm mình bị thương
+* mustn't: không được phép
+* may: có thể
+Câu 7
+"Are you coming to Jeff’s party?"
+"I’m not sure. I__________ go to the concert instead."
+A. must
+B. would
+C. should
+D. may
+Đáp án đúng: D. may
+Giải thích ngữ pháp/ngữ nghĩa:
+* may + V nguyên mẫu: Diễn tả một khả năng có thể xảy ra nhưng chưa chắc chắn.
+* Cụm I'm not sure cho thấy người nói chưa quyết định và có thể sẽ đi xem buổi hòa nhạc thay vì dự tiệc.
+* A. must: Diễn tả sự bắt buộc hoặc suy đoán chắc chắn, không phù hợp.
+* B. would: Thường dùng trong câu điều kiện hoặc diễn tả thói quen trong quá khứ, không phù hợp.
+* C. should: Diễn tả lời khuyên hoặc điều nên làm, không thể hiện rõ sự không chắc chắn.
+Dịch nghĩa:
+– Bạn có đến dự tiệc của Jeff không?
+– Tôi chưa chắc. Có thể tôi sẽ đi xem buổi hòa nhạc thay thế.
+Từ vựng quan trọng:
+* be sure: chắc chắn
+* concert: buổi hòa nhạc
+* instead: thay vào đó
+Câu 8
+Jack _____yet, otherwise he would have telephoned me.
+A. mustn't have arrived
+B. shouldn't have arrived
+C. can't have arrived
+D. need not have arrived
+Đáp án đúng: C. can't have arrived
+Giải thích ngữ pháp/ngữ nghĩa:
+* can't have + V3: Diễn tả sự suy đoán chắc chắn rằng một việc không thể đã xảy ra trong quá khứ.
+* yet: Chưa, vẫn chưa.
+* otherwise he would have telephoned me: Nếu không thì anh ấy đã gọi điện cho tôi rồi.
+* Nếu Jack đã đến nơi, có lẽ anh ấy đã gọi điện. Nhưng anh ấy chưa gọi, nên người nói suy luận rằng Jack chắc chắn chưa đến.
+* A. mustn't have arrived: Không dùng tự nhiên để diễn tả suy đoán phủ định về quá khứ.
+* B. shouldn't have arrived: Mang nghĩa đáng lẽ không nên đến, không phù hợp.
+* D. need not have arrived: Mang nghĩa đã không cần phải đến, nhưng không diễn tả suy đoán rằng Jack chưa đến.
+Dịch nghĩa: Jack chắc vẫn chưa đến, nếu không thì anh ấy đã gọi điện cho tôi rồi.
+Từ vựng quan trọng:
+* yet: vẫn chưa
+* otherwise: nếu không thì
+* telephone: gọi điện thoại
+* arrive: đến nơi
+Câu 9
+Peter _________come with us tonight, but he isn't very sure.
+A. must
+B. may
+C. can
+D. will
+Đáp án đúng: B. may
+Giải thích ngữ pháp/ngữ nghĩa:
+* may + V nguyên mẫu: Diễn tả khả năng có thể xảy ra nhưng chưa chắc chắn.
+* Cụm he isn't very sure cho biết Peter chưa chắc chắn liệu mình có đi cùng mọi người hay không.
+* A. must: Diễn tả sự bắt buộc hoặc suy đoán chắc chắn, trái với ý chưa chắc chắn.
+* C. can: Diễn tả khả năng hoặc sự cho phép, không phù hợp bằng may trong ngữ cảnh này.
+* D. will: Diễn tả quyết định hoặc dự định tương lai khá chắc chắn, không phù hợp với sự do dự.
+Dịch nghĩa: Peter có thể sẽ đi cùng chúng ta tối nay, nhưng anh ấy vẫn chưa chắc chắn lắm.
+Từ vựng quan trọng:
+* come with someone: đi cùng ai
+* tonight: tối nay
+* be sure: chắc chắn
+Câu 10
+We _________last night, but we went to the concert instead.
+A. must have studied
+B. might study
+C. should have studied
+D. would study
+Đáp án đúng: C. should have studied
+Giải thích ngữ pháp/ngữ nghĩa:
+* should have + V3: Diễn tả một việc đáng lẽ nên làm trong quá khứ nhưng đã không làm.
+* Người nói đáng lẽ nên học bài tối qua, nhưng thực tế lại đi xem hòa nhạc.
+* A. must have studied: Diễn tả sự suy đoán chắc chắn rằng đã học, trái với thông tin trong câu.
+* B. might study: Diễn tả khả năng học ở hiện tại hoặc tương lai, không phù hợp với last night.
+* D. would study: Diễn tả hành động giả định hoặc thói quen trong quá khứ, không phù hợp với ý tiếc nuối.
+Dịch nghĩa: Tối qua chúng tôi đáng lẽ nên học bài, nhưng thay vào đó chúng tôi lại đi xem hòa nhạc.
+Từ vựng quan trọng:
+* last night: tối qua
+* study: học
+* go to the concert: đi xem hòa nhạc
+* instead: thay vào đó
+Test 4:
+Câu 1
+"Could I borrow your dictionary?" – "Yes, of course you ________."
+A. might
+B. will
+C. can
+D. should
+Đáp án đúng: C. can
+Giải thích ngữ pháp/ngữ nghĩa:
+* Could I ...?: Dùng để đưa ra lời đề nghị hoặc xin phép một cách lịch sự.
+* Yes, of course you can: Dùng can để đồng ý và cho phép người khác làm việc gì.
+* A. might: Không phù hợp để trả lời trực tiếp nhằm cấp phép trong ngữ cảnh này.
+* B. will: Diễn tả tương lai hoặc sự sẵn lòng, không phải cách trả lời tự nhiên nhất để cho phép.
+* D. should: Diễn tả lời khuyên hoặc điều nên làm, không mang nghĩa cho phép.
+Dịch nghĩa:
+– Tôi có thể mượn từ điển của bạn được không?
+– Được chứ, tất nhiên là bạn có thể.
+Từ vựng quan trọng:
+* borrow: mượn
+* dictionary: từ điển
+* of course: tất nhiên
+Câu 2
+"I think Jane is at home."
+"No, she_________be at home, for she phoned me from the airport just ten minutes ago."
+A. mustn't
+B. needn't
+C. can't
+D. daren't
+Đáp án đúng: C. can't
+Giải thích ngữ pháp/ngữ nghĩa:
+* can't + V nguyên mẫu: Diễn tả sự suy đoán chắc chắn rằng một điều gì đó không thể đúng.
+* Jane vừa gọi điện từ sân bay cách đây 10 phút, vì vậy người nói suy luận rằng cô ấy không thể đang ở nhà.
+* A. mustn't: Diễn tả sự cấm đoán, không phù hợp với suy đoán.
+* B. needn't: Diễn tả sự không cần thiết phải làm gì.
+* D. daren't: Có nghĩa là không dám làm gì, không phù hợp với ngữ cảnh.
+Dịch nghĩa:
+– Tôi nghĩ Jane đang ở nhà.
+– Không, cô ấy không thể đang ở nhà được, vì cô ấy vừa gọi điện cho tôi từ sân bay cách đây đúng 10 phút.
+Từ vựng quan trọng:
+* at home: ở nhà
+* phone someone: gọi điện cho ai
+* airport: sân bay
+* ten minutes ago: 10 phút trước
+Câu 3
+I ________ like to know where you were born.
+A. shall
+B. would
+C. could
+D. may
+Đáp án đúng: B. would
+Giải thích ngữ pháp/ngữ nghĩa:
+* Would like to + V nguyên mẫu: Diễn tả mong muốn một cách lịch sự, tương đương với want to nhưng trang trọng và nhẹ nhàng hơn.
+* I would like to know... có nghĩa là tôi muốn biết...
+* A. shall: Không tạo thành cách diễn đạt mong muốn phù hợp trong câu này.
+* C. could: Could like không phải cấu trúc thông dụng để diễn tả mong muốn.
+* D. may: May like không phù hợp với ý nghĩa và cấu trúc câu.
+Dịch nghĩa: Tôi muốn biết bạn sinh ra ở đâu.
+Từ vựng quan trọng:
+* would like to: muốn (cách nói lịch sự)
+* be born: được sinh ra
+* know: biết
+Câu 4
+I didn't hear the phone. I ________asleep.
+A. must be
+B. must have been
+C. should be
+D. should have been
+Đáp án đúng: B. must have been
+Giải thích ngữ pháp/ngữ nghĩa:
+* must have + V3: Diễn tả sự suy đoán gần như chắc chắn về một sự việc đã xảy ra trong quá khứ.
+* Must have been asleep nghĩa là chắc hẳn đã ngủ.
+* Người nói không nghe thấy điện thoại reo nên suy đoán rằng mình đã ngủ vào thời điểm đó.
+* A. must be: Dùng để suy đoán về hiện tại, không phù hợp với sự việc trong quá khứ.
+* C. should be: Diễn tả điều nên xảy ra hoặc một suy đoán ở hiện tại, không phù hợp.
+* D. should have been: Diễn tả điều đáng lẽ nên xảy ra trong quá khứ, không phù hợp với ý suy đoán.
+Dịch nghĩa: Tôi đã không nghe thấy điện thoại. Chắc hẳn lúc đó tôi đã ngủ.
+Từ vựng quan trọng:
+* hear: nghe thấy
+* phone: điện thoại
+* asleep: đang ngủ
+* must have been: chắc hẳn đã
+Câu 5
+You ___________the look on his face when he won the prize.
+A. would have see
+B. can be seeing
+C. must see
+D. should have seen
+Đáp án đúng: D. should have seen
+Giải thích ngữ pháp/ngữ nghĩa:
+* should have + V3: Trong câu này, cấu trúc được dùng để nhấn mạnh rằng người nghe đã bỏ lỡ một cảnh tượng rất đáng xem trong quá khứ.
+* You should have seen the look on his face! là cách diễn đạt thường gặp, mang nghĩa “Bạn đáng lẽ phải chứng kiến vẻ mặt của anh ấy!”
+* A. would have see: Sai cấu trúc vì sau would have phải là quá khứ phân từ seen, không phải see.
+* B. can be seeing: Không phù hợp với ngữ cảnh kể lại một sự việc trong quá khứ.
+* C. must see: Diễn tả sự cần thiết hoặc lời khuyên ở hiện tại/tương lai, không phù hợp.
+Dịch nghĩa: Bạn đáng lẽ phải nhìn thấy vẻ mặt của anh ấy khi anh ấy giành được giải thưởng!
+Từ vựng quan trọng:
+* look on someone's face: vẻ mặt của ai
+* win a prize: giành được giải thưởng
+* should have seen: đáng lẽ nên chứng kiến
+Câu 6
+He ________ have committed the crime because he was with me that day.
+A. mustn't
+B. shouldn't
+C. won't
+D. couldn't
+Đáp án đúng: D. couldn't
+Giải thích ngữ pháp/ngữ nghĩa:
+* couldn't have + V3: Diễn tả sự suy đoán chắc chắn rằng một người không thể đã làm việc gì trong quá khứ.
+* Người này ở cùng người nói vào ngày xảy ra vụ án, vì vậy người nói cho rằng anh ta không thể là người đã phạm tội.
+* A. mustn't: Diễn tả sự cấm đoán; không dùng để suy đoán phủ định về quá khứ.
+* B. shouldn't: Shouldn't have committed mang nghĩa đáng lẽ không nên phạm tội, không thể hiện sự khẳng định rằng anh ta không thể phạm tội.
+* C. won't: Diễn tả tương lai hoặc sự từ chối, không phù hợp.
+Dịch nghĩa: Anh ấy không thể đã phạm tội đó được, bởi vì hôm đó anh ấy ở cùng tôi.
+Từ vựng quan trọng:
+* commit a crime: phạm tội
+* because: bởi vì
+* that day: ngày hôm đó
+Câu 7
+Mother _________us stories when we were young.
+A. was used to tell
+B. is used to telling
+C. used to tell
+D. used to telling
+Đáp án đúng: C. used to tell
+Giải thích ngữ pháp/ngữ nghĩa:
+* used to + V nguyên mẫu: Diễn tả một thói quen hoặc trạng thái thường xảy ra trong quá khứ nhưng hiện tại không còn nữa.
+* Mother used to tell us stories nghĩa là mẹ thường kể chuyện cho chúng tôi nghe khi chúng tôi còn nhỏ.
+* A. was used to tell: Sai cấu trúc. Nếu diễn tả thói quen quá khứ, dùng used to tell; nếu diễn tả sự quen với việc gì, dùng was used to telling.
+* B. is used to telling: Có nghĩa là hiện tại đã quen với việc kể chuyện, không phù hợp với mốc thời gian quá khứ.
+* D. used to telling: Sai cấu trúc vì used to diễn tả thói quen quá khứ phải đi với động từ nguyên mẫu.
+Phân biệt quan trọng:
+* used to + V: Đã từng thường xuyên làm gì trong quá khứ.
+* be used to + V-ing/N: Quen với việc gì.
+Dịch nghĩa: Mẹ thường kể chuyện cho chúng tôi nghe khi chúng tôi còn nhỏ.
+Từ vựng quan trọng:
+* mother: mẹ
+* tell someone stories: kể chuyện cho ai nghe
+* when we were young: khi chúng tôi còn nhỏ
+Câu 8
+He _______you more help, even though he was very busy.
+A. might have given
+B. might give
+C. can't have given
+D. may give
+Đáp án đúng: A. might have given
+Giải thích ngữ pháp/ngữ nghĩa:
+* might have + V3: Diễn tả một khả năng có thể đã xảy ra trong quá khứ.
+* Might have given you more help có nghĩa là anh ấy có thể đã giúp bạn nhiều hơn.
+* Cụm even though he was very busy cho biết dù rất bận, anh ấy vẫn có khả năng đã giúp đỡ bạn nhiều hơn.
+* B. might give: Diễn tả khả năng ở hiện tại hoặc tương lai, không phù hợp với ngữ cảnh quá khứ.
+* C. can't have given: Diễn tả suy đoán rằng anh ấy chắc chắn không thể đã giúp bạn, trái với ý nghĩa của câu.
+* D. may give: Diễn tả khả năng ở hiện tại hoặc tương lai.
+Dịch nghĩa: Anh ấy có thể đã giúp bạn nhiều hơn, mặc dù lúc đó anh ấy rất bận.
+Từ vựng quan trọng:
+* give someone help: giúp đỡ ai
+* more: nhiều hơn
+* even though: mặc dù
+* busy: bận rộn
+Câu 9
+Jane ______have kept her word. I wonder why she changed her mind.
+A. must
+B. should
+C. need
+D. would
+Đáp án đúng: B. should
+Giải thích ngữ pháp/ngữ nghĩa:
+* should have + V3: Diễn tả việc đáng lẽ nên làm trong quá khứ nhưng đã không làm.
+* Keep one's word nghĩa là giữ lời hứa.
+* Jane đã thay đổi quyết định thay vì giữ lời hứa, vì vậy người nói cho rằng đáng lẽ cô ấy nên giữ lời.
+* A. must: Must have kept mang nghĩa chắc hẳn đã giữ lời, trái với ngữ cảnh Jane đã thay đổi ý định.
+* C. need: Không phù hợp với cấu trúc và ý nghĩa câu. Nếu dùng needn't have kept, nghĩa sẽ là đã không cần phải giữ lời.
+* D. would: Would have kept thường cần một ngữ cảnh điều kiện giả định, không phù hợp ở đây.
+Dịch nghĩa: Jane đáng lẽ nên giữ lời hứa. Tôi tự hỏi tại sao cô ấy lại thay đổi quyết định.
+Từ vựng quan trọng:
+* keep one's word: giữ lời hứa
+* wonder: tự hỏi
+* change one's mind: thay đổi ý định
+* promise: lời hứa
+Câu 10
+A computer _________think for itself; it must be told what to do.
+A. can't
+B. shouldn't
+C. must
+D. will
+Đáp án đúng: A. can't
+Giải thích ngữ pháp/ngữ nghĩa:
+* can't + V nguyên mẫu: Diễn tả sự không có khả năng làm việc gì.
+* Can't think for itself nghĩa là không thể tự suy nghĩ.
+* Vế sau it must be told what to do giải thích rằng máy tính phải được chỉ dẫn những việc cần làm, vì vậy nó không thể tự suy nghĩ độc lập.
+* B. shouldn't: Mang nghĩa không nên, diễn tả lời khuyên chứ không phải sự thiếu khả năng.
+* C. must: Diễn tả sự bắt buộc hoặc suy đoán chắc chắn, không phù hợp.
+* D. will: Diễn tả tương lai hoặc sự sẵn lòng, không phù hợp với ý nghĩa câu.
+Dịch nghĩa: Máy tính không thể tự suy nghĩ; nó phải được chỉ dẫn những việc cần làm.
+Từ vựng quan trọng:
+* computer: máy tính
+* think for itself: tự suy nghĩ
+* must be told: phải được chỉ dẫn
+* what to do: việc cần làm
+
+
+Test 5:
+Câu 1
+The plant is dead. I ___it more water.
+A. will give
+B. would have given
+C. must give
+D. should have given
+Đáp án đúng: D. should have given
+Giải thích ngữ pháp/ngữ nghĩa:
+* should have + V3: Diễn tả một việc đáng lẽ nên làm trong quá khứ nhưng đã không làm.
+* Cây đã chết, vì vậy người nói nhận ra rằng đáng lẽ mình nên tưới thêm nước cho cây.
+* A. will give: Diễn tả hành động sẽ thực hiện trong tương lai, không phù hợp vì cây đã chết.
+* B. would have given: Diễn tả hành động giả định trong quá khứ, thường cần một điều kiện giả định đi kèm.
+* C. must give: Diễn tả sự bắt buộc hoặc cần thiết ở hiện tại/tương lai.
+Dịch nghĩa: Cây đã chết rồi. Đáng lẽ tôi nên tưới thêm nước cho nó.
+Từ vựng quan trọng:
+* plant: cây trồng
+* dead: chết
+* give something water: tưới nước cho thứ gì đó
+* more: nhiều hơn
+Câu 2
+You _____return the book now. You can keep it till next week.
+A. can't
+B. mustn't
+C. needn't
+D. may not
+Đáp án đúng: C. needn't
+Giải thích ngữ pháp/ngữ nghĩa:
+* needn't + V nguyên mẫu: Diễn tả việc không cần thiết phải làm gì.
+* Vế sau You can keep it till next week cho biết người nghe có thể giữ sách đến tuần sau, nên không cần trả ngay bây giờ.
+* A. can't: Diễn tả không thể hoặc không được phép trả sách, không phù hợp với ý không cần thiết.
+* B. mustn't: Diễn tả sự cấm đoán, mang nghĩa không được trả sách.
+* D. may not: Có thể diễn tả sự không được phép hoặc khả năng không xảy ra, không phù hợp bằng needn't.
+Dịch nghĩa: Bạn không cần phải trả cuốn sách ngay bây giờ. Bạn có thể giữ nó đến tuần sau.
+Từ vựng quan trọng:
+* return: trả lại
+* book: sách
+* keep: giữ
+* till: cho đến
+* next week: tuần tới
+Câu 3
+You'd better _________late next time.
+A. don't
+B. not be
+C. not being
+D. won't be
+Đáp án đúng: B. not be
+Giải thích ngữ pháp/ngữ nghĩa:
+* had better + (not) + V nguyên mẫu: Dùng để đưa ra lời khuyên mạnh hoặc cảnh báo về điều nên hoặc không nên làm.
+* You'd better not be late nghĩa là bạn tốt hơn hết đừng đến muộn.
+* A. don't: Không dùng don't sau had better.
+* C. not being: Sau had better phải dùng động từ nguyên mẫu, không dùng V-ing.
+* D. won't be: Không dùng will sau had better.
+Dịch nghĩa: Lần sau tốt hơn hết bạn đừng đến muộn.
+Từ vựng quan trọng:
+* had better: tốt hơn hết nên
+* late: muộn, trễ
+* next time: lần sau
+Câu 4
+There are so many types here, and I really don't know which one I _______ choose.
+A. should
+B. can
+C. may
+D. must
+Đáp án đúng: A. should
+Giải thích ngữ pháp/ngữ nghĩa:
+* should + V nguyên mẫu: Diễn tả điều nên làm hoặc lựa chọn phù hợp nhất trong một tình huống.
+* Người nói đang phân vân giữa nhiều loại sản phẩm và không biết mình nên chọn loại nào.
+* A. should: Phù hợp với ý hỏi về lựa chọn nên thực hiện.
+* B. can: Diễn tả khả năng hoặc sự cho phép, mang nghĩa có thể chọn loại nào.
+* C. may: Diễn tả khả năng hoặc sự cho phép, không phù hợp bằng should trong ngữ cảnh hỏi về lựa chọn.
+* D. must: Diễn tả sự bắt buộc, mang nghĩa phải chọn loại nào, không phù hợp với sự phân vân.
+Dịch nghĩa: Có quá nhiều loại ở đây và tôi thực sự không biết mình nên chọn loại nào.
+Từ vựng quan trọng:
+* type: loại
+* really: thực sự
+* choose: lựa chọn
+* which one: cái nào
+Câu 5
+I _______ play basketball than football.
+A. would rather
+B. had better
+C. like better
+D. prefer
+Đáp án đúng: A. would rather
+Giải thích ngữ pháp/ngữ nghĩa:
+* would rather + V nguyên mẫu + than + V nguyên mẫu: Diễn tả sự thích làm việc này hơn việc kia.
+* Would rather play basketball than football nghĩa là thích chơi bóng rổ hơn bóng đá.
+* B. had better: Diễn tả lời khuyên mạnh, không dùng với than để so sánh sở thích.
+* C. like better: Cấu trúc thông thường là like A better than B, không dùng like better play A than B.
+* D. prefer: Cần dùng cấu trúc prefer A to B hoặc prefer to V rather than V, không phù hợp với than đứng trực tiếp sau động từ trong câu này.
+Dịch nghĩa: Tôi thích chơi bóng rổ hơn bóng đá.
+Từ vựng quan trọng:
+* would rather: thích ... hơn
+* play basketball: chơi bóng rổ
+* football: bóng đá
+* than: hơn
+Câu 6
+When my father was young, he _________work in the garden for long hours.
+A. can
+B. could
+C. will
+D. should
+Đáp án đúng: B. could
+Giải thích ngữ pháp/ngữ nghĩa:
+* could + V nguyên mẫu: Diễn tả khả năng hoặc năng lực trong quá khứ.
+* Cụm When my father was young xác định thời điểm trong quá khứ. Could work diễn tả khả năng làm việc trong vườn nhiều giờ khi còn trẻ.
+* A. can: Diễn tả khả năng ở hiện tại.
+* C. will: Diễn tả tương lai hoặc sự sẵn lòng.
+* D. should: Diễn tả lời khuyên hoặc điều nên làm, không phù hợp với ý nói về khả năng trong quá khứ.
+Dịch nghĩa: Khi bố tôi còn trẻ, ông có thể làm việc trong vườn suốt nhiều giờ.
+Từ vựng quan trọng:
+* when: khi
+* be young: còn trẻ
+* work in the garden: làm việc trong vườn
+* for long hours: trong nhiều giờ liền
+Câu 7
+– "Must we do it now?" – "No, you ________."
+A. won't
+B. needn't
+C. can't
+D. don't
+Đáp án đúng: B. needn't
+Giải thích ngữ pháp/ngữ nghĩa:
+* Khi câu hỏi bắt đầu bằng Must we...?, nếu câu trả lời là không cần thiết phải làm, ta dùng No, you needn't.
+* needn't + V nguyên mẫu: Không cần phải làm gì.
+* A. won't: Diễn tả sự từ chối hoặc việc sẽ không xảy ra.
+* C. can't: Diễn tả không thể hoặc không được phép.
+* D. don't: Không phải cách trả lời chuẩn cho câu hỏi với must mang nghĩa bắt buộc.
+Dịch nghĩa:
+– Chúng ta có phải làm việc đó ngay bây giờ không?
+– Không, các bạn không cần phải làm ngay.
+Từ vựng quan trọng:
+* must: phải
+* do something: làm việc gì đó
+* now: bây giờ
+* needn't: không cần phải
+Câu 8
+Hurry up! Tom _________for us at the school gate.
+A. must wait
+B. must be waiting
+C. must be waited
+D. must have been waited
+Đáp án đúng: B. must be waiting
+Giải thích ngữ pháp/ngữ nghĩa:
+* must be + V-ing: Diễn tả sự suy đoán gần như chắc chắn rằng một hành động đang diễn ra ở hiện tại.
+* Must be waiting nghĩa là chắc hẳn đang chờ.
+* Câu Hurry up! cho thấy người nói muốn mọi người nhanh lên vì Tom có lẽ đang đợi họ ở cổng trường.
+* A. must wait: Diễn tả sự bắt buộc phải chờ, không diễn tả hành động đang diễn ra.
+* C. must be waited: Dạng bị động, không phù hợp vì Tom là người thực hiện hành động chờ.
+* D. must have been waited: Dạng bị động hoàn thành, không phù hợp với ý nghĩa câu.
+Dịch nghĩa: Nhanh lên! Tom chắc hẳn đang đợi chúng ta ở cổng trường.
+Từ vựng quan trọng:
+* hurry up: nhanh lên
+* wait for someone: chờ ai đó
+* school gate: cổng trường
+Câu 9
+_________ to have lunch with us today ?
+A. Would you like
+B. Do you like
+C. Will you like
+D. Have you like
+Đáp án đúng: A. Would you like
+Giải thích ngữ pháp/ngữ nghĩa:
+* Would you like + to V...?: Dùng để đưa ra lời mời hoặc hỏi mong muốn của ai đó một cách lịch sự.
+* Would you like to have lunch with us? nghĩa là bạn có muốn ăn trưa cùng chúng tôi không?
+* B. Do you like: Do you like to have lunch...? thường hỏi về sở thích hoặc thói quen, không phải cách mời lịch sự tự nhiên nhất.
+* C. Will you like: Không phải cấu trúc thông dụng để đưa ra lời mời.
+* D. Have you like: Sai cấu trúc ngữ pháp vì sau have trong hiện tại hoàn thành phải là quá khứ phân từ.
+Dịch nghĩa: Hôm nay bạn có muốn ăn trưa cùng chúng tôi không?
+Từ vựng quan trọng:
+* would you like: bạn có muốn ... không?
+* have lunch: ăn trưa
+* with us: cùng chúng tôi
+* today: hôm nay
+Câu 10
+Tom painted his room black. It looks dark and dreary. He ________ have chosen another colour.
+A. should
+B. must
+C. could
+D. may
+Đáp án đúng: A. should
+Giải thích ngữ pháp/ngữ nghĩa:
+* should have + V3: Diễn tả một việc đáng lẽ nên làm trong quá khứ nhưng đã không làm.
+* Tom đã sơn phòng màu đen và căn phòng trông tối tăm, ảm đạm. Người nói cho rằng đáng lẽ Tom nên chọn một màu khác.
+* B. must have chosen: Diễn tả sự suy đoán rằng Tom chắc hẳn đã chọn màu khác, trái với thông tin câu đầu.
+* C. could have chosen: Diễn tả một khả năng hoặc lựa chọn có thể đã thực hiện trong quá khứ; không nhấn mạnh sự tiếc nuối hoặc lời phê bình như should have.
+* D. may have chosen: Diễn tả khả năng Tom đã chọn, không phù hợp với ngữ cảnh.
+Dịch nghĩa: Tom đã sơn phòng của mình màu đen. Căn phòng trông tối tăm và ảm đạm. Đáng lẽ cậu ấy nên chọn một màu khác.
+Từ vựng quan trọng:
+* paint: sơn
+* room: căn phòng
+* black: màu đen
+* dark: tối tăm
+* dreary: ảm đạm, buồn tẻ
+* choose another colour: chọn một màu khác

@@ -1,0 +1,85 @@
+=== 01-part5-tong-hop-1.txt  416 câu / 32 test  (8 cảnh báo)
+     10 câu | SUBMARINE 2024 / Lesson 1 / Test 1
+     10 câu | SUBMARINE 2024 / Lesson 1 / Test 2
+     10 câu | SUBMARINE 2024 / Lesson 1 / Test 3
+     10 câu | SUBMARINE 2024 / Lesson 1 / Test 4
+     10 câu | SUBMARINE 2024 / Lesson 1 / Test 5
+     10 câu | SUBMARINE 2024 / Lesson 1 / Test 6
+     10 câu | SUBMARINE 2024 / Lesson 1 / Test 7
+     10 câu | SUBMARINE 2024 / Lesson 1 / Test 8
+     10 câu | SUBMARINE 2024 / Lesson 2 / Test 1
+     10 câu | SUBMARINE 2024 / Lesson 2 / Test 2
+     10 câu | SUBMARINE 2024 / Lesson 2 / Test 3
+     10 câu | SUBMARINE 2024 / Lesson 2 / Test 4
+     10 câu | SUBMARINE 2024 / Lesson 2 / Test 5
+     10 câu | SUBMARINE 2024 / Lesson 2 / Test 6
+     10 câu | SUBMARINE 2024 / Lesson 2 / Test 7
+     10 câu | SUBMARINE 2024 / Lesson 2 / Test 8
+     10 câu | SUBMARINE 2024 / Lesson 2 / Test 9
+     10 câu | SUBMARINE 2024 / Lesson 2 / Test 10
+     10 câu | SUBMARINE 2024 / Lesson 2 / Test 11
+     10 câu | SUBMARINE 2024 / Lesson 3 / Test 1
+     10 câu | SUBMARINE 2024 / Lesson 3 / Test 2
+     10 câu | SUBMARINE 2024 / Lesson 3 / Test 3
+     10 câu | SUBMARINE 2024 / Lesson 3 / Test 4
+     10 câu | SUBMARINE 2024 / Lesson 3 / Test 5
+     10 câu | SUBMARINE 2024 / Lesson 3 / Test 6
+     10 câu | SUBMARINE 2024 / Lesson 3 / Test 7
+     10 câu | SUBMARINE 2024 / Lesson 3 / Test 8
+     30 câu | SUBMARINE 2024 / Lesson 4 / Test 1
+     28 câu | SUBMARINE 2024 / Lesson 4 / Test 2
+     29 câu | SUBMARINE 2024 / Lesson 4 / Test 3
+     30 câu | SUBMARINE 2024 / Lesson 4 / Test 4
+     29 câu | SUBMARINE 2024 / Lesson 4 / Test 5
+    ! SUBMARINE 2024 / Lesson 4 / Test 1 | thiếu: từ vựng | To receive ______, please be sure the appropriate box is checked on th
+    ! SUBMARINE 2024 / Lesson 4 / Test 2 | thiếu: đủ 4 đáp án, đáp án C không có trong A-D | The community program features classes in photography, drawing, ______
+    ! SUBMARINE 2024 / Lesson 4 / Test 2 | thiếu: đủ 4 đáp án, đáp án A không có trong A-D | Glass containers must be ______ secured during transport.
+    ! SUBMARINE 2024 / Lesson 4 / Test 2 | thiếu: đủ 4 đáp án, đáp án D không có trong A-D | This month's ______ figures have increased five percent over the last 
+    ! SUBMARINE 2024 / Lesson 4 / Test 2 | thiếu: đủ 4 đáp án, đáp án A không có trong A-D | Summer interns may ______ either free company housing or a stipend of 
+    ! SUBMARINE 2024 / Lesson 4 / Test 2 | thiếu: đủ 4 đáp án, đáp án A không có trong A-D | The department's most ______ production unit will receive a bonus at t
+    ! SUBMARINE 2024 / Lesson 4 / Test 2 | thiếu: đủ 4 đáp án, đáp án B không có trong A-D, từ vựng | Al's Café will now be open on Sundays ______ the hours of 9 A.M. and 5
+    ! SUBMARINE 2024 / Lesson 4 / Test 2 | thiếu: đủ 4 đáp án, đáp án B không có trong A-D | Mr. Liu will not be in the office this morning ______ he has a dentist
+=== 02-part5-tong-hop-2.txt  350 câu / 12 test  (0 cảnh báo)
+     30 câu | SUBMARINE 2026 / Lesson 1 / Test 1
+     30 câu | SUBMARINE 2026 / Lesson 1 / Test 2
+     30 câu | SUBMARINE 2026 / Lesson 2 / Test 1
+     30 câu | SUBMARINE 2026 / Lesson 2 / Test 2
+     30 câu | SUBMARINE 2026 / Lesson 3 / Test 1
+     20 câu | SUBMARINE 2026 / Lesson 3 / Test 2
+     30 câu | SUBMARINE 2026 / Lesson 4 / Test 1
+     30 câu | SUBMARINE 2026 / Lesson 4 / Test 2
+     30 câu | SUBMARINE 2026 / Lesson 5 / Test 1
+     30 câu | SUBMARINE 2026 / Lesson 5 / Test 2
+     30 câu | SUBMARINE 2026 / Lesson 6 / Test 1
+     30 câu | SUBMARINE 2026 / Lesson 6 / Test 2
+=== 03-dong-tu-khuyet-thieu.txt  50 câu / 5 test  (0 cảnh báo)
+     10 câu | Test 1
+     10 câu | Test 2
+     10 câu | Test 3
+     10 câu | Test 4
+     10 câu | Test 5
+=== 04-danh-dong-tu-nguyen-the.txt  50 câu / 5 test  (0 cảnh báo)
+     10 câu | Test 1
+     10 câu | Test 2
+     10 câu | Test 3
+     10 câu | Test 4
+     10 câu | Test 5
+=== 05-menh-de-danh-ngu.txt  50 câu / 5 test  (0 cảnh báo)
+     10 câu | Test 1
+     10 câu | Test 2
+     10 câu | Test 3
+     10 câu | Test 4
+     10 câu | Test 5
+=== 06-so-sanh.txt  50 câu / 5 test  (0 cảnh báo)
+     10 câu | Test 1
+     10 câu | Test 2
+     10 câu | Test 3
+     10 câu | Test 4
+     10 câu | Test 5
+
+TỔNG: 966 câu
+   766 | Part 5 tổng hợp
+    50 | Động từ khuyết thiếu
+    50 | Danh động từ & Nguyên thể
+    50 | Mệnh đề danh ngữ
+    50 | So sánh

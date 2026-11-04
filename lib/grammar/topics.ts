@@ -34,6 +34,22 @@ export const TOPICS: TopicConfig[] = [
     color: "#10b981",
   },
   {
+    id: "Động từ khuyết thiếu",
+    slug: "dong-tu-khuyet-thieu",
+    name: "Động từ khuyết thiếu",
+    testSizes: [10, 10, 10, 10, 10],
+    emoji: "🛠️",
+    color: "#a855f7",
+  },
+  {
+    id: "Danh động từ & Nguyên thể",
+    slug: "danh-dong-tu-nguyen-the",
+    name: "Danh động từ & Nguyên thể",
+    testSizes: [10, 10, 10, 10, 10],
+    emoji: "🌱",
+    color: "#22c55e",
+  },
+  {
     id: "Danh từ & Đại từ",
     slug: "danh-tu-dai-tu",
     name: "Danh từ & Đại từ",
@@ -74,6 +90,14 @@ export const TOPICS: TopicConfig[] = [
     color: "#f97316",
   },
   {
+    id: "Mệnh đề danh ngữ",
+    slug: "menh-de-danh-ngu",
+    name: "Mệnh đề danh ngữ",
+    testSizes: [10, 10, 10, 10, 10],
+    emoji: "🧩",
+    color: "#d946ef",
+  },
+  {
     id: "Câu điều kiện",
     slug: "cau-dieu-kien",
     name: "Câu điều kiện",
@@ -85,7 +109,8 @@ export const TOPICS: TopicConfig[] = [
     id: "So sánh",
     slug: "so-sanh",
     name: "So sánh",
-    testSizes: [25, 25, 25, 25, 25, 25, 25, 25],
+    // 8 test bank cũ + 5 test từ thẻ "SO SÁNH" trong Docs.
+    testSizes: [25, 25, 25, 25, 25, 25, 25, 25, 10, 10, 10, 10, 10],
     emoji: "⚖️",
     color: "#0ea5e9",
   },
@@ -96,6 +121,19 @@ export const TOPICS: TopicConfig[] = [
     testSizes: [30, 30, 30, 30, 30, 30, 30, 30],
     emoji: "🔍",
     color: "#84cc16",
+  },
+  {
+    id: "Part 5 tổng hợp",
+    slug: "part-5-tong-hop",
+    name: "Part 5 tổng hợp",
+    // Hai thẻ "PART 5 TỔNG HỢP" trong Docs: đề trộn nhiều chủ điểm, giữ đúng
+    // số câu mỗi Test như bản gốc (xem scripts/data/grammar-docs/).
+    testSizes: [
+      10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 30,
+      21, 29, 30, 29, 30, 30, 30, 30, 30, 20, 30, 30, 30, 30, 30, 30,
+    ],
+    emoji: "📚",
+    color: "#64748b",
   },
 ];
 
