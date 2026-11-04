@@ -792,3 +792,40 @@ model VocabDeckAssignment {
   @@index([studentCode, dueDate])
   @@map("vocab_deck_assignments")
 }
+
+/// Bộ phương án cho dạng quiz "chọn dạng từ" (Part 5 word form).
+///
+/// KHÔNG gắn vào VocabCard mà khoá theo (wordKey, exampleHash): cùng một câu
+/// ví dụ lặp lại ở nhiều bộ của nhiều học viên, sinh một lần rồi dùng chung.
+///
+/// Khác mọi dạng quiz còn lại, dạng này do AI soạn nên KHÔNG chắc đúng: luật
+/// không chặn được câu có hai đáp án ("a business luncheon/lunch"). Đã qua một
+/// lượt AI kiểm chéo khi sinh, nhưng vẫn để học viên báo sai — câu bị báo sẽ
+/// tắt ngay và chờ thầy xem lại.
+model VocabWordForm {
+  id           String   @id @default(cuid())
+
+  wordKey      String   @map("word_key")
+  /// sha1 của câu ví dụ gốc — để một từ có nhiều câu ví dụ vẫn tách bạch
+  exampleHash  String   @map("example_hash")
+
+  /// Câu đã khoét lỗ, lưu sẵn để khỏi chạy lại taoChoTrong
+  cloze        String   @db.Text
+  /// Dạng đúng — chính chữ đã bị khoét trong câu
+  answer       String
+  /// 3 phương án nhiễu cùng gốc
+  distractors  String[]
+
+  /// "ok" đang dùng · "reported" học viên báo sai, tạm tắt · "rejected" thầy bỏ
+  status       String   @default("ok")
+  reportCount  Int      @default(0) @map("report_count")
+  /// Học viên báo sai kèm lý do gì — để thầy xử nhanh
+  reportNote   String?  @map("report_note") @db.Text
+
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  @@unique([wordKey, exampleHash])
+  @@index([wordKey, status])
+  @@index([status, reportCount])
+  @@map("vocab_word_forms")
+}

@@ -1,4 +1,4 @@
-import type { CardRow, ProgressRow } from "./client";
+import type { CardRow, ProgressRow, WordFormRow } from "./client";
 import { taoChoTrong } from "./cloze";
 
 /**
@@ -18,7 +18,8 @@ export type QuizType =
   | "listen-to-meaning"
   | "listen-to-typing"
   | "cloze-to-word"
-  | "cloze-to-typing";
+  | "cloze-to-typing"
+  | "wordform-to-word";
 
 export const QUIZ_TYPES: {
   id: QuizType;
@@ -26,24 +27,27 @@ export const QUIZ_TYPES: {
   canAnh: boolean;
   canNghe: boolean;
   canViDu: boolean;
+  /** Cần bộ phương án "chọn dạng từ" do AI soạn sẵn. */
+  canDangTu: boolean;
 }[] = [
-  { id: "word-to-meaning", nhan: "Từ → chọn nghĩa", canAnh: false, canNghe: false, canViDu: false },
-  { id: "meaning-to-word", nhan: "Nghĩa → chọn từ", canAnh: false, canNghe: false, canViDu: false },
-  { id: "meaning-to-typing", nhan: "Nghĩa → gõ từ", canAnh: false, canNghe: false, canViDu: false },
-  { id: "listen-to-word", nhan: "Nghe → chọn từ", canAnh: false, canNghe: true, canViDu: false },
-  { id: "listen-to-meaning", nhan: "Nghe → chọn nghĩa", canAnh: false, canNghe: true, canViDu: false },
-  { id: "listen-to-typing", nhan: "Nghe → gõ từ", canAnh: false, canNghe: true, canViDu: false },
-  { id: "word-to-image", nhan: "Từ → chọn ảnh", canAnh: true, canNghe: false, canViDu: false },
-  { id: "image-to-word", nhan: "Ảnh → chọn từ", canAnh: true, canNghe: false, canViDu: false },
-  { id: "image-to-typing", nhan: "Ảnh → gõ từ", canAnh: true, canNghe: false, canViDu: false },
-  { id: "listen-to-image", nhan: "Nghe → chọn ảnh", canAnh: true, canNghe: true, canViDu: false },
-  { id: "cloze-to-word", nhan: "Điền chỗ trống → chọn từ", canAnh: false, canNghe: false, canViDu: true },
-  { id: "cloze-to-typing", nhan: "Điền chỗ trống → gõ từ", canAnh: false, canNghe: false, canViDu: true },
+  { id: "word-to-meaning", nhan: "Từ → chọn nghĩa", canAnh: false, canNghe: false, canViDu: false, canDangTu: false },
+  { id: "meaning-to-word", nhan: "Nghĩa → chọn từ", canAnh: false, canNghe: false, canViDu: false, canDangTu: false },
+  { id: "meaning-to-typing", nhan: "Nghĩa → gõ từ", canAnh: false, canNghe: false, canViDu: false, canDangTu: false },
+  { id: "listen-to-word", nhan: "Nghe → chọn từ", canAnh: false, canNghe: true, canViDu: false, canDangTu: false },
+  { id: "listen-to-meaning", nhan: "Nghe → chọn nghĩa", canAnh: false, canNghe: true, canViDu: false, canDangTu: false },
+  { id: "listen-to-typing", nhan: "Nghe → gõ từ", canAnh: false, canNghe: true, canViDu: false, canDangTu: false },
+  { id: "word-to-image", nhan: "Từ → chọn ảnh", canAnh: true, canNghe: false, canViDu: false, canDangTu: false },
+  { id: "image-to-word", nhan: "Ảnh → chọn từ", canAnh: true, canNghe: false, canViDu: false, canDangTu: false },
+  { id: "image-to-typing", nhan: "Ảnh → gõ từ", canAnh: true, canNghe: false, canViDu: false, canDangTu: false },
+  { id: "listen-to-image", nhan: "Nghe → chọn ảnh", canAnh: true, canNghe: true, canViDu: false, canDangTu: false },
+  { id: "cloze-to-word", nhan: "Điền chỗ trống → chọn từ", canAnh: false, canNghe: false, canViDu: true, canDangTu: false },
+  { id: "cloze-to-typing", nhan: "Điền chỗ trống → gõ từ", canAnh: false, canNghe: false, canViDu: true, canDangTu: false },
+  { id: "wordform-to-word", nhan: "Chọn dạng từ (Part 5)", canAnh: false, canNghe: false, canViDu: false, canDangTu: true },
 ];
 
-/** Dạng điền từ — đề bài là một câu, không phải một từ, nên hiện khác. */
+/** Đề bài là cả một câu, không phải một từ — cần hiện khác (cỡ chữ, canh lề). */
 export function laDienTu(t: QuizType): boolean {
-  return t.startsWith("cloze-");
+  return t.startsWith("cloze-") || t.startsWith("wordform-");
 }
 
 /** Số thẻ ra được câu điền từ — để màn chọn dạng biết có khoá hay không. */
@@ -73,12 +77,18 @@ function choTrongCua(c: CardRow): string | null {
  * "image-to-word" (gạch nối nằm ở đầu), nên hai dạng image-to-* coi như không
  * cần ảnh: thẻ trắng vẫn sinh câu và đề bài hiện ra trống trơn.
  */
-function canChoDe(t: QuizType): { anh: boolean; nghia: boolean; viDu: boolean } {
+function canChoDe(t: QuizType): { anh: boolean; nghia: boolean; viDu: boolean; dangTu: boolean } {
   return {
     anh: t.startsWith("image-"),
     nghia: t.startsWith("meaning-"),
     viDu: t.startsWith("cloze-"),
+    dangTu: t.startsWith("wordform-"),
   };
+}
+
+/** Dạng chọn dạng từ — đề là câu, phương án do AI soạn chứ không lấy từ bộ. */
+export function laDangTu(t: QuizType): boolean {
+  return t.startsWith("wordform-");
 }
 
 function canChoPhuongAn(t: QuizType): { anh: boolean; nghia: boolean } {
@@ -98,6 +108,13 @@ export interface PhuongAn {
 
 export interface CauHoi {
   id: string;
+  /**
+   * Dòng vocab_word_forms đứng sau câu này — chỉ dạng wordform.
+   *
+   * Cần để học viên báo sai được: dạng này do AI soạn nên sẽ có câu hỏng,
+   * phải có đường gỡ chứ không chỉ mong nó đúng.
+   */
+  formId?: string;
   wordKey: string;
   word: string;
   type: QuizType;
@@ -133,11 +150,14 @@ function duocLamNhieu(c: CardRow, t: QuizType): boolean {
  * trắc nghiệm thì còn phải hiện được ở vị trí phương án (vì đáp án đúng nằm
  * trong đó).
  */
-function dungDuoc(c: CardRow, t: QuizType): boolean {
+function dungDuoc(c: CardRow, t: QuizType, dangTu?: Map<string, WordFormRow>): boolean {
   const de = canChoDe(t);
   if (de.anh && !c.imageUrl) return false;
   if (de.nghia && !c.meaningVi) return false;
   if (de.viDu && choTrongCua(c) === null) return false;
+  // Dạng chọn dạng từ tự mang phương án theo, không mượn thẻ khác trong bộ,
+  // nên thoát khỏi mọi điều kiện còn lại — chỉ cần có bộ phương án đã soạn.
+  if (de.dangTu) return dangTu?.has(c.wordKey) === true;
   if (!laDangGo(t) && !duocLamNhieu(c, t)) return false;
   // Dạng nghe đọc chính từ đó nên thẻ nào cũng được
   return true;
@@ -169,8 +189,38 @@ function nhanPhuongAn(c: CardRow, t: QuizType): PhuongAn {
   return { id: c.wordKey, label: c.meaningVi ?? c.word, dung: false };
 }
 
-function taoCau(c: CardRow, t: QuizType, pool: CardRow[], stt: number): CauHoi | null {
-  if (!dungDuoc(c, t)) return null;
+function taoCau(
+  c: CardRow,
+  t: QuizType,
+  pool: CardRow[],
+  stt: number,
+  dangTu?: Map<string, WordFormRow>
+): CauHoi | null {
+  if (!dungDuoc(c, t, dangTu)) return null;
+
+  // Dạng chọn dạng từ đi đường riêng: đề và cả 4 phương án đều nằm sẵn trong
+  // bộ đã soạn. Đáp án đúng là DẠNG ĐÃ CHIA trong câu ("implies"), không phải
+  // chữ trên thẻ ("imply") — chấm theo c.word là sai.
+  if (laDangTu(t)) {
+    const r = dangTu!.get(c.wordKey)!;
+    const pa = tron(
+      [r.answer, ...r.distractors].map((x) => ({ id: x.toLowerCase(), label: x, dung: false }))
+    );
+    const dung = pa.find((p) => p.id === r.answer.toLowerCase());
+    if (!dung) return null;
+    dung.dung = true;
+    return {
+      id: `q${stt}_${c.wordKey}_${t}`,
+      formId: r.id,
+      wordKey: c.wordKey,
+      word: c.word,
+      type: t,
+      de: { chu: r.cloze },
+      phuongAn: pa,
+      dapAn: r.answer,
+      nghia: c.meaningVi ?? undefined,
+    };
+  }
 
   const de: CauHoi["de"] = {};
   if (t.startsWith("listen-")) de.nghe = true;
@@ -222,8 +272,14 @@ export interface TuyChonQuiz {
 export function sinhCauHoi(
   cards: CardRow[],
   progress: ProgressRow[],
-  opt: TuyChonQuiz
-): { cauHoi: CauHoi[]; boQua: { thieuAnh: number; thieuNghia: number; thieuViDu: number } } {
+  opt: TuyChonQuiz,
+  /** Bộ phương án "chọn dạng từ" do AI soạn sẵn, tải từ server theo bộ thẻ. */
+  dangTu: WordFormRow[] = []
+): {
+  cauHoi: CauHoi[];
+  boQua: { thieuAnh: number; thieuNghia: number; thieuViDu: number; thieuDangTu: number };
+} {
+  const mapDangTu = new Map(dangTu.map((d) => [d.wordKey, d]));
   const td = new Map(progress.map((p) => [p.wordKey, p]));
   const denHan = (c: CardRow) => {
     const p = td.get(c.wordKey);
@@ -234,21 +290,22 @@ export function sinhCauHoi(
 
   const pool = opt.chiDenHan ? cards.filter(denHan) : cards;
 
-  const boQua = { thieuAnh: 0, thieuNghia: 0, thieuViDu: 0 };
+  const boQua = { thieuAnh: 0, thieuNghia: 0, thieuViDu: 0, thieuDangTu: 0 };
   let tatCa: CauHoi[] = [];
   let stt = 0;
 
   for (const c of pool) {
     for (const t of opt.modes) {
-      if (!dungDuoc(c, t)) {
+      if (!dungDuoc(c, t, mapDangTu)) {
         const de = canChoDe(t);
         const pa = canChoPhuongAn(t);
-        if ((de.anh || pa.anh) && !c.imageUrl) boQua.thieuAnh++;
+        if (de.dangTu) boQua.thieuDangTu++;
+        else if ((de.anh || pa.anh) && !c.imageUrl) boQua.thieuAnh++;
         else if ((de.nghia || pa.nghia) && !c.meaningVi) boQua.thieuNghia++;
         else if (de.viDu) boQua.thieuViDu++;
         continue;
       }
-      const cau = taoCau(c, t, cards, stt++);
+      const cau = taoCau(c, t, cards, stt++, mapDangTu);
       if (cau) tatCa.push(cau);
     }
   }

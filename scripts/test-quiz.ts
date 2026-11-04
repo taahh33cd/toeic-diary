@@ -6,7 +6,7 @@
 
 import { chamGo, laDangGo, sinhCauHoi, type QuizType } from "@/lib/vocab/quiz";
 import { O_TRONG } from "@/lib/vocab/cloze";
-import type { CardRow, ProgressRow } from "@/lib/vocab/client";
+import type { CardRow, ProgressRow, WordFormRow } from "@/lib/vocab/client";
 
 let pass = 0;
 let fail = 0;
@@ -224,6 +224,8 @@ console.log("\n9. Cả 12 dạng: số câu đúng với số thẻ đủ dữ l
     "listen-to-typing": 6,
     "cloze-to-word": 3,
     "cloze-to-typing": 3,
+    // Không truyền bộ phương án nào vào → không câu nào
+    "wordform-to-word": 0,
   };
 
   for (const [t, n] of Object.entries(mongDoi) as [QuizType, number][]) {
@@ -291,6 +293,62 @@ console.log("\n11. Dạng điền vào chỗ trống");
   const r = sinhCauHoi(khong, [], { modes: ["cloze-to-word"] });
   check("chỉ 4 thẻ khoét được ra câu", r.cauHoi.length === 4, `ra ${r.cauHoi.length}`);
   check("3 thẻ còn lại đếm vào thieuViDu", r.boQua.thieuViDu === 3, `${r.boQua.thieuViDu}`);
+}
+
+console.log("\n12. Dạng chọn dạng từ (Part 5 word form)");
+{
+  const co = ["imply", "renovate", "diversify", "launch"].map((w) => the(w));
+  const bo: WordFormRow[] = [
+    {
+      id: "wf_1",
+      wordKey: "imply",
+      cloze: `The proposition ${O_TRONG} that my dog is a mammal.`,
+      answer: "implies",
+      distractors: ["imply", "implying", "implication"],
+    },
+    {
+      id: "wf_2",
+      wordKey: "renovate",
+      cloze: `The ${O_TRONG} of the old building took six months.`,
+      answer: "renovation",
+      distractors: ["renovate", "renovating", "renovated"],
+    },
+  ];
+
+  const { cauHoi, boQua } = sinhCauHoi(co, [], { modes: ["wordform-to-word"] }, bo);
+  check("chỉ 2/4 thẻ có bộ phương án → 2 câu", cauHoi.length === 2, `ra ${cauHoi.length}`);
+  check("2 thẻ còn lại đếm vào thieuDangTu", boQua.thieuDangTu === 2, `${boQua.thieuDangTu}`);
+
+  // Lỗi dễ mắc nhất: chấm theo chữ trên thẻ ("imply") thay vì dạng đã chia
+  const q = cauHoi.find((c) => c.wordKey === "imply")!;
+  check('đáp án là dạng đã chia "implies", không phải "imply"',
+    q.dapAn === "implies", q.dapAn);
+  check("phương án đúng đúng là dạng đã chia",
+    q.phuongAn?.find((x) => x.dung)?.label === "implies",
+    JSON.stringify(q.phuongAn));
+
+  check("đủ 4 phương án", cauHoi.every((c) => c.phuongAn?.length === 4),
+    cauHoi.map((c) => c.phuongAn?.length).join());
+  check("đúng MỘT phương án đúng",
+    cauHoi.every((c) => c.phuongAn?.filter((x) => x.dung).length === 1));
+  check("phương án KHÔNG lấy từ thẻ khác trong bộ",
+    !q.phuongAn?.some((x) => ["renovate", "diversify", "launch"].includes(x.label ?? "")),
+    JSON.stringify(q.phuongAn?.map((x) => x.label)));
+  check("đề bài là câu đã khoét lỗ",
+    cauHoi.every((c) => c.de.chu?.includes(O_TRONG) === true));
+  check("mang theo formId để báo sai được",
+    cauHoi.every((c) => c.formId === "wf_1" || c.formId === "wf_2"),
+    cauHoi.map((c) => c.formId).join());
+
+  // Không truyền bộ phương án thì dạng này phải tắt hẳn, không được bịa câu
+  const khong = sinhCauHoi(co, [], { modes: ["wordform-to-word"] });
+  check("không có bộ phương án → 0 câu", khong.cauHoi.length === 0,
+    `ra ${khong.cauHoi.length}`);
+
+  // Bộ phương án của từ không có trong bộ thẻ thì kệ, không được lôi vào
+  const thua = sinhCauHoi([the("imply")], [], { modes: ["wordform-to-word"] }, bo);
+  check("bỏ qua bộ phương án của từ không có trong bộ thẻ",
+    thua.cauHoi.length === 1, `ra ${thua.cauHoi.length}`);
 }
 
 console.log(`\n${"─".repeat(50)}\n${pass} đạt, ${fail} lỗi`);

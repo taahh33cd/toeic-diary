@@ -264,3 +264,38 @@ export async function setVisibility(id: string, visibility: "private" | "link" |
   window.dispatchEvent(new Event("decks:changed"));
   return r;
 }
+
+// ── Dạng "chọn dạng từ" (Part 5 word form) ──────────────────────────────────
+
+/**
+ * Bộ phương án cho một câu hỏi chọn dạng từ.
+ *
+ * Server đã lọc theo câu ví dụ THẬT của thẻ (khớp exampleHash) nên trong một
+ * bộ thẻ, mỗi wordKey nhiều nhất một dòng — khớp theo wordKey là đủ.
+ */
+export interface WordFormRow {
+  id: string;
+  wordKey: string;
+  cloze: string;
+  answer: string;
+  distractors: string[];
+}
+
+export function listWordForms(deckId: string) {
+  return call<{ forms: WordFormRow[] }>(
+    `/api/flashcards/wordforms?deckId=${encodeURIComponent(deckId)}`
+  );
+}
+
+/**
+ * Học viên báo câu hỏi sai.
+ *
+ * Dạng này do AI soạn nên sẽ có câu hỏng lọt lưới; báo xong câu tắt ngay cho
+ * mọi người, không chờ thầy duyệt — thà mất một câu còn hơn để nó dạy sai.
+ */
+export function reportWordForm(id: string, note?: string) {
+  return call<{ ok: true }>("/api/flashcards/wordforms", {
+    method: "POST",
+    body: JSON.stringify({ id, note }),
+  });
+}

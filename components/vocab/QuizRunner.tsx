@@ -13,7 +13,7 @@ import {
   type QuizType,
 } from "@/lib/vocab/quiz";
 import { O_TRONG } from "@/lib/vocab/cloze";
-import type { CardRow, ProgressRow } from "@/lib/vocab/client";
+import { listWordForms, reportWordForm, type CardRow, type ProgressRow, type WordFormRow } from "@/lib/vocab/client";
 
 const GREEN = "var(--accent-green, #4A7C59)";
 const RED = "var(--accent-red, #B94040)";
@@ -44,7 +44,12 @@ export default function QuizRunner({
   const [batDau, setBatDau] = useState(false);
 
   const [cauHoi, setCauHoi] = useState<CauHoi[]>([]);
-  const [boQua, setBoQua] = useState({ thieuAnh: 0, thieuNghia: 0, thieuViDu: 0 });
+  const [boQua, setBoQua] = useState({ thieuAnh: 0, thieuNghia: 0, thieuViDu: 0, thieuDangTu: 0 });
+  const [dangTu, setDangTu] = useState<WordFormRow[]>([]);
+  // Khoá dạng này trong lúc tải, và nói rõ là ĐANG TẢI chứ không phải "chưa
+  // soạn" — nhãn sai làm học viên tưởng bộ thẻ của mình không có câu nào.
+  const [taiDangTu, setTaiDangTu] = useState(true);
+  const [daBao, setDaBao] = useState<Set<string>>(new Set());
   const [idx, setIdx] = useState(0);
   const [daChon, setDaChon] = useState<string | null>(null);
   const [nhap, setNhap] = useState("");
@@ -57,6 +62,23 @@ export default function QuizRunner({
   const batDauCau = useRef(Date.now());
   const batDauPhien = useRef(Date.now());
   const oNhap = useRef<HTMLInputElement>(null);
+
+  // Bộ phương án "chọn dạng từ" do AI soạn sẵn, nằm ở server chứ không trên
+  // thẻ. Tải một lần; hỏng thì chỉ mất dạng đó, các dạng khác vẫn chạy.
+  useEffect(() => {
+    let huy = false;
+    listWordForms(deckId)
+      .then((r) => {
+        if (!huy) setDangTu(r.forms);
+      })
+      .catch(() => {})
+      .finally(() => {
+        if (!huy) setTaiDangTu(false);
+      });
+    return () => {
+      huy = true;
+    };
+  }, [deckId]);
 
   const coAnh = useMemo(() => cards.filter((c) => c.imageUrl).length, [cards]);
   // Đếm thẻ KHOÉT ĐƯỢC, không phải thẻ có ví dụ: câu ví dụ không chứa từ, hay
@@ -113,6 +135,26 @@ export default function QuizRunner({
     ]);
   }
 
+  /**
+   * Học viên báo câu hỏi sai.
+   *
+   * Chỉ có ở dạng chọn dạng từ — dạng duy nhất do AI soạn, không có luật nào
+   * chặn được câu hai đáp án ("a business luncheon/lunch"). Báo xong bỏ qua
+   * câu luôn, KHÔNG tính vào kết quả: câu hỏi hỏng thì trả lời kiểu gì cũng
+   * không nói lên điều gì về học viên.
+   */
+  async function bao() {
+    if (!cau?.formId || daBao.has(cau.formId)) return;
+    const id = cau.formId;
+    setDaBao((s) => new Set(s).add(id));
+    try {
+      await reportWordForm(id);
+    } catch {
+      // Báo hụt thì thôi, không chặn học viên làm tiếp
+    }
+    tiep();
+  }
+
   function tiep() {
     if (idx + 1 >= cauHoi.length) {
       setXong(true);
@@ -136,7 +178,7 @@ export default function QuizRunner({
 
   // ── Màn chọn dạng ──
   if (!batDau) {
-    const thu = sinhCauHoi(cards, progress, { modes, chiDenHan });
+    const thu = sinhCauHoi(cards, progress, { modes, chiDenHan }, dangTu);
     return (
       <div style={{ maxWidth: 640, margin: "0 auto" }} className="space-y-4">
         <div className="flex items-center gap-3">
@@ -155,12 +197,19 @@ export default function QuizRunner({
           <div className="grid gap-1.5" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))" }}>
             {QUIZ_TYPES.map((t) => {
               const chon = modes.includes(t.id);
-              const khoa = (t.canAnh && coAnh < 4) || (t.canViDu && coViDu === 0);
+              const khoa =
+                (t.canAnh && coAnh < 4) ||
+                (t.canViDu && coViDu === 0) ||
+                (t.canDangTu && (taiDangTu || dangTu.length === 0));
               const viSao = t.canAnh && coAnh < 4
                 ? "Cần ít nhất 4 thẻ có ảnh"
                 : t.canViDu && coViDu === 0
                   ? "Cần thẻ có câu ví dụ chứa chính từ đó"
-                  : undefined;
+                  : t.canDangTu && taiDangTu
+                    ? "Đang tải bộ câu hỏi…"
+                    : t.canDangTu && dangTu.length === 0
+                      ? "Bộ này chưa có câu chọn dạng từ nào được soạn"
+                      : undefined;
               return (
                 <button
                   key={t.id}
@@ -179,8 +228,16 @@ export default function QuizRunner({
                   {t.canNghe && "🔊 "}
                   {t.canAnh && "🖼️ "}
                   {t.canViDu && "✍️ "}
+                  {t.canDangTu && "🔤 "}
                   {t.nhan}
-                  {khoa && (t.canViDu ? " (chưa có ví dụ)" : " (chưa đủ ảnh)")}
+                  {khoa &&
+                    (t.canDangTu
+                      ? taiDangTu
+                        ? " (đang tải…)"
+                        : " (chưa soạn)"
+                      : t.canViDu
+                        ? " (chưa có ví dụ)"
+                        : " (chưa đủ ảnh)")}
                 </button>
               );
             })}
@@ -199,11 +256,13 @@ export default function QuizRunner({
           {thu.boQua.thieuNghia > 0 && ` Bỏ qua ${thu.boQua.thieuNghia} lượt vì thẻ chưa có nghĩa.`}
           {thu.boQua.thieuViDu > 0 &&
             ` Bỏ qua ${thu.boQua.thieuViDu} lượt vì ví dụ của thẻ không khoét lỗ được.`}
+          {thu.boQua.thieuDangTu > 0 &&
+            ` Bỏ qua ${thu.boQua.thieuDangTu} lượt vì thẻ chưa có câu chọn dạng từ.`}
         </p>
 
         <button
           onClick={() => {
-            const r = sinhCauHoi(cards, progress, { modes, chiDenHan });
+            const r = sinhCauHoi(cards, progress, { modes, chiDenHan }, dangTu);
             setCauHoi(r.cauHoi);
             setBoQua(r.boQua);
             setIdx(0);
@@ -410,6 +469,20 @@ export default function QuizRunner({
         </div>
       )}
 
+      {cau.formId && (
+        <div className="mt-3 text-center">
+          <button
+            onClick={bao}
+            disabled={daBao.has(cau.formId)}
+            className="text-xs px-2.5 py-1.5 rounded-lg"
+            style={{ color: "var(--text-muted)", background: "var(--bg-elevated)" }}
+            title="Câu này do AI soạn — báo sai thì nó sẽ bị tắt cho cả lớp"
+          >
+            {daBao.has(cau.formId) ? "Đã báo, cảm ơn bạn" : "⚠ Câu này sai"}
+          </button>
+        </div>
+      )}
+
       {daTraLoi && (
         <div className="mt-4">
           <p className="text-sm mb-2" style={{ color: "var(--text-primary)" }}>
@@ -426,12 +499,16 @@ export default function QuizRunner({
         </div>
       )}
 
-      {boQua.thieuAnh + boQua.thieuNghia + boQua.thieuViDu > 0 && idx === 0 && (
+      {boQua.thieuAnh + boQua.thieuNghia + boQua.thieuViDu + boQua.thieuDangTu > 0 &&
+        idx === 0 && (
         <p className="text-xs mt-4 text-center" style={{ color: "var(--text-muted)" }}>
-          {`Đã bỏ ${boQua.thieuAnh + boQua.thieuNghia + boQua.thieuViDu} lượt vì thẻ chưa đủ ${[
+          {`Đã bỏ ${
+            boQua.thieuAnh + boQua.thieuNghia + boQua.thieuViDu + boQua.thieuDangTu
+          } lượt vì thẻ chưa đủ ${[
             boQua.thieuAnh > 0 && "ảnh",
             boQua.thieuNghia > 0 && "nghĩa",
             boQua.thieuViDu > 0 && "câu ví dụ khoét lỗ được",
+            boQua.thieuDangTu > 0 && "câu chọn dạng từ",
           ]
             .filter(Boolean)
             .join(" / ")}.`}
