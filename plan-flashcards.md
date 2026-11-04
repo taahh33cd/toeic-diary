@@ -32,7 +32,7 @@
 | 3.1 — Thư viện bộ mẫu | ✅ xong, 13/13 kiểm | `a7c19048` |
 | 3.2a — Điền vào chỗ trống kiểu Part 5 | ✅ xong, 18+48+40 kiểm | `c5ede41e` |
 | 3.2b — Chọn dạng từ (word form) | ✅ xong, 287 câu sinh sẵn + nút báo sai | `a3c133ce` `e13477d6` |
-| 3.3 — Chế độ thi (ẩn đáp án tới cuối) | ⬜ | |
+| 3.3 — Chế độ thi (bấm giờ, ẩn đáp án, soát lại) | ✅ xong | `3c13f7b5` |
 | 3.4 — Học offline | ⬜ | |
 
 **Lỗi công thức đã sửa (§5):** "nửa trọng số" ban đầu hiểu thành `ease × 0.5`,
