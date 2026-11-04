@@ -291,6 +291,7 @@ for (const test of allTests) {
     const out = { ...item.q, difficulty: band };
     delete out.source;
     delete out.docs_category;
+    delete out.options_from_override;
     delete out._group;
     delete out._lesson;
     delete out._test;

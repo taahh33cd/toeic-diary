@@ -11602,7 +11602,12 @@
   },
   {
     "question": "The community program features classes in photography, drawing, ______ other arts.",
-    "options": {},
+    "options": {
+      "A": "yet",
+      "B": "but",
+      "C": "and",
+      "D": "thus"
+    },
     "correct_answer": "C",
     "grammar_type": "Part 5 tổng hợp",
     "explanation_reason": "Câu liệt kê các lớp học trong chương trình cộng đồng gồm \"photography, drawing\" và nối với danh từ cuối cùng \"other arts\". Từ \"and\" (và) là liên từ dùng để liệt kê từ cuối cùng trong chuỗi. Các từ khác: yet (chưa/tuy nhiên), but (nhưng), thus (do đó) không phù hợp về ngữ nghĩa liệt kê.",
@@ -11635,11 +11640,17 @@
     "_group": "SUBMARINE 2024",
     "_lesson": 4,
     "_test": 2,
+    "options_from_override": true,
     "id": "d0302"
   },
   {
     "question": "Glass containers must be ______ secured during transport.",
-    "options": {},
+    "options": {
+      "A": "safely",
+      "B": "safe",
+      "C": "safer",
+      "D": "safety"
+    },
     "correct_answer": "A",
     "grammar_type": "Part 5 tổng hợp",
     "explanation_reason": "Chỗ trống nằm giữa động từ \"be\" và phân từ \"secured\", đồng thời bổ nghĩa cho hành động \"secured\" (được cố định/đảm bảo an toàn). Ta cần một trạng từ. \"Safely\" (một cách an toàn) là trạng từ phù hợp nhất. Các lựa chọn khác là tính từ (safe, safer) hoặc danh từ (safety).",
@@ -11667,11 +11678,17 @@
     "_group": "SUBMARINE 2024",
     "_lesson": 4,
     "_test": 2,
+    "options_from_override": true,
     "id": "d0303"
   },
   {
     "question": "This month's ______ figures have increased five percent over the last month.",
-    "options": {},
+    "options": {
+      "A": "sale",
+      "B": "selling",
+      "C": "sold",
+      "D": "sales"
+    },
     "correct_answer": "D",
     "grammar_type": "Part 5 tổng hợp",
     "explanation_reason": "Chỗ trống đứng trước danh từ \"figures\" (số liệu) và tạo thành một danh từ ghép. \"Sales figures\" là cụm từ cố định có nghĩa là \"số liệu doanh thu / số liệu bán hàng\". Các từ khác không tạo thành cụm danh từ có nghĩa phù hợp trong kinh doanh.",
@@ -11699,11 +11716,17 @@
     "_group": "SUBMARINE 2024",
     "_lesson": 4,
     "_test": 2,
+    "options_from_override": true,
     "id": "d0304"
   },
   {
     "question": "Summer interns may ______ either free company housing or a stipend of $2,000.",
-    "options": {},
+    "options": {
+      "A": "choose",
+      "B": "wonder",
+      "C": "apply",
+      "D": "rent"
+    },
     "correct_answer": "A",
     "grammar_type": "Part 5 tổng hợp",
     "explanation_reason": "Cấu trúc \"choose either A or B\" có nghĩa là \"chọn một trong hai: A hoặc B\". Các thực tập sinh mùa hè có thể \"lựa chọn\" giữa nhà ở miễn phí của công ty hoặc khoản trợ cấp. Các động từ khác: wonder (tự hỏi), apply (nộp đơn), rent (thuê) không đi kèm cấu trúc \"either... or...\" một cách hợp lý.",
@@ -11731,11 +11754,17 @@
     "_group": "SUBMARINE 2024",
     "_lesson": 4,
     "_test": 2,
+    "options_from_override": true,
     "id": "d0305"
   },
   {
     "question": "The department's most ______ production unit will receive a bonus at the end of the quarter.",
-    "options": {},
+    "options": {
+      "A": "effective",
+      "B": "effect",
+      "C": "effectively",
+      "D": "effecting"
+    },
     "correct_answer": "A",
     "grammar_type": "Part 5 tổng hợp",
     "explanation_reason": "Trước danh từ \"production unit\" (đơn vị sản xuất) và sau trạng từ chỉ cấp độ \"most\" cần một tính từ để tạo thành so sánh nhất. \"Effective\" (hiệu quả) là tính từ phù hợp nhất để ca ngợi bộ phận sản xuất mang lại hiệu quả cao nhất. Các từ khác: effect (danh từ), effectively (trạng từ), effecting (động từ V-ing).",
@@ -11763,11 +11792,17 @@
     "_group": "SUBMARINE 2024",
     "_lesson": 4,
     "_test": 2,
+    "options_from_override": true,
     "id": "d0306"
   },
   {
     "question": "Al's Café will now be open on Sundays ______ the hours of 9 A.M. and 5 P.M.",
-    "options": {},
+    "options": {
+      "A": "from",
+      "B": "between",
+      "C": "among",
+      "D": "during"
+    },
     "correct_answer": "B",
     "grammar_type": "Part 5 tổng hợp",
     "explanation_reason": "Cấu trúc chỉ khoảng thời gian cố định đi với \"and\" là \"between... and...\" (giữa... và...). Quán cà phê sẽ mở cửa vào Chủ nhật trong khoảng thời gian từ 9 giờ sáng đến 5 giờ chiều.",
@@ -11779,11 +11814,17 @@
     "_group": "SUBMARINE 2024",
     "_lesson": 4,
     "_test": 2,
+    "options_from_override": true,
     "id": "d0307"
   },
   {
     "question": "Mr. Liu will not be in the office this morning ______ he has a dentist appointment.",
-    "options": {},
+    "options": {
+      "A": "following",
+      "B": "because",
+      "C": "including",
+      "D": "likewise"
+    },
     "correct_answer": "B",
     "grammar_type": "Part 5 tổng hợp",
     "explanation_reason": "Chỗ trống nối giữa hai mệnh đề (S+V), trong đó mệnh đề sau chỉ nguyên nhân (\"anh ấy có lịch hẹn với nha sĩ\") giải thích cho việc không có mặt ở văn phòng. Liên từ \"because\" (bởi vì) là đáp án chính xác. Các từ khác: following (sau khi - giới từ/tính từ), including (bao gồm - giới từ), likewise (tương tự vậy - trạng từ) đều sai cấu trúc hoặc nghĩa.",
@@ -11806,6 +11847,7 @@
     "_group": "SUBMARINE 2024",
     "_lesson": 4,
     "_test": 2,
+    "options_from_override": true,
     "id": "d0308"
   },
   {

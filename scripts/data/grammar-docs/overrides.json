@@ -1,0 +1,44 @@
+{
+  "_doc": "Vá tay cho những câu Google Docs ghi thiếu. parse-docs.mjs đọc file này và đè options (kèm correct_answer nếu có) lên câu khớp. Khoá là nội dung câu hỏi, so khớp sau khi bỏ dấu câu và gộp mọi chỗ trống thành ___, nên tải lại Docs về đè lên .txt vẫn giữ nguyên phần vá. Nếu Docs sửa lại câu hỏi thì khoá hết khớp — parse-report.txt sẽ in cảnh báo 'vá KHÔNG khớp câu nào'.",
+  "_source": "Tất cả nằm ở thẻ PART 5 TỔNG HỢP (1) > SUBMARINE 2024 > Lesson 4 > Test 2, khối câu đầu tiên (Câu 2-9). Docs chỉ ghi dòng 'Đáp án', không liệt kê A/B/C/D.",
+  "_note": "5 câu lấy đúng 3 đáp án nhiễu mà chính phần Giải thích trong Docs đã nêu tên. 2 câu (sales figures, between the hours) Giải thích không nêu từ nào — đáp án nhiễu do Claude soạn, đánh dấu distractors_authored, thầy xem lại khi có thời gian.",
+
+  "questions": {
+    "The community program features classes in photography, drawing, ______ other arts.": {
+      "correct_answer": "C",
+      "options": { "A": "yet", "B": "but", "C": "and", "D": "thus" }
+    },
+
+    "Glass containers must be ______ secured during transport.": {
+      "correct_answer": "A",
+      "options": { "A": "safely", "B": "safe", "C": "safer", "D": "safety" }
+    },
+
+    "This month's ______ figures have increased five percent over the last month.": {
+      "correct_answer": "D",
+      "options": { "A": "sale", "B": "selling", "C": "sold", "D": "sales" },
+      "distractors_authored": true
+    },
+
+    "Summer interns may ______ either free company housing or a stipend of $2,000.": {
+      "correct_answer": "A",
+      "options": { "A": "choose", "B": "wonder", "C": "apply", "D": "rent" }
+    },
+
+    "The department's most ______ production unit will receive a bonus at the end of the quarter.": {
+      "correct_answer": "A",
+      "options": { "A": "effective", "B": "effect", "C": "effectively", "D": "effecting" }
+    },
+
+    "Al's Café will now be open on Sundays ______ the hours of 9 A.M. and 5 P.M.": {
+      "correct_answer": "B",
+      "options": { "A": "from", "B": "between", "C": "among", "D": "during" },
+      "distractors_authored": true
+    },
+
+    "Mr. Liu will not be in the office this morning ______ he has a dentist appointment.": {
+      "correct_answer": "B",
+      "options": { "A": "following", "B": "because", "C": "including", "D": "likewise" }
+    }
+  }
+}

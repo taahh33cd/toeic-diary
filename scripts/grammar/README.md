@@ -49,12 +49,27 @@ Riêng `Từ vựng:` kiểu 1 có loại từ (`Settle (v): giải quyết`), k
 
 Output: `parsed.json` (966 câu) + `parse-report.txt` (số câu từng test, cảnh báo).
 
+### `overrides.json` — vá tay chỗ Docs ghi thiếu
+
+Docs có chỗ chỉ ghi dòng `Đáp án` mà không liệt kê A/B/C/D (hiện 7 câu ở
+`PART 5 TỔNG HỢP (1)` > `SUBMARINE 2024` > `Lesson 4` > `Test 2`). Thay vì sửa file
+`.txt` — tải lại Docs là mất — thì điền vào `overrides.json`, parser đọc và đè lên.
+
+Khoá là **nội dung câu hỏi**, so khớp sau khi bỏ dấu câu và gộp mọi chỗ trống thành
+`___`; không dùng id vì id đánh theo vị trí, Docs thêm/bớt một câu là lệch hết. Nếu
+Docs sửa lại câu hỏi thì khoá hết khớp và `parse-report.txt` in cảnh báo
+"vá KHÔNG khớp câu nào" — đừng bỏ qua, nó có nghĩa là câu đó lại thiếu đáp án.
+
+Đánh dấu `"distractors_authored": true` cho câu mà 3 đáp án nhiễu là tự soạn, không
+lấy được từ phần Giải thích trong Docs.
+
 ## `build-questions.mjs`
 
 Dựng `lib/grammar/questions.ts` từ đúng hai file, nên idempotent:
 
 - `base-questions.json` — 3.025 câu của bank cũ, **ảnh chụp trước khi import**. Đừng sửa.
-- `parsed.json` — data Docs. Câu thiếu A/B/C/D bị bỏ (hiện 7 câu, liệt kê trong báo cáo).
+- `parsed.json` — data Docs. Câu nào vẫn thiếu A/B/C/D sau khi áp `overrides.json` thì
+  bị bỏ và liệt kê trong báo cáo (hiện 0 câu).
 
 Biên test lấy từ `testSizes` trong `lib/grammar/topics.ts` — đó là nguồn duy nhất.
 Test cũ giữ nguyên câu nào thuộc test nào; test từ Docs nối vào sau. Script tự đối

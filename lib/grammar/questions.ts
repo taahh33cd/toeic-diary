@@ -1002,34 +1002,6 @@ export const grammarQuestions = [
     "difficulty": "easy"
   },
   {
-    "id": "q0504",
-    "question": "The logistics team solved the problem.",
-    "options": {
-      "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V-O"
-    },
-    "correct_answer": "D",
-    "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The logistics team' + Động từ 'solved' + Tân ngữ 'the problem'.",
-    "explanation_grammar": "Cấu trúc câu",
-    "translation": "Đội ngũ hậu cần đã giải quyết vấn đề.",
-    "core_vocabulary": [
-      {
-        "word": "logistics",
-        "type": "n.",
-        "meaning": "hậu cần"
-      },
-      {
-        "word": "solve",
-        "type": "v.",
-        "meaning": "giải quyết"
-      }
-    ],
-    "difficulty": "easy"
-  },
-  {
     "id": "q0464",
     "question": "They considered the policy unfair.",
     "options": {
@@ -1053,6 +1025,34 @@ export const grammarQuestions = [
         "word": "unfair",
         "type": "adj.",
         "meaning": "không công bằng"
+      }
+    ],
+    "difficulty": "easy"
+  },
+  {
+    "id": "q0504",
+    "question": "The logistics team solved the problem.",
+    "options": {
+      "A": "S-V",
+      "B": "S-V-O-C",
+      "C": "S-V-C",
+      "D": "S-V-O"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Cấu trúc câu",
+    "explanation_reason": "Chủ ngữ 'The logistics team' + Động từ 'solved' + Tân ngữ 'the problem'.",
+    "explanation_grammar": "Cấu trúc câu",
+    "translation": "Đội ngũ hậu cần đã giải quyết vấn đề.",
+    "core_vocabulary": [
+      {
+        "word": "logistics",
+        "type": "n.",
+        "meaning": "hậu cần"
+      },
+      {
+        "word": "solve",
+        "type": "v.",
+        "meaning": "giải quyết"
       }
     ],
     "difficulty": "easy"
@@ -4627,34 +4627,6 @@ export const grammarQuestions = [
     "difficulty": "easy"
   },
   {
-    "id": "q0539",
-    "question": "The manager considered the project complete.",
-    "options": {
-      "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V-O"
-    },
-    "correct_answer": "B",
-    "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The manager' + Động từ 'considered' + Tân ngữ 'the project' + Bổ ngữ tân ngữ 'complete'.",
-    "explanation_grammar": "Cấu trúc câu",
-    "translation": "Quản lý xem dự án đã hoàn thành.",
-    "core_vocabulary": [
-      {
-        "word": "consider",
-        "type": "v.",
-        "meaning": "xem xét/coi là"
-      },
-      {
-        "word": "complete",
-        "type": "adj.",
-        "meaning": "hoàn thành"
-      }
-    ],
-    "difficulty": "easy"
-  },
-  {
     "id": "q0544",
     "question": "The software updated the records.",
     "options": {
@@ -4678,6 +4650,34 @@ export const grammarQuestions = [
         "word": "record",
         "type": "n.",
         "meaning": "hồ sơ/bản ghi"
+      }
+    ],
+    "difficulty": "easy"
+  },
+  {
+    "id": "q0539",
+    "question": "The manager considered the project complete.",
+    "options": {
+      "A": "S-V",
+      "B": "S-V-O-C",
+      "C": "S-V-C",
+      "D": "S-V-O"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Cấu trúc câu",
+    "explanation_reason": "Chủ ngữ 'The manager' + Động từ 'considered' + Tân ngữ 'the project' + Bổ ngữ tân ngữ 'complete'.",
+    "explanation_grammar": "Cấu trúc câu",
+    "translation": "Quản lý xem dự án đã hoàn thành.",
+    "core_vocabulary": [
+      {
+        "word": "consider",
+        "type": "v.",
+        "meaning": "xem xét/coi là"
+      },
+      {
+        "word": "complete",
+        "type": "adj.",
+        "meaning": "hoàn thành"
       }
     ],
     "difficulty": "easy"
@@ -6032,29 +6032,6 @@ export const grammarQuestions = [
     "difficulty": "easy"
   },
   {
-    "id": "q1708",
-    "question": "The vegetable soup tasted quite salty.",
-    "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-O",
-      "D": "S-V-C"
-    },
-    "correct_answer": "D",
-    "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The vegetable soup' + Động từ tri giác 'tasted' + Bổ ngữ 'salty'.",
-    "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
-    "translation": "Món súp rau củ có vị khá mặn.",
-    "core_vocabulary": [
-      {
-        "word": "salty",
-        "type": "adj.",
-        "meaning": "mặn"
-      }
-    ],
-    "difficulty": "easy"
-  },
-  {
     "id": "q1719",
     "question": "The artist drew a portrait.",
     "options": {
@@ -6073,6 +6050,29 @@ export const grammarQuestions = [
         "word": "portrait",
         "type": "n.",
         "meaning": "bức chân dung"
+      }
+    ],
+    "difficulty": "easy"
+  },
+  {
+    "id": "q1708",
+    "question": "The vegetable soup tasted quite salty.",
+    "options": {
+      "A": "S-V-O-C",
+      "B": "S-V",
+      "C": "S-V-O",
+      "D": "S-V-C"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Cấu trúc câu",
+    "explanation_reason": "Chủ ngữ 'The vegetable soup' + Động từ tri giác 'tasted' + Bổ ngữ 'salty'.",
+    "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
+    "translation": "Món súp rau củ có vị khá mặn.",
+    "core_vocabulary": [
+      {
+        "word": "salty",
+        "type": "adj.",
+        "meaning": "mặn"
       }
     ],
     "difficulty": "easy"
@@ -6101,29 +6101,6 @@ export const grammarQuestions = [
     "difficulty": "easy"
   },
   {
-    "id": "q1713",
-    "question": "The voters elected the woman president.",
-    "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V"
-    },
-    "correct_answer": "B",
-    "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The voters' + Động từ 'elected' + Tân ngữ 'the woman' + Bổ ngữ tân ngữ 'president'.",
-    "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
-    "translation": "Các cử tri đã bầu người phụ nữ đó làm tổng thống.",
-    "core_vocabulary": [
-      {
-        "word": "voter",
-        "type": "n.",
-        "meaning": "cử tri"
-      }
-    ],
-    "difficulty": "easy"
-  },
-  {
     "id": "q1729",
     "question": "They appointed the man director.",
     "options": {
@@ -6142,6 +6119,29 @@ export const grammarQuestions = [
         "word": "director",
         "type": "n.",
         "meaning": "giám đốc"
+      }
+    ],
+    "difficulty": "easy"
+  },
+  {
+    "id": "q1713",
+    "question": "The voters elected the woman president.",
+    "options": {
+      "A": "S-V-O",
+      "B": "S-V-O-C",
+      "C": "S-V-C",
+      "D": "S-V"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Cấu trúc câu",
+    "explanation_reason": "Chủ ngữ 'The voters' + Động từ 'elected' + Tân ngữ 'the woman' + Bổ ngữ tân ngữ 'president'.",
+    "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
+    "translation": "Các cử tri đã bầu người phụ nữ đó làm tổng thống.",
+    "core_vocabulary": [
+      {
+        "word": "voter",
+        "type": "n.",
+        "meaning": "cử tri"
       }
     ],
     "difficulty": "easy"
@@ -7750,6 +7750,29 @@ export const grammarQuestions = [
     "difficulty": "easy"
   },
   {
+    "id": "q1797",
+    "question": "The bright moon appeared tonight.",
+    "options": {
+      "A": "S-V-O",
+      "B": "S-V",
+      "C": "S-V-O-C",
+      "D": "S-V-C"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Cấu trúc câu",
+    "explanation_reason": "Chủ ngữ 'The bright moon' + Động từ 'appeared'. 'tonight' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
+    "translation": "Mặt trời rực rỡ đã xuất hiện đêm nay.",
+    "core_vocabulary": [
+      {
+        "word": "appear",
+        "type": "v.",
+        "meaning": "xuất hiện"
+      }
+    ],
+    "difficulty": "easy"
+  },
+  {
     "id": "q1788",
     "question": "They consider the proposal highly risky.",
     "options": {
@@ -7814,29 +7837,6 @@ export const grammarQuestions = [
         "word": "mayor",
         "type": "n.",
         "meaning": "thị trưởng"
-      }
-    ],
-    "difficulty": "easy"
-  },
-  {
-    "id": "q1797",
-    "question": "The bright moon appeared tonight.",
-    "options": {
-      "A": "S-V-O",
-      "B": "S-V",
-      "C": "S-V-O-C",
-      "D": "S-V-C"
-    },
-    "correct_answer": "D",
-    "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The bright moon' + Động từ 'appeared'. 'tonight' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
-    "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-    "translation": "Mặt trời rực rỡ đã xuất hiện đêm nay.",
-    "core_vocabulary": [
-      {
-        "word": "appear",
-        "type": "v.",
-        "meaning": "xuất hiện"
       }
     ],
     "difficulty": "easy"
@@ -14770,29 +14770,6 @@ export const grammarQuestions = [
     "difficulty": "hard"
   },
   {
-    "id": "q1869",
-    "question": "A wide variety of traditional appetizers ______ at the reception held in the main ballroom tonight.",
-    "options": {
-      "A": "serve",
-      "B": "is serving",
-      "C": "will be served",
-      "D": "served"
-    },
-    "correct_answer": "C",
-    "grammar_type": "12 thì",
-    "explanation_reason": "Hành động trong tương lai ở dạng bị động, dùng Tương lai đơn bị động.",
-    "explanation_grammar": "Tương lai đơn bị động",
-    "translation": "Rất nhiều món khai vị truyền thống sẽ được phục vụ tại buổi chiêu đãi tổ chức ở sảnh tiệc chính tối nay.",
-    "core_vocabulary": [
-      {
-        "word": "reception",
-        "type": "n.",
-        "meaning": "buổi chiêu đãi/tiệc tiếp đón"
-      }
-    ],
-    "difficulty": "hard"
-  },
-  {
     "id": "q1867",
     "question": "By next January, Dr. Smith ______ the effects of this new medication for exactly five years.",
     "options": {
@@ -14811,6 +14788,29 @@ export const grammarQuestions = [
         "word": "medication",
         "type": "n.",
         "meaning": "thuốc/dược phẩm"
+      }
+    ],
+    "difficulty": "hard"
+  },
+  {
+    "id": "q1869",
+    "question": "A wide variety of traditional appetizers ______ at the reception held in the main ballroom tonight.",
+    "options": {
+      "A": "serve",
+      "B": "is serving",
+      "C": "will be served",
+      "D": "served"
+    },
+    "correct_answer": "C",
+    "grammar_type": "12 thì",
+    "explanation_reason": "Hành động trong tương lai ở dạng bị động, dùng Tương lai đơn bị động.",
+    "explanation_grammar": "Tương lai đơn bị động",
+    "translation": "Rất nhiều món khai vị truyền thống sẽ được phục vụ tại buổi chiêu đãi tổ chức ở sảnh tiệc chính tối nay.",
+    "core_vocabulary": [
+      {
+        "word": "reception",
+        "type": "n.",
+        "meaning": "buổi chiêu đãi/tiệc tiếp đón"
       }
     ],
     "difficulty": "hard"
@@ -18067,34 +18067,6 @@ export const grammarQuestions = [
     "difficulty": "hard"
   },
   {
-    "id": "q2171",
-    "question": "The clients ______ a full refund if they were not satisfied with the service.",
-    "options": {
-      "A": "have promising",
-      "B": "promised",
-      "C": "were promised",
-      "D": "were promising"
-    },
-    "correct_answer": "C",
-    "grammar_type": "Câu bị động",
-    "explanation_reason": "Khách hàng là bên được hứa, công ty là bên hứa. Với 'promise', tân ngữ chỉ người lên làm chủ ngữ, còn 'a full refund' giữ nguyên sau động từ.",
-    "explanation_grammar": "Bị động hai tân ngữ: S (người) + was/were + promised + O (vật).",
-    "translation": "Khách hàng đã được hứa hoàn tiền toàn bộ nếu không hài lòng với dịch vụ.",
-    "core_vocabulary": [
-      {
-        "word": "promise",
-        "type": "v.",
-        "meaning": "hứa"
-      },
-      {
-        "word": "satisfied",
-        "type": "adj.",
-        "meaning": "hài lòng"
-      }
-    ],
-    "difficulty": "hard"
-  },
-  {
     "id": "q2152",
     "question": "The windows on the top floor need ______ before the annual inspection.",
     "options": {
@@ -18118,6 +18090,34 @@ export const grammarQuestions = [
         "word": "top floor",
         "type": "n.",
         "meaning": "tầng trên cùng"
+      }
+    ],
+    "difficulty": "hard"
+  },
+  {
+    "id": "q2171",
+    "question": "The clients ______ a full refund if they were not satisfied with the service.",
+    "options": {
+      "A": "have promising",
+      "B": "promised",
+      "C": "were promised",
+      "D": "were promising"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Khách hàng là bên được hứa, công ty là bên hứa. Với 'promise', tân ngữ chỉ người lên làm chủ ngữ, còn 'a full refund' giữ nguyên sau động từ.",
+    "explanation_grammar": "Bị động hai tân ngữ: S (người) + was/were + promised + O (vật).",
+    "translation": "Khách hàng đã được hứa hoàn tiền toàn bộ nếu không hài lòng với dịch vụ.",
+    "core_vocabulary": [
+      {
+        "word": "promise",
+        "type": "v.",
+        "meaning": "hứa"
+      },
+      {
+        "word": "satisfied",
+        "type": "adj.",
+        "meaning": "hài lòng"
       }
     ],
     "difficulty": "hard"
@@ -19999,34 +19999,6 @@ export const grammarQuestions = [
     "difficulty": "medium"
   },
   {
-    "id": "q2247",
-    "question": "Overdue accounts are ______ up by the finance team every Monday morning.",
-    "options": {
-      "A": "be followed",
-      "B": "followed",
-      "C": "following",
-      "D": "follow"
-    },
-    "correct_answer": "B",
-    "grammar_type": "Câu bị động",
-    "explanation_reason": "Các khoản nợ quá hạn là đối tượng được theo sát, nên sau 'are' dùng V3 'followed'; 'follow up' nghĩa là theo dõi tiếp, đôn đốc.",
-    "explanation_grammar": "Bị động của cụm động từ: be + followed up.",
-    "translation": "Các khoản nợ quá hạn được bộ phận tài chính đôn đốc vào mỗi sáng thứ Hai.",
-    "core_vocabulary": [
-      {
-        "word": "follow up",
-        "type": "v.",
-        "meaning": "theo dõi tiếp, đôn đốc"
-      },
-      {
-        "word": "overdue",
-        "type": "adj.",
-        "meaning": "quá hạn"
-      }
-    ],
-    "difficulty": "medium"
-  },
-  {
     "id": "q2227",
     "question": "The cause of the production delay is still ______ by our engineers.",
     "options": {
@@ -20050,6 +20022,34 @@ export const grammarQuestions = [
         "word": "cause",
         "type": "n.",
         "meaning": "nguyên nhân"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q2247",
+    "question": "Overdue accounts are ______ up by the finance team every Monday morning.",
+    "options": {
+      "A": "be followed",
+      "B": "followed",
+      "C": "following",
+      "D": "follow"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Các khoản nợ quá hạn là đối tượng được theo sát, nên sau 'are' dùng V3 'followed'; 'follow up' nghĩa là theo dõi tiếp, đôn đốc.",
+    "explanation_grammar": "Bị động của cụm động từ: be + followed up.",
+    "translation": "Các khoản nợ quá hạn được bộ phận tài chính đôn đốc vào mỗi sáng thứ Hai.",
+    "core_vocabulary": [
+      {
+        "word": "follow up",
+        "type": "v.",
+        "meaning": "theo dõi tiếp, đôn đốc"
+      },
+      {
+        "word": "overdue",
+        "type": "adj.",
+        "meaning": "quá hạn"
       }
     ],
     "difficulty": "medium"
@@ -32284,44 +32284,6 @@ export const grammarQuestions = [
     "difficulty": "medium"
   },
   {
-    "question": "Judy suggested ______ for a walk but no one else wanted to.",
-    "options": {
-      "A": "to go",
-      "B": "go",
-      "C": "going",
-      "D": "went"
-    },
-    "correct_answer": "C",
-    "grammar_type": "Danh động từ & Nguyên thể",
-    "explanation_reason": "C. going: Đúng. Động từ suggest khi đề xuất một hành động thường đi với V-ing. Cấu trúc: suggest + V-ing. A. to go: Sai. Không dùng to V sau suggest trong cấu trúc này. B. go: Sai. Không dùng động từ nguyên mẫu không có to sau suggest. D. went: Sai. Động từ quá khứ không phù hợp sau suggest.",
-    "explanation_grammar": "Danh động từ & Nguyên thể",
-    "translation": "Judy đề xuất đi dạo, nhưng không ai khác muốn đi.",
-    "core_vocabulary": [
-      {
-        "word": "suggest",
-        "type": "",
-        "meaning": "đề xuất, gợi ý"
-      },
-      {
-        "word": "go for a walk",
-        "type": "",
-        "meaning": "đi dạo"
-      },
-      {
-        "word": "no one else",
-        "type": "",
-        "meaning": "không ai khác"
-      },
-      {
-        "word": "want to do something",
-        "type": "",
-        "meaning": "muốn làm gì"
-      }
-    ],
-    "id": "d0863",
-    "difficulty": "medium"
-  },
-  {
     "question": "The lifeguard warned all of us ______ too far from the shore.",
     "options": {
       "A": "to not swim",
@@ -32362,6 +32324,44 @@ export const grammarQuestions = [
       }
     ],
     "id": "d0859",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Judy suggested ______ for a walk but no one else wanted to.",
+    "options": {
+      "A": "to go",
+      "B": "go",
+      "C": "going",
+      "D": "went"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Danh động từ & Nguyên thể",
+    "explanation_reason": "C. going: Đúng. Động từ suggest khi đề xuất một hành động thường đi với V-ing. Cấu trúc: suggest + V-ing. A. to go: Sai. Không dùng to V sau suggest trong cấu trúc này. B. go: Sai. Không dùng động từ nguyên mẫu không có to sau suggest. D. went: Sai. Động từ quá khứ không phù hợp sau suggest.",
+    "explanation_grammar": "Danh động từ & Nguyên thể",
+    "translation": "Judy đề xuất đi dạo, nhưng không ai khác muốn đi.",
+    "core_vocabulary": [
+      {
+        "word": "suggest",
+        "type": "",
+        "meaning": "đề xuất, gợi ý"
+      },
+      {
+        "word": "go for a walk",
+        "type": "",
+        "meaning": "đi dạo"
+      },
+      {
+        "word": "no one else",
+        "type": "",
+        "meaning": "không ai khác"
+      },
+      {
+        "word": "want to do something",
+        "type": "",
+        "meaning": "muốn làm gì"
+      }
+    ],
+    "id": "d0863",
     "difficulty": "medium"
   },
   {
@@ -35923,34 +35923,6 @@ export const grammarQuestions = [
     "difficulty": "medium"
   },
   {
-    "id": "q0854",
-    "question": "The secure ______ of the fragile computer mainboards is our top priority during transit.",
-    "options": {
-      "A": "packaging",
-      "B": "packed",
-      "C": "packs",
-      "D": "pack"
-    },
-    "correct_answer": "A",
-    "grammar_type": "Danh từ & Đại từ",
-    "explanation_reason": "Cấu trúc 'The + Noun'. 'Packaging' (việc đóng gói/bao bì) là danh từ (gerund/noun) phù hợp để làm chủ ngữ.",
-    "explanation_grammar": "Danh từ làm chủ ngữ",
-    "translation": "Việc đóng gói an toàn các bo mạch chủ máy tính dễ vỡ là ưu tiên hàng đầu của chúng tôi trong quá trình vận chuyển.",
-    "core_vocabulary": [
-      {
-        "word": "packaging",
-        "type": "n.",
-        "meaning": "việc đóng gói"
-      },
-      {
-        "word": "transit",
-        "type": "n.",
-        "meaning": "quá trình vận chuyển"
-      }
-    ],
-    "difficulty": "medium"
-  },
-  {
     "id": "q0875",
     "question": "Continuous ______ in the latest data tracking software is highly encouraged for all staff members.",
     "options": {
@@ -35974,6 +35946,34 @@ export const grammarQuestions = [
         "word": "tracking software",
         "type": "n.",
         "meaning": "phần mềm theo dõi"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q0854",
+    "question": "The secure ______ of the fragile computer mainboards is our top priority during transit.",
+    "options": {
+      "A": "packaging",
+      "B": "packed",
+      "C": "packs",
+      "D": "pack"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Danh từ & Đại từ",
+    "explanation_reason": "Cấu trúc 'The + Noun'. 'Packaging' (việc đóng gói/bao bì) là danh từ (gerund/noun) phù hợp để làm chủ ngữ.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
+    "translation": "Việc đóng gói an toàn các bo mạch chủ máy tính dễ vỡ là ưu tiên hàng đầu của chúng tôi trong quá trình vận chuyển.",
+    "core_vocabulary": [
+      {
+        "word": "packaging",
+        "type": "n.",
+        "meaning": "việc đóng gói"
+      },
+      {
+        "word": "transit",
+        "type": "n.",
+        "meaning": "quá trình vận chuyển"
       }
     ],
     "difficulty": "medium"
@@ -36847,34 +36847,6 @@ export const grammarQuestions = [
     "difficulty": "medium"
   },
   {
-    "id": "q0881",
-    "question": "Electronic ______ of the customs declaration form speeds up the VNACCS clearance process significantly.",
-    "options": {
-      "A": "transmission",
-      "B": "transmitted",
-      "C": "transmit",
-      "D": "transmitting"
-    },
-    "correct_answer": "A",
-    "grammar_type": "Danh từ & Đại từ",
-    "explanation_reason": "Cần danh từ làm chủ ngữ. 'Transmission' (sự truyền đi/truyền dữ liệu) là danh từ chỉ hành động kỹ thuật.",
-    "explanation_grammar": "Danh từ làm chủ ngữ",
-    "translation": "Việc truyền điện tử tờ khai hải quan giúp đẩy nhanh đáng kể quá trình thông quan VNACCS.",
-    "core_vocabulary": [
-      {
-        "word": "transmission",
-        "type": "n.",
-        "meaning": "sự truyền đi (dữ liệu)"
-      },
-      {
-        "word": "clearance",
-        "type": "n.",
-        "meaning": "việc thông quan"
-      }
-    ],
-    "difficulty": "medium"
-  },
-  {
     "id": "q0886",
     "question": "Secure packaging prevents any ______ to the sensitive computer mainboards during ocean transit.",
     "options": {
@@ -36898,6 +36870,34 @@ export const grammarQuestions = [
         "word": "ocean transit",
         "type": "n.",
         "meaning": "vận chuyển đường biển"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q0881",
+    "question": "Electronic ______ of the customs declaration form speeds up the VNACCS clearance process significantly.",
+    "options": {
+      "A": "transmission",
+      "B": "transmitted",
+      "C": "transmit",
+      "D": "transmitting"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Danh từ & Đại từ",
+    "explanation_reason": "Cần danh từ làm chủ ngữ. 'Transmission' (sự truyền đi/truyền dữ liệu) là danh từ chỉ hành động kỹ thuật.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
+    "translation": "Việc truyền điện tử tờ khai hải quan giúp đẩy nhanh đáng kể quá trình thông quan VNACCS.",
+    "core_vocabulary": [
+      {
+        "word": "transmission",
+        "type": "n.",
+        "meaning": "sự truyền đi (dữ liệu)"
+      },
+      {
+        "word": "clearance",
+        "type": "n.",
+        "meaning": "việc thông quan"
       }
     ],
     "difficulty": "medium"
@@ -38461,34 +38461,6 @@ export const grammarQuestions = [
     "difficulty": "easy"
   },
   {
-    "id": "q_test10_10",
-    "question": "Ms. Dalton prefers to buy ______ fresh produce from the local farmer's market on weekends.",
-    "options": {
-      "A": "she",
-      "B": "hers",
-      "C": "herself",
-      "D": "her"
-    },
-    "correct_answer": "D",
-    "grammar_type": "Danh từ & Đại từ",
-    "explanation_reason": "Trước cụm danh từ 'fresh produce' cần tính từ sở hữu thay thế cho 'Ms. Dalton'.",
-    "explanation_grammar": "Đại từ sở hữu",
-    "translation": "Cô Dalton thích mua nông sản tươi sống của mình từ chợ nông sản địa phương vào cuối tuần.",
-    "core_vocabulary": [
-      {
-        "word": "produce",
-        "type": "n.",
-        "meaning": "nông sản"
-      },
-      {
-        "word": "prefer",
-        "type": "v.",
-        "meaning": "thích hơn"
-      }
-    ],
-    "difficulty": "easy"
-  },
-  {
     "id": "q_test10_24",
     "question": "Ms. Rivera encourages all of the students in the chemistry lab to wear ______ safety goggles.",
     "options": {
@@ -38512,6 +38484,34 @@ export const grammarQuestions = [
         "word": "goggles",
         "type": "n.",
         "meaning": "kính bảo hộ"
+      }
+    ],
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_test10_10",
+    "question": "Ms. Dalton prefers to buy ______ fresh produce from the local farmer's market on weekends.",
+    "options": {
+      "A": "she",
+      "B": "hers",
+      "C": "herself",
+      "D": "her"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Danh từ & Đại từ",
+    "explanation_reason": "Trước cụm danh từ 'fresh produce' cần tính từ sở hữu thay thế cho 'Ms. Dalton'.",
+    "explanation_grammar": "Đại từ sở hữu",
+    "translation": "Cô Dalton thích mua nông sản tươi sống của mình từ chợ nông sản địa phương vào cuối tuần.",
+    "core_vocabulary": [
+      {
+        "word": "produce",
+        "type": "n.",
+        "meaning": "nông sản"
+      },
+      {
+        "word": "prefer",
+        "type": "v.",
+        "meaning": "thích hơn"
       }
     ],
     "difficulty": "easy"
@@ -45871,34 +45871,6 @@ export const grammarQuestions = [
     "difficulty": "easy"
   },
   {
-    "id": "q1060",
-    "question": "The primary goal of the seminar is to ______ employees to take on leadership roles.",
-    "options": {
-      "A": "encouraging",
-      "B": "encouraged",
-      "C": "encourage",
-      "D": "encouragement"
-    },
-    "correct_answer": "C",
-    "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Cần một động từ nguyên thể sau 'to'. 'Encourage' là động từ.",
-    "explanation_grammar": "Động từ nguyên thể có 'to'",
-    "translation": "Mục tiêu chính của buổi hội thảo là khuyến khích nhân viên đảm nhận các vai trò lãnh đạo.",
-    "core_vocabulary": [
-      {
-        "word": "seminar",
-        "type": "n.",
-        "meaning": "buổi hội thảo"
-      },
-      {
-        "word": "encourage",
-        "type": "v.",
-        "meaning": "khuyến khích"
-      }
-    ],
-    "difficulty": "easy"
-  },
-  {
     "id": "q1062",
     "question": "The company has seen a ______ increase in international orders over the last six months.",
     "options": {
@@ -45922,6 +45894,34 @@ export const grammarQuestions = [
         "word": "steady",
         "type": "adj.",
         "meaning": "đều đặn, ổn định"
+      }
+    ],
+    "difficulty": "easy"
+  },
+  {
+    "id": "q1060",
+    "question": "The primary goal of the seminar is to ______ employees to take on leadership roles.",
+    "options": {
+      "A": "encouraging",
+      "B": "encouraged",
+      "C": "encourage",
+      "D": "encouragement"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Tính từ & Trạng từ",
+    "explanation_reason": "Cần một động từ nguyên thể sau 'to'. 'Encourage' là động từ.",
+    "explanation_grammar": "Động từ nguyên thể có 'to'",
+    "translation": "Mục tiêu chính của buổi hội thảo là khuyến khích nhân viên đảm nhận các vai trò lãnh đạo.",
+    "core_vocabulary": [
+      {
+        "word": "seminar",
+        "type": "n.",
+        "meaning": "buổi hội thảo"
+      },
+      {
+        "word": "encourage",
+        "type": "v.",
+        "meaning": "khuyến khích"
       }
     ],
     "difficulty": "easy"
@@ -53178,6 +53178,29 @@ export const grammarQuestions = [
     "difficulty": "medium"
   },
   {
+    "id": "q1157",
+    "question": "Mr. Thompson will attend the marketing seminar in Berlin ______ the regional director.",
+    "options": {
+      "A": "because of",
+      "B": "in addition to",
+      "C": "instead of",
+      "D": "next to"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Giới từ",
+    "explanation_reason": "Giới từ 'instead of' (thay cho/thay vì) là lựa chọn hợp lý nhất theo ngữ cảnh công việc.",
+    "explanation_grammar": "Giới từ ghép",
+    "translation": "Ông Thompson sẽ tham dự hội thảo tiếp thị ở Berlin thay mặt cho giám đốc khu vực.",
+    "core_vocabulary": [
+      {
+        "word": "regional director",
+        "type": "n.phr.",
+        "meaning": "giám đốc khu vực"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
     "id": "q1162",
     "question": "Ms. Nguyen gave a very detailed presentation ______ the upcoming international expansion strategy.",
     "options": {
@@ -53201,29 +53224,6 @@ export const grammarQuestions = [
         "word": "strategy",
         "type": "n.",
         "meaning": "chiến lược"
-      }
-    ],
-    "difficulty": "medium"
-  },
-  {
-    "id": "q1157",
-    "question": "Mr. Thompson will attend the marketing seminar in Berlin ______ the regional director.",
-    "options": {
-      "A": "because of",
-      "B": "in addition to",
-      "C": "instead of",
-      "D": "next to"
-    },
-    "correct_answer": "C",
-    "grammar_type": "Giới từ",
-    "explanation_reason": "Giới từ 'instead of' (thay cho/thay vì) là lựa chọn hợp lý nhất theo ngữ cảnh công việc.",
-    "explanation_grammar": "Giới từ ghép",
-    "translation": "Ông Thompson sẽ tham dự hội thảo tiếp thị ở Berlin thay mặt cho giám đốc khu vực.",
-    "core_vocabulary": [
-      {
-        "word": "regional director",
-        "type": "n.phr.",
-        "meaning": "giám đốc khu vực"
       }
     ],
     "difficulty": "medium"
@@ -63798,6 +63798,29 @@ export const grammarQuestions = [
     "difficulty": "medium"
   },
   {
+    "id": "q_conjunction_test11_59",
+    "question": "Remarkably, neither the head chef ______ the restaurant manager was aware that the health inspector was visiting today.",
+    "options": {
+      "A": "and",
+      "B": "or",
+      "C": "nor",
+      "D": "but"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Liên từ",
+    "explanation_reason": "Cấu trúc tương quan 'Neither... nor...' (không ai... cũng không ai...).",
+    "explanation_grammar": "Liên từ tương quan",
+    "translation": "Đáng chú ý là cả bếp trưởng lẫn quản lý nhà hàng đều không biết rằng thanh tra y tế sẽ đến thăm hôm nay.",
+    "core_vocabulary": [
+      {
+        "word": "inspector",
+        "type": "n",
+        "meaning": "thanh tra viên"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
     "id": "q_conjunction_test11_69",
     "question": "The management team is currently deciding ______ to outsource the payroll processing or to keep it in-house.",
     "options": {
@@ -63821,29 +63844,6 @@ export const grammarQuestions = [
         "word": "payroll",
         "type": "n",
         "meaning": "bảng lương"
-      }
-    ],
-    "difficulty": "medium"
-  },
-  {
-    "id": "q_conjunction_test11_59",
-    "question": "Remarkably, neither the head chef ______ the restaurant manager was aware that the health inspector was visiting today.",
-    "options": {
-      "A": "and",
-      "B": "or",
-      "C": "nor",
-      "D": "but"
-    },
-    "correct_answer": "C",
-    "grammar_type": "Liên từ",
-    "explanation_reason": "Cấu trúc tương quan 'Neither... nor...' (không ai... cũng không ai...).",
-    "explanation_grammar": "Liên từ tương quan",
-    "translation": "Đáng chú ý là cả bếp trưởng lẫn quản lý nhà hàng đều không biết rằng thanh tra y tế sẽ đến thăm hôm nay.",
-    "core_vocabulary": [
-      {
-        "word": "inspector",
-        "type": "n",
-        "meaning": "thanh tra viên"
       }
     ],
     "difficulty": "medium"
@@ -64716,34 +64716,6 @@ export const grammarQuestions = [
     "difficulty": "hard"
   },
   {
-    "id": "q_conjunction_test12_93",
-    "question": "______ the legal team worked tirelessly on the case, they were unable to reach an out-of-court settlement.",
-    "options": {
-      "A": "However",
-      "B": "In spite of",
-      "C": "Even though",
-      "D": "Because of"
-    },
-    "correct_answer": "C",
-    "grammar_type": "Liên từ",
-    "explanation_reason": "'Even though' chỉ sự nhượng bộ, theo sau là một mệnh đề.",
-    "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
-    "translation": "Mặc dù đội ngũ pháp lý đã làm việc không mệt mỏi cho vụ án, họ vẫn không thể đạt được một thỏa thuận ngoài tòa án.",
-    "core_vocabulary": [
-      {
-        "word": "tirelessly",
-        "type": "adv",
-        "meaning": "không mệt mỏi"
-      },
-      {
-        "word": "settlement",
-        "type": "n",
-        "meaning": "sự hòa giải, thỏa thuận"
-      }
-    ],
-    "difficulty": "hard"
-  },
-  {
     "id": "q_conjunction_test12_99",
     "question": "All laboratory samples must be logged into the tracking system ______ they are transferred to the cold storage room.",
     "options": {
@@ -64767,6 +64739,34 @@ export const grammarQuestions = [
         "word": "cold storage",
         "type": "n.",
         "meaning": "kho lạnh"
+      }
+    ],
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_conjunction_test12_93",
+    "question": "______ the legal team worked tirelessly on the case, they were unable to reach an out-of-court settlement.",
+    "options": {
+      "A": "However",
+      "B": "In spite of",
+      "C": "Even though",
+      "D": "Because of"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Liên từ",
+    "explanation_reason": "'Even though' chỉ sự nhượng bộ, theo sau là một mệnh đề.",
+    "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
+    "translation": "Mặc dù đội ngũ pháp lý đã làm việc không mệt mỏi cho vụ án, họ vẫn không thể đạt được một thỏa thuận ngoài tòa án.",
+    "core_vocabulary": [
+      {
+        "word": "tirelessly",
+        "type": "adv",
+        "meaning": "không mệt mỏi"
+      },
+      {
+        "word": "settlement",
+        "type": "n",
+        "meaning": "sự hòa giải, thỏa thuận"
       }
     ],
     "difficulty": "hard"
@@ -72593,34 +72593,6 @@ export const grammarQuestions = [
     "difficulty": "medium"
   },
   {
-    "id": "q_test12_mdqh_21",
-    "question": "The historic plaza ______ the festival is held every year is currently under renovation.",
-    "options": {
-      "A": "where",
-      "B": "which",
-      "C": "that",
-      "D": "when"
-    },
-    "correct_answer": "A",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Dùng 'where' để chỉ nơi chốn thay thế cho 'plaza'.",
-    "explanation_grammar": "Trạng từ quan hệ (Nơi chốn)",
-    "translation": "Quảng trường lịch sử nơi lễ hội được tổ chức hàng năm hiện đang được cải tạo.",
-    "core_vocabulary": [
-      {
-        "word": "historic",
-        "type": "adj.",
-        "meaning": "mang tính lịch sử"
-      },
-      {
-        "word": "renovation",
-        "type": "n.",
-        "meaning": "sự cải tạo"
-      }
-    ],
-    "difficulty": "medium"
-  },
-  {
     "id": "q_test12_mdqh_09",
     "question": "The client ______ account was mistakenly overcharged last month has been issued a full refund and a discount voucher.",
     "options": {
@@ -72644,6 +72616,34 @@ export const grammarQuestions = [
         "word": "refund",
         "type": "n.",
         "meaning": "sự hoàn tiền"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_test12_mdqh_21",
+    "question": "The historic plaza ______ the festival is held every year is currently under renovation.",
+    "options": {
+      "A": "where",
+      "B": "which",
+      "C": "that",
+      "D": "when"
+    },
+    "correct_answer": "A",
+    "grammar_type": "MĐQH",
+    "explanation_reason": "Dùng 'where' để chỉ nơi chốn thay thế cho 'plaza'.",
+    "explanation_grammar": "Trạng từ quan hệ (Nơi chốn)",
+    "translation": "Quảng trường lịch sử nơi lễ hội được tổ chức hàng năm hiện đang được cải tạo.",
+    "core_vocabulary": [
+      {
+        "word": "historic",
+        "type": "adj.",
+        "meaning": "mang tính lịch sử"
+      },
+      {
+        "word": "renovation",
+        "type": "n.",
+        "meaning": "sự cải tạo"
       }
     ],
     "difficulty": "medium"
@@ -72705,34 +72705,6 @@ export const grammarQuestions = [
     "difficulty": "medium"
   },
   {
-    "id": "q_test12_mdqh_19",
-    "question": "This is the only proposal ______ addresses all the safety concerns raised by the environmental committee.",
-    "options": {
-      "A": "who",
-      "B": "that",
-      "C": "whose",
-      "D": "whom"
-    },
-    "correct_answer": "B",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Dùng 'that' sau cụm từ 'the only proposal'.",
-    "explanation_grammar": "Đại từ quan hệ",
-    "translation": "Đây là đề xuất duy nhất giải quyết tất cả các mối quan tâm về an toàn do ủy ban môi trường đưa ra.",
-    "core_vocabulary": [
-      {
-        "word": "address",
-        "type": "v.",
-        "meaning": "giải quyết"
-      },
-      {
-        "word": "committee",
-        "type": "n.",
-        "meaning": "ủy ban"
-      }
-    ],
-    "difficulty": "medium"
-  },
-  {
     "id": "q_test12_mdqh_16",
     "question": "The CEO arrived late to the press conference, ______ caused a great deal of frustration among the journalists.",
     "options": {
@@ -72756,6 +72728,34 @@ export const grammarQuestions = [
         "word": "journalist",
         "type": "n.",
         "meaning": "nhà báo"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_test12_mdqh_19",
+    "question": "This is the only proposal ______ addresses all the safety concerns raised by the environmental committee.",
+    "options": {
+      "A": "who",
+      "B": "that",
+      "C": "whose",
+      "D": "whom"
+    },
+    "correct_answer": "B",
+    "grammar_type": "MĐQH",
+    "explanation_reason": "Dùng 'that' sau cụm từ 'the only proposal'.",
+    "explanation_grammar": "Đại từ quan hệ",
+    "translation": "Đây là đề xuất duy nhất giải quyết tất cả các mối quan tâm về an toàn do ủy ban môi trường đưa ra.",
+    "core_vocabulary": [
+      {
+        "word": "address",
+        "type": "v.",
+        "meaning": "giải quyết"
+      },
+      {
+        "word": "committee",
+        "type": "n.",
+        "meaning": "ủy ban"
       }
     ],
     "difficulty": "medium"
@@ -91080,34 +91080,6 @@ export const grammarQuestions = [
     "difficulty": "hard"
   },
   {
-    "question": "First Canadian National Bank charges a commission when cash ______ from its machines by non-customers.",
-    "options": {
-      "A": "to withdraw",
-      "B": "is withdrawn",
-      "C": "withdraws",
-      "D": "is withdrawing"
-    },
-    "correct_answer": "B",
-    "grammar_type": "Part 5 tổng hợp",
-    "explanation_reason": "Mệnh đề sau \"when\" cần một động từ chia theo chủ ngữ \"cash\" (tiền mặt - danh từ không đếm được). Vì tiền mặt bị \"rút ra\" bởi khách hàng, nên cần dùng cấu trúc bị động ở thì hiện tại đơn (phù hợp với thì hiện tại của mệnh đề chính \"charges\"). Dạng đúng là \"is withdrawn\".",
-    "explanation_grammar": "Part 5 tổng hợp",
-    "translation": "Ngân hàng Quốc gia First Canadian tính phí hoa hồng khi tiền mặt được rút từ các máy của họ bởi những người không phải là khách hàng.",
-    "core_vocabulary": [
-      {
-        "word": "Charge a commission",
-        "type": "phr.",
-        "meaning": "tính phí hoa hồng"
-      },
-      {
-        "word": "Withdraw",
-        "type": "v.",
-        "meaning": "rút (tiền)"
-      }
-    ],
-    "id": "d0077",
-    "difficulty": "hard"
-  },
-  {
     "question": "Mary Rose was asked to join the information access team because she ______ to similar projects previously.",
     "options": {
       "A": "was contributed",
@@ -91133,6 +91105,34 @@ export const grammarQuestions = [
       }
     ],
     "id": "d0080",
+    "difficulty": "hard"
+  },
+  {
+    "question": "First Canadian National Bank charges a commission when cash ______ from its machines by non-customers.",
+    "options": {
+      "A": "to withdraw",
+      "B": "is withdrawn",
+      "C": "withdraws",
+      "D": "is withdrawing"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Mệnh đề sau \"when\" cần một động từ chia theo chủ ngữ \"cash\" (tiền mặt - danh từ không đếm được). Vì tiền mặt bị \"rút ra\" bởi khách hàng, nên cần dùng cấu trúc bị động ở thì hiện tại đơn (phù hợp với thì hiện tại của mệnh đề chính \"charges\"). Dạng đúng là \"is withdrawn\".",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Ngân hàng Quốc gia First Canadian tính phí hoa hồng khi tiền mặt được rút từ các máy của họ bởi những người không phải là khách hàng.",
+    "core_vocabulary": [
+      {
+        "word": "Charge a commission",
+        "type": "phr.",
+        "meaning": "tính phí hoa hồng"
+      },
+      {
+        "word": "Withdraw",
+        "type": "v.",
+        "meaning": "rút (tiền)"
+      }
+    ],
+    "id": "d0077",
     "difficulty": "hard"
   },
   {
@@ -98913,6 +98913,39 @@ export const grammarQuestions = [
     "difficulty": "hard"
   },
   {
+    "question": "This month's ______ figures have increased five percent over the last month.",
+    "options": {
+      "A": "sale",
+      "B": "selling",
+      "C": "sold",
+      "D": "sales"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Chỗ trống đứng trước danh từ \"figures\" (số liệu) và tạo thành một danh từ ghép. \"Sales figures\" là cụm từ cố định có nghĩa là \"số liệu doanh thu / số liệu bán hàng\". Các từ khác không tạo thành cụm danh từ có nghĩa phù hợp trong kinh doanh.",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Số liệu bán hàng của tháng này đã tăng năm phần trăm so với tháng trước.",
+    "core_vocabulary": [
+      {
+        "word": "Sales figures",
+        "type": "n.",
+        "meaning": "số liệu bán hàng"
+      },
+      {
+        "word": "Increase",
+        "type": "v.",
+        "meaning": "tăng"
+      },
+      {
+        "word": "Over",
+        "type": "prep.",
+        "meaning": "hơn, so với"
+      }
+    ],
+    "id": "d0304",
+    "difficulty": "easy"
+  },
+  {
     "question": "Assistant Director Melissa Arun works ______ the interns to monitor the quality of their work.",
     "options": {
       "A": "across",
@@ -98958,6 +98991,34 @@ export const grammarQuestions = [
       }
     ],
     "id": "d0324",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Mr. Liu will not be in the office this morning ______ he has a dentist appointment.",
+    "options": {
+      "A": "following",
+      "B": "because",
+      "C": "including",
+      "D": "likewise"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Chỗ trống nối giữa hai mệnh đề (S+V), trong đó mệnh đề sau chỉ nguyên nhân (\"anh ấy có lịch hẹn với nha sĩ\") giải thích cho việc không có mặt ở văn phòng. Liên từ \"because\" (bởi vì) là đáp án chính xác. Các từ khác: following (sau khi - giới từ/tính từ), including (bao gồm - giới từ), likewise (tương tự vậy - trạng từ) đều sai cấu trúc hoặc nghĩa.",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Ông Liu sẽ không có mặt ở văn phòng sáng nay vì ông ấy có lịch hẹn với nha sĩ.",
+    "core_vocabulary": [
+      {
+        "word": "Office",
+        "type": "n.",
+        "meaning": "văn phòng"
+      },
+      {
+        "word": "Dentist appointment",
+        "type": "n.",
+        "meaning": "lịch hẹn gặp nha sĩ"
+      }
+    ],
+    "id": "d0308",
     "difficulty": "easy"
   },
   {
@@ -99153,6 +99214,56 @@ export const grammarQuestions = [
     "difficulty": "easy"
   },
   {
+    "question": "Al's Café will now be open on Sundays ______ the hours of 9 A.M. and 5 P.M.",
+    "options": {
+      "A": "from",
+      "B": "between",
+      "C": "among",
+      "D": "during"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Cấu trúc chỉ khoảng thời gian cố định đi với \"and\" là \"between... and...\" (giữa... và...). Quán cà phê sẽ mở cửa vào Chủ nhật trong khoảng thời gian từ 9 giờ sáng đến 5 giờ chiều.",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Al's Café hiện sẽ mở cửa vào các ngày Chủ nhật trong khoảng thời gian từ 9 giờ sáng đến 5 giờ chiều. * From: Café (n): quán cà phê; Open (adj): mở cửa.",
+    "core_vocabulary": [],
+    "id": "d0307",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Summer interns may ______ either free company housing or a stipend of $2,000.",
+    "options": {
+      "A": "choose",
+      "B": "wonder",
+      "C": "apply",
+      "D": "rent"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Cấu trúc \"choose either A or B\" có nghĩa là \"chọn một trong hai: A hoặc B\". Các thực tập sinh mùa hè có thể \"lựa chọn\" giữa nhà ở miễn phí của công ty hoặc khoản trợ cấp. Các động từ khác: wonder (tự hỏi), apply (nộp đơn), rent (thuê) không đi kèm cấu trúc \"either... or...\" một cách hợp lý.",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Các thực tập sinh mùa hè có thể chọn nhà ở miễn phí của công ty hoặc khoản trợ cấp 2.000 đô la.",
+    "core_vocabulary": [
+      {
+        "word": "Summer intern",
+        "type": "n.",
+        "meaning": "thực tập sinh mùa hè"
+      },
+      {
+        "word": "Housing",
+        "type": "n.",
+        "meaning": "nhà ở"
+      },
+      {
+        "word": "Stipend",
+        "type": "n.",
+        "meaning": "tiền trợ cấp, học bổng"
+      }
+    ],
+    "id": "d0305",
+    "difficulty": "medium"
+  },
+  {
     "question": "Ms. Fujita has postponed the team meeting until next week because everyone already has ______ to do this week.",
     "options": {
       "A": "most",
@@ -99198,6 +99309,77 @@ export const grammarQuestions = [
       }
     ],
     "id": "d0325",
+    "difficulty": "medium"
+  },
+  {
+    "question": "The department's most ______ production unit will receive a bonus at the end of the quarter.",
+    "options": {
+      "A": "effective",
+      "B": "effect",
+      "C": "effectively",
+      "D": "effecting"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Trước danh từ \"production unit\" (đơn vị sản xuất) và sau trạng từ chỉ cấp độ \"most\" cần một tính từ để tạo thành so sánh nhất. \"Effective\" (hiệu quả) là tính từ phù hợp nhất để ca ngợi bộ phận sản xuất mang lại hiệu quả cao nhất. Các từ khác: effect (danh từ), effectively (trạng từ), effecting (động từ V-ing).",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Đơn vị sản xuất hiệu quả nhất của bộ phận sẽ nhận được tiền thưởng vào cuối quý.",
+    "core_vocabulary": [
+      {
+        "word": "Production unit",
+        "type": "n.",
+        "meaning": "đơn vị sản xuất"
+      },
+      {
+        "word": "Bonus",
+        "type": "n.",
+        "meaning": "tiền thưởng"
+      },
+      {
+        "word": "Quarter",
+        "type": "n.",
+        "meaning": "quý (trong năm)"
+      }
+    ],
+    "id": "d0306",
+    "difficulty": "medium"
+  },
+  {
+    "question": "The community program features classes in photography, drawing, ______ other arts.",
+    "options": {
+      "A": "yet",
+      "B": "but",
+      "C": "and",
+      "D": "thus"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Câu liệt kê các lớp học trong chương trình cộng đồng gồm \"photography, drawing\" và nối với danh từ cuối cùng \"other arts\". Từ \"and\" (và) là liên từ dùng để liệt kê từ cuối cùng trong chuỗi. Các từ khác: yet (chưa/tuy nhiên), but (nhưng), thus (do đó) không phù hợp về ngữ nghĩa liệt kê.",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Chương trình cộng đồng có các lớp học về nhiếp ảnh, vẽ tranh và các nghệ thuật khác.",
+    "core_vocabulary": [
+      {
+        "word": "Community program",
+        "type": "n.",
+        "meaning": "chương trình cộng đồng"
+      },
+      {
+        "word": "Feature",
+        "type": "v.",
+        "meaning": "có, bao gồm"
+      },
+      {
+        "word": "Photography",
+        "type": "n.",
+        "meaning": "nhiếp ảnh"
+      },
+      {
+        "word": "Drawing",
+        "type": "n.",
+        "meaning": "vẽ tranh"
+      }
+    ],
+    "id": "d0302",
     "difficulty": "medium"
   },
   {
@@ -99410,6 +99592,39 @@ export const grammarQuestions = [
       }
     ],
     "id": "d0313",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Glass containers must be ______ secured during transport.",
+    "options": {
+      "A": "safely",
+      "B": "safe",
+      "C": "safer",
+      "D": "safety"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Chỗ trống nằm giữa động từ \"be\" và phân từ \"secured\", đồng thời bổ nghĩa cho hành động \"secured\" (được cố định/đảm bảo an toàn). Ta cần một trạng từ. \"Safely\" (một cách an toàn) là trạng từ phù hợp nhất. Các lựa chọn khác là tính từ (safe, safer) hoặc danh từ (safety).",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Các thùng chứa bằng thủy tinh phải được cố định an toàn trong quá trình vận chuyển.",
+    "core_vocabulary": [
+      {
+        "word": "Glass container",
+        "type": "n.",
+        "meaning": "thùng/hộp thủy tinh"
+      },
+      {
+        "word": "Secure",
+        "type": "v.",
+        "meaning": "cố định, đảm bảo"
+      },
+      {
+        "word": "Transport",
+        "type": "n.",
+        "meaning": "sự vận chuyển"
+      }
+    ],
+    "id": "d0303",
     "difficulty": "medium"
   },
   {
@@ -105351,49 +105566,6 @@ export const grammarQuestions = [
     "difficulty": "medium"
   },
   {
-    "question": "Patrons of Rutland Bank may______ up to $1,000 from this machine without paying a fee.",
-    "options": {
-      "A": "withdraw",
-      "B": "withdrawing",
-      "C": "withdrawal",
-      "D": "withdrawn"
-    },
-    "correct_answer": "A",
-    "grammar_type": "Part 5 tổng hợp",
-    "explanation_reason": "Sau động từ khuyết thiếu may phải dùng động từ nguyên mẫu không to. Withdraw money: rút tiền. B. withdrawing: dạng V-ing. C. withdrawal: danh từ, sự rút tiền. D. withdrawn: quá khứ phân từ. A. withdraw là động từ nguyên mẫu phù hợp.",
-    "explanation_grammar": "Part 5 tổng hợp",
-    "translation": "Khách hàng của Ngân hàng Rutland có thể rút tối đa 1.000 đô la từ máy này mà không phải trả phí.",
-    "core_vocabulary": [
-      {
-        "word": "Patron",
-        "type": "",
-        "meaning": "khách hàng, người sử dụng dịch vụ"
-      },
-      {
-        "word": "Withdraw",
-        "type": "",
-        "meaning": "rút tiền"
-      },
-      {
-        "word": "Up to",
-        "type": "",
-        "meaning": "tối đa"
-      },
-      {
-        "word": "Fee",
-        "type": "",
-        "meaning": "phí"
-      },
-      {
-        "word": "Without paying a fee",
-        "type": "",
-        "meaning": "không phải trả phí"
-      }
-    ],
-    "id": "d0469",
-    "difficulty": "medium"
-  },
-  {
     "question": "Customers are______ to retain their receipts for the life of the warranty.",
     "options": {
       "A": "advise",
@@ -105439,6 +105611,49 @@ export const grammarQuestions = [
       }
     ],
     "id": "d0468",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Patrons of Rutland Bank may______ up to $1,000 from this machine without paying a fee.",
+    "options": {
+      "A": "withdraw",
+      "B": "withdrawing",
+      "C": "withdrawal",
+      "D": "withdrawn"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Sau động từ khuyết thiếu may phải dùng động từ nguyên mẫu không to. Withdraw money: rút tiền. B. withdrawing: dạng V-ing. C. withdrawal: danh từ, sự rút tiền. D. withdrawn: quá khứ phân từ. A. withdraw là động từ nguyên mẫu phù hợp.",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Khách hàng của Ngân hàng Rutland có thể rút tối đa 1.000 đô la từ máy này mà không phải trả phí.",
+    "core_vocabulary": [
+      {
+        "word": "Patron",
+        "type": "",
+        "meaning": "khách hàng, người sử dụng dịch vụ"
+      },
+      {
+        "word": "Withdraw",
+        "type": "",
+        "meaning": "rút tiền"
+      },
+      {
+        "word": "Up to",
+        "type": "",
+        "meaning": "tối đa"
+      },
+      {
+        "word": "Fee",
+        "type": "",
+        "meaning": "phí"
+      },
+      {
+        "word": "Without paying a fee",
+        "type": "",
+        "meaning": "không phải trả phí"
+      }
+    ],
+    "id": "d0469",
     "difficulty": "medium"
   },
   {
@@ -109178,6 +109393,49 @@ export const grammarQuestions = [
     "difficulty": "hard"
   },
   {
+    "question": "Everyone at Hammond Construction, Inc. was surprised to find out that the year’s greatest cost-saving measure was ______ by an intern.",
+    "options": {
+      "A": "attracted",
+      "B": "reserved",
+      "C": "continued",
+      "D": "suggested"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Cấu trúc bị động quá khứ đơn: was + V3/ed. A cost-saving measure was suggested by an intern: biện pháp tiết kiệm chi phí được một thực tập sinh đề xuất. A. attracted: thu hút, không phù hợp với measure. B. reserved: đặt trước, dành riêng, không phù hợp. C. continued: tiếp tục, không phù hợp nghĩa. D. suggested: được đề xuất, đúng.",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Mọi người tại Hammond Construction, Inc. đều ngạc nhiên khi biết rằng biện pháp tiết kiệm chi phí lớn nhất trong năm đã được một thực tập sinh đề xuất.",
+    "core_vocabulary": [
+      {
+        "word": "be surprised to find out",
+        "type": "",
+        "meaning": "ngạc nhiên khi biết"
+      },
+      {
+        "word": "cost-saving",
+        "type": "",
+        "meaning": "tiết kiệm chi phí"
+      },
+      {
+        "word": "measure",
+        "type": "",
+        "meaning": "biện pháp"
+      },
+      {
+        "word": "suggest",
+        "type": "",
+        "meaning": "đề xuất"
+      },
+      {
+        "word": "intern",
+        "type": "",
+        "meaning": "thực tập sinh"
+      }
+    ],
+    "id": "d0533",
+    "difficulty": "hard"
+  },
+  {
     "question": "The lineup of speakers ______ by organizers to appear at this month’s lecture series has been modified.",
     "options": {
       "A": "inviting",
@@ -109223,49 +109481,6 @@ export const grammarQuestions = [
       }
     ],
     "id": "d0513",
-    "difficulty": "hard"
-  },
-  {
-    "question": "Everyone at Hammond Construction, Inc. was surprised to find out that the year’s greatest cost-saving measure was ______ by an intern.",
-    "options": {
-      "A": "attracted",
-      "B": "reserved",
-      "C": "continued",
-      "D": "suggested"
-    },
-    "correct_answer": "D",
-    "grammar_type": "Part 5 tổng hợp",
-    "explanation_reason": "Cấu trúc bị động quá khứ đơn: was + V3/ed. A cost-saving measure was suggested by an intern: biện pháp tiết kiệm chi phí được một thực tập sinh đề xuất. A. attracted: thu hút, không phù hợp với measure. B. reserved: đặt trước, dành riêng, không phù hợp. C. continued: tiếp tục, không phù hợp nghĩa. D. suggested: được đề xuất, đúng.",
-    "explanation_grammar": "Part 5 tổng hợp",
-    "translation": "Mọi người tại Hammond Construction, Inc. đều ngạc nhiên khi biết rằng biện pháp tiết kiệm chi phí lớn nhất trong năm đã được một thực tập sinh đề xuất.",
-    "core_vocabulary": [
-      {
-        "word": "be surprised to find out",
-        "type": "",
-        "meaning": "ngạc nhiên khi biết"
-      },
-      {
-        "word": "cost-saving",
-        "type": "",
-        "meaning": "tiết kiệm chi phí"
-      },
-      {
-        "word": "measure",
-        "type": "",
-        "meaning": "biện pháp"
-      },
-      {
-        "word": "suggest",
-        "type": "",
-        "meaning": "đề xuất"
-      },
-      {
-        "word": "intern",
-        "type": "",
-        "meaning": "thực tập sinh"
-      }
-    ],
-    "id": "d0533",
     "difficulty": "hard"
   },
   {
@@ -117681,44 +117896,6 @@ export const grammarQuestions = [
     "difficulty": "medium"
   },
   {
-    "question": "102. Most of the materials distributed at last month’s accounting conference are now ______ online.",
-    "options": {
-      "A": "available",
-      "B": "intended",
-      "C": "comparable",
-      "D": "decisive"
-    },
-    "correct_answer": "A",
-    "grammar_type": "Part 5 tổng hợp",
-    "explanation_reason": "Sau động từ are cần một tính từ để mô tả trạng thái của tài liệu. Available có nghĩa là có sẵn, có thể truy cập hoặc sử dụng. Cụm available online nghĩa là có sẵn trên mạng. Intended: được dự định, không phù hợp với ý nghĩa câu. Comparable: có thể so sánh, không phù hợp ngữ cảnh. Decisive: mang tính quyết định, không diễn tả trạng thái sẵn có.",
-    "explanation_grammar": "Part 5 tổng hợp",
-    "translation": "Hầu hết tài liệu được phát tại hội nghị kế toán tháng trước hiện đã có sẵn trên mạng.",
-    "core_vocabulary": [
-      {
-        "word": "Material",
-        "type": "",
-        "meaning": "tài liệu, vật liệu"
-      },
-      {
-        "word": "Distribute",
-        "type": "",
-        "meaning": "phân phát"
-      },
-      {
-        "word": "Accounting conference",
-        "type": "",
-        "meaning": "hội nghị kế toán"
-      },
-      {
-        "word": "Available online",
-        "type": "",
-        "meaning": "có sẵn trên mạng"
-      }
-    ],
-    "id": "d0708",
-    "difficulty": "medium"
-  },
-  {
     "question": "123. A monthly newsletter is an excellent way to ______ your group’s activities and events.",
     "options": {
       "A": "realize",
@@ -117764,6 +117941,44 @@ export const grammarQuestions = [
       }
     ],
     "id": "d0729",
+    "difficulty": "medium"
+  },
+  {
+    "question": "102. Most of the materials distributed at last month’s accounting conference are now ______ online.",
+    "options": {
+      "A": "available",
+      "B": "intended",
+      "C": "comparable",
+      "D": "decisive"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Sau động từ are cần một tính từ để mô tả trạng thái của tài liệu. Available có nghĩa là có sẵn, có thể truy cập hoặc sử dụng. Cụm available online nghĩa là có sẵn trên mạng. Intended: được dự định, không phù hợp với ý nghĩa câu. Comparable: có thể so sánh, không phù hợp ngữ cảnh. Decisive: mang tính quyết định, không diễn tả trạng thái sẵn có.",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Hầu hết tài liệu được phát tại hội nghị kế toán tháng trước hiện đã có sẵn trên mạng.",
+    "core_vocabulary": [
+      {
+        "word": "Material",
+        "type": "",
+        "meaning": "tài liệu, vật liệu"
+      },
+      {
+        "word": "Distribute",
+        "type": "",
+        "meaning": "phân phát"
+      },
+      {
+        "word": "Accounting conference",
+        "type": "",
+        "meaning": "hội nghị kế toán"
+      },
+      {
+        "word": "Available online",
+        "type": "",
+        "meaning": "có sẵn trên mạng"
+      }
+    ],
+    "id": "d0708",
     "difficulty": "medium"
   },
   {
@@ -118786,6 +119001,44 @@ export const grammarQuestions = [
     "difficulty": "medium"
   },
   {
+    "question": "109. Mr. Aziz is often alone in the shop while his partner is out making a ______.",
+    "options": {
+      "A": "deliver",
+      "B": "delivery",
+      "C": "delivered",
+      "D": "delivering"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Part 5 tổng hợp",
+    "explanation_reason": "Cụm make a delivery có nghĩa là thực hiện một chuyến giao hàng. Sau mạo từ a cần danh từ đếm được số ít. Delivery là danh từ, nghĩa là sự giao hàng hoặc chuyến giao hàng. Deliver: động từ, giao hàng. Delivered: quá khứ hoặc quá khứ phân từ. Delivering: dạng V-ing.",
+    "explanation_grammar": "Part 5 tổng hợp",
+    "translation": "Ông Aziz thường ở một mình trong cửa hàng khi cộng sự của ông ra ngoài để giao hàng.",
+    "core_vocabulary": [
+      {
+        "word": "Alone",
+        "type": "",
+        "meaning": "một mình"
+      },
+      {
+        "word": "Partner",
+        "type": "",
+        "meaning": "cộng sự, đối tác"
+      },
+      {
+        "word": "Make a delivery",
+        "type": "",
+        "meaning": "thực hiện một chuyến giao hàng"
+      },
+      {
+        "word": "Delivery",
+        "type": "",
+        "meaning": "sự giao hàng"
+      }
+    ],
+    "id": "d0745",
+    "difficulty": "medium"
+  },
+  {
     "question": "125. In celebration of Ms. Tseng’s promotion, tea and cookies will be served ______ the meeting.",
     "options": {
       "A": "later",
@@ -118826,44 +119079,6 @@ export const grammarQuestions = [
       }
     ],
     "id": "d0761",
-    "difficulty": "medium"
-  },
-  {
-    "question": "109. Mr. Aziz is often alone in the shop while his partner is out making a ______.",
-    "options": {
-      "A": "deliver",
-      "B": "delivery",
-      "C": "delivered",
-      "D": "delivering"
-    },
-    "correct_answer": "B",
-    "grammar_type": "Part 5 tổng hợp",
-    "explanation_reason": "Cụm make a delivery có nghĩa là thực hiện một chuyến giao hàng. Sau mạo từ a cần danh từ đếm được số ít. Delivery là danh từ, nghĩa là sự giao hàng hoặc chuyến giao hàng. Deliver: động từ, giao hàng. Delivered: quá khứ hoặc quá khứ phân từ. Delivering: dạng V-ing.",
-    "explanation_grammar": "Part 5 tổng hợp",
-    "translation": "Ông Aziz thường ở một mình trong cửa hàng khi cộng sự của ông ra ngoài để giao hàng.",
-    "core_vocabulary": [
-      {
-        "word": "Alone",
-        "type": "",
-        "meaning": "một mình"
-      },
-      {
-        "word": "Partner",
-        "type": "",
-        "meaning": "cộng sự, đối tác"
-      },
-      {
-        "word": "Make a delivery",
-        "type": "",
-        "meaning": "thực hiện một chuyến giao hàng"
-      },
-      {
-        "word": "Delivery",
-        "type": "",
-        "meaning": "sự giao hàng"
-      }
-    ],
-    "id": "d0745",
     "difficulty": "medium"
   },
   {

@@ -1,7 +1,7 @@
-Bank cũ: 3025 câu · Docs dùng được: 959 câu · bỏ: 7 câu
-Tổng sau khi gộp: 3984 câu / 189 test
+Bank cũ: 3025 câu · Docs dùng được: 966 câu · bỏ: 0 câu
+Tổng sau khi gộp: 3991 câu / 189 test
 Ngưỡng nhãn (phân vị toàn bank): Dễ <= 4.26 < TB <= 5.62 < Khó
-  Dễ 1333 · TB 1323 · Khó 1328
+  Dễ 1335 · TB 1328 · Khó 1328
 
 --- Số test & số câu mỗi topic (dùng để cập nhật testSizes) ---
   Cấu trúc câu: 13 test, 305 câu
@@ -34,14 +34,5 @@ Ngưỡng nhãn (phân vị toàn bank): Dễ <= 4.26 < TB <= 5.62 < Khó
     testSizes: [25, 25, 25, 25, 25, 25, 25, 25, 10, 10, 10, 10, 10],
   Nhận dạng hậu tố: 5 test, 150 câu
     testSizes: [30, 30, 30, 30, 30],
-  Part 5 tổng hợp: 44 test, 759 câu
-    testSizes: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 30, 21, 29, 30, 29, 30, 30, 30, 30, 30, 20, 30, 30, 30, 30, 30, 30],
-
---- Câu bị bỏ (Docs thiếu A/B/C/D) ---
-  d0302 | SUBMARINE 2024 / Lesson 4 / Test 2 | The community program features classes in photography, drawing, ______ other arts.
-  d0303 | SUBMARINE 2024 / Lesson 4 / Test 2 | Glass containers must be ______ secured during transport.
-  d0304 | SUBMARINE 2024 / Lesson 4 / Test 2 | This month's ______ figures have increased five percent over the last month.
-  d0305 | SUBMARINE 2024 / Lesson 4 / Test 2 | Summer interns may ______ either free company housing or a stipend of $2,000.
-  d0306 | SUBMARINE 2024 / Lesson 4 / Test 2 | The department's most ______ production unit will receive a bonus at the end of the quarte
-  d0307 | SUBMARINE 2024 / Lesson 4 / Test 2 | Al's Café will now be open on Sundays ______ the hours of 9 A.M. and 5 P.M.
-  d0308 | SUBMARINE 2024 / Lesson 4 / Test 2 | Mr. Liu will not be in the office this morning ______ he has a dentist appointment.
+  Part 5 tổng hợp: 44 test, 766 câu
+    testSizes: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 30, 28, 29, 30, 29, 30, 30, 30, 30, 30, 20, 30, 30, 30, 30, 30, 30],

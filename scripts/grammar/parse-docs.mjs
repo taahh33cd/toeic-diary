@@ -13,6 +13,7 @@ import path from "node:path";
 const DIR = path.join(process.cwd(), "scripts/data/grammar-docs");
 const OUT_JSON = path.join(DIR, "parsed.json");
 const OUT_REPORT = path.join(DIR, "parse-report.txt");
+const OVERRIDES = path.join(DIR, "overrides.json");
 
 /** Mỗi thẻ trong Docs -> một topic ở /grammar. */
 const TABS = [
@@ -231,6 +232,14 @@ function parseTab(tab) {
     delete q._explain;
     delete q._vocab;
 
+    const fix = overrides[overrideKey(q.question)];
+    if (fix) {
+      q.options = { ...fix.options };
+      if (fix.correct_answer) q.correct_answer = fix.correct_answer;
+      q.options_from_override = true;
+      usedOverrides.add(overrideKey(q.question));
+    }
+
     const missing = [];
     if (Object.keys(q.options).length !== 4) missing.push("đủ 4 đáp án");
     if (!q.correct_answer) missing.push("đáp án");
@@ -244,6 +253,22 @@ function parseTab(tab) {
   }
   return { questions, warnings };
 }
+
+/**
+ * Vá tay cho những câu Docs ghi thiếu. Khoá theo nội dung câu hỏi chứ không theo
+ * id (id đánh theo vị trí, Docs thêm/bớt một câu là lệch hết), nên tải lại Docs
+ * về đè lên .txt vẫn giữ nguyên phần vá.
+ */
+function overrideKey(question) {
+  return question.toLowerCase().replace(/_{2,}/g, "___").replace(/[^a-z0-9_]+/g, " ").trim();
+}
+
+const overrides = Object.fromEntries(
+  Object.entries(fs.existsSync(OVERRIDES) ? JSON.parse(fs.readFileSync(OVERRIDES, "utf8")).questions ?? {} : {}).map(
+    ([k, v]) => [overrideKey(k), v]
+  )
+);
+const usedOverrides = new Set();
 
 function newQuestion(tab, lesson, test, question, options) {
   const label = [tab.group, lesson ? `Lesson ${lesson}` : null, `Test ${test ?? "?"}`].filter(Boolean).join(" / ");
@@ -282,6 +307,14 @@ for (const tab of TABS) {
 all.forEach((q, i) => {
   q.id = `d${String(i + 1).padStart(4, "0")}`;
 });
+
+report.push("", `Vá tay từ overrides.json: ${usedOverrides.size} câu`);
+const stale = Object.keys(overrides).filter((k) => !usedOverrides.has(k));
+if (stale.length) {
+  // Docs sửa lại câu hỏi là khoá không khớp nữa — vá nằm im, câu vẫn thiếu đáp án.
+  report.push(`  ! ${stale.length} vá KHÔNG khớp câu nào, kiểm tra lại overrides.json:`);
+  for (const k of stale) report.push(`    ${k.slice(0, 90)}`);
+}
 
 report.push("", `TỔNG: ${all.length} câu`);
 const byTopic = {};
