@@ -142,7 +142,7 @@ export const onNewStudentNotification = onValueCreated(
 // ── P4: Daily 8 PM Vietnam reminder (all users — free + enrolled) ─────────────
 export const dailyStudyReminder = onSchedule(
   {
-    schedule: "0 13 * * *", // 13:00 UTC = 20:00 ICT
+    schedule: "0 13 * * *", // 13:00 ICT — timeZone bên dưới là ICT, KHÔNG phải 20:00 như ghi chú cũ
     timeZone: "Asia/Ho_Chi_Minh",
     region: REGION,
     secrets: SECRETS,
@@ -348,37 +348,58 @@ export const scheduledSessionReminder = onSchedule(
   }
 );
 
+// ── Helper: gọi các cron endpoint trên Vercel ────────────────────────────────
+// Các endpoint đó gửi qua sendPushToUser nên iOS mới hiện banner (Cloud Functions
+// gửi trực tiếp thì iOS không hiện). Hẹn giờ ở đây vì Vercel Hobby chỉ cho 2 cron
+// (đã dùng hết cả 2).
+async function dispatchCronPaths(tag: string, paths: string[]): Promise<void> {
+  const dispatchUrl = process.env.PUSH_DISPATCH_URL;
+  const secret = process.env.INTERNAL_PUSH_SECRET;
+  if (!dispatchUrl || !secret) {
+    console.error(`[${tag}] PUSH_DISPATCH_URL / INTERNAL_PUSH_SECRET not set`);
+    return;
+  }
+  const base = dispatchUrl.replace(/\/api\/push\/dispatch$/, "");
+  await Promise.all(
+    paths.map(async (path) => {
+      const url = `${base}${path}`;
+      try {
+        const res = await fetch(url, { headers: { "x-internal-secret": secret } });
+        console.log(`[${tag}] ${url} → ${res.status} ${await res.text()}`);
+      } catch (e) {
+        console.error(`[${tag}] ${url} failed`, e);
+      }
+    })
+  );
+}
+
 // ── P5: Nhắc buổi sáng 8:00 ICT — từ vựng SRS đến hạn + bài tập quá hạn ───────
-// Delegates to the Vercel cron endpoints, which send via sendPushToUser so iOS
-// presents the banner (a direct Cloud Functions send is not presented). Scheduled
-// here because the Vercel Hobby plan caps cron jobs at 2 (both already in use).
 export const morningReminders = onSchedule(
   {
-    schedule: "0 1 * * *", // 01:00 UTC = 08:00 ICT
+    schedule: "0 1 * * *", // 01:00 ICT — timeZone bên dưới là ICT, KHÔNG phải 08:00 như ghi chú cũ
     timeZone: "Asia/Ho_Chi_Minh",
     region: REGION,
   },
   async () => {
-    const dispatchUrl = process.env.PUSH_DISPATCH_URL;
-    const secret = process.env.INTERNAL_PUSH_SECRET;
-    if (!dispatchUrl || !secret) {
-      console.error("[morningReminders] PUSH_DISPATCH_URL / INTERNAL_PUSH_SECRET not set");
-      return;
-    }
-    const base = dispatchUrl.replace(/\/api\/push\/dispatch$/, "");
-    const endpoints = [
-      `${base}/api/cron/vocab-remind`,
-      `${base}/api/cron/homework-overdue`,
-    ];
-    await Promise.all(
-      endpoints.map(async (url) => {
-        try {
-          const res = await fetch(url, { headers: { "x-internal-secret": secret } });
-          console.log(`[morningReminders] ${url} → ${res.status} ${await res.text()}`);
-        } catch (e) {
-          console.error(`[morningReminders] ${url} failed`, e);
-        }
-      })
-    );
+    await dispatchCronPaths("morningReminders", [
+      "/api/cron/vocab-remind",
+      "/api/cron/homework-overdue",
+    ]);
+  }
+);
+
+// ── P6: Nhắc lại bài tập quá hạn 20:00 ICT ───────────────────────────────────
+// Lượt thứ hai trong ngày, sau morningReminders. `timeZone` là ICT nên giờ trong
+// `schedule` cũng là giờ Việt Nam — đừng quy đổi sang UTC (bẫy đã làm sai lịch
+// hai hàm cũ bên dưới). Mục chuông dùng khoá cố định reminder_homework_overdue
+// nên lượt này chỉ làm mới mục cũ, không chồng thêm.
+export const eveningHomeworkReminder = onSchedule(
+  {
+    schedule: "0 20 * * *", // 20:00 ICT
+    timeZone: "Asia/Ho_Chi_Minh",
+    region: REGION,
+  },
+  async () => {
+    await dispatchCronPaths("eveningHomeworkReminder", ["/api/cron/homework-overdue"]);
   }
 );
