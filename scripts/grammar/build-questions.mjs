@@ -169,6 +169,78 @@ function buildScorer(questions) {
 const base = JSON.parse(fs.readFileSync(path.join(DATA, "base-questions.json"), "utf8"));
 const docs = JSON.parse(fs.readFileSync(path.join(DATA, "parsed.json"), "utf8"));
 
+/* ------------------------------------------------- điền loại từ còn thiếu */
+
+/**
+ * Phần SUBMARINE 2026 và 4 thẻ chủ điểm trong Docs ghi từ vựng không kèm loại từ
+ * ("Organizer: người tổ chức"), nên màn glossary của những đề đó thiếu (n.)/(v.)
+ * so với đề cũ. Điền lại theo thứ tự tin cậy giảm dần, chỗ nào không chắc thì để
+ * trống hơn là gán bừa — nhãn sai còn hại hơn không có nhãn.
+ */
+const WORD_TYPE = (() => {
+  const norm = (w) => w.toLowerCase().trim().replace(/[.,;:]+$/, "");
+
+  // Từ điển dựng từ chính data này: mọi mục đã có sẵn loại từ do người soạn ghi.
+  const lex = new Map();
+  for (const q of [...base, ...docs])
+    for (const v of q.core_vocabulary ?? []) {
+      if (!v.type) continue;
+      const k = norm(v.word);
+      if (!k) continue;
+      if (!lex.has(k)) lex.set(k, new Map());
+      const m = lex.get(k);
+      m.set(v.type, (m.get(v.type) || 0) + 1);
+    }
+
+  // Từ vừa là danh từ vừa là động từ (record, delay, increase) thì bỏ qua, trừ
+  // khi một loại áp đảo hẳn.
+  const pick = (m) => {
+    const total = [...m.values()].reduce((a, b) => a + b, 0);
+    const [top, n] = [...m.entries()].sort((a, b) => b[1] - a[1])[0];
+    return n / total >= 0.8 ? top : "";
+  };
+
+  const ADV_BLOCK = new Set(
+    "apply reply supply multiply comply imply rely assembly family only early likely friendly costly monthly weekly daily yearly timely orderly lovely ugly silly fly ally rally bully july italy anomaly jolly".split(" ")
+  );
+  const ADJ_BLOCK = new Set("enable disable table cable vegetable syllable".split(" "));
+  // Chỉ giữ hậu tố gần như không có ngoại lệ. Đã bỏ -ist (assist/exist), -ure
+  // (sure/measure), -age (manage/damage), -ive (drive/initiative), -ic
+  // (traffic/music), -ance/-ence (advance/commence) vì lẫn cả động từ lẫn danh từ.
+  const SUFFIX = [
+    [/(tion|sion|ment|ness|ity|ship|hood|ism)$/, "n."],
+    [/(ize|ise|ify)$/, "v."],
+    [/(able|ible|ous|ful|less)$/, "adj."],
+  ];
+
+  return (word) => {
+    const k = norm(word);
+    if (!k) return "";
+    const m = lex.get(k);
+    if (m) {
+      const p = pick(m);
+      if (p) return p;
+    }
+    if (k.includes(" ")) return "phr.";
+    if (k.includes("-")) return ""; // members-only, do-it-yourself — đoán sai nhiều
+    if (k.length >= 5 && /ly$/.test(k) && !ADV_BLOCK.has(k)) return "adv.";
+    if (k.length >= 6 && !ADJ_BLOCK.has(k)) for (const [re, t] of SUFFIX) if (re.test(k)) return t;
+    return "";
+  };
+})();
+
+const wordTypeStats = { missing: 0, filled: 0 };
+for (const q of [...base, ...docs])
+  for (const v of q.core_vocabulary ?? []) {
+    if (v.type) continue;
+    wordTypeStats.missing++;
+    const t = WORD_TYPE(v.word);
+    if (t) {
+      v.type = t;
+      wordTypeStats.filled++;
+    }
+  }
+
 /** Câu thiếu A/B/C/D hoặc đáp án không nằm trong A-D thì không đưa lên web. */
 const dropped = [];
 const usableDocs = docs.filter((q) => {
@@ -323,6 +395,9 @@ for (const test of allTests) {
 const lines = [];
 lines.push(`Bank cũ: ${base.length} câu · Docs dùng được: ${usableDocs.length} câu · bỏ: ${dropped.length} câu`);
 lines.push(`Tổng sau khi gộp: ${output.length} câu / ${allTests.length} test`);
+lines.push(
+  `Loại từ: ${wordTypeStats.missing} mục thiếu -> điền ${wordTypeStats.filled}, còn trống ${wordTypeStats.missing - wordTypeStats.filled}`
+);
 lines.push(`Ngưỡng nhãn (phân vị toàn bank): Dễ <= ${T_EASY} < TB <= ${T_HARD} < Khó`);
 const bands = { easy: 0, medium: 0, hard: 0 };
 for (const q of output) bands[q.difficulty]++;
