@@ -169,6 +169,70 @@ function buildScorer(questions) {
 const base = JSON.parse(fs.readFileSync(path.join(DATA, "base-questions.json"), "utf8"));
 const docs = JSON.parse(fs.readFileSync(path.join(DATA, "parsed.json"), "utf8"));
 
+/* --------------------------------------------- chuẩn hoá & điền loại từ */
+
+/**
+ * Loại từ trong bank được người soạn ghi 45 kiểu khác nhau — `n.` lẫn `n`,
+ * `phr.` lẫn `phrase`, `n/v` lẫn `n./v.` lẫn `v./n.` — nên glossary chỗ hiện
+ * "Settle (v.)" chỗ hiện "Receipt (n)".
+ *
+ * Bảng ghi thẳng từng giá trị chứ không tách bằng regex: chỉ có bấy nhiêu giá
+ * trị, ghi tay thì soát được, còn regex tách "phrase" ra thành "phr" + "ase".
+ * Thứ tự hai loại từ trong ô ghép (`v./n.` vs `n./v.`) giữ nguyên như người
+ * soạn viết, vì nó cho biết nghĩa nào mới là nghĩa dùng trong câu.
+ */
+const TYPE_CANON = {
+  "n.": "n.", n: "n.",
+  "v.": "v.", v: "v.",
+  "adj.": "adj.", adj: "adj.",
+  "adv.": "adv.", adv: "adv.",
+  "prep.": "prep.", prep: "prep.",
+  "conj.": "conj.",
+  "pron.": "pron.",
+  "det.": "det.",
+  "phr.": "phr.", phrase: "phr.",
+  "n.phr.": "n. phr.",
+  "v.phr.": "v. phr.",
+  "adj.phr.": "adj. phr.",
+  "adv.phr.": "adv. phr.",
+  "phr. v.": "phr. v.",
+  "v.pp": "v. pp.",
+  "v.ing": "v-ing.", "v-ing.": "v-ing.",
+  "adj.sup": "adj. sup.",
+  "v./n.": "v./n.", "v/n.": "v./n.",
+  "n./v.": "n./v.", "n/v": "n./v.", "n/v.": "n./v.",
+  "adj./n.": "adj./n.", "adj/n.": "adj./n.", "adj/n": "adj./n.",
+  "n./adj.": "n./adj.", "n/adj": "n./adj.", "n/adj.": "n./adj.",
+  "adv./adj.": "adv./adj.", "adv/adj": "adv./adj.", "adv/adj.": "adv./adj.",
+  "adj./adv.": "adj./adv.", "adj/adv": "adj./adv.",
+  "adv./n.": "adv./n.",
+  "adj./v.": "adj./v.", "adj/v": "adj./v.",
+  "prep/conj.": "prep./conj.",
+  "v.pp/adj.": "v. pp./adj.",
+  "adj./v.pp": "adj./v. pp.",
+};
+
+const unknownTypes = new Map();
+let typesRewritten = 0;
+for (const q of [...base, ...docs])
+  for (const v of q.core_vocabulary ?? []) {
+    const raw = (v.type ?? "").trim();
+    if (!raw) continue;
+    const canon = TYPE_CANON[raw] ?? TYPE_CANON[raw.toLowerCase()];
+    if (!canon) {
+      unknownTypes.set(raw, (unknownTypes.get(raw) ?? 0) + 1);
+      continue;
+    }
+    if (canon !== v.type) typesRewritten++;
+    v.type = canon;
+  }
+if (unknownTypes.size) {
+  // Thà dừng còn hơn ship một kiểu viết mới lẫn vào glossary.
+  console.error("Loại từ chưa có trong TYPE_CANON, bổ sung rồi chạy lại:");
+  for (const [t, n] of unknownTypes) console.error(`  ${n} lần: ${JSON.stringify(t)}`);
+  process.exit(1);
+}
+
 /* ------------------------------------------------- điền loại từ còn thiếu */
 
 /**
@@ -396,7 +460,8 @@ const lines = [];
 lines.push(`Bank cũ: ${base.length} câu · Docs dùng được: ${usableDocs.length} câu · bỏ: ${dropped.length} câu`);
 lines.push(`Tổng sau khi gộp: ${output.length} câu / ${allTests.length} test`);
 lines.push(
-  `Loại từ: ${wordTypeStats.missing} mục thiếu -> điền ${wordTypeStats.filled}, còn trống ${wordTypeStats.missing - wordTypeStats.filled}`
+  `Loại từ: ${wordTypeStats.missing} mục thiếu -> điền ${wordTypeStats.filled}, còn trống ${wordTypeStats.missing - wordTypeStats.filled}` +
+    ` · chuẩn hoá lại cách viết ${typesRewritten} mục`
 );
 lines.push(`Ngưỡng nhãn (phân vị toàn bank): Dễ <= ${T_EASY} < TB <= ${T_HARD} < Khó`);
 const bands = { easy: 0, medium: 0, hard: 0 };

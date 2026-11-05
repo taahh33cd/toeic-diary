@@ -76,6 +76,26 @@ Test cũ giữ nguyên câu nào thuộc test nào; test từ Docs nối vào sa
 chiếu `testSizes` khai báo với số câu thực tế và in mục "LỆCH testSizes" nếu vênh;
 khai thiếu một test là test đó mất khỏi web mà không báo lỗi gì.
 
+### Loại từ trong `core_vocabulary`
+
+Hai bước chạy trước khi chấm độ khó:
+
+1. **Chuẩn hoá cách viết** — bank vốn ghi 45 kiểu (`n.` lẫn `n`, `phr.` lẫn `phrase`,
+   `n/v` lẫn `n./v.`), nay gom còn 28. Bảng `TYPE_CANON` ghi thẳng từng giá trị thay vì
+   tách bằng regex; gặp giá trị chưa có trong bảng thì script **dừng hẳn** thay vì để
+   một kiểu viết mới lẫn vào. Thứ tự hai loại từ trong ô ghép (`v./n.` vs `n./v.`) giữ
+   nguyên như người soạn viết vì nó cho biết nghĩa nào mới là nghĩa dùng trong câu.
+2. **Điền chỗ thiếu** — phần Docs ghi từ vựng không kèm loại từ (`Organizer: người tổ
+   chức`), 3.435 mục. Điền theo thứ tự tin cậy giảm dần: tra từ điển dựng từ chính data
+   này → cụm nhiều từ thành `phr.` → hậu tố. Không chắc thì **để trống**, vì nhãn sai hại
+   hơn không có nhãn: từ vừa danh vừa động (`record`, `delay`) bỏ qua trừ khi một loại áp
+   đảo ≥ 80%, và hậu tố chỉ giữ nhóm gần như không ngoại lệ — đã bỏ `-ist` (assist/exist),
+   `-ure` (sure/measure), `-age` (manage/damage), `-ive` (drive/initiative), `-ic`
+   (traffic/music) vì lẫn cả động từ lẫn danh từ. Hiện điền được 2.700, còn trống 735.
+
+Hai bước này chạy trong bộ nhớ, **không sửa** `base-questions.json` và `parsed.json` —
+hai file đó phải giữ đúng như nguồn.
+
 ### Rubric độ khó
 
 Bốn tiêu chí, mỗi tiêu chí quy về **phân vị 0–10 trên toàn bank** rồi mới cộng theo

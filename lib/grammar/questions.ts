@@ -16963,7 +16963,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "ought to",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "nên, phải"
       },
       {
@@ -18587,12 +18587,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be committed to",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "cam kết, dốc sức vào"
       },
       {
         "word": "ahead of schedule",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "trước thời hạn"
       }
     ],
@@ -18676,7 +18676,7 @@ export const grammarQuestions = [
       },
       {
         "word": "take effect",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "có hiệu lực"
       }
     ],
@@ -18732,7 +18732,7 @@ export const grammarQuestions = [
       },
       {
         "word": "get something done",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "nhờ/thuê ai làm gì"
       }
     ],
@@ -18755,12 +18755,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be supposed to",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "đáng lẽ phải"
       },
       {
         "word": "in transit",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "đang trên đường vận chuyển"
       }
     ],
@@ -18816,7 +18816,7 @@ export const grammarQuestions = [
       },
       {
         "word": "be located",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "nằm ở, toạ lạc"
       }
     ],
@@ -19007,7 +19007,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be involved in",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "tham gia vào"
       },
       {
@@ -19119,7 +19119,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be interested in",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "quan tâm tới"
       },
       {
@@ -19175,7 +19175,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be based on",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "dựa trên"
       },
       {
@@ -19203,7 +19203,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be known for",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "được biết đến vì"
       },
       {
@@ -19231,7 +19231,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be exposed to",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "bị phơi nhiễm với"
       },
       {
@@ -19287,7 +19287,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be satisfied with",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "hài lòng với"
       },
       {
@@ -19343,7 +19343,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be entitled to",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "có quyền được hưởng"
       },
       {
@@ -19483,7 +19483,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be made of",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "được làm bằng"
       },
       {
@@ -19516,7 +19516,7 @@ export const grammarQuestions = [
       },
       {
         "word": "no later than",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "không muộn hơn"
       }
     ],
@@ -19628,7 +19628,7 @@ export const grammarQuestions = [
       },
       {
         "word": "be scheduled to",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "dự kiến, được lên lịch"
       }
     ],
@@ -19735,7 +19735,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "at last",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "cuối cùng thì"
       },
       {
@@ -19852,7 +19852,7 @@ export const grammarQuestions = [
       },
       {
         "word": "on time",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "đúng hạn"
       }
     ],
@@ -20155,7 +20155,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "put into effect",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "đưa vào hiệu lực"
       },
       {
@@ -20463,7 +20463,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "reach a decision",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "đưa ra quyết định"
       },
       {
@@ -20491,7 +20491,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be made aware of",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "được cho biết về"
       },
       {
@@ -20631,7 +20631,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "neither of",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "không cái nào trong hai"
       },
       {
@@ -20659,7 +20659,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "a great deal of",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "một lượng lớn"
       },
       {
@@ -20743,7 +20743,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "a number of",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "một số"
       },
       {
@@ -20855,7 +20855,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "each of",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "mỗi (cái) trong số"
       },
       {
@@ -20944,7 +20944,7 @@ export const grammarQuestions = [
       },
       {
         "word": "take effect",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "có hiệu lực"
       }
     ],
@@ -21051,7 +21051,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "a series of",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "một loạt"
       },
       {
@@ -21079,7 +21079,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "both of",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "cả hai"
       },
       {
@@ -21336,7 +21336,7 @@ export const grammarQuestions = [
       },
       {
         "word": "put into service",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "đưa vào sử dụng"
       }
     ],
@@ -21700,7 +21700,7 @@ export const grammarQuestions = [
       },
       {
         "word": "not until",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "phải đến khi... thì mới"
       }
     ],
@@ -21756,7 +21756,7 @@ export const grammarQuestions = [
       },
       {
         "word": "upon arrival",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "ngay khi đến"
       }
     ],
@@ -21812,7 +21812,7 @@ export const grammarQuestions = [
       },
       {
         "word": "at one's expense",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "bằng chi phí của ai"
       }
     ],
@@ -28397,7 +28397,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Exceed",
-        "type": "",
+        "type": "v.",
         "meaning": "vượt quá"
       }
     ],
@@ -30426,7 +30426,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "promising",
-        "type": "",
+        "type": "adj.",
         "meaning": "đầy triển vọng"
       },
       {
@@ -30681,12 +30681,12 @@ export const grammarQuestions = [
       },
       {
         "word": "professional development",
-        "type": "phr.",
+        "type": "n.",
         "meaning": "phát triển chuyên môn"
       },
       {
         "word": "opportunity",
-        "type": "n",
+        "type": "n.",
         "meaning": "cơ hội"
       },
       {
@@ -30772,12 +30772,12 @@ export const grammarQuestions = [
       },
       {
         "word": "opportunity",
-        "type": "n",
+        "type": "n.",
         "meaning": "cơ hội"
       },
       {
         "word": "assist",
-        "type": "",
+        "type": "v.",
         "meaning": "hỗ trợ, giúp đỡ"
       },
       {
@@ -31040,7 +31040,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "pharmaceutical",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "thuộc ngành dược phẩm"
       },
       {
@@ -31118,7 +31118,7 @@ export const grammarQuestions = [
       },
       {
         "word": "incentive",
-        "type": "",
+        "type": "n.",
         "meaning": "khoản khuyến khích, động lực"
       },
       {
@@ -31209,7 +31209,7 @@ export const grammarQuestions = [
       },
       {
         "word": "institute",
-        "type": "",
+        "type": "n.",
         "meaning": "ban hành, thiết lập"
       },
       {
@@ -32008,12 +32008,12 @@ export const grammarQuestions = [
       },
       {
         "word": "professional development",
-        "type": "phr.",
+        "type": "n.",
         "meaning": "phát triển chuyên môn"
       },
       {
         "word": "opportunity",
-        "type": "n",
+        "type": "n.",
         "meaning": "cơ hội"
       },
       {
@@ -42471,7 +42471,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "zoning law",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "luật phân vùng"
       },
       {
@@ -42644,7 +42644,7 @@ export const grammarQuestions = [
       },
       {
         "word": "profit margin",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "tỷ suất lợi nhuận"
       }
     ],
@@ -42751,7 +42751,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "performance review",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "đánh giá năng lực"
       },
       {
@@ -43171,7 +43171,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "prone to",
-        "type": "adj.phr.",
+        "type": "adj. phr.",
         "meaning": "dễ bị, có xu hướng bị"
       },
       {
@@ -43899,7 +43899,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "renewable energy",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "năng lượng tái tạo"
       },
       {
@@ -44403,7 +44403,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "raw material",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "nguyên liệu thô"
       },
       {
@@ -44711,7 +44711,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "dispose of",
-        "type": "v.phr.",
+        "type": "v. phr.",
         "meaning": "xử lý, vứt bỏ"
       },
       {
@@ -44744,7 +44744,7 @@ export const grammarQuestions = [
       },
       {
         "word": "trade show",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "hội chợ thương mại"
       }
     ],
@@ -44828,7 +44828,7 @@ export const grammarQuestions = [
       },
       {
         "word": "taxiing",
-        "type": "v.ing",
+        "type": "v-ing.",
         "meaning": "lăn bánh trên đường băng"
       }
     ],
@@ -45383,7 +45383,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "flagship store",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "cửa hàng hàng đầu / kiểu mẫu"
       },
       {
@@ -50742,7 +50742,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "overnight",
-        "type": "adv/adj.",
+        "type": "adv./adj.",
         "meaning": "băng xuyên màn đêm luồn vắt kiệt tối trời"
       },
       {
@@ -50905,7 +50905,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "six years",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "6 năm"
       }
     ],
@@ -50961,7 +50961,7 @@ export const grammarQuestions = [
       },
       {
         "word": "on sale",
-        "type": "adj.phr.",
+        "type": "adj. phr.",
         "meaning": "đang giảm giá"
       }
     ],
@@ -51068,7 +51068,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "log on",
-        "type": "v.phr.",
+        "type": "v. phr.",
         "meaning": "đăng nhập"
       },
       {
@@ -51208,12 +51208,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "housing market",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "thị trường nhà đất"
       },
       {
         "word": "pick up",
-        "type": "v.phr.",
+        "type": "v. phr.",
         "meaning": "tăng lên, cải thiện"
       }
     ],
@@ -51348,7 +51348,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "pick up",
-        "type": "v.phr.",
+        "type": "v. phr.",
         "meaning": "nhận (hàng), đón"
       },
       {
@@ -51460,7 +51460,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "post office",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "bưu điện"
       }
     ],
@@ -51483,7 +51483,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "out of the office",
-        "type": "adj.phr.",
+        "type": "adj. phr.",
         "meaning": "vắng mặt tại văn phòng"
       },
       {
@@ -51534,7 +51534,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "lead designer",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "nhà thiết kế chính"
       }
     ],
@@ -51557,7 +51557,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "further notice",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "thông báo thêm/mới"
       }
     ],
@@ -51608,7 +51608,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "digital security",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "bảo mật kỹ thuật số"
       }
     ],
@@ -51654,7 +51654,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "conference room",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "phòng hội nghị"
       }
     ],
@@ -51710,7 +51710,7 @@ export const grammarQuestions = [
       },
       {
         "word": "job security",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "sự ổn định công việc"
       }
     ],
@@ -51812,7 +51812,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "shuttle bus",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "xe buýt đưa đón"
       },
       {
@@ -51924,7 +51924,7 @@ export const grammarQuestions = [
       },
       {
         "word": "operating system",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "hệ điều hành"
       }
     ],
@@ -51998,7 +51998,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "technical support",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "hỗ trợ kỹ thuật"
       }
     ],
@@ -52021,12 +52021,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "sign in",
-        "type": "v.phr.",
+        "type": "v. phr.",
         "meaning": "ký tên, đăng ký vào"
       },
       {
         "word": "front desk",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "quầy lễ tân"
       }
     ],
@@ -52105,7 +52105,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "public relations",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "quan hệ công chúng"
       }
     ],
@@ -52179,7 +52179,7 @@ export const grammarQuestions = [
       },
       {
         "word": "board member",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "thành viên hội đồng quản trị"
       }
     ],
@@ -52424,7 +52424,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "initiation fee",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "phí gia nhập"
       }
     ],
@@ -52447,12 +52447,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "charity gala",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "bữa tiệc từ thiện"
       },
       {
         "word": "silent auction",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "đấu giá im lặng"
       }
     ],
@@ -52554,7 +52554,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "on leave",
-        "type": "adj.phr.",
+        "type": "adj. phr.",
         "meaning": "đang nghỉ phép"
       },
       {
@@ -52666,7 +52666,7 @@ export const grammarQuestions = [
       },
       {
         "word": "convention center",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "trung tâm hội nghị"
       }
     ],
@@ -52763,7 +52763,7 @@ export const grammarQuestions = [
       },
       {
         "word": "founded",
-        "type": "v.pp",
+        "type": "v. pp.",
         "meaning": "được thành lập"
       }
     ],
@@ -52809,7 +52809,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "outgoing mail",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "thư gửi đi"
       }
     ],
@@ -52832,7 +52832,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "dress code",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "quy định trang phục"
       }
     ],
@@ -53031,12 +53031,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "on time",
-        "type": "adj.phr.",
+        "type": "adj. phr.",
         "meaning": "đúng giờ"
       },
       {
         "word": "heavy traffic",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "giao thông đông đúc (tắc đường)"
       }
     ],
@@ -53115,7 +53115,7 @@ export const grammarQuestions = [
       },
       {
         "word": "wireless charger",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "sạc không dây"
       }
     ],
@@ -53194,7 +53194,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "regional director",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "giám đốc khu vực"
       }
     ],
@@ -53250,7 +53250,7 @@ export const grammarQuestions = [
       },
       {
         "word": "in writing",
-        "type": "adv.phr.",
+        "type": "adv. phr.",
         "meaning": "bằng văn bản"
       }
     ],
@@ -53273,12 +53273,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "hand sanitizer",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "nước rửa tay sát khuẩn"
       },
       {
         "word": "manufacturing facility",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "cơ sở sản xuất"
       }
     ],
@@ -53301,7 +53301,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "postponed",
-        "type": "adj./v.pp",
+        "type": "adj./v. pp.",
         "meaning": "bị trì hoãn"
       },
       {
@@ -53408,7 +53408,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "business trip",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "chuyến công tác"
       }
     ],
@@ -53459,7 +53459,7 @@ export const grammarQuestions = [
       },
       {
         "word": "take place",
-        "type": "v.phr.",
+        "type": "v. phr.",
         "meaning": "diễn ra"
       }
     ],
@@ -53482,7 +53482,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "leave of absence",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "nghỉ phép"
       }
     ],
@@ -53505,7 +53505,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "lack of",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "sự thiếu hụt"
       },
       {
@@ -53556,7 +53556,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "keynote address",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "bài phát biểu chính"
       },
       {
@@ -53635,7 +53635,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "remain seated",
-        "type": "v.phr.",
+        "type": "v. phr.",
         "meaning": "vẫn ngồi tại chỗ"
       }
     ],
@@ -53686,7 +53686,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "time management",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "quản lý thời gian"
       }
     ],
@@ -53816,7 +53816,7 @@ export const grammarQuestions = [
       },
       {
         "word": "implemented",
-        "type": "v.pp",
+        "type": "v. pp.",
         "meaning": "được triển khai"
       }
     ],
@@ -54038,7 +54038,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "at all times",
-        "type": "adv.phr.",
+        "type": "adv. phr.",
         "meaning": "mọi lúc"
       }
     ],
@@ -54375,7 +54375,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "tight schedule",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "lịch trình bận rộn"
       },
       {
@@ -54482,7 +54482,7 @@ export const grammarQuestions = [
       },
       {
         "word": "transferred",
-        "type": "v.pp",
+        "type": "v. pp.",
         "meaning": "đã chuyển công tác"
       }
     ],
@@ -54556,7 +54556,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "domestic flight",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "chuyến bay nội địa"
       },
       {
@@ -54640,7 +54640,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "public holiday",
-        "type": "n",
+        "type": "n.",
         "meaning": "ngày lễ công cộng"
       }
     ],
@@ -54663,12 +54663,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "pension",
-        "type": "n",
+        "type": "n.",
         "meaning": "lương hưu"
       },
       {
         "word": "concern",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự lo ngại"
       }
     ],
@@ -54691,7 +54691,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "conveniently",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "một cách thuận tiện"
       }
     ],
@@ -54714,12 +54714,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "implement",
-        "type": "v",
+        "type": "v.",
         "meaning": "triển khai, thực hiện"
       },
       {
         "word": "branch",
-        "type": "n",
+        "type": "n.",
         "meaning": "chi nhánh"
       }
     ],
@@ -54742,12 +54742,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "renovation",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự cải tạo, tu sửa"
       },
       {
         "word": "lounge",
-        "type": "n",
+        "type": "n.",
         "meaning": "phòng chờ, phòng nghỉ"
       }
     ],
@@ -54770,12 +54770,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "monitor",
-        "type": "v",
+        "type": "v.",
         "meaning": "giám sát"
       },
       {
         "word": "maintenance",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự bảo trì"
       }
     ],
@@ -54798,12 +54798,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "pursue",
-        "type": "v",
+        "type": "v.",
         "meaning": "theo đuổi"
       },
       {
         "word": "sector",
-        "type": "n",
+        "type": "n.",
         "meaning": "lĩnh vực, mảng"
       }
     ],
@@ -54826,12 +54826,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "seminar",
-        "type": "n",
+        "type": "n.",
         "meaning": "hội thảo"
       },
       {
         "word": "hold",
-        "type": "v",
+        "type": "v.",
         "meaning": "tổ chức"
       }
     ],
@@ -54854,7 +54854,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "device",
-        "type": "n",
+        "type": "n.",
         "meaning": "thiết bị"
       }
     ],
@@ -54877,12 +54877,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "senior",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "cao cấp, có thâm niên"
       },
       {
         "word": "consultant",
-        "type": "n",
+        "type": "n.",
         "meaning": "cố vấn"
       }
     ],
@@ -54905,7 +54905,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "laboratory",
-        "type": "n",
+        "type": "n.",
         "meaning": "phòng thí nghiệm"
       }
     ],
@@ -54928,12 +54928,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "exceptional",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "xuất sắc, đặc biệt"
       },
       {
         "word": "merger",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự sáp nhập"
       }
     ],
@@ -54956,12 +54956,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "quarterly",
-        "type": "adj/adv",
+        "type": "adj./adv.",
         "meaning": "hàng quý"
       },
       {
         "word": "draft",
-        "type": "n",
+        "type": "n.",
         "meaning": "bản thảo"
       }
     ],
@@ -54984,12 +54984,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "keynote",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "chủ đạo, chính"
       },
       {
         "word": "presentation",
-        "type": "n",
+        "type": "n.",
         "meaning": "bài thuyết trình"
       }
     ],
@@ -55012,7 +55012,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "strategy",
-        "type": "n",
+        "type": "n.",
         "meaning": "chiến lược"
       }
     ],
@@ -55035,12 +55035,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "regarding",
-        "type": "prep",
+        "type": "prep.",
         "meaning": "về việc, liên quan đến"
       },
       {
         "word": "internal",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "nội bộ"
       }
     ],
@@ -55063,12 +55063,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "upcoming",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "sắp tới"
       },
       {
         "word": "summit",
-        "type": "n",
+        "type": "n.",
         "meaning": "hội nghị thượng đỉnh"
       }
     ],
@@ -55091,12 +55091,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "outage",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự ngừng hoạt động (điện, nước...)"
       },
       {
         "word": "immediately",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "ngay lập tức"
       }
     ],
@@ -55119,7 +55119,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "corporate",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "(thuộc) tập đoàn, công ty"
       }
     ],
@@ -55142,7 +55142,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "currently",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "hiện tại"
       }
     ],
@@ -55165,7 +55165,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "aircraft",
-        "type": "n",
+        "type": "n.",
         "meaning": "máy bay"
       }
     ],
@@ -55188,12 +55188,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "confidentiality",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự bảo mật"
       },
       {
         "word": "agreement",
-        "type": "n",
+        "type": "n.",
         "meaning": "thỏa thuận, hợp đồng"
       }
     ],
@@ -55216,12 +55216,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "supplier",
-        "type": "n",
+        "type": "n.",
         "meaning": "nhà cung cấp"
       },
       {
         "word": "overseas",
-        "type": "adv/adj",
+        "type": "adv./adj.",
         "meaning": "nước ngoài, hải ngoại"
       }
     ],
@@ -55244,7 +55244,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "reimbursement",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự hoàn tiền, bồi hoàn"
       }
     ],
@@ -55267,12 +55267,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "steadily",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "một cách đều đặn"
       },
       {
         "word": "take office",
-        "type": "v",
+        "type": "v.",
         "meaning": "nhậm chức"
       }
     ],
@@ -55295,12 +55295,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "spacious",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "rộng rãi"
       },
       {
         "word": "district",
-        "type": "n",
+        "type": "n.",
         "meaning": "quận, khu vực"
       }
     ],
@@ -55323,7 +55323,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "remainder",
-        "type": "n",
+        "type": "n.",
         "meaning": "phần còn lại"
       }
     ],
@@ -55346,12 +55346,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "expense",
-        "type": "n",
+        "type": "n.",
         "meaning": "chi phí"
       },
       {
         "word": "receptionist",
-        "type": "n",
+        "type": "n.",
         "meaning": "nhân viên lễ tân"
       }
     ],
@@ -55374,12 +55374,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "appoint",
-        "type": "v",
+        "type": "v.",
         "meaning": "bổ nhiệm"
       },
       {
         "word": "extensive",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "sâu rộng, bao quát"
       }
     ],
@@ -55402,7 +55402,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "intensive",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "chuyên sâu, cường độ cao"
       }
     ],
@@ -55425,7 +55425,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "cafeteria",
-        "type": "n",
+        "type": "n.",
         "meaning": "quán ăn tự phục vụ, căng tin"
       }
     ],
@@ -55448,7 +55448,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "council",
-        "type": "n",
+        "type": "n.",
         "meaning": "hội đồng"
       }
     ],
@@ -55471,7 +55471,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "prestigious",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "uy tín, danh giá"
       }
     ],
@@ -55494,7 +55494,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "available",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "có sẵn"
       }
     ],
@@ -55517,7 +55517,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "lease",
-        "type": "n/v",
+        "type": "n./v.",
         "meaning": "hợp đồng thuê, cho thuê"
       }
     ],
@@ -55540,12 +55540,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "constructive",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "mang tính xây dựng"
       },
       {
         "word": "policy",
-        "type": "n",
+        "type": "n.",
         "meaning": "chính sách"
       }
     ],
@@ -55568,7 +55568,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "duration",
-        "type": "n",
+        "type": "n.",
         "meaning": "khoảng thời gian (tồn tại của một sự việc)"
       }
     ],
@@ -55591,7 +55591,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "premises",
-        "type": "n",
+        "type": "n.",
         "meaning": "khuôn viên, tòa nhà"
       }
     ],
@@ -55614,12 +55614,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "complimentary",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "miễn phí"
       },
       {
         "word": "shuttle",
-        "type": "n",
+        "type": "n.",
         "meaning": "xe đưa đón chặng ngắn"
       }
     ],
@@ -55642,12 +55642,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "sensitive",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "nhạy cảm, bảo mật"
       },
       {
         "word": "cabinet",
-        "type": "n",
+        "type": "n.",
         "meaning": "tủ hồ sơ/tủ đựng đồ"
       }
     ],
@@ -55670,7 +55670,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "upgrade",
-        "type": "v",
+        "type": "v.",
         "meaning": "nâng cấp"
       }
     ],
@@ -55693,12 +55693,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "proposed",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "được đề xuất"
       },
       {
         "word": "expansion",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự mở rộng"
       }
     ],
@@ -55721,12 +55721,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "demand",
-        "type": "n",
+        "type": "n.",
         "meaning": "nhu cầu"
       },
       {
         "word": "flagship",
-        "type": "adj/n",
+        "type": "adj./n.",
         "meaning": "hàng đầu, quan trọng nhất"
       }
     ],
@@ -55749,12 +55749,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "fluctuation",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự biến động"
       },
       {
         "word": "stable",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "ổn định"
       }
     ],
@@ -55777,12 +55777,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "resignation",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự từ chức"
       },
       {
         "word": "significantly",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "một cách đáng kể"
       }
     ],
@@ -55805,7 +55805,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "headquarters",
-        "type": "n",
+        "type": "n.",
         "meaning": "trụ sở chính"
       }
     ],
@@ -55828,7 +55828,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "philanthropist",
-        "type": "n",
+        "type": "n.",
         "meaning": "nhà hảo tâm, người nhân đức"
       }
     ],
@@ -55851,12 +55851,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "promote",
-        "type": "v",
+        "type": "v.",
         "meaning": "thăng chức"
       },
       {
         "word": "outstanding",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "xuất sắc, nổi bật"
       }
     ],
@@ -55879,12 +55879,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "asset",
-        "type": "n",
+        "type": "n.",
         "meaning": "tài sản, người/vật có giá trị"
       },
       {
         "word": "finalized",
-        "type": "v",
+        "type": "v.",
         "meaning": "hoàn tất"
       }
     ],
@@ -55907,7 +55907,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "resume",
-        "type": "n",
+        "type": "n.",
         "meaning": "sơ yếu lý lịch"
       }
     ],
@@ -55930,7 +55930,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "submit",
-        "type": "v",
+        "type": "v.",
         "meaning": "nộp, trình"
       }
     ],
@@ -55953,7 +55953,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "subscription",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự đăng ký, thuê bao"
       }
     ],
@@ -55976,12 +55976,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "entire",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "toàn bộ"
       },
       {
         "word": "campaign",
-        "type": "n",
+        "type": "n.",
         "meaning": "chiến dịch"
       }
     ],
@@ -56004,7 +56004,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "renovation",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự cải tạo, tu sửa"
       }
     ],
@@ -56027,7 +56027,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "intern",
-        "type": "n",
+        "type": "n.",
         "meaning": "thực tập sinh"
       }
     ],
@@ -56050,12 +56050,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "institute",
-        "type": "n",
+        "type": "n.",
         "meaning": "viện nghiên cứu"
       },
       {
         "word": "founding",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự thành lập"
       }
     ],
@@ -56078,12 +56078,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "innovative",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "sáng tạo, có tính đổi mới"
       },
       {
         "word": "reduction",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự cắt giảm"
       }
     ],
@@ -56106,7 +56106,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "additional charge",
-        "type": "n",
+        "type": "n.",
         "meaning": "phí bổ sung"
       }
     ],
@@ -56129,7 +56129,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "corporate",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "doanh nghiệp"
       }
     ],
@@ -56152,7 +56152,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "metropolitan",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "(thuộc) khu vực đô thị"
       }
     ],
@@ -56175,7 +56175,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "breakroom",
-        "type": "n",
+        "type": "n.",
         "meaning": "phòng nghỉ ngơi của nhân viên"
       }
     ],
@@ -56198,7 +56198,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "take place",
-        "type": "v",
+        "type": "v.",
         "meaning": "diễn ra, tổ chức"
       }
     ],
@@ -56221,12 +56221,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "retail",
-        "type": "n/adj",
+        "type": "n./adj.",
         "meaning": "bán lẻ"
       },
       {
         "word": "loyalty program",
-        "type": "n",
+        "type": "n.",
         "meaning": "chương trình khách hàng thân thiết"
       }
     ],
@@ -56249,12 +56249,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "orientation",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự định hướng"
       },
       {
         "word": "employment",
-        "type": "n",
+        "type": "n.",
         "meaning": "việc làm, sự thuê mướn"
       }
     ],
@@ -56277,7 +56277,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "suburbs",
-        "type": "n",
+        "type": "n.",
         "meaning": "ngoại ô"
       }
     ],
@@ -56300,12 +56300,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "cooperation",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự hợp tác"
       },
       {
         "word": "restructuring",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự tái cơ cấu"
       }
     ],
@@ -56328,7 +56328,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "intersection",
-        "type": "n",
+        "type": "n.",
         "meaning": "ngã tư, giao lộ"
       }
     ],
@@ -56351,7 +56351,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "receipt",
-        "type": "n",
+        "type": "n.",
         "meaning": "hóa đơn"
       }
     ],
@@ -56374,7 +56374,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "assist",
-        "type": "v",
+        "type": "v.",
         "meaning": "hỗ trợ, giúp đỡ"
       }
     ],
@@ -56397,12 +56397,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "reimbursement",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự hoàn tiền, bồi hoàn"
       },
       {
         "word": "process",
-        "type": "v",
+        "type": "v.",
         "meaning": "xử lý"
       }
     ],
@@ -56425,7 +56425,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "qualified",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "đủ tiêu chuẩn, đủ năng lực"
       }
     ],
@@ -56448,7 +56448,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "disconnect",
-        "type": "v",
+        "type": "v.",
         "meaning": "ngắt kết nối"
       }
     ],
@@ -56471,7 +56471,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "visitor",
-        "type": "n",
+        "type": "n.",
         "meaning": "khách thăm"
       }
     ],
@@ -56494,7 +56494,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "participant",
-        "type": "n",
+        "type": "n.",
         "meaning": "người tham gia"
       }
     ],
@@ -56517,12 +56517,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "groundbreaking",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "đột phá"
       },
       {
         "word": "colleague",
-        "type": "n",
+        "type": "n.",
         "meaning": "đồng nghiệp"
       }
     ],
@@ -56545,7 +56545,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "pharmacy",
-        "type": "n",
+        "type": "n.",
         "meaning": "hiệu thuốc"
       }
     ],
@@ -56568,7 +56568,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "postpone",
-        "type": "v",
+        "type": "v.",
         "meaning": "trì hoãn"
       }
     ],
@@ -56591,7 +56591,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "supplies",
-        "type": "n",
+        "type": "n.",
         "meaning": "vật dụng, đồ dùng"
       }
     ],
@@ -56614,7 +56614,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "relocate",
-        "type": "v",
+        "type": "v.",
         "meaning": "chuyển chỗ, di dời"
       }
     ],
@@ -56637,7 +56637,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "renovated",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "được cải tạo, làm mới"
       }
     ],
@@ -56660,7 +56660,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "check out",
-        "type": "v",
+        "type": "v.",
         "meaning": "làm thủ tục trả phòng"
       }
     ],
@@ -56683,7 +56683,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "annual",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "hàng năm"
       }
     ],
@@ -56706,7 +56706,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "repair",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự sửa chữa"
       }
     ],
@@ -56729,7 +56729,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "typically",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "thông thường, điển hình"
       }
     ],
@@ -56752,7 +56752,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "manage to",
-        "type": "v",
+        "type": "v.",
         "meaning": "xoay sở để, thành công trong việc"
       }
     ],
@@ -56775,7 +56775,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "concern",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự lo ngại, quan tâm"
       }
     ],
@@ -56798,7 +56798,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "guideline",
-        "type": "n",
+        "type": "n.",
         "meaning": "hướng dẫn, nguyên tắc chỉ đạo"
       }
     ],
@@ -56821,7 +56821,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "lecturer",
-        "type": "n",
+        "type": "n.",
         "meaning": "giảng viên"
       }
     ],
@@ -56844,7 +56844,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "at the latest",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "muộn nhất là"
       }
     ],
@@ -56867,7 +56867,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "graduate",
-        "type": "v",
+        "type": "v.",
         "meaning": "tốt nghiệp"
       }
     ],
@@ -56890,7 +56890,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "seniority",
-        "type": "n",
+        "type": "n.",
         "meaning": "thâm niên"
       }
     ],
@@ -56913,7 +56913,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "maintenance",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự bảo trì"
       }
     ],
@@ -56936,7 +56936,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "responsible",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "chịu trách nhiệm"
       }
     ],
@@ -56959,7 +56959,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "eco-friendly",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "thân thiện với môi trường"
       }
     ],
@@ -56982,7 +56982,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "headquarters",
-        "type": "n",
+        "type": "n.",
         "meaning": "trụ sở chính"
       }
     ],
@@ -57005,7 +57005,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "confidential",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "bảo mật, tuyệt mật"
       }
     ],
@@ -57028,7 +57028,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "eligible",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "đủ điều kiện, thích hợp"
       }
     ],
@@ -57051,7 +57051,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "volume",
-        "type": "n",
+        "type": "n.",
         "meaning": "khối lượng, số lượng"
       }
     ],
@@ -57074,12 +57074,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "appoint",
-        "type": "v",
+        "type": "v.",
         "meaning": "bổ nhiệm"
       },
       {
         "word": "background",
-        "type": "n",
+        "type": "n.",
         "meaning": "nền tảng, kinh nghiệm"
       }
     ],
@@ -57102,7 +57102,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "widely",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "rộng rãi"
       }
     ],
@@ -57125,7 +57125,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "annual",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "hàng năm"
       }
     ],
@@ -57148,12 +57148,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "integrate",
-        "type": "v",
+        "type": "v.",
         "meaning": "tích hợp"
       },
       {
         "word": "existing",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "hiện có"
       }
     ],
@@ -57176,7 +57176,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "audit",
-        "type": "n/v",
+        "type": "n./v.",
         "meaning": "kiểm toán"
       }
     ],
@@ -57199,7 +57199,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "schedule",
-        "type": "n/v",
+        "type": "n./v.",
         "meaning": "lịch trình"
       }
     ],
@@ -57222,12 +57222,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "target",
-        "type": "n",
+        "type": "n.",
         "meaning": "mục tiêu"
       },
       {
         "word": "fiscal year",
-        "type": "n",
+        "type": "n.",
         "meaning": "năm tài chính"
       }
     ],
@@ -57250,7 +57250,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "market share",
-        "type": "n",
+        "type": "n.",
         "meaning": "thị phần"
       }
     ],
@@ -57273,7 +57273,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "concerning",
-        "type": "prep",
+        "type": "prep.",
         "meaning": "liên quan đến, về việc"
       }
     ],
@@ -57296,7 +57296,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "alongside",
-        "type": "prep",
+        "type": "prep.",
         "meaning": "sát cánh, cùng với"
       }
     ],
@@ -57319,7 +57319,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "belongings",
-        "type": "n",
+        "type": "n.",
         "meaning": "đồ đạc cá nhân"
       }
     ],
@@ -57342,7 +57342,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "business trip",
-        "type": "n",
+        "type": "n.",
         "meaning": "chuyến công tác"
       }
     ],
@@ -57365,7 +57365,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "finalist",
-        "type": "n",
+        "type": "n.",
         "meaning": "người lọt vào vòng chung kết"
       }
     ],
@@ -57388,12 +57388,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "strike",
-        "type": "n",
+        "type": "n.",
         "meaning": "cuộc đình công"
       },
       {
         "word": "ground crew",
-        "type": "n",
+        "type": "n.",
         "meaning": "nhân viên mặt đất"
       }
     ],
@@ -57416,7 +57416,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "potential",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "tiềm năng, tiềm ẩn"
       }
     ],
@@ -57439,7 +57439,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "packaging",
-        "type": "n",
+        "type": "n.",
         "meaning": "bao bì"
       }
     ],
@@ -57462,12 +57462,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "accolade",
-        "type": "n",
+        "type": "n.",
         "meaning": "giải thưởng, lời khen ngợi"
       },
       {
         "word": "dedication",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự tận tâm, cống hiến"
       }
     ],
@@ -57490,12 +57490,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "supervision",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự giám sát"
       },
       {
         "word": "clinical trial",
-        "type": "n",
+        "type": "n.",
         "meaning": "thử nghiệm lâm sàng"
       }
     ],
@@ -57518,12 +57518,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "administrative",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "thuộc về hành chính"
       },
       {
         "word": "financial statement",
-        "type": "n",
+        "type": "n.",
         "meaning": "báo cáo tài chính"
       }
     ],
@@ -57546,7 +57546,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "stationed",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "được đóng, được bố trí tại vị trí"
       }
     ],
@@ -57569,7 +57569,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "trade agreement",
-        "type": "n",
+        "type": "n.",
         "meaning": "thỏa thuận thương mại"
       }
     ],
@@ -57592,7 +57592,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "internally",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "nội bộ"
       }
     ],
@@ -57615,12 +57615,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "impact",
-        "type": "n",
+        "type": "n.",
         "meaning": "tác động, ảnh hưởng"
       },
       {
         "word": "artificial intelligence",
-        "type": "n",
+        "type": "n.",
         "meaning": "trí tuệ nhân tạo"
       }
     ],
@@ -57643,12 +57643,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "recruitment",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự tuyển dụng"
       },
       {
         "word": "multilingual",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "đa ngôn ngữ"
       }
     ],
@@ -57671,7 +57671,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "maintenance",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự bảo trì"
       }
     ],
@@ -57694,7 +57694,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "professional development",
-        "type": "n",
+        "type": "n.",
         "meaning": "phát triển chuyên môn"
       }
     ],
@@ -57717,7 +57717,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "proposal",
-        "type": "n",
+        "type": "n.",
         "meaning": "đề xuất"
       }
     ],
@@ -58690,7 +58690,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "processed",
-        "type": "v.pp",
+        "type": "v. pp.",
         "meaning": "được xử lý"
       }
     ],
@@ -58741,7 +58741,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "taking on",
-        "type": "v.phr.",
+        "type": "v. phr.",
         "meaning": "đảm nhận, tiếp nhận"
       }
     ],
@@ -58769,7 +58769,7 @@ export const grammarQuestions = [
       },
       {
         "word": "copy editor",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "biên tập viên"
       }
     ],
@@ -58792,12 +58792,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "revised",
-        "type": "v.pp/adj.",
+        "type": "v. pp./adj.",
         "meaning": "đã được sửa đổi"
       },
       {
         "word": "personnel department",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "phòng nhân sự"
       }
     ],
@@ -58820,7 +58820,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "scheduled",
-        "type": "v.pp/adj.",
+        "type": "v. pp./adj.",
         "meaning": "đã được lên lịch"
       }
     ],
@@ -58866,12 +58866,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "loan application",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "đơn xin vay vốn"
       },
       {
         "word": "supporting documents",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "tài liệu hỗ trợ"
       }
     ],
@@ -58922,7 +58922,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "storage facility",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "cơ sở lưu trữ"
       }
     ],
@@ -58968,12 +58968,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "make the most of",
-        "type": "v.phr.",
+        "type": "v. phr.",
         "meaning": "tận dụng tối đa"
       },
       {
         "word": "cooking tips",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "mẹo nấu ăn"
       }
     ],
@@ -58996,7 +58996,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "labor cost",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "chi phí nhân công"
       },
       {
@@ -59034,7 +59034,7 @@ export const grammarQuestions = [
       },
       {
         "word": "lowest",
-        "type": "adj.sup",
+        "type": "adj. sup.",
         "meaning": "thấp nhất"
       }
     ],
@@ -59080,7 +59080,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "corporate advertising",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "quảng cáo doanh nghiệp"
       }
     ],
@@ -59103,12 +59103,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "purchase order",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "đơn đặt hàng"
       },
       {
         "word": "shipped",
-        "type": "v.pp",
+        "type": "v. pp.",
         "meaning": "được vận chuyển"
       }
     ],
@@ -60066,7 +60066,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "ahead of schedule",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "trước thời hạn/lịch trình"
       },
       {
@@ -62093,7 +62093,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "take advantage of",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "tận dụng"
       }
     ],
@@ -62190,7 +62190,7 @@ export const grammarQuestions = [
       },
       {
         "word": "on schedule",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "đúng lịch trình/thời hạn"
       }
     ],
@@ -62366,7 +62366,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "make up the time",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "làm bù thời gian"
       }
     ],
@@ -62440,7 +62440,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "attendee",
-        "type": "n",
+        "type": "n.",
         "meaning": "người tham dự"
       }
     ],
@@ -62463,12 +62463,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "deadline",
-        "type": "n",
+        "type": "n.",
         "meaning": "thời hạn cuối cùng"
       },
       {
         "word": "aware",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "nhận thức, biết được"
       }
     ],
@@ -62491,12 +62491,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "audit",
-        "type": "n",
+        "type": "n.",
         "meaning": "cuộc kiểm toán"
       },
       {
         "word": "submit",
-        "type": "v",
+        "type": "v.",
         "meaning": "nộp, trình"
       }
     ],
@@ -62519,12 +62519,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "finalize",
-        "type": "v",
+        "type": "v.",
         "meaning": "hoàn tất, làm xong khâu cuối"
       },
       {
         "word": "portal",
-        "type": "n",
+        "type": "n.",
         "meaning": "cổng thông tin"
       }
     ],
@@ -62547,12 +62547,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "debate",
-        "type": "v",
+        "type": "v.",
         "meaning": "tranh luận, bàn bạc"
       },
       {
         "word": "existing",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "hiện có"
       }
     ],
@@ -62575,12 +62575,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "foundation",
-        "type": "n",
+        "type": "n.",
         "meaning": "nền móng"
       },
       {
         "word": "complex",
-        "type": "n",
+        "type": "n.",
         "meaning": "khu phức hợp"
       }
     ],
@@ -62603,12 +62603,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "high-end",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "cao cấp"
       },
       {
         "word": "gourmet",
-        "type": "adj/n",
+        "type": "adj./n.",
         "meaning": "ngon lành, sành ăn"
       }
     ],
@@ -62631,12 +62631,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "manuscript",
-        "type": "n",
+        "type": "n.",
         "meaning": "bản thảo"
       },
       {
         "word": "editorial",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "(thuộc) biên tập"
       }
     ],
@@ -62659,12 +62659,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "initial",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "ban đầu"
       },
       {
         "word": "kickoff meeting",
-        "type": "n",
+        "type": "n.",
         "meaning": "cuộc họp khởi động dự án"
       }
     ],
@@ -62687,12 +62687,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "diversity",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự đa dạng"
       },
       {
         "word": "informative",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "có nhiều thông tin hữu ích"
       }
     ],
@@ -62715,12 +62715,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "undergo",
-        "type": "v",
+        "type": "v.",
         "meaning": "trải qua"
       },
       {
         "word": "disturbance",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự làm phiền, sự xáo trộn"
       }
     ],
@@ -62743,7 +62743,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "typically",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "thông thường, điển hình"
       }
     ],
@@ -62766,12 +62766,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "encounter",
-        "type": "v",
+        "type": "v.",
         "meaning": "gặp phải"
       },
       {
         "word": "immediately",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "ngay lập tức"
       }
     ],
@@ -62794,7 +62794,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "subscribe",
-        "type": "v",
+        "type": "v.",
         "meaning": "đăng ký"
       }
     ],
@@ -62817,12 +62817,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "designated",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "được chỉ định"
       },
       {
         "word": "relieve",
-        "type": "v",
+        "type": "v.",
         "meaning": "thay ca, làm nhẹ bớt"
       }
     ],
@@ -62845,7 +62845,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "equivalent",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "tương đương"
       }
     ],
@@ -62868,7 +62868,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "remarkably",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "đáng chú ý, rõ rệt"
       }
     ],
@@ -62891,12 +62891,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "reschedule",
-        "type": "v",
+        "type": "v.",
         "meaning": "đổi lịch, sắp xếp lại thời gian"
       },
       {
         "word": "urgent",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "khẩn cấp"
       }
     ],
@@ -62919,7 +62919,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "prototype",
-        "type": "n",
+        "type": "n.",
         "meaning": "nguyên mẫu"
       }
     ],
@@ -62942,12 +62942,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "pediatric",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "thuộc nhi khoa"
       },
       {
         "word": "specialized",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "chuyên dụng, chuyên sâu"
       }
     ],
@@ -62970,12 +62970,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "approve",
-        "type": "v",
+        "type": "v.",
         "meaning": "thông qua, tán thành"
       },
       {
         "word": "renovate",
-        "type": "v",
+        "type": "v.",
         "meaning": "cải tạo, nâng cấp"
       }
     ],
@@ -62998,12 +62998,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "attract",
-        "type": "v",
+        "type": "v.",
         "meaning": "thu hút"
       },
       {
         "word": "investor",
-        "type": "n",
+        "type": "n.",
         "meaning": "nhà đầu tư"
       }
     ],
@@ -63026,12 +63026,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "maximize",
-        "type": "v",
+        "type": "v.",
         "meaning": "tối đa hóa"
       },
       {
         "word": "minimize",
-        "type": "v",
+        "type": "v.",
         "meaning": "giảm thiểu"
       }
     ],
@@ -63054,7 +63054,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "consecutive",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "liên tiếp"
       }
     ],
@@ -63105,7 +63105,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "massive",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "to lớn, rực rỡ"
       }
     ],
@@ -63156,7 +63156,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "debate",
-        "type": "v",
+        "type": "v.",
         "meaning": "tranh luận, bàn bạc"
       }
     ],
@@ -63179,12 +63179,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "exceed",
-        "type": "v",
+        "type": "v.",
         "meaning": "vượt quá"
       },
       {
         "word": "sign off",
-        "type": "v",
+        "type": "v.",
         "meaning": "ký duyệt"
       }
     ],
@@ -63207,7 +63207,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "mandatory",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "bắt buộc"
       }
     ],
@@ -63230,7 +63230,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "badge",
-        "type": "n",
+        "type": "n.",
         "meaning": "thẻ đeo, phù hiệu"
       }
     ],
@@ -63253,7 +63253,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "merger",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự sáp nhập"
       }
     ],
@@ -63276,7 +63276,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "distribute",
-        "type": "v",
+        "type": "v.",
         "meaning": "phân phối, phát"
       }
     ],
@@ -63299,7 +63299,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "steadily",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "đều đặn"
       }
     ],
@@ -63322,7 +63322,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "essential",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "thiết yếu, cực kỳ quan trọng"
       }
     ],
@@ -63345,7 +63345,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "complaint",
-        "type": "n",
+        "type": "n.",
         "meaning": "khiếu nại"
       }
     ],
@@ -63396,7 +63396,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "lounge",
-        "type": "n",
+        "type": "n.",
         "meaning": "phòng nghỉ, phòng chờ"
       }
     ],
@@ -63419,12 +63419,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "postpone",
-        "type": "v",
+        "type": "v.",
         "meaning": "trì hoãn"
       },
       {
         "word": "annual",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "hàng năm"
       }
     ],
@@ -63447,12 +63447,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "blueprint",
-        "type": "n",
+        "type": "n.",
         "meaning": "bản thiết kế"
       },
       {
         "word": "foundation",
-        "type": "n",
+        "type": "n.",
         "meaning": "nền móng"
       }
     ],
@@ -63475,12 +63475,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "sensitive",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "nhạy cảm, bảo mật"
       },
       {
         "word": "threat",
-        "type": "n",
+        "type": "n.",
         "meaning": "mối đe dọa"
       }
     ],
@@ -63503,12 +63503,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "optimize",
-        "type": "v",
+        "type": "v.",
         "meaning": "tối ưu hóa"
       },
       {
         "word": "adhere",
-        "type": "v",
+        "type": "v.",
         "meaning": "tuân thủ"
       }
     ],
@@ -63531,7 +63531,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "highlight",
-        "type": "v",
+        "type": "v.",
         "meaning": "làm nổi bật"
       }
     ],
@@ -63554,7 +63554,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "visualization",
-        "type": "n",
+        "type": "n.",
         "meaning": "trực quan hóa"
       }
     ],
@@ -63577,12 +63577,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "implementation",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự triển khai"
       },
       {
         "word": "payroll",
-        "type": "n",
+        "type": "n.",
         "meaning": "bảng lương"
       }
     ],
@@ -63633,12 +63633,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "funding",
-        "type": "n",
+        "type": "n.",
         "meaning": "kinh phí, tài trợ"
       },
       {
         "word": "clinical trial",
-        "type": "n",
+        "type": "n.",
         "meaning": "thử nghiệm lâm sàng"
       }
     ],
@@ -63717,7 +63717,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "malfunction",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự trục trặc"
       }
     ],
@@ -63740,12 +63740,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "citation",
-        "type": "n",
+        "type": "n.",
         "meaning": "trích dẫn"
       },
       {
         "word": "brief",
-        "type": "n",
+        "type": "n.",
         "meaning": "văn bản tóm tắt (trong luật pháp)"
       }
     ],
@@ -63768,7 +63768,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "examination",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự kiểm tra, khám bệnh"
       }
     ],
@@ -63791,7 +63791,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "sustainable",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "bền vững"
       }
     ],
@@ -63814,7 +63814,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "inspector",
-        "type": "n",
+        "type": "n.",
         "meaning": "thanh tra viên"
       }
     ],
@@ -63837,12 +63837,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "outsource",
-        "type": "v",
+        "type": "v.",
         "meaning": "thuê ngoài"
       },
       {
         "word": "payroll",
-        "type": "n",
+        "type": "n.",
         "meaning": "bảng lương"
       }
     ],
@@ -63865,12 +63865,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "proficient",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "thành thạo"
       },
       {
         "word": "microscopic",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "(thuộc) kính hiển vi"
       }
     ],
@@ -63893,7 +63893,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "accurate",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "chính xác"
       }
     ],
@@ -63916,7 +63916,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "guided",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "có hướng dẫn"
       }
     ],
@@ -63939,12 +63939,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "partition",
-        "type": "n",
+        "type": "n.",
         "meaning": "vách ngăn"
       },
       {
         "word": "privacy",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự riêng tư"
       }
     ],
@@ -63967,7 +63967,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "cybersecurity",
-        "type": "n",
+        "type": "n.",
         "meaning": "an ninh mạng"
       }
     ],
@@ -63990,12 +63990,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "transcript",
-        "type": "n",
+        "type": "n.",
         "meaning": "bản ghi chép, bản sao"
       },
       {
         "word": "trial",
-        "type": "n",
+        "type": "n.",
         "meaning": "phiên tòa"
       }
     ],
@@ -64018,12 +64018,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "enrollment",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự đăng ký, ghi danh"
       },
       {
         "word": "administration",
-        "type": "n",
+        "type": "n.",
         "meaning": "ban quản lý, chính quyền"
       }
     ],
@@ -64046,12 +64046,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "ergonomics",
-        "type": "n",
+        "type": "n.",
         "meaning": "công thái học"
       },
       {
         "word": "practical",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "thực tế, thiết thực"
       }
     ],
@@ -64074,7 +64074,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "botanical",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "(thuộc) thực vật học"
       }
     ],
@@ -64097,12 +64097,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "finalized",
-        "type": "adj/v",
+        "type": "adj./v.",
         "meaning": "đã hoàn tất"
       },
       {
         "word": "promotional",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "quảng bá, khuyến mãi"
       }
     ],
@@ -64125,12 +64125,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "mandatory",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "bắt buộc"
       },
       {
         "word": "chart",
-        "type": "n",
+        "type": "n.",
         "meaning": "biểu đồ, hồ sơ theo dõi"
       }
     ],
@@ -64153,7 +64153,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "proceed",
-        "type": "v",
+        "type": "v.",
         "meaning": "tiếp tục, tiến tới"
       }
     ],
@@ -64176,12 +64176,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "comprehensive",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "toàn diện"
       },
       {
         "word": "deductible",
-        "type": "n",
+        "type": "n.",
         "meaning": "khoản tiền tự chi trả trước khi bảo hiểm thanh toán"
       }
     ],
@@ -64204,12 +64204,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "refund",
-        "type": "n/v",
+        "type": "n./v.",
         "meaning": "hoàn tiền"
       },
       {
         "word": "document",
-        "type": "v",
+        "type": "v.",
         "meaning": "ghi chép, dẫn chứng bằng tài liệu"
       }
     ],
@@ -64232,7 +64232,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "pharmaceutical",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "(thuộc) dược phẩm"
       }
     ],
@@ -64311,7 +64311,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "scale back",
-        "type": "v",
+        "type": "v.",
         "meaning": "thu hẹp quy mô, giảm bớt"
       }
     ],
@@ -64362,7 +64362,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "encrypted",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "được mã hóa"
       }
     ],
@@ -64385,7 +64385,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "volunteer",
-        "type": "n",
+        "type": "n.",
         "meaning": "tình nguyện viên"
       }
     ],
@@ -64408,7 +64408,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "approach",
-        "type": "v",
+        "type": "v.",
         "meaning": "tiếp cận, đến gần"
       }
     ],
@@ -64431,7 +64431,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "deficit",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự thâm hụt"
       }
     ],
@@ -64454,12 +64454,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "opportunity",
-        "type": "n",
+        "type": "n.",
         "meaning": "cơ hội"
       },
       {
         "word": "query",
-        "type": "n",
+        "type": "n.",
         "meaning": "câu hỏi, thắc mắc"
       }
     ],
@@ -64482,7 +64482,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "fully booked",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "đã kín chỗ, hết phòng"
       }
     ],
@@ -64533,12 +64533,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "debug",
-        "type": "v",
+        "type": "v.",
         "meaning": "sửa lỗi phần mềm"
       },
       {
         "word": "quality assurance",
-        "type": "n",
+        "type": "n.",
         "meaning": "đảm bảo chất lượng"
       }
     ],
@@ -64561,7 +64561,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "accidental",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "tình cờ, ngẫu nhiên"
       }
     ],
@@ -64584,7 +64584,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "follow-up appointment",
-        "type": "n",
+        "type": "n.",
         "meaning": "cuộc hẹn tái khám"
       }
     ],
@@ -64607,12 +64607,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "permanent",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "vĩnh viễn, chính thức"
       },
       {
         "word": "freelance",
-        "type": "adj/n",
+        "type": "adj./n.",
         "meaning": "tự do"
       }
     ],
@@ -64635,12 +64635,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "tenant",
-        "type": "n",
+        "type": "n.",
         "meaning": "người thuê nhà"
       },
       {
         "word": "obligated",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "có nghĩa vụ, bổn phận"
       }
     ],
@@ -64663,7 +64663,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "engaging",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "hấp dẫn, lôi cuốn"
       }
     ],
@@ -64686,7 +64686,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "demographic",
-        "type": "n",
+        "type": "n.",
         "meaning": "nhân khẩu học, nhóm khách hàng"
       }
     ],
@@ -64709,7 +64709,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "avenue",
-        "type": "n",
+        "type": "n.",
         "meaning": "hướng giải quyết, con đường"
       }
     ],
@@ -64760,12 +64760,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "tirelessly",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "không mệt mỏi"
       },
       {
         "word": "settlement",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự hòa giải, thỏa thuận"
       }
     ],
@@ -64788,12 +64788,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "palette",
-        "type": "n",
+        "type": "n.",
         "meaning": "bảng màu"
       },
       {
         "word": "layout",
-        "type": "n",
+        "type": "n.",
         "meaning": "bố cục, sơ đồ"
       }
     ],
@@ -64816,7 +64816,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "intellectual property",
-        "type": "n",
+        "type": "n.",
         "meaning": "tài sản trí tuệ"
       }
     ],
@@ -64839,12 +64839,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "audit",
-        "type": "n",
+        "type": "n.",
         "meaning": "cuộc kiểm toán"
       },
       {
         "word": "findings",
-        "type": "n",
+        "type": "n.",
         "meaning": "các phát hiện, kết quả"
       }
     ],
@@ -64867,7 +64867,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "press release",
-        "type": "n",
+        "type": "n.",
         "meaning": "thông cáo báo chí"
       }
     ],
@@ -64890,7 +64890,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "efficient",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "hiệu quả"
       }
     ],
@@ -64913,12 +64913,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "auditorium",
-        "type": "n",
+        "type": "n.",
         "meaning": "hội trường, thính phòng"
       },
       {
         "word": "exceed",
-        "type": "v",
+        "type": "v.",
         "meaning": "vượt quá"
       }
     ],
@@ -64941,7 +64941,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "confirmation",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự xác nhận"
       }
     ],
@@ -64992,7 +64992,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "unauthorized",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "trái phép, không được ủy quyền"
       }
     ],
@@ -65043,7 +65043,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "tremendous",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "to lớn, rực rỡ"
       }
     ],
@@ -65066,7 +65066,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "automated",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "tự động hóa"
       }
     ],
@@ -65089,7 +65089,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "verdict",
-        "type": "n",
+        "type": "n.",
         "meaning": "phán quyết"
       }
     ],
@@ -65112,7 +65112,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "scheduled",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "theo lịch trình, định kỳ"
       }
     ],
@@ -65135,7 +65135,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "permanent",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "vĩnh viễn, lâu dài"
       }
     ],
@@ -65158,12 +65158,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "migration",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự di chuyển (dữ liệu)"
       },
       {
         "word": "accessible",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "có thể truy cập"
       }
     ],
@@ -65186,7 +65186,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "breach",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự vi phạm, lỗ hổng"
       }
     ],
@@ -65209,12 +65209,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "diversify",
-        "type": "v",
+        "type": "v.",
         "meaning": "đa dạng hóa"
       },
       {
         "word": "minimize",
-        "type": "v",
+        "type": "v.",
         "meaning": "giảm thiểu"
       }
     ],
@@ -65237,7 +65237,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "distribution",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự phân phối"
       }
     ],
@@ -65260,12 +65260,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "conduct",
-        "type": "v",
+        "type": "v.",
         "meaning": "tiến hành, thực hiện"
       },
       {
         "word": "reference",
-        "type": "n",
+        "type": "n.",
         "meaning": "người tham chiếu, thư giới thiệu"
       }
     ],
@@ -65288,12 +65288,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "external",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "bên ngoài"
       },
       {
         "word": "internal",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "nội bộ"
       }
     ],
@@ -65344,12 +65344,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "surge",
-        "type": "n/v",
+        "type": "n./v.",
         "meaning": "sự gia tăng đột ngột"
       },
       {
         "word": "influencer",
-        "type": "n",
+        "type": "n.",
         "meaning": "người có ảnh hưởng"
       }
     ],
@@ -65372,12 +65372,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "pediatric",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "thuộc nhi khoa"
       },
       {
         "word": "physical therapy",
-        "type": "n",
+        "type": "n.",
         "meaning": "vật lý trị liệu"
       }
     ],
@@ -65428,12 +65428,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "comply with",
-        "type": "v",
+        "type": "v.",
         "meaning": "tuân thủ"
       },
       {
         "word": "regulation",
-        "type": "n",
+        "type": "n.",
         "meaning": "quy định"
       }
     ],
@@ -65456,12 +65456,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "exceed",
-        "type": "v",
+        "type": "v.",
         "meaning": "vượt quá"
       },
       {
         "word": "cautious",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "thận trọng"
       }
     ],
@@ -65484,7 +65484,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "revised",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "được sửa đổi"
       }
     ],
@@ -65507,7 +65507,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "compatible",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "tương thích"
       }
     ],
@@ -65530,7 +65530,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "promising",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "đầy hứa hẹn"
       }
     ],
@@ -65609,12 +65609,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "grant",
-        "type": "v",
+        "type": "v.",
         "meaning": "cấp, ban cho"
       },
       {
         "word": "permit",
-        "type": "n",
+        "type": "n.",
         "meaning": "giấy phép"
       }
     ],
@@ -70620,7 +70620,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "rotate",
-        "type": "v",
+        "type": "v.",
         "meaning": "luân chuyển, xoay vòng"
       }
     ],
@@ -70643,7 +70643,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "pending",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "đang chờ xử lý"
       }
     ],
@@ -70666,7 +70666,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "prominent",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "nổi bật, nổi tiếng"
       }
     ],
@@ -70689,7 +70689,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "prestigious",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "uy tín, danh giá"
       }
     ],
@@ -70712,7 +70712,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "miscommunication",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự truyền đạt thông tin sai lệch"
       }
     ],
@@ -70735,7 +70735,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "oversee",
-        "type": "v",
+        "type": "v.",
         "meaning": "giám sát"
       }
     ],
@@ -70758,7 +70758,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "officially",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "một cách chính thức"
       }
     ],
@@ -70781,12 +70781,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "compromise",
-        "type": "v",
+        "type": "v.",
         "meaning": "làm hại, xâm phạm"
       },
       {
         "word": "breach",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự vi phạm, rò rỉ"
       }
     ],
@@ -70809,7 +70809,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "turnover rate",
-        "type": "n",
+        "type": "n.",
         "meaning": "tỷ lệ thay thế nhân viên, tỷ lệ nghỉ việc"
       }
     ],
@@ -70832,7 +70832,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "possess",
-        "type": "v",
+        "type": "v.",
         "meaning": "sở hữu"
       }
     ],
@@ -70855,7 +70855,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "outline",
-        "type": "v",
+        "type": "v.",
         "meaning": "phác thảo, nêu những ý chính"
       }
     ],
@@ -70878,7 +70878,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "advertise",
-        "type": "v",
+        "type": "v.",
         "meaning": "quảng cáo"
       }
     ],
@@ -70901,12 +70901,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "expertise",
-        "type": "n",
+        "type": "n.",
         "meaning": "chuyên môn"
       },
       {
         "word": "merger",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự sáp nhập"
       }
     ],
@@ -70929,7 +70929,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "relocate",
-        "type": "v",
+        "type": "v.",
         "meaning": "di chuyển, chuyển địa điểm"
       }
     ],
@@ -70952,7 +70952,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "high-precision",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "độ chính xác cao"
       }
     ],
@@ -70975,7 +70975,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "summit",
-        "type": "n",
+        "type": "n.",
         "meaning": "hội nghị thượng đỉnh"
       }
     ],
@@ -70998,7 +70998,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "textile",
-        "type": "n",
+        "type": "n.",
         "meaning": "dệt may"
       }
     ],
@@ -71021,7 +71021,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "wear and tear",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự hao mòn tự nhiên"
       }
     ],
@@ -71044,7 +71044,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "annual",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "hàng năm"
       }
     ],
@@ -71067,7 +71067,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "vulnerability",
-        "type": "n",
+        "type": "n.",
         "meaning": "lỗ hổng, điểm yếu"
       }
     ],
@@ -71090,7 +71090,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "engagement",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự tương tác"
       }
     ],
@@ -71113,7 +71113,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "brainstorming",
-        "type": "n",
+        "type": "n.",
         "meaning": "động não, tìm ý tưởng sáng tạo"
       }
     ],
@@ -71136,7 +71136,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "artisan",
-        "type": "n",
+        "type": "n.",
         "meaning": "nghệ nhân, thợ làm thủ công"
       }
     ],
@@ -71159,7 +71159,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "projection",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự dự báo, dự án"
       }
     ],
@@ -71182,7 +71182,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "eligible",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "đủ tư cách, đủ điều kiện"
       }
     ],
@@ -71205,7 +71205,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "file",
-        "type": "v",
+        "type": "v.",
         "meaning": "nộp (đơn, báo cáo)"
       }
     ],
@@ -71228,7 +71228,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "efficiency",
-        "type": "n",
+        "type": "n.",
         "meaning": "hiệu quả, năng suất"
       }
     ],
@@ -71251,7 +71251,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "regarding",
-        "type": "prep",
+        "type": "prep.",
         "meaning": "liên quan đến"
       }
     ],
@@ -71274,12 +71274,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "renowned",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "nổi tiếng"
       },
       {
         "word": "keynote speaker",
-        "type": "n",
+        "type": "n.",
         "meaning": "diễn giả chính"
       }
     ],
@@ -71302,12 +71302,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "postpone",
-        "type": "v",
+        "type": "v.",
         "meaning": "trì hoãn"
       },
       {
         "word": "launch",
-        "type": "n/v",
+        "type": "n./v.",
         "meaning": "sự ra mắt"
       }
     ],
@@ -71330,7 +71330,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "retire",
-        "type": "v",
+        "type": "v.",
         "meaning": "nghỉ hưu"
       }
     ],
@@ -71353,7 +71353,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "sustainable",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "bền vững"
       }
     ],
@@ -71376,7 +71376,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "streamline",
-        "type": "v",
+        "type": "v.",
         "meaning": "tinh giản, sắp xếp hợp lý"
       }
     ],
@@ -71399,7 +71399,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "expertise",
-        "type": "n",
+        "type": "n.",
         "meaning": "chuyên môn"
       }
     ],
@@ -71422,7 +71422,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "incentive",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự ưu đãi, khuyến khích"
       }
     ],
@@ -71445,7 +71445,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "cycle",
-        "type": "n",
+        "type": "n.",
         "meaning": "chu kỳ"
       }
     ],
@@ -71468,7 +71468,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "neutrality",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự trung lập, sự trung hòa"
       }
     ],
@@ -71491,7 +71491,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "equip",
-        "type": "v",
+        "type": "v.",
         "meaning": "trang bị"
       }
     ],
@@ -71514,12 +71514,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "defective",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "bị lỗi"
       },
       {
         "word": "free of charge",
-        "type": "adv/adj",
+        "type": "adv./adj.",
         "meaning": "miễn phí"
       }
     ],
@@ -71542,7 +71542,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "remotely",
-        "type": "adv",
+        "type": "adv.",
         "meaning": "từ xa"
       }
     ],
@@ -71565,7 +71565,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "proposal",
-        "type": "n",
+        "type": "n.",
         "meaning": "đề xuất"
       }
     ],
@@ -71588,7 +71588,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "middle manager",
-        "type": "n",
+        "type": "n.",
         "meaning": "quản lý cấp trung"
       }
     ],
@@ -71611,7 +71611,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "leak",
-        "type": "v",
+        "type": "v.",
         "meaning": "rò rỉ"
       }
     ],
@@ -71634,12 +71634,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "entitled",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "được quyền, được hưởng"
       },
       {
         "word": "complimentary",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "miễn phí"
       }
     ],
@@ -71662,12 +71662,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "found",
-        "type": "v",
+        "type": "v.",
         "meaning": "thành lập"
       },
       {
         "word": "asset",
-        "type": "n",
+        "type": "n.",
         "meaning": "tài sản"
       }
     ],
@@ -71690,12 +71690,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "infrastructure",
-        "type": "n",
+        "type": "n.",
         "meaning": "cơ sở hạ tầng"
       },
       {
         "word": "flaw",
-        "type": "n",
+        "type": "n.",
         "meaning": "thiếu sót, lỗ hổng"
       }
     ],
@@ -71718,12 +71718,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "component",
-        "type": "n",
+        "type": "n.",
         "meaning": "linh kiện, thành phần"
       },
       {
         "word": "assembly",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự lắp ráp"
       }
     ],
@@ -71746,7 +71746,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "implication",
-        "type": "n",
+        "type": "n.",
         "meaning": "tác động, hệ quả"
       }
     ],
@@ -71769,12 +71769,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "orientation",
-        "type": "n",
+        "type": "n.",
         "meaning": "sự định hướng"
       },
       {
         "word": "intuitive",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "trực quan, dễ hiểu"
       }
     ],
@@ -71797,12 +71797,12 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "diversified",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "đa dạng hóa"
       },
       {
         "word": "portfolio",
-        "type": "n",
+        "type": "n.",
         "meaning": "danh mục đầu tư"
       }
     ],
@@ -75102,7 +75102,7 @@ export const grammarQuestions = [
       },
       {
         "word": "overseas",
-        "type": "adv/adj",
+        "type": "adv./adj.",
         "meaning": "nước ngoài, hải ngoại"
       },
       {
@@ -75226,7 +75226,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "sensitive",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "nhạy cảm"
       },
       {
@@ -75246,7 +75246,7 @@ export const grammarQuestions = [
       },
       {
         "word": "comply with",
-        "type": "phr.",
+        "type": "v.",
         "meaning": "tuân thủ"
       },
       {
@@ -75261,7 +75261,7 @@ export const grammarQuestions = [
       },
       {
         "word": "confidentiality",
-        "type": "n",
+        "type": "n.",
         "meaning": "tính bảo mật"
       }
     ],
@@ -78034,7 +78034,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "streamlining",
-        "type": "n/v.",
+        "type": "n./v.",
         "meaning": "tinh chỉnh, tạo cấu trúc hợp lý"
       }
     ],
@@ -83149,7 +83149,7 @@ export const grammarQuestions = [
       },
       {
         "word": "no later than",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "không muộn hơn"
       },
       {
@@ -83662,7 +83662,7 @@ export const grammarQuestions = [
       },
       {
         "word": "annual",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "hằng năm"
       },
       {
@@ -83811,7 +83811,7 @@ export const grammarQuestions = [
       },
       {
         "word": "proposed",
-        "type": "",
+        "type": "adj.",
         "meaning": "được đề xuất"
       },
       {
@@ -83864,7 +83864,7 @@ export const grammarQuestions = [
       },
       {
         "word": "concerning",
-        "type": "",
+        "type": "prep.",
         "meaning": "liên quan đến"
       },
       {
@@ -84076,7 +84076,7 @@ export const grammarQuestions = [
       },
       {
         "word": "corporate",
-        "type": "",
+        "type": "adj.",
         "meaning": "thuộc về công ty"
       },
       {
@@ -89100,7 +89100,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "Carpool",
-        "type": "v/n.",
+        "type": "v./n.",
         "meaning": "đi chung xe"
       },
       {
@@ -90755,7 +90755,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "Host",
-        "type": "n/v.",
+        "type": "n./v.",
         "meaning": "chủ nhà, đăng cai"
       },
       {
@@ -91557,7 +91557,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Minimum",
-        "type": "n/adj.",
+        "type": "n./adj.",
         "meaning": "tối thiểu"
       },
       {
@@ -92402,7 +92402,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Downtown",
-        "type": "adj/n.",
+        "type": "adj./n.",
         "meaning": "trung tâm thành phố"
       },
       {
@@ -92795,7 +92795,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "Potential",
-        "type": "adj/n.",
+        "type": "adj./n.",
         "meaning": "tiềm năng"
       },
       {
@@ -94281,7 +94281,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Excess",
-        "type": "adj/n.",
+        "type": "adj./n.",
         "meaning": "dư thừa"
       },
       {
@@ -95141,7 +95141,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "Average",
-        "type": "adj/n.",
+        "type": "adj./n.",
         "meaning": "trung bình"
       },
       {
@@ -97428,7 +97428,7 @@ export const grammarQuestions = [
       },
       {
         "word": "After",
-        "type": "prep/conj.",
+        "type": "prep./conj.",
         "meaning": "sau khi"
       }
     ],
@@ -98971,7 +98971,7 @@ export const grammarQuestions = [
       },
       {
         "word": "alongside",
-        "type": "prep",
+        "type": "prep.",
         "meaning": "cùng với"
       },
       {
@@ -99042,7 +99042,7 @@ export const grammarQuestions = [
       },
       {
         "word": "upcoming",
-        "type": "",
+        "type": "adj.",
         "meaning": "sắp tới"
       },
       {
@@ -99279,7 +99279,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "postpone",
-        "type": "",
+        "type": "v.",
         "meaning": "trì hoãn, hoãn lại"
       },
       {
@@ -100569,7 +100569,7 @@ export const grammarQuestions = [
       },
       {
         "word": "permit",
-        "type": "",
+        "type": "n.",
         "meaning": "giấy phép"
       },
       {
@@ -100976,7 +100976,7 @@ export const grammarQuestions = [
       },
       {
         "word": "promotional",
-        "type": "",
+        "type": "adj.",
         "meaning": "mang tính quảng bá, khuyến mãi"
       },
       {
@@ -102002,7 +102002,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Exceed",
-        "type": "",
+        "type": "v.",
         "meaning": "vượt quá"
       },
       {
@@ -102561,7 +102561,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "Proposed",
-        "type": "",
+        "type": "adj.",
         "meaning": "được đề xuất"
       },
       {
@@ -102758,12 +102758,12 @@ export const grammarQuestions = [
       },
       {
         "word": "Fully booked",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "kín phòng, đã được đặt hết"
       },
       {
         "word": "Renovate",
-        "type": "",
+        "type": "v.",
         "meaning": "cải tạo, tu sửa"
       },
       {
@@ -102806,7 +102806,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Postpone",
-        "type": "",
+        "type": "v.",
         "meaning": "trì hoãn, hoãn lại"
       },
       {
@@ -103337,7 +103337,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Supplies",
-        "type": "n",
+        "type": "n.",
         "meaning": "vật tư, đồ dùng"
       },
       {
@@ -103375,7 +103375,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Visitor",
-        "type": "",
+        "type": "n.",
         "meaning": "khách truy cập"
       },
       {
@@ -103623,7 +103623,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "Annual",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "hằng năm"
       },
       {
@@ -103643,7 +103643,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Exceed",
-        "type": "",
+        "type": "v.",
         "meaning": "vượt quá"
       }
     ],
@@ -104726,7 +104726,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Volunteer",
-        "type": "",
+        "type": "n.",
         "meaning": "tình nguyện viên"
       }
     ],
@@ -104916,7 +104916,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "Volunteer",
-        "type": "",
+        "type": "n.",
         "meaning": "tình nguyện viên"
       },
       {
@@ -105778,7 +105778,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Seniority",
-        "type": "n",
+        "type": "n.",
         "meaning": "thâm niên"
       },
       {
@@ -106678,7 +106678,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Loyalty program",
-        "type": "phr.",
+        "type": "n.",
         "meaning": "chương trình khách hàng thân thiết"
       },
       {
@@ -106994,7 +106994,7 @@ export const grammarQuestions = [
       },
       {
         "word": "exceed",
-        "type": "",
+        "type": "v.",
         "meaning": "vượt quá"
       },
       {
@@ -107032,7 +107032,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "a number of",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "một số"
       },
       {
@@ -107214,7 +107214,7 @@ export const grammarQuestions = [
       },
       {
         "word": "press release",
-        "type": "phr.",
+        "type": "n.",
         "meaning": "thông cáo báo chí"
       },
       {
@@ -107510,7 +107510,7 @@ export const grammarQuestions = [
       },
       {
         "word": "retire",
-        "type": "",
+        "type": "v.",
         "meaning": "nghỉ hưu"
       },
       {
@@ -107611,7 +107611,7 @@ export const grammarQuestions = [
       },
       {
         "word": "annual",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "hằng năm"
       },
       {
@@ -107765,7 +107765,7 @@ export const grammarQuestions = [
       },
       {
         "word": "renovate",
-        "type": "",
+        "type": "v.",
         "meaning": "cải tạo, tân trang"
       }
     ],
@@ -107879,7 +107879,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "be committed to",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "cam kết với"
       },
       {
@@ -108033,7 +108033,7 @@ export const grammarQuestions = [
       },
       {
         "word": "retire",
-        "type": "",
+        "type": "v.",
         "meaning": "nghỉ hưu"
       }
     ],
@@ -108574,7 +108574,7 @@ export const grammarQuestions = [
       },
       {
         "word": "permit",
-        "type": "",
+        "type": "n.",
         "meaning": "giấy phép"
       },
       {
@@ -109289,7 +109289,7 @@ export const grammarQuestions = [
       },
       {
         "word": "device",
-        "type": "",
+        "type": "n.",
         "meaning": "thiết bị"
       }
     ],
@@ -109370,12 +109370,12 @@ export const grammarQuestions = [
       },
       {
         "word": "assist",
-        "type": "",
+        "type": "v.",
         "meaning": "hỗ trợ"
       },
       {
         "word": "urgent",
-        "type": "",
+        "type": "adj.",
         "meaning": "khẩn cấp"
       },
       {
@@ -109719,7 +109719,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "copy editor",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "biên tập viên"
       },
       {
@@ -110511,7 +110511,7 @@ export const grammarQuestions = [
       },
       {
         "word": "infrastructure",
-        "type": "",
+        "type": "n.",
         "meaning": "cơ sở hạ tầng"
       },
       {
@@ -110544,7 +110544,7 @@ export const grammarQuestions = [
       },
       {
         "word": "streamline",
-        "type": "",
+        "type": "v.",
         "meaning": "tinh giản, tối ưu hóa"
       },
       {
@@ -110741,12 +110741,12 @@ export const grammarQuestions = [
       },
       {
         "word": "attract",
-        "type": "",
+        "type": "v.",
         "meaning": "thu hút"
       },
       {
         "word": "volunteer",
-        "type": "",
+        "type": "n.",
         "meaning": "tình nguyện viên"
       }
     ],
@@ -112359,7 +112359,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "practical",
-        "type": "",
+        "type": "adj.",
         "meaning": "thiết thực"
       },
       {
@@ -112541,7 +112541,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "volume",
-        "type": "",
+        "type": "n.",
         "meaning": "tập sách, cuốn sách"
       },
       {
@@ -114005,7 +114005,7 @@ export const grammarQuestions = [
       },
       {
         "word": "intersection",
-        "type": "n",
+        "type": "n.",
         "meaning": "giao lộ"
       },
       {
@@ -114523,7 +114523,7 @@ export const grammarQuestions = [
       },
       {
         "word": "lack of",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "sự thiếu hụt"
       },
       {
@@ -114619,7 +114619,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "board member",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "thành viên hội đồng quản trị"
       },
       {
@@ -114720,7 +114720,7 @@ export const grammarQuestions = [
       },
       {
         "word": "pursue",
-        "type": "",
+        "type": "v.",
         "meaning": "theo đuổi"
       },
       {
@@ -114758,7 +114758,7 @@ export const grammarQuestions = [
       },
       {
         "word": "exceed",
-        "type": "",
+        "type": "v.",
         "meaning": "vượt quá"
       },
       {
@@ -115127,12 +115127,12 @@ export const grammarQuestions = [
       },
       {
         "word": "auditorium",
-        "type": "",
+        "type": "n.",
         "meaning": "khán phòng"
       },
       {
         "word": "no later than",
-        "type": "phrase",
+        "type": "phr.",
         "meaning": "muộn nhất là"
       }
     ],
@@ -115266,7 +115266,7 @@ export const grammarQuestions = [
       },
       {
         "word": "renovate",
-        "type": "",
+        "type": "v.",
         "meaning": "cải tạo"
       },
       {
@@ -116219,7 +116219,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "entire",
-        "type": "",
+        "type": "adj.",
         "meaning": "toàn bộ"
       },
       {
@@ -116669,7 +116669,7 @@ export const grammarQuestions = [
       },
       {
         "word": "visitor",
-        "type": "",
+        "type": "n.",
         "meaning": "khách tham quan"
       },
       {
@@ -117056,7 +117056,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "pharmaceutical",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "thuộc ngành dược phẩm"
       },
       {
@@ -118007,7 +118007,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Avenue",
-        "type": "n",
+        "type": "n.",
         "meaning": "đại lộ"
       },
       {
@@ -118748,7 +118748,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "Board member",
-        "type": "n.phr.",
+        "type": "n. phr.",
         "meaning": "thành viên hội đồng"
       },
       {
@@ -118892,7 +118892,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Retire",
-        "type": "",
+        "type": "v.",
         "meaning": "nghỉ hưu"
       },
       {
@@ -119284,7 +119284,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Reschedule",
-        "type": "",
+        "type": "v.",
         "meaning": "sắp xếp lại lịch, dời lịch"
       },
       {
@@ -119347,7 +119347,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Confidentiality",
-        "type": "n",
+        "type": "n.",
         "meaning": "tính bảo mật"
       }
     ],
@@ -119610,7 +119610,7 @@ export const grammarQuestions = [
       },
       {
         "word": "Pharmaceutical",
-        "type": "adj",
+        "type": "adj.",
         "meaning": "thuộc ngành dược phẩm"
       }
     ],

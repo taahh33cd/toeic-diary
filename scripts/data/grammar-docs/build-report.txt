@@ -1,5 +1,6 @@
 Bank cũ: 3025 câu · Docs dùng được: 966 câu · bỏ: 0 câu
 Tổng sau khi gộp: 3991 câu / 189 test
+Loại từ: 3435 mục thiếu -> điền 2700, còn trống 735 · chuẩn hoá lại cách viết 512 mục
 Ngưỡng nhãn (phân vị toàn bank): Dễ <= 4.26 < TB <= 5.62 < Khó
   Dễ 1335 · TB 1328 · Khó 1328
 
