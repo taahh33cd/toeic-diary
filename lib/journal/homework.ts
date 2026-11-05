@@ -85,3 +85,30 @@ export function overdueHomework(
     return !hwIsDone(hw, submissions, dayLinks);
   });
 }
+
+/** Lùi `days` ngày từ một chuỗi YYYY-MM-DD, trả về cùng định dạng. */
+export function shiftDay(day: string, days: number): string {
+  const d = new Date(`${day}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+/**
+ * Bài quá hạn trong `days` ngày gần nhất — bỏ qua bài quá hạn quá lâu (coi như
+ * đã bỏ, nhắc nữa chỉ gây nhiễu). Dùng cho nút "Nhắc bài quá hạn" ở dashboard.
+ */
+export function recentOverdueHomework(
+  homework: Homework[],
+  submissions: SubmissionsLike,
+  dayLinks: DayLinksLike,
+  today: string,
+  days: number
+): Homework[] {
+  const since = shiftDay(today, -days);
+  return overdueHomework(homework, submissions, dayLinks, today).filter((hw) => {
+    // Buổi rỗng (không có đầu việc nào) thì không có gì để nhắc.
+    if (hwTasks(hw, submissions).length === 0) return false;
+    const deadline = hw.endDate ?? hw.date;
+    return deadline >= since;
+  });
+}

@@ -9,6 +9,7 @@ import { useClassAttendance } from "@/hooks/firebase/useClassAttendance";
 import { useAllSubmissions } from "@/hooks/firebase/useAllSubmissions";
 import { useAllDayLinks } from "@/hooks/firebase/useAllDayLinks";
 import { setAttendance, createStudent, isBookingActive } from "@/lib/firebase/helpers";
+import { recentOverdueHomework } from "@/lib/journal/homework";
 import type { SchoolClass, AttendanceStatus, Student, Homework, HwItem, SubmissionsMap, DayLinksMap, Booking } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -209,6 +210,221 @@ function YesterdayIncompleteCard({
             </Link>
           );
         })}
+      </div>
+    </div>
+  );
+}
+
+// ─── OverdueRemindCard ───────────────────────────────────────────────────────
+// Học viên đang học còn bài quá hạn trong 7 ngày gần nhất: tick rồi bấm gửi.
+// Nhắc đi qua /api/admin/homework-remind (chuông in-app + web push).
+
+const OVERDUE_WINDOW_DAYS = 7;
+
+type OverdueRow = {
+  student: Student & { id: string };
+  count: number;
+  /** Deadline xa nhất trong các bài quá hạn — bài "nằm lâu" nhất. */
+  oldest: string;
+};
+
+function OverdueRemindCard({
+  students,
+  allSubmissions,
+  allDayLinks,
+  today,
+  loading,
+}: {
+  students: (Student & { id: string })[];
+  allSubmissions: Record<string, SubmissionsMap>;
+  allDayLinks: Record<string, DayLinksMap>;
+  today: string;
+  loading: boolean;
+}) {
+  const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [sending, setSending] = useState<string | null>(null); // studentCode | "__all__"
+  const [result, setResult] = useState<string | null>(null);
+
+  const rows = useMemo<OverdueRow[]>(() => {
+    const out: OverdueRow[] = [];
+    for (const student of students) {
+      if (student.frozen) continue;
+      const hwRaw = student.homework;
+      const hwList: Homework[] = Array.isArray(hwRaw)
+        ? hwRaw
+        : Object.values((hwRaw ?? {}) as Record<string, Homework>);
+      const overdue = recentOverdueHomework(
+        hwList,
+        allSubmissions[student.id] ?? {},
+        allDayLinks[student.id] ?? {},
+        today,
+        OVERDUE_WINDOW_DAYS
+      );
+      if (overdue.length === 0) continue;
+      const oldest = overdue
+        .map((hw) => hw.endDate ?? hw.date)
+        .sort()[0];
+      out.push({ student, count: overdue.length, oldest });
+    }
+    return out.sort((a, b) => a.oldest.localeCompare(b.oldest));
+  }, [students, allSubmissions, allDayLinks, today]);
+
+  async function send(codes: string[], tag: string) {
+    if (codes.length === 0) return;
+    setSending(tag);
+    setResult(null);
+    try {
+      const res = await fetch("/api/admin/homework-remind", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ studentCodes: codes }),
+      });
+      const data = (await res.json()) as {
+        sent?: number;
+        results?: Array<{ studentCode: string; status: string }>;
+        error?: string;
+      };
+      if (!res.ok) {
+        setResult(`Không gửi được: ${data.error ?? res.status}`);
+        return;
+      }
+      const sent = data.sent ?? 0;
+      const clear = data.results?.filter((r) => r.status === "clear").length ?? 0;
+      const failed = data.results?.filter((r) => r.status === "error").length ?? 0;
+      const noAcct = data.results?.filter((r) => r.status === "no-profile").length ?? 0;
+      const parts = [`Đã nhắc ${sent} HV`];
+      if (clear > 0) parts.push(`${clear} HV đã nộp xong (bỏ qua)`);
+      if (noAcct > 0) parts.push(`${noAcct} HV chưa có tài khoản`);
+      if (failed > 0) parts.push(`${failed} lỗi`);
+      setResult(parts.join(" · "));
+      setSelected(new Set());
+    } catch {
+      setResult("Không gửi được — kiểm tra kết nối rồi thử lại.");
+    } finally {
+      setSending(null);
+    }
+  }
+
+  if (loading) {
+    return (
+      <div className="silk-card rounded-2xl p-6 animate-pulse" style={{ minHeight: 80 }}>
+        <div className="h-4 w-48 rounded" style={{ background: "rgba(0,0,0,0.07)" }} />
+      </div>
+    );
+  }
+
+  if (rows.length === 0) {
+    return (
+      <div
+        className="silk-card rounded-2xl p-7 text-center"
+        style={{ borderColor: "rgba(34,197,94,0.3)", background: "rgba(34,197,94,0.04)" }}
+      >
+        <p className="text-base">✅</p>
+        <p className="text-sm font-semibold mt-1" style={{ color: "rgb(22,163,74)" }}>
+          Không có học viên nào còn bài quá hạn
+        </p>
+      </div>
+    );
+  }
+
+  const allSelected = selected.size === rows.length;
+  const busy = sending !== null;
+
+  return (
+    <div className="silk-card rounded-2xl overflow-hidden">
+      <div
+        className="flex items-center justify-between px-6 py-4 border-b"
+        style={{ borderColor: "rgba(199,196,214,0.3)", background: "rgba(239,68,68,0.04)" }}
+      >
+        <div className="flex items-center gap-2">
+          <span style={{ fontSize: 15 }}>⏰</span>
+          <p className="text-sm font-semibold" style={{ color: "#ba1a1a" }}>
+            Quá hạn chưa nộp
+          </p>
+          <span
+            className="text-xs font-bold px-2.5 py-1 rounded-full"
+            style={{ background: "rgba(239,68,68,0.12)", color: "#ba1a1a" }}
+          >
+            {rows.length} HV
+          </span>
+        </div>
+        <button
+          type="button"
+          onClick={() =>
+            setSelected(allSelected ? new Set() : new Set(rows.map((r) => r.student.id)))
+          }
+          className="text-xs font-semibold px-2.5 py-1 rounded-lg transition-colors hover:bg-[rgba(0,0,0,0.04)]"
+          style={{ color: "var(--text-muted)" }}
+        >
+          {allSelected ? "Bỏ chọn" : "Chọn tất cả"}
+        </button>
+      </div>
+
+      <div className="divide-y" style={{ borderColor: "rgba(199,196,214,0.2)" }}>
+        {rows.map(({ student, count, oldest }) => {
+          const checked = selected.has(student.id);
+          return (
+            <div key={student.id} className="flex items-center gap-3 px-6 py-3.5">
+              <input
+                type="checkbox"
+                checked={checked}
+                disabled={busy}
+                onChange={() =>
+                  setSelected((prev) => {
+                    const next = new Set(prev);
+                    if (next.has(student.id)) next.delete(student.id);
+                    else next.add(student.id);
+                    return next;
+                  })
+                }
+                className="w-4 h-4 shrink-0 cursor-pointer"
+                style={{ accentColor: "#ba1a1a" }}
+                aria-label={`Chọn ${student.name}`}
+              />
+
+              <div className="flex-1 min-w-0">
+                <Link
+                  href={`/admin/students/${student.id}`}
+                  className="text-sm font-medium truncate hover:underline"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  {student.name}
+                </Link>
+                <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
+                  <span className="font-mono">{student.id}</span> · {count} bài quá hạn · cũ nhất {oldest}
+                </p>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => send([student.id], student.id)}
+                disabled={busy}
+                className="text-xs font-semibold px-3 py-1.5 rounded-lg shrink-0 transition-opacity disabled:opacity-40"
+                style={{ background: "rgba(239,68,68,0.1)", color: "#ba1a1a" }}
+              >
+                {sending === student.id ? "Đang gửi…" : "Nhắc"}
+              </button>
+            </div>
+          );
+        })}
+      </div>
+
+      <div
+        className="flex items-center justify-between gap-3 px-6 py-4 border-t"
+        style={{ borderColor: "rgba(199,196,214,0.3)" }}
+      >
+        <p className="text-xs flex-1 min-w-0" style={{ color: "var(--text-muted)" }}>
+          {result ?? "Gửi thông báo trong app + push lên điện thoại học viên."}
+        </p>
+        <button
+          type="button"
+          onClick={() => send([...selected], "__all__")}
+          disabled={busy || selected.size === 0}
+          className="text-sm font-semibold px-4 py-2 rounded-xl shrink-0 transition-opacity disabled:opacity-40"
+          style={{ background: "#ba1a1a", color: "#fff" }}
+        >
+          {sending === "__all__" ? "Đang gửi…" : `Gửi nhắc (${selected.size})`}
+        </button>
       </div>
     </div>
   );
@@ -879,6 +1095,30 @@ export default function AdminDashboardClient() {
           allSubmissions={allSubmissions}
           allDayLinks={allDayLinks}
           yesterday={yesterday}
+          loading={subsLoading || dlLoading}
+        />
+      </div>
+
+      {/* ── Overdue homework + nhắc học viên ── */}
+      <div className="space-y-3">
+        <h2
+          className="flex items-center gap-1.5 text-base font-semibold"
+          style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
+        >
+          <span
+            className="material-symbols-outlined text-[17px]"
+            style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}
+          >
+            notifications_active
+          </span>
+          Nhắc bài quá hạn
+          <span className="text-xs font-normal opacity-50">· {OVERDUE_WINDOW_DAYS} ngày gần nhất</span>
+        </h2>
+        <OverdueRemindCard
+          students={activeStudents as (Student & { id: string })[]}
+          allSubmissions={allSubmissions}
+          allDayLinks={allDayLinks}
+          today={date}
           loading={subsLoading || dlLoading}
         />
       </div>
