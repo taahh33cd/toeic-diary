@@ -4,9 +4,16 @@ import { prisma } from "@/lib/db/prisma";
 import Link from "next/link";
 import { TOPICS } from "@/lib/grammar/topics";
 import { grammarQuestions } from "@/lib/grammar/questions";
+import { TEST_DIFFICULTY, DIFFICULTY_LABEL, type Difficulty } from "@/lib/grammar/test-difficulty";
 import { ChevronRight, BookMarked, Flame, BookCheck } from "lucide-react";
 
 export const metadata: Metadata = { title: "Ngữ pháp" };
+
+const DIFFICULTY_COLOR: Record<Difficulty, string> = {
+  easy: "var(--accent-green)",
+  medium: "var(--accent-yellow)",
+  hard: "var(--accent-red)",
+};
 
 function buildTopicStats(correctSet: Set<string>, seenSet: Set<string>) {
   return TOPICS.map((topic) => {
@@ -16,6 +23,7 @@ function buildTopicStats(correctSet: Set<string>, seenSet: Set<string>) {
       size: number;
       correctCount: number;
       done: boolean;
+      difficulty: Difficulty;
     }[] = [];
 
     let cursor = 0;
@@ -31,6 +39,7 @@ function buildTopicStats(correctSet: Set<string>, seenSet: Set<string>) {
         size: slice.length,
         correctCount: sliceCorrect,
         done: sliceSeen === slice.length,
+        difficulty: TEST_DIFFICULTY[topic.id]?.[i] ?? "medium",
       });
       cursor += size;
     }
@@ -386,8 +395,8 @@ export default async function GrammarPage() {
                       href={`/grammar/${topic.slug}/${t.testNumber}`}
                       style={{
                         display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
+                        flexDirection: "column",
+                        gap: "0.3rem",
                         padding: "0.5rem 0.7rem",
                         borderRadius: "var(--radius-sm)",
                         border: `1px solid ${
@@ -412,6 +421,7 @@ export default async function GrammarPage() {
                           fontSize: "0.78rem",
                           fontWeight: 500,
                           color: "var(--text-primary)",
+                          whiteSpace: "nowrap",
                         }}
                       >
                         Test {t.testNumber}
@@ -421,25 +431,49 @@ export default async function GrammarPage() {
                           ({t.size})
                         </span>
                       </span>
-                      {t.done ? (
+
+                      <span
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          gap: "0.4rem",
+                        }}
+                      >
+                        {/* Độ khó trung bình của cả đề — xem lib/grammar/test-difficulty.ts */}
                         <span
                           style={{
-                            fontSize: "0.72rem",
+                            fontSize: "0.62rem",
                             fontWeight: 700,
-                            color:
-                              tPct >= 80
-                                ? "var(--accent-green)"
-                                : "var(--accent-yellow)",
+                            padding: "1px 7px",
+                            borderRadius: 99,
+                            whiteSpace: "nowrap",
+                            color: DIFFICULTY_COLOR[t.difficulty],
+                            background: `color-mix(in srgb, ${DIFFICULTY_COLOR[t.difficulty]} 13%, transparent)`,
                           }}
                         >
-                          {tPct}%
+                          {DIFFICULTY_LABEL[t.difficulty]}
                         </span>
-                      ) : (
-                        <ChevronRight
-                          size={12}
-                          style={{ color: "var(--text-muted)", opacity: 0.5 }}
-                        />
-                      )}
+                        {t.done ? (
+                          <span
+                            style={{
+                              fontSize: "0.72rem",
+                              fontWeight: 700,
+                              color:
+                                tPct >= 80
+                                  ? "var(--accent-green)"
+                                  : "var(--accent-yellow)",
+                            }}
+                          >
+                            {tPct}%
+                          </span>
+                        ) : (
+                          <ChevronRight
+                            size={12}
+                            style={{ color: "var(--text-muted)", opacity: 0.5, flexShrink: 0 }}
+                          />
+                        )}
+                      </span>
                     </Link>
                   );
                 })}
