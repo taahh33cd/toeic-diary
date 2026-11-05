@@ -376,7 +376,7 @@ async function dispatchCronPaths(tag: string, paths: string[]): Promise<void> {
 // ── P5: Nhắc buổi sáng 8:00 ICT — từ vựng SRS đến hạn + bài tập quá hạn ───────
 export const morningReminders = onSchedule(
   {
-    schedule: "0 1 * * *", // 01:00 ICT — timeZone bên dưới là ICT, KHÔNG phải 08:00 như ghi chú cũ
+    schedule: "0 8 * * *", // 08:00 ICT — giờ trong schedule là giờ ICT (xem timeZone), đừng quy đổi UTC
     timeZone: "Asia/Ho_Chi_Minh",
     region: REGION,
   },
