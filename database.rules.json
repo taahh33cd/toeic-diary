@@ -77,7 +77,7 @@
 
     "bookings": {
       ".read": "auth != null && ((auth.token.role === 'teacher' || auth.token.role === 'admin') || (query.orderByChild === 'studentId' && query.equalTo === auth.uid))",
-      ".indexOn": ["studentId"],
+      ".indexOn": ["studentId", "status"],
       "$id": {
         ".write": "auth != null && ((auth.token.role === 'teacher' || auth.token.role === 'admin') || newData.child('studentId').val() === auth.uid || (!newData.exists() && data.child('studentId').val() === auth.uid))"
       }
