@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { useBookings } from "@/hooks/firebase/useBookings";
@@ -218,14 +218,40 @@ function YesterdayIncompleteCard({
 // ─── OverdueRemindCard ───────────────────────────────────────────────────────
 // Học viên đang học còn bài quá hạn trong 7 ngày gần nhất: tick rồi bấm gửi.
 // Nhắc đi qua /api/admin/homework-remind (chuông in-app + web push).
+//
+// Dấu "đã nhắc" lấy từ `students/{code}/lastHwReminderAt` trên RTDB — do API ghi
+// sau mỗi lượt nhắc TAY (cron 8h/20h không ghi, nếu không thì lúc nào cũng ở
+// trạng thái "vừa nhắc"). Vì useAllStudents nghe realtime nên gửi xong là dòng
+// tự rời danh sách chính xuống mục "Đã nhắc", không cần state cục bộ nào — và
+// dấu đó còn nguyên sau khi tải lại trang hoặc mở từ máy khác.
 
 const OVERDUE_WINDOW_DAYS = 7;
+const REMIND_COOLDOWN_MS = 24 * 60 * 60 * 1000;
+
+/** "vừa xong" · "12 phút trước" · "3 giờ trước" · "2 ngày trước" */
+function timeAgoVi(ts: number): string {
+  const mins = Math.floor((Date.now() - ts) / 60000);
+  if (mins < 1) return "vừa xong";
+  if (mins < 60) return `${mins} phút trước`;
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return `${hours} giờ trước`;
+  return `${Math.floor(hours / 24)} ngày trước`;
+}
 
 type OverdueRow = {
   student: Student & { id: string };
+  /** Số buổi quá hạn chưa xong. */
   count: number;
-  /** Deadline xa nhất trong các bài quá hạn — bài "nằm lâu" nhất. */
+  /** Deadline cũ nhất trong các buổi quá hạn. */
   oldest: string;
+  /** Tiến độ gộp của riêng các buổi quá hạn. */
+  done: number;
+  total: number;
+  /** Tên buổi (hoặc deadline nếu buổi không có tên) để thầy biết bài nào. */
+  labels: string[];
+  remindedAt: number | null;
+  /** Đã nhắc tay trong 24h qua. */
+  cooling: boolean;
 };
 
 function OverdueRemindCard({
@@ -242,8 +268,18 @@ function OverdueRemindCard({
   loading: boolean;
 }) {
   const [selected, setSelected] = useState<Set<string>>(new Set());
-  const [sending, setSending] = useState<string | null>(null); // studentCode | "__all__"
+  const [sendingCodes, setSendingCodes] = useState<Set<string>>(new Set());
+  const [bulkSending, setBulkSending] = useState(false);
+  const [failedCodes, setFailedCodes] = useState<Set<string>>(new Set());
   const [result, setResult] = useState<string | null>(null);
+  const [showReminded, setShowReminded] = useState(false);
+
+  // Dòng kết quả tự biến mất để không nằm đó gây hiểu nhầm cho lượt gửi sau.
+  useEffect(() => {
+    if (!result) return;
+    const t = setTimeout(() => setResult(null), 10000);
+    return () => clearTimeout(t);
+  }, [result]);
 
   const rows = useMemo<OverdueRow[]>(() => {
     const out: OverdueRow[] = [];
@@ -253,25 +289,74 @@ function OverdueRemindCard({
       const hwList: Homework[] = Array.isArray(hwRaw)
         ? hwRaw
         : Object.values((hwRaw ?? {}) as Record<string, Homework>);
+      const subs = allSubmissions[student.id] ?? {};
       const overdue = recentOverdueHomework(
         hwList,
-        allSubmissions[student.id] ?? {},
+        subs,
         allDayLinks[student.id] ?? {},
         today,
         OVERDUE_WINDOW_DAYS
       );
       if (overdue.length === 0) continue;
-      const oldest = overdue
-        .map((hw) => hw.endDate ?? hw.date)
-        .sort()[0];
-      out.push({ student, count: overdue.length, oldest });
+
+      let done = 0;
+      let total = 0;
+      for (const hw of overdue) {
+        const p = calcHwProgress(hw, subs, allDayLinks[student.id] ?? {});
+        done += p.done;
+        total += p.total;
+      }
+
+      const sorted = [...overdue].sort((a, b) =>
+        (a.endDate ?? a.date).localeCompare(b.endDate ?? b.date)
+      );
+      const remindedRaw = student.lastHwReminderAt
+        ? new Date(student.lastHwReminderAt).getTime()
+        : NaN;
+      const remindedAt = Number.isFinite(remindedRaw) ? remindedRaw : null;
+
+      out.push({
+        student,
+        count: overdue.length,
+        oldest: sorted[0].endDate ?? sorted[0].date,
+        done,
+        total,
+        labels: sorted.map((hw) => hw.title?.trim() || (hw.endDate ?? hw.date)),
+        remindedAt,
+        cooling: remindedAt !== null && Date.now() - remindedAt < REMIND_COOLDOWN_MS,
+      });
     }
     return out.sort((a, b) => a.oldest.localeCompare(b.oldest));
   }, [students, allSubmissions, allDayLinks, today]);
 
-  async function send(codes: string[], tag: string) {
+  const pending = useMemo(() => rows.filter((r) => !r.cooling), [rows]);
+  const reminded = useMemo(() => rows.filter((r) => r.cooling), [rows]);
+
+  // Bỏ qua tick của HV đã rời danh sách chính (vừa được nhắc, hoặc đã nộp xong).
+  const liveCodes = useMemo(() => new Set(rows.map((r) => r.student.id)), [rows]);
+  const selectedCodes = useMemo(
+    () => [...selected].filter((c) => liveCodes.has(c)),
+    [selected, liveCodes]
+  );
+
+  function toggle(code: string) {
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (next.has(code)) next.delete(code);
+      else next.add(code);
+      return next;
+    });
+  }
+
+  async function send(codes: string[], bulk: boolean) {
     if (codes.length === 0) return;
-    setSending(tag);
+    if (bulk) setBulkSending(true);
+    setSendingCodes((prev) => new Set([...prev, ...codes]));
+    setFailedCodes((prev) => {
+      const next = new Set(prev);
+      for (const c of codes) next.delete(c);
+      return next;
+    });
     setResult(null);
     try {
       const res = await fetch("/api/admin/homework-remind", {
@@ -285,24 +370,126 @@ function OverdueRemindCard({
         error?: string;
       };
       if (!res.ok) {
-        setResult(`Không gửi được: ${data.error ?? res.status}`);
+        setFailedCodes((prev) => new Set([...prev, ...codes]));
+        setResult(`Không gửi được: ${data.error ?? `lỗi ${res.status}`}`);
         return;
       }
-      const sent = data.sent ?? 0;
-      const clear = data.results?.filter((r) => r.status === "clear").length ?? 0;
-      const failed = data.results?.filter((r) => r.status === "error").length ?? 0;
-      const noAcct = data.results?.filter((r) => r.status === "no-profile").length ?? 0;
-      const parts = [`Đã nhắc ${sent} HV`];
-      if (clear > 0) parts.push(`${clear} HV đã nộp xong (bỏ qua)`);
-      if (noAcct > 0) parts.push(`${noAcct} HV chưa có tài khoản`);
-      if (failed > 0) parts.push(`${failed} lỗi`);
+      const by = (s: string) => data.results?.filter((r) => r.status === s) ?? [];
+      const failed = [...by("error"), ...by("no-profile")].map((r) => r.studentCode);
+      if (failed.length > 0) setFailedCodes((prev) => new Set([...prev, ...failed]));
+
+      const parts = [`Đã nhắc ${data.sent ?? 0} HV`];
+      const clear = by("clear").length;
+      const noAcct = by("no-profile").length;
+      const errored = by("error").length;
+      if (clear > 0) parts.push(`${clear} HV đã nộp xong nên bỏ qua`);
+      if (noAcct > 0) parts.push(`${noAcct} HV chưa có tài khoản (chỉ vào chuông)`);
+      if (errored > 0) parts.push(`${errored} HV lỗi, thử lại`);
       setResult(parts.join(" · "));
-      setSelected(new Set());
+      setSelected((prev) => {
+        const next = new Set(prev);
+        for (const c of codes) next.delete(c);
+        return next;
+      });
     } catch {
+      setFailedCodes((prev) => new Set([...prev, ...codes]));
       setResult("Không gửi được — kiểm tra kết nối rồi thử lại.");
     } finally {
-      setSending(null);
+      setSendingCodes((prev) => {
+        const next = new Set(prev);
+        for (const c of codes) next.delete(c);
+        return next;
+      });
+      if (bulk) setBulkSending(false);
     }
+  }
+
+  function renderRow(row: OverdueRow) {
+    const code = row.student.id;
+    const checked = selected.has(code);
+    const sending = sendingCodes.has(code);
+    const failed = failedCodes.has(code);
+
+    return (
+      <div
+        key={code}
+        onClick={() => !sending && toggle(code)}
+        className="flex items-center gap-3 px-6 py-3.5 cursor-pointer transition-colors hover:bg-[rgba(0,0,0,0.02)]"
+        style={{ opacity: row.cooling ? 0.72 : 1 }}
+      >
+        <input
+          type="checkbox"
+          checked={checked}
+          disabled={sending}
+          onChange={() => toggle(code)}
+          onClick={(e) => e.stopPropagation()}
+          className="w-4 h-4 shrink-0 cursor-pointer"
+          style={{ accentColor: "#ba1a1a" }}
+          aria-label={`Chọn ${row.student.name}`}
+        />
+
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 flex-wrap">
+            <Link
+              href={`/admin/students/${code}`}
+              onClick={(e) => e.stopPropagation()}
+              className="text-sm font-medium hover:underline"
+              style={{ color: "var(--text-primary)" }}
+            >
+              {row.student.name}
+            </Link>
+            <span className="text-xs font-mono" style={{ color: "var(--text-muted)" }}>
+              {code}
+            </span>
+            <span
+              className="text-xs font-semibold px-2 py-0.5 rounded-full"
+              style={{ background: "rgba(239,68,68,0.12)", color: "#ba1a1a" }}
+            >
+              {row.count} buổi quá hạn
+            </span>
+            {row.total > 0 && (
+              <span className="text-xs font-mono" style={{ color: "var(--text-muted)" }}>
+                {row.done}/{row.total} mục
+              </span>
+            )}
+            {row.remindedAt !== null && (
+              <span
+                className="text-xs font-semibold px-2 py-0.5 rounded-full"
+                style={{
+                  background: row.cooling ? "rgba(245,158,11,0.14)" : "rgba(0,0,0,0.05)",
+                  color: row.cooling ? "rgb(161,110,0)" : "var(--text-muted)",
+                }}
+              >
+                đã nhắc {timeAgoVi(row.remindedAt)}
+              </span>
+            )}
+            {failed && (
+              <span className="text-xs font-semibold" style={{ color: "#ba1a1a" }}>
+                gửi lỗi
+              </span>
+            )}
+          </div>
+
+          <p className="text-xs mt-1 truncate" style={{ color: "var(--text-muted)" }}>
+            cũ nhất {row.oldest} · {row.labels.slice(0, 2).join(" · ")}
+            {row.labels.length > 2 ? ` · +${row.labels.length - 2} buổi` : ""}
+          </p>
+        </div>
+
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            void send([code], false);
+          }}
+          disabled={sending}
+          className="text-xs font-semibold px-3 py-1.5 rounded-lg shrink-0 transition-opacity disabled:opacity-50"
+          style={{ background: "rgba(239,68,68,0.1)", color: "#ba1a1a" }}
+        >
+          {sending ? "Đang gửi…" : row.cooling ? "Nhắc lại" : "Nhắc"}
+        </button>
+      </div>
+    );
   }
 
   if (loading) {
@@ -327,16 +514,15 @@ function OverdueRemindCard({
     );
   }
 
-  const allSelected = selected.size === rows.length;
-  const busy = sending !== null;
+  const divider = { borderColor: "rgba(199,196,214,0.2)" };
 
   return (
     <div className="silk-card rounded-2xl overflow-hidden">
       <div
-        className="flex items-center justify-between px-6 py-4 border-b"
+        className="flex items-center justify-between gap-3 px-6 py-4 border-b"
         style={{ borderColor: "rgba(199,196,214,0.3)", background: "rgba(239,68,68,0.04)" }}
       >
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 min-w-0">
           <span style={{ fontSize: 15 }}>⏰</span>
           <p className="text-sm font-semibold" style={{ color: "#ba1a1a" }}>
             Quá hạn chưa nộp
@@ -348,83 +534,101 @@ function OverdueRemindCard({
             {rows.length} HV
           </span>
         </div>
-        <button
-          type="button"
-          onClick={() =>
-            setSelected(allSelected ? new Set() : new Set(rows.map((r) => r.student.id)))
-          }
-          className="text-xs font-semibold px-2.5 py-1 rounded-lg transition-colors hover:bg-[rgba(0,0,0,0.04)]"
-          style={{ color: "var(--text-muted)" }}
-        >
-          {allSelected ? "Bỏ chọn" : "Chọn tất cả"}
-        </button>
-      </div>
-
-      <div className="divide-y" style={{ borderColor: "rgba(199,196,214,0.2)" }}>
-        {rows.map(({ student, count, oldest }) => {
-          const checked = selected.has(student.id);
-          return (
-            <div key={student.id} className="flex items-center gap-3 px-6 py-3.5">
-              <input
-                type="checkbox"
-                checked={checked}
-                disabled={busy}
-                onChange={() =>
-                  setSelected((prev) => {
-                    const next = new Set(prev);
-                    if (next.has(student.id)) next.delete(student.id);
-                    else next.add(student.id);
-                    return next;
-                  })
+        {pending.length > 0 && (
+          <button
+            type="button"
+            onClick={() =>
+              setSelected((prev) => {
+                const everyPending = pending.every((r) => prev.has(r.student.id));
+                const next = new Set(prev);
+                for (const r of pending) {
+                  if (everyPending) next.delete(r.student.id);
+                  else next.add(r.student.id);
                 }
-                className="w-4 h-4 shrink-0 cursor-pointer"
-                style={{ accentColor: "#ba1a1a" }}
-                aria-label={`Chọn ${student.name}`}
-              />
-
-              <div className="flex-1 min-w-0">
-                <Link
-                  href={`/admin/students/${student.id}`}
-                  className="text-sm font-medium truncate hover:underline"
-                  style={{ color: "var(--text-primary)" }}
-                >
-                  {student.name}
-                </Link>
-                <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
-                  <span className="font-mono">{student.id}</span> · {count} bài quá hạn · cũ nhất {oldest}
-                </p>
-              </div>
-
-              <button
-                type="button"
-                onClick={() => send([student.id], student.id)}
-                disabled={busy}
-                className="text-xs font-semibold px-3 py-1.5 rounded-lg shrink-0 transition-opacity disabled:opacity-40"
-                style={{ background: "rgba(239,68,68,0.1)", color: "#ba1a1a" }}
-              >
-                {sending === student.id ? "Đang gửi…" : "Nhắc"}
-              </button>
-            </div>
-          );
-        })}
+                return next;
+              })
+            }
+            className="text-xs font-semibold px-2.5 py-1 rounded-lg shrink-0 transition-colors hover:bg-[rgba(0,0,0,0.04)]"
+            style={{ color: "var(--text-muted)" }}
+          >
+            {pending.every((r) => selected.has(r.student.id)) ? "Bỏ chọn" : "Chọn tất cả"}
+          </button>
+        )}
       </div>
+
+      {pending.length > 0 ? (
+        <div className="divide-y" style={divider}>
+          {pending.map(renderRow)}
+        </div>
+      ) : (
+        <p className="px-6 py-5 text-sm text-center" style={{ color: "rgb(22,163,74)" }}>
+          Đã nhắc hết {reminded.length} HV còn quá hạn trong 24h qua 👍
+        </p>
+      )}
+
+      {reminded.length > 0 && (
+        <div className="border-t" style={divider}>
+          <button
+            type="button"
+            onClick={() => setShowReminded((v) => !v)}
+            className="w-full flex items-center justify-between gap-2 px-6 py-3 text-left transition-colors hover:bg-[rgba(0,0,0,0.02)]"
+            aria-expanded={showReminded}
+          >
+            <span className="text-xs font-semibold" style={{ color: "rgb(161,110,0)" }}>
+              Đã nhắc trong 24h ({reminded.length})
+            </span>
+            <span
+              className="material-symbols-outlined text-[18px]"
+              style={{
+                color: "var(--text-muted)",
+                fontVariationSettings: "'wght' 300",
+                transform: showReminded ? "rotate(180deg)" : "none",
+                transition: "transform 0.2s ease",
+              }}
+            >
+              expand_more
+            </span>
+          </button>
+          {showReminded && (
+            <div className="divide-y border-t" style={divider}>
+              {reminded.map(renderRow)}
+            </div>
+          )}
+        </div>
+      )}
 
       <div
         className="flex items-center justify-between gap-3 px-6 py-4 border-t"
         style={{ borderColor: "rgba(199,196,214,0.3)" }}
       >
-        <p className="text-xs flex-1 min-w-0" style={{ color: "var(--text-muted)" }}>
+        <p
+          aria-live="polite"
+          className="text-xs flex-1 min-w-0"
+          style={{ color: result ? "var(--text-primary)" : "var(--text-muted)" }}
+        >
           {result ?? "Gửi thông báo trong app + push lên điện thoại học viên."}
         </p>
-        <button
-          type="button"
-          onClick={() => send([...selected], "__all__")}
-          disabled={busy || selected.size === 0}
-          className="text-sm font-semibold px-4 py-2 rounded-xl shrink-0 transition-opacity disabled:opacity-40"
-          style={{ background: "#ba1a1a", color: "#fff" }}
-        >
-          {sending === "__all__" ? "Đang gửi…" : `Gửi nhắc (${selected.size})`}
-        </button>
+        {selectedCodes.length === 0 ? (
+          <button
+            type="button"
+            onClick={() => setSelected(new Set(pending.map((r) => r.student.id)))}
+            disabled={pending.length === 0}
+            className="text-sm font-semibold px-4 py-2 rounded-xl shrink-0 transition-opacity disabled:opacity-40"
+            style={{ background: "rgba(239,68,68,0.12)", color: "#ba1a1a" }}
+          >
+            Chọn tất cả ({pending.length})
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={() => void send(selectedCodes, true)}
+            disabled={bulkSending}
+            className="text-sm font-semibold px-4 py-2 rounded-xl shrink-0 transition-opacity disabled:opacity-50"
+            style={{ background: "#ba1a1a", color: "#fff" }}
+          >
+            {bulkSending ? "Đang gửi…" : `Gửi nhắc (${selectedCodes.length})`}
+          </button>
+        )}
       </div>
     </div>
   );

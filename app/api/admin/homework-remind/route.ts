@@ -20,6 +20,8 @@ type Result = {
   /** "sent" đã gửi · "clear" không còn bài quá hạn · "no-profile" chưa có tài khoản · "error" */
   status: "sent" | "clear" | "no-profile" | "error";
   overdue: number;
+  /** Mốc đã ghi vào students/{code}/lastHwReminderAt (ISO). */
+  sentAt?: string;
 };
 
 /**
@@ -78,18 +80,26 @@ export async function POST(request: NextRequest) {
             ? "Bạn có 1 bài tập đã quá hạn chưa nộp. Hoàn thành ngay nhé!"
             : `Bạn có ${overdue.length} bài tập đã quá hạn chưa nộp. Hoàn thành ngay nhé!`;
 
+        const sentAt = new Date().toISOString();
         await db.ref(`notifications/${code}/${BELL_KEY}`).set({
           type: "homework",
           title,
           body,
           read: false,
-          createdAt: new Date().toISOString(),
+          createdAt: sentAt,
         });
 
-        if (!profile) return { studentCode: code, status: "no-profile", overdue: overdue.length };
+        // Mốc "đã nhắc tay" cho dashboard (cron KHÔNG ghi field này — xem
+        // OverdueRemindCard). Ghi cả khi HV chưa có tài khoản vì mục chuông
+        // đã vào rồi, thầy không cần bấm lại.
+        await db.ref(`students/${code}/lastHwReminderAt`).set(sentAt);
+
+        if (!profile) {
+          return { studentCode: code, status: "no-profile", overdue: overdue.length, sentAt };
+        }
 
         await sendPushToUser(profile.id, { title, body, url: "/journal/progress" });
-        return { studentCode: code, status: "sent", overdue: overdue.length };
+        return { studentCode: code, status: "sent", overdue: overdue.length, sentAt };
       } catch (e) {
         console.error(`[homework-remind] ${code} failed:`, e);
         return { studentCode: code, status: "error", overdue: 0 };

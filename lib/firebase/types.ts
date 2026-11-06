@@ -137,6 +137,9 @@ export interface Student {
   paraphraseLog?: Record<string, ParaphraseEntry>;
   reviewProgress?: ReviewProgress;
   teacherId?: string;
+  /** Lần giáo viên bấm nhắc bài quá hạn gần nhất (ISO). Chỉ nhắc TAY ghi vào đây
+   *  — cron 8h/20h không ghi, nếu không mốc 24h lúc nào cũng vừa bị reset. */
+  lastHwReminderAt?: string;
   courseType?: "group" | "per-session" | "package";
   pricePerSession?: number;
   totalFee?: number;
