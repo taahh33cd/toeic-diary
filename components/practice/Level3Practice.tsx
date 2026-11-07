@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { RotateCcw, Play, Pause } from "lucide-react";
 import { saveProgress } from "@/app/actions/saveProgress";
 import { getTimeSpent } from "@/stores/practiceStore";
@@ -9,6 +9,8 @@ import { type VocabItem } from "./TranscriptVocabModal";
 import { PostSubmitView } from "./PostSubmitView";
 import { KeyboardHints } from "./KeyboardHints";
 import { useAudioShortcuts } from "./useAudioShortcuts";
+import { tokenizeSentence, normalizeToken, matchWords, tokenMatches } from "@/lib/practice/match";
+import { buildSegmentWindows, TAIL_PAD, type SegmentWindow } from "@/lib/practice/segment";
 
 interface Sentence {
   id: string;
@@ -38,11 +40,6 @@ interface Props {
 
 const SPEEDS = [0.75, 1.0, 1.25, 1.5];
 const MAX_REPLAY = 20;
-const AUDIO_OFFSET = 0.2;
-
-function normalizeWord(w: string) {
-  return w.toLowerCase().replace(/[^a-z0-9']/g, "").trim();
-}
 
 function fmt(s: number) {
   return `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
@@ -65,14 +62,15 @@ interface SentenceState {
 }
 
 function buildWordResults(refContent: string, userInput: string): WordResult[] {
-  const refWords = refContent.trim().split(/\s+/).filter(Boolean);
-  const userWords = userInput.trim().split(/\s+/).filter(Boolean);
-  return refWords.map((ref, i) => {
-    const refNorm = normalizeWord(ref);
-    const userNorm = normalizeWord(userWords[i] ?? "");
-    const correct = refNorm === userNorm && refNorm !== "";
-    return { ref, refNorm, correct, retryValue: correct ? ref : (userWords[i] ?? ""), hintCount: 0 };
-  });
+  const refWords = tokenizeSentence(refContent);
+  const flags = matchWords(refWords, userInput);
+  return refWords.map((ref, i) => ({
+    ref,
+    refNorm: normalizeToken(ref),
+    correct: flags[i],
+    retryValue: flags[i] ? ref : "",
+    hintCount: 0,
+  }));
 }
 
 function countCorrectWords(wordResults: WordResult[]): number {
@@ -113,6 +111,15 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const replayCount = replayCounts[activeSentence?.id ?? ""] ?? 0;
   const activeSentenceState = activeSentence ? sentenceStates[activeSentence.id] : null;
 
+  // Khoảng audio của từng câu, đã qua lưới an toàn cho timestamp lỗi trong DB
+  const windows = useMemo(
+    () => buildSegmentWindows(sentences, audioDuration),
+    [sentences, audioDuration]
+  );
+  const activeWindow: SegmentWindow | undefined = windows[activeIdx];
+  const windowRef = useRef<SegmentWindow | undefined>(activeWindow);
+  windowRef.current = activeWindow;
+
   useEffect(() => {
     if (audioRef.current) audioRef.current.playbackRate = speed;
   }, [speed]);
@@ -123,19 +130,30 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     return () => { audio?.pause(); };
   }, []);
 
-  // Seek is async: play() before it lands replays the previous segment
+  // Seek là bất đồng bộ. Code cũ gán currentTime rồi mới đọc audio.seeking:
+  // khi trình duyệt chưa kịp bật cờ đó, play() chạy ngay và phát lại đoạn CŨ —
+  // đúng hiện tượng "replay không vào câu đang dictation". Phải đăng ký
+  // listener TRƯỚC khi gán currentTime, và có hẹn giờ dự phòng vì iOS Safari
+  // đôi khi không bắn "seeked".
   function seekAndPlay(audio: HTMLAudioElement, to: number) {
-    audio.currentTime = to;
+    const target = Math.max(0, to);
+    let fired = false;
+    let timer: ReturnType<typeof setTimeout> | null = null;
+
     const start = () => {
+      if (fired) return;
+      fired = true;
+      if (timer) clearTimeout(timer);
+      audio.removeEventListener("seeked", start);
       seekingRef.current = false;
-      audio.play().catch(() => {});
+      audio.play().catch(() => setIsPlaying(false));
     };
-    if (audio.seeking) {
-      seekingRef.current = true;
-      audio.addEventListener("seeked", start, { once: true });
-    } else {
-      start();
-    }
+
+    seekingRef.current = true;
+    audio.addEventListener("seeked", start);
+    timer = setTimeout(start, 500);
+    audio.currentTime = target;
+    if (!audio.seeking && Math.abs(audio.currentTime - target) < 0.05) start();
   }
 
   useEffect(() => {
@@ -144,7 +162,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     replayStateRef.current = { sentenceId: activeSentence.id, count: 0 };
     setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: 0 }));
 
-    const seekTo = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
+    const seekTo = windowRef.current?.start ?? 0;
     let cancelled = false;
     const doSeekAndPlay = () => {
       if (cancelled) return;
@@ -170,28 +188,40 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     }
   }, [activeIdx]);
 
+  // Hết câu → tự phát lại câu đó, tới hạn MAX_REPLAY thì dừng
+  function onSegmentEnd(audio: HTMLAudioElement) {
+    if (!activeSentence) return;
+    const state = replayStateRef.current;
+    if (state.sentenceId !== activeSentence.id) return;
+    if (state.count < MAX_REPLAY - 1) {
+      state.count += 1;
+      setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: state.count }));
+      seekAndPlay(audio, windowRef.current?.start ?? 0);
+    } else {
+      state.count = MAX_REPLAY;
+      setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: MAX_REPLAY }));
+      audio.pause();
+      setIsPlaying(false);
+    }
+  }
+
   function handleTimeUpdate() {
     const audio = audioRef.current;
     if (!audio || !activeSentence) return;
     const t = audio.currentTime;
     setAudioCurrent(t);
     if (seekingRef.current) return;
-    const endTime = activeSentence.endTime;
-    if (endTime <= 0) return;
-    if (t >= endTime + 0.5) {
-      const state = replayStateRef.current;
-      if (state.sentenceId !== activeSentence.id) return;
-      if (state.count < MAX_REPLAY - 1) {
-        state.count += 1;
-        setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: state.count }));
-        seekAndPlay(audio, activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0);
-      } else {
-        state.count = MAX_REPLAY;
-        setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: MAX_REPLAY }));
-        audio.pause();
-        setIsPlaying(false);
-      }
-    }
+    const end = windowRef.current?.end;
+    // end vô hạn = dữ liệu timestamp không dùng được, để audio chạy tới hết file
+    if (end === undefined || !Number.isFinite(end)) return;
+    if (t >= end + TAIL_PAD) onSegmentEnd(audio);
+  }
+
+  // File hết trước khi tới mốc cuối câu (timestamp vượt độ dài file)
+  function handleEnded() {
+    const audio = audioRef.current;
+    if (!audio) { setIsPlaying(false); return; }
+    onSegmentEnd(audio);
   }
 
   function togglePlay() {
@@ -203,7 +233,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   function handleReplay() {
     const audio = audioRef.current;
     if (!audio || !activeSentence) return;
-    const seekTo = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
+    const seekTo = windowRef.current?.start ?? 0;
     replayStateRef.current = { sentenceId: activeSentence.id, count: 0 };
     setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: 0 }));
     seekAndPlay(audio, seekTo);
@@ -220,9 +250,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   function handleRewind() {
     const audio = audioRef.current;
     if (!audio) return;
-    const floor = activeSentence && activeSentence.startTime > 0
-      ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET)
-      : 0;
+    const floor = windowRef.current?.start ?? 0;
     seekAndPlay(audio, Math.max(floor, audio.currentTime - 5));
     setIsPlaying(true);
   }
@@ -306,7 +334,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     if (!wr || wr.correct) return;
 
     const currentValue = retryInputRefs.current[wordIdx]?.value ?? "";
-    const isCorrect = normalizeWord(currentValue) === wr.refNorm && normalizeWord(currentValue) !== "";
+    const isCorrect = tokenMatches(wr.ref, currentValue);
 
     if (isCorrect && wr.hintCount < wr.refNorm.length) {
       // Only credit as correct when hints have NOT fully revealed the word
@@ -354,8 +382,8 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   function showAnswer(sentenceId: string) {
     const s = sentences.find((x) => x.id === sentenceId);
     if (!s) return;
-    const results = s.content.trim().split(/\s+/).map((ref) => ({
-      ref, refNorm: normalizeWord(ref), correct: false, retryValue: ref, hintCount: 0,
+    const results = tokenizeSentence(s.content).map((ref) => ({
+      ref, refNorm: normalizeToken(ref), correct: false, retryValue: ref, hintCount: 0,
     }));
     setSentenceStates((prev) => ({ ...prev, [sentenceId]: { ...prev[sentenceId], phase: "revealed", wordResults: results } }));
   }
@@ -365,7 +393,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     let correctWords = 0;
     sentences.forEach((s) => {
       const state = sentenceStates[s.id];
-      const refWords = s.content.trim().split(/\s+/).filter(Boolean);
+      const refWords = tokenizeSentence(s.content);
       totalWords += refWords.length;
       if (state?.wordResults?.length > 0) correctWords += countCorrectWords(state.wordResults);
     });
@@ -388,7 +416,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   }
 
   function renderBlankPlaceholder(sentence: Sentence) {
-    const wordCount = sentence.content.trim().split(/\s+/).filter(Boolean).length;
+    const wordCount = tokenizeSentence(sentence.content).length;
     return (
       <div className="flex flex-wrap justify-center gap-x-2 gap-y-1">
         {Array.from({ length: wordCount }).map((_, i) => (
@@ -448,7 +476,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     let totalWords = 0; let correctWords = 0;
     sentences.forEach((s) => {
       const state = sentenceStates[s.id];
-      const refWords = s.content.trim().split(/\s+/).filter(Boolean);
+      const refWords = tokenizeSentence(s.content);
       totalWords += refWords.length;
       if (state?.wordResults?.length > 0) correctWords += countCorrectWords(state.wordResults);
     });
@@ -473,7 +501,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
           ref={audioRef} src={audioUrl} preload="auto"
           onLoadedMetadata={(e) => setAudioDuration((e.target as HTMLAudioElement).duration)}
           onTimeUpdate={handleTimeUpdate}
-          onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)} onEnded={() => setIsPlaying(false)}
+          onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)} onEnded={handleEnded}
         />
         <div className="flex flex-col md:flex-row items-center gap-6">
           <button
@@ -556,7 +584,8 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
             {activeSentenceState.phase === "blank" && renderBlankPlaceholder(activeSentence)}
             {activeSentenceState.phase === "feedback" && renderFeedback(activeSentence, activeSentenceState, false)}
             {activeSentenceState.phase === "revealed" && renderFeedback(activeSentence, activeSentenceState, true)}
-            {activeSentenceState.phase === "done" && <div className="text-2xl md:text-3xl font-medium text-emerald-400">{activeSentence.content}</div>}
+            {/* Hiện lại đúng những từ học viên phải gõ (đã bỏ tiền tố người nói) */}
+            {activeSentenceState.phase === "done" && <div className="text-2xl md:text-3xl font-medium text-emerald-400">{tokenizeSentence(activeSentence.content).join(" ")}</div>}
           </div>
           {activeSentenceState.phase === "blank" && (
             <div className="w-full max-w-xl">

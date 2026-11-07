@@ -9,6 +9,8 @@ import { type VocabItem } from "./TranscriptVocabModal";
 import { PostSubmitView } from "./PostSubmitView";
 import { KeyboardHints } from "./KeyboardHints";
 import { useAudioShortcuts } from "./useAudioShortcuts";
+import { tokenMatches, normalizeToken } from "@/lib/practice/match";
+import { buildSegmentWindows, TAIL_PAD, type SegmentWindow } from "@/lib/practice/segment";
 
 interface Sentence {
   id: string;
@@ -40,18 +42,17 @@ interface BlankState {
 const SPEEDS = [0.75, 1.0, 1.25, 1.5];
 const MAX_REPLAY = 20;
 const BLANK_COUNT = 5;
-const AUDIO_OFFSET = 0.2;
 
-function normalize(s: string) {
-  return s.toLowerCase().trim().replace(/[^a-z0-9']/g, "");
-}
+
 
 function fmt(s: number) {
   return `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 }
 
+// Bản cũ strip [^a-z0-9'] mà không lowercase trước, nên chữ hoa bị xoá luôn:
+// "Tokyo" → "okyo" (gợi ý sai chữ, sai cả số ký tự).
 function cleanAnswer(answer: string) {
-  return answer.replace(/[^a-z0-9']/g, "");
+  return normalizeToken(answer);
 }
 
 export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessionStart, transcriptFull, keyVocab, onScored }: Props) {
@@ -98,6 +99,15 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
   const activeSentence = sentencesWithBlanks[activeIdx];
+
+  // Khoảng audio của từng câu, đã qua lưới an toàn cho timestamp lỗi trong DB
+  const windows = useMemo(
+    () => buildSegmentWindows(sentencesWithBlanks, audioDuration),
+    [sentencesWithBlanks, audioDuration]
+  );
+  const activeWindow: SegmentWindow | undefined = windows[activeIdx];
+  const windowRef = useRef<SegmentWindow | undefined>(activeWindow);
+  windowRef.current = activeWindow;
   const activeBlankIdx = blankSentences.findIndex((s) => s.id === activeSentence?.id);
   const replayCount = replayCounts[activeSentence?.id ?? ""] ?? 0;
 
@@ -117,19 +127,30 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     return () => { audio?.pause(); };
   }, []);
 
-  // Seek is async: play() before it lands replays the previous segment
+  // Seek là bất đồng bộ. Code cũ gán currentTime rồi mới đọc audio.seeking:
+  // khi trình duyệt chưa kịp bật cờ đó, play() chạy ngay và phát lại đoạn CŨ —
+  // đúng hiện tượng "replay không vào câu đang dictation". Phải đăng ký
+  // listener TRƯỚC khi gán currentTime, và có hẹn giờ dự phòng vì iOS Safari
+  // đôi khi không bắn "seeked".
   function seekAndPlay(audio: HTMLAudioElement, to: number) {
-    audio.currentTime = to;
+    const target = Math.max(0, to);
+    let fired = false;
+    let timer: ReturnType<typeof setTimeout> | null = null;
+
     const start = () => {
+      if (fired) return;
+      fired = true;
+      if (timer) clearTimeout(timer);
+      audio.removeEventListener("seeked", start);
       seekingRef.current = false;
-      audio.play().catch(() => {});
+      audio.play().catch(() => setIsPlaying(false));
     };
-    if (audio.seeking) {
-      seekingRef.current = true;
-      audio.addEventListener("seeked", start, { once: true });
-    } else {
-      start();
-    }
+
+    seekingRef.current = true;
+    audio.addEventListener("seeked", start);
+    timer = setTimeout(start, 500);
+    audio.currentTime = target;
+    if (!audio.seeking && Math.abs(audio.currentTime - target) < 0.05) start();
   }
 
   useEffect(() => {
@@ -139,7 +160,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     replayStateRef.current = { sentenceId: activeSentence.id, count: 0 };
     setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: 0 }));
 
-    const seekTo = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
+    const seekTo = windowRef.current?.start ?? 0;
 
     let cancelled = false;
     const doSeekAndPlay = () => {
@@ -175,22 +196,40 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
 
     if (seekingRef.current) return;
     if (activeSentence.blanks.length === 0) return;
-    const endTime = activeSentence.endTime;
-    if (endTime <= 0) return;
+    const end = windowRef.current?.end;
+    // end vô hạn = dữ liệu timestamp không dùng được, để audio chạy tới hết file
+    if (end === undefined || !Number.isFinite(end)) return;
 
-    if (t >= endTime + 0.5) {
+    if (t >= end + TAIL_PAD) {
       const state = replayStateRef.current;
       if (state.sentenceId !== activeSentence.id) return;
       if (state.count < MAX_REPLAY - 1) {
         state.count += 1;
         setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: state.count }));
-        seekAndPlay(audio, activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0);
+        seekAndPlay(audio, windowRef.current?.start ?? 0);
       } else {
         state.count = MAX_REPLAY;
         setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: MAX_REPLAY }));
         audio.pause();
         setIsPlaying(false);
       }
+    }
+  }
+
+  // File hết trước khi tới mốc cuối câu (timestamp vượt độ dài file)
+  function handleEnded() {
+    const audio = audioRef.current;
+    if (!audio || !activeSentence) { setIsPlaying(false); return; }
+    const state = replayStateRef.current;
+    if (state.sentenceId !== activeSentence.id) { setIsPlaying(false); return; }
+    if (state.count < MAX_REPLAY - 1) {
+      state.count += 1;
+      setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: state.count }));
+      seekAndPlay(audio, windowRef.current?.start ?? 0);
+    } else {
+      state.count = MAX_REPLAY;
+      setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: MAX_REPLAY }));
+      setIsPlaying(false);
     }
   }
 
@@ -203,7 +242,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   function handleReplay() {
     const audio = audioRef.current;
     if (!audio || !activeSentence) return;
-    const seekTo = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
+    const seekTo = windowRef.current?.start ?? 0;
     replayStateRef.current = { sentenceId: activeSentence.id, count: 0 };
     setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: 0 }));
     seekAndPlay(audio, seekTo);
@@ -220,9 +259,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   function handleRewind() {
     const audio = audioRef.current;
     if (!audio) return;
-    const floor = activeSentence && activeSentence.startTime > 0
-      ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET)
-      : 0;
+    const floor = windowRef.current?.start ?? 0;
     seekAndPlay(audio, Math.max(floor, audio.currentTime - 5));
     setIsPlaying(true);
   }
@@ -291,7 +328,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
 
     if (state.status === "correct") { focusNextOrAdvance(blankId); return; }
 
-    const correct = normalize(state.value) === normalize(blankDef.answer);
+    const correct = tokenMatches(blankDef.answer, state.value);
 
     if (correct) {
       setBlankStates((prev) => ({
@@ -420,7 +457,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
           onTimeUpdate={handleTimeUpdate}
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
-          onEnded={() => setIsPlaying(false)}
+          onEnded={handleEnded}
         />
         <div className="flex flex-col md:flex-row items-center gap-6">
           <button
