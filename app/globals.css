@@ -1750,7 +1750,9 @@ a[aria-disabled="true"] {
 
 /* ── Header journal = bìa sổ: vân da mảnh + đường chỉ may ── */
 .journal-cover {
-  position: relative;
+  /* KHÔNG đặt position ở đây: rule này không nằm trong @layer nên nó thắng
+     class "sticky" của Tailwind, làm thanh bìa hết dính trên đầu khi cuộn.
+     Thanh bìa đã là position: sticky nên ::after vẫn neo đúng vào nó. */
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23g)' opacity='.06'/%3E%3C/svg%3E");
   background-size: 120px 120px;
