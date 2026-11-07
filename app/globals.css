@@ -1846,30 +1846,6 @@ a[aria-disabled="true"] {
   --accent-red:   #E08A80;
 }
 
-/* ── Bìa sổ thu lại khi cuộn xuống ── */
-.journal-cover-shell {
-  /* overflow: visible khi bìa đang hiện — nếu cắt ở đây thì menu ☰ và danh
-     sách thông báo (panel absolute bên trong thanh bìa) bị xén mất, bấm vào
-     tưởng như không có gì xảy ra. Chỉ cắt lúc thu lại. */
-  overflow: visible;
-  max-height: 72px;
-  visibility: visible;
-  transition: max-height .22s ease, opacity .18s ease, visibility 0s;
-}
-/* visibility: hidden để liên kết bên trong rời khỏi thứ tự tab — chỉ cắt
-   bằng max-height thì người dùng bàn phím vẫn tab vào được chỗ không thấy. */
-.journal-cover-shell[data-hidden="true"] {
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: max-height .22s ease, opacity .18s ease, visibility 0s linear .22s;
-}
-@media (prefers-reduced-motion: reduce) {
-  .journal-cover-shell { transition: none; }
-}
-
 /* ── Nút dùng chung trong sổ ──
    Thay cho hàng chục biến thể inline rải rác khắp 10 trang. */
 .paper-btn {
