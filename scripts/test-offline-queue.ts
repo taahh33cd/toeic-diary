@@ -188,3 +188,7 @@ async function main() {
 }
 
 main();
+
+// Đánh dấu file là module để hai script test không dùng chung phạm vi
+// toàn cục — trùng tên biến ở đó làm `next build` hỏng ở bước type check.
+export {};

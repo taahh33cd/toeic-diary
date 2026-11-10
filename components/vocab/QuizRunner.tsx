@@ -79,6 +79,8 @@ export default function QuizRunner({
   // Khoá dạng này trong lúc tải, và nói rõ là ĐANG TẢI chứ không phải "chưa
   // soạn" — nhãn sai làm học viên tưởng bộ thẻ của mình không có câu nào.
   const [taiDangTu, setTaiDangTu] = useState(true);
+  /** Tải hỏng (thường là mất mạng) — khác hẳn "bộ này chưa soạn câu nào". */
+  const [loiDangTu, setLoiDangTu] = useState(false);
   const [daBao, setDaBao] = useState<Set<string>>(new Set());
   const [idx, setIdx] = useState(0);
   const [nhap, setNhap] = useState("");
@@ -118,7 +120,9 @@ export default function QuizRunner({
       .then((r) => {
         if (!huy) setDangTu(r.forms);
       })
-      .catch(() => {})
+      .catch(() => {
+        if (!huy) setLoiDangTu(true);
+      })
       .finally(() => {
         if (!huy) setTaiDangTu(false);
       });
@@ -331,9 +335,11 @@ export default function QuizRunner({
                   ? "Cần thẻ có câu ví dụ chứa chính từ đó"
                   : t.canDangTu && taiDangTu
                     ? "Đang tải bộ câu hỏi…"
-                    : t.canDangTu && dangTu.length === 0
-                      ? "Bộ này chưa có câu chọn dạng từ nào được soạn"
-                      : undefined;
+                    : t.canDangTu && loiDangTu
+                      ? "Không tải được bộ câu hỏi — kiểm tra lại mạng"
+                      : t.canDangTu && dangTu.length === 0
+                        ? "Bộ này chưa có câu chọn dạng từ nào được soạn"
+                        : undefined;
               return (
                 <button
                   key={t.id}
@@ -358,7 +364,9 @@ export default function QuizRunner({
                     (t.canDangTu
                       ? taiDangTu
                         ? " (đang tải…)"
-                        : " (chưa soạn)"
+                        : loiDangTu
+                          ? " (mất mạng)"
+                          : " (chưa soạn)"
                       : t.canViDu
                         ? " (chưa có ví dụ)"
                         : " (chưa đủ ảnh)")}

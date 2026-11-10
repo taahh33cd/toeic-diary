@@ -11,6 +11,7 @@ import DeckEditor from "@/components/vocab/DeckEditor";
 import ShareDeck from "@/components/vocab/ShareDeck";
 import QuizRunner from "@/components/vocab/QuizRunner";
 import { deleteDeck, getDeck, type DeckDetail } from "@/lib/vocab/client";
+import { docBoThe, luuBoThe, xoaBoThe } from "@/lib/vocab/offline-deck";
 import { playWord } from "@/lib/vocab/audio";
 
 type Man = "danhsach" | "hoc" | "hoc-den-han" | "sua" | "quiz";
@@ -22,12 +23,26 @@ export default function DeckDetailPage() {
   const [data, setData] = useState<DeckDetail | null>(null);
   const [loi, setLoi] = useState<string | null>(null);
   const [man, setMan] = useState<Man>("danhsach");
+  /** Thời điểm của bản lưu đang hiện; null = dữ liệu tươi từ server. */
+  const [banLuu, setBanLuu] = useState<number | null>(null);
 
   const load = useCallback(async () => {
     try {
-      setData(await getDeck(id));
+      const d = await getDeck(id);
+      setData(d);
+      setBanLuu(null);
       setLoi(null);
+      luuBoThe(id, d);
     } catch (e) {
+      // Mạng hỏng thì học tiếp bằng bản đã lưu, nhưng phải NÓI RÕ là bản cũ:
+      // tiến độ ở đây có thể lạc hậu so với lần học trên máy khác.
+      const cu = docBoThe(id);
+      if (cu) {
+        setData(cu.data);
+        setBanLuu(cu.luuLuc);
+        setLoi(null);
+        return;
+      }
       setLoi(e instanceof Error ? e.message : "Không tải được bộ thẻ");
     }
   }, [id]);
@@ -118,6 +133,8 @@ export default function DeckDetailPage() {
     if (!window.confirm(`Xoá bộ "${deck.title}"? Tiến độ ôn các từ vẫn được giữ.`)) return;
     try {
       await deleteDeck(deck.id);
+      // Không xoá bản lưu thì lần sau mất mạng bộ đã xoá lại hiện ra như thường
+      xoaBoThe(deck.id);
       window.dispatchEvent(new Event("decks:changed"));
       router.push("/journal/vocab");
     } catch (e) {
@@ -127,6 +144,18 @@ export default function DeckDetailPage() {
 
   return (
     <div className="space-y-4">
+      {banLuu !== null && (
+        <div
+          className="rounded-xl px-4 py-2.5 text-sm"
+          style={{ background: "rgba(196,98,45,.08)", border: "1px solid rgba(196,98,45,.25)", color: "var(--text-primary)" }}
+        >
+          Đang xem bản lưu trên máy ({new Date(banLuu).toLocaleString("vi-VN", {
+            day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit",
+          })}) vì không nối được mạng. Học tiếp được, kết quả sẽ gửi khi có mạng —
+          nhưng nếu bạn vừa học bộ này trên máy khác thì số liệu ở đây có thể cũ.
+        </div>
+      )}
+
       <PageHeading
         title={deck.title}
         note={`${deck.cardCount} thẻ · ${denHan.length} đến hạn · ${daThuoc} đã thuộc`}
