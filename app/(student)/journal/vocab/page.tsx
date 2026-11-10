@@ -9,6 +9,7 @@ import { quickAddWord, deleteWord, wordIsDue, type WordRow } from "@/lib/vocab/c
 import { recordVocabReview } from "@/lib/vocab/review-client";
 import { useLocale } from "@/hooks/useLocale";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
+import { useVocabQueue } from "@/hooks/useVocabQueue";
 import { MASTERY_THRESHOLD } from "@/lib/vocab/srs";
 import type { VocabWord } from "@/lib/firebase/types";
 
@@ -1749,6 +1750,9 @@ export default function VocabPage() {
   const [writeWords, setWriteWords] = useState<W[] | null>(null);
   const [inlineIdx, setInlineIdx] = useState(0);
   const [inlineFlipped, setInlineFlipped] = useState(false);
+  // Kết quả ôn bị kẹt lại vì mạng hỏng. Hook tự thử gửi khi vào trang và khi
+  // máy có mạng lại, nên thường băng này chỉ loé lên rồi biến mất.
+  const { cho: choGui, day: thuGuiLai } = useVocabQueue();
 
   const loading = profileLoading || vocabLoading;
 
@@ -1865,6 +1869,27 @@ export default function VocabPage() {
             </>
           }
         />
+
+        {choGui > 0 && (
+          <div
+            className="rounded-xl px-4 py-3 flex items-center gap-3 flex-wrap"
+            style={{ background: "rgba(196,98,45,.08)", border: "1px solid rgba(196,98,45,.25)" }}
+          >
+            <span className="text-sm flex-1" style={{ color: "var(--text-primary)" }}>
+              {t(
+                `${choGui} kết quả ôn chưa gửi được vì mạng trục trặc — đang giữ trên máy bạn.`,
+                `${choGui} review result(s) could not be sent — kept on your device.`
+              )}
+            </span>
+            <button
+              onClick={thuGuiLai}
+              className="px-3 py-1.5 rounded-lg text-xs font-bold"
+              style={{ background: "var(--accent-primary)", color: "#fff" }}
+            >
+              {t("Thử gửi lại", "Retry")}
+            </button>
+          </div>
+        )}
 
         {/* Quick Add Bar */}
         <QuickAddBar />

@@ -726,6 +726,10 @@ model VocabQuizSession {
   deck         VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
   assignmentId String?   @map("assignment_id")
 
+  /// Khoá do client sinh, chống ghi trùng khi hàng đợi offline gửi lại một lượt
+  /// mà nó không biết server đã nhận hay chưa. NULL = phiên cũ, không ràng buộc.
+  clientRef    String?   @unique @map("client_ref")
+
   /// Các dạng quiz học viên đã chọn, vd ["word-to-image","listen-to-typing"]
   modes        String[]
   /// "practice" = hiện đáp án ngay | "exam" = ẩn đến cuối (chưa dùng)

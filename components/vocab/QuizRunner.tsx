@@ -14,6 +14,7 @@ import {
 } from "@/lib/vocab/quiz";
 import { O_TRONG } from "@/lib/vocab/cloze";
 import { speedThresholdFor } from "@/lib/vocab/srs";
+import { guiHoacXepHang } from "@/lib/vocab/offline-queue";
 import { listWordForms, reportWordForm, type CardRow, type ProgressRow, type WordFormRow } from "@/lib/vocab/client";
 
 /**
@@ -92,6 +93,8 @@ export default function QuizRunner({
   const [xong, setXong] = useState(false);
   const [dangGui, setDangGui] = useState(false);
   const [loi, setLoi] = useState<string | null>(null);
+  /** Mạng hỏng nên kết quả đang nằm chờ, khác hẳn mất hẳn — phải nói khác. */
+  const [choGui, setChoGui] = useState(false);
   const [tomTat, setTomTat] = useState<{ correct: number; total: number; percent: number } | null>(null);
 
   const batDauCau = useRef(Date.now());
@@ -152,20 +155,24 @@ export default function QuizRunner({
       }
       setDangGui(true);
       try {
-        const res = await fetch("/api/flashcards/sessions", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            deckId,
-            modes,
-            runMode: thi ? "exam" : "practice",
-            durationMs: Date.now() - batDauPhien.current,
-            items: ds,
-          }),
+        // Mạng hỏng thì xếp hàng chứ đừng vứt: học viên vừa làm xong 18 câu,
+        // mất trắng vì 4G chập chờn là mất mát thật chứ không phải ca hiếm.
+        const { ket, daXepHang } = await guiHoacXepHang<{
+          correct?: number;
+          total?: number;
+          percent?: number;
+        }>("/api/flashcards/sessions", {
+          deckId,
+          modes,
+          runMode: thi ? "exam" : "practice",
+          durationMs: Date.now() - batDauPhien.current,
+          items: ds,
         });
-        const d = (await res.json()) as { correct?: number; total?: number; percent?: number; error?: string };
-        if (!res.ok) throw new Error(d.error ?? "Không lưu được kết quả");
-        setTomTat({ correct: d.correct ?? 0, total: d.total ?? ds.length, percent: d.percent ?? 0 });
+        if (daXepHang || !ket) {
+          setChoGui(true);
+          return;
+        }
+        setTomTat({ correct: ket.correct ?? 0, total: ket.total ?? ds.length, percent: ket.percent ?? 0 });
         window.dispatchEvent(new Event("vocab:reviewed"));
       } catch (e) {
         setLoi(e instanceof Error ? e.message : "Không lưu được kết quả");
@@ -451,6 +458,12 @@ export default function QuizRunner({
           </p>
         )}
         {dangGui && <p className="text-xs" style={{ color: "var(--text-muted)" }}>Đang lưu kết quả…</p>}
+        {choGui && (
+          <p className="text-xs px-3 py-2 rounded-lg" style={{ background: "rgba(74,124,89,.12)", color: GREEN }}>
+            Mạng đang trục trặc nên kết quả được giữ lại trên máy. Khi có mạng, mở lại
+            khu từ vựng là nó tự gửi — bạn không phải làm lại.
+          </p>
+        )}
         {loi && (
           <p className="text-xs px-3 py-2 rounded-lg" style={{ background: "rgba(185,64,64,.1)", color: RED }}>
             {loi} — kết quả lượt này CHƯA được lưu.

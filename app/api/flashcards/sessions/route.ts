@@ -22,6 +22,8 @@ const input = z.object({
   deckId: z.string().trim().min(1).max(80),
   modes: z.array(z.string().trim().max(40)).max(10),
   runMode: z.enum(["practice", "exam"]).optional(),
+  /** Khoá client sinh, chống ghi trùng khi hàng đợi offline gửi lại. */
+  clientRef: z.string().trim().min(8).max(64).optional(),
   durationMs: z.number().int().min(0).max(24 * 3600_000).optional(),
   items: z.array(item).min(1).max(500),
 });
@@ -62,6 +64,25 @@ export async function POST(req: NextRequest) {
     });
     if (!deck) return NextResponse.json({ error: "Không tìm thấy bộ thẻ" }, { status: 404 });
 
+    // Hàng đợi offline gửi lại khi không biết server đã nhận hay chưa. Ghi
+    // lại lần hai sẽ đẩy SRS của cả chục từ thừa một bậc, nên nhận ra lượt cũ
+    // và trả về đúng kết quả đã lưu, coi như thành công.
+    if (b.clientRef) {
+      const daCo = await prisma.vocabQuizSession.findUnique({
+        where: { clientRef: b.clientRef },
+        select: { id: true, total: true, correct: true },
+      });
+      if (daCo) {
+        return NextResponse.json({
+          sessionId: daCo.id,
+          total: daCo.total,
+          correct: daCo.correct,
+          percent: daCo.total ? Math.round((daCo.correct / daCo.total) * 100) : 0,
+          daGhiTruocDo: true,
+        });
+      }
+    }
+
     const sessionId = makeId("vs");
     const dung = b.items.filter((i) => i.correct).length;
 
@@ -70,6 +91,7 @@ export async function POST(req: NextRequest) {
         id: sessionId,
         userId: gate.userId,
         deckId: b.deckId,
+        clientRef: b.clientRef,
         modes: b.modes,
         runMode: b.runMode ?? "practice",
         total: b.items.length,
