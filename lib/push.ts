@@ -46,30 +46,56 @@ export async function isUserFrozen(userId: string): Promise<boolean> {
   }
 }
 
+/**
+ * Kết quả một lượt gửi. Trả về thay vì `void` để phía gọi ĐẾM ĐÚNG: trước đây
+ * hàm này return im lặng khi HV bị đóng băng hoặc không có thiết bị nào đăng ký,
+ * nên cron `homework-overdue` vẫn `notified++` và log báo 22 người nhận trong khi
+ * thực tế chỉ ~12. Log đẹp nên lỗi "HV không nhận được nhắc" bị che rất lâu.
+ */
+export type PushResult = {
+  /** Số thiết bị push đi thành công. */
+  sent: number;
+  /** Số thiết bị đã đăng ký (0 = HV chưa bật thông báo). */
+  subs: number;
+  /** Có lượt gửi nào đó thất bại (không phải vì sub chết). */
+  failed: number;
+  /** Vì sao không gửi gì: HV đóng băng, hoặc chưa có thiết bị nào. */
+  skipped?: "frozen" | "no-subs";
+};
+
 /** Send push to all subscriptions of a Supabase user (from Prisma). */
 export async function sendPushToUser(
   userId: string,
   payload: { title: string; body?: string; url?: string }
-): Promise<void> {
+): Promise<PushResult> {
   setupVapid();
-  if (await isUserFrozen(userId)) return;
+  if (await isUserFrozen(userId)) {
+    return { sent: 0, subs: 0, failed: 0, skipped: "frozen" };
+  }
 
   const subs = await prisma.pushSubscription.findMany({ where: { userId } });
-  if (subs.length === 0) return;
+  if (subs.length === 0) {
+    return { sent: 0, subs: 0, failed: 0, skipped: "no-subs" };
+  }
 
   const payloadStr = JSON.stringify({ url: "/journal", ...payload });
 
-  await Promise.all(
+  const outcomes = await Promise.all(
     subs.map((s) =>
       webpush
         .sendNotification(JSON.parse(s.subscription) as webpush.PushSubscription, payloadStr)
+        .then(() => true)
         .catch(async (err: { statusCode?: number; body?: string }) => {
           if (isDeadSubscription(err)) {
             await prisma.pushSubscription.delete({ where: { id: s.id } }).catch(() => {});
           }
+          return false;
         })
     )
   );
+
+  const sent = outcomes.filter(Boolean).length;
+  return { sent, subs: subs.length, failed: outcomes.length - sent };
 }
 
 /** Send push to all admin device subscriptions stored in RTDB adminSubs/. */

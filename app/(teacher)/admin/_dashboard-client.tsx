@@ -9,7 +9,7 @@ import { useClassAttendance } from "@/hooks/firebase/useClassAttendance";
 import { useAllSubmissions } from "@/hooks/firebase/useAllSubmissions";
 import { useAllDayLinks } from "@/hooks/firebase/useAllDayLinks";
 import { setAttendance, createStudent, isBookingActive } from "@/lib/firebase/helpers";
-import { recentOverdueHomework } from "@/lib/journal/homework";
+import { overdueHomework, shiftDay } from "@/lib/journal/homework";
 import type { SchoolClass, AttendanceStatus, Student, Homework, HwItem, SubmissionsMap, DayLinksMap, Booking } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -216,7 +216,9 @@ function YesterdayIncompleteCard({
 }
 
 // ─── OverdueRemindCard ───────────────────────────────────────────────────────
-// Học viên đang học còn bài quá hạn trong 7 ngày gần nhất: tick rồi bấm gửi.
+// Học viên đang học còn bài tập quá hạn: tick rồi bấm gửi. Mốc 7 ngày chỉ dùng
+// để CHIA NHÓM hiển thị — server nhắc theo quá hạn bất kỳ tuổi nào, giống cron,
+// nên tick một HV ở nhóm "cũ hơn 7 ngày" rồi gửi vẫn tới.
 // Nhắc đi qua /api/admin/homework-remind (chuông in-app + web push).
 //
 // Dấu "đã nhắc" lấy từ `students/{code}/lastHwReminderAt` trên RTDB — do API ghi
@@ -247,6 +249,8 @@ type OverdueRow = {
   /** Tiến độ gộp của riêng các buổi quá hạn. */
   done: number;
   total: number;
+  /** Có buổi quá hạn trong 7 ngày → vào danh sách chính; không thì vào nhóm cũ. */
+  withinWindow: boolean;
   /** Tên buổi (hoặc deadline nếu buổi không có tên) để thầy biết bài nào. */
   labels: string[];
   remindedAt: number | null;
@@ -273,6 +277,22 @@ function OverdueRemindCard({
   const [failedCodes, setFailedCodes] = useState<Set<string>>(new Set());
   const [result, setResult] = useState<string | null>(null);
   const [showReminded, setShowReminded] = useState(false);
+  const [showStale, setShowStale] = useState(false);
+  const [coverage, setCoverage] = useState<Record<string, number> | null>(null);
+
+  // Ai chưa bật thông báo thì nhắc bằng push là vô ích — phải gọi/nhắn tay.
+  useEffect(() => {
+    let alive = true;
+    fetch("/api/admin/push-coverage")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: { coverage?: Record<string, number> } | null) => {
+        if (alive && d?.coverage) setCoverage(d.coverage);
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, []);
 
   // Dòng kết quả tự biến mất để không nằm đó gây hiểu nhầm cho lượt gửi sau.
   useEffect(() => {
@@ -282,6 +302,7 @@ function OverdueRemindCard({
   }, [result]);
 
   const rows = useMemo<OverdueRow[]>(() => {
+    const windowStart = shiftDay(today, -OVERDUE_WINDOW_DAYS);
     const out: OverdueRow[] = [];
     for (const student of students) {
       if (student.frozen) continue;
@@ -290,13 +311,12 @@ function OverdueRemindCard({
         ? hwRaw
         : Object.values((hwRaw ?? {}) as Record<string, Homework>);
       const subs = allSubmissions[student.id] ?? {};
-      const overdue = recentOverdueHomework(
+      const overdue = overdueHomework(
         hwList,
         subs,
         allDayLinks[student.id] ?? {},
-        today,
-        OVERDUE_WINDOW_DAYS
-      );
+        today
+      ).filter((hw) => calcHwProgress(hw, subs, allDayLinks[student.id] ?? {}).total > 0);
       if (overdue.length === 0) continue;
 
       let done = 0;
@@ -315,10 +335,12 @@ function OverdueRemindCard({
         : NaN;
       const remindedAt = Number.isFinite(remindedRaw) ? remindedRaw : null;
 
+      const newest = sorted[sorted.length - 1].endDate ?? sorted[sorted.length - 1].date;
       out.push({
         student,
         count: overdue.length,
         oldest: sorted[0].endDate ?? sorted[0].date,
+        withinWindow: newest >= windowStart,
         done,
         total,
         labels: sorted.map((hw) => hw.title?.trim() || (hw.endDate ?? hw.date)),
@@ -329,7 +351,8 @@ function OverdueRemindCard({
     return out.sort((a, b) => a.oldest.localeCompare(b.oldest));
   }, [students, allSubmissions, allDayLinks, today]);
 
-  const pending = useMemo(() => rows.filter((r) => !r.cooling), [rows]);
+  const pending = useMemo(() => rows.filter((r) => !r.cooling && r.withinWindow), [rows]);
+  const stale = useMemo(() => rows.filter((r) => !r.cooling && !r.withinWindow), [rows]);
   const reminded = useMemo(() => rows.filter((r) => r.cooling), [rows]);
 
   // Bỏ qua tick của HV đã rời danh sách chính (vừa được nhắc, hoặc đã nộp xong).
@@ -375,13 +398,15 @@ function OverdueRemindCard({
         return;
       }
       const by = (s: string) => data.results?.filter((r) => r.status === s) ?? [];
-      const failed = [...by("error"), ...by("no-profile")].map((r) => r.studentCode);
+      const failed = by("error").map((r) => r.studentCode);
       if (failed.length > 0) setFailedCodes((prev) => new Set([...prev, ...failed]));
 
       const parts = [`Đã nhắc ${data.sent ?? 0} HV`];
       const clear = by("clear").length;
       const noAcct = by("no-profile").length;
+      const noSubs = by("no-subs").length;
       const errored = by("error").length;
+      if (noSubs > 0) parts.push(`${noSubs} HV chưa bật thông báo (chỉ vào chuông)`);
       if (clear > 0) parts.push(`${clear} HV đã nộp xong nên bỏ qua`);
       if (noAcct > 0) parts.push(`${noAcct} HV chưa có tài khoản (chỉ vào chuông)`);
       if (errored > 0) parts.push(`${errored} HV lỗi, thử lại`);
@@ -461,6 +486,15 @@ function OverdueRemindCard({
                 }}
               >
                 đã nhắc {timeAgoVi(row.remindedAt)}
+              </span>
+            )}
+            {coverage !== null && coverage[code] === 0 && (
+              <span
+                className="text-xs font-semibold px-2 py-0.5 rounded-full"
+                style={{ background: "rgba(107,114,128,0.15)", color: "#4b5563" }}
+                title="Học viên chưa bật thông báo trên thiết bị nào — push không tới, chỉ thấy chuông khi mở web"
+              >
+                chưa bật thông báo
               </span>
             )}
             {failed && (
@@ -561,9 +595,42 @@ function OverdueRemindCard({
           {pending.map(renderRow)}
         </div>
       ) : (
-        <p className="px-6 py-5 text-sm text-center" style={{ color: "rgb(22,163,74)" }}>
-          Đã nhắc hết {reminded.length} HV còn quá hạn trong 24h qua 👍
+        <p className="px-6 py-5 text-sm text-center" style={{ color: "var(--text-muted)" }}>
+          Không còn HV nào quá hạn trong 7 ngày cần nhắc
+          {reminded.length > 0 ? ` · đã nhắc ${reminded.length} HV trong 24h qua` : ""}
+          {stale.length > 0 ? ` · ${stale.length} HV quá hạn cũ hơn 7 ngày ở dưới` : ""}
         </p>
+      )}
+
+      {stale.length > 0 && (
+        <div className="border-t" style={divider}>
+          <button
+            type="button"
+            onClick={() => setShowStale((v) => !v)}
+            className="w-full flex items-center justify-between gap-2 px-6 py-3 text-left transition-colors hover:bg-[rgba(0,0,0,0.02)]"
+            aria-expanded={showStale}
+          >
+            <span className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>
+              Quá hạn cũ hơn 7 ngày ({stale.length}) · cron vẫn nhắc họ 2 lượt/ngày
+            </span>
+            <span
+              className="material-symbols-outlined text-[18px]"
+              style={{
+                color: "var(--text-muted)",
+                fontVariationSettings: "'wght' 300",
+                transform: showStale ? "rotate(180deg)" : "none",
+                transition: "transform 0.2s ease",
+              }}
+            >
+              expand_more
+            </span>
+          </button>
+          {showStale && (
+            <div className="divide-y border-t" style={divider}>
+              {stale.map(renderRow)}
+            </div>
+          )}
+        </div>
       )}
 
       {reminded.length > 0 && (

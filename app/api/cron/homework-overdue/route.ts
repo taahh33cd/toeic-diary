@@ -47,7 +47,14 @@ export async function GET(request: NextRequest) {
   if (students.length === 0) return NextResponse.json({ ok: true, notified: 0 });
 
   const db = getAdminDb();
-  let notified = 0;
+  // Đếm tách bạch: trước đây chỉ có `notified++` sau sendPushToUser, mà hàm đó
+  // return im lặng khi HV đóng băng / chưa có thiết bị → log báo 22 "notified"
+  // trong khi chỉ ~12 người nhận thật. Giờ log nói đúng từng nhóm.
+  let candidates = 0; // HV còn bài quá hạn (đã ghi mục chuông)
+  let pushed = 0; // HV có ÍT NHẤT 1 thiết bị nhận được
+  let noSubs = 0; // HV chưa bật thông báo → chỉ thấy chuông khi mở web
+  let frozen = 0; // HV đóng băng → không nhận push nào
+  let failed = 0; // HV có sub nhưng mọi thiết bị đều lỗi
 
   await Promise.allSettled(
     students.map(async (student) => {
@@ -84,10 +91,31 @@ export async function GET(request: NextRequest) {
       const title = "📌 Bài tập quá hạn cần hoàn thành";
 
       await bellRef.set({ type: "homework", title, body, read: false, createdAt: new Date().toISOString() });
-      await sendPushToUser(student.id, { title, body, url: "/journal/progress" });
-      notified++;
+      candidates++;
+
+      const r = await sendPushToUser(student.id, { title, body, url: "/journal/progress" });
+      if (r.skipped === "frozen") frozen++;
+      else if (r.skipped === "no-subs") noSubs++;
+      else if (r.sent > 0) pushed++;
+      else failed++;
     })
   );
 
-  return NextResponse.json({ ok: true, notified });
+  if (noSubs > 0 || failed > 0) {
+    console.warn(
+      `[homework-overdue] ${candidates} HV quá hạn: ${pushed} nhận được push, ` +
+        `${noSubs} chưa bật thông báo, ${frozen} đóng băng, ${failed} gửi lỗi`
+    );
+  }
+
+  return NextResponse.json({
+    ok: true,
+    candidates,
+    pushed,
+    noSubs,
+    frozen,
+    failed,
+    /** Giữ lại cho tương thích log cũ, nhưng nay là số nhận THẬT. */
+    notified: pushed,
+  });
 }

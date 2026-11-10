@@ -3,13 +3,17 @@ import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { getAdminDb } from "@/lib/firebase/admin";
 import { sendPushToUser } from "@/lib/push";
-import { recentOverdueHomework } from "@/lib/journal/homework";
+import { overdueHomework } from "@/lib/journal/homework";
 import type { Homework, SubmissionsMap, DayLinksMap } from "@/lib/firebase/types";
 
 export const runtime = "nodejs";
 
-/** Chỉ nhắc bài quá hạn trong 7 ngày gần nhất — khớp danh sách trên dashboard. */
-const WINDOW_DAYS = 7;
+/**
+ * Đếm bài quá hạn ở ĐÂY dùng cùng định nghĩa với cron: quá hạn bất kỳ tuổi nào.
+ * Mốc 7 ngày chỉ là cách THẺ dashboard chia nhóm để hiển thị, không phải luật
+ * chặn gửi — trước đây server lọc 7 ngày nên thầy tick một HV ở nhóm "quá hạn cũ
+ * hơn 7 ngày" rồi bấm gửi thì server trả "clear" và không gửi gì, trông như hỏng.
+ */
 
 /** Khoá chuông cố định, dùng chung với cron homework-overdue nên không spam
  *  chuông: bấm nhiều lần chỉ làm mới một mục, học viên làm xong thì cron xoá. */
@@ -18,10 +22,12 @@ const BELL_KEY = "reminder_homework_overdue";
 type Result = {
   studentCode: string;
   /** "sent" đã gửi · "clear" không còn bài quá hạn · "no-profile" chưa có tài khoản · "error" */
-  status: "sent" | "clear" | "no-profile" | "error";
+  status: "sent" | "clear" | "no-profile" | "no-subs" | "error";
   overdue: number;
   /** Mốc đã ghi vào students/{code}/lastHwReminderAt (ISO). */
   sentAt?: string;
+  /** Số thiết bị nhận được push. */
+  sent?: number;
 };
 
 /**
@@ -71,7 +77,7 @@ export async function POST(request: NextRequest) {
         const submissions = (subSnap.val() as SubmissionsMap) ?? {};
         const dayLinks = (dlSnap.val() as DayLinksMap) ?? {};
 
-        const overdue = recentOverdueHomework(list, submissions, dayLinks, today, WINDOW_DAYS);
+        const overdue = overdueHomework(list, submissions, dayLinks, today);
         if (overdue.length === 0) return { studentCode: code, status: "clear", overdue: 0 };
 
         const title = "📌 Bài tập quá hạn cần hoàn thành";
@@ -98,8 +104,11 @@ export async function POST(request: NextRequest) {
           return { studentCode: code, status: "no-profile", overdue: overdue.length, sentAt };
         }
 
-        await sendPushToUser(profile.id, { title, body, url: "/journal/progress" });
-        return { studentCode: code, status: "sent", overdue: overdue.length, sentAt };
+        const r = await sendPushToUser(profile.id, { title, body, url: "/journal/progress" });
+        // "no-subs": HV chưa bật thông báo trên thiết bị nào — mục chuông đã vào
+        // nhưng họ chỉ thấy khi tự mở web, nhắc bằng push là vô ích.
+        const status: Result["status"] = r.skipped === "no-subs" ? "no-subs" : "sent";
+        return { studentCode: code, status, overdue: overdue.length, sentAt, sent: r.sent };
       } catch (e) {
         console.error(`[homework-remind] ${code} failed:`, e);
         return { studentCode: code, status: "error", overdue: 0 };
@@ -110,6 +119,7 @@ export async function POST(request: NextRequest) {
   return NextResponse.json({
     ok: true,
     sent: settled.filter((r) => r.status === "sent").length,
+    noSubs: settled.filter((r) => r.status === "no-subs").length,
     results: settled,
   });
 }
