@@ -1,6 +1,16 @@
 import Link from "next/link";
 import type { Skill, SkillUnit } from "@/lib/skills/structure";
 import type { ListeningPart, PracticeCatalogEntry } from "@/lib/listening-practice/types";
+import type { TestStat } from "@/lib/journal/attempts";
+
+/** Màu dòng điểm theo tỷ lệ đúng lần gần nhất. */
+function scoreColor(stat: TestStat): string {
+  if (stat.latestCorrect === null || !stat.latestGradable) return "var(--text-muted)";
+  const p = stat.latestCorrect / stat.latestGradable;
+  if (p >= 0.8) return "#15803d";
+  if (p >= 0.5) return "#a16207";
+  return "#b91c1c";
+}
 
 export function PracticeTestList({
   skill,
@@ -9,6 +19,7 @@ export function PracticeTestList({
   tests,
   unlocked,
   freeTests,
+  stats,
 }: {
   skill: Skill;
   unit: SkillUnit;
@@ -18,6 +29,8 @@ export function PracticeTestList({
   unlocked: boolean;
   /** Số đề mở cho mọi tài khoản */
   freeTests: number[];
+  /** Lịch sử của học viên theo số đề — rỗng khi chưa đăng nhập */
+  stats?: Map<number, TestStat>;
 }) {
   return (
     <div
@@ -82,6 +95,7 @@ export function PracticeTestList({
             textDecoration: "none",
             color: "var(--text-primary)",
           };
+          const stat = stats?.get(t.testNumber);
           const body = (
             <>
               <span style={{ display: "block", fontSize: "0.95rem", fontWeight: 700 }}>
@@ -91,6 +105,21 @@ export function PracticeTestList({
                 {locked ? "Cần đăng ký khoá" : `${part === 1 ? t.part1 : t.part2} câu`}
                 {!locked && missing > 0 ? ` · ${missing} câu thiếu audio` : ""}
               </span>
+
+              {/* Kết quả của chính học viên: lần gần nhất, số lần, bài còn dở */}
+              {!locked && stat && stat.attempts > 0 && (
+                <span style={{ display: "block", fontSize: "0.72rem", marginTop: 5, fontWeight: 600, color: scoreColor(stat) }}>
+                  Lần gần nhất {stat.latestCorrect}/{stat.latestGradable}
+                  <span style={{ fontWeight: 500, color: "var(--text-muted)" }}>
+                    {" · "}{stat.attempts} lần
+                  </span>
+                </span>
+              )}
+              {!locked && stat?.unfinished && (
+                <span style={{ display: "block", fontSize: "0.72rem", marginTop: 3, fontWeight: 600, color: "var(--accent-primary)" }}>
+                  ⏸ Đang làm dở — làm tiếp
+                </span>
+              )}
             </>
           );
 

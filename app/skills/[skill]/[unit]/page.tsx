@@ -26,6 +26,7 @@ import { MockTestList } from "@/components/skills/exam/MockTestList";
 import { listSpeakingMocks, SPEAKING_MOCK_FREE } from "@/lib/skills/speaking-mock";
 import { listWritingMocks, WRITING_MOCK_FREE } from "@/lib/skills/writing-mock";
 import { FAMILY } from "@/lib/skills/exam-theme";
+import { loadPartTestStats } from "@/lib/journal/attempts";
 
 type Props = { params: Promise<{ skill: string; unit: string }> };
 
@@ -94,14 +95,21 @@ export default async function SkillUnitPage({ params }: Props) {
           .catch(() => null)
       : null;
 
+    const part = unit === "part1" ? 1 : 2;
+    // Điểm lần gần nhất của chính học viên, hiện ngay trên thẻ đề.
+    const stats = user
+      ? await loadPartTestStats(user.id, skill, part).catch(() => undefined)
+      : undefined;
+
     return (
       <PracticeTestList
         skill={found.skill}
         unit={found.unit}
-        part={unit === "part1" ? 1 : 2}
+        part={part}
         tests={listPracticeTests()}
         unlocked={isUsageExempt(profile)}
         freeTests={FREE_PRACTICE_TESTS}
+        stats={stats}
       />
     );
   }

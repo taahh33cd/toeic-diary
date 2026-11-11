@@ -143,6 +143,132 @@ export async function loadAttemptHistory(userId: string): Promise<AttemptItem[]>
   return items.sort((x, y) => y.at.getTime() - x.at.getTime());
 }
 
+// ── Tổng hợp theo học viên, cho màn giáo viên ────────────────────────────────
+
+export interface StudentAttemptSummary {
+  userId: string;
+  displayName: string | null;
+  studentCode: string | null;
+  /** Số lượt đã nộp (cả bài lẻ và trọn đề) */
+  attempts: number;
+  correct: number;
+  gradable: number;
+  /** Nộp lần cuối lúc nào */
+  last: Date | null;
+}
+
+/**
+ * Mỗi học viên một dòng: số lượt, tổng câu đúng/câu chấm được, lần nộp cuối.
+ * Chỉ gọi từ khu admin — không lọc theo người đang đăng nhập.
+ */
+export async function loadStudentAttemptSummaries(): Promise<StudentAttemptSummary[]> {
+  const [parts, fulls] = await Promise.all([
+    prisma.partPracticeAttempt.groupBy({
+      by: ["userId"],
+      where: { status: "done" },
+      _count: { _all: true },
+      _sum: { correct: true, gradable: true },
+      _max: { completedAt: true },
+    }),
+    prisma.fullTestAttempt.groupBy({
+      by: ["userId"],
+      where: { status: "done" },
+      _count: { _all: true },
+      _sum: { correct: true, gradable: true },
+      _max: { completedAt: true },
+    }),
+  ]);
+
+  const byUser = new Map<string, StudentAttemptSummary>();
+  for (const g of [...parts, ...fulls]) {
+    const cur = byUser.get(g.userId) ?? {
+      userId: g.userId, displayName: null, studentCode: null,
+      attempts: 0, correct: 0, gradable: 0, last: null,
+    };
+    cur.attempts += g._count._all;
+    cur.correct += g._sum.correct ?? 0;
+    cur.gradable += g._sum.gradable ?? 0;
+    const at = g._max.completedAt;
+    if (at && (!cur.last || at > cur.last)) cur.last = at;
+    byUser.set(g.userId, cur);
+  }
+
+  if (byUser.size === 0) return [];
+
+  const profiles = await prisma.profile.findMany({
+    where: { id: { in: [...byUser.keys()] } },
+    select: { id: true, displayName: true, studentCode: true },
+  });
+  for (const p of profiles) {
+    const row = byUser.get(p.id);
+    if (row) {
+      row.displayName = p.displayName;
+      row.studentCode = p.studentCode;
+    }
+  }
+
+  // Ai nộp gần đây nhất lên trên — giáo viên mở màn này là để xem ai vừa làm.
+  return [...byUser.values()].sort(
+    (a, b) => (b.last?.getTime() ?? 0) - (a.last?.getTime() ?? 0),
+  );
+}
+
+// ── Thống kê theo đề, cho thẻ đề ở khu Luyện đề ──────────────────────────────
+
+export interface TestStat {
+  /** Số lượt đã nộp */
+  attempts: number;
+  /** Điểm lần gần nhất — cố ý lấy lần gần nhất, không phải lần cao nhất */
+  latestCorrect: number | null;
+  latestGradable: number | null;
+  /** Còn một lượt dở dang (đã trả lời ít nhất 1 câu) */
+  unfinished: boolean;
+}
+
+/**
+ * Thống kê từng đề của một part, khoá theo số đề (1..9).
+ * Dùng cho danh sách đề ở /skills/listening/partN.
+ */
+export async function loadPartTestStats(
+  userId: string,
+  skill: string,
+  part: number,
+): Promise<Map<number, TestStat>> {
+  const rows = await prisma.partPracticeAttempt.findMany({
+    where: { userId, skill, part },
+    orderBy: { updatedAt: "desc" },
+    select: {
+      testSlug: true, status: true, correct: true, gradable: true,
+      answers: true, completedAt: true,
+    },
+  });
+
+  const out = new Map<number, TestStat>();
+  // Đã sắp mới nhất trước ⇒ lượt "done" gặp đầu tiên của mỗi đề là lần gần nhất.
+  for (const r of rows) {
+    const parsed = parsePracticeAttemptSlug(r.testSlug);
+    if (!parsed) continue;
+
+    let s = out.get(parsed.testNumber);
+    if (!s) {
+      s = { attempts: 0, latestCorrect: null, latestGradable: null, unfinished: false };
+      out.set(parsed.testNumber, s);
+    }
+
+    if (r.status === "done") {
+      s.attempts += 1;
+      if (s.latestCorrect === null) {
+        s.latestCorrect = r.correct;
+        s.latestGradable = r.gradable;
+      }
+    } else if (countAnswers(r.answers) > 0) {
+      s.unfinished = true;
+    }
+  }
+
+  return out;
+}
+
 // ── Xem lại một lượt ─────────────────────────────────────────────────────────
 
 /** Đáp án lưu dạng { "12": "B" } → khoá số để ReviewPanel dùng được. */
