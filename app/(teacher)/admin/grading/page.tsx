@@ -12,6 +12,7 @@ type Row = {
   band: number | null;
   submittedAt: string | null;
   gradedAt: string | null;
+  byAi: boolean;
   profile: { id: string; displayName: string | null; studentCode: string | null } | null;
 };
 
@@ -73,7 +74,7 @@ function groupByDay(rows: Row[]) {
 }
 
 export default function GradingPage() {
-  const [tab, setTab] = useState<"submitted" | "graded">("submitted");
+  const [tab, setTab] = useState<"submitted" | "ai" | "graded">("submitted");
   const [order, setOrder] = useState<Order>("asc");
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(true);
@@ -116,7 +117,7 @@ export default function GradingPage() {
       </div>
 
       <div className="flex gap-1 border-b items-end" style={{ borderColor: "var(--border)" }}>
-        {([["submitted", "Chờ chấm"], ["graded", "Đã chấm"]] as const).map(([key, label]) => (
+        {([["submitted", "Chờ chấm"], ["ai", "AI đã chấm"], ["graded", "Thầy đã chấm"]] as const).map(([key, label]) => (
           <button
             key={key}
             onClick={() => setTab(key)}
@@ -164,7 +165,11 @@ export default function GradingPage() {
         </div>
       ) : rows.length === 0 ? (
         <p className="text-sm py-8 text-center" style={{ color: "var(--text-muted)" }}>
-          {tab === "submitted" ? "Không có bài nào chờ chấm." : "Chưa chấm bài nào."}
+          {tab === "submitted"
+            ? "Không có bài nào chờ chấm."
+            : tab === "ai"
+              ? "AI chưa chấm bài nào."
+              : "Chưa chấm bài nào."}
         </p>
       ) : (
         <div className="flex flex-col gap-5">
@@ -190,13 +195,17 @@ export default function GradingPage() {
                           {studentLabel(r.profile)}
                         </span>
                         <span className="block text-xs mt-0.5 truncate" style={{ color: "var(--text-muted)" }}>
+                          {/* Bài chờ chấm mà đã có nhận xét AI = học viên xin thầy chấm lại. */}
+                          {r.status === "submitted" && r.byAi && (
+                            <span className="font-bold" style={{ color: "#b45309" }}>xin chấm lại · </span>
+                          )}
                           {r.title} · nộp {fmtClock(r.submittedAt)}
                           {r.status === "graded" && ` · chấm ${fmtFull(r.gradedAt)}`}
                           {r.band !== null && ` · ~${r.band}/200`}
                         </span>
                       </span>
                       <span className="text-xs font-semibold shrink-0" style={{ color: "var(--accent-primary)" }}>
-                        {r.status === "graded" ? "Sửa nhận xét →" : "Chấm →"}
+                        {tab === "ai" ? "Soát lại →" : r.status === "graded" ? "Sửa nhận xét →" : "Chấm →"}
                       </span>
                     </Link>
                   </li>

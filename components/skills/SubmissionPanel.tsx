@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { EXAM } from "@/lib/skills/exam-theme";
-import type { SubmissionItem } from "@/lib/submissions";
+import { isAiGradable, type SubmissionItem } from "@/lib/submissions";
 
 type Variant = "app" | "exam";
 
@@ -48,6 +48,27 @@ export function SubmissionPanel({ skill, unit, testKey, title, buildItems, canSu
   const [savedAt, setSavedAt] = useState<number | null>(null);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  /** "running" = AI đang chấm; "done" = đã có nhận xét; "failed" = bài nằm chờ giáo viên. */
+  const [ai, setAi] = useState<"running" | "done" | "failed" | null>(null);
+  const [aiNote, setAiNote] = useState<string | null>(null);
+  const aiGrades = isAiGradable(skill, unit);
+
+  /**
+   * Gọi AI chấm ngay sau khi gửi. Thất bại không phải lỗi của học viên: bài đã
+   * nằm trong danh sách chờ của giáo viên rồi, nên chỉ ghi một dòng giải thích.
+   */
+  async function runAi(submissionId: string) {
+    setAi("running");
+    try {
+      const res = await fetch(`/api/submissions/${submissionId}/grade`, { method: "POST" });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data?.error ?? `Lỗi ${res.status}`);
+      setAi("done");
+    } catch (e) {
+      setAiNote(e instanceof Error ? e.message : "AI chưa chấm được bài này");
+      setAi("failed");
+    }
+  }
 
   async function post(submit: boolean) {
     setBusy(submit ? "submit" : "save");
@@ -61,9 +82,12 @@ export function SubmissionPanel({ skill, unit, testKey, title, buildItems, canSu
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data?.error ?? `Lỗi ${res.status}`);
-      setId(data.submission?.id ?? id);
-      if (submit) setSent(true);
-      else setSavedAt(Date.now());
+      const newId: string | null = data.submission?.id ?? id;
+      setId(newId);
+      if (submit) {
+        setSent(true);
+        if (aiGrades && newId) void runAi(newId);
+      } else setSavedAt(Date.now());
     } catch (e) {
       setError(e instanceof Error ? e.message : "Không lưu được, thử lại nhé");
     } finally {
@@ -72,11 +96,38 @@ export function SubmissionPanel({ skill, unit, testKey, title, buildItems, canSu
   }
 
   if (sent) {
+    const box = { border: `1px solid ${t.border}`, borderRadius: 10, background: t.bg, padding: "12px 14px", textAlign: "center" as const };
+    const head = { margin: 0, fontSize: "0.88rem", fontWeight: 700, color: t.ink };
+    const sub = { margin: "5px 0 0", fontSize: "0.8rem", color: t.muted };
+
+    if (ai === "running") {
+      return (
+        <div style={box}>
+          <p style={head}>Đã gửi ✓ — AI đang chấm…</p>
+          <p style={sub}>Khoảng 10–20 giây, bạn đợi ở đây nhé.</p>
+        </div>
+      );
+    }
+
+    if (ai === "done") {
+      return (
+        <div style={box}>
+          <p style={head}>AI đã chấm xong ✓</p>
+          <p style={sub}>
+            Điểm AI ước tính, không thay điểm thi chính thức — giáo viên vẫn soát lại.{" "}
+            <Link href={id ? `/journal/submissions/${id}` : "/journal/submissions"} style={{ color: t.accent, fontWeight: 600 }}>
+              Xem nhận xét →
+            </Link>
+          </p>
+        </div>
+      );
+    }
+
     return (
-      <div style={{ border: `1px solid ${t.border}`, borderRadius: 10, background: t.bg, padding: "12px 14px", textAlign: "center" }}>
-        <p style={{ margin: 0, fontSize: "0.88rem", fontWeight: 700, color: t.ink }}>Đã gửi giáo viên chấm ✓</p>
-        <p style={{ margin: "5px 0 0", fontSize: "0.8rem", color: t.muted }}>
-          Có nhận xét bạn sẽ nhận được thông báo.{" "}
+      <div style={box}>
+        <p style={head}>Đã gửi giáo viên chấm ✓</p>
+        <p style={sub}>
+          {aiNote ? `${aiNote} ` : "Có nhận xét bạn sẽ nhận được thông báo. "}
           <Link href="/journal/submissions" style={{ color: t.accent, fontWeight: 600 }}>Xem trong sổ tay →</Link>
         </p>
       </div>

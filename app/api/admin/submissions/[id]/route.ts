@@ -88,6 +88,10 @@ export async function POST(req: Request, { params }: Ctx) {
       }
 
       const feedback = mergeAnnotationReplies(incoming, sanitizeFeedback(existing.feedback));
+      // Thầy bấm gửi là bản này thành bản của thầy, kể cả khi nó bắt đầu từ bản
+      // AI nạp sẵn — nếu không, bài vẫn mang nhãn "AI chấm" ở sổ tay học viên
+      // và vẫn nằm ở tab AI của trang chấm.
+      feedback.by = "teacher";
 
       const submission = await tx.skillSubmission.update({
         where: { id },

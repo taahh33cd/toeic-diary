@@ -117,6 +117,13 @@ export interface SubmissionFeedback {
   /** Giáo viên ghi âm nhận xét — URL Cloudinary. */
   audioUrl?: string;
   audioPublicId?: string;
+  /**
+   * Ai chấm bản này. Vắng mặt = giáo viên (mọi bài chấm trước khi có AI).
+   * Thầy mở bài AI ra sửa rồi bấm gửi thì thành "teacher" — nhờ vậy trang chấm
+   * tách được tab "AI đã chấm" và sổ tay biết khi nào phải hiện nhãn ước tính,
+   * mà không cần thêm cột nào vào DB.
+   */
+  by?: "ai" | "teacher";
 }
 
 /**
@@ -310,7 +317,27 @@ export function sanitizeFeedback(raw: unknown): SubmissionFeedback {
     overall: str(o.overall, MAX_COMMENT_LEN),
     audioUrl: cloudinaryUrl(o.audioUrl),
     audioPublicId: str(o.audioPublicId, 300),
+    by: o.by === "ai" ? "ai" : o.by === "teacher" ? "teacher" : undefined,
   };
+}
+
+/**
+ * Part đã có AI chấm. Client đọc để biết sau khi gửi có đợi AI hay không;
+ * engine (lib/ai/grade) đọc để định tuyến. Khoá là unit GỐC của /skills.
+ */
+export const AI_GRADABLE_UNITS: Record<string, string[]> = {
+  writing: ["q6-7"],
+  speaking: [],
+};
+
+/**
+ * Bài này có được AI chấm không.
+ * Chỉ áp dụng cho khu /skills: unit của subskill (tiền tố `subskill-`) vẫn do
+ * giáo viên chấm, nên phải xét unit thô trước khi quy về unit gốc.
+ */
+export function isAiGradable(skill: string, unit: string): boolean {
+  if (unit.startsWith("subskill-")) return false;
+  return (AI_GRADABLE_UNITS[skill] ?? []).includes(baseUnit(skill, unit));
 }
 
 /** Bản nộp có nội dung thật hay không — chặn gửi bài rỗng đi chấm. */

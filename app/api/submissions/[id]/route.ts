@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
+import { notifyAdmins } from "@/lib/push";
 import { sanitizeFeedback, type AnnotationReply } from "@/lib/submissions";
 
 type Ctx = { params: Promise<{ id: string }> };
@@ -81,6 +82,52 @@ export async function POST(req: Request, { params }: Ctx) {
     return NextResponse.json({ error: result.error }, { status: result.status });
   }
   return NextResponse.json({ reply });
+}
+
+/**
+ * PATCH — học viên xin giáo viên chấm lại bài AI đã chấm.
+ *
+ * Đưa bài về "submitted" nhưng GIỮ nguyên `feedback`: nhận xét của AI vẫn còn
+ * để học viên đọc trong lúc chờ, và trang chấm nạp sẵn nó cho giáo viên sửa.
+ */
+export async function PATCH(req: Request, { params }: Ctx) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  const { id } = await params;
+  const body = (await req.json().catch(() => ({}))) as { action?: string };
+  if (body.action !== "regrade") {
+    return NextResponse.json({ error: "Thao tác không hợp lệ" }, { status: 400 });
+  }
+
+  const submission = await prisma.skillSubmission.findFirst({
+    where: { id, userId: user.id },
+    select: { status: true, feedback: true, title: true },
+  });
+  if (!submission) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  if (submission.status !== "graded" || sanitizeFeedback(submission.feedback).by !== "ai") {
+    return NextResponse.json({ error: "Bài này đang do giáo viên chấm rồi" }, { status: 409 });
+  }
+
+  await prisma.skillSubmission.update({
+    where: { id },
+    data: { status: "submitted", gradedAt: null },
+  });
+
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("display_name, student_code")
+    .eq("id", user.id)
+    .single<{ display_name: string | null; student_code: string | null }>();
+
+  await notifyAdmins({
+    title: "Học viên xin chấm lại",
+    body: `${profile?.student_code ?? profile?.display_name ?? "Học viên"} xin chấm lại ${submission.title}`,
+    url: `/admin/grading/${id}`,
+  }).catch(() => {});
+
+  return NextResponse.json({ ok: true });
 }
 
 /** Xoá bài nháp. Bài đã gửi thì giữ lại để giáo viên còn chấm. */
