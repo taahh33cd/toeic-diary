@@ -121,10 +121,27 @@ def main():
     ap.add_argument("out_json")
     ap.add_argument("--model", default="small",
                     choices=["tiny", "base", "small", "medium", "large-v2"])
+    # Chia viec de chay nhieu tien trinh song song: --shard 0/3, 1/3, 2/3
+    ap.add_argument("--shard", default=None,
+                    help="dang i/n: chi xu ly cac bai co index %% n == i")
+    ap.add_argument("--threads", type=int, default=0,
+                    help="so CPU thread cho moi tien trinh (0 = mac dinh)")
+    # Che do audit: chi can biet transcript co khop audio hay khong, nen bo
+    # word_timestamps (moi segment bot mot luot alignment -> nhanh han nhieu).
+    # Doi lai moc thoi gian chi con theo segment, KHONG duoc ghi vao DB, nen
+    # o che do nay newStart/newEnd de null de apply-* tu dong tu choi.
+    ap.add_argument("--audit", action="store_true",
+                    help="chi do coverage, khong xuat timestamp")
     args = ap.parse_args()
 
     with open(args.lessons_json, "r", encoding="utf-8") as f:
         lessons = json.load(f)
+
+    shard_tag = ""
+    if args.shard:
+        si, sn = (int(x) for x in args.shard.split("/"))
+        lessons = [l for k, l in enumerate(lessons) if k % sn == si]
+        shard_tag = " [shard %d/%d]" % (si, sn)
 
     try:
         from faster_whisper import WhisperModel
@@ -134,7 +151,9 @@ def main():
         sys.exit(1)
 
     print("Nap model '%s'..." % args.model)
-    model = WhisperModel(args.model, device="cpu", compute_type="int8")
+    mkw = {"cpu_threads": args.threads} if args.threads > 0 else {}
+    model = WhisperModel(args.model, device="cpu", compute_type="int8", **mkw)
+    print("%d bai%s" % (len(lessons), shard_tag))
     print("Xong\n")
 
     results = {}
@@ -168,18 +187,31 @@ def main():
             # khi khong prompt thi ra 132 tu dung gan nhu hoan toan).
             # condition_on_previous_text=False de khong bi drift qua cac khoang lang dai.
             segs, _info = model.transcribe(
-                path, language="en", word_timestamps=True,
-                beam_size=5, vad_filter=False,
+                path, language="en", word_timestamps=not args.audit,
+                beam_size=1 if args.audit else 5, vad_filter=False,
                 condition_on_previous_text=False,
             )
             act = []
             for seg in segs:
-                for w in (seg.words or []):
-                    if w.start is None or w.end is None or w.end <= w.start:
+                words = seg.words or []
+                if words:
+                    for w in words:
+                        if w.start is None or w.end is None or w.end <= w.start:
+                            continue
+                        nw = norm(w.word)
+                        if nw:
+                            act.append({"w": nw, "s": float(w.start), "e": float(w.end)})
+                else:
+                    # khong co moc tung tu: noi suy deu trong segment, chi du
+                    # dung cho viec do coverage
+                    toks = [t for t in (norm(x) for x in seg.text.split()) if t]
+                    if not toks:
                         continue
-                    nw = norm(w.word)
-                    if nw:
-                        act.append({"w": nw, "s": float(w.start), "e": float(w.end)})
+                    span = max(0.01, float(seg.end) - float(seg.start)) / len(toks)
+                    for k, t in enumerate(toks):
+                        act.append({"w": t,
+                                    "s": float(seg.start) + k * span,
+                                    "e": float(seg.start) + (k + 1) * span})
         except Exception as e:
             print("  [LOI] %s" % e)
             continue
@@ -212,8 +244,8 @@ def main():
                 "orderIndex": s["orderIndex"],
                 "words": nwords,
                 "matchedWords": p["n"],
-                "newStart": None if p["s"] is None else round(p["s"], 2),
-                "newEnd": None if p["e"] is None else round(p["e"], 2),
+                "newStart": None if (args.audit or p["s"] is None) else round(p["s"], 2),
+                "newEnd": None if (args.audit or p["e"] is None) else round(p["e"], 2),
                 "dbStart": s["dbStart"],
                 "dbEnd": s["dbEnd"],
                 "content": s["content"][:70],

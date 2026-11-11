@@ -34,11 +34,14 @@ const SERIES = ["ets-2026", "ets-2024"];
 async function main() {
   const out = process.argv[2];
   if (!out) {
-    console.error("Usage: tsx scripts/export-broken-timestamps.ts <out.json> [--download <audioDir>]");
+    console.error("Usage: tsx scripts/export-broken-timestamps.ts <out.json> [--download <audioDir>] [--all]");
     process.exit(1);
   }
   const dlIdx = process.argv.indexOf("--download");
   const audioDir = dlIdx !== -1 ? process.argv[dlIdx + 1] : null;
+  // --all: xuất MỌI bài, không chỉ bài bị gắn cờ. Dùng để audit độ nguyên văn
+  // của transcript trên toàn bộ dữ liệu (coverage ASR là thước đo khách quan).
+  const all = process.argv.includes("--all");
 
   const lessons = await prisma.lesson.findMany({
     where: { part: { testSet: { series: { slug: { in: SERIES } } } } },
@@ -86,7 +89,7 @@ async function main() {
         reasons.push(`mọi câu dồn trong ${((lastEnd / l.audioDuration) * 100).toFixed(0)}% đầu file`);
     }
 
-    if (reasons.length === 0) continue;
+    if (reasons.length === 0 && !all) continue;
 
     result.push({
       lessonId: l.id,
@@ -108,20 +111,38 @@ async function main() {
   }
 
   fs.writeFileSync(out, JSON.stringify(result, null, 2), "utf8");
-  console.log(`${result.length} bài cần căn lại -> ${out}`);
-  for (const r of result)
-    console.log(`  ${r.label}  (${r.sentences.length} câu) | ${r.reasons.join(" | ")}`);
+  if (all) {
+    const flagged = result.filter((r) => r.reasons.length > 0).length;
+    console.log(`${result.length} bài (${flagged} bài bị gắn cờ) -> ${out}`);
+  } else {
+    console.log(`${result.length} bài cần căn lại -> ${out}`);
+    for (const r of result)
+      console.log(`  ${r.label}  (${r.sentences.length} câu) | ${r.reasons.join(" | ")}`);
+  }
 
-  if (audioDir) {
-    fs.mkdirSync(audioDir, { recursive: true });
-    for (const r of result) {
-      const dest = path.join(audioDir, r.audioFile);
-      if (fs.existsSync(dest) && fs.statSync(dest).size > 1000) { console.log(`có sẵn  ${r.label}`); continue; }
-      const res = await fetch(r.audioUrl);
-      if (!res.ok) { console.log(`LỖI ${res.status}  ${r.label}`); continue; }
-      fs.writeFileSync(dest, Buffer.from(await res.arrayBuffer()));
-      console.log(`tải xong ${r.label}`);
+  if (audioDir !== null) {
+    const dir: string = audioDir;
+    fs.mkdirSync(dir, { recursive: true });
+    let done = 0, skipped = 0, failed = 0;
+    const CONCURRENCY = 8;
+    const queue = [...result];
+    async function worker() {
+      for (;;) {
+        const r = queue.shift();
+        if (!r) return;
+        const dest = path.join(dir, r.audioFile);
+        if (fs.existsSync(dest) && fs.statSync(dest).size > 1000) { skipped++; continue; }
+        try {
+          const res = await fetch(r.audioUrl);
+          if (!res.ok) { failed++; console.log(`LỖI ${res.status}  ${r.label}`); continue; }
+          fs.writeFileSync(dest, Buffer.from(await res.arrayBuffer()));
+          done++;
+          if (done % 50 === 0) console.log(`  ...tải ${done} file`);
+        } catch (e: any) { failed++; console.log(`LỖI ${e.message}  ${r.label}`); }
+      }
     }
+    await Promise.all(Array.from({ length: CONCURRENCY }, worker));
+    console.log(`audio: tải mới ${done}, có sẵn ${skipped}, lỗi ${failed}`);
   }
 }
 
