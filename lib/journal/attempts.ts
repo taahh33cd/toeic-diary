@@ -8,9 +8,11 @@
  */
 
 import { prisma } from "@/lib/db/prisma";
-import { getPracticeEntry } from "@/lib/listening-practice";
-import { parsePracticeAttemptSlug } from "@/lib/listening-practice/adapt";
-import { getCatalogEntry, getExamSet } from "@/lib/full-tests";
+import { getPracticeEntry, loadPracticeTest } from "@/lib/listening-practice";
+import { parsePracticeAttemptSlug, toFullTest } from "@/lib/listening-practice/adapt";
+import { getCatalogEntry, getExamSet, loadTest } from "@/lib/full-tests";
+import type { FullTest, PartNumber } from "@/lib/full-tests/types";
+import type { RunConfig } from "@/components/full-tests/SetupPanel";
 
 export type AttemptStatus = "in_progress" | "done";
 
@@ -49,6 +51,16 @@ function countAnswers(answers: unknown): number {
 function modeLabel(config: unknown): string {
   const mode = (config as { mode?: string } | null)?.mode;
   return mode === "real" ? "Thi thử" : "Luyện tập";
+}
+
+/**
+ * Tên đề thi trọn bộ đã kèm tên bộ đề ("PRACTICE TEST EST 2026 — Test 1"),
+ * mà nhãn nhóm bên ngoài cũng là tên bộ đề ⇒ cắt phần lặp cho gọn.
+ */
+function shortTestTitle(title: string, examTitle?: string): string {
+  if (!examTitle || !title.startsWith(examTitle)) return title;
+  const rest = title.slice(examTitle.length).replace(/^[\s—–-]+/, "");
+  return rest || title;
 }
 
 /** Đọc số đề từ khoá lượt thi trọn đề, vd "est-2026-test-7" → 7. */
@@ -117,7 +129,7 @@ export async function loadAttemptHistory(userId: string): Promise<AttemptItem[]>
       status: a.status === "in_progress" ? "in_progress" : "done",
       groupKey: `full-${a.examSlug}`,
       groupLabel: exam?.title ?? "Thi thử trọn đề",
-      testTitle: entry?.title ?? a.testSlug,
+      testTitle: shortTestTitle(entry?.title ?? a.testSlug, exam?.title),
       testHref: n ? `/skills/full-tests/${a.examSlug}/${n}` : "/skills/full-tests",
       modeLabel: modeLabel(a.config),
       correct: a.correct,
@@ -129,6 +141,138 @@ export async function loadAttemptHistory(userId: string): Promise<AttemptItem[]>
   }
 
   return items.sort((x, y) => y.at.getTime() - x.at.getTime());
+}
+
+// ── Xem lại một lượt ─────────────────────────────────────────────────────────
+
+/** Đáp án lưu dạng { "12": "B" } → khoá số để ReviewPanel dùng được. */
+function toAnswerMap(raw: unknown): Record<number, string> {
+  const out: Record<number, string> = {};
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) return out;
+  for (const [k, v] of Object.entries(raw as Record<string, unknown>)) {
+    const n = Number(k);
+    if (Number.isInteger(n) && typeof v === "string") out[n] = v;
+  }
+  return out;
+}
+
+function toMarked(raw: unknown): number[] {
+  return Array.isArray(raw) ? raw.filter((x): x is number => Number.isInteger(x)) : [];
+}
+
+/**
+ * Config lúc làm bài, vá lại những gì thiếu — bản ghi cũ có thể không đủ field,
+ * mà ReviewPanel thì cần `parts` để biết chấm phần nào.
+ */
+function toRunConfig(raw: unknown, fallbackParts: PartNumber[]): RunConfig {
+  const c = (raw ?? {}) as Partial<RunConfig>;
+  const parts = Array.isArray(c.parts) && c.parts.length > 0 ? c.parts : fallbackParts;
+  return {
+    mode: c.mode === "practice" ? "practice" : "real",
+    parts: parts as PartNumber[],
+    minutes: typeof c.minutes === "number" ? c.minutes : 0,
+    autoSubmit: c.autoSubmit ?? true,
+    instantFeedback: c.instantFeedback ?? false,
+  };
+}
+
+export interface AttemptDetail {
+  /** Dòng lịch sử của chính lượt này */
+  item: AttemptItem;
+  /** Đề đã nạp lại từ data, đủ audio + transcript + đáp án đúng */
+  test: FullTest;
+  config: RunConfig;
+  answers: Record<number, string>;
+  marked: number[];
+}
+
+/**
+ * Nạp lại đủ thứ để dựng màn chấm chi tiết của một lượt đã nộp.
+ * Trả null khi lượt không tồn tại, không thuộc học viên này, hay data đề đã mất.
+ */
+export async function loadAttemptDetail(userId: string, id: string): Promise<AttemptDetail | null> {
+  const part = await prisma.partPracticeAttempt.findFirst({
+    where: { id, userId },
+    select: {
+      id: true, skill: true, part: true, testSlug: true, status: true, config: true,
+      answers: true, marked: true, correct: true, gradable: true,
+      completedAt: true, updatedAt: true,
+    },
+  });
+
+  if (part) {
+    const parsed = parsePracticeAttemptSlug(part.testSlug);
+    if (!parsed) return null;
+    const practice = await loadPracticeTest(`test-${parsed.testNumber}`);
+    if (!practice) return null;
+
+    const entry = getPracticeEntry(parsed.testNumber);
+    const skillLabel = part.skill === "reading" ? "Reading" : "Listening";
+    const item: AttemptItem = {
+      id: part.id,
+      kind: "part",
+      status: part.status === "in_progress" ? "in_progress" : "done",
+      groupKey: `${part.skill}-${part.part}`,
+      groupLabel: `${skillLabel} · Part ${part.part}`,
+      testTitle: entry?.title ?? part.testSlug,
+      testHref: `/skills/${part.skill}/part${part.part}/${parsed.testNumber}`,
+      modeLabel: modeLabel(part.config),
+      correct: part.correct,
+      gradable: part.gradable,
+      total: null,
+      answered: countAnswers(part.answers),
+      at: part.completedAt ?? part.updatedAt,
+    };
+
+    return {
+      item,
+      test: toFullTest(practice, parsed.part),
+      config: toRunConfig(part.config, [part.part as PartNumber]),
+      answers: toAnswerMap(part.answers),
+      marked: toMarked(part.marked),
+    };
+  }
+
+  const full = await prisma.fullTestAttempt.findFirst({
+    where: { id, userId },
+    select: {
+      id: true, examSlug: true, testSlug: true, status: true, config: true,
+      answers: true, marked: true, correct: true, gradable: true, total: true,
+      completedAt: true, updatedAt: true,
+    },
+  });
+  if (!full) return null;
+
+  const test = await loadTest(full.testSlug);
+  if (!test) return null;
+
+  const n = fullTestNumber(full.testSlug);
+  const entry = n ? getCatalogEntry(full.examSlug, n) : undefined;
+  const exam = getExamSet(full.examSlug);
+  const item: AttemptItem = {
+    id: full.id,
+    kind: "full",
+    status: full.status === "in_progress" ? "in_progress" : "done",
+    groupKey: `full-${full.examSlug}`,
+    groupLabel: exam?.title ?? "Thi thử trọn đề",
+    testTitle: shortTestTitle(entry?.title ?? full.testSlug, exam?.title),
+    testHref: n ? `/skills/full-tests/${full.examSlug}/${n}` : "/skills/full-tests",
+    modeLabel: modeLabel(full.config),
+    correct: full.correct,
+    gradable: full.gradable,
+    total: full.total,
+    answered: countAnswers(full.answers),
+    at: full.completedAt ?? full.updatedAt,
+  };
+
+  return {
+    item,
+    test,
+    // Dedupe: mỗi part có nhiều nhóm câu, mà scoreAttempt cộng theo từng part trong danh sách.
+    config: toRunConfig(full.config, [...new Set(test.groups.map((g) => g.part))]),
+    answers: toAnswerMap(full.answers),
+    marked: toMarked(full.marked),
+  };
 }
 
 /** Một đề: gom các lượt đã nộp của cùng một đề lại. */

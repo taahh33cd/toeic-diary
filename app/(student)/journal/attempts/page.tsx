@@ -64,7 +64,7 @@ export default async function AttemptsPage() {
     <div className="max-w-4xl mx-auto w-full">
       <PageHeading
         title="Kết quả luyện đề"
-        note="Mọi lượt bạn đã làm ở khu Luyện đề — Listening Part 1, Part 2 và thi thử trọn đề."
+        note="Mọi lượt bạn đã làm ở khu Luyện đề. Bấm vào một lượt để xem lại từng câu, nghe lại audio."
       />
 
       {done.length === 0 && unfinished.length === 0 ? (
@@ -164,16 +164,25 @@ export default async function AttemptsPage() {
 
                     <ul className="list-none p-0 m-0 mt-1">
                       {t.attempts.map((a) => (
-                        <li key={a.id} className="flex items-center gap-3 px-2 py-1.5">
-                          <ScoreCell a={a} />
-                          <span className="text-xs" style={{ color: "var(--text-muted)" }}>
-                            {a.modeLabel}
-                            {a.total !== null ? ` · ${a.total} điểm` : ""}
-                          </span>
-                          <span className="flex-1" />
-                          <span className="text-xs tabular-nums whitespace-nowrap" style={{ color: "var(--text-muted)" }}>
-                            {fmt(a.at)}
-                          </span>
+                        <li key={a.id}>
+                          <Link
+                            href={`/journal/attempts/${a.id}`}
+                            className="flex items-center gap-3 px-2 py-1.5 no-underline transition-colors hover:brightness-95"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            <ScoreCell a={a} />
+                            <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+                              {a.modeLabel}
+                              {a.total !== null ? ` · ${a.total} điểm` : ""}
+                            </span>
+                            <span className="flex-1" />
+                            <span className="text-xs tabular-nums whitespace-nowrap" style={{ color: "var(--text-muted)" }}>
+                              {fmt(a.at)}
+                            </span>
+                            <span className="text-xs font-bold" style={{ color: "var(--accent-primary)" }}>
+                              Xem lại →
+                            </span>
+                          </Link>
                         </li>
                       ))}
                     </ul>
