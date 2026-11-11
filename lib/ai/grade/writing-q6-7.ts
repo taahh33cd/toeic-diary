@@ -117,6 +117,10 @@ async function gradeOne(p: Q67Prompt, item: SubmissionItem): Promise<GradedItem>
 
   const raw = await generateJson<Q67Raw>(MODEL_STRONG, buildPrompt(p, answer));
 
+  // AI im lặng thì mọi mission tính là chưa đạt, tức bài có chữ vẫn ra 0 điểm.
+  // Thà ném lỗi để bài nằm lại chờ giáo viên.
+  if (!Array.isArray(raw?.missions)) throw new Error("AI không trả về kết quả chấm cho Q6-7");
+
   const missionsDone = bools(raw?.missions?.map((m) => m?.done === true), p.missions.length);
   const formDone = bools(raw?.form, Q67_FORM_CHECKS.length);
   const score = computeQ67Score(missionsDone, formDone, true);

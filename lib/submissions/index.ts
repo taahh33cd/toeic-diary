@@ -326,7 +326,7 @@ export function sanitizeFeedback(raw: unknown): SubmissionFeedback {
  * engine (lib/ai/grade) đọc để định tuyến. Khoá là unit GỐC của /skills.
  */
 export const AI_GRADABLE_UNITS: Record<string, string[]> = {
-  writing: ["q6-7"],
+  writing: ["q1-5", "q6-7", "q8"],
   speaking: [],
 };
 

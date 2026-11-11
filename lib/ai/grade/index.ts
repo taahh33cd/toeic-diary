@@ -14,7 +14,9 @@ import {
   type SubmissionFeedback,
   type SubmissionItem,
 } from "@/lib/submissions";
+import { gradeWritingQ15 } from "./writing-q1-5";
 import { gradeWritingQ67 } from "./writing-q6-7";
+import { gradeWritingQ8 } from "./writing-q8";
 import type { GradedItem } from "./types";
 
 export { aiConfigured } from "./json";
@@ -31,8 +33,12 @@ export async function gradeSubmission(input: GradeInput): Promise<SubmissionFeed
   const unit = baseUnit(input.skill, input.unit);
 
   let graded: GradedItem[];
-  if (input.skill === "writing" && unit === "q6-7") {
+  if (input.skill === "writing" && unit === "q1-5") {
+    graded = await gradeWritingQ15(input.testKey, input.items);
+  } else if (input.skill === "writing" && unit === "q6-7") {
     graded = await gradeWritingQ67(input.testKey, input.items);
+  } else if (input.skill === "writing" && unit === "q8") {
+    graded = await gradeWritingQ8(input.testKey, input.items);
   } else {
     return null;
   }

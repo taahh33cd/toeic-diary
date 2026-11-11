@@ -266,10 +266,26 @@ function stem(word: string): string {
 }
 
 export function keywordUsed(answer: string, keyword: string): boolean {
-  const s = stem(keyword);
-  if (!s) return false;
+  const parts = keyword.toLowerCase().split(/[^a-z]+/).filter(Boolean);
+  if (parts.length === 0) return false;
   const words = answer.toLowerCase().split(/[^a-z]+/).filter(Boolean);
-  return words.some((w) => w.startsWith(s));
+
+  if (parts.length === 1) {
+    const s = stem(parts[0]);
+    return s ? words.some((w) => w.startsWith(s)) : false;
+  }
+
+  /**
+   * Cặp từ nhiều chữ ("in front of", "next to") phải khớp theo chuỗi từ liên
+   * tiếp. Trước đây cả cụm bị dồn thành một chuỗi liền ("infrontof") rồi so với
+   * từng từ, nên KHÔNG BAO GIỜ khớp — kể cả bài mẫu của chính đề cũng bị báo là
+   * chưa dùng từ cho sẵn.
+   */
+  const stems = parts.map(stem);
+  for (let i = 0; i + stems.length <= words.length; i++) {
+    if (stems.every((s, k) => words[i + k].startsWith(s))) return true;
+  }
+  return false;
 }
 
 export function countWords(answer: string): number {
