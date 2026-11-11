@@ -16,7 +16,7 @@
 import {
   IconHome, IconScore, IconJournal, IconVocab,
   IconTasks, IconSchedule, IconFee, IconSettings,
-  IconProgress, IconTrophy, IconErrorLog, IconBooking,
+  IconProgress, IconTrophy, IconErrorLog, IconBooking, IconTarget,
 } from "@/components/journal/Icons";
 
 type IconFn = (props: { size?: number; className?: string }) => React.ReactElement;
@@ -62,6 +62,7 @@ export const CHAPTERS: Chapter[] = [
       { href: "/journal/scores", pathname: "/journal/scores", labelVi: "Điểm số", labelEn: "Scores", Icon: IconScore },
       { href: "/journal/scores?tab=errorlog", pathname: "/journal/scores", tab: "errorlog", labelVi: "Nhật ký lỗi", labelEn: "Error log", Icon: IconErrorLog },
       { href: "/journal/scores?tab=paraphrase", pathname: "/journal/scores", tab: "paraphrase", labelVi: "Paraphrase", labelEn: "Paraphrase", Icon: IconJournal },
+      { href: "/journal/attempts", pathname: "/journal/attempts", labelVi: "Luyện đề", labelEn: "Practice tests", Icon: IconTarget },
       { href: "/journal/progress", pathname: "/journal/progress", labelVi: "Biểu đồ", labelEn: "Charts", Icon: IconProgress },
       { href: "/journal/achievements", pathname: "/journal/achievements", labelVi: "Thành tựu", labelEn: "Achievements", Icon: IconTrophy },
     ],
