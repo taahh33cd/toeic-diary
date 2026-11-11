@@ -14,6 +14,8 @@ import {
   type SubmissionFeedback,
   type SubmissionItem,
 } from "@/lib/submissions";
+import { gradeSpeakingQ12 } from "./speaking/q1-2";
+import { gradeSpeakingQ57 } from "./speaking/q5-7";
 import { gradeWritingQ15 } from "./writing-q1-5";
 import { gradeWritingQ67 } from "./writing-q6-7";
 import { gradeWritingQ8 } from "./writing-q8";
@@ -39,6 +41,10 @@ export async function gradeSubmission(input: GradeInput): Promise<SubmissionFeed
     graded = await gradeWritingQ67(input.testKey, input.items);
   } else if (input.skill === "writing" && unit === "q8") {
     graded = await gradeWritingQ8(input.testKey, input.items);
+  } else if (input.skill === "speaking" && unit === "q1-2") {
+    graded = await gradeSpeakingQ12(input.testKey, input.items);
+  } else if (input.skill === "speaking" && unit === "q5-7") {
+    graded = await gradeSpeakingQ57(input.testKey, input.items);
   } else {
     return null;
   }

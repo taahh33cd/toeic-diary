@@ -48,8 +48,11 @@ export function SubmissionPanel({ skill, unit, testKey, title, buildItems, canSu
   const [savedAt, setSavedAt] = useState<number | null>(null);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  /** "running" = AI đang chấm; "done" = đã có nhận xét; "failed" = bài nằm chờ giáo viên. */
-  const [ai, setAi] = useState<"running" | "done" | "failed" | null>(null);
+  /**
+   * "running" = đang chấm tại chỗ (Writing) · "queued" = đã nhận, chấm nền và
+   * sẽ push (Speaking) · "done" = có nhận xét · "failed" = bài nằm chờ giáo viên.
+   */
+  const [ai, setAi] = useState<"running" | "queued" | "done" | "failed" | null>(null);
   const [aiNote, setAiNote] = useState<string | null>(null);
   const aiGrades = isAiGradable(skill, unit);
 
@@ -63,7 +66,7 @@ export function SubmissionPanel({ skill, unit, testKey, title, buildItems, canSu
       const res = await fetch(`/api/submissions/${submissionId}/grade`, { method: "POST" });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data?.error ?? `Lỗi ${res.status}`);
-      setAi("done");
+      setAi(data?.queued ? "queued" : "done");
     } catch (e) {
       setAiNote(e instanceof Error ? e.message : "AI chưa chấm được bài này");
       setAi("failed");
@@ -105,6 +108,18 @@ export function SubmissionPanel({ skill, unit, testKey, title, buildItems, canSu
         <div style={box}>
           <p style={head}>Đã gửi ✓ — AI đang chấm…</p>
           <p style={sub}>Khoảng 10–20 giây, bạn đợi ở đây nhé.</p>
+        </div>
+      );
+    }
+
+    if (ai === "queued") {
+      return (
+        <div style={box}>
+          <p style={head}>Đã gửi ✓ — AI đang nghe bài nói của bạn</p>
+          <p style={sub}>
+            Chấm xong bạn sẽ nhận được thông báo.{" "}
+            <Link href="/journal/submissions" style={{ color: t.accent, fontWeight: 600 }}>Xem trong sổ tay →</Link>
+          </p>
         </div>
       );
     }

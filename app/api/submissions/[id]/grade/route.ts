@@ -4,15 +4,17 @@
 // chuyển sang "graded" và học viên xem được luôn; thầy vào tab "AI đã chấm" để
 // soát lại khi rảnh, hoặc học viên bấm "xin thầy chấm lại".
 
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import type { Prisma } from "@prisma/client";
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { isUsageExempt } from "@/lib/access";
+import { sendPushToUser } from "@/lib/push";
 import { todayIct } from "@/lib/vocab/srs";
 import {
   estimateBand,
   isAiGradable,
+  isBackgroundGraded,
   sanitizeFeedback,
   sanitizeItems,
   scaleFor,
@@ -22,6 +24,13 @@ import {
 import { aiConfigured, gradeSubmission } from "@/lib/ai/grade";
 
 type Ctx = { params: Promise<{ id: string }> };
+
+/**
+ * Speaking phải nghe lại từng file ghi âm (tải audio → nhận dạng → chấm nội
+ * dung) nên một bộ ba câu có thể mất hơn một phút. Chạy trong `after()` nên
+ * giới hạn này phải đủ rộng.
+ */
+export const maxDuration = 300;
 
 /** Số lượt AI chấm mỗi học viên mỗi ngày (giờ VN). */
 const GRADES_PER_DAY = 5;
@@ -33,7 +42,41 @@ function startOfTodayIct(): Date {
 /** Hai bản nộp có cùng nội dung bài làm hay không — để không chấm lại bài y nguyên. */
 function sameAnswers(a: SubmissionItem[], b: SubmissionItem[]): boolean {
   if (a.length !== b.length) return false;
-  return a.every((it, i) => (it.text ?? "").trim() === (b[i].text ?? "").trim());
+  return a.every(
+    (it, i) =>
+      (it.text ?? "").trim() === (b[i].text ?? "").trim() && (it.audioUrl ?? "") === (b[i].audioUrl ?? ""),
+  );
+}
+
+/**
+ * Chấm rồi ghi kết quả. Ghi có điều kiện `status = 'submitted'` để hai lần gọi
+ * song song không đè nhau, và để bài vừa được giáo viên chấm xong không bị bản
+ * AI ghi lên.
+ */
+async function gradeAndSave(
+  id: string,
+  submission: { skill: string; unit: string; testKey: string },
+  items: SubmissionItem[],
+): Promise<SubmissionFeedback | null> {
+  const feedback = await gradeSubmission({
+    skill: submission.skill,
+    unit: submission.unit,
+    testKey: submission.testKey,
+    items,
+  });
+  if (!feedback) return null;
+
+  const { count } = await prisma.skillSubmission.updateMany({
+    where: { id, status: "submitted" },
+    data: {
+      feedback: JSON.parse(JSON.stringify(feedback)) as Prisma.InputJsonValue,
+      status: "graded",
+      gradedAt: new Date(),
+      // Chỉ bài thi thử trọn bộ mới có điểm 0-200 (xem ghi chú dưới).
+      band: submission.unit === "mock" ? estimateBand(feedback, scaleFor(submission.skill, submission.unit)) : null,
+    },
+  });
+  return count > 0 ? feedback : null;
 }
 
 export async function POST(_req: Request, { params }: Ctx) {
@@ -89,58 +132,72 @@ export async function POST(_req: Request, { params }: Ctx) {
     (p) => sanitizeFeedback(p.feedback).by === "ai" && sameAnswers(items, sanitizeItems(p.items)),
   );
 
-  let feedback: SubmissionFeedback | null = null;
+  // Bài y nguyên đã chấm rồi: chép lại kết quả cũ, không gọi AI, không tính lượt.
   if (twin) {
-    feedback = sanitizeFeedback(twin.feedback);
-  } else {
-    const used = await prisma.$queryRaw<{ n: number }[]>`
-      SELECT count(*)::int AS n FROM skill_submissions
-        WHERE user_id = ${user.id}
-          AND graded_at >= ${startOfTodayIct()}
-          AND feedback->>'by' = 'ai'`;
-    if ((used[0]?.n ?? 0) >= GRADES_PER_DAY) {
-      return NextResponse.json(
-        { error: `Hôm nay bạn đã dùng hết ${GRADES_PER_DAY} lượt AI chấm. Bài vẫn nằm chờ giáo viên chấm nhé.` },
-        { status: 429 },
-      );
-    }
-
-    try {
-      feedback = await gradeSubmission({
-        skill: submission.skill,
-        unit: submission.unit,
-        testKey: submission.testKey,
-        items,
-      });
-    } catch (err) {
-      const msg = err instanceof Error ? err.message : String(err);
-      console.error("[grade] AI error:", msg.slice(0, 300));
-      return NextResponse.json({ error: "AI đang quá tải, bài của bạn vẫn chờ giáo viên chấm" }, { status: 502 });
-    }
+    const feedback = sanitizeFeedback(twin.feedback);
+    const updated = await prisma.skillSubmission.update({
+      where: { id },
+      data: {
+        feedback: JSON.parse(JSON.stringify(feedback)) as Prisma.InputJsonValue,
+        status: "graded",
+        gradedAt: new Date(),
+        band: submission.unit === "mock" ? estimateBand(feedback, max) : null,
+      },
+    });
+    return NextResponse.json({ submission: updated, cached: true });
   }
 
+  const used = await prisma.$queryRaw<{ n: number }[]>`
+    SELECT count(*)::int AS n FROM skill_submissions
+      WHERE user_id = ${user.id}
+        AND graded_at >= ${startOfTodayIct()}
+        AND feedback->>'by' = 'ai'`;
+  if ((used[0]?.n ?? 0) >= GRADES_PER_DAY) {
+    return NextResponse.json(
+      { error: `Hôm nay bạn đã dùng hết ${GRADES_PER_DAY} lượt AI chấm. Bài vẫn nằm chờ giáo viên chấm nhé.` },
+      { status: 429 },
+    );
+  }
+
+  /**
+   * Speaking chấm nền: nghe lại 2-3 file ghi âm mất cả phút, học viên không
+   * đứng đợi được. Trả lời ngay rồi chấm trong `after()`, xong thì gửi thông
+   * báo. Chấm hỏng thì bài vẫn ở trạng thái đã gửi, nằm trong danh sách của
+   * giáo viên — thà không chấm hơn là chấm oan.
+   */
+  if (isBackgroundGraded(submission.skill)) {
+    const title = submission.title;
+    after(async () => {
+      try {
+        const feedback = await gradeAndSave(id, submission, items);
+        if (!feedback) {
+          console.error(`[grade] bỏ qua ${id}: engine không chấm được hoặc bài đã đổi trạng thái`);
+          return;
+        }
+        await sendPushToUser(user.id, {
+          title: "AI đã chấm bài nói của bạn",
+          body: `${title} — xem nhận xét trong sổ tay`,
+          url: `/journal/submissions/${id}`,
+        }).catch(() => {});
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.error(`[grade] lỗi khi chấm nền ${id}:`, msg.slice(0, 300));
+      }
+    });
+    return NextResponse.json({ queued: true });
+  }
+
+  let feedback: SubmissionFeedback | null;
+  try {
+    feedback = await gradeAndSave(id, submission, items);
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error("[grade] AI error:", msg.slice(0, 300));
+    return NextResponse.json({ error: "AI đang quá tải, bài của bạn vẫn chờ giáo viên chấm" }, { status: 502 });
+  }
   if (!feedback) {
     return NextResponse.json({ error: "Không chấm được bài này" }, { status: 502 });
   }
 
-  /**
-   * Chỉ bài thi thử trọn bộ mới có điểm 0-200.
-   *
-   * `estimateBand` lấy trung bình rubric rồi nhân 200, nên một bộ Q6-7 hai câu
-   * được 4/4 ra đúng 200/200 — con số đó vô nghĩa với học viên vì bài mới làm
-   * 2 trong 8 câu của đề Writing. Bài luyện từng part hiện điểm rubric từng câu
-   * là đủ, và sổ tay đã bỏ qua chip điểm khi `band` rỗng.
-   */
-  const band = submission.unit === "mock" ? estimateBand(feedback, max) : null;
-  const updated = await prisma.skillSubmission.update({
-    where: { id },
-    data: {
-      feedback: JSON.parse(JSON.stringify(feedback)) as Prisma.InputJsonValue,
-      status: "graded",
-      gradedAt: new Date(),
-      band,
-    },
-  });
-
-  return NextResponse.json({ submission: updated, cached: Boolean(twin) });
+  return NextResponse.json({ ok: true });
 }

@@ -327,8 +327,16 @@ export function sanitizeFeedback(raw: unknown): SubmissionFeedback {
  */
 export const AI_GRADABLE_UNITS: Record<string, string[]> = {
   writing: ["q1-5", "q6-7", "q8"],
-  speaking: [],
+  speaking: ["q1-2", "q5-7"],
 };
+
+/**
+ * Part chấm nền: phải nghe lại từng file ghi âm nên lâu, học viên không đứng
+ * đợi được — chấm xong thì gửi thông báo. Writing thì chấm ngay tại chỗ.
+ */
+export function isBackgroundGraded(skill: string): boolean {
+  return skill === "speaking";
+}
 
 /**
  * Bài này có được AI chấm không.

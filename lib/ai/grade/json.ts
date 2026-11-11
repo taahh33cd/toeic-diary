@@ -3,7 +3,7 @@
 // Mỗi part chỉ việc dựng prompt và khai báo kiểu JSON mong đợi; phần bóc rào
 // ```json, dò object và thử lại khi Gemini quá tải nằm hết ở đây.
 
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, type ContentListUnion } from "@google/genai";
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
 
@@ -105,7 +105,12 @@ function parseLoose<T>(text: string): T | null {
  * `null` = không parse được (caller tự quyết định báo lỗi hay bỏ qua).
  * Quá tải thì thử lại một lần; lỗi khác thì ném ra để route xếp hàng lại.
  */
-export async function generateJson<T>(model: string, prompt: string, attempt = 0): Promise<T | null> {
+export async function generateJson<T>(
+  model: string,
+  /** Chuỗi prompt, hoặc danh sách part khi cần gửi kèm audio. */
+  prompt: ContentListUnion,
+  attempt = 0,
+): Promise<T | null> {
   try {
     const response = await ai.models.generateContent({
       model,
