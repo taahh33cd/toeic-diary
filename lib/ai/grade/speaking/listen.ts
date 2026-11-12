@@ -85,6 +85,9 @@ async function azureListen(wav: Buffer, referenceText?: string): Promise<Heard |
         GradingSystem: "HundredMark",
         Dimension: "Comprehensive",
         EnableMiscue: true,
+        // Không bật cờ này thì ProsodyScore luôn về 0 — mà ngữ điệu là một
+        // tiêu chí ETS của phần đọc to. Đã đo: thiếu cờ, prosody = 0.
+        EnableProsodyAssessment: true,
       }),
     ).toString("base64");
   }

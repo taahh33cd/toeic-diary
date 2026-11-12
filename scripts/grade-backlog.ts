@@ -11,7 +11,7 @@
  * học viên thấy nhận xét khi mở sổ tay.
  */
 
-import "dotenv/config";
+import "./env";
 import pg from "pg";
 import {
   AI_GRADABLE_UNITS,

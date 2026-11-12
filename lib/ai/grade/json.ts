@@ -5,7 +5,24 @@
 
 import { GoogleGenAI, type ContentListUnion } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
+/**
+ * Khởi tạo client ở lần dùng đầu tiên, không phải lúc nạp module.
+ *
+ * Tạo sẵn ở tầng module thì `process.env.GEMINI_API_KEY` có thể còn trống —
+ * lúc build trên Vercel, hoặc trong script nạp .env sau khi import. Khi đó SDK
+ * quay sang tìm "default credentials" của Google Cloud và chết với thông báo
+ * chẳng liên quan gì tới key đang thiếu.
+ */
+let client: GoogleGenAI | null = null;
+
+function ai(): GoogleGenAI {
+  if (!client) {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) throw new Error("Thiếu GEMINI_API_KEY");
+    client = new GoogleGenAI({ apiKey });
+  }
+  return client;
+}
 
 /** Part dễ, điểm gần như do code quyết: Writing Q1-5, Speaking Q1-2. */
 export const MODEL_LIGHT = "gemini-2.5-flash-lite";
@@ -112,7 +129,7 @@ export async function generateJson<T>(
   attempt = 0,
 ): Promise<T | null> {
   try {
-    const response = await ai.models.generateContent({
+    const response = await ai().models.generateContent({
       model,
       contents: prompt,
       // Buộc trả JSON thuần (không rào markdown) và hạ nhiệt độ: chấm bài cần
