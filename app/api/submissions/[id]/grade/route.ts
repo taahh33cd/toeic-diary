@@ -72,6 +72,9 @@ async function gradeAndSave(
       feedback: JSON.parse(JSON.stringify(feedback)) as Prisma.InputJsonValue,
       status: "graded",
       gradedAt: new Date(),
+      // Mốc đếm hạn mức: chỉ đặt ở đây, nơi AI thật sự vừa chấm xong. Bản chép
+      // từ bộ đệm không đặt, và "xin thầy chấm lại" không xoá.
+      aiGradedAt: new Date(),
       // Chỉ bài thi thử trọn bộ mới có điểm 0-200 (xem ghi chú dưới).
       band: submission.unit === "mock" ? estimateBand(feedback, scaleFor(submission.skill, submission.unit)) : null,
     },
@@ -147,12 +150,13 @@ export async function POST(_req: Request, { params }: Ctx) {
     return NextResponse.json({ submission: updated, cached: true });
   }
 
-  const used = await prisma.$queryRaw<{ n: number }[]>`
-    SELECT count(*)::int AS n FROM skill_submissions
-      WHERE user_id = ${user.id}
-        AND graded_at >= ${startOfTodayIct()}
-        AND feedback->>'by' = 'ai'`;
-  if ((used[0]?.n ?? 0) >= GRADES_PER_DAY) {
+  // Đếm theo `ai_graded_at`, không theo `graded_at`: xem ghi chú ở cột đó
+  // trong schema — đếm kiểu cũ vừa tính cả bản chép từ bộ đệm, vừa bị xoá
+  // trắng mỗi lần học viên xin thầy chấm lại.
+  const used = await prisma.skillSubmission.count({
+    where: { userId: user.id, aiGradedAt: { gte: startOfTodayIct() } },
+  });
+  if (used >= GRADES_PER_DAY) {
     return NextResponse.json(
       { error: `Hôm nay bạn đã dùng hết ${GRADES_PER_DAY} lượt AI chấm. Bài vẫn nằm chờ giáo viên chấm nhé.` },
       { status: 429 },
