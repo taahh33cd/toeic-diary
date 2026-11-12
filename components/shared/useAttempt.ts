@@ -33,9 +33,15 @@ export interface AttemptConfig {
   instantFeedback: boolean;
 }
 
-/** Bản sao cục bộ — chỉ dùng khi mất mạng lúc đang làm, DB vẫn là nguồn chính. */
+/**
+ * Bản sao cục bộ — dùng khi mất mạng lúc đang làm, DB vẫn là nguồn chính.
+ * attemptId null = chưa tạo được lượt trên server (mất mạng ngay lúc bắt đầu):
+ * khi đó bản sao là nơi duy nhất giữ bài, kèm config để tạo lượt sau.
+ */
 interface LocalMirror {
-  attemptId: string;
+  attemptId: string | null;
+  testSlug?: string;
+  config?: AttemptConfig;
   answers: Record<number, string>;
   marked: number[];
   secondsLeft?: number | null;
@@ -50,6 +56,8 @@ type SaveBody = {
 };
 
 const SAVE_DEBOUNCE_MS = 4000;
+/** Chưa có lượt trên server thì thử tạo lại, không dồn dập hơn mức này */
+const RECREATE_EVERY_MS = 15000;
 
 function readMirror(key: string): LocalMirror | null {
   try {
@@ -99,19 +107,35 @@ export function useAttempt({
   const [attemptId, setAttemptId] = useState<string | null>(null);
   const [saveState, setSaveState] = useState<SaveState>("idle");
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const config = useRef<AttemptConfig | null>(null);
+  const lastCreateTry = useRef(0);
   const pending = useRef<SaveBody | null>(null);
 
   /** Lượt đang làm dở trên server, kèm đáp án mới hơn từ bản sao cục bộ nếu có. */
   const fetchInProgress = useCallback(async (): Promise<AttemptRow | null> => {
+    const mirror = readMirror(mirrorKey);
+    // Bài chỉ có trên máy này (mất mạng lúc bắt đầu), hoặc server không trả lời.
+    const fromMirror = (): AttemptRow | null =>
+      mirror && mirror.testSlug === testSlug && mirror.config
+        ? {
+            id: mirror.attemptId ?? "",
+            testSlug,
+            config: mirror.config,
+            answers: Object.fromEntries(Object.entries(mirror.answers)),
+            marked: mirror.marked,
+            secondsLeft: mirror.secondsLeft ?? null,
+            updatedAt: new Date(mirror.savedAt).toISOString(),
+            progress: mirror.progress,
+          }
+        : null;
     try {
       const r = await fetch(
         `${basePath}?testSlug=${encodeURIComponent(testSlug)}&status=in_progress`,
       );
-      if (!r.ok) return null;
+      if (!r.ok) return fromMirror();
       const { attempt } = (await r.json()) as { attempt: AttemptRow | null };
-      if (!attempt) return null;
+      if (!attempt) return mirror?.attemptId === null ? fromMirror() : null;
 
-      const mirror = readMirror(mirrorKey);
       if (mirror?.attemptId !== attempt.id) return attempt;
       // Vị trí audio chỉ máy này biết, lấy luôn. Đáp án/đồng hồ thì lấy bản mới hơn.
       const withProgress = { ...attempt, progress: mirror.progress };
@@ -125,17 +149,19 @@ export function useAttempt({
       }
       return withProgress;
     } catch {
-      return null;
+      return fromMirror();
     }
   }, [basePath, mirrorKey, testSlug]);
 
   const start = useCallback(
-    async (config: AttemptConfig, restart: boolean): Promise<AttemptRow | null> => {
+    async (cfg: AttemptConfig, restart: boolean): Promise<AttemptRow | null> => {
+      config.current = cfg;
+      lastCreateTry.current = Date.now();
       try {
         const r = await fetch(basePath, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ...identity, testSlug, config, restart }),
+          body: JSON.stringify({ ...identity, testSlug, config: cfg, restart }),
         });
         if (!r.ok) {
           setSaveState("error");
@@ -143,6 +169,7 @@ export function useAttempt({
         }
         const { attempt } = (await r.json()) as { attempt: AttemptRow };
         setAttemptId(attempt.id);
+        setSaveState("idle");
         if (restart) clearMirror(mirrorKey);
         return attempt;
       } catch {
@@ -154,8 +181,8 @@ export function useAttempt({
     [basePath, mirrorKey, testSlug, identity],
   );
 
-  const flush = useCallback(async () => {
-    const id = attemptId;
+  const flush = useCallback(async (idOverride?: string) => {
+    const id = idOverride ?? attemptId;
     const body = pending.current;
     if (!id || !body) return;
     pending.current = null;
@@ -183,12 +210,32 @@ export function useAttempt({
       secondsLeft: number | null,
       opts?: { progress?: ExamProgress; now?: boolean },
     ) => {
-      if (!attemptId) return;
       writeMirror(mirrorKey, {
-        attemptId, answers, marked, secondsLeft, progress: opts?.progress, savedAt: Date.now(),
+        attemptId, testSlug, config: config.current ?? undefined,
+        answers, marked, secondsLeft, progress: opts?.progress, savedAt: Date.now(),
       });
       pending.current = { answers, marked, secondsLeft };
       if (timer.current) clearTimeout(timer.current);
+      if (!attemptId) {
+        // Chưa có lượt trên server: bài đã nằm trong localStorage, thỉnh thoảng
+        // thử tạo lượt lại; được thì đẩy luôn bản mới nhất lên.
+        const cfg = config.current;
+        if (!cfg || Date.now() - lastCreateTry.current < RECREATE_EVERY_MS) return;
+        lastCreateTry.current = Date.now();
+        fetch(basePath, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...identity, testSlug, config: cfg, restart: false }),
+        })
+          .then((r) => (r.ok ? r.json() : null))
+          .then((res: { attempt: AttemptRow } | null) => {
+            if (!res) return;
+            setAttemptId(res.attempt.id);
+            void flush(res.attempt.id); // đẩy ngay bản đang chờ lên lượt vừa tạo
+          })
+          .catch(() => {});
+        return;
+      }
       if (opts?.now) {
         const body = pending.current;
         pending.current = null;
@@ -200,9 +247,9 @@ export function useAttempt({
         }).catch(() => {});
         return;
       }
-      timer.current = setTimeout(flush, SAVE_DEBOUNCE_MS);
+      timer.current = setTimeout(() => void flush(), SAVE_DEBOUNCE_MS);
     },
-    [attemptId, basePath, mirrorKey, flush],
+    [attemptId, basePath, mirrorKey, flush, identity, testSlug],
   );
 
   /**

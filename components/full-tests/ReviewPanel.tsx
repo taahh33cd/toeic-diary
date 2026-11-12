@@ -162,10 +162,21 @@ export function ReviewPanel({
           {result.scaled ? (
             <>
               <p style={{ fontSize: "3.2rem", fontWeight: 800, lineHeight: 1, margin: "0 0 0.3rem", color: P.primary }}>
-                {result.scaled.total}
+                {result.estimated && "~"}{result.scaled.total}
               </p>
               <p style={{ fontSize: "0.95rem", color: P.inkSoft, margin: 0 }}>
                 Listening {result.scaled.ls} · Reading {result.scaled.rd}
+              </p>
+            </>
+          ) : result.listening !== null || result.reading !== null ? (
+            <>
+              <p style={{ fontSize: "3.2rem", fontWeight: 800, lineHeight: 1, margin: "0 0 0.3rem", color: P.primary }}>
+                {result.estimated && "~"}{result.listening ?? result.reading}
+                <span style={{ fontSize: "1.1rem", color: P.muted, fontWeight: 700 }}> / 495</span>
+              </p>
+              <p style={{ fontSize: "0.95rem", color: P.inkSoft, margin: 0 }}>
+                {result.listening !== null ? "Điểm Listening quy đổi" : "Điểm Reading quy đổi"}
+                {" · "}{Math.round(result.accuracy * 100)}% câu đúng
               </p>
             </>
           ) : (
@@ -174,9 +185,14 @@ export function ReviewPanel({
                 {Math.round(result.accuracy * 100)}%
               </p>
               <p style={{ fontSize: "0.9rem", color: P.muted, margin: 0, lineHeight: 1.5 }}>
-                Chỉ quy đổi điểm 10–990 khi làm đủ cả 7 part
+                Làm đủ Part 1–4 để có điểm Listening, đủ Part 5–7 để có điểm Reading
               </p>
             </>
+          )}
+          {result.estimated && (
+            <p style={{ fontSize: "0.78rem", color: P.muted, margin: "0.4rem 0 0" }}>
+              ~ Ước tính: một số câu thiếu nội dung không được chấm, điểm quy đổi theo tỷ lệ câu đúng.
+            </p>
           )}
           <p style={{ fontSize: "0.88rem", color: P.inkSoft, margin: "0.7rem 0 0" }}>
             Đúng <strong>{result.correct}</strong> · Sai <strong>{counts.wrong}</strong> ·

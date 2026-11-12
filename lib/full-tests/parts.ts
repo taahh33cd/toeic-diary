@@ -50,9 +50,6 @@ export function suggestedMinutes(parts: PartNumber[]): number {
   return parts.reduce((sum, p) => sum + partMeta(p).minutes, 0);
 }
 
-/** Chế độ thi thật tách 2 đồng hồ: Listening theo audio, Reading 75 phút. */
-export const REAL_READING_MINUTES = 75;
-
 export const TIME_PRESETS = [
   { label: "Chuẩn thi thật", minutes: 120 },
   { label: "60 phút", minutes: 60 },

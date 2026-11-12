@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import {
-  ALL_PARTS, PARTS, REAL_READING_MINUTES, TIME_PRESETS,
+  ALL_PARTS, PARTS, TIME_PRESETS,
   hasSection, partMeta, suggestedMinutes,
   type ExamMode,
 } from "@/lib/full-tests/parts";
@@ -26,7 +26,7 @@ const MODES: { value: ExamMode; label: string; blurb: string; bullets: string[] 
     blurb: "Mô phỏng đúng phòng thi",
     bullets: [
       "Audio chạy liền mạch một lần, không tua không nghe lại",
-      "Listening theo audio (~45 phút) rồi khoá, Reading tính riêng 75 phút",
+      "Listening theo audio (~45 phút) rồi khoá, Reading tính giờ riêng (đủ đề 75 phút)",
       "Không quay lại phần Listening đã qua",
     ],
   },
@@ -233,7 +233,7 @@ export function SetupPanel({
                 )}
                 {hasSection(parts, "reading") && (
                   <span style={{ padding: "6px 12px", background: P.panelAlt, border: `1px solid ${P.border}`, borderRadius: 8, fontSize: "0.8rem" }}>
-                    Reading — <strong>{REAL_READING_MINUTES} phút</strong>
+                    Reading — <strong>{suggestedMinutes(parts.filter((p) => partMeta(p).section === "reading"))} phút</strong>
                   </span>
                 )}
               </div>
@@ -273,14 +273,21 @@ export function SetupPanel({
                     max={300}
                     value={minutes || ""}
                     onFocus={() => setCustomTime(true)}
-                    onChange={(e) => { setCustomTime(true); setMinutes(Math.max(0, Number(e.target.value))); }}
+                    onChange={(e) => {
+                      setCustomTime(true);
+                      const v = Math.round(Number(e.target.value));
+                      setMinutes(Number.isFinite(v) ? Math.min(300, Math.max(0, v)) : 0);
+                    }}
+                    onBlur={() => { if (customTime && minutes < 1) setMinutes(suggested || 1); }}
                     style={{ width: 52, background: "transparent", border: "none", color: P.ink, fontFamily: P.sans, fontSize: "0.83rem", fontWeight: 700 }}
                   />
                   phút
                 </label>
               </div>
               <p style={{ fontSize: "0.78rem", color: P.muted, margin: "0.8rem 0 0" }}>
-                {minutes === 0 ? "Không bấm giờ — làm bao lâu cũng được." : `Đồng hồ đếm ngược ${minutes} phút cho ${questionCount} câu.`}
+                {customTime && minutes < 1
+                  ? "Nhập số phút từ 1 đến 300."
+                  : minutes === 0 ? "Không bấm giờ — làm bao lâu cũng được." : `Đồng hồ đếm ngược ${minutes} phút cho ${questionCount} câu.`}
               </p>
             </>
           )}
@@ -312,7 +319,11 @@ export function SetupPanel({
         <button
           type="button"
           disabled={parts.length === 0}
-          onClick={() => onStart({ mode, parts, minutes: realMode ? 0 : minutes, autoSubmit, instantFeedback })}
+          // Ô tự nhập để trống thì dùng thời gian gợi ý, không âm thầm thành "không giới hạn"
+          onClick={() => onStart({
+            mode, parts, autoSubmit, instantFeedback,
+            minutes: realMode ? 0 : customTime && minutes < 1 ? suggested : minutes,
+          })}
           style={{
             width: "100%", padding: "0.95rem", borderRadius: 11, border: "none",
             background: parts.length ? P.primary : P.border,

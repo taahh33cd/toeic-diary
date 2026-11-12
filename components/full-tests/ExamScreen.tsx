@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { PARTS, REAL_READING_MINUTES, partMeta } from "@/lib/full-tests/parts";
+import Link from "next/link";
+import { PARTS, partMeta, suggestedMinutes } from "@/lib/full-tests/parts";
 import type { ExamProgress } from "@/components/shared/useAttempt";
 import type {
   FullTest, FullTestGroup, FullTestQuestion, PartNumber,
@@ -15,6 +16,7 @@ type Stage = "listening" | "reading";
 const SPEEDS = [0.75, 1, 1.25, 1.5];
 // Mặc định là bậc 1 (1.15). Bậc 0 = 1.0 tương đương cỡ chữ cũ, để ai muốn nhỏ lại.
 const FONT_STEPS = [1, 1.15, 1.32, 1.5];
+const FONT_LABELS = ["A−", "A", "A+", "A++"];
 const FONT_DEFAULT = 1;
 const SPLIT_KEY = "fulltest:split";
 
@@ -67,6 +69,7 @@ export function ExamScreen({
   saveState,
   onProgress,
   realLabel = "Thi thật",
+  exitHref = "/skills/full-tests",
 }: {
   test: FullTest;
   config: RunConfig;
@@ -88,6 +91,8 @@ export function ExamScreen({
   ) => void;
   /** Màn luyện một part gọi chế độ này là "Thi thử" thay vì "Thi thật" */
   realLabel?: string;
+  /** Nút thoát giữa bài quay về đâu */
+  exitHref?: string;
 }) {
   const P = PALETTE[skin];
   const real = config.mode === "real";
@@ -97,6 +102,8 @@ export function ExamScreen({
   const partsInPlay = useMemo(() => PARTS.filter((p) => chosen.has(p.part)), [chosen]);
   const listeningParts = useMemo(() => partsInPlay.filter((p) => p.section === "listening"), [partsInPlay]);
   const readingParts = useMemo(() => partsInPlay.filter((p) => p.section === "reading"), [partsInPlay]);
+  // Thi thật: đủ Part 5-7 là 75 phút như đề thật; chọn bớt part thì bớt giờ tương ứng.
+  const readingSeconds = suggestedMinutes(readingParts.map((p) => p.part)) * 60;
 
   const [answers, setAnswers] = useState<Record<number, string>>(initialAnswers ?? {});
   const [marked, setMarked] = useState<Set<number>>(new Set(initialMarked ?? []));
@@ -135,6 +142,8 @@ export function ExamScreen({
   const [narrow, setNarrow] = useState(false);
   const [confirming, setConfirming] = useState(false);
   const [zoomed, setZoomed] = useState<string | null>(null);
+  /** Màn hẹp không có sidebar ⇒ mở danh sách câu dạng ngăn kéo */
+  const [navOpen, setNavOpen] = useState(false);
   const [splitPct, setSplitPct] = useState(58);
 
   // Đồng hồ tính theo mốc giờ thật (deadline), không đếm từng nhịp setTimeout:
@@ -144,7 +153,7 @@ export function ExamScreen({
     const total = initialSecondsLeft != null
       ? initialSecondsLeft
       : real
-        ? start.stage === "reading" && readingParts.length ? REAL_READING_MINUTES * 60 : null
+        ? start.stage === "reading" && readingParts.length ? readingSeconds : null
         : config.minutes > 0 ? config.minutes * 60 : null;
     return total == null ? null : Date.now() + total * 1000;
   });
@@ -280,11 +289,11 @@ export function ExamScreen({
     if (next >= playlist.length) {
       setPlaying(false);
       setStage("reading");
-      setDeadline(readingParts.length ? Date.now() + REAL_READING_MINUTES * 60 * 1000 : null);
+      setDeadline(readingParts.length ? Date.now() + readingSeconds * 1000 : null);
       return;
     }
     setPlayIndex(next);
-  }, [gap, real, playing, pendingNext, playIndex, playlist.length, readingParts.length]);
+  }, [gap, real, playing, pendingNext, playIndex, playlist.length, readingParts.length, readingSeconds]);
 
   // đoạn đang phát quyết định nhóm đang hiển thị
   const current = playlist[playIndex];
@@ -371,8 +380,14 @@ export function ExamScreen({
     if (el) el.playbackRate = real ? 1 : speed;
   }, [speed, real, playIndex]);
 
+  /** letter rỗng = bỏ chọn */
   function pick(q: number, letter: string) {
-    setAnswers((prev) => ({ ...prev, [q]: letter }));
+    setAnswers((prev) => {
+      const next = { ...prev };
+      if (letter) next[q] = letter;
+      else delete next[q];
+      return next;
+    });
   }
   function toggleMark(q: number) {
     setMarked((prev) => {
@@ -390,14 +405,17 @@ export function ExamScreen({
   const answeredCount = allQuestions.filter((q) => answers[q.number]).length;
   const fontScale = FONT_STEPS[fontStep];
 
-  // Chế độ thi thật: chỉ khoá điều hướng trong giai đoạn Listening (playlist tự
-  // chạy, không được đi lại). Sang Reading thì vẫn phải chuyển bài đọc bình thường.
+  // Chế độ thi thật, giai đoạn Listening: được xem trước các nhóm sắp phát (như
+  // lật trước tờ đề), nhưng không quay lại nhóm đã nghe qua. Sang Reading thì
+  // chuyển bài đọc tự do.
   const navLocked = real && stage === "listening";
+  const lockedBefore = navLocked && current ? current.questionStart : 0;
 
   // điều hướng nhóm: hết nhóm thì sang part kế trong nhóm part đang mở
   const partPos = visibleParts.findIndex((p) => p.part === activePart);
-  const canPrev = paginated && !navLocked && (page > 0 || partPos > 0);
-  const canNext = paginated && !navLocked && (page < pageCount - 1 || partPos < visibleParts.length - 1);
+  const canPrev = paginated && (page > 0 || partPos > 0)
+    && (!navLocked || (shownGroups[0]?.questionStart ?? 0) > lockedBefore);
+  const canNext = paginated && (page < pageCount - 1 || partPos < visibleParts.length - 1);
 
   function prevGroup() {
     if (page > 0) return setGroupIndex(page - 1);
@@ -413,13 +431,44 @@ export function ExamScreen({
     if (nxt) goToPart(nxt.part, 0);
   }
 
+  // Phím ←/→ chuyển nhóm (bỏ qua khi đang gõ trong ô nhập)
+  const keyNav = useRef({ canPrev, canNext, prevGroup, nextGroup });
+  useEffect(() => { keyNav.current = { canPrev, canNext, prevGroup, nextGroup }; });
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      const t = e.target as HTMLElement | null;
+      if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
+      if (e.altKey || e.ctrlKey || e.metaKey) return;
+      const k = keyNav.current;
+      if (e.key === "ArrowLeft" && k.canPrev) k.prevGroup();
+      else if (e.key === "ArrowRight" && k.canNext) k.nextGroup();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
-    <div style={{ height: "100vh", background: P.bg, color: P.ink, fontFamily: P.sans, display: "flex", flexDirection: "column", overflow: "hidden" }}>
+    // Phủ toàn màn hình, che cả header của site: khỏi cuộn hai lớp, khỏi lỡ tay
+    // bấm link ra ngoài giữa giờ thi. Thoát bằng nút ← ở góc trái.
+    <div style={{ position: "fixed", inset: 0, zIndex: 55, background: P.bg, color: P.ink, fontFamily: P.sans, display: "flex", flexDirection: "column", overflow: "hidden" }}>
 
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <header style={{ display: "flex", alignItems: "center", gap: 12, padding: "0.6rem 1rem", background: P.panel, borderBottom: `1px solid ${P.border}`, flexWrap: "wrap", flexShrink: 0 }}>
         <span style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 800, fontSize: "1.02rem", minWidth: 0 }}>
-          <span style={{ color: P.primary }}>✳</span>
+          <Link
+            href={exitHref}
+            title="Thoát — bài làm được lưu, lần sau làm tiếp"
+            onClick={(e) => {
+              if (!window.confirm("Thoát khỏi bài thi? Bài làm đã được lưu, lần sau vào lại sẽ làm tiếp được.")) {
+                e.preventDefault();
+                return;
+              }
+              report(true);
+            }}
+            style={{ ...iconBtn(P), textDecoration: "none", fontSize: "1rem" }}
+          >
+            ←
+          </Link>
           <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{test.title}</span>
         </span>
 
@@ -443,7 +492,7 @@ export function ExamScreen({
           </span>
 
           {saveState === "error" ? (
-            <span title="Bài vẫn được giữ trên máy này, sẽ thử lưu lại ở lần chọn tiếp theo"
+            <span title="Bài vẫn được giữ trên máy này và sẽ tự lưu lên server khi có mạng lại"
               style={{ fontSize: "0.78rem", fontWeight: 700, color: P.bad }}>
               ⚠ Chưa lưu được
             </span>
@@ -461,8 +510,13 @@ export function ExamScreen({
             title={`Cỡ chữ ${Math.round(fontScale * 100)}%`}
             style={iconBtn(P)}
           >
-            {fontStep === 0 ? "A−" : fontStep === FONT_DEFAULT ? "A" : "A+"}
+            {FONT_LABELS[fontStep]}
           </button>
+          {narrow && (
+            <button type="button" onClick={() => setNavOpen(true)} title="Danh sách câu" style={iconBtn(P)}>
+              ☰
+            </button>
+          )}
           <button
             type="button"
             onClick={() => setConfirming(true)}
@@ -477,7 +531,7 @@ export function ExamScreen({
       <nav style={{ display: "flex", alignItems: "center", gap: 6, padding: "0.5rem 1rem", background: P.panelAlt, borderBottom: `1px solid ${P.border}`, overflowX: "auto", flexShrink: 0 }}>
         {partsInPlay.map((p) => {
           const on = p.part === activePart;
-          const open = visibleParts.some((v) => v.part === p.part);
+          const open = visibleParts.some((v) => v.part === p.part) && p.last >= lockedBefore;
           const qs = groups.filter((g) => g.part === p.part).flatMap((g) => g.questions).filter((q) => !q.broken);
           const got = qs.filter((q) => answers[q.number]).length;
           return (
@@ -485,7 +539,9 @@ export function ExamScreen({
               key={p.part}
               type="button"
               disabled={!open}
-              onClick={() => goToPart(p.part)}
+              onClick={() => (lockedBefore >= p.first && lockedBefore <= p.last
+                ? jumpToQuestion(lockedBefore)
+                : goToPart(p.part))}
               title={open ? p.labelVi : "Phần này đã khoá"}
               style={{
                 display: "inline-flex", alignItems: "center", gap: 7, flexShrink: 0,
@@ -565,7 +621,6 @@ export function ExamScreen({
         <MainPane
           P={P}
           groups={shownGroups}
-          part={activePart}
           split={hasSplit(activePart)}
           real={real}
           config={config}
@@ -581,6 +636,7 @@ export function ExamScreen({
           speed={speed}
           setSpeed={setSpeed}
           onZoom={setZoomed}
+          lockedBefore={lockedBefore}
           splitPct={splitPct}
           setSplitPct={(v) => { setSplitPct(v); localStorage.setItem(SPLIT_KEY, String(v)); }}
         />
@@ -598,11 +654,37 @@ export function ExamScreen({
               questionStart: shownGroups[0].questionStart,
               questionEnd: shownGroups[shownGroups.length - 1].questionEnd,
             } : null}
-            jumpLocked={navLocked}
+            lockedBefore={lockedBefore}
             onJump={jumpToQuestion}
           />
         )}
       </div>
+
+      {narrow && navOpen && (
+        <div
+          onClick={() => setNavOpen(false)}
+          style={{ position: "fixed", inset: 0, background: "rgba(6,10,20,.55)", zIndex: 65, display: "flex", justifyContent: "flex-end" }}
+        >
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(300px, 86vw)", height: "100%", display: "flex" }}>
+            <ProgressSidebar
+              P={P}
+              fill
+              partsInPlay={partsInPlay}
+              visibleParts={visibleParts}
+              groups={groups}
+              answers={answers}
+              marked={marked}
+              activePart={activePart}
+              shownRange={paginated && shownGroups.length ? {
+                questionStart: shownGroups[0].questionStart,
+                questionEnd: shownGroups[shownGroups.length - 1].questionEnd,
+              } : null}
+              lockedBefore={lockedBefore}
+              onJump={(q) => { jumpToQuestion(q); setMobilePane("questions"); setNavOpen(false); }}
+            />
+          </div>
+        </div>
+      )}
 
       {zoomed && (
         <div
@@ -668,13 +750,12 @@ function navBtn(P: Palette, disabled: boolean): React.CSSProperties {
 // ── Khung chính ──────────────────────────────────────────────────────────────
 
 function MainPane({
-  P, groups, part, split, real, config, answers, marked, onPick, onMark,
+  P, groups, split, real, config, answers, marked, onPick, onMark,
   fontScale, narrow, mobilePane, setMobilePane, audioBase, speed, setSpeed,
-  onZoom, splitPct, setSplitPct,
+  onZoom, lockedBefore, splitPct, setSplitPct,
 }: {
   P: Palette;
   groups: FullTestGroup[];
-  part: PartNumber;
   split: boolean;
   real: boolean;
   config: RunConfig;
@@ -690,6 +771,8 @@ function MainPane({
   speed: number;
   setSpeed: (s: number) => void;
   onZoom: (src: string | null) => void;
+  /** Thi thật đang nghe: câu trước mốc này đã qua, không chọn lại được */
+  lockedBefore: number;
   splitPct: number;
   setSplitPct: (v: number) => void;
 }) {
@@ -724,6 +807,7 @@ function MainPane({
         onMark={onMark}
         fontScale={fontScale}
         reveal={config.instantFeedback && !real && Boolean(answers[q.number])}
+        locked={q.number < lockedBefore}
       />
     ));
 
@@ -739,6 +823,22 @@ function MainPane({
             </div>
           ))}
         </div>
+      </div>
+    );
+  }
+
+  // Màn hẹp: chỉ bài đọc dài (Part 6/7) mới cần tách hai tab. Ảnh và audio
+  // xếp chung một cột với câu hỏi — tách tab thì audio bị gỡ khỏi trang và tắt
+  // tiếng ngay khi chuyển sang xem câu hỏi.
+  if (narrow && !groups.some((g) => (g.passages?.length ?? 0) > 0)) {
+    return (
+      <div style={{ flex: 1, minWidth: 0, overflowY: "auto", padding: "1rem", background: P.bg }}>
+        {groups.map((g) => (
+          <div key={g.questionStart}>
+            <MediaBlock P={P} g={g} real={real} audioBase={audioBase} speed={speed} setSpeed={setSpeed} fontScale={fontScale} onZoom={onZoom} />
+            {questionCards(g)}
+          </div>
+        ))}
       </div>
     );
   }
@@ -759,7 +859,7 @@ function MainPane({
                 onClick={() => setMobilePane(k)}
                 style={{ flex: 1, padding: "7px 10px", borderRadius: 8, fontFamily: P.sans, fontSize: "0.85rem", fontWeight: 700, cursor: "pointer", background: on ? P.primary : "transparent", color: on ? P.onPrimary : P.inkSoft, border: `1px solid ${on ? P.primary : P.border}` }}
               >
-                {k === "media" ? (part <= 4 ? "Nghe" : "Bài đọc") : "Câu hỏi"}
+                {k === "media" ? "Bài đọc" : "Câu hỏi"}
               </button>
             );
           })}
@@ -882,7 +982,7 @@ function AudioRow({
 }
 
 function QuestionCard({
-  P, q, picked, isMarked, onPick, onMark, fontScale, reveal,
+  P, q, picked, isMarked, onPick, onMark, fontScale, reveal, locked,
 }: {
   P: Palette;
   q: FullTestQuestion;
@@ -892,7 +992,11 @@ function QuestionCard({
   onMark: (q: number) => void;
   fontScale: number;
   reveal: boolean;
+  /** Đoạn nghe đã qua (thi thật) */
+  locked: boolean;
 }) {
+  // Đã hiện đáp án thì không đổi được nữa, không thì điểm luyện tập vô nghĩa.
+  const frozen = locked || reveal;
   const letters = q.options ? Object.keys(q.options).sort() : ["A", "B", "C", "D"];
   const exp = q.explanation;
   // Part 1/2: đề bài và phương án chỉ có trong audio, không được hiện chữ khi
@@ -914,6 +1018,16 @@ function QuestionCard({
     >
       <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10, marginBottom: "0.6rem" }}>
         <span style={{ fontWeight: 800, fontSize: `${0.92 * fontScale}rem` }}>Câu {q.number}</span>
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
+        {picked && !frozen && (
+          <button
+            type="button"
+            onClick={() => onPick(q.number, "")}
+            style={{ background: "transparent", border: "none", cursor: "pointer", fontFamily: P.sans, fontSize: `${0.76 * fontScale}rem`, fontWeight: 700, color: P.muted, padding: 0 }}
+          >
+            ✕ Bỏ chọn
+          </button>
+        )}
         <button
           type="button"
           onClick={() => onMark(q.number)}
@@ -921,6 +1035,7 @@ function QuestionCard({
         >
           {isMarked ? "🏳 Đã đánh dấu" : "⚐ Đánh dấu"}
         </button>
+        </span>
       </div>
 
       {showText && q.prompt && (
@@ -939,11 +1054,14 @@ function QuestionCard({
             <button
               key={L}
               type="button"
+              disabled={frozen}
               onClick={() => onPick(q.number, L)}
+              title={locked ? "Đoạn nghe này đã qua" : undefined}
               style={{
                 display: "flex", alignItems: "center", gap: 10, textAlign: "left",
                 padding: "0.6rem 0.8rem",
-                borderRadius: 8, cursor: "pointer", fontFamily: P.sans,
+                borderRadius: 8, cursor: frozen ? "default" : "pointer", fontFamily: P.sans,
+                opacity: locked && !on ? 0.6 : 1,
                 background: on || isAnswer ? P.primarySoft : "transparent",
                 border: `${on || isAnswer || isWrong ? 2 : 1}px solid ${border}`,
                 color: P.ink, fontSize: `${0.88 * fontScale}rem`,
@@ -988,7 +1106,7 @@ function QuestionCard({
 
 function ProgressSidebar({
   P, partsInPlay, visibleParts, groups, answers, marked, activePart, shownRange,
-  jumpLocked, onJump,
+  lockedBefore, onJump, fill = false,
 }: {
   P: Palette;
   partsInPlay: { part: PartNumber; label: string; first: number; last: number }[];
@@ -998,15 +1116,18 @@ function ProgressSidebar({
   marked: Set<number>;
   activePart: PartNumber;
   shownRange: { questionStart: number; questionEnd: number } | null;
-  jumpLocked: boolean;
+  /** Thi thật đang nghe: câu trước mốc này đã qua */
+  lockedBefore: number;
   onJump: (q: number) => void;
+  /** Dùng trong ngăn kéo màn hẹp: chiếm hết chiều rộng */
+  fill?: boolean;
 }) {
   const total = groups.flatMap((g) => g.questions).filter((q) => !q.broken);
   const done = total.filter((q) => answers[q.number]).length;
   const pct = total.length ? Math.round((done / total.length) * 100) : 0;
 
   return (
-    <aside style={{ flex: "0 0 236px", overflowY: "auto", background: P.panel, borderLeft: `1px solid ${P.border}`, padding: "0.9rem" }}>
+    <aside style={{ flex: fill ? 1 : "0 0 236px", overflowY: "auto", background: P.panel, borderLeft: `1px solid ${P.border}`, padding: "0.9rem" }}>
       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 8 }}>
         <span style={{ fontSize: "0.93rem", fontWeight: 800 }}>Tiến độ</span>
         <span style={{ fontSize: "0.79rem", color: P.muted, fontVariantNumeric: "tabular-nums" }}>
@@ -1029,7 +1150,8 @@ function ProgressSidebar({
               {qs.map((q) => {
                 const picked = Boolean(answers[q.number]);
                 const flag = marked.has(q.number);
-                const clickable = open && !q.broken && !jumpLocked;
+                const past = q.number < lockedBefore;
+                const clickable = open && !q.broken && !past;
                 const onScreen =
                   shownRange != null &&
                   p.part === activePart &&
@@ -1041,7 +1163,7 @@ function ProgressSidebar({
                     type="button"
                     disabled={!clickable}
                     onClick={() => onJump(q.number)}
-                    title={q.broken ? "Câu bị thiếu nội dung" : jumpLocked ? "Không đi lại được ở phần Listening" : undefined}
+                    title={q.broken ? "Câu bị thiếu nội dung" : past ? "Đoạn nghe này đã qua" : undefined}
                     style={{
                       padding: "4px 0", borderRadius: 5, fontFamily: P.sans,
                       fontSize: "0.76rem", fontWeight: 700,

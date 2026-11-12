@@ -187,6 +187,7 @@ export function PartPracticeRunner({
         saveState={attempt.saveState}
         onProgress={attempt.save}
         realLabel="Thi thử"
+        exitHref={backHref}
       />
     );
   }
