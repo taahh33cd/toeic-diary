@@ -17,7 +17,20 @@
    169,
    181
   ],
-  "brokenQuestions": []
+  "brokenQuestions": [
+   132,
+   133,
+   134,
+   136,
+   137,
+   138,
+   140,
+   141,
+   142,
+   144,
+   145,
+   146
+  ]
  },
  "groups": [
   {
@@ -3763,7 +3776,7 @@
    "passages": [
     {
      "label": "Advertisement",
-     "text": "Estella Guitar Lessons: Play with the Best\n\nWhether you play acoustic guitar ------- electric, taking lessons with an Estella Guitar teacher is the best way to improve your ability."
+     "text": "Estella Guitar Lessons: Play with the Best\n\nWhether you play acoustic guitar --- [131] --- electric, taking lessons with an Estella Guitar teacher is the best way to improve your ability."
     }
    ],
    "questions": [
@@ -3797,7 +3810,7 @@
       "D": "us"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "(Đáp án: A): Cần điền tính từ sở hữu đứng trước cụm danh từ \"qualified instructors\", đáp án là \"our\".",
@@ -3816,7 +3829,7 @@
       "D": "It took them several years to master their instruments."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "(Đáp án: C): Câu phù hợp để điền nối tiếp ý là \"Nguồn lực tốt nhất dành cho bạn với tư cách là người học là một chuyên gia để hướng dẫn bạn tiến bộ\" (phù hợp với việc nhắc tới giáo viên ở câu sau).",
@@ -3835,7 +3848,7 @@
       "D": "At that point"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Cụm chuyển ý \"With that in mind\" (hãy ghi nhớ điều này) phù hợp để làm rõ ý cho việc phát triển bản sắc riêng.\n\nQuestions 135 - 138",
@@ -3853,7 +3866,7 @@
    "passages": [
     {
      "label": "Policy",
-     "text": "In-home delivery takes approximately one week after an order is shipped from our warehouse. The actual time may vary based on the location of your ------- and your availability for accepting the item."
+     "text": "In-home delivery takes approximately one week after an order is shipped from our warehouse. The actual time may vary based on the location of your --- [135] --- and your availability for accepting the item."
     }
    ],
    "questions": [
@@ -3887,7 +3900,7 @@
       "D": "that scheduled"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "(Đáp án: A): Cần dùng động từ ở dạng to-Vinf (\"to schedule\") để chỉ mục đích của hành động làm việc với nhà vận chuyển.",
@@ -3906,7 +3919,7 @@
       "D": "in the meantime"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "(Đáp án: C): Liên từ chỉ sự tương phản, đối lập \"though\" (mặc dù) phù hợp với ngữ cảnh của câu.",
@@ -3925,7 +3938,7 @@
       "D": "All packing materials will be removed."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "(Đáp án: D): Câu phù hợp để điền vào ngữ cảnh giao hàng nội thất là \"Tất cả vật liệu đóng gói sẽ bị loại bỏ\".\n\nQuestions 139 - 142",
@@ -3943,7 +3956,7 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: Thao Pham <thaopham@amail.com>\nFrom: Leena Montoya <Imontoya@academemedia.com>\nDate: April 17\nSubject: Subscription\n\nDear Mr. Pham,\n\nYour subscription to Medical Innovations Quarterly has been canceled. -------."
+     "text": "To: Thao Pham <thaopham@amail.com>\nFrom: Leena Montoya <Imontoya@academemedia.com>\nDate: April 17\nSubject: Subscription\n\nDear Mr. Pham,\n\nYour subscription to Medical Innovations Quarterly has been canceled. --- [139] ---."
     }
    ],
    "questions": [
@@ -3977,7 +3990,7 @@
       "D": "Starting"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "(Đáp án: D): Chỗ trống nằm trong mệnh đề rút gọn chủ ngữ mang nghĩa chủ động, đáp án là dạng thêm -ing: \"Starting\".",
@@ -3996,7 +4009,7 @@
       "D": "teacher"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "(Đáp án: C): Dựa vào từ \"subscriptions\" và \"receive print edition\", từ phù hợp là \"reader\" (độc giả).",
@@ -4015,7 +4028,7 @@
       "D": "next"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Giới từ mang nghĩa \"khi\" là \"upon\" (upon checkout: khi thanh toán).\n\nQuestions 143 - 146",
@@ -4033,7 +4046,7 @@
    "passages": [
     {
      "label": "Information",
-     "text": "In a commercial kitchen, all refrigerators are required to have a thermometer that ------- from 0°F (-18°C) to 220°F (104°C)."
+     "text": "In a commercial kitchen, all refrigerators are required to have a thermometer that --- [143] --- from 0°F (-18°C) to 220°F (104°C)."
     }
    ],
    "questions": [
@@ -4067,7 +4080,7 @@
       "D": "placement"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "(Đáp án: D): Danh từ liên quan đến vị trí đặt nhiệt kế trong tủ lạnh là \"placement\" (vị trí, chỗ đặt).",
@@ -4086,7 +4099,7 @@
       "D": "They can also be purchased in bulk."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Câu phù hợp miêu tả vị trí của nhiệt kế trong tủ lạnh là \"Cái này thường ở bên trong cánh cửa\".",
@@ -4105,7 +4118,7 @@
       "D": "removed"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Động từ bị động phù hợp với ngữ cảnh thấy ngay khi mở cửa là \"seen\" (được nhìn thấy).\n\nPart 7 (Câu 147 - 150)\nQuestions 147-148 (Đề cập đến e-mail của Rapido Net):",
@@ -5353,6 +5366,7 @@
   }
  ],
  "warnings": [
-  "2 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 8, 30"
+  "2 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 8, 30",
+  "12 câu Part 6 mất đoạn văn chứa chỗ trống (parser cũ) — tạm bỏ qua, build lại từ docx để khôi phục: [132, 133, 134, 136, 137, 138, 140, 141, 142, 144, 145, 146]"
  ]
 }

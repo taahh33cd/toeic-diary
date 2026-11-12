@@ -303,6 +303,38 @@ def read_explanations(text: str) -> dict[int, dict]:
 
 # ── Reading: 8/10 đề không có marker PART, cắt theo số câu ───────────────────
 
+def split_part6(q_raw: str, lo: int, hi: int) -> tuple[str, str]:
+    """Tách khối Part 6 xen kẽ thành (phần đoạn văn còn lại, phần câu hỏi).
+    Một dòng thuộc câu hỏi nếu là dòng số câu, dòng phương án, hoặc nằm giữa
+    số câu và phương án (D); mọi dòng khác sau (D) là đoạn văn đi tiếp."""
+    passage: list[str] = []
+    questions: list[str] = []
+    in_question = False
+    seen: set[str] = set()
+    for line in q_raw.split("\n"):
+        s = line.strip()
+        mq = re.match(r"^(\d{1,3})\.", s)
+        if mq and lo <= int(mq.group(1)) <= hi:
+            in_question, seen = True, set(re.findall(r"\(([A-D])\)", s))
+            questions.append(line)
+        elif in_question and (re.match(r"^\([A-D]\)", s) or "D" not in seen):
+            seen |= set(re.findall(r"\(([A-D])\)", s))
+            questions.append(line)
+        else:
+            in_question = False
+            passage.append(line)
+    return "\n".join(passage).strip("\n "), "\n".join(questions)
+
+
+def number_blanks(text: str, lo: int) -> str:
+    """Đánh số chỗ trống theo thứ tự: "-------" → "--- [131] ---" như đề 2026.
+    Đề đã tự đánh số ("[131. -------]") thì giữ nguyên."""
+    if re.search(rf"\[{lo}\b", text):
+        return text
+    n = iter(range(lo, lo + 100))
+    return re.sub(r"-{5,}", lambda _: f"--- [{next(n)}] ---", text)
+
+
 def parse_reading(rc_text: str) -> tuple[dict[int, dict], list[dict]]:
     """Trả (câu Part 5, các set Part 6/7). Không dựa vào marker PART vì chỉ đề
     1 và 2 có; ranh giới suy từ số câu và header 'Questions N-M refer to'."""
@@ -324,6 +356,11 @@ def parse_reading(rc_text: str) -> tuple[dict[int, dict], list[dict]]:
                 cut = m.start()
                 break
         passage_raw, q_raw = body[:cut].strip("\n "), body[cut:]
+        if part_of(lo) == 6:
+            # Part 6 đề 3-10 xen kẽ đoạn văn với câu hỏi: đoạn đầu → "131. (A)…(D)"
+            # → đoạn tiếp → "132. …". Trước đây phần sau câu đầu bị bỏ mất.
+            rest, q_raw = split_part6(q_raw, lo, hi)
+            passage_raw = number_blanks("\n".join(x for x in (passage_raw, rest) if x), lo)
 
         # Docx 2024 là text phẳng: không ngắt trang, không bảng, không dấu ngăn,
         # nên passage đôi/ba KHÔNG tách được — giữ nguyên một khối.

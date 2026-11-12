@@ -11,7 +11,20 @@
   "questions": 200,
   "answered": 200,
   "missingAnswers": [],
-  "brokenQuestions": []
+  "brokenQuestions": [
+   132,
+   133,
+   134,
+   136,
+   137,
+   138,
+   140,
+   141,
+   142,
+   144,
+   145,
+   146
+  ]
  },
  "groups": [
   {
@@ -3491,7 +3504,7 @@
    "passages": [
     {
      "label": "Notice",
-     "text": "Sky Air First Pass\nThank you for flying Sky Air First with -------. We hope you enjoy your flight."
+     "text": "Sky Air First Pass\nThank you for flying Sky Air First with --- [131] ---. We hope you enjoy your flight."
     }
    ],
    "questions": [
@@ -3525,7 +3538,7 @@
       "D": "to"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Giới từ.\nĐặc điểm đáp án:\n•\nTừ cần điền đứng sau cụm 'You can take advantage of our best prices on future\nflights, đóng vai trò thể hiện cách thức để khách hàng có thể tận hưởng mức giá\nưu đãi nhất cho các chuyến bay lần tới bằng cách  purchasing a Sky Air First\nPass.' (mua Thẻ bay hạng Nhất của Sky Air).\nNghĩa của câu: Quý khách có thể tận hưởng mức giá ưu đãi nhất cho các chuyến\nbay lần tới bằng cách mua Thẻ bay hạng Nhất của Sky Air.\n Đáp án là một giới từ biểu hiện phương tiện, cách thức.\nLựa chọn đáp án:\n(A) at (giới từ): tại\n(B) on (giới từ): trên, nằm phía trên\n(C) by (giới từ): bằng cách\n(D) to (giới từ): đến",
@@ -3544,7 +3557,7 @@
       "D": "lowest"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Từ loại.\nĐặc điểm đáp án:\n•\nTừ cần điền đứng trước cụm danh từ 'annual fee và đứng sau mao từ 'a', đóng vai\ntrò là tính từ bổ nghĩa cho danh từ 'annual fee' (phí thường niên).\nNghĩa của câu: Chỉ với một mức phí thường niên thấp, quý khách sẽ nhận được\nchiết khấu đặc biệt, nâng hạng ghế và sử dụng phòng chờ dành riêng cho khách\nhạng Nhất của chúng tôi.\n Đáp án là một tính từ bắt đầu bằng phụ âm, phù hợp với nghĩa của câu ở trên.\nLựa chọn đáp án:\n(A) lowers (động từ được chia ở thì hiện tại đơn theo ngôi thứ ba số ít)\n(B) low (tính từ)\n(C) lowly (trạng từ)\n(D) lowest (tính từ so sánh nhất)",
@@ -3563,7 +3576,7 @@
       "D": "The flight delay will be minimal."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp.\nĐặc điểm đáp án:\nCâu cần điền đứng sau \"you will get special discounts, seat upgrades, and the use\nof our exclusive travelers' lounge\", thể hiện quyền lợi được khách hàng sẽ hưởng\nkhi trả phí dịch vụ thường niên.\nCâu đứng sau câu cần điền thể hiện lời nhắc khách hàng liên hệ với tiếp viên hàng\nkhông để nhận thêm thông tin và đơn đăng ký.\n Câu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho câu phía sau\nchỗ trống.\nNghĩa các phương án:\n(A) Chúng tôi hy vọng quý khách sẽ lại chọn bay hạng Nhất của Sky Air.\n(B) Ngoài ra, quý khách sẽ được ưu tiên lên máy bay.\n(C) Vui lòng tìm chỗ ngồi của quý khách ngay.\n(D) Sự chậm trễ của chuyến bay sẽ là tối thiểu.",
@@ -3581,7 +3594,7 @@
    "passages": [
     {
      "label": "Article",
-     "text": "CJOK Radio Show Welcomes New Staff\nQUEENSVILLE (7 July) Local radio station CJOK announced Katherine Dees as the new producer of the popular show Out and About in Queensville. Ms. Dees is now ------- for coordinating schedules, booking guests for the show, and managing media relations."
+     "text": "CJOK Radio Show Welcomes New Staff\nQUEENSVILLE (7 July) Local radio station CJOK announced Katherine Dees as the new producer of the popular show Out and About in Queensville. Ms. Dees is now --- [135] --- for coordinating schedules, booking guests for the show, and managing media relations."
     }
    ],
    "questions": [
@@ -3615,7 +3628,7 @@
       "D": "In addition"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Liên từ.\nĐặc điểm đáp án:\n• Từ cần điền đứng đầu câu, trước dấu phẩy, đóng vai trò làm trạng từ, liên kết câu\nphía trước và câu chứa chỗ trống.\nCâu phía trước nói về trách nhiệm công việc của Cô Dees, câu có từ cần điền nói\nvề việc thuê thêm nhân lực hỗ trợ Cô Dees hoàn thành công việc Mối quan hệ\ncủa 2 câu này là bổ sung thông tin cho nhau.\n Đáp án là trạng từ liên kết mang ý nghĩa bổ sung.\nNghĩa các phương án:\n(A) Even so (trạng từ liên kết): ngay cả như vậy\n(B) In fact (trạng từ liên kết): thật ra thì\n(C) For example (trạng từ liên kết): lấy ví dụ là\n(D) In addition (trạng từ liên kết): thêm vào đó\nTạm dịch: Thêm vào đó, đài đã thuê biên tập âm thanh Virginia Thacker và trợ lý sản\nxuất Reggie Dietrich để hỗ trợ cô Dees trong vai trò mới của mình.",
@@ -3634,7 +3647,7 @@
       "D": "CJOK has more than one popular show in its lineup."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dang câu hỏi: Điền câu thích hợp.\nĐặc điểm đáp án:\nCâu đứng trước câu cần điền nói về việc tuyển dụng Virginia Thacker và Reggie\nDietrich (đã xảy ra).\n Câu cần điền nối tiếp ý câu phía trước chỗ trống.\nNghĩa các phương án:\n(A) Đài CJOK được thành lập cách đây 60 năm.\n(B) Việc tuyển dụng nhân sự gần đây diễn ra sau khi nhà sản xuất Ed Evans nghỉ hưu.\n(C) Cô Dees sinh ra và lớn lên ở Cedarburg.\n(D) CJOK có nhiều hơn một chương trình nổi tiếng trong danh sách phát sóng của họ.",
@@ -3653,7 +3666,7 @@
       "D": "holds"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Từ vựng.\nĐặc điểm đáp án:\nTừ cần điền đứng sau chủ ngữ  The show', đứng trước cụm danh từ ‘musical\nguests, writers, and storytellers', đóng vai trò là động từ chính ở trong câu.\nNghĩa các phương án:\n(A) gives (động từ): cho, đưa\n(B) marks (động từ): đánh dấu\n(C) features (động từ): giới thiệu, tập trung\n(D) holds (động từ): giữ\nTạm dịch: Chương trình giới thiệu các khách mời là nhạc sĩ, nhà văn và người kể chuyện\ntrong một giờ phát sóng hàng tuần.\nTừ vùng cắn\nstaff (n) nhân viên\nannounce (v) thông báo, thông cáo\nproducer (n) nhà sản xuất\ncoordinate (v) điều phối\n• book (v) sắp xếp chỗ ngồi cho ai\nmedia relation (n.phrase) quan hệ truyền thông\nhire (v) thuê, tuyển\nair (v) phát sóng\nQuestions 139-142",
@@ -3671,7 +3684,7 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: Sandra Barga <sbarga97@hjmail.ca>\nFrom: Artie Romanche <service@northwestbags.ca>\nDate: 12 July\nSubject: Order number 71280\n\nDear Ms. Barga:\nWe received your recent order asking for your name to be stitched on a Klamath Kool handbag. We are, -------, eager to complete your order."
+     "text": "To: Sandra Barga <sbarga97@hjmail.ca>\nFrom: Artie Romanche <service@northwestbags.ca>\nDate: 12 July\nSubject: Order number 71280\n\nDear Ms. Barga:\nWe received your recent order asking for your name to be stitched on a Klamath Kool handbag. We are, --- [139] ---, eager to complete your order."
     }
    ],
    "questions": [
@@ -3705,7 +3718,7 @@
       "D": "investigation"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Từ vựng.\nĐặc điểm đáp án:\nTừ cần điền đứng sau tính từ sở hữu  her , đứng trước động từ  will cause' và\nđóng vai trò là chủ ngữ của mệnh đề.\nNghĩa các phương án:\n(A) absence (danh từ): sự vắng mặt, sự thiếu hụt\n(B) arrival (danh từ): sự đến, sự xuất hiện\n(C) request (danh từ): yêu cầu, lời đề nghị\n(D) investigation (danh từ): sự xem xét, điều tra\nTạm dịch: Chúng tôi muốn thông báo cho bà rằng việc vắng mặt của cô ấy sẽ gây ra sự\nchậm trễ trong việc vận chuyển túi xách của quý khách.",
@@ -3724,7 +3737,7 @@
       "D": "It is compensation"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Từ loại.\nĐặc điểm đáp án:\nTừ cần điền đứng ở đầu câu, là thành phần của cụm trạng từ và có vai trò diễn tả lý\ndo cho hành động bù đắp, đền bù.\nNghĩa của câu: Để đền bù cho sự chờ đợi, chúng tôi muốn hỗ trợ cho quý khách\nmức giảm giá 10% cho đơn hàng hiện tại.\n Đáp án là một động từ nguyên mẫu.\nNghĩa các phương án:\n(A) Compensated (động từ ở quá khứ phân từ)\n(B) To compensate (động từ nguyên mẫu)\n(C) For compensating (động từ ở hiện tại phân từ đi sau giới từ 'for')\n(D) It is compensation (danh từ với chủ ngữ gia)",
@@ -3743,7 +3756,7 @@
       "D": "We are the only local retailer offering custom services."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp.\nĐặc điểm đáp án:\nCác câu phía trước đưa ra 2 lựa chọn cho Bà Dees. Câu phía sau câu cần điền nhấn\nmạnh về việc đảm bảo sự hài lòng khách hàng.\n Câu cần điền nối tiếp  câu phía trước chỗ trống và/hoặc gợi mở ý cho câu phía sau\nchỗ trồng.\nNghĩa các phương án:\n(A) Quyết định nằm ở phía quý khách\n(B) Chúng tôi rất trân trọng đánh giá phản hồi của quý khách.\n(C) Chiếc túi sẽ trông tuyệt vời với chữ cái viết tắt của quý khách trên đó.\n(D) Chúng tôi là nhà bán lẻ địa phương duy nhất cung cấp dịch vụ tùy chỉnh theo ý khách\nhàng.",
@@ -3761,7 +3774,7 @@
    "passages": [
     {
      "label": "Article",
-     "text": "Sehelec Announces Wind-Solar Hybrid Project\nMUMBAI (15 March)-Sehelec Ltd. announced it will begin construction on a 500-megawatt wind-solar hybrid power ------- outside of Bangalore, India."
+     "text": "Sehelec Announces Wind-Solar Hybrid Project\nMUMBAI (15 March)-Sehelec Ltd. announced it will begin construction on a 500-megawatt wind-solar hybrid power --- [143] --- outside of Bangalore, India."
     }
    ],
    "questions": [
@@ -3795,7 +3808,7 @@
       "D": "The pace of upgrades to India's power grid slowed slightly this year."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp.\nĐặc điểm đáp án:\n• Phía trước câu cần điền cung cấp thông tin về một dự án nhà máy điện gió-mặt trời\nsắp được xây dựng.\nPhía sau câu cần điền cho thông tin về thời gian xây dựng và quy mô dự kiến của\ndự án nhà máy.\n Câu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho câu phía sau\nchỗ trống.\nNghĩa các phương án:\n(A) Gió mạnh có thể gây hư hại cho các tòa nhà cao tầng.\n(B) Cơ sở hạ tầng này sẽ bao gồm cả tấm pin mặt trời và tuabin gió.\n(C) Xe điện thải ra ít khí thải hơn các loại xe khác.\n(D) Quá trình nâng cấp lưới điện của Ấn Độ đã chậm lại một chút trong năm nay.",
@@ -3814,7 +3827,7 @@
       "D": "to renew"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "Dang câu hỏi Từ loại\nĐặc điểm đáp án:\n• Từ cần điền đứng trước danh từ  power', đứng sau động từ ‘provide và đóng vai\ntrò tính từ bổ ngữ cho danh từ 'power đứng sau nó.\nNghĩa của câu: Hợp đồng cung cấp điện có thể tái tạo với Novaseon đưa chúng\ntôi đến gần hơn với mục tiêu dài hạn của công ty\", Sumit Varma, Giám đốc điều\nhành của Sehelec cho biết.\nLựa chọn đáp án:\n(A) renew (động từ): làm mới\n(B) renewers (danh từ số nhiều): người đổi mới\n(C) renewable (tính từ): có thể tái tạo, làm mới\n(D) to renew (động từ nguyên mẫu): làm mới",
@@ -3833,7 +3846,7 @@
       "D": "reach"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "Dang câu hỏi: Từ vựng.\nĐặc điểm đáp án:\n•\nTừ cần điền đứng sau động từ  help' và tân ngữ  reach', đóng vai trò là động từ bổ\nngữ cho cụm  its carbon-reduction target. đứng phía sau nó.\n Đáp án là động từ nguyên mẫu, có thể đi với danh từ ‘reach và tạo thành cụm có\nnghĩa.\nNghĩa các phương án:\n(A) understand (động từ): hiêu\n(B) explain (động từ): giải thích\n(C) block (động từ): chặn, ngăn cản\n(D) reach (động từ): đạt, vươn tới\nTạm dịch: Và điều này, kết quả là, sẽ giúp đất nước đạt được mục tiêu giảm thiểu\ncarbon.",
@@ -5776,6 +5789,7 @@
  ],
  "warnings": [
   "3 câu các nguồn đáp án không thống nhất (đã lấy nguồn tin cậy hơn): [36, 167, 198]",
-  "8 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 7, 17, 19, 23, 25-27, 30"
+  "8 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 7, 17, 19, 23, 25-27, 30",
+  "12 câu Part 6 mất đoạn văn chứa chỗ trống (parser cũ) — tạm bỏ qua, build lại từ docx để khôi phục: [132, 133, 134, 136, 137, 138, 140, 141, 142, 144, 145, 146]"
  ]
 }

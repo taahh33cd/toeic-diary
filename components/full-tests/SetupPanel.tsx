@@ -212,7 +212,7 @@ export function SetupPanel({
           </p>
           {brokenInScope.length > 0 && (
             <p style={{ fontSize: "0.76rem", color: P.warn, margin: "0.5rem 0 0" }}>
-              ⚠ Câu {brokenInScope.join(", ")} thiếu nội dung trong đề gốc nên sẽ bị bỏ qua và không tính điểm.
+              ⚠ Câu {brokenInScope.join(", ")} thiếu nội dung nên sẽ bị bỏ qua và không tính điểm.
             </p>
           )}
         </div>

@@ -902,7 +902,7 @@ function QuestionCard({
   if (q.broken) {
     return (
       <div id={`q-${q.number}`} style={{ border: `1px dashed ${P.border}`, borderRadius: 10, padding: "0.9rem 1rem", marginBottom: "0.85rem", color: P.muted, fontSize: `${0.85 * fontScale}rem` }}>
-        <strong>Câu {q.number}</strong> — đề gốc thiếu nội dung câu này nên đã bỏ qua, không tính điểm.
+        <strong>Câu {q.number}</strong> — thiếu nội dung câu này nên đã bỏ qua, không tính điểm.
       </div>
     );
   }

@@ -11,7 +11,20 @@
   "questions": 200,
   "answered": 200,
   "missingAnswers": [],
-  "brokenQuestions": []
+  "brokenQuestions": [
+   132,
+   133,
+   134,
+   136,
+   137,
+   138,
+   140,
+   141,
+   142,
+   144,
+   145,
+   146
+  ]
  },
  "groups": [
   {
@@ -3672,7 +3685,7 @@
    "passages": [
     {
      "label": "Article",
-     "text": "Kray Villa Museum To Celebrate Grand Opening\nDEERFIELD (May 2)-The official opening of the Kray Villa Museum will take place on May 29 at 10 A.M. To mark the occasion, various festivities will be held throughout the day. -------. Visit www.krayvillamuseum.org for details."
+     "text": "Kray Villa Museum To Celebrate Grand Opening\nDEERFIELD (May 2)-The official opening of the Kray Villa Museum will take place on May 29 at 10 A.M. To mark the occasion, various festivities will be held throughout the day. --- [131] ---. Visit www.krayvillamuseum.org for details."
     }
    ],
    "questions": [
@@ -3706,7 +3719,7 @@
       "D": "all"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dang câu hỏi: Đại từ quan hệ\nĐặc điểm đáp án:\n• Từ cần điền đứng sau cụm danh từ \"the imposing structure\" và đứng trước động\ntừ to be \"was\". Vì vậy, từ cần điền có chức năng là chủ ngữ trong mệnh đề quan\nhệ. Mệnh đề quan hệ này đóng vai trò bổ nghĩa cho cụm danh từ \"the imposing\nstructure\".\nNghĩa câu: Bảo tàng nằm trong công trình kiến trúc hùng vĩ vốn là nơi sinh sống\ncủa gia đình Kray có ảnh hưởng một thời bắt đầu từ cuối những năm 1800.\n Đáp án là đại từ trong mệnh đề quan hệ.\nLựa chọn đáp án:\n(A) such: từ hạn định\n(B) that: đại từ quan hệ, có thể thay cho chủ ngữ chỉ vật trong mệnh đề quan hệ\n(C) what: từ để hỏi hoặc liên từ trong mệnh đề danh từ\n(D) all: từ hạn định",
@@ -3725,7 +3738,7 @@
       "D": "To this end"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dang câu hỏi: Liên từ\nĐặc điểm đáp án:\nChỗ trống cần điền từ nối có mối liên hệ liên kết thông tin các câu trước với các\ncâu sau.\nTrước chỗ trống, người viết cung cấp các thông tin về tài sản (property) trong biệt\nthự. Sau chỗ trống là một thông tin khác về tài sản (furnishings). Vì vậy, đ\náp án là liên từ có ý nghĩa bổ sung.\nNghĩa câu: Hơn nữa, đồ đạc thuộc loại được gia đình sử dụng nhiều nhất đang\nđược trưng bày.\nNghĩa các phương án:\n(A) Conversely: ngược lại\n(B) Additionally: hơn nữa, thêm vào đó\n(C) In the meantime: cùng lúc đó\n(D) To this end: để kết thúc",
@@ -3744,7 +3757,7 @@
       "D": "could have performed"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dang câu hỏi: Thì động từ\nĐặc điểm đáp án:\nCó dấu hiệu về thời gian qua cụm từ \"During the museum's opening festivities\"\n(Trong các hoạt động lễ hội tại lễ khai mạc bảo tàng) và \"in the late nineteenth\ncentury\" (vào cuối thế kỷ 19). Tuy nhiên \"vào cuối thế kỷ 19 là thời gian âm nhạc\nphổ biến. Còn thời gian ban nhạc trình diễn là trong lễ khai mạc.\nNghĩa câu: Trong các hoạt động lễ hội tại lễ khai mạc bảo tàng, một ban nhạc\nsống sẽ biểu diễn âm nhạc phổ biến vào cuối thế kỷ 19.\nLễ khai mạc sắp diễn ra. Như vậy, đáp án là động từ được chia ở thì tương lai.\nLựa chọn đáp án:\n(A) will perform: động từ chia ở thì tương lai đơn\n(B) had to perform: động từ chia ở thì quá khứ đơn với \"have to\"\n(C) was performing: động từ chia ở thì quá khứ tiếp diễn, ở dạng số ít\n(D) could have performed: động từ chia ở dạng giả định ở quá khứ",
@@ -3762,7 +3775,7 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: All employees\nFrom: Cecil Radu, Information Technology Manager\nDate: April 8\nRe: Network alert\n\nWe are experiencing some problems with our local network. Some of the affected services include the ------- company Web site and the payroll database."
+     "text": "To: All employees\nFrom: Cecil Radu, Information Technology Manager\nDate: April 8\nRe: Network alert\n\nWe are experiencing some problems with our local network. Some of the affected services include the --- [135] --- company Web site and the payroll database."
     }
    ],
    "questions": [
@@ -3796,7 +3809,7 @@
       "D": "with"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "Dang câu hỏi giới từ\nĐặc điểm đáp án:\nTừ cần điền đứng sau danh từ \"information và đứng trước một danh từ khác là\n\"network data\". Từ cần điền là giới từ thể hiện mối quan hệ giữa hai danh từ này.\nLựa chọn đáp án:\n(A) as: liên từ mang nghĩa \"khi/ vì\" hoặc trạng từ mang nghĩa \"như\"\n(B) in: giới từ chỉ thời gian hoặc vị trí\n(C) about: giới từ, mang nghĩa \"về\"\n(D) with: giới từ, mang nghĩa \"với\"\nTạm dịch: Chúng ta cũng đã nhận được thông tin về dữ liệu mạng bị hỏng và các tập\ntin không được lưu đúng cách.",
@@ -3815,7 +3828,7 @@
       "D": "proposals"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dang câu hỏi: Từ vựng\nĐặc điểm đáp án:\nTừ cần điền đứng sau động từ \"addresses\" (giải quyết, nhắm vào) và từ hạn định\n\"these\".\n\"These\" hàm ý chỉ những vấn đề đã được đề cập trước đó liên quan đến mạng cục\nbộ \"problems with our local networks\".\nNghĩa các phương án:\n(A) issues (n) những vấn đề\n(B) clients (n) những khác hàng\n(C) articles (n) những bài báo\n(D) proposals (n) những đề xuất\nTạm dịch: Vui lòng tránh sử dụng mạng sáng nay trong khi nhóm của tôi giải quyết\ncác vấn đề này.",
@@ -3834,7 +3847,7 @@
       "D": "Contact the IT help desk."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "Dang câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án: Câu cần điền nằm ở cuối đoạn, có chức năng nối tiếp ý của (các) câu\nphía trước chỗ trống.\nNghĩa các phương án:\n(A) Máy chủ mạng sẽ đắt tiền.\n(B) Máy tính của bạn có thể bị hỏng.\n(C) Cảm ơn sự kiên nhẫn của bạn.\n(D) Liên hệ với bộ phận trợ giúp CNTT.\nCách định vị vùng thông tin chứa đáp án:\nCác câu phía trước chỗ trống đề cập về các vấn đề mạng và giải quyết chúng. Đáp án (C)\nnối tiếp ý của câu trước, thể hiện sự cảm ơn vì các nhân viên đã kiên nhẫn đợi khắc phụ\nsự cố.",
@@ -3852,7 +3865,7 @@
    "passages": [
     {
      "label": "Notice",
-     "text": "April 2\nDear TP&G Customer,\n\nTakoradi Power & Gas (TP&G) is committed to providing every customer with dependable electricity service. To this end, we need to make some improvements to our -------."
+     "text": "April 2\nDear TP&G Customer,\n\nTakoradi Power & Gas (TP&G) is committed to providing every customer with dependable electricity service. To this end, we need to make some improvements to our --- [139] ---."
     }
    ],
    "questions": [
@@ -3886,7 +3899,7 @@
       "D": "On the other hand"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "Dang câu hỏi: Liên từ\nĐặc điểm đáp án:\nChỗ trống cần điền từ nối/ trạng từ phù hợp nghĩa của câu sau chỗ trống.\n• Nghĩa câu: Thật không may, chúng tôi sẽ cắt điện các khu dân cư trong khu vực\ncủa bạn từ khoảng 10 giờ sáng đến 1 giờ chiều vào ngày đó.\nNghĩa các phương án:\n(A) If not: Nếu không\n(B) Nonetheless: Dù sao đi nữa\n(C) Unfortunately: Thật không may\n(D) On the other hand: Mặc khác",
@@ -3905,7 +3918,7 @@
       "D": "Here are some tips for reducing your energy bill."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dang câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án: Câu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho\ncâu phía sau chỗ trống.\nNghĩa các phương án:\n(A) Chúng tôi xin lỗi vì sự bất tiện tạm thời này.\n(B) Chúng tôi đáp ứng hầu hết các yêu cầu dịch vụ trong vòng 24 giờ.\n(C) Các công ty khác chuyên lắp đặt hệ thống chiếu sáng.\n(D) Dưới đây là một số mẹo để giảm hóa đơn năng lượng của bạn.\nCách định vị vùng thông tin chứa đáp án:\nCâu phía trước đưa ra thông báo về việc cắt điện trong khu dân cư. Đáp án (A) nối tiếp ý\ncủa câu trước, thể hiện lời xin lỗi vì bất tiện của việc cắt điện này.",
@@ -3924,7 +3937,7 @@
       "D": "sending"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "Dang câu hỏi: Thì động từ/ Dạng động từ\nĐặc điểm đáp án:\nTrước chỗ trống là giới từ \"by\". Như vậy, chỗ trống cần điền động từ ở dạng V-ing\ntrong cấu trúc \"by doing something\" (bằng cách làm gì đó).\nNghĩa câu: Chúng tôi hy vọng rằng bằng cách gửi thông báo này, mọi sự gián\nđoạn do lịch cúp điện theo kế hoạch sẽ được giảm thiểu.\nLựa chọn đáp án:\n(A) sent: động từ chia ở thì quá khứ đơn\n(B) to send: động từ chia ở dạng to-V\n(C) will send: động từ chia ở thì tương lai đơn.\n(D) sending: động từ chia ở dạng V-ing",
@@ -3949,7 +3962,7 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: hanna.kalita@netmail.co.uk\nFrom: patientoutreach@ebmp.co.uk\nDate: 12 June\nSubject: Invitation to patient portal\n\nDear Ms. Kalita,\n\nEast Burberry Medical Practice has recently rolled out its patient portal, Burmed Connect. This service ------- to help you manage your healthcare at your convenience."
+     "text": "To: hanna.kalita@netmail.co.uk\nFrom: patientoutreach@ebmp.co.uk\nDate: 12 June\nSubject: Invitation to patient portal\n\nDear Ms. Kalita,\n\nEast Burberry Medical Practice has recently rolled out its patient portal, Burmed Connect. This service --- [143] --- to help you manage your healthcare at your convenience."
     }
    ],
    "questions": [
@@ -3983,7 +3996,7 @@
       "D": "Otherwise"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dang câu hỏi: Liên từ\nĐặc điểm đáp án:\nChỗ trống cần điền từ nối có mối liên hệ liên kết thông tin các câu trước với các\ncâu sau.\nTrước chỗ trống, người viết cung cấp thông tin về các dịch vụ (book appointments,\nview your medical records và request prescriptions). Sau chỗ trống là một dịch vụ\nkhác \"send messages\". Như vậy, đáp án là liên từ có ý nghĩa bổ sung.\nNghĩa câu: Hơn nữa, bạn có thể sử dụng Burmed Connect để gửi tin nhắn cho bác\nsĩ của mình.\nNghĩa các phương án:\n(A) Furthermore: Hơn nữa\n(B) Instead: Thay vào đó\n(C) However: Tuy nhiên\n(D) Otherwise: Nếu không",
@@ -4002,7 +4015,7 @@
       "D": "You will be locked out of your account after a third failed attempt."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "Dang câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án: Câu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho\ncâu phía sau chỗ trống.\nNghĩa các phương án:\n(A) Cổng thông tin trước đây của chúng tôi sẽ không còn được cập nhật nữa.\n(B) Có thể tải xuống ứng dụng sức khỏe từ trang web của chúng tôi.\n(C) Bảo vệ quyền riêng tư của bạn là trách nhiệm mà chúng tôi thực hiện nghiêm túc.\n(D) Bạn sẽ bị khóa tài khoản của mình sau lần thử thứ ba không thành công.\nCách định vị vùng thông tin chứa đáp án:\nCâu phía trước chỗ trống đề cập về việc chỉ có bệnh nhân và bác sĩ mới có thể thấy tin\nnhắn giữa hai bên. Đáp án (C) nối tiếp ý của câu trước, đồng nghĩa với trách nhiệm đảm\nbảo quyền riêng tư của người dùng.",
@@ -4021,7 +4034,7 @@
       "D": "deletion"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dang câu hỏi: Từ vựng\nĐặc điểm đáp án:\nTừ cần điền là một danh từ đứng sau danh từ \"process\" (quá trình). Câu trước thể\nhiện  hướng dẫn người dùng tạo tài khoản \"create an account\".\nNghĩa các phương án:\n(A) selection (n): tuyển chọn\n(B) registration (n) đăng ký\n(C) invention (n) lời mời\n(D) deletion (n) xóa bỏ\nTạm dịch: Nếu bạn gặp khó khăn gì trong quá trình đăng ký, vui lòng gọi tới số 20 5550\n0169.",
@@ -6274,6 +6287,7 @@
  ],
  "warnings": [
   "2 câu các nguồn đáp án không thống nhất (đã lấy nguồn tin cậy hơn): [186, 190]",
-  "8 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 6-7, 12, 18, 22, 25-26, 31"
+  "8 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 6-7, 12, 18, 22, 25-26, 31",
+  "12 câu Part 6 mất đoạn văn chứa chỗ trống (parser cũ) — tạm bỏ qua, build lại từ docx để khôi phục: [132, 133, 134, 136, 137, 138, 140, 141, 142, 144, 145, 146]"
  ]
 }

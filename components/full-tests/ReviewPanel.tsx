@@ -367,7 +367,7 @@ function ReviewSidebar({
                     disabled={!gradable}
                     onClick={() => onJumpQuestion(q.number)}
                     title={
-                      !gradable ? "Câu thiếu nội dung trong đề gốc"
+                      !gradable ? "Câu thiếu nội dung"
                         : right ? "Đúng" : wrong ? `Bạn chọn ${picked}, đáp án ${q.answer}` : "Chưa làm"
                     }
                     style={{
