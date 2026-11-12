@@ -9,10 +9,10 @@
  *    nhìn thấy nó trong bài, và tệ hơn, ô trống Level 1-2 neo theo vị trí từ
  *    nên có thể trỏ thẳng vào cái nhãn.
  *
- * 2. VIẾT TẮT BỊ TÁCH THÀNH CÂU RIÊNG — câu "Ms." đứng một mình rồi câu sau
- *    mới là "Junko Adachi is the director…". Do bước tách câu lúc import cắt
- *    ở dấu chấm của "Ms.". Khoảng nghe của một câu một từ ngắn đến mức gần
- *    như không nghe được, và câu sau thì mất chủ ngữ.
+ * 2. CÂU BỊ CẮT NGAY SAU VIẾT TẮT — "Ms." đứng một mình, hoặc "Hi, Ms." rồi
+ *    câu sau mới là "Stewart." Do bước tách câu lúc import cắt ở dấu chấm của
+ *    "Ms.". Khoảng nghe bị vụn ra, và câu sau thì mất chủ ngữ.
+ *    "No." được chừa ra: đó là một câu trả lời hoàn chỉnh.
  *
  * Ô trống được sinh lại cho câu nào bị sửa, vì vị trí từ đã đổi.
  * Mốc thời gian: câu gộp lấy từ đầu câu trước đến cuối câu sau.
@@ -28,8 +28,14 @@ import { prisma } from "../lib/db/prisma";
 const SERIES = ["ets-2026", "ets-2024"];
 /** "W-Br:", "M-Au:", "W1:", "M:" … ở đầu câu */
 const SPEAKER_PREFIX = /^\s*((?:W|M)(?:-(?:Am|Au|Br|Cn))?\s*\d?)\s*:\s*/i;
-/** câu chỉ gồm đúng một viết tắt có dấu chấm */
-const LONE_ABBREV = /^(Dr|Mr|Mrs|Ms|Prof|St|Inc|Ltd|Jr|Sr)\.$/i;
+/**
+ * Câu KẾT THÚC bằng một viết tắt: chỗ tách câu sai. Gồm cả câu chỉ có mỗi
+ * viết tắt ("Ms.") lẫn câu dài hơn ("Hi, Ms." rồi câu sau mới là "Stewart.").
+ *
+ * Cố ý KHÔNG có "No": "No." là một câu trả lời hoàn chỉnh, rất thường gặp ở
+ * Part 2, gộp nó vào câu sau là làm hỏng dữ liệu đang đúng.
+ */
+const ENDS_ABBREV = /(?:^|\s)(Dr|Mr|Mrs|Ms|Prof|St|Ave|Blvd|Inc|Ltd|Co|Jr|Sr|vs)\.$/;
 
 // ── Ô trống: cùng thuật toán với add-blanks-part3.ts ────────────────────────
 
@@ -119,7 +125,7 @@ async function main() {
 
     for (let i = 0; i < sents.length; i++) {
       if (SPEAKER_PREFIX.test(sents[i].content)) stripIdx.push(i);
-      if (LONE_ABBREV.test(sents[i].content.trim()) && i + 1 < sents.length) mergeIdx.push(i);
+      if (ENDS_ABBREV.test(sents[i].content.trim()) && i + 1 < sents.length) mergeIdx.push(i);
     }
     if (stripIdx.length === 0 && mergeIdx.length === 0) continue;
 
