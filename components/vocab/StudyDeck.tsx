@@ -65,7 +65,15 @@ export default function StudyDeck({
   const [thuoc, setThuoc] = useState<string[]>([]);
   const [latLai, setLatLai] = useState(0);
   const [dangLuu, setDangLuu] = useState(false);
-  const [loi, setLoi] = useState<string | null>(null);
+  /**
+   * Thông báo sau khi ghi tiến độ.
+   *
+   * Phải phân biệt "mất rồi" với "đang giữ, sẽ gửi sau" — hai chuyện khác
+   * hẳn nhau. Trước đây chỉ có một chuỗi, và khung hiển thị tự nối thêm
+   * "— tiến độ thẻ vừa rồi chưa được lưu", nên câu báo đang-giữ hoá ra tự
+   * mâu thuẫn và vẫn doạ học viên ngồi lật lại cả bộ.
+   */
+  const [loi, setLoi] = useState<{ text: string; mat: boolean } | null>(null);
 
   const card = queue[0];
 
@@ -74,12 +82,23 @@ export default function StudyDeck({
       if (!card || dangLuu) return;
       setDangLuu(true);
       setFlipped(false);
-      const ok = onReview
-        ? await onReview(card.word, known)
-        : !!(await recordVocabReview({ outcome: { kind: "flip", word: card.word, known } }));
-      // Ghi thất bại thì vẫn cho học tiếp, nhưng nói rõ là chưa lưu được —
-      // im lặng ở đây là tệ nhất: học viên tưởng đã tính mà thực ra không.
-      setLoi(ok ? null : "Chưa lưu được tiến độ (mất mạng?)");
+      let bao: { text: string; mat: boolean } | null = null;
+      if (onReview) {
+        bao = (await onReview(card.word, known))
+          ? null
+          : { text: "Chưa lưu được tiến độ (mất mạng?)", mat: true };
+      } else {
+        const r = await recordVocabReview({ outcome: { kind: "flip", word: card.word, known } });
+        // Mất mạng mà đã giữ lại được thì ĐỪNG báo đỏ: học viên thấy "chưa
+        // lưu" sẽ ngồi lật lại cả bộ, trong khi kết quả vẫn nguyên trong hàng.
+        bao =
+          r.trangThai === "ok"
+            ? null
+            : r.trangThai === "cho-gui"
+              ? { text: "Mất mạng — tiến độ đang giữ trên máy, sẽ tự gửi khi có mạng.", mat: false }
+              : { text: "Chưa lưu được tiến độ (mất mạng?)", mat: true };
+      }
+      setLoi(bao);
       if (known) {
         setThuoc((l) => [...l, card.id]);
         setQueue((q) => q.slice(1));
@@ -170,8 +189,15 @@ export default function StudyDeck({
       </div>
 
       {loi && (
-        <p className="text-xs mb-3 px-3 py-2 rounded-lg" style={{ background: "rgba(185,64,64,.1)", color: RED }}>
-          {loi} — tiến độ thẻ vừa rồi chưa được lưu.
+        <p
+          className="text-xs mb-3 px-3 py-2 rounded-lg"
+          style={
+            loi.mat
+              ? { background: "rgba(185,64,64,.1)", color: RED }
+              : { background: "rgba(74,124,89,.12)", color: GREEN }
+          }
+        >
+          {loi.mat ? `${loi.text} — tiến độ thẻ vừa rồi chưa được lưu.` : loi.text}
         </p>
       )}
 

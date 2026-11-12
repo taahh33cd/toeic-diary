@@ -113,19 +113,6 @@ export type ReviewBody =
   | { kind: "flip"; word: string; known: boolean }
   | { kind: "quiz"; word: string; correct: boolean; answerMs?: number; quizType?: string };
 
-/**
- * Ghi một lượt ôn của một từ. Bắn event "vocab:reviewed" để badge nav và
- * dashboard cập nhật ngay — chúng nghe event này thay vì poll.
- */
-export async function postReview(body: ReviewBody) {
-  const r = await call<{ progress: ProgressRow; wasMastered: boolean }>("/api/flashcards/review", {
-    method: "POST",
-    body: JSON.stringify(body),
-  });
-  window.dispatchEvent(new Event("vocab:reviewed"));
-  return r;
-}
-
 // ── Kho từ phẳng ────────────────────────────────────────────────────────────
 
 /** Một TỪ trong kho: nội dung lấy từ thẻ đầu tiên tìm được, tiến độ chỉ có một. */

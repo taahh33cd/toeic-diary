@@ -1414,14 +1414,15 @@ function WordCard({
     if (reviewing) return;
     setReviewing(true);
     try {
-      const p = await recordVocabReview({
+      const r = await recordVocabReview({
         outcome: { kind: "flip", word: word.word, known: true },
       });
       // Chỉ cập nhật UI theo số server trả về — không tự cộng 1 rồi đoán, vì
-      // lịch ôn do SM-2 quyết định chứ không phải phép cộng.
-      if (p) {
-        setRepCount(p.repCount);
-        setLastReview(p.lastReview?.slice(0, 10));
+      // lịch ôn do SM-2 quyết định chứ không phải phép cộng. Lượt đang nằm
+      // trong hàng đợi thì chưa có số mới, cứ để nguyên màn hình.
+      if (r.trangThai === "ok") {
+        setRepCount(r.progress.repCount);
+        setLastReview(r.progress.lastReview?.slice(0, 10));
       }
     } finally {
       setReviewing(false);

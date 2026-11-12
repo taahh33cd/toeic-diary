@@ -98,7 +98,8 @@ export default function PublicDeck({
 
   const ghiThat = daDangNhap
     ? async (word: string, known: boolean) =>
-        !!(await recordVocabReview({ outcome: { kind: "flip", word, known } }))
+        // Xếp hàng cũng tính là xong — kết quả không mất, chỉ gửi chậm
+        (await recordVocabReview({ outcome: { kind: "flip", word, known } })).trangThai !== "loi"
     : ghiNhan;
 
   const moiDangKy = daDangNhap ? (

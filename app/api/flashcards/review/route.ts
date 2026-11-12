@@ -11,9 +11,12 @@ export const dynamic = "force-dynamic";
 /** Từ ở dạng học viên thấy; server tự chuẩn hoá thành word_key. */
 const word = z.string().trim().min(1).max(120);
 
+/** Khoá client sinh, chống ghi trùng khi hàng đợi offline gửi lại. */
+const clientRef = z.string().trim().min(8).max(64).optional();
+
 const input = z.discriminatedUnion("kind", [
   /** Lật thẻ ở chế độ Học rồi tự đánh dấu — nửa trọng số. */
-  z.object({ kind: z.literal("flip"), word, known: z.boolean() }),
+  z.object({ kind: z.literal("flip"), word, known: z.boolean(), clientRef }),
   /** Một câu trả lời: gõ từ, chọn đáp án… — trọng số đầy, có tính tốc độ. */
   z.object({
     kind: z.literal("quiz"),
@@ -21,8 +24,12 @@ const input = z.discriminatedUnion("kind", [
     correct: z.boolean(),
     answerMs: z.number().int().min(0).max(600_000).optional(),
     quizType: z.string().trim().max(40).optional(),
+    clientRef,
   }),
 ]);
+
+/** Số khoá giữ lại cho mỗi từ — đủ cho một đợt offline, không phình dòng. */
+const SO_REF_GIU = 20;
 
 /**
  * Ghi MỘT lượt ôn của MỘT từ — lật thẻ hoặc một câu trả lời lẻ.
@@ -52,6 +59,26 @@ export async function POST(req: NextRequest) {
       where: { userId_wordKey: { userId: gate.userId, wordKey } },
     });
 
+    // Hàng đợi offline gửi lại khi không biết server đã nhận hay chưa. Áp lần
+    // hai sẽ đẩy SRS của từ này thừa một bậc, nên nhận ra khoá cũ thì trả về
+    // nguyên trạng thái đang có, coi như thành công.
+    if (body.clientRef && cur?.recentRefs.includes(body.clientRef)) {
+      return NextResponse.json({
+        progress: {
+          wordKey: cur.wordKey,
+          repCount: cur.repCount,
+          intervalDays: cur.intervalDays,
+          mastered: cur.mastered,
+          wrongCount: cur.wrongCount,
+          seenCount: cur.seenCount,
+          lastReview: cur.lastReview,
+          dueAt: cur.dueAt,
+        },
+        wasMastered: cur.mastered,
+        daGhiTruocDo: true,
+      });
+    }
+
     const truoc: SrsState = cur
       ? {
           repCount: cur.repCount,
@@ -73,10 +100,21 @@ export async function POST(req: NextRequest) {
         : { kind: "quiz", correct: body.correct, answerMs: body.answerMs, quizType: body.quizType }
     );
 
+    const refMoi = body.clientRef
+      ? [body.clientRef, ...(cur?.recentRefs ?? [])].slice(0, SO_REF_GIU)
+      : cur?.recentRefs;
+
     const row = await prisma.vocabProgress.upsert({
       where: { userId_wordKey: { userId: gate.userId, wordKey } },
-      create: { id: makeId("vp"), userId: gate.userId, wordKey, word, ...sau },
-      update: { word, ...sau },
+      create: {
+        id: makeId("vp"),
+        userId: gate.userId,
+        wordKey,
+        word,
+        ...sau,
+        ...(refMoi ? { recentRefs: refMoi } : {}),
+      },
+      update: { word, ...sau, ...(refMoi ? { recentRefs: refMoi } : {}) },
       select: {
         wordKey: true,
         repCount: true,
