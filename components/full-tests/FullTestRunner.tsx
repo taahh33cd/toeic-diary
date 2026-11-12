@@ -5,6 +5,7 @@ import type { FullTest } from "@/lib/full-tests/types";
 import { PALETTE, type Skin } from "./theme";
 import { SetupPanel, type RunConfig } from "./SetupPanel";
 import { ExamScreen } from "./ExamScreen";
+import { SubmitFailedBanner } from "./SubmitFailedBanner";
 import { ReviewPanel } from "./ReviewPanel";
 import { useAttempt, type AttemptRow } from "@/components/shared/useAttempt";
 
@@ -33,6 +34,9 @@ export function FullTestRunner({
   const [busy, setBusy] = useState(false);
   /** Lượt vừa nộp đã lưu lên server → màn kết quả có lối sang sổ học tập. */
   const [savedToJournal, setSavedToJournal] = useState(false);
+  /** Làm tiếp bài dở: đồng hồ + vị trí audio để ExamScreen chạy tiếp đúng chỗ */
+  const [resumeAt, setResumeAt] = useState<Pick<AttemptRow, "secondsLeft" | "progress"> | null>(null);
+  const [saveFailed, setSaveFailed] = useState(false);
 
   const P = PALETTE[skin];
   const identity = useMemo(() => ({ examSlug }), [examSlug]);
@@ -52,13 +56,17 @@ export function FullTestRunner({
   }, []);
   /* eslint-enable react-hooks/set-state-in-effect */
 
+  // Phải bám vào fetchInProgress (đã memo), không phải `attempt`: hook trả về
+  // object mới mỗi lần render ⇒ effect chạy lại liên tục, gọi server không dừng
+  // và làm đồng hồ làm bài đứng im.
+  const fetchInProgress = attempt.fetchInProgress;
   useEffect(() => {
     let alive = true;
-    attempt.fetchInProgress().then((row) => {
+    fetchInProgress().then((row) => {
       if (alive && row) setResumable(row);
     });
     return () => { alive = false; };
-  }, [attempt]);
+  }, [fetchInProgress]);
 
   const toggleSkin = useCallback(() => {
     setSkin((prev) => {
@@ -75,6 +83,8 @@ export function FullTestRunner({
     setConfig(resume?.config ?? cfg);
     setAnswers(resume ? toAnswerMap(resume.answers) : {});
     setMarked(resume?.marked ?? []);
+    setResumeAt(resume ? { secondsLeft: resume.secondsLeft, progress: resume.progress } : null);
+    setSaveFailed(false);
     setResumable(null);
     if (!row) {
       // Không tạo được lượt trên server (mất mạng) — vẫn cho làm, chỉ là
@@ -88,10 +98,19 @@ export function FullTestRunner({
     setAnswers(a);
     setMarked(m);
     setBusy(true);
-    const saved = await attempt.submit(a, m);
-    setSavedToJournal(saved !== null);
+    const ok = await attempt.submit(a, m, config ?? undefined);
+    setSavedToJournal(ok);
     setBusy(false);
+    setSaveFailed(!ok);
     setPhase("result");
+  }
+
+  async function retrySave() {
+    setBusy(true);
+    const ok = await attempt.submit(answers, marked, config ?? undefined);
+    setBusy(false);
+    setSaveFailed(!ok);
+    setSavedToJournal(ok);
   }
 
   if (phase === "setup") {
@@ -146,6 +165,8 @@ export function FullTestRunner({
         onSubmit={finish}
         initialAnswers={answers}
         initialMarked={marked}
+        initialSecondsLeft={resumeAt ? resumeAt.secondsLeft : undefined}
+        initialProgress={resumeAt?.progress}
         saveState={attempt.saveState}
         onProgress={attempt.save}
       />
@@ -154,6 +175,8 @@ export function FullTestRunner({
 
   if (phase === "result" && config) {
     return (
+      <>
+      {saveFailed && <SubmitFailedBanner P={P} busy={busy} onRetry={retrySave} />}
       <ReviewPanel
         test={test}
         config={config}
@@ -165,6 +188,7 @@ export function FullTestRunner({
         historyHref={savedToJournal ? "/journal/scores" : undefined}
         onRetry={() => { setPhase("setup"); setAnswers({}); setMarked([]); }}
       />
+      </>
     );
   }
 

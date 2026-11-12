@@ -17,7 +17,20 @@
    169,
    181
   ],
-  "brokenQuestions": []
+  "brokenQuestions": [
+   132,
+   133,
+   134,
+   136,
+   137,
+   138,
+   140,
+   141,
+   142,
+   144,
+   145,
+   146
+  ]
  },
  "groups": [
   {
@@ -3763,15 +3776,16 @@
    "passages": [
     {
      "label": "Advertisement",
-     "text": "Estella Guitar Lessons: Play with the Best\n\nWhether you play acoustic guitar ------- electric, taking lessons with an Estella Guitar teacher is the best way to improve your ability."
+     "text": "Estella Guitar Lessons: Play with the Best\n\nWhether you play acoustic guitar --- [131] --- electric, taking lessons with an Estella Guitar teacher is the best way to improve your ability."
     }
    ],
    "questions": [
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) is",
+     "prompt": null,
      "options": {
+      "A": "is",
       "B": "or",
       "C": "likely",
       "D": "from"
@@ -3788,14 +3802,15 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) our",
+     "prompt": null,
      "options": {
+      "A": "our",
       "B": "ourselves",
       "C": "ours",
       "D": "us"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "(Đáp án: A): Cần điền tính từ sở hữu đứng trước cụm danh từ \"qualified instructors\", đáp án là \"our\".",
@@ -3806,14 +3821,15 @@
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) Contact a technician for questions about repairs.",
+     "prompt": null,
      "options": {
+      "A": "Contact a technician for questions about repairs.",
       "B": "A high-quality instrument will help you to perform at your best.",
       "C": "The best resource for you as a learner is an expert to guide your progress.",
       "D": "It took them several years to master their instruments."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "(Đáp án: C): Câu phù hợp để điền nối tiếp ý là \"Nguồn lực tốt nhất dành cho bạn với tư cách là người học là một chuyên gia để hướng dẫn bạn tiến bộ\" (phù hợp với việc nhắc tới giáo viên ở câu sau).",
@@ -3824,14 +3840,15 @@
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) So far",
+     "prompt": null,
      "options": {
+      "A": "So far",
       "B": "With that in mind",
       "C": "On a different note",
       "D": "At that point"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Cụm chuyển ý \"With that in mind\" (hãy ghi nhớ điều này) phù hợp để làm rõ ý cho việc phát triển bản sắc riêng.\n\nQuestions 135 - 138",
@@ -3849,15 +3866,16 @@
    "passages": [
     {
      "label": "Policy",
-     "text": "In-home delivery takes approximately one week after an order is shipped from our warehouse. The actual time may vary based on the location of your ------- and your availability for accepting the item."
+     "text": "In-home delivery takes approximately one week after an order is shipped from our warehouse. The actual time may vary based on the location of your --- [135] --- and your availability for accepting the item."
     }
    ],
    "questions": [
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) garden",
+     "prompt": null,
      "options": {
+      "A": "garden",
       "B": "records",
       "C": "residence",
       "D": "organization"
@@ -3874,14 +3892,15 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) to schedule",
+     "prompt": null,
      "options": {
+      "A": "to schedule",
       "B": "is scheduling",
       "C": "as a schedule",
       "D": "that scheduled"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "(Đáp án: A): Cần dùng động từ ở dạng to-Vinf (\"to schedule\") để chỉ mục đích của hành động làm việc với nhà vận chuyển.",
@@ -3892,14 +3911,15 @@
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) if so",
+     "prompt": null,
      "options": {
+      "A": "if so",
       "B": "when",
       "C": "though",
       "D": "in the meantime"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "(Đáp án: C): Liên từ chỉ sự tương phản, đối lập \"though\" (mặc dù) phù hợp với ngữ cảnh của câu.",
@@ -3910,14 +3930,15 @@
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) When buying a home, location is extremely important.",
+     "prompt": null,
      "options": {
+      "A": "When buying a home, location is extremely important.",
       "B": "Refinishing furniture is a form of art.",
       "C": "Furnished apartments can be found online.",
       "D": "All packing materials will be removed."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "(Đáp án: D): Câu phù hợp để điền vào ngữ cảnh giao hàng nội thất là \"Tất cả vật liệu đóng gói sẽ bị loại bỏ\".\n\nQuestions 139 - 142",
@@ -3935,15 +3956,16 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: Thao Pham <thaopham@amail.com>\nFrom: Leena Montoya <Imontoya@academemedia.com>\nDate: April 17\nSubject: Subscription\n\nDear Mr. Pham,\n\nYour subscription to Medical Innovations Quarterly has been canceled. -------."
+     "text": "To: Thao Pham <thaopham@amail.com>\nFrom: Leena Montoya <Imontoya@academemedia.com>\nDate: April 17\nSubject: Subscription\n\nDear Mr. Pham,\n\nYour subscription to Medical Innovations Quarterly has been canceled. --- [139] ---."
     }
    ],
    "questions": [
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) Thank you for your timely order.",
+     "prompt": null,
      "options": {
+      "A": "Thank you for your timely order.",
       "B": "We have processed your request.",
       "C": "This is a payment reminder.",
       "D": "Please contact us to update your information."
@@ -3960,14 +3982,15 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) Starts",
+     "prompt": null,
      "options": {
+      "A": "Starts",
       "B": "Started",
       "C": "Starter",
       "D": "Starting"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "(Đáp án: D): Chỗ trống nằm trong mệnh đề rút gọn chủ ngữ mang nghĩa chủ động, đáp án là dạng thêm -ing: \"Starting\".",
@@ -3978,14 +4001,15 @@
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) distributor",
+     "prompt": null,
      "options": {
+      "A": "distributor",
       "B": "producer",
       "C": "reader",
       "D": "teacher"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "(Đáp án: C): Dựa vào từ \"subscriptions\" và \"receive print edition\", từ phù hợp là \"reader\" (độc giả).",
@@ -3996,14 +4020,15 @@
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) until",
+     "prompt": null,
      "options": {
+      "A": "until",
       "B": "upon",
       "C": "without",
       "D": "next"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Giới từ mang nghĩa \"khi\" là \"upon\" (upon checkout: khi thanh toán).\n\nQuestions 143 - 146",
@@ -4021,15 +4046,16 @@
    "passages": [
     {
      "label": "Information",
-     "text": "In a commercial kitchen, all refrigerators are required to have a thermometer that ------- from 0°F (-18°C) to 220°F (104°C)."
+     "text": "In a commercial kitchen, all refrigerators are required to have a thermometer that --- [143] --- from 0°F (-18°C) to 220°F (104°C)."
     }
    ],
    "questions": [
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) ranges",
+     "prompt": null,
      "options": {
+      "A": "ranges",
       "B": "ranger",
       "C": "ranged",
       "D": "ranging"
@@ -4046,14 +4072,15 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) size",
+     "prompt": null,
      "options": {
+      "A": "size",
       "B": "safety",
       "C": "reliability",
       "D": "placement"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "(Đáp án: D): Danh từ liên quan đến vị trí đặt nhiệt kế trong tủ lạnh là \"placement\" (vị trí, chỗ đặt).",
@@ -4064,14 +4091,15 @@
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) Remove them carefully.",
+     "prompt": null,
      "options": {
+      "A": "Remove them carefully.",
       "B": "This is typically inside the door.",
       "C": "It should be kept cool at all times.",
       "D": "They can also be purchased in bulk."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Câu phù hợp miêu tả vị trí của nhiệt kế trong tủ lạnh là \"Cái này thường ở bên trong cánh cửa\".",
@@ -4082,14 +4110,15 @@
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) sold",
+     "prompt": null,
      "options": {
+      "A": "sold",
       "B": "seen",
       "C": "repaired",
       "D": "removed"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Động từ bị động phù hợp với ngữ cảnh thấy ngay khi mở cửa là \"seen\" (được nhìn thấy).\n\nPart 7 (Câu 147 - 150)\nQuestions 147-148 (Đề cập đến e-mail của Rapido Net):",
@@ -5337,6 +5366,7 @@
   }
  ],
  "warnings": [
-  "2 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 8, 30"
+  "2 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 8, 30",
+  "12 câu Part 6 mất đoạn văn chứa chỗ trống (parser cũ) — tạm bỏ qua, build lại từ docx để khôi phục: [132, 133, 134, 136, 137, 138, 140, 141, 142, 144, 145, 146]"
  ]
 }

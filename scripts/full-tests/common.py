@@ -74,7 +74,29 @@ def parse_mcq_block(block: str, lo: int, hi: int) -> dict[int, dict]:
             out[cur] = {"prompt": clean(prompt), "options": inline}
         elif mo and cur is not None:
             out[cur]["options"][mo.group(1)] = clean(mo.group(2))
+    for q in out.values():
+        q["prompt"], q["options"] = normalize_options(q["prompt"], q["options"])
     return out
+
+
+def normalize_options(prompt: str | None, options: dict[str, str] | None):
+    """Vá hai kiểu docx làm lệch phương án (gặp ở EST 2024):
+    - Bốn phương án viết liền trên dòng "(A) he (B) his (C) him (D) himself" ⇒
+      parser gộp hết vào A, UI chỉ còn một nút.
+    - Part 6 viết "131. (A) difference" ⇒ (A) bị coi là đề bài, mất phương án A.
+    Chạy lại trên dữ liệu đã đúng thì không đổi gì."""
+    opts = dict(options or {})
+    for letter, text in list(opts.items()):
+        if re.search(r"\([A-D]\)", text or ""):
+            _, found = split_inline_options(f"({letter}) {text}")
+            if found:
+                del opts[letter]
+                opts.update(found)
+    m = re.match(r"^\(([A-D])\)\s*(.+)$", (prompt or "").strip())
+    if m and m.group(1) not in opts:
+        opts[m.group(1)] = clean(m.group(2))
+        prompt = ""
+    return prompt, dict(sorted(opts.items()))
 
 
 PASSAGE_HEAD = re.compile(

@@ -11,7 +11,19 @@
   "questions": 200,
   "answered": 200,
   "missingAnswers": [],
-  "brokenQuestions": []
+  "brokenQuestions": [
+   132,
+   133,
+   134,
+   137,
+   138,
+   140,
+   141,
+   142,
+   144,
+   145,
+   146
+  ]
  },
  "groups": [
   {
@@ -4606,15 +4618,16 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: All Staff\nFrom: Yoreli Costa\nDate: February 15\nSubject: Florence Shawn\n\nHi Everyone,\n\nI have news to share about a ------- in the human resources department. After nearly twenty years with Cometti Creative, Florence Shawn has decided to retire from the position of director of human resources."
+     "text": "To: All Staff\nFrom: Yoreli Costa\nDate: February 15\nSubject: Florence Shawn\n\nHi Everyone,\n\nI have news to share about a --- [131] --- in the human resources department. After nearly twenty years with Cometti Creative, Florence Shawn has decided to retire from the position of director of human resources."
     }
    ],
    "questions": [
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) difference",
+     "prompt": null,
      "options": {
+      "A": "difference",
       "B": "strategy",
       "C": "change",
       "D": "practice"
@@ -4631,14 +4644,15 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) mentors",
+     "prompt": null,
      "options": {
+      "A": "mentors",
       "B": "is mentoring",
       "C": "will mentor",
       "D": "has been mentoring"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Thì động từ\nĐặc điểm đáp án:\n• Có dấu hiệu về thời gian qua từ \"since\" (kể từ khi) và hành động gia nhập công ty (joined the company) đã xảy ra 5 năm trước (5 years ago) nên hành động \"mentor\" đã xảy ra trong quá khứ và kéo dài đến hiện tại.\n• Như vậy, đáp án là động từ được chia ở thì hiện tại hoàn thành hoặc hiện tại hoàn thành tiếp diễn và ở dạng số ít vì \"Ms. Shawn\" là chủ ngữ số ít.\nLựa chọn đáp án:\n(A) mentors: động từ chia ở thì hiện tại đơn, ở dạng số ít\n(B) is mentoring: động từ chia ở thì hiện tại tiếp diễn, ở dạng số ít\n(C) will mentor: động từ chia ở thì tương lai đơn\n(D) has been mentoring: động từ chia ở thì hiện tại hoàn thành tiếp diễn, ở dạng số ít\nTạm dịch: Bà Shawn đã hướng dẫn ông Ichise từ khi ông ấy gia nhập công ty năm năm trước.",
@@ -4649,14 +4663,15 @@
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) last",
+     "prompt": null,
      "options": {
+      "A": "last",
       "B": "original",
       "C": "flexible",
       "D": "alternate"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Từ vựng\nĐặc điểm đáp án:\n• Từ cần điền là một tính từ, bổ nghĩa cho danh từ \"day\". Đoạn thông tin đang nói về ngày tổ chức tiệc nghỉ hưu cho bà Shawn.\nNghĩa các phương án:\n(A) last (adj) cuối cùng\n(B) original (adj) gốc\n(C) flexible (adj) linh hoạt\n(D) alternate (adj) xen kẽ, luân phiên\nTạm dịch: Ngày cuối cùng của bà Shawn sẽ là ngày 22 tháng Hai. Một buổi tiệc nghỉ hưu sẽ được tổ chức cho bà vào ngày đó vào lúc 4:00 chiều tại Sảnh Terey.",
@@ -4667,14 +4682,15 @@
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) Cometti Creative will hire a replacement soon.",
+     "prompt": null,
      "options": {
+      "A": "Cometti Creative will hire a replacement soon.",
       "B": "We hope that you can all attend to wish her well.",
       "C": "Ms. Shawn was the first director of human resources at Cometti Creative.",
       "D": "The first project will be the creation of a talent development program."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án: Câu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho câu phía sau chỗ trống.\nNghĩa các phương án:\n(A) Cometti Creative sẽ sớm thuê người thay thế.\n(B) Chúng tôi hy vọng tất cả các bạn có thể tham dự để chúc cô ấy mọi điều tốt lành.\n(C) Bà Shawn là giám đốc nhân sự đầu tiên tại Cometti Creative.\n(D) Dự án đầu tiên sẽ là tạo ra một chương trình phát triển tài năng.\nCách định vị vùng thông tin chứa đáp án: Các câu phía trước chỗ trống đang nói về việc tổ chức một bữa tiệc chia tay bà Shawn vì bà ấy nghỉ hưu. Đáp án (B) nối tiếp ý của câu trước, bổ sung thêm lời kêu gọi tham gia buổi tiệc.",
@@ -4692,15 +4708,16 @@
    "passages": [
     {
      "label": "Advertisement",
-     "text": "Lovitt Real Estate\nHelping Manitoba Families Find their Dream Homes\n\nManuel Lovitt, of Lovitt Real Estate, has been selling real estate for over 17 years. Mr. Lovitt ------- and his award-winning team ------- in homes for families in the Winnipeg, Brandon, and Dauphin areas."
+     "text": "Lovitt Real Estate\nHelping Manitoba Families Find their Dream Homes\n\nManuel Lovitt, of Lovitt Real Estate, has been selling real estate for over 17 years. Mr. Lovitt --- [135] --- and his award-winning team --- [136] --- in homes for families in the Winnipeg, Brandon, and Dauphin areas."
     }
    ],
    "questions": [
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) own",
+     "prompt": null,
      "options": {
+      "A": "own",
       "B": "owned",
       "C": "owner",
       "D": "owning"
@@ -4717,8 +4734,9 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) practice",
+     "prompt": null,
      "options": {
+      "A": "practice",
       "B": "specialize",
       "C": "report",
       "D": "purchase"
@@ -4735,14 +4753,15 @@
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) They can arrange transportation for your local elementary school.",
+     "prompt": null,
      "options": {
+      "A": "They can arrange transportation for your local elementary school.",
       "B": "That is because they live in the communities they serve.",
       "C": "They will be closed for the summer but will be back soon.",
       "D": "Therefore, they can help you with all your banking needs."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án: Câu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho câu phía sau chỗ trống.\nNghĩa các phương án:\n(A) Họ có thể sắp xếp phương tiện đi lại cho trường tiểu học địa phương của bạn.\n(B) Đó là vì họ sống trong cộng đồng mà họ phục vụ.\n(C) Họ sẽ đóng cửa vào mùa hè nhưng sẽ sớm quay trở lại.\n(D) Do đó, họ có thể giúp bạn đáp ứng mọi nhu cầu ngân hàng của bạn.\nCách định vị vùng thông tin chứa đáp án: Câu phía trước chỗ trống đang nói về việc công ty bất động sản này biết về trường học, công viên, dịch vụ, phương tiện đi lại và các hoạt động nâng cao đời sống gia đình ở khu vực bạn muốn cư trú. Đáp án (B) nối tiếp ý của câu trước, bổ sung thêm lý do cho sự hiểu biết, nắm rõ khu vực này.",
@@ -4753,14 +4772,15 @@
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) toward",
+     "prompt": null,
      "options": {
+      "A": "toward",
       "B": "fixing",
       "C": "because",
       "D": "along"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Giới từ, liên từ\nĐặc điểm đáp án:\n• Trước chỗ trống là động từ \"guide\" (hướng dẫn), sau chỗ trống là tân ngữ \"the home of your dreams\". Đây là cái mà đội ngũ sẽ hướng dẫn bạn.\n• Đáp án là giới từ có thể kết hợp với động từ \"guide\", có nghĩa phù hợp với câu.\nLựa chọn đáp án:\n(A) toward: giới từ (về, hướng về), có thể đi cùng động từ \"guide\"\n(B) fixing: động từ chia ở dạng thêm -ing\n(C) because: liên từ (bởi vì), đi cùng mệnh đề phía sau\n(D) along: giới từ (dọc theo, cùng với), \"Along\" ngụ ý việc di chuyển theo một hướng cố định cùng với điều gì đó, trong trường hợp này không phù hợp với ngữ cảnh.\nTạm dịch: Hãy liên hệ với Lovitt Real Estate ngay hôm nay và để đội ngũ hướng dẫn bạn về ngôi nhà mơ ước của mình.",
@@ -4778,15 +4798,16 @@
    "passages": [
     {
      "label": "Introduction",
-     "text": "Welcome to \"Distributing Your Savings.\" This slide ------- is the third of a twelve-segment educational series called \"Preparing for Retirement.\""
+     "text": "Welcome to \"Distributing Your Savings.\" This slide --- [139] --- is the third of a twelve-segment educational series called \"Preparing for Retirement.\""
     }
    ],
    "questions": [
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) presenting",
+     "prompt": null,
      "options": {
+      "A": "presenting",
       "B": "presents",
       "C": "presentation",
       "D": "presented"
@@ -4803,14 +4824,15 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) You are encouraged to visit our office for a free portfolio review.",
+     "prompt": null,
      "options": {
+      "A": "You are encouraged to visit our office for a free portfolio review.",
       "B": "The series is designed to help you make informed financial decisions.",
       "C": "Please fill out the paperwork before your appointment.",
       "D": "Your responses will help us serve you better in the future."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án: Câu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho câu phía sau chỗ trống.\nNghĩa các phương án:\n(A) Bạn được khuyến khích đến văn phòng của chúng tôi để xem danh mục đầu tư miễn phí.\n(B) Loạt bài này được thiết kế để giúp bạn đưa ra những quyết định tài chính sáng suốt.\n(C) Vui lòng điền vào giấy tờ trước cuộc hẹn của bạn.\n(D) Phản hồi của bạn sẽ giúp chúng tôi phục vụ bạn tốt hơn trong tương lai.\nCách định vị vùng thông tin chứa đáp án: Câu phía trước chỗ trống đang giới thiệu về một series có tên \"Prepare for Retirement\" (Chuẩn bị cho nghỉ hưu). Đáp án (B) nối tiếp ý của câu trước, bổ sung thông tin giới thiệu mục đích của series này.",
@@ -4821,14 +4843,15 @@
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) regional",
+     "prompt": null,
      "options": {
+      "A": "regional",
       "B": "expensive",
       "C": "supplemental",
       "D": "playful"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Từ vựng\nĐặc điểm đáp án:\n• Chỗ trống cần điền một tính từ bổ nghĩa cho danh từ \"advice\".\n• Tính từ này có nghĩa liên quan đến ý ở câu sau là nó không nên thay thế sự hướng dẫn của người lập kế hoạch đầu tư của bạn.\nNghĩa các phương án:\n(A) regional (adj) theo khu vực\n(B) expensive (adj) đắt\n(C) supplemental (adj) bổ sung, thêm vào\n(D) playful (adj) tinh nghịch\nTạm dịch: Loạt bài giảng này chỉ cung cấp lời khuyên bổ sung. Nó không nên thay thế sự hướng dẫn của người lập kế hoạch đầu tư của bạn.",
@@ -4839,14 +4862,15 @@
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) consulting",
+     "prompt": null,
      "options": {
+      "A": "consulting",
       "B": "prescribing",
       "C": "listing",
       "D": "following"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Từ vựng\nĐặc điểm đáp án:\n• Chỗ trống cần điền động từ thể hiện hành động cần làm với người lập kế hoạch đầu tư (with your investment planner)\nNghĩa các phương án:\n(A) consulting: tham khảo ý kiến, tham vấn\n(B) prescribing: ra lệnh, kê đơn\n(C) listing: lập danh sách, liệt kê\n(D) following: tuân theo\nTạm dịch: Loạt bài giảng đã được phát triển như là tài liệu nền để giúp bạn đặt ra những câu hỏi then chốt khi tham khảo ý kiến với người lập kế hoạch đầu tư của bạn.",
@@ -4895,15 +4919,16 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: Dana Paulwell\nFrom: Silas Laveau\nDate: August 22\nSubject: My input\nAttachment: Article\n\nDear Dr. Paulwell,\n\nThis message is in response to yesterday's staff meeting, particularly the discussion on how certain aspects of the clinic may affect our work and mission. -------."
+     "text": "To: Dana Paulwell\nFrom: Silas Laveau\nDate: August 22\nSubject: My input\nAttachment: Article\n\nDear Dr. Paulwell,\n\nThis message is in response to yesterday's staff meeting, particularly the discussion on how certain aspects of the clinic may affect our work and mission. --- [143] ---."
     }
    ],
    "questions": [
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) I thought it went on longer than was necessary.",
+     "prompt": null,
      "options": {
+      "A": "I thought it went on longer than was necessary.",
       "B": "I wish we had been informed about it sooner.",
       "C": "I would like to make a suggestion on this topic.",
       "D": "I would be honored to lead a follow-up session."
@@ -4920,14 +4945,15 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) will offer",
+     "prompt": null,
      "options": {
+      "A": "will offer",
       "B": "have offered",
       "C": "were offering",
       "D": "should be offering"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Thì động từ\nĐặc điểm đáp án:\n• Chỗ trống cần điền động từ chia các thì ở hiện tại hoặc động từ khuyết thiếu thể hiện việc nhà cung cấp dịch vụ chăm sóc sức khỏe cần làm.\nLựa chọn đáp án:\n(A) will offer: động từ chia thì tương lai đơn\n(B) have offered: động từ chia thì hiện tại hoàn thành\n(C) were offering: động từ chia thì quá khứ tiếp diễn\n(D) should be offering: Ám chỉ chủ ngữ lẽ ra cần nên hoàn thành công việc/ trách nhiệm\nTạm dịch: Là một nhà cung cấp dịch vụ chăm sóc sức khỏe, chúng ta nên cung cấp đồ uống và đồ ăn nhẹ thể hiện cam kết của chúng ta đối với sức khỏe.",
@@ -4938,14 +4964,15 @@
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) After all",
+     "prompt": null,
      "options": {
+      "A": "After all",
       "B": "By the way",
       "C": "In the meantime",
       "D": "On the other hand"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Liên từ\nĐặc điểm đáp án:\n• Chỗ trống cần điền từ nối có mối liên hệ với các câu trước.\nNghĩa các phương án:\n(A) After all: Suy cho cùng\n(B) By the way: Nhân tiện\n(C) In the meantime: Trong lúc đó\n(D) On the other hand: Mặt khác, ngược lại\nTạm dịch: Suy cho cùng, nhiệm vụ của chúng ta được tập trung vào sức khỏe tốt.",
@@ -4956,14 +4983,15 @@
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) useful",
+     "prompt": null,
      "options": {
+      "A": "useful",
       "B": "eventful",
       "C": "profitable",
       "D": "comfortable"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Từ vựng\nĐặc điểm đáp án:\n• Chỗ trống cần điền tính từ trong cấu trúc \"find something + adj\". Tính từ này bổ nghĩa cho \"it\".\n• \"it\" trong câu ám chỉ bài viết \"article\" mà người viết thư đề xuất trước đó.\nNghĩa các phương án:\n(A) useful (adj) hữu ích, có ích\n(B) eventful (adj): có nhiều sự kiện quan trọng\n(C) profitable (adj) sinh lợi, mang lại nhiều lợi nhuận\n(D) comfortable (adj) thoải mái\nTạm dịch: Tôi hy vọng bạn sẽ thấy nó hữu ích.",
@@ -6750,6 +6778,7 @@
  ],
  "warnings": [
   "2 câu các nguồn đáp án không thống nhất (đã lấy nguồn tin cậy hơn): [70, 105]",
-  "1 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 12"
+  "1 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 12",
+  "11 câu Part 6 mất đoạn văn chứa chỗ trống (parser cũ) — tạm bỏ qua, build lại từ docx để khôi phục: [132, 133, 134, 137, 138, 140, 141, 142, 144, 145, 146]"
  ]
 }

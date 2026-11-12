@@ -11,7 +11,20 @@
   "questions": 200,
   "answered": 200,
   "missingAnswers": [],
-  "brokenQuestions": []
+  "brokenQuestions": [
+   132,
+   133,
+   134,
+   136,
+   137,
+   138,
+   140,
+   141,
+   142,
+   144,
+   145,
+   146
+  ]
  },
  "groups": [
   {
@@ -4221,15 +4234,16 @@
    "passages": [
     {
      "label": "Notice",
-     "text": "D-Zine Pop\nD-Zine Pop is your source for information about the latest ------- in the world of fashion."
+     "text": "D-Zine Pop\nD-Zine Pop is your source for information about the latest --- [131] --- in the world of fashion."
     }
    ],
    "questions": [
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) controversies",
+     "prompt": null,
      "options": {
+      "A": "controversies",
       "B": "consumers",
       "C": "trends",
       "D": "versions"
@@ -4246,14 +4260,15 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) evolving",
+     "prompt": null,
      "options": {
+      "A": "evolving",
       "B": "evolution",
       "C": "will be evolving",
       "D": "has evolved"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "Dạng câu hỏi: từ loại / thì động từ.\nĐặc điểm đáp án:\n• Cần một từ hoặc cụm từ để mô tả quá trình phát triển từ một thử nghiệm truyền thông xã hội đến một nền tảng nội dung.\n• Từ này cũng phải phản ánh sự biến đổi từ quá khứ đến hiện tại.\n• Vì vậy câu này có thể sử dụng thì Hiện tại hoàn thành do tính chất của thì này dùng để phản ánh những việc ở quá khứ nhưng có kéo dài đến thời điểm hiện tại.\nLựa chọn đáp án:\n(A) evolving: đang phát triển (dạng động từ gerund/V-ing)\n(B) evolution: sự tiến hóa (danh từ)\n(C) will be evolving: sẽ tiếp tục phát triển (thì tương lai tiếp diễn)\n(D) has evolved: đã phát triển (thì hiện tại hoàn thành)\nTạm dịch: Điều gì bắt đầu như một thử nghiệm truyền thông xã hội đã phát triển thành một nền tảng nội dung.",
@@ -4264,14 +4279,15 @@
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) continue",
+     "prompt": null,
      "options": {
+      "A": "continue",
       "B": "continued",
       "C": "continuation",
       "D": "continues"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dạng câu hỏi: từ loại\nĐặc điểm đáp án:\n• Cần một từ để mô tả việc quyền truy cập của người đăng ký vào nội dung, dựa trên việc họ đồng ý với điều khoản.\n• Từ này phải phản ánh việc quyền truy cập được tiếp tục của người đăng ký.\n• Từ cần điền nằm trước danh từ \"access\" (lý do là sau sở hữu cách 's cần có một danh từ), nên từ cần điền ở đây phải là một tính từ để bổ nghĩa cho danh từ.\n• Từ cần điền cũng phải là một tính từ mang ý nghĩa bị động (Adj đuôi -ed).\nLựa chọn đáp án:\n(A) continue: tiếp tục (động từ cho chủ ngữ số nhiều)\n(B) continued: được tiếp tục (tính từ có đuôi -ed)\n(C) continuation: sự tiếp tục (danh từ)\n(D) continues: tiếp tục (động từ cho chủ ngữ số ít)\nTạm dịch: Quyền truy cập được tiếp tục của người đăng ký vào nội dung tùy thuộc vào việc đồng ý với các điều khoản này ...",
@@ -4282,14 +4298,15 @@
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) Representatives are available 24 hours a day to assist you.",
+     "prompt": null,
      "options": {
+      "A": "Representatives are available 24 hours a day to assist you.",
       "B": "The changes made to our user privacy policy are no longer effective.",
       "C": "Fresh content is accessible through phone and desktop apps.",
       "D": "We are no longer offering a discounted rate if you renew your subscription."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp.\nĐặc điểm đáp án:\nCâu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho câu phía sau chỗ trống.\n• Cần một tuyên bố đúng về các thông tin hoặc dịch vụ mà D-Zine Pop cung cấp.\nLựa chọn đáp án:\n(A) Representatives are available 24 hours a day to assist you.: Đại diện sẵn sàng 24/7 để hỗ trợ bạn.\n(B) The changes made to our user privacy policy are no longer effective.: Các thay đổi được thực hiện trong chính sách bảo mật người dùng của chúng tôi không còn hiệu quả nữa.\n(C) Fresh content is accessible through phone and desktop apps.: Nội dung mới luôn có sẵn qua ứng dụng trên điện thoại và máy tính để bàn.\n(D) We are no longer offering a discounted rate if you renew your subscription.: Chúng tôi không còn cung cấp mức giảm giá nếu bạn gia hạn đăng ký của mình.\nCách định vị vùng thông tin chứa đáp án:\nCâu phía trước \"Contact our customer service team at support@dzinepop.com if you have any questions.\" đề cập đến dịch vụ chăm sóc khách hàng qua mail.\nVì thế nên câu tiếp sau phải phản ánh một sự thay đổi hoặc một tính năng mới liên quan đến dịch vụ.\nTạm dịch: Liên hệ với nhóm dịch vụ khách hàng của chúng tôi tại support@dzinepop.com nếu bạn có bất kỳ câu hỏi nào. Các đại diện luôn sẵn sàng 24 giờ mỗi ngày để hỗ trợ bạn.",
@@ -4307,15 +4324,16 @@
    "passages": [
     {
      "label": "Advertisement",
-     "text": "Rescue your device with Phone Tune-Up\nIs your smartphone screen scratched or cracked? -------?"
+     "text": "Rescue your device with Phone Tune-Up\nIs your smartphone screen scratched or cracked? --- [135] ---?"
     }
    ],
    "questions": [
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) Does your printer need frequent ink refills?",
+     "prompt": null,
      "options": {
+      "A": "Does your printer need frequent ink refills?",
       "B": "Does it take all day for your battery to recharge?",
       "C": "Do you want to complete a short survey?",
       "D": "Do you pay too much for your data plan?"
@@ -4332,14 +4350,15 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) remove",
+     "prompt": null,
      "options": {
+      "A": "remove",
       "B": "borrow",
       "C": "examine",
       "D": "repair"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "Dạng câu hỏi: từ vựng\nĐặc điểm đáp án:\n• Từ cần điền nằm sau giới từ “to” nên có thể là một động từ nguyên mẫu.\n• Cần một động từ mô tả hành động mà Phone Tune-Up thực hiện đối với điện thoại di động của khách hàng.\n• Hành động này có liên quan đến câu sau \"replacing your phone with a new one\" (việc thay thế điện thoại của bạn bằng điện thoại mới).\nLựa chọn đáp án:\n(A) remove: Không phản ánh việc sửa chữa, mà là việc loại bỏ hoặc di chuyển điều gì đó.\n(B) borrow: Không liên quan đến việc sửa chữa điện thoại di động mà là việc mượn một cái gì đó từ người khác.\n(C) examine: Có nghĩa là kiểm tra, nhưng không phản ánh việc sửa chữa.\n(D) repair: Phản ánh hành động cần thiết để khắc phục sự cố, là từ cần thiết để điền vào chỗ trống.\nTạm dịch: Chúng tôi sử dụng không gì ngoài những bộ phận có chất lượng tốt nhất để sửa chữa điện thoại di động của bạn.",
@@ -4350,14 +4369,15 @@
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) trained",
+     "prompt": null,
      "options": {
+      "A": "trained",
       "B": "available",
       "C": "done",
       "D": "dismissed"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "Dạng câu hỏi: từ vựng\nĐặc điểm đáp án:\n• Từ cần điền nằm sau động từ to-be \"are\" nên có thể là một tính từ, hoặc động từ ở dạng bị động.\n• Cần một từ hoặc cụm từ mô tả trạng thái sau khi sửa chữa điện thoại của khách hàng.\nLựa chọn đáp án:\n(A) trained: được huấn luyện.\n(B) available: có sẵn\n(C) done: hoàn thành, kết thúc, phản ánh trạng thái sau khi sửa chữa, là từ cần thiết để điền vào chỗ trống.\n(D) dismissed: được quyết định rằng ai đó điều gì đó không quan trọng và không đáng để suy nghĩ hay nói tới\nTạm dịch: Khi chúng tôi hoàn thành, bạn sẽ nghĩ chiếc điện thoại cũ của mình là mới tinh.",
@@ -4368,14 +4388,15 @@
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) whose",
+     "prompt": null,
      "options": {
+      "A": "whose",
       "B": "must",
       "C": "if",
       "D": "of"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "Dạng câu hỏi: liên từ/ giới từ.\nĐặc điểm đáp án:\n• Ở đây, ta thấy từ cần điền nằm giữa hai vế (xác định là một vế khi chủ ngữ và vị ngữ đầy đủ): Same-day service is often available (Dịch vụ trong ngày thường có sẵn) và needed parts are in stock (các bộ phận cần thiết đều có sẵn trong kho).\n• Vì thế nên cần một liên từ để nối giữa hai vế với nhau, liên từ ở đây có thể mang ý nghĩa điều kiện.\n• Cần một giới từ hoặc cụm từ chỉ điều kiện liên quan đến việc sử dụng dịch vụ cùng với việc có sẵn các bộ phận cần thiết.\nLựa chọn đáp án:\n(A) whose: đại từ quan hệ, thường dùng trước danh từ biểu thị sự sở hữu.\n(B) must: động từ khuyết thiếu mang ý nghĩa bắt buộc.\n(C) if: Phản ánh điều kiện liên quan đến việc sử dụng dịch vụ cùng với việc có sẵn các bộ phận cần thiết, là từ cần thiết để điền vào chỗ trống.\n(D) of: giới từ, thường mang ý nghĩa của, sở hữu.\nTạm dịch: Dịch vụ trong ngày thường có sẵn nếu các bộ phận cần thiết đều có sẵn trong kho.",
@@ -4393,15 +4414,16 @@
    "passages": [
     {
      "label": "Press release",
-     "text": "FOR IMMEDIATE RELEASE\nSACRAMENTO (July 28)-The Sacramento-based supermarket chain Hsing Market announced today that it is opening a branch ------- in San Jose in October."
+     "text": "FOR IMMEDIATE RELEASE\nSACRAMENTO (July 28)-The Sacramento-based supermarket chain Hsing Market announced today that it is opening a branch --- [139] --- in San Jose in October."
     }
    ],
    "questions": [
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) location",
+     "prompt": null,
      "options": {
+      "A": "location",
       "B": "locate",
       "C": "to locate",
       "D": "locating"
@@ -4418,14 +4440,15 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) finally",
+     "prompt": null,
      "options": {
+      "A": "finally",
       "B": "instead",
       "C": "likewise",
       "D": "suddenly"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: từ vựng\nĐặc điểm đáp án:\n• Từ cần điền nằm sau giới từ \"to\" và động từ \"open\". Nên từ cần điền có thể là một trạng từ để bổ nghĩa cho động từ.\n• Cần một từ chỉ trạng thái cảm xúc hoặc hành động liên quan đến việc mở cửa hàng mới ở San Jose.\nLựa chọn đáp án:\n(A) finally: cuối cùng thì\n(B) instead: thay vào đó\n(C) likewise: tương tự như là\n(D) suddenly: đột nhiên, bất ngờ\nTạm dịch: Chúng tôi rất vui mừng khi cuối cùng cũng mở được một cửa hàng ở San Jose.",
@@ -4436,14 +4459,15 @@
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) The store features a variety of fresh and prepared foods.",
+     "prompt": null,
      "options": {
+      "A": "The store features a variety of fresh and prepared foods.",
       "B": "We hope that you will be able to join us at our grand-opening celebration.",
       "C": "We have had our eyes on the city for quite some time.",
       "D": "Our corporate headquarters will be renovated soon."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "C",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án:\n• Cần một cụm từ hoặc câu mô tả lý do hoặc ý định sau câu \"We are very excited to...\"\nLựa chọn đáp án:\n(A) The store features a variety of fresh and prepared foods.: Cửa hàng có nhiều loại thực phẩm tươi sống và chế biến sẵn.\n(B) We hope that you will be able to join us at our grand-opening celebration.: Chúng tôi hy vọng rằng bạn sẽ có thể tham gia cùng chúng tôi tại lễ khai trương của chúng tôi.\n(C) We have had our eyes on the city for quite some time.: Chúng tôi đã để mắt đến thành phố này được một thời gian. Phản ánh ý định hoặc lý do sau câu \"We are very excited to...\", với việc sẵn sàng mở cửa hàng mới ở San Jose.\n(D) Our corporate headquarters will be renovated soon.: Trụ sở công ty của chúng tôi sẽ sớm được cải tạo.\nCách định vị vùng thông tin chứa đáp án: Câu phía trước chỗ trống giới thiệu về một địa điểm cửa hàng mới. Nên để nối tiếp ý của câu trước, cần phải bàn luận hay nhận xét về địa điểm mới này.\nTạm dịch: Chúng tôi rất vui mừng khi cuối cùng cũng mở được một cửa hàng ở San Jose. Chúng tôi đã để mắt tới thành phố này được một thời gian.",
@@ -4454,14 +4478,15 @@
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) save",
+     "prompt": null,
      "options": {
+      "A": "save",
       "B": "work",
       "C": "shop",
       "D": "register"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dạng câu hỏi: từ vựng\nĐặc điểm đáp án:\n• Từ cần điền nằm sau đại từ chủ ngữ \"they\" nên cần một động từ cho chủ ngữ số nhiều.\n• Đại từ nhân xưng \"they\" ở đây đề cập đến chủ ngữ \"75 percent of all employees live within two miles of the store\" (75 phần trăm tất cả nhân viên sống trong phạm vi hai dặm từ cửa hàng). Vì thế nên cần một động từ có liên quan đến hành động của nhân viên/người làm việc.\n• Cần một từ hoặc cụm từ mô tả hành động của nhân viên sau khi được tuyển dụng tại cửa hàng.\nLựa chọn đáp án:\n(A) save: tiết kiệm\n(B) work: làm việc\n(C) shop: mua sắm\n(D) register: đăng ký\nTạm dịch: Khoảng 75 phần trăm tất cả nhân viên sống trong phạm vi hai dặm từ cửa hàng nơi họ làm việc.",
@@ -4479,15 +4504,16 @@
    "passages": [
     {
      "label": "Web page information",
-     "text": "About Leafi Cloth\nTropick Textiles recently expanded the ------- of fabrics available on the market."
+     "text": "About Leafi Cloth\nTropick Textiles recently expanded the --- [143] --- of fabrics available on the market."
     }
    ],
    "questions": [
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) range",
+     "prompt": null,
      "options": {
+      "A": "range",
       "B": "expense",
       "C": "strength",
       "D": "appearance"
@@ -4504,14 +4530,15 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) are developed",
+     "prompt": null,
      "options": {
+      "A": "are developed",
       "B": "has developed",
       "C": "will develop",
       "D": "to develop"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "B",
      "explanation": {
       "reasoning": "Dạng câu hỏi: thì động từ\nĐặc điểm đáp án:\n• Từ cần điền ở trong câu này nằm sau danh từ chủ ngữ \"the company\" (công ty) và trước tân ngữ \"a new fiber\" (một loại sợi). Nên từ cần điền ở đây phải là một động từ.\n• Vì vậy, cần một dạng động từ phù hợp với ngữ cảnh của câu.\n• Trong câu này hành động được miêu tả trong quá khứ nhưng không xác định được thời gian cụ thể nên thì hiện tại hoàn thành là phù hợp nhất.\nLựa chọn đáp án:\n(A) are developed: Dạng bị động của thì hiện tại đơn với chủ ngữ số nhiều\n(B) has developed: Dạng động từ hiện tại hoàn thành phản ánh hành động đã hoàn thành ở quá khứ và ảnh hưởng đến hiện tại, hoặc một hành động trong quá khứ không có thời gian xác định cụ thể.\n(C) will develop: Kết hợp với động từ khuyết thiếu \"will\" và động từ chính \"develop\" cho ý nghĩa tương lai\n(D) to develop: Dạng to-infinitive (to-V)\nTạm dịch: công ty đã phát triển một loại sợi mới làm từ những vật liệu thường bị bỏ đi.",
@@ -4522,14 +4549,15 @@
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) now",
+     "prompt": null,
      "options": {
+      "A": "now",
       "B": "thus",
       "C": "even",
       "D": "once"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "D",
      "explanation": {
       "reasoning": "Dạng câu hỏi: liên từ / từ vựng\nĐặc điểm đáp án:\n• Từ cần điền ở đây trong câu này nằm giữa hai vế (xác định là một vế khi chủ ngữ và vị ngữ đầy đủ): The plants' leaves are ordinarily disposed of (\"Lá của cây thường được vứt đi\") và the fruit is harvested (\"quả được thu hoạch\").\n• Cần một từ chỉ thời gian để phản ánh việc lá cây được vứt bỏ sau khi quả được thu hoạch.\n• Trạng từ ở đây cần biểu thị mối quan hệ về thời gian trước - sau.\nLựa chọn đáp án:\n(A) now: bây giờ\n(B) thus: do đó\n(C) even: ngay cả khi\n(D) once: có nghĩa là một lần, một khi, ngay sau khi, thường được sử dụng để chỉ thời điểm trong quá khứ một cách cụ thể hoặc tương đối. Trong đó, vế trước trạng từ \"once\" chỉ hành động xảy ra sau, và vế sau trạng từ \"once\" chỉ hành động xảy ra trước.\nTạm dịch: Lá của cây thường được vứt đi sau khi quả được thu hoạch.",
@@ -4540,14 +4568,15 @@
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) The resulting durable fabric is a suitable substitute for cotton cloth.",
+     "prompt": null,
      "options": {
+      "A": "The resulting durable fabric is a suitable substitute for cotton cloth.",
       "B": "Inquiries regarding Leafi Cloth were directed to the sales department.",
       "C": "Tropick Textiles will celebrate its one-hundredth anniversary this year.",
       "D": "Manufacturing costs have been increasing for Tropick Textiles lately."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án:\n• Cần một câu mô tả kết quả hoặc hậu quả của quá trình của Tropick Textiles.\nLựa chọn đáp án:\n(A) The resulting durable fabric is a suitable substitute for cotton cloth. (Loại vải bền này có thể thay thế phù hợp cho vải cotton.)\n(B) Inquiries regarding Leafi Cloth were directed to the sales department. (Các thắc mắc liên quan đến Vải Leafi đều được chuyển đến bộ phận bán hàng.)\n(C) Tropick Textiles will celebrate its one-hundredth anniversary this year. (Tropick Textiles sẽ kỷ niệm 100 năm thành lập vào năm nay.)\n(D) Manufacturing costs have been increasing for Tropick Textiles lately. (Gần đây, chi phí sản xuất của Tropick Textiles ngày càng tăng.)\nCách định vị vùng thông tin chứa đáp án:\n• Câu phía trước chỗ trống là câu “Tropick Textiles' process prevents many leaves from entering a landfill, converting them instead into usable material.” mang ý nghĩa quá trình tạo nên vải Tropick Textiles. Đây là vế nguyên nhân.\n• Câu cần điền cần mô tả kết quả hoặc hậu quả của quá trình của Tropick Textiles. \"The resulting durable fabric is a suitable substitute for cotton cloth.\" mô tả kết quả của quá trình công nghệ của Tropick Textiles, giúp ngăn chặn việc lá cây vào bãi chôn lấp và biến chúng thành vật liệu có thể sử dụng được. Kết quả là vải bền bỉ này là một sự thay thế thích hợp cho vải bông.\nTạm dịch: Quá trình của Tropick Textiles ngăn không cho nhiều lá rơi vào bãi chôn lấp, thay vào đó biến chúng thành vật liệu có thể sử dụng được. Kết quả là vải bền bỉ này là một sự thay thế thích hợp cho vải bông.",
@@ -5794,5 +5823,7 @@
    ]
   }
  ],
- "warnings": []
+ "warnings": [
+  "12 câu Part 6 mất đoạn văn chứa chỗ trống (parser cũ) — tạm bỏ qua, build lại từ docx để khôi phục: [132, 133, 134, 136, 137, 138, 140, 141, 142, 144, 145, 146]"
+ ]
 }

@@ -1,7 +1,8 @@
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { NextResponse } from "next/server";
-import { getCatalogEntry } from "@/lib/full-tests";
+import { getCatalogEntry, isTestFree } from "@/lib/full-tests";
+import { isUsageExempt } from "@/lib/access";
 
 /** Bắt đầu một lượt mới, hoặc trả lại lượt đang làm dở của chính đề đó. */
 export async function POST(req: Request) {
@@ -22,8 +23,23 @@ export async function POST(req: Request) {
   }
 
   const testNumber = Number(body.testSlug.split("-").pop());
-  if (!getCatalogEntry(body.examSlug, testNumber)) {
+  const entry = getCatalogEntry(body.examSlug, testNumber);
+  // testSlug phải đúng là đề của examSlug, và đề chưa bị khoá vì thiếu đáp án.
+  if (!entry || entry.slug !== body.testSlug || entry.locked) {
     return NextResponse.json({ error: "Unknown test" }, { status: 404 });
+  }
+
+  // Cùng luật với trang đề: đề miễn phí mở cho mọi người, còn lại cần đã đăng ký khoá.
+  if (!isTestFree(testNumber)) {
+    const profile = await prisma.profile
+      .findUnique({
+        where: { id: user.id },
+        select: { role: true, studentCode: true, enrolledCourses: true, freeUsageSeconds: true },
+      })
+      .catch(() => null);
+    if (!isUsageExempt(profile)) {
+      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    }
   }
 
   const existing = await prisma.fullTestAttempt.findFirst({

@@ -1,6 +1,6 @@
 // Chấm điểm — dùng được cả ở server và client (không import JSON đề).
 import { calcEtsScore, type EtsResult } from "@/lib/ets-scale";
-import { ALL_PARTS } from "./parts";
+import { ALL_PARTS, partMeta, type Section } from "./parts";
 import type { FullTest, PartNumber } from "./types";
 
 export interface PartScore {
@@ -18,9 +18,18 @@ export interface ScoreResult {
   gradable: number;
   answered: number;
   accuracy: number;
-  /** Chỉ quy đổi khi làm đủ 7 part và đề đủ đáp án */
+  /** Điểm Listening 5–495 — có khi làm đủ Part 1–4 */
+  listening: number | null;
+  /** Điểm Reading 5–495 — có khi làm đủ Part 5–7 */
+  reading: number | null;
+  /** Có câu bị loại khỏi phần được quy đổi ⇒ điểm là ước tính theo tỷ lệ */
+  estimated: boolean;
+  /** Tổng 10–990 — chỉ khi làm đủ cả 7 part */
   scaled: EtsResult | null;
 }
+
+/** Số câu tối thiểu được chấm trong một phần để còn quy đổi (trên 100). */
+const MIN_GRADABLE = 80;
 
 /**
  * Chấm bài. `answers` là map số câu → chữ cái đã chọn.
@@ -59,9 +68,21 @@ export function scoreAttempt(
   const gradable = list.reduce((a, s) => a + s.gradable, 0);
   const answered = list.reduce((a, s) => a + s.answered, 0);
 
-  const full = ALL_PARTS.every((p) => chosen.has(p));
-  const complete = full && gradable === 200;
-  const at = (p: PartNumber) => byPart.get(p)?.correct ?? 0;
+  // Quy đổi riêng từng phần khi đã làm đủ các part của phần đó. Câu bị loại
+  // (thiếu đáp án / thiếu nội dung) thì quy số câu đúng về thang 100 theo tỷ lệ.
+  function section(sec: Section): { raw: number; estimated: boolean } | null {
+    const ps = ALL_PARTS.filter((p) => partMeta(p).section === sec);
+    if (!ps.every((p) => chosen.has(p))) return null;
+    const ok = ps.reduce((a, p) => a + (byPart.get(p)?.correct ?? 0), 0);
+    const total = ps.reduce((a, p) => a + (byPart.get(p)?.gradable ?? 0), 0);
+    if (total < MIN_GRADABLE) return null;
+    return { raw: Math.round((ok * 100) / total), estimated: total < 100 };
+  }
+  const ls = section("listening");
+  const rd = section("reading");
+  const conv = calcEtsScore(ls?.raw ?? 0, 0, 0, 0, rd?.raw ?? 0, 0, 0);
+  const listening = ls ? conv.ls : null;
+  const reading = rd ? conv.rd : null;
 
   return {
     parts: list,
@@ -69,6 +90,11 @@ export function scoreAttempt(
     gradable,
     answered,
     accuracy: gradable ? correct / gradable : 0,
-    scaled: complete ? calcEtsScore(at(1), at(2), at(3), at(4), at(5), at(6), at(7)) : null,
+    listening,
+    reading,
+    estimated: Boolean(ls?.estimated || rd?.estimated),
+    scaled: listening !== null && reading !== null
+      ? { ls: listening, rd: reading, total: listening + reading }
+      : null,
   };
 }

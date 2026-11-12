@@ -1,7 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { PARTS, partMeta } from "@/lib/full-tests/parts";
+import Link from "next/link";
+import { PARTS, partMeta, suggestedMinutes } from "@/lib/full-tests/parts";
+import type { ExamProgress } from "@/components/shared/useAttempt";
 import type {
   FullTest, FullTestGroup, FullTestQuestion, PartNumber,
 } from "@/lib/full-tests/types";
@@ -14,6 +16,7 @@ type Stage = "listening" | "reading";
 const SPEEDS = [0.75, 1, 1.25, 1.5];
 // Mặc định là bậc 1 (1.15). Bậc 0 = 1.0 tương đương cỡ chữ cũ, để ai muốn nhỏ lại.
 const FONT_STEPS = [1, 1.15, 1.32, 1.5];
+const FONT_LABELS = ["A−", "A", "A+", "A++"];
 const FONT_DEFAULT = 1;
 const SPLIT_KEY = "fulltest:split";
 
@@ -61,9 +64,12 @@ export function ExamScreen({
   onSubmit,
   initialAnswers,
   initialMarked,
+  initialSecondsLeft,
+  initialProgress,
   saveState,
   onProgress,
   realLabel = "Thi thật",
+  exitHref = "/skills/full-tests",
 }: {
   test: FullTest;
   config: RunConfig;
@@ -72,10 +78,21 @@ export function ExamScreen({
   onSubmit: (answers: Record<number, string>, marked: number[]) => void;
   initialAnswers?: Record<number, string>;
   initialMarked?: number[];
+  /** Làm tiếp bài dở: đồng hồ còn lại lúc lưu (null = không bấm giờ / đang ở phần nghe) */
+  initialSecondsLeft?: number | null;
+  /** Làm tiếp bài dở ở chế độ thi thật: đang ở đoạn audio nào */
+  initialProgress?: ExamProgress;
   saveState?: "idle" | "saving" | "saved" | "error";
-  onProgress?: (answers: Record<number, string>, marked: number[], secondsLeft: number | null) => void;
+  onProgress?: (
+    answers: Record<number, string>,
+    marked: number[],
+    secondsLeft: number | null,
+    opts?: { progress?: ExamProgress; now?: boolean },
+  ) => void;
   /** Màn luyện một part gọi chế độ này là "Thi thử" thay vì "Thi thật" */
   realLabel?: string;
+  /** Nút thoát giữa bài quay về đâu */
+  exitHref?: string;
 }) {
   const P = PALETTE[skin];
   const real = config.mode === "real";
@@ -85,10 +102,36 @@ export function ExamScreen({
   const partsInPlay = useMemo(() => PARTS.filter((p) => chosen.has(p.part)), [chosen]);
   const listeningParts = useMemo(() => partsInPlay.filter((p) => p.section === "listening"), [partsInPlay]);
   const readingParts = useMemo(() => partsInPlay.filter((p) => p.section === "reading"), [partsInPlay]);
+  // Thi thật: đủ Part 5-7 là 75 phút như đề thật; chọn bớt part thì bớt giờ tương ứng.
+  const readingSeconds = suggestedMinutes(readingParts.map((p) => p.part)) * 60;
 
   const [answers, setAnswers] = useState<Record<number, string>>(initialAnswers ?? {});
   const [marked, setMarked] = useState<Set<number>>(new Set(initialMarked ?? []));
-  const [stage, setStage] = useState<Stage>(real && listeningParts.length ? "listening" : "reading");
+
+  const playlist = useMemo(() => (real ? groups.filter((g) => g.audio) : []), [real, groups]);
+
+  // Điểm xuất phát của chế độ thi thật. Làm tiếp bài dở thì lấy vị trí đã lưu
+  // trên máy này; không có (đổi máy) thì suy ra: đồng hồ Reading đã chạy ⇒ đang
+  // ở Reading, còn không thì nghe tiếp từ đoạn sau câu cuối cùng đã trả lời.
+  const [start] = useState<ExamProgress>(() => {
+    if (!real || !playlist.length) return { stage: "reading", playIndex: 0 };
+    if (initialProgress) return initialProgress;
+    const resuming = initialAnswers !== undefined && (
+      initialSecondsLeft != null || Object.keys(initialAnswers).length > 0
+    );
+    if (!resuming) return { stage: "listening", playIndex: 0 };
+    if (initialSecondsLeft != null) return { stage: "reading", playIndex: playlist.length };
+    let last = -1;
+    playlist.forEach((g, i) => {
+      if (g.questions.some((q) => initialAnswers[q.number])) last = i;
+    });
+    const next = last + 1;
+    return next >= playlist.length
+      ? { stage: "reading", playIndex: playlist.length }
+      : { stage: "listening", playIndex: next };
+  });
+
+  const [stage, setStage] = useState<Stage>(start.stage);
   const [activePart, setActivePart] = useState<PartNumber>(
     (real && listeningParts.length ? listeningParts[0].part : partsInPlay[0]?.part) ?? 1,
   );
@@ -99,20 +142,28 @@ export function ExamScreen({
   const [narrow, setNarrow] = useState(false);
   const [confirming, setConfirming] = useState(false);
   const [zoomed, setZoomed] = useState<string | null>(null);
+  /** Màn hẹp không có sidebar ⇒ mở danh sách câu dạng ngăn kéo */
+  const [navOpen, setNavOpen] = useState(false);
   const [splitPct, setSplitPct] = useState(58);
 
-  const countdownTotal = real
-    ? stage === "reading" && readingParts.length ? 75 * 60 : null
-    : config.minutes > 0 ? config.minutes * 60 : null;
-  const [secondsLeft, setSecondsLeft] = useState<number | null>(countdownTotal);
-
-  const stageRef = useRef(stage);
+  // Đồng hồ tính theo mốc giờ thật (deadline), không đếm từng nhịp setTimeout:
+  // tab bị ẩn thì trình duyệt làm chậm timer, còn mỗi lần render lại cũng không
+  // được làm lệch giờ. Làm tiếp bài dở thì chạy tiếp từ số giây đã lưu.
+  const [deadline, setDeadline] = useState<number | null>(() => {
+    const total = initialSecondsLeft != null
+      ? initialSecondsLeft
+      : real
+        ? start.stage === "reading" && readingParts.length ? readingSeconds : null
+        : config.minutes > 0 ? config.minutes * 60 : null;
+    return total == null ? null : Date.now() + total * 1000;
+  });
+  const [now, setNow] = useState(() => Date.now());
   useEffect(() => {
-    if (stageRef.current !== stage) {
-      stageRef.current = stage;
-      setSecondsLeft(real && stage === "reading" && readingParts.length ? 75 * 60 : null);
-    }
-  }, [stage, real, readingParts.length]);
+    if (deadline === null) return;
+    const t = setInterval(() => setNow(Date.now()), 500);
+    return () => clearInterval(t);
+  }, [deadline]);
+  const secondsLeft = deadline === null ? null : Math.max(0, Math.ceil((deadline - now) / 1000));
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 900px)");
@@ -120,31 +171,38 @@ export function ExamScreen({
     on();
     mq.addEventListener("change", on);
     const saved = Number(localStorage.getItem(SPLIT_KEY));
+    // localStorage chỉ đọc được sau khi mount (đọc lúc khởi tạo sẽ lệch hydration)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (saved >= 30 && saved <= 75) setSplitPct(saved);
     return () => mq.removeEventListener("change", on);
   }, []);
 
-  const submit = useCallback(() => onSubmit(answers, [...marked]), [answers, marked, onSubmit]);
+  // Nộp đúng một lần: bấm hai lần, hoặc hết giờ đúng lúc đang bấm, đều chỉ gửi một request.
+  const [submitting, setSubmitting] = useState(false);
+  const submittingRef = useRef(false);
+  const submit = useCallback(() => {
+    if (submittingRef.current) return;
+    submittingRef.current = true;
+    setSubmitting(true);
+    onSubmit(answers, [...marked]);
+  }, [answers, marked, onSubmit]);
 
+  const submitRef = useRef(submit);
+  useEffect(() => { submitRef.current = submit; }, [submit]);
   useEffect(() => {
-    if (secondsLeft === null) return;
-    if (secondsLeft <= 0) {
-      if (config.autoSubmit) submit();
-      return;
+    if (secondsLeft === 0 && config.autoSubmit) submitRef.current();
+  }, [secondsLeft, config.autoSubmit]);
+
+  // Rời trang giữa bài: hỏi lại trước khi thoát (đóng tab, tải lại, gõ địa chỉ khác).
+  useEffect(() => {
+    function warn(e: BeforeUnloadEvent) {
+      if (submittingRef.current) return;
+      e.preventDefault();
+      e.returnValue = "";
     }
-    const t = setTimeout(() => setSecondsLeft((s) => (s === null ? null : s - 1)), 1000);
-    return () => clearTimeout(t);
-  }, [secondsLeft, config.autoSubmit, submit]);
-
-  // Đồng hồ đổi mỗi giây nên đọc qua ref — chỉ lưu khi đáp án/đánh dấu thay đổi,
-  // không phải mỗi nhịp đếm.
-  const secondsRef = useRef(secondsLeft);
-  secondsRef.current = secondsLeft;
-
-  useEffect(() => {
-    onProgress?.(answers, [...marked], secondsRef.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [answers, marked]);
+    window.addEventListener("beforeunload", warn);
+    return () => window.removeEventListener("beforeunload", warn);
+  }, []);
 
   // Chỉ chọn part Listening thì hết audio vẫn giữ các part đó lại, không thì
   // màn hình trắng trơn chẳng còn gì bấm ngoài nút nộp bài.
@@ -156,6 +214,8 @@ export function ExamScreen({
 
   useEffect(() => {
     if (visibleParts.length && !visibleParts.some((p) => p.part === activePart)) {
+      // Sang Reading thì part đang mở bị khoá ⇒ chuyển sang part còn mở
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActivePart(visibleParts[0].part);
       setGroupIndex(0);
     }
@@ -196,14 +256,15 @@ export function ExamScreen({
 
   // ── Audio ──────────────────────────────────────────────────────────────────
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [playIndex, setPlayIndex] = useState(0);
+  const [playIndex, setPlayIndex] = useState(Math.min(start.playIndex, Math.max(0, playlist.length - 1)));
   const [playing, setPlaying] = useState(false);
+  /** Trình duyệt chặn tự phát (thường gặp trên iOS) ⇒ cần người dùng bấm lại */
+  const [blocked, setBlocked] = useState(false);
+  const [audioIssue, setAudioIssue] = useState<string | null>(null);
   const [gap, setGap] = useState(0);
   // Chỉ nhảy đoạn khi đoạn hiện tại đã phát xong. Không suy từ gap === 0 được:
   // lúc mới bấm bắt đầu thì gap cũng đang 0 và sẽ nhảy mất đoạn đầu.
   const [pendingNext, setPendingNext] = useState(false);
-
-  const playlist = useMemo(() => (real ? groups.filter((g) => g.audio) : []), [real, groups]);
 
   const advance = useCallback(() => {
     const cur = playlist[playIndex];
@@ -221,36 +282,112 @@ export function ExamScreen({
 
   useEffect(() => {
     if (!real || !playing || !pendingNext || gap > 0) return;
+    // Hết thời gian trả lời ⇒ sang đoạn kế: trạng thái suy từ đồng hồ gap
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPendingNext(false);
     const next = playIndex + 1;
     if (next >= playlist.length) {
       setPlaying(false);
       setStage("reading");
+      setDeadline(readingParts.length ? Date.now() + readingSeconds * 1000 : null);
       return;
     }
     setPlayIndex(next);
-  }, [gap, real, playing, pendingNext, playIndex, playlist.length]);
+  }, [gap, real, playing, pendingNext, playIndex, playlist.length, readingParts.length, readingSeconds]);
 
   // đoạn đang phát quyết định nhóm đang hiển thị
   const current = playlist[playIndex];
   useEffect(() => {
     if (!real || !current) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     jumpToQuestion(current.questionStart);
   }, [real, current, jumpToQuestion]);
+
+  // play() bị từ chối vì trình duyệt chặn tự phát ⇒ hiện nút cho người dùng bấm.
+  // Lỗi tải file thì để onError lo (AbortError là do đổi src giữa chừng, bỏ qua).
+  function playCurrent() {
+    audioRef.current?.play().then(
+      () => setBlocked(false),
+      (err: unknown) => {
+        if ((err as { name?: string })?.name === "NotAllowedError") setBlocked(true);
+      },
+    );
+  }
+  const playRef = useRef(playCurrent);
+  useEffect(() => { playRef.current = playCurrent; });
 
   // đổi đoạn ⇒ phát ngay; autoPlay không kích lại khi chỉ src thay đổi
   useEffect(() => {
     if (!real || !playing) return;
-    audioRef.current?.play().catch(() => {});
+    playRef.current();
   }, [real, playing, playIndex]);
+
+  // File audio lỗi: thử tải lại một lần, vẫn lỗi thì bỏ qua đoạn đó (vẫn cho
+  // thời gian trả lời) — không thì playlist đứng im, không bao giờ sang Reading.
+  const failures = useRef({ index: -1, count: 0 });
+  function onAudioError() {
+    if (!playing) return;
+    const f = failures.current;
+    if (f.index !== playIndex) failures.current = { index: playIndex, count: 0 };
+    failures.current.count++;
+    if (failures.current.count === 1) {
+      setTimeout(() => {
+        const el = audioRef.current;
+        if (!el) return;
+        el.load();
+        playRef.current();
+      }, 1500);
+      return;
+    }
+    if (failures.current.count === 2) {
+      const cur = playlist[playIndex];
+      setAudioIssue(cur ? `Không tải được audio ${rangeLabel(cur)} nên đã bỏ qua đoạn này.` : null);
+      advance();
+    }
+  }
+
+  // Lưu tiến độ: mỗi khi đáp án / đánh dấu / đoạn audio đổi, định kỳ khi đồng hồ
+  // chạy (để làm tiếp không bị cộng lại giờ), và gửi ngay khi ẩn tab / đóng trang.
+  const latest = useRef({ answers, marked, secondsLeft, stage, playIndex });
+  useEffect(() => {
+    latest.current = { answers, marked, secondsLeft, stage, playIndex };
+  });
+  const report = useCallback((immediate?: boolean) => {
+    if (submittingRef.current) return;
+    const l = latest.current;
+    onProgress?.(l.answers, [...l.marked], l.secondsLeft, {
+      progress: real ? { stage: l.stage, playIndex: l.playIndex } : undefined,
+      now: immediate,
+    });
+  }, [onProgress, real]);
+
+  useEffect(() => { report(); }, [answers, marked, stage, playIndex, report]);
+  useEffect(() => {
+    if (deadline === null) return;
+    const t = setInterval(() => report(), 20000);
+    return () => clearInterval(t);
+  }, [deadline, report]);
+  useEffect(() => {
+    function onHide() {
+      if (document.visibilityState === "hidden") report(true);
+    }
+    document.addEventListener("visibilitychange", onHide);
+    return () => document.removeEventListener("visibilitychange", onHide);
+  }, [report]);
 
   useEffect(() => {
     const el = audioRef.current;
     if (el) el.playbackRate = real ? 1 : speed;
   }, [speed, real, playIndex]);
 
+  /** letter rỗng = bỏ chọn */
   function pick(q: number, letter: string) {
-    setAnswers((prev) => ({ ...prev, [q]: letter }));
+    setAnswers((prev) => {
+      const next = { ...prev };
+      if (letter) next[q] = letter;
+      else delete next[q];
+      return next;
+    });
   }
   function toggleMark(q: number) {
     setMarked((prev) => {
@@ -268,14 +405,17 @@ export function ExamScreen({
   const answeredCount = allQuestions.filter((q) => answers[q.number]).length;
   const fontScale = FONT_STEPS[fontStep];
 
-  // Chế độ thi thật: chỉ khoá điều hướng trong giai đoạn Listening (playlist tự
-  // chạy, không được đi lại). Sang Reading thì vẫn phải chuyển bài đọc bình thường.
+  // Chế độ thi thật, giai đoạn Listening: được xem trước các nhóm sắp phát (như
+  // lật trước tờ đề), nhưng không quay lại nhóm đã nghe qua. Sang Reading thì
+  // chuyển bài đọc tự do.
   const navLocked = real && stage === "listening";
+  const lockedBefore = navLocked && current ? current.questionStart : 0;
 
   // điều hướng nhóm: hết nhóm thì sang part kế trong nhóm part đang mở
   const partPos = visibleParts.findIndex((p) => p.part === activePart);
-  const canPrev = paginated && !navLocked && (page > 0 || partPos > 0);
-  const canNext = paginated && !navLocked && (page < pageCount - 1 || partPos < visibleParts.length - 1);
+  const canPrev = paginated && (page > 0 || partPos > 0)
+    && (!navLocked || (shownGroups[0]?.questionStart ?? 0) > lockedBefore);
+  const canNext = paginated && (page < pageCount - 1 || partPos < visibleParts.length - 1);
 
   function prevGroup() {
     if (page > 0) return setGroupIndex(page - 1);
@@ -291,13 +431,44 @@ export function ExamScreen({
     if (nxt) goToPart(nxt.part, 0);
   }
 
+  // Phím ←/→ chuyển nhóm (bỏ qua khi đang gõ trong ô nhập)
+  const keyNav = useRef({ canPrev, canNext, prevGroup, nextGroup });
+  useEffect(() => { keyNav.current = { canPrev, canNext, prevGroup, nextGroup }; });
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      const t = e.target as HTMLElement | null;
+      if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
+      if (e.altKey || e.ctrlKey || e.metaKey) return;
+      const k = keyNav.current;
+      if (e.key === "ArrowLeft" && k.canPrev) k.prevGroup();
+      else if (e.key === "ArrowRight" && k.canNext) k.nextGroup();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
-    <div style={{ height: "100vh", background: P.bg, color: P.ink, fontFamily: P.sans, display: "flex", flexDirection: "column", overflow: "hidden" }}>
+    // Phủ toàn màn hình, che cả header của site: khỏi cuộn hai lớp, khỏi lỡ tay
+    // bấm link ra ngoài giữa giờ thi. Thoát bằng nút ← ở góc trái.
+    <div style={{ position: "fixed", inset: 0, zIndex: 55, background: P.bg, color: P.ink, fontFamily: P.sans, display: "flex", flexDirection: "column", overflow: "hidden" }}>
 
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <header style={{ display: "flex", alignItems: "center", gap: 12, padding: "0.6rem 1rem", background: P.panel, borderBottom: `1px solid ${P.border}`, flexWrap: "wrap", flexShrink: 0 }}>
         <span style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 800, fontSize: "1.02rem", minWidth: 0 }}>
-          <span style={{ color: P.primary }}>✳</span>
+          <Link
+            href={exitHref}
+            title="Thoát — bài làm được lưu, lần sau làm tiếp"
+            onClick={(e) => {
+              if (!window.confirm("Thoát khỏi bài thi? Bài làm đã được lưu, lần sau vào lại sẽ làm tiếp được.")) {
+                e.preventDefault();
+                return;
+              }
+              report(true);
+            }}
+            style={{ ...iconBtn(P), textDecoration: "none", fontSize: "1rem" }}
+          >
+            ←
+          </Link>
           <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{test.title}</span>
         </span>
 
@@ -321,7 +492,7 @@ export function ExamScreen({
           </span>
 
           {saveState === "error" ? (
-            <span title="Bài vẫn được giữ trên máy này, sẽ thử lưu lại ở lần chọn tiếp theo"
+            <span title="Bài vẫn được giữ trên máy này và sẽ tự lưu lên server khi có mạng lại"
               style={{ fontSize: "0.78rem", fontWeight: 700, color: P.bad }}>
               ⚠ Chưa lưu được
             </span>
@@ -339,8 +510,13 @@ export function ExamScreen({
             title={`Cỡ chữ ${Math.round(fontScale * 100)}%`}
             style={iconBtn(P)}
           >
-            {fontStep === 0 ? "A−" : fontStep === FONT_DEFAULT ? "A" : "A+"}
+            {FONT_LABELS[fontStep]}
           </button>
+          {narrow && (
+            <button type="button" onClick={() => setNavOpen(true)} title="Danh sách câu" style={iconBtn(P)}>
+              ☰
+            </button>
+          )}
           <button
             type="button"
             onClick={() => setConfirming(true)}
@@ -355,7 +531,7 @@ export function ExamScreen({
       <nav style={{ display: "flex", alignItems: "center", gap: 6, padding: "0.5rem 1rem", background: P.panelAlt, borderBottom: `1px solid ${P.border}`, overflowX: "auto", flexShrink: 0 }}>
         {partsInPlay.map((p) => {
           const on = p.part === activePart;
-          const open = visibleParts.some((v) => v.part === p.part);
+          const open = visibleParts.some((v) => v.part === p.part) && p.last >= lockedBefore;
           const qs = groups.filter((g) => g.part === p.part).flatMap((g) => g.questions).filter((q) => !q.broken);
           const got = qs.filter((q) => answers[q.number]).length;
           return (
@@ -363,7 +539,9 @@ export function ExamScreen({
               key={p.part}
               type="button"
               disabled={!open}
-              onClick={() => goToPart(p.part)}
+              onClick={() => (lockedBefore >= p.first && lockedBefore <= p.last
+                ? jumpToQuestion(lockedBefore)
+                : goToPart(p.part))}
               title={open ? p.labelVi : "Phần này đã khoá"}
               style={{
                 display: "inline-flex", alignItems: "center", gap: 7, flexShrink: 0,
@@ -391,16 +569,18 @@ export function ExamScreen({
           <audio
             ref={audioRef}
             src={current?.audio ? `${test.audioBase}/${current.audio}` : undefined}
+            preload="none"
             onEnded={advance}
+            onError={onAudioError}
             style={{ display: "none" }}
           />
-          {!playing ? (
+          {!playing || blocked ? (
             <button
               type="button"
-              onClick={() => { setPlaying(true); audioRef.current?.play().catch(() => {}); }}
+              onClick={() => { setPlaying(true); playCurrent(); }}
               style={{ padding: "8px 18px", borderRadius: 8, border: "none", background: P.primary, color: P.onPrimary, fontWeight: 800, fontFamily: P.sans, fontSize: "0.88rem", cursor: "pointer" }}
             >
-              ▶ Bắt đầu phần nghe
+              {playing || playIndex > 0 ? `▶ Nghe tiếp từ ${current ? rangeLabel(current) : ""}` : "▶ Bắt đầu phần nghe"}
             </button>
           ) : (
             <span style={{ display: "inline-flex", alignItems: "center", gap: 9, fontSize: "0.86rem", fontWeight: 700 }}>
@@ -408,8 +588,8 @@ export function ExamScreen({
               {gap > 0 ? `Thời gian trả lời — còn ${gap}s` : current ? `Đang phát ${rangeLabel(current)}` : ""}
             </span>
           )}
-          <span style={{ fontSize: "0.78rem", color: P.muted }}>
-            Audio chạy liền mạch một lần — không tua, không nghe lại.
+          <span style={{ fontSize: "0.78rem", color: audioIssue ? P.warn : P.muted }}>
+            {audioIssue ?? "Audio chạy liền mạch một lần — không tua, không nghe lại."}
           </span>
         </div>
       )}
@@ -441,7 +621,6 @@ export function ExamScreen({
         <MainPane
           P={P}
           groups={shownGroups}
-          part={activePart}
           split={hasSplit(activePart)}
           real={real}
           config={config}
@@ -457,6 +636,7 @@ export function ExamScreen({
           speed={speed}
           setSpeed={setSpeed}
           onZoom={setZoomed}
+          lockedBefore={lockedBefore}
           splitPct={splitPct}
           setSplitPct={(v) => { setSplitPct(v); localStorage.setItem(SPLIT_KEY, String(v)); }}
         />
@@ -474,11 +654,37 @@ export function ExamScreen({
               questionStart: shownGroups[0].questionStart,
               questionEnd: shownGroups[shownGroups.length - 1].questionEnd,
             } : null}
-            jumpLocked={navLocked}
+            lockedBefore={lockedBefore}
             onJump={jumpToQuestion}
           />
         )}
       </div>
+
+      {narrow && navOpen && (
+        <div
+          onClick={() => setNavOpen(false)}
+          style={{ position: "fixed", inset: 0, background: "rgba(6,10,20,.55)", zIndex: 65, display: "flex", justifyContent: "flex-end" }}
+        >
+          <div onClick={(e) => e.stopPropagation()} style={{ width: "min(300px, 86vw)", height: "100%", display: "flex" }}>
+            <ProgressSidebar
+              P={P}
+              fill
+              partsInPlay={partsInPlay}
+              visibleParts={visibleParts}
+              groups={groups}
+              answers={answers}
+              marked={marked}
+              activePart={activePart}
+              shownRange={paginated && shownGroups.length ? {
+                questionStart: shownGroups[0].questionStart,
+                questionEnd: shownGroups[shownGroups.length - 1].questionEnd,
+              } : null}
+              lockedBefore={lockedBefore}
+              onJump={(q) => { jumpToQuestion(q); setMobilePane("questions"); setNavOpen(false); }}
+            />
+          </div>
+        </div>
+      )}
 
       {zoomed && (
         <div
@@ -511,8 +717,8 @@ export function ExamScreen({
               <button type="button" onClick={() => setConfirming(false)} style={{ flex: 1, padding: "0.7rem", borderRadius: 9, border: `1px solid ${P.border}`, background: "transparent", color: P.inkSoft, fontWeight: 700, fontFamily: P.sans, cursor: "pointer" }}>
                 Làm tiếp
               </button>
-              <button type="button" onClick={submit} style={{ flex: 1, padding: "0.7rem", borderRadius: 9, border: "none", background: P.primary, color: P.onPrimary, fontWeight: 800, fontFamily: P.sans, cursor: "pointer" }}>
-                Nộp bài
+              <button type="button" onClick={submit} disabled={submitting} style={{ flex: 1, padding: "0.7rem", borderRadius: 9, border: "none", background: P.primary, color: P.onPrimary, fontWeight: 800, fontFamily: P.sans, cursor: submitting ? "wait" : "pointer", opacity: submitting ? 0.7 : 1 }}>
+                {submitting ? "Đang nộp…" : "Nộp bài"}
               </button>
             </div>
           </div>
@@ -544,13 +750,12 @@ function navBtn(P: Palette, disabled: boolean): React.CSSProperties {
 // ── Khung chính ──────────────────────────────────────────────────────────────
 
 function MainPane({
-  P, groups, part, split, real, config, answers, marked, onPick, onMark,
+  P, groups, split, real, config, answers, marked, onPick, onMark,
   fontScale, narrow, mobilePane, setMobilePane, audioBase, speed, setSpeed,
-  onZoom, splitPct, setSplitPct,
+  onZoom, lockedBefore, splitPct, setSplitPct,
 }: {
   P: Palette;
   groups: FullTestGroup[];
-  part: PartNumber;
   split: boolean;
   real: boolean;
   config: RunConfig;
@@ -566,6 +771,8 @@ function MainPane({
   speed: number;
   setSpeed: (s: number) => void;
   onZoom: (src: string | null) => void;
+  /** Thi thật đang nghe: câu trước mốc này đã qua, không chọn lại được */
+  lockedBefore: number;
   splitPct: number;
   setSplitPct: (v: number) => void;
 }) {
@@ -600,6 +807,7 @@ function MainPane({
         onMark={onMark}
         fontScale={fontScale}
         reveal={config.instantFeedback && !real && Boolean(answers[q.number])}
+        locked={q.number < lockedBefore}
       />
     ));
 
@@ -615,6 +823,22 @@ function MainPane({
             </div>
           ))}
         </div>
+      </div>
+    );
+  }
+
+  // Màn hẹp: chỉ bài đọc dài (Part 6/7) mới cần tách hai tab. Ảnh và audio
+  // xếp chung một cột với câu hỏi — tách tab thì audio bị gỡ khỏi trang và tắt
+  // tiếng ngay khi chuyển sang xem câu hỏi.
+  if (narrow && !groups.some((g) => (g.passages?.length ?? 0) > 0)) {
+    return (
+      <div style={{ flex: 1, minWidth: 0, overflowY: "auto", padding: "1rem", background: P.bg }}>
+        {groups.map((g) => (
+          <div key={g.questionStart}>
+            <MediaBlock P={P} g={g} real={real} audioBase={audioBase} speed={speed} setSpeed={setSpeed} fontScale={fontScale} onZoom={onZoom} />
+            {questionCards(g)}
+          </div>
+        ))}
       </div>
     );
   }
@@ -635,7 +859,7 @@ function MainPane({
                 onClick={() => setMobilePane(k)}
                 style={{ flex: 1, padding: "7px 10px", borderRadius: 8, fontFamily: P.sans, fontSize: "0.85rem", fontWeight: 700, cursor: "pointer", background: on ? P.primary : "transparent", color: on ? P.onPrimary : P.inkSoft, border: `1px solid ${on ? P.primary : P.border}` }}
               >
-                {k === "media" ? (part <= 4 ? "Nghe" : "Bài đọc") : "Câu hỏi"}
+                {k === "media" ? "Bài đọc" : "Câu hỏi"}
               </button>
             );
           })}
@@ -758,7 +982,7 @@ function AudioRow({
 }
 
 function QuestionCard({
-  P, q, picked, isMarked, onPick, onMark, fontScale, reveal,
+  P, q, picked, isMarked, onPick, onMark, fontScale, reveal, locked,
 }: {
   P: Palette;
   q: FullTestQuestion;
@@ -768,7 +992,11 @@ function QuestionCard({
   onMark: (q: number) => void;
   fontScale: number;
   reveal: boolean;
+  /** Đoạn nghe đã qua (thi thật) */
+  locked: boolean;
 }) {
+  // Đã hiện đáp án thì không đổi được nữa, không thì điểm luyện tập vô nghĩa.
+  const frozen = locked || reveal;
   const letters = q.options ? Object.keys(q.options).sort() : ["A", "B", "C", "D"];
   const exp = q.explanation;
   // Part 1/2: đề bài và phương án chỉ có trong audio, không được hiện chữ khi
@@ -778,7 +1006,7 @@ function QuestionCard({
   if (q.broken) {
     return (
       <div id={`q-${q.number}`} style={{ border: `1px dashed ${P.border}`, borderRadius: 10, padding: "0.9rem 1rem", marginBottom: "0.85rem", color: P.muted, fontSize: `${0.85 * fontScale}rem` }}>
-        <strong>Câu {q.number}</strong> — đề gốc thiếu nội dung câu này nên đã bỏ qua, không tính điểm.
+        <strong>Câu {q.number}</strong> — thiếu nội dung câu này nên đã bỏ qua, không tính điểm.
       </div>
     );
   }
@@ -790,6 +1018,16 @@ function QuestionCard({
     >
       <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10, marginBottom: "0.6rem" }}>
         <span style={{ fontWeight: 800, fontSize: `${0.92 * fontScale}rem` }}>Câu {q.number}</span>
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
+        {picked && !frozen && (
+          <button
+            type="button"
+            onClick={() => onPick(q.number, "")}
+            style={{ background: "transparent", border: "none", cursor: "pointer", fontFamily: P.sans, fontSize: `${0.76 * fontScale}rem`, fontWeight: 700, color: P.muted, padding: 0 }}
+          >
+            ✕ Bỏ chọn
+          </button>
+        )}
         <button
           type="button"
           onClick={() => onMark(q.number)}
@@ -797,6 +1035,7 @@ function QuestionCard({
         >
           {isMarked ? "🏳 Đã đánh dấu" : "⚐ Đánh dấu"}
         </button>
+        </span>
       </div>
 
       {showText && q.prompt && (
@@ -815,11 +1054,14 @@ function QuestionCard({
             <button
               key={L}
               type="button"
+              disabled={frozen}
               onClick={() => onPick(q.number, L)}
+              title={locked ? "Đoạn nghe này đã qua" : undefined}
               style={{
                 display: "flex", alignItems: "center", gap: 10, textAlign: "left",
                 padding: "0.6rem 0.8rem",
-                borderRadius: 8, cursor: "pointer", fontFamily: P.sans,
+                borderRadius: 8, cursor: frozen ? "default" : "pointer", fontFamily: P.sans,
+                opacity: locked && !on ? 0.6 : 1,
                 background: on || isAnswer ? P.primarySoft : "transparent",
                 border: `${on || isAnswer || isWrong ? 2 : 1}px solid ${border}`,
                 color: P.ink, fontSize: `${0.88 * fontScale}rem`,
@@ -864,7 +1106,7 @@ function QuestionCard({
 
 function ProgressSidebar({
   P, partsInPlay, visibleParts, groups, answers, marked, activePart, shownRange,
-  jumpLocked, onJump,
+  lockedBefore, onJump, fill = false,
 }: {
   P: Palette;
   partsInPlay: { part: PartNumber; label: string; first: number; last: number }[];
@@ -874,15 +1116,18 @@ function ProgressSidebar({
   marked: Set<number>;
   activePart: PartNumber;
   shownRange: { questionStart: number; questionEnd: number } | null;
-  jumpLocked: boolean;
+  /** Thi thật đang nghe: câu trước mốc này đã qua */
+  lockedBefore: number;
   onJump: (q: number) => void;
+  /** Dùng trong ngăn kéo màn hẹp: chiếm hết chiều rộng */
+  fill?: boolean;
 }) {
   const total = groups.flatMap((g) => g.questions).filter((q) => !q.broken);
   const done = total.filter((q) => answers[q.number]).length;
   const pct = total.length ? Math.round((done / total.length) * 100) : 0;
 
   return (
-    <aside style={{ flex: "0 0 236px", overflowY: "auto", background: P.panel, borderLeft: `1px solid ${P.border}`, padding: "0.9rem" }}>
+    <aside style={{ flex: fill ? 1 : "0 0 236px", overflowY: "auto", background: P.panel, borderLeft: `1px solid ${P.border}`, padding: "0.9rem" }}>
       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 8 }}>
         <span style={{ fontSize: "0.93rem", fontWeight: 800 }}>Tiến độ</span>
         <span style={{ fontSize: "0.79rem", color: P.muted, fontVariantNumeric: "tabular-nums" }}>
@@ -905,7 +1150,8 @@ function ProgressSidebar({
               {qs.map((q) => {
                 const picked = Boolean(answers[q.number]);
                 const flag = marked.has(q.number);
-                const clickable = open && !q.broken && !jumpLocked;
+                const past = q.number < lockedBefore;
+                const clickable = open && !q.broken && !past;
                 const onScreen =
                   shownRange != null &&
                   p.part === activePart &&
@@ -917,7 +1163,7 @@ function ProgressSidebar({
                     type="button"
                     disabled={!clickable}
                     onClick={() => onJump(q.number)}
-                    title={q.broken ? "Câu bị thiếu nội dung" : jumpLocked ? "Không đi lại được ở phần Listening" : undefined}
+                    title={q.broken ? "Câu bị thiếu nội dung" : past ? "Đoạn nghe này đã qua" : undefined}
                     style={{
                       padding: "4px 0", borderRadius: 5, fontFamily: P.sans,
                       fontSize: "0.76rem", fontWeight: 700,

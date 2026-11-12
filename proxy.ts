@@ -110,6 +110,16 @@ export async function proxy(request: NextRequest) {
     return supabaseResponse;
   }
 
+  // ── Luyện đề: giữ nguyên trang đang mở để đăng nhập xong quay lại đúng đề ──
+  // (layout /skills cũng chặn, nhưng layout không biết pathname nên chỉ về /skills)
+  if (pathname.startsWith("/skills") && !user) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/auth/login";
+    url.search = "";
+    url.searchParams.set("next", pathname);
+    return NextResponse.redirect(url);
+  }
+
   // ── Other protected routes (test, vocabulary, progress) ─────────────────────
   const isProtected = PROTECTED_PREFIXES.some((prefix) =>
     pathname.startsWith(prefix)

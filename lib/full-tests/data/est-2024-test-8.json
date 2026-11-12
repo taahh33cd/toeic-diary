@@ -62,7 +62,20 @@
    149,
    150
   ],
-  "brokenQuestions": []
+  "brokenQuestions": [
+   132,
+   133,
+   134,
+   136,
+   137,
+   138,
+   140,
+   141,
+   142,
+   144,
+   145,
+   146
+  ]
  },
  "groups": [
   {
@@ -3170,15 +3183,16 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: mnandy@gmantcs.com\nFrom: jblaire@blaireaccounting.ca\nRe: AUTOMATIC REPLY\nDate: 9 January, 10:34 AM\n\nHello, and thank you for contacting Blaire Accounting. I will be out of the office until 31 January. I will respond to your message when I -------."
+     "text": "To: mnandy@gmantcs.com\nFrom: jblaire@blaireaccounting.ca\nRe: AUTOMATIC REPLY\nDate: 9 January, 10:34 AM\n\nHello, and thank you for contacting Blaire Accounting. I will be out of the office until 31 January. I will respond to your message when I --- [131] ---."
     }
    ],
    "questions": [
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) recover",
+     "prompt": null,
      "options": {
+      "A": "recover",
       "B": "return",
       "C": "begin",
       "D": "finish"
@@ -3191,42 +3205,45 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) immediate",
+     "prompt": null,
      "options": {
+      "A": "immediate",
       "B": "immediately",
       "C": "immediacy",
       "D": "immediacies"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     },
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) also",
+     "prompt": null,
      "options": {
+      "A": "also",
       "B": "lightly",
       "C": "similarly",
       "D": "again"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     },
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) Ms. Blaire will be back in the office earlier than expected.",
+     "prompt": null,
      "options": {
+      "A": "Ms. Blaire will be back in the office earlier than expected.",
       "B": "Please come and see us if you ever find yourself in Toronto.",
       "C": "It is essential to hire a competent payroll and tax accountant.",
       "D": "Ms. Lewis is in the office on weekdays from 9 A.M. to 5 P.M."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     }
@@ -3240,15 +3257,16 @@
    "passages": [
     {
      "label": "Notice",
-     "text": "Attention customers of Metro Coffee:\nWe are excited to announce that we ------- a second Metro Coffee store!"
+     "text": "Attention customers of Metro Coffee:\nWe are excited to announce that we --- [135] --- a second Metro Coffee store!"
     }
    ],
    "questions": [
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) will open",
+     "prompt": null,
      "options": {
+      "A": "will open",
       "B": "can open",
       "C": "are opening",
       "D": "have opened"
@@ -3261,42 +3279,45 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) debt",
+     "prompt": null,
      "options": {
+      "A": "debt",
       "B": "payroll",
       "C": "business",
       "D": "investment"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     },
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) Metro Coffee has been a part of the community for nine years.",
+     "prompt": null,
      "options": {
+      "A": "Metro Coffee has been a part of the community for nine years.",
       "B": "We roast our coffee beans right here on-site.",
       "C": "Many people enjoy eating a pastry while drinking a cup of coffee.",
       "D": "It is located two miles away in the historic district."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     },
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) large",
+     "prompt": null,
      "options": {
+      "A": "large",
       "B": "larger",
       "C": "largely",
       "D": "largest"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     }
@@ -3310,15 +3331,16 @@
    "passages": [
     {
      "label": "Memo",
-     "text": "To: All Ferrese Hotel Employees\nFrom: Sergio Prieto, Hotel Manager\nDate: Monday, July 4\nSubject: Global Shipping Partners Conference\n\nThe Ferrese Hotel will be hosting the Global Shipping Partners Conference next week, from Tuesday to Sunday. -------, management expects to see many more customers in the hotel's restaurants and gift shops."
+     "text": "To: All Ferrese Hotel Employees\nFrom: Sergio Prieto, Hotel Manager\nDate: Monday, July 4\nSubject: Global Shipping Partners Conference\n\nThe Ferrese Hotel will be hosting the Global Shipping Partners Conference next week, from Tuesday to Sunday. --- [139] ---, management expects to see many more customers in the hotel's restaurants and gift shops."
     }
    ],
    "questions": [
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) If not",
+     "prompt": null,
      "options": {
+      "A": "If not",
       "B": "After all",
       "C": "Therefore",
       "D": "In the meantime"
@@ -3331,42 +3353,45 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) Restaurant renovations are almost completed.",
+     "prompt": null,
      "options": {
+      "A": "Restaurant renovations are almost completed.",
       "B": "Conference registration forms have been posted online.",
       "C": "Applications will be reviewed later this week.",
       "D": "The business center will also be busier than usual."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     },
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) it",
+     "prompt": null,
      "options": {
+      "A": "it",
       "B": "we",
       "C": "both",
       "D": "something"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     },
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) lines",
+     "prompt": null,
      "options": {
+      "A": "lines",
       "B": "steps",
       "C": "names",
       "D": "routines"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     }
@@ -3380,15 +3405,16 @@
    "passages": [
     {
      "label": "Article",
-     "text": "DALLAS (July 28)-Zura Technology Solutions (ZTS) announced today that it has completed the ------- of an office building located at 425 Van Kirk Street here in Dallas."
+     "text": "DALLAS (July 28)-Zura Technology Solutions (ZTS) announced today that it has completed the --- [143] --- of an office building located at 425 Van Kirk Street here in Dallas."
     }
    ],
    "questions": [
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) construction",
+     "prompt": null,
      "options": {
+      "A": "construction",
       "B": "cleaning",
       "C": "inspection",
       "D": "purchase"
@@ -3401,42 +3427,45 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) voluntary",
+     "prompt": null,
      "options": {
+      "A": "voluntary",
       "B": "primary",
       "C": "short-term",
       "D": "occasional"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     },
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) ZTS's leadership team sees the move as strategic.",
+     "prompt": null,
      "options": {
+      "A": "ZTS's leadership team sees the move as strategic.",
       "B": "For example, it provides a range of services to small businesses.",
       "C": "There are only a few available sites in the Main Street District.",
       "D": "Over 15,000 people are employed by ZTS worldwide."
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     },
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) continued",
+     "prompt": null,
      "options": {
+      "A": "continued",
       "B": "continuing",
       "C": "would have continued",
       "D": "will continue"
      },
      "showText": true,
-     "broken": false,
+     "broken": true,
      "answer": null,
      "explanation": null
     }
@@ -5325,6 +5354,7 @@
  ],
  "warnings": [
   "2 câu các nguồn đáp án không thống nhất (đã lấy nguồn tin cậy hơn): [85, 90]",
-  "8 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 7, 9, 13, 15, 17, 20, 27-28"
+  "8 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 7, 9, 13, 15, 17, 20, 27-28",
+  "12 câu Part 6 mất đoạn văn chứa chỗ trống (parser cũ) — tạm bỏ qua, build lại từ docx để khôi phục: [132, 133, 134, 136, 137, 138, 140, 141, 142, 144, 145, 146]"
  ]
 }
