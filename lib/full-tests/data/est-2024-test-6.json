@@ -3763,15 +3763,16 @@
    "passages": [
     {
      "label": "Advertisement",
-     "text": "Estella Guitar Lessons: Play with the Best\n\nWhether you play acoustic guitar ------- electric, taking lessons with an Estella Guitar teacher is the best way to improve your ability."
+     "text": "Estella Guitar Lessons: Play with the Best\n\nWhether you play acoustic guitar --- [131] --- electric, taking lessons with an Estella Guitar teacher is the best way to improve your ability.\nWith years of experience crafting playing techniques, --- [132] --- qualified instructors can tailor lessons to focus on the skills you want to fine-tune. \n\nReceive a customized learning plan to set goals and overcome the challenges that cause many players to get discouraged. --- [133] ---. An Estella Guitar teacher will help boost your confidence.\n\nAt Estella Guitar, we believe that playing music is a way of expressing yourself. --- [134] ---, we will help you go beyond the familiar chords and riffs to develop your own identity as a musician. \n\nReady to get started? Visit www.estellaguitar.com/lessons to get matched with the right instructor for you!"
     }
    ],
    "questions": [
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) is",
+     "prompt": null,
      "options": {
+      "A": "is",
       "B": "or",
       "C": "likely",
       "D": "from"
@@ -3788,8 +3789,9 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) our",
+     "prompt": null,
      "options": {
+      "A": "our",
       "B": "ourselves",
       "C": "ours",
       "D": "us"
@@ -3806,8 +3808,9 @@
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) Contact a technician for questions about repairs.",
+     "prompt": null,
      "options": {
+      "A": "Contact a technician for questions about repairs.",
       "B": "A high-quality instrument will help you to perform at your best.",
       "C": "The best resource for you as a learner is an expert to guide your progress.",
       "D": "It took them several years to master their instruments."
@@ -3824,8 +3827,9 @@
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) So far",
+     "prompt": null,
      "options": {
+      "A": "So far",
       "B": "With that in mind",
       "C": "On a different note",
       "D": "At that point"
@@ -3849,15 +3853,16 @@
    "passages": [
     {
      "label": "Policy",
-     "text": "In-home delivery takes approximately one week after an order is shipped from our warehouse. The actual time may vary based on the location of your ------- and your availability for accepting the item."
+     "text": "In-home delivery takes approximately one week after an order is shipped from our warehouse. The actual time may vary based on the location of your --- [135] --- and your availability for accepting the item.\nVernico Furniture will work with a carrier --- [136] --- an appointment that is convenient for you.\n\nTypical hours are Monday through Friday between 8 A.M. and 5 P.M., --- [137] --- evening appointments can often be arranged. \n\nUpon arrival at your home, the item will be placed in the location you desire. --- [138] ---. Assembly is included as well."
     }
    ],
    "questions": [
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) garden",
+     "prompt": null,
      "options": {
+      "A": "garden",
       "B": "records",
       "C": "residence",
       "D": "organization"
@@ -3874,8 +3879,9 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) to schedule",
+     "prompt": null,
      "options": {
+      "A": "to schedule",
       "B": "is scheduling",
       "C": "as a schedule",
       "D": "that scheduled"
@@ -3892,8 +3898,9 @@
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) if so",
+     "prompt": null,
      "options": {
+      "A": "if so",
       "B": "when",
       "C": "though",
       "D": "in the meantime"
@@ -3910,8 +3917,9 @@
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) When buying a home, location is extremely important.",
+     "prompt": null,
      "options": {
+      "A": "When buying a home, location is extremely important.",
       "B": "Refinishing furniture is a form of art.",
       "C": "Furnished apartments can be found online.",
       "D": "All packing materials will be removed."
@@ -3935,15 +3943,16 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: Thao Pham <thaopham@amail.com>\nFrom: Leena Montoya <Imontoya@academemedia.com>\nDate: April 17\nSubject: Subscription\n\nDear Mr. Pham,\n\nYour subscription to Medical Innovations Quarterly has been canceled. -------."
+     "text": "To: Thao Pham <thaopham@amail.com>\nFrom: Leena Montoya <Imontoya@academemedia.com>\nDate: April 17\nSubject: Subscription\n\nDear Mr. Pham,\n\nYour subscription to Medical Innovations Quarterly has been canceled. --- [139] ---.\n--- [140] --- May 1, you will no longer receive the print edition.\n\nWe hope that you will consider once again becoming a --- [141] --- of our publications. \n\nAcademe Media publishes many high-quality scientific journals in addition to Medical Innovations Quarterly. Should you wish to subscribe to one by May 31, we can offer you a two-year subscription at the annual rate. Visit www.academemedia.com/shop and enter the code DOUBLE --- [142] --- checkout.\n\nIf you have any feedback that could help us improve our products or services, please call me directly at 212-555-0122.\n\nSincerely,\nLeena Montoya\nCustomer Service Manager, Academe Media"
     }
    ],
    "questions": [
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) Thank you for your timely order.",
+     "prompt": null,
      "options": {
+      "A": "Thank you for your timely order.",
       "B": "We have processed your request.",
       "C": "This is a payment reminder.",
       "D": "Please contact us to update your information."
@@ -3960,8 +3969,9 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) Starts",
+     "prompt": null,
      "options": {
+      "A": "Starts",
       "B": "Started",
       "C": "Starter",
       "D": "Starting"
@@ -3978,8 +3988,9 @@
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) distributor",
+     "prompt": null,
      "options": {
+      "A": "distributor",
       "B": "producer",
       "C": "reader",
       "D": "teacher"
@@ -3996,8 +4007,9 @@
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) until",
+     "prompt": null,
      "options": {
+      "A": "until",
       "B": "upon",
       "C": "without",
       "D": "next"
@@ -4021,15 +4033,16 @@
    "passages": [
     {
      "label": "Information",
-     "text": "In a commercial kitchen, all refrigerators are required to have a thermometer that ------- from 0°F (-18°C) to 220°F (104°C)."
+     "text": "In a commercial kitchen, all refrigerators are required to have a thermometer that --- [143] --- from 0°F (-18°C) to 220°F (104°C).\nTo prevent the growth of bacteria, refrigerated foods must be stored at 41°F (5°C) or below. The head chef is responsible for checking these thermometers throughout the day to ensure that the kitchen is in compliance at all times.\nAlso important to consider is --- [144] ---. \n\nThermometers should always be located in the warmest spot in the refrigerator. --- [145] ---. \n\nThis location is also appropriate because it allows the thermometer to be easily --- [146] --- as soon as the door is opened."
     }
    ],
    "questions": [
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) ranges",
+     "prompt": null,
      "options": {
+      "A": "ranges",
       "B": "ranger",
       "C": "ranged",
       "D": "ranging"
@@ -4046,8 +4059,9 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) size",
+     "prompt": null,
      "options": {
+      "A": "size",
       "B": "safety",
       "C": "reliability",
       "D": "placement"
@@ -4064,8 +4078,9 @@
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) Remove them carefully.",
+     "prompt": null,
      "options": {
+      "A": "Remove them carefully.",
       "B": "This is typically inside the door.",
       "C": "It should be kept cool at all times.",
       "D": "They can also be purchased in bulk."
@@ -4082,8 +4097,9 @@
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) sold",
+     "prompt": null,
      "options": {
+      "A": "sold",
       "B": "seen",
       "C": "repaired",
       "D": "removed"

@@ -4221,15 +4221,16 @@
    "passages": [
     {
      "label": "Notice",
-     "text": "D-Zine Pop\nD-Zine Pop is your source for information about the latest ------- in the world of fashion."
+     "text": "D-Zine Pop\nD-Zine Pop is your source for information about the latest --- [131] --- in the world of fashion.\nWhat started as a social media experiment --- [132] --- into a content platform with subscribers in seventeen countries worldwide.\n\nWe are constantly adding features to improve our user experience and share what apparel and clothing accessories are popular right now. We also make periodic updates to our terms of service. Subscribers' access to content is contingent upon consenting to these --- [133] --- terms;\n\ntherefore, we encourage you to review and accept them at dzinepop.com/privacy. --- [134] ---. Contact our customer service team at support@dzinepop.com if you have any questions."
     }
    ],
    "questions": [
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) controversies",
+     "prompt": null,
      "options": {
+      "A": "controversies",
       "B": "consumers",
       "C": "trends",
       "D": "versions"
@@ -4246,8 +4247,9 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) evolving",
+     "prompt": null,
      "options": {
+      "A": "evolving",
       "B": "evolution",
       "C": "will be evolving",
       "D": "has evolved"
@@ -4264,8 +4266,9 @@
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) continue",
+     "prompt": null,
      "options": {
+      "A": "continue",
       "B": "continued",
       "C": "continuation",
       "D": "continues"
@@ -4282,8 +4285,9 @@
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) Representatives are available 24 hours a day to assist you.",
+     "prompt": null,
      "options": {
+      "A": "Representatives are available 24 hours a day to assist you.",
       "B": "The changes made to our user privacy policy are no longer effective.",
       "C": "Fresh content is accessible through phone and desktop apps.",
       "D": "We are no longer offering a discounted rate if you renew your subscription."
@@ -4307,15 +4311,16 @@
    "passages": [
     {
      "label": "Advertisement",
-     "text": "Rescue your device with Phone Tune-Up\nIs your smartphone screen scratched or cracked? -------?"
+     "text": "Rescue your device with Phone Tune-Up\nIs your smartphone screen scratched or cracked? --- [135] ---?\nThe experts at Phone Tune-Up can help! We use nothing but the best quality parts to --- [136] --- your mobile phone.\n\nLet our certified technicians save you the time and expense involved in replacing your phone with a new one. When we are --- [137] ---, you will think your old phone is brand new.\n\nTo make an appointment, call 604-555-0198 or visit www.phonetuneup.com. Same-day service is often available --- [138] --- needed parts are in stock."
     }
    ],
    "questions": [
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) Does your printer need frequent ink refills?",
+     "prompt": null,
      "options": {
+      "A": "Does your printer need frequent ink refills?",
       "B": "Does it take all day for your battery to recharge?",
       "C": "Do you want to complete a short survey?",
       "D": "Do you pay too much for your data plan?"
@@ -4332,8 +4337,9 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) remove",
+     "prompt": null,
      "options": {
+      "A": "remove",
       "B": "borrow",
       "C": "examine",
       "D": "repair"
@@ -4350,8 +4356,9 @@
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) trained",
+     "prompt": null,
      "options": {
+      "A": "trained",
       "B": "available",
       "C": "done",
       "D": "dismissed"
@@ -4368,8 +4375,9 @@
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) whose",
+     "prompt": null,
      "options": {
+      "A": "whose",
       "B": "must",
       "C": "if",
       "D": "of"
@@ -4393,15 +4401,16 @@
    "passages": [
     {
      "label": "Press release",
-     "text": "FOR IMMEDIATE RELEASE\nSACRAMENTO (July 28)-The Sacramento-based supermarket chain Hsing Market announced today that it is opening a branch ------- in San Jose in October."
+     "text": "FOR IMMEDIATE RELEASE\nSACRAMENTO (July 28)-The Sacramento-based supermarket chain Hsing Market announced today that it is opening a branch --- [139] --- in San Jose in October.\nIt will occupy the building that once housed the Watson Office Superstore located at 1539 West Oak Street, which closed last year. --- [140] ---.\n\nHsing Market CEO Alice Tran said, \"We are very excited to open a store in San Jose. --- [141] ---. When the Watson building became available, we jumped on the opportunity to move in.\"\n\nAs a neighborhood grocery store, Hsing Market prides itself on hiring applicants from the local community. Approximately 75 percent of all employees live within two miles of the store where they --- [142] ---."
     }
    ],
    "questions": [
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) location",
+     "prompt": null,
      "options": {
+      "A": "location",
       "B": "locate",
       "C": "to locate",
       "D": "locating"
@@ -4418,8 +4427,9 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) finally",
+     "prompt": null,
      "options": {
+      "A": "finally",
       "B": "instead",
       "C": "likewise",
       "D": "suddenly"
@@ -4436,8 +4446,9 @@
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) The store features a variety of fresh and prepared foods.",
+     "prompt": null,
      "options": {
+      "A": "The store features a variety of fresh and prepared foods.",
       "B": "We hope that you will be able to join us at our grand-opening celebration.",
       "C": "We have had our eyes on the city for quite some time.",
       "D": "Our corporate headquarters will be renovated soon."
@@ -4454,8 +4465,9 @@
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) save",
+     "prompt": null,
      "options": {
+      "A": "save",
       "B": "work",
       "C": "shop",
       "D": "register"
@@ -4479,15 +4491,16 @@
    "passages": [
     {
      "label": "Web page information",
-     "text": "About Leafi Cloth\nTropick Textiles recently expanded the ------- of fabrics available on the market."
+     "text": "About Leafi Cloth\nTropick Textiles recently expanded the --- [143] --- of fabrics available on the market.\nIn its quest to introduce environmentally friendly alternatives to cotton and other traditional fibers, the company --- [144] --- a new fiber made from materials that are typically discarded.\n\nTropick Textiles takes banana and pineapple leaves and combines them with bamboo fibers to create Leafi Cloth. The plants' leaves are ordinarily disposed of --- [145] --- the fruit is harvested.\n\nTropick Textiles' process prevents many leaves from entering a landfill, converting them instead into usable material. --- [146] ---."
     }
    ],
    "questions": [
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) range",
+     "prompt": null,
      "options": {
+      "A": "range",
       "B": "expense",
       "C": "strength",
       "D": "appearance"
@@ -4504,8 +4517,9 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) are developed",
+     "prompt": null,
      "options": {
+      "A": "are developed",
       "B": "has developed",
       "C": "will develop",
       "D": "to develop"
@@ -4522,8 +4536,9 @@
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) now",
+     "prompt": null,
      "options": {
+      "A": "now",
       "B": "thus",
       "C": "even",
       "D": "once"
@@ -4540,8 +4555,9 @@
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) The resulting durable fabric is a suitable substitute for cotton cloth.",
+     "prompt": null,
      "options": {
+      "A": "The resulting durable fabric is a suitable substitute for cotton cloth.",
       "B": "Inquiries regarding Leafi Cloth were directed to the sales department.",
       "C": "Tropick Textiles will celebrate its one-hundredth anniversary this year.",
       "D": "Manufacturing costs have been increasing for Tropick Textiles lately."

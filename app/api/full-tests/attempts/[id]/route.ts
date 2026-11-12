@@ -90,8 +90,8 @@ export async function POST(req: Request, { params }: Ctx) {
       marked: sanitizeMarked(body.marked),
       correct: result.correct,
       gradable: result.gradable,
-      listening: result.scaled?.ls ?? null,
-      reading: result.scaled?.rd ?? null,
+      listening: result.listening,
+      reading: result.reading,
       total: result.scaled?.total ?? null,
       partScores: result.parts.map((p) => ({
         part: p.part, correct: p.correct, gradable: p.gradable,

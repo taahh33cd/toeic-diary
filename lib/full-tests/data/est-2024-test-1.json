@@ -2464,7 +2464,10 @@
      "part": 5,
      "prompt": "Former Sendai Company CEO Ken Nakata spoke about ------- career experiences.",
      "options": {
-      "A": "he (B) his (C) him (D) himself"
+      "A": "he",
+      "B": "his",
+      "C": "him",
+      "D": "himself"
      },
      "showText": true,
      "broken": false,
@@ -2487,7 +2490,10 @@
      "part": 5,
      "prompt": "Passengers who will be taking a ------ domestic flight should go to Terminal A.",
      "options": {
-      "A": "connectivity (B) connects (C) connect (D) connecting"
+      "A": "connectivity",
+      "B": "connects",
+      "C": "connect",
+      "D": "connecting"
      },
      "showText": true,
      "broken": false,
@@ -2510,7 +2516,10 @@
      "part": 5,
      "prompt": "Fresh and ------- apple-cider donuts are available at Oakcrest Orchard's retail shop for £6 per dozen.",
      "options": {
-      "A": "eaten (B) open (C) tasty (D) free"
+      "A": "eaten",
+      "B": "open",
+      "C": "tasty",
+      "D": "free"
      },
      "showText": true,
      "broken": false,
@@ -2533,7 +2542,10 @@
      "part": 5,
      "prompt": "Zahn Flooring has the widest selection of ------- in the United Kingdom.",
      "options": {
-      "A": "paints (B) tiles (C) furniture (D) curtains"
+      "A": "paints",
+      "B": "tiles",
+      "C": "furniture",
+      "D": "curtains"
      },
      "showText": true,
      "broken": false,
@@ -2556,7 +2568,10 @@
      "part": 5,
      "prompt": "One responsibility of the IT department is to ensure that the company is using ------- software.",
      "options": {
-      "A": "update (B) updating (C) updates (D) updated"
+      "A": "update",
+      "B": "updating",
+      "C": "updates",
+      "D": "updated"
      },
      "showText": true,
      "broken": false,
@@ -2579,7 +2594,10 @@
      "part": 5,
      "prompt": "It is wise to check a company's dress code ------- visiting its head office.",
      "options": {
-      "A": "so (B) how (C) like (D) before"
+      "A": "so",
+      "B": "how",
+      "C": "like",
+      "D": "before"
      },
      "showText": true,
      "broken": false,
@@ -2602,7 +2620,10 @@
      "part": 5,
      "prompt": "Wexler Store's management team expects that employees will ------- support any new hires.",
      "options": {
-      "A": "enthusiastically (B) enthusiasm (C) enthusiastic (D) enthused"
+      "A": "enthusiastically",
+      "B": "enthusiasm",
+      "C": "enthusiastic",
+      "D": "enthused"
      },
      "showText": true,
      "broken": false,
@@ -2625,7 +2646,10 @@
      "part": 5,
      "prompt": "Wheel alignments and brake system ------- are part of our vehicle service plan.",
      "options": {
-      "A": "inspects (B) inspector (C) inspected (D) inspections"
+      "A": "inspects",
+      "B": "inspector",
+      "C": "inspected",
+      "D": "inspections"
      },
      "showText": true,
      "broken": false,
@@ -2648,7 +2672,10 @@
      "part": 5,
      "prompt": "Registration for the Marketing Coalition Conference is now open ------- September 30.",
      "options": {
-      "A": "until (B) into (C) yet (D) while"
+      "A": "until",
+      "B": "into",
+      "C": "yet",
+      "D": "while"
      },
      "showText": true,
      "broken": false,
@@ -2671,7 +2698,10 @@
      "part": 5,
      "prompt": "Growth in the home entertainment industry has been ------- this quarter.",
      "options": {
-      "A": "separate (B) limited (C) willing (D) assorted"
+      "A": "separate",
+      "B": "limited",
+      "C": "willing",
+      "D": "assorted"
      },
      "showText": true,
      "broken": false,
@@ -2694,7 +2724,10 @@
      "part": 5,
      "prompt": "Hawson Furniture will be making ------- on the east side of town on Thursday.",
      "options": {
-      "A": "deliveries (B) delivered (C) deliver (D) deliverable"
+      "A": "deliveries",
+      "B": "delivered",
+      "C": "deliver",
+      "D": "deliverable"
      },
      "showText": true,
      "broken": false,
@@ -2717,7 +2750,10 @@
      "part": 5,
      "prompt": "The Marlton City Council does not have the authority to ------- parking on city streets.",
      "options": {
-      "A": "drive (B) prohibit (C) bother (D) travel"
+      "A": "drive",
+      "B": "prohibit",
+      "C": "bother",
+      "D": "travel"
      },
      "showText": true,
      "broken": false,
@@ -2740,7 +2776,10 @@
      "part": 5,
      "prompt": "Project Earth Group is ------- for ways to reduce transport-related greenhouse gas emissions.",
      "options": {
-      "A": "looking (B) seeing (C) driving (D) leaning"
+      "A": "looking",
+      "B": "seeing",
+      "C": "driving",
+      "D": "leaning"
      },
      "showText": true,
      "broken": false,
@@ -2763,7 +2802,10 @@
      "part": 5,
      "prompt": "Our skilled tailors are happy to design a custom-made suit that fits your style and budget -------.",
      "options": {
-      "A": "perfect (B) perfects (C) perfectly (D) perfection"
+      "A": "perfect",
+      "B": "perfects",
+      "C": "perfectly",
+      "D": "perfection"
      },
      "showText": true,
      "broken": false,
@@ -2786,7 +2828,10 @@
      "part": 5,
      "prompt": "Project manager Hannah Chung has proved to be very ------- with completing company projects.",
      "options": {
-      "A": "helpfulness (B) help (C) helpfully (D) helpful"
+      "A": "helpfulness",
+      "B": "help",
+      "C": "helpfully",
+      "D": "helpful"
      },
      "showText": true,
      "broken": false,
@@ -2809,7 +2854,10 @@
      "part": 5,
      "prompt": "Lehua Vacation Club members will receive double points ------- the month of August at participating hotels.",
      "options": {
-      "A": "onto (B) above (C) during (D) between"
+      "A": "onto",
+      "B": "above",
+      "C": "during",
+      "D": "between"
      },
      "showText": true,
      "broken": false,
@@ -2832,7 +2880,10 @@
      "part": 5,
      "prompt": "The costumes were not received ------- enough to be used in the first dress rehearsal.",
      "options": {
-      "A": "far (B) very (C) almost (D) soon"
+      "A": "far",
+      "B": "very",
+      "C": "almost",
+      "D": "soon"
      },
      "showText": true,
      "broken": false,
@@ -2855,7 +2906,10 @@
      "part": 5,
      "prompt": "As a former publicist for several renowned orchestras, Mr. Wu would excel in the role of event -------.",
      "options": {
-      "A": "organized (B) organizer (C) organizes (D) organizational"
+      "A": "organized",
+      "B": "organizer",
+      "C": "organizes",
+      "D": "organizational"
      },
      "showText": true,
      "broken": false,
@@ -2878,7 +2932,10 @@
      "part": 5,
      "prompt": "The northbound lane on Davis Street will be ------- closed because of the city's bridge reinforcement project.",
      "options": {
-      "A": "temporarily (B) competitively (C) recently (D) collectively"
+      "A": "temporarily",
+      "B": "competitively",
+      "C": "recently",
+      "D": "collectively"
      },
      "showText": true,
      "broken": false,
@@ -2901,7 +2958,10 @@
      "part": 5,
      "prompt": "Airline representatives must handle a wide range of passenger issues, ------- missed connections to lost luggage.",
      "options": {
-      "A": "from (B) under (C) on (D) against"
+      "A": "from",
+      "B": "under",
+      "C": "on",
+      "D": "against"
      },
      "showText": true,
      "broken": false,
@@ -2924,7 +2984,10 @@
      "part": 5,
      "prompt": "The meeting notes were ------- deleted, but Mr. Hahm was able to recreate them from memory.",
      "options": {
-      "A": "accident (B) accidental (C) accidents (D) accidentally"
+      "A": "accident",
+      "B": "accidental",
+      "C": "accidents",
+      "D": "accidentally"
      },
      "showText": true,
      "broken": false,
@@ -2947,7 +3010,10 @@
      "part": 5,
      "prompt": "The current issue of Farming Scene magazine predicts that the price of corn will rise 5 percent over the ------- year.",
      "options": {
-      "A": "next (B) with (C) which (D) now"
+      "A": "next",
+      "B": "with",
+      "C": "which",
+      "D": "now"
      },
      "showText": true,
      "broken": false,
@@ -2970,7 +3036,10 @@
      "part": 5,
      "prompt": "Anyone who still ------- to take the fire safety training should do so before the end of the month.",
      "options": {
-      "A": "needing (B) needs (C) has needed (D) were needing"
+      "A": "needing",
+      "B": "needs",
+      "C": "has needed",
+      "D": "were needing"
      },
      "showText": true,
      "broken": false,
@@ -2993,7 +3062,10 @@
      "part": 5,
      "prompt": "Emerging technologies have ------- begun to transform the shipping industry in ways that were once unimaginable.",
      "options": {
-      "A": "already (B) exactly (C) hardly (D) closely"
+      "A": "already",
+      "B": "exactly",
+      "C": "hardly",
+      "D": "closely"
      },
      "showText": true,
      "broken": false,
@@ -3016,7 +3088,10 @@
      "part": 5,
      "prompt": "The company handbook outlines the high ------- that employees are expected to meet every day.",
      "options": {
-      "A": "experts (B) accounts (C) recommendations (D) standards"
+      "A": "experts",
+      "B": "accounts",
+      "C": "recommendations",
+      "D": "standards"
      },
      "showText": true,
      "broken": false,
@@ -3039,7 +3114,10 @@
      "part": 5,
      "prompt": "Because ------- of the board members have scheduling conflicts, the board meeting will be moved to a date when all can attend.",
      "options": {
-      "A": "any (B) everybody (C) those (D) some"
+      "A": "any",
+      "B": "everybody",
+      "C": "those",
+      "D": "some"
      },
      "showText": true,
      "broken": false,
@@ -3062,7 +3140,10 @@
      "part": 5,
      "prompt": "The project ------- the collaboration of several teams across the company.",
      "options": {
-      "A": "passed (B) decided (C) required (D) performed"
+      "A": "passed",
+      "B": "decided",
+      "C": "required",
+      "D": "performed"
      },
      "showText": true,
      "broken": false,
@@ -3085,7 +3166,10 @@
      "part": 5,
      "prompt": "We cannot send the store's coupon booklet to the printers until it ------- by Ms. Jeon.",
      "options": {
-      "A": "is approving (B) approves (C) has been approved (D) will be approved"
+      "A": "is approving",
+      "B": "approves",
+      "C": "has been approved",
+      "D": "will be approved"
      },
      "showText": true,
      "broken": false,
@@ -3108,7 +3192,10 @@
      "part": 5,
      "prompt": "------- the closure of Verdigold Transport Services, we are looking for a new shipping company.",
      "options": {
-      "A": "In spite of (B) Just as (C) In light of (D) According to"
+      "A": "In spite of",
+      "B": "Just as",
+      "C": "In light of",
+      "D": "According to"
      },
      "showText": true,
      "broken": false,
@@ -3131,7 +3218,10 @@
      "part": 5,
      "prompt": "The ------- information provided by Uniss Bank's brochure helps applicants understand the terms of their loans.",
      "options": {
-      "A": "arbitrary (B) supplemental (C) superfluous (D) potential"
+      "A": "arbitrary",
+      "B": "supplemental",
+      "C": "superfluous",
+      "D": "potential"
      },
      "showText": true,
      "broken": false,

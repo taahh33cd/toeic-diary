@@ -29,7 +29,7 @@ function practiceHref(part: PartNumber) {
 
 export function ReviewPanel({
   test, config, answers, marked, skin, onToggleSkin, onRetry, canSaveVocab,
-  backHref = "/skills/full-tests", backLabel = "Danh sách đề",
+  backHref = "/skills/full-tests", backLabel = "Danh sách đề", historyHref,
 }: {
   test: FullTest;
   config: RunConfig;
@@ -43,6 +43,8 @@ export function ReviewPanel({
   backHref?: string;
   /** Chữ của lối quay lại — sổ học tập quay về lịch sử, không về danh sách đề */
   backLabel?: string;
+  /** Lượt đã lưu vào sổ học tập → hiện lối sang trang Kết quả. Bỏ trống thì ẩn. */
+  historyHref?: string;
 }) {
   const P = PALETTE[skin];
   const [filter, setFilter] = useState<Filter>("wrong");
@@ -162,10 +164,21 @@ export function ReviewPanel({
           {result.scaled ? (
             <>
               <p style={{ fontSize: "3.2rem", fontWeight: 800, lineHeight: 1, margin: "0 0 0.3rem", color: P.primary }}>
-                {result.scaled.total}
+                {result.estimated && "~"}{result.scaled.total}
               </p>
               <p style={{ fontSize: "0.95rem", color: P.inkSoft, margin: 0 }}>
                 Listening {result.scaled.ls} · Reading {result.scaled.rd}
+              </p>
+            </>
+          ) : result.listening !== null || result.reading !== null ? (
+            <>
+              <p style={{ fontSize: "3.2rem", fontWeight: 800, lineHeight: 1, margin: "0 0 0.3rem", color: P.primary }}>
+                {result.estimated && "~"}{result.listening ?? result.reading}
+                <span style={{ fontSize: "1.1rem", color: P.muted, fontWeight: 700 }}> / 495</span>
+              </p>
+              <p style={{ fontSize: "0.95rem", color: P.inkSoft, margin: 0 }}>
+                {result.listening !== null ? "Điểm Listening quy đổi" : "Điểm Reading quy đổi"}
+                {" · "}{Math.round(result.accuracy * 100)}% câu đúng
               </p>
             </>
           ) : (
@@ -174,14 +187,27 @@ export function ReviewPanel({
                 {Math.round(result.accuracy * 100)}%
               </p>
               <p style={{ fontSize: "0.9rem", color: P.muted, margin: 0, lineHeight: 1.5 }}>
-                Chỉ quy đổi điểm 10–990 khi làm đủ cả 7 part
+                Làm đủ Part 1–4 để có điểm Listening, đủ Part 5–7 để có điểm Reading
               </p>
             </>
+          )}
+          {result.estimated && (
+            <p style={{ fontSize: "0.78rem", color: P.muted, margin: "0.4rem 0 0" }}>
+              ~ Ước tính: một số câu thiếu nội dung không được chấm, điểm quy đổi theo tỷ lệ câu đúng.
+            </p>
           )}
           <p style={{ fontSize: "0.88rem", color: P.inkSoft, margin: "0.7rem 0 0" }}>
             Đúng <strong>{result.correct}</strong> · Sai <strong>{counts.wrong}</strong> ·
             {" "}Chưa làm <strong>{counts.blank}</strong> / {result.gradable} câu
           </p>
+          {historyHref && (
+            <p style={{ fontSize: "0.82rem", color: P.muted, margin: "0.6rem 0 0" }}>
+              Đã lưu vào sổ học tập ·{" "}
+              <Link href={historyHref} style={{ color: P.primary, fontWeight: 700, textDecoration: "none" }}>
+                Xem trong Kết quả →
+              </Link>
+            </p>
+          )}
         </div>
 
         {/* Theo part + gợi ý luyện thêm */}
@@ -367,7 +393,7 @@ function ReviewSidebar({
                     disabled={!gradable}
                     onClick={() => onJumpQuestion(q.number)}
                     title={
-                      !gradable ? "Câu thiếu nội dung trong đề gốc"
+                      !gradable ? "Câu thiếu nội dung"
                         : right ? "Đúng" : wrong ? `Bạn chọn ${picked}, đáp án ${q.answer}` : "Chưa làm"
                     }
                     style={{

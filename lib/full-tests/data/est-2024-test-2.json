@@ -2493,7 +2493,10 @@
      "part": 5,
      "prompt": "Before operating your handheld device, please ------- the enclosed cable to charge it.",
      "options": {
-      "A": "plan (B) remain (C) use (D) finish"
+      "A": "plan",
+      "B": "remain",
+      "C": "use",
+      "D": "finish"
      },
      "showText": true,
      "broken": false,
@@ -2516,7 +2519,10 @@
      "part": 5,
      "prompt": "Safile's new external hard drive can ------- store up to one terabyte of data.",
      "options": {
-      "A": "secure (B) security (C) securely (D) secured"
+      "A": "secure",
+      "B": "security",
+      "C": "securely",
+      "D": "secured"
      },
      "showText": true,
      "broken": false,
@@ -2539,7 +2545,10 @@
      "part": 5,
      "prompt": "Mr. Peterson will travel ------- the Tokyo office for the annual meeting.",
      "options": {
-      "A": "to (B) through (C) in (D) over"
+      "A": "to",
+      "B": "through",
+      "C": "in",
+      "D": "over"
      },
      "showText": true,
      "broken": false,
@@ -2562,7 +2571,10 @@
      "part": 5,
      "prompt": "Yong-Soo Cosmetics will not charge for items on back order until ------- have left our warehouse.",
      "options": {
-      "A": "them (B) they (C) themselves (D) their"
+      "A": "them",
+      "B": "they",
+      "C": "themselves",
+      "D": "their"
      },
      "showText": true,
      "broken": false,
@@ -2585,7 +2597,10 @@
      "part": 5,
      "prompt": "Our premium day tour takes visitors to historic sites ------- the Aprico River.",
      "options": {
-      "A": "onto (B) since (C) inside (D) along"
+      "A": "onto",
+      "B": "since",
+      "C": "inside",
+      "D": "along"
      },
      "showText": true,
      "broken": false,
@@ -2608,7 +2623,10 @@
      "part": 5,
      "prompt": "Eighty percent of drivers surveyed said they would consider buying a vehicle that runs on -------.",
      "options": {
-      "A": "electricity (B) electrically (C) electricians (D) electrify"
+      "A": "electricity",
+      "B": "electrically",
+      "C": "electricians",
+      "D": "electrify"
      },
      "showText": true,
      "broken": false,
@@ -2631,7 +2649,10 @@
      "part": 5,
      "prompt": "Xinzhe Zu has ------- Petrin Engineering as the vice president of operations.",
      "options": {
-      "A": "attached (B) resigned (C) joined (D) combined"
+      "A": "attached",
+      "B": "resigned",
+      "C": "joined",
+      "D": "combined"
      },
      "showText": true,
      "broken": false,
@@ -2654,7 +2675,10 @@
      "part": 5,
      "prompt": "Next month, Barder House Books will be holding ------- third author's hour in Cleveland.",
      "options": {
-      "A": "it (B) itself (C) its own (D) its"
+      "A": "it",
+      "B": "itself",
+      "C": "its own",
+      "D": "its"
      },
      "showText": true,
      "broken": false,
@@ -2677,7 +2701,10 @@
      "part": 5,
      "prompt": "Chester's Tiles ------- expanded to a second location in Turnington.",
      "options": {
-      "A": "severely (B) usually (C) recently (D) exactly"
+      "A": "severely",
+      "B": "usually",
+      "C": "recently",
+      "D": "exactly"
      },
      "showText": true,
      "broken": false,
@@ -2700,7 +2727,10 @@
      "part": 5,
      "prompt": "Tabrino's has ------- increased the number of almonds in the Nut Medley snack pack.",
      "options": {
-      "A": "significant (B) significance (C) signifies (D) significantly"
+      "A": "significant",
+      "B": "significance",
+      "C": "signifies",
+      "D": "significantly"
      },
      "showText": true,
      "broken": false,
@@ -2723,7 +2753,10 @@
      "part": 5,
      "prompt": "------- she travels, Jacintha Flores collects samples of local fabrics and patterns.",
      "options": {
-      "A": "Wherever (B) In addition to (C) Either (D) In contrast to"
+      "A": "Wherever",
+      "B": "In addition to",
+      "C": "Either",
+      "D": "In contrast to"
      },
      "showText": true,
      "broken": false,
@@ -2746,7 +2779,10 @@
      "part": 5,
      "prompt": "Most picture ------- at Glowing Photo Lab go on sale at 3:00 P.M. today.",
      "options": {
-      "A": "framer (B) framing (C) framed (D) frames"
+      "A": "framer",
+      "B": "framing",
+      "C": "framed",
+      "D": "frames"
      },
      "showText": true,
      "broken": false,
@@ -2769,7 +2805,10 @@
      "part": 5,
      "prompt": "All students in the business management class hold ------- college degrees.",
      "options": {
-      "A": "late (B) developed (C) advanced (D) elated"
+      "A": "late",
+      "B": "developed",
+      "C": "advanced",
+      "D": "elated"
      },
      "showText": true,
      "broken": false,
@@ -2792,7 +2831,10 @@
      "part": 5,
      "prompt": "We hired Noah Wan of Shengyao Accounting Ltd. ------- our company's financial assets.",
      "options": {
-      "A": "to evaluate (B) to be evaluated (C) will be evaluated (D) evaluate"
+      "A": "to evaluate",
+      "B": "to be evaluated",
+      "C": "will be evaluated",
+      "D": "evaluate"
      },
      "showText": true,
      "broken": false,
@@ -2815,7 +2857,10 @@
      "part": 5,
      "prompt": "Ms. Charisse is taking on a new account ------- she finishes the Morrison project.",
      "options": {
-      "A": "with (B) going (C) after (D) between"
+      "A": "with",
+      "B": "going",
+      "C": "after",
+      "D": "between"
      },
      "showText": true,
      "broken": false,
@@ -2838,7 +2883,10 @@
      "part": 5,
      "prompt": "Cormet Motors' profits are ------- this year than last year.",
      "options": {
-      "A": "higher (B) high (C) highly (D) highest"
+      "A": "higher",
+      "B": "high",
+      "C": "highly",
+      "D": "highest"
      },
      "showText": true,
      "broken": false,
@@ -2861,7 +2909,10 @@
      "part": 5,
      "prompt": "In its advertising campaign, Jaymor Tools demonstrates how reliable its ------- products are.",
      "options": {
-      "A": "current (B) relative (C) spacious (D) collected"
+      "A": "current",
+      "B": "relative",
+      "C": "spacious",
+      "D": "collected"
      },
      "showText": true,
      "broken": false,
@@ -2884,7 +2935,10 @@
      "part": 5,
      "prompt": "Remember to submit receipts for reimbursement ------- returning from a business trip.",
      "options": {
-      "A": "such as (B) when (C) then (D) within"
+      "A": "such as",
+      "B": "when",
+      "C": "then",
+      "D": "within"
      },
      "showText": true,
      "broken": false,
@@ -2907,7 +2961,10 @@
      "part": 5,
      "prompt": "Patrons will be able to access Westside Library's ------- acquired collection of books on Tuesday.",
      "options": {
-      "A": "instantly (B) newly (C) early (D) naturally"
+      "A": "instantly",
+      "B": "newly",
+      "C": "early",
+      "D": "naturally"
      },
      "showText": true,
      "broken": false,
@@ -2930,7 +2987,10 @@
      "part": 5,
      "prompt": "Please ------- any questions about time sheets to Tabitha Jones in the payroll department.",
      "options": {
-      "A": "direction (B) directive (C) directed (D) direct"
+      "A": "direction",
+      "B": "directive",
+      "C": "directed",
+      "D": "direct"
      },
      "showText": true,
      "broken": false,
@@ -2953,7 +3013,10 @@
      "part": 5,
      "prompt": "Before signing a delivery -------, be sure to double-check that all the items ordered are in the shipment.",
      "options": {
-      "A": "decision (B) announcement (C) receipt (D) limit"
+      "A": "decision",
+      "B": "announcement",
+      "C": "receipt",
+      "D": "limit"
      },
      "showText": true,
      "broken": false,
@@ -2976,7 +3039,10 @@
      "part": 5,
      "prompt": "Funds have been added to the budget for expenses ------- with the new building.",
      "options": {
-      "A": "associated (B) association (C) associate (D) associates"
+      "A": "associated",
+      "B": "association",
+      "C": "associate",
+      "D": "associates"
      },
      "showText": true,
      "broken": false,
@@ -2999,7 +3065,10 @@
      "part": 5,
      "prompt": "Ms. Bernard ------- that a deadline was approaching, so she requested some assistance.",
      "options": {
-      "A": "noticed (B) obscured (C) withdrew (D) appeared"
+      "A": "noticed",
+      "B": "obscured",
+      "C": "withdrew",
+      "D": "appeared"
      },
      "showText": true,
      "broken": false,
@@ -3022,7 +3091,10 @@
      "part": 5,
      "prompt": "Mr. Moscowitz is ------- that Dr. Tanaka will agree to present the keynote speech at this year's conference.",
      "options": {
-      "A": "hopes (B) hoped (C) hopeful (D) hopefully"
+      "A": "hopes",
+      "B": "hoped",
+      "C": "hopeful",
+      "D": "hopefully"
      },
      "showText": true,
      "broken": false,
@@ -3045,7 +3117,10 @@
      "part": 5,
      "prompt": "Two Australian companies are developing new smartphones, but it is unclear ------- phone will become available first.",
      "options": {
-      "A": "if (B) which (C) before (D) because"
+      "A": "if",
+      "B": "which",
+      "C": "before",
+      "D": "because"
      },
      "showText": true,
      "broken": false,
@@ -3068,7 +3143,10 @@
      "part": 5,
      "prompt": "Corners Gym offers its members a free lesson in how to use ------- properly.",
      "options": {
-      "A": "weighs (B) weights (C) weighty (D) weighed"
+      "A": "weighs",
+      "B": "weights",
+      "C": "weighty",
+      "D": "weighed"
      },
      "showText": true,
      "broken": false,
@@ -3091,7 +3169,10 @@
      "part": 5,
      "prompt": "------- the rules, overnight parking is not permitted at the clubhouse facility.",
      "options": {
-      "A": "Prior to (B) Except for (C) Instead of (D) According to"
+      "A": "Prior to",
+      "B": "Except for",
+      "C": "Instead of",
+      "D": "According to"
      },
      "showText": true,
      "broken": false,
@@ -3114,7 +3195,10 @@
      "part": 5,
      "prompt": "Once everyone -------, we can begin the conference call.",
      "options": {
-      "A": "arrived (B) is arriving (C) to arrive (D) has arrived"
+      "A": "arrived",
+      "B": "is arriving",
+      "C": "to arrive",
+      "D": "has arrived"
      },
      "showText": true,
      "broken": false,
@@ -3137,7 +3221,10 @@
      "part": 5,
      "prompt": "Each summer a motivational video that highlights the past year's ------- is shown to all company employees.",
      "options": {
-      "A": "preferences (B) accomplishments (C) communications (D) uncertainties"
+      "A": "preferences",
+      "B": "accomplishments",
+      "C": "communications",
+      "D": "uncertainties"
      },
      "showText": true,
      "broken": false,
@@ -3160,7 +3247,10 @@
      "part": 5,
      "prompt": "Employees who wish to attend the retirement dinner ------- Ms. Howell's 30 years of service should contact Mr. Lee.",
      "options": {
-      "A": "honor (B) to honor (C) will honor (D) will be honored"
+      "A": "honor",
+      "B": "to honor",
+      "C": "will honor",
+      "D": "will be honored"
      },
      "showText": true,
      "broken": false,

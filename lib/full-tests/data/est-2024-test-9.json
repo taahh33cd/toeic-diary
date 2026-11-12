@@ -3491,15 +3491,16 @@
    "passages": [
     {
      "label": "Notice",
-     "text": "Sky Air First Pass\nThank you for flying Sky Air First with -------. We hope you enjoy your flight."
+     "text": "Sky Air First Pass\nThank you for flying Sky Air First with --- [131] ---. We hope you enjoy your flight.\nYou can take advantage of our best prices on future flights --- [132] --- purchasing a Sky Air First Pass.\n\nFor a --- [133] --- annual fee, you will get special discounts, seat upgrades, and the use of our exclusive travelers' lounge.\n\nAsk your flight attendant for more information and an application. --- [134] ---."
     }
    ],
    "questions": [
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) them",
+     "prompt": null,
      "options": {
+      "A": "them",
       "B": "theirs",
       "C": "us",
       "D": "ours"
@@ -3516,8 +3517,9 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) at",
+     "prompt": null,
      "options": {
+      "A": "at",
       "B": "on",
       "C": "by",
       "D": "to"
@@ -3534,8 +3536,9 @@
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) lowers",
+     "prompt": null,
      "options": {
+      "A": "lowers",
       "B": "low",
       "C": "lowly",
       "D": "lowest"
@@ -3552,8 +3555,9 @@
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) We hope you will fly Sky Air First again.",
+     "prompt": null,
      "options": {
+      "A": "We hope you will fly Sky Air First again.",
       "B": "You will also get priority boarding.",
       "C": "Please find your seat immediately.",
       "D": "The flight delay will be minimal."
@@ -3577,15 +3581,16 @@
    "passages": [
     {
      "label": "Article",
-     "text": "CJOK Radio Show Welcomes New Staff\nQUEENSVILLE (7 July) Local radio station CJOK announced Katherine Dees as the new producer of the popular show Out and About in Queensville. Ms. Dees is now ------- for coordinating schedules, booking guests for the show, and managing media relations."
+     "text": "CJOK Radio Show Welcomes New Staff\nQUEENSVILLE (7 July) Local radio station CJOK announced Katherine Dees as the new producer of the popular show Out and About in Queensville. Ms. Dees is now --- [135] --- for coordinating schedules, booking guests for the show, and managing media relations.\n--- [136] --- the station hired sound editor Virginia Thacker and production assistant Reggie Dietrich to support Ms. Dees in her new role. --- [137] ---.\n\n\nOut and About in Queensville, which has been airing for 30 years, is performed live weekly from September to May in the Orpheum Theater in downtown Queensville. The show --- [138] --- musical guests, writers, and storytellers for an hour of weekly programming."
     }
    ],
    "questions": [
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) responsive",
+     "prompt": null,
      "options": {
+      "A": "responsive",
       "B": "responsibly",
       "C": "responding",
       "D": "responsible"
@@ -3602,8 +3607,9 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) Even so",
+     "prompt": null,
      "options": {
+      "A": "Even so",
       "B": "In fact",
       "C": "For example",
       "D": "In addition"
@@ -3620,8 +3626,9 @@
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) CJOK was founded 60 years ago.",
+     "prompt": null,
      "options": {
+      "A": "CJOK was founded 60 years ago.",
       "B": "These recent hires follow the retirement of producer Ed Evans.",
       "C": "Ms. Dees was born and raised in Cedarburg.",
       "D": "CJOK has more than one popular show in its lineup."
@@ -3638,8 +3645,9 @@
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) gives",
+     "prompt": null,
      "options": {
+      "A": "gives",
       "B": "marks",
       "C": "features",
       "D": "holds"
@@ -3663,15 +3671,16 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: Sandra Barga <sbarga97@hjmail.ca>\nFrom: Artie Romanche <service@northwestbags.ca>\nDate: 12 July\nSubject: Order number 71280\n\nDear Ms. Barga:\nWe received your recent order asking for your name to be stitched on a Klamath Kool handbag. We are, -------, eager to complete your order."
+     "text": "To: Sandra Barga <sbarga97@hjmail.ca>\nFrom: Artie Romanche <service@northwestbags.ca>\nDate: 12 July\nSubject: Order number 71280\n\nDear Ms. Barga:\nWe received your recent order asking for your name to be stitched on a Klamath Kool handbag. We are, --- [139] ---, eager to complete your order.\nUnfortunately, our seamstress who fulfills personalisation requirements will be on leave for the next three days. We wanted to let you know that her --- [140] --- will cause a delay in shipping your bag.\n\n--- [141] --- for the wait, we would like to offer you a 10 percent discount on your current order. Or, if you prefer, you can opt for free personalisation on your next order. --- [142] ---.\n\n\nAt Northwest Bags, we strive for 100 percent customer satisfaction!\n\nSincerely,\nArtie Romanche\nCustomer Service Representative, Northwest Bags"
     }
    ],
    "questions": [
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) still",
+     "prompt": null,
      "options": {
+      "A": "still",
       "B": "besides",
       "C": "of course",
       "D": "nevertheless"
@@ -3688,8 +3697,9 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) absence",
+     "prompt": null,
      "options": {
+      "A": "absence",
       "B": "arrival",
       "C": "request",
       "D": "investigation"
@@ -3706,8 +3716,9 @@
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) Compensated",
+     "prompt": null,
      "options": {
+      "A": "Compensated",
       "B": "To compensate",
       "C": "For compensating",
       "D": "It is compensation"
@@ -3724,8 +3735,9 @@
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) The choice is yours.",
+     "prompt": null,
      "options": {
+      "A": "The choice is yours.",
       "B": "We appreciate your review.",
       "C": "The bag will look great with your initials on it.",
       "D": "We are the only local retailer offering custom services."
@@ -3749,15 +3761,16 @@
    "passages": [
     {
      "label": "Article",
-     "text": "Sehelec Announces Wind-Solar Hybrid Project\nMUMBAI (15 March)-Sehelec Ltd. announced it will begin construction on a 500-megawatt wind-solar hybrid power ------- outside of Bangalore, India."
+     "text": "Sehelec Announces Wind-Solar Hybrid Project\nMUMBAI (15 March)-Sehelec Ltd. announced it will begin construction on a 500-megawatt wind-solar hybrid power --- [143] --- outside of Bangalore, India.\n--- [144] ---. Sehelec expects to begin operations within 24 months, and it will sell the power to Indian energy giant Novaseon Industries.\n\n\"Our contract with Novaseon to provide --- [145] --- power moves us closer to our long-term corporate goal,\" said Sumit Varma, CEO of Sehelec.\n\n\"Our objective is to achieve a capacity of 20 gigawatts within five years. Doing so will make us one of India's largest green power companies. And that, in turn, will help the country --- [146] --- its carbon-reduction target.\""
     }
    ],
    "questions": [
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) plant",
+     "prompt": null,
      "options": {
+      "A": "plant",
       "B": "planter",
       "C": "planting",
       "D": "planted"
@@ -3774,8 +3787,9 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) Windy conditions can cause damage to tall buildings.",
+     "prompt": null,
      "options": {
+      "A": "Windy conditions can cause damage to tall buildings.",
       "B": "The facility will consist of a mix of solar panels and wind turbines.",
       "C": "Electric vehicles have fewer emissions than other vehicles have.",
       "D": "The pace of upgrades to India's power grid slowed slightly this year."
@@ -3792,8 +3806,9 @@
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) renew",
+     "prompt": null,
      "options": {
+      "A": "renew",
       "B": "renewers",
       "C": "renewable",
       "D": "to renew"
@@ -3810,8 +3825,9 @@
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) understand",
+     "prompt": null,
      "options": {
+      "A": "understand",
       "B": "explain",
       "C": "block",
       "D": "reach"

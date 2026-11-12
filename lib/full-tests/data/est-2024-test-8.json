@@ -3170,15 +3170,16 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: mnandy@gmantcs.com\nFrom: jblaire@blaireaccounting.ca\nRe: AUTOMATIC REPLY\nDate: 9 January, 10:34 AM\n\nHello, and thank you for contacting Blaire Accounting. I will be out of the office until 31 January. I will respond to your message when I -------."
+     "text": "To: mnandy@gmantcs.com\nFrom: jblaire@blaireaccounting.ca\nRe: AUTOMATIC REPLY\nDate: 9 January, 10:34 AM\n\nHello, and thank you for contacting Blaire Accounting. I will be out of the office until 31 January. I will respond to your message when I --- [131] ---.\nIf you need --- [132] --- assistance, please contact Susan Lewis, my administrative assistant, at slewis@blaireaccounting.ca. \n\nYou can --- [133] --- call her directly at 416-555-0193.\n\n--- [134] ---.\n\nJean Blaire, President"
     }
    ],
    "questions": [
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) recover",
+     "prompt": null,
      "options": {
+      "A": "recover",
       "B": "return",
       "C": "begin",
       "D": "finish"
@@ -3191,8 +3192,9 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) immediate",
+     "prompt": null,
      "options": {
+      "A": "immediate",
       "B": "immediately",
       "C": "immediacy",
       "D": "immediacies"
@@ -3205,8 +3207,9 @@
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) also",
+     "prompt": null,
      "options": {
+      "A": "also",
       "B": "lightly",
       "C": "similarly",
       "D": "again"
@@ -3219,8 +3222,9 @@
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) Ms. Blaire will be back in the office earlier than expected.",
+     "prompt": null,
      "options": {
+      "A": "Ms. Blaire will be back in the office earlier than expected.",
       "B": "Please come and see us if you ever find yourself in Toronto.",
       "C": "It is essential to hire a competent payroll and tax accountant.",
       "D": "Ms. Lewis is in the office on weekdays from 9 A.M. to 5 P.M."
@@ -3240,15 +3244,16 @@
    "passages": [
     {
      "label": "Notice",
-     "text": "Attention customers of Metro Coffee:\nWe are excited to announce that we ------- a second Metro Coffee store!"
+     "text": "Attention customers of Metro Coffee:\nWe are excited to announce that we --- [135] --- a second Metro Coffee store!\nAs you know, we recently expanded our offerings to include baked goods as well as coffee. As a result, our --- [136] --- has increased significantly. \n\nTo keep up with demand, we decided that a second store was necessary. --- [137] ---. \n\nOur new space is substantially --- [138] --- but offers the same wide selection of items. Make sure to stop by and check out our new location today!"
     }
    ],
    "questions": [
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) will open",
+     "prompt": null,
      "options": {
+      "A": "will open",
       "B": "can open",
       "C": "are opening",
       "D": "have opened"
@@ -3261,8 +3266,9 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) debt",
+     "prompt": null,
      "options": {
+      "A": "debt",
       "B": "payroll",
       "C": "business",
       "D": "investment"
@@ -3275,8 +3281,9 @@
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) Metro Coffee has been a part of the community for nine years.",
+     "prompt": null,
      "options": {
+      "A": "Metro Coffee has been a part of the community for nine years.",
       "B": "We roast our coffee beans right here on-site.",
       "C": "Many people enjoy eating a pastry while drinking a cup of coffee.",
       "D": "It is located two miles away in the historic district."
@@ -3289,8 +3296,9 @@
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) large",
+     "prompt": null,
      "options": {
+      "A": "large",
       "B": "larger",
       "C": "largely",
       "D": "largest"
@@ -3310,15 +3318,16 @@
    "passages": [
     {
      "label": "Memo",
-     "text": "To: All Ferrese Hotel Employees\nFrom: Sergio Prieto, Hotel Manager\nDate: Monday, July 4\nSubject: Global Shipping Partners Conference\n\nThe Ferrese Hotel will be hosting the Global Shipping Partners Conference next week, from Tuesday to Sunday. -------, management expects to see many more customers in the hotel's restaurants and gift shops."
+     "text": "To: All Ferrese Hotel Employees\nFrom: Sergio Prieto, Hotel Manager\nDate: Monday, July 4\nSubject: Global Shipping Partners Conference\n\nThe Ferrese Hotel will be hosting the Global Shipping Partners Conference next week, from Tuesday to Sunday. --- [139] ---, management expects to see many more customers in the hotel's restaurants and gift shops.\n--- [140] ---. \n\nI will be hiring temporary staff to ensure that --- [141] --- can meet these increased demands. \n\nPlease take the time to help them learn our --- [142] --- when they are here. Doing so will ensure that all operations run smoothly while the conference is taking place."
     }
    ],
    "questions": [
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) If not",
+     "prompt": null,
      "options": {
+      "A": "If not",
       "B": "After all",
       "C": "Therefore",
       "D": "In the meantime"
@@ -3331,8 +3340,9 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) Restaurant renovations are almost completed.",
+     "prompt": null,
      "options": {
+      "A": "Restaurant renovations are almost completed.",
       "B": "Conference registration forms have been posted online.",
       "C": "Applications will be reviewed later this week.",
       "D": "The business center will also be busier than usual."
@@ -3345,8 +3355,9 @@
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) it",
+     "prompt": null,
      "options": {
+      "A": "it",
       "B": "we",
       "C": "both",
       "D": "something"
@@ -3359,8 +3370,9 @@
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) lines",
+     "prompt": null,
      "options": {
+      "A": "lines",
       "B": "steps",
       "C": "names",
       "D": "routines"
@@ -3380,15 +3392,16 @@
    "passages": [
     {
      "label": "Article",
-     "text": "DALLAS (July 28)-Zura Technology Solutions (ZTS) announced today that it has completed the ------- of an office building located at 425 Van Kirk Street here in Dallas."
+     "text": "DALLAS (July 28)-Zura Technology Solutions (ZTS) announced today that it has completed the --- [143] --- of an office building located at 425 Van Kirk Street here in Dallas.\nThe building, most recently the headquarters of Brickhall Insurance, will serve as ZTS's --- [144] --- base of operations. \n\nThe company's relocation from Fort Worth is expected to be complete by the end of the calendar year.\n\"Our decision to acquire the building reflects ZTS's ongoing commitment to the Dallas area and will enable us to better serve our customers, business partners, and stakeholders,\" said Gloria Rubirosa, ZTS's CEO. --- [145] ---. \n\n\"From our new home in Dallas, we --- [146] --- to work hard to meet the needs of each and every one of our customers around the world.\""
     }
    ],
    "questions": [
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) construction",
+     "prompt": null,
      "options": {
+      "A": "construction",
       "B": "cleaning",
       "C": "inspection",
       "D": "purchase"
@@ -3401,8 +3414,9 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) voluntary",
+     "prompt": null,
      "options": {
+      "A": "voluntary",
       "B": "primary",
       "C": "short-term",
       "D": "occasional"
@@ -3415,8 +3429,9 @@
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) ZTS's leadership team sees the move as strategic.",
+     "prompt": null,
      "options": {
+      "A": "ZTS's leadership team sees the move as strategic.",
       "B": "For example, it provides a range of services to small businesses.",
       "C": "There are only a few available sites in the Main Street District.",
       "D": "Over 15,000 people are employed by ZTS worldwide."
@@ -3429,8 +3444,9 @@
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) continued",
+     "prompt": null,
      "options": {
+      "A": "continued",
       "B": "continuing",
       "C": "would have continued",
       "D": "will continue"
