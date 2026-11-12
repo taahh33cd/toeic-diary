@@ -29,7 +29,7 @@ function practiceHref(part: PartNumber) {
 
 export function ReviewPanel({
   test, config, answers, marked, skin, onToggleSkin, onRetry, canSaveVocab,
-  backHref = "/skills/full-tests", backLabel = "Danh sách đề",
+  backHref = "/skills/full-tests", backLabel = "Danh sách đề", historyHref,
 }: {
   test: FullTest;
   config: RunConfig;
@@ -43,6 +43,8 @@ export function ReviewPanel({
   backHref?: string;
   /** Chữ của lối quay lại — sổ học tập quay về lịch sử, không về danh sách đề */
   backLabel?: string;
+  /** Lượt đã lưu vào sổ học tập → hiện lối sang trang Kết quả. Bỏ trống thì ẩn. */
+  historyHref?: string;
 }) {
   const P = PALETTE[skin];
   const [filter, setFilter] = useState<Filter>("wrong");
@@ -198,6 +200,14 @@ export function ReviewPanel({
             Đúng <strong>{result.correct}</strong> · Sai <strong>{counts.wrong}</strong> ·
             {" "}Chưa làm <strong>{counts.blank}</strong> / {result.gradable} câu
           </p>
+          {historyHref && (
+            <p style={{ fontSize: "0.82rem", color: P.muted, margin: "0.6rem 0 0" }}>
+              Đã lưu vào sổ học tập ·{" "}
+              <Link href={historyHref} style={{ color: P.primary, fontWeight: 700, textDecoration: "none" }}>
+                Xem trong Kết quả →
+              </Link>
+            </p>
+          )}
         </div>
 
         {/* Theo part + gợi ý luyện thêm */}

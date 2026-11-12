@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from "react";
 
 const PRIMARY = [
   { href: "/journal",           label: "Tổng quan",    exact: true },
-  { href: "/journal/scores",    label: "Điểm số" },
+  { href: "/journal/scores",    label: "Kết quả" },
   { href: "/journal/missions",  label: "Nhiệm vụ" },
   { href: "/journal/vocab",     label: "Từ vựng" },
 ] as const;

@@ -32,6 +32,8 @@ export function FullTestRunner({
   const [marked, setMarked] = useState<number[]>([]);
   const [resumable, setResumable] = useState<AttemptRow | null>(null);
   const [busy, setBusy] = useState(false);
+  /** Lượt vừa nộp đã lưu lên server → màn kết quả có lối sang sổ học tập. */
+  const [savedToJournal, setSavedToJournal] = useState(false);
   /** Làm tiếp bài dở: đồng hồ + vị trí audio để ExamScreen chạy tiếp đúng chỗ */
   const [resumeAt, setResumeAt] = useState<Pick<AttemptRow, "secondsLeft" | "progress"> | null>(null);
   const [saveFailed, setSaveFailed] = useState(false);
@@ -97,6 +99,7 @@ export function FullTestRunner({
     setMarked(m);
     setBusy(true);
     const ok = await attempt.submit(a, m, config ?? undefined);
+    setSavedToJournal(ok);
     setBusy(false);
     setSaveFailed(!ok);
     setPhase("result");
@@ -107,6 +110,7 @@ export function FullTestRunner({
     const ok = await attempt.submit(answers, marked, config ?? undefined);
     setBusy(false);
     setSaveFailed(!ok);
+    setSavedToJournal(ok);
   }
 
   if (phase === "setup") {
@@ -181,6 +185,7 @@ export function FullTestRunner({
         skin={skin}
         onToggleSkin={toggleSkin}
         canSaveVocab={canSaveVocab}
+        historyHref={savedToJournal ? "/journal/scores" : undefined}
         onRetry={() => { setPhase("setup"); setAnswers({}); setMarked([]); }}
       />
       </>

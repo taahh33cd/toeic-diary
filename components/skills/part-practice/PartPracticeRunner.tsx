@@ -43,6 +43,8 @@ export function PartPracticeRunner({
   canSaveVocab?: boolean;
 }) {
   const [skin, setSkin] = useState<Skin>("light");
+  /** Lượt vừa nộp đã lưu lên server → màn kết quả có lối sang sổ học tập. */
+  const [savedToJournal, setSavedToJournal] = useState(false);
   const [phase, setPhase] = useState<Phase>("setup");
   const [config, setConfig] = useState<RunConfig | null>(null);
   const [answers, setAnswers] = useState<Record<number, string>>({});
@@ -116,6 +118,7 @@ export function PartPracticeRunner({
     setMarked(m);
     setBusy(true);
     const ok = await attempt.submit(a, m, config ?? undefined);
+    setSavedToJournal(ok);
     setBusy(false);
     setSaveFailed(!ok);
     setPhase("result");
@@ -126,6 +129,7 @@ export function PartPracticeRunner({
     const ok = await attempt.submit(answers, marked, config ?? undefined);
     setBusy(false);
     setSaveFailed(!ok);
+    setSavedToJournal(ok);
   }
 
   if (phase === "setup") {
@@ -204,6 +208,7 @@ export function PartPracticeRunner({
         skin={skin}
         onToggleSkin={toggleSkin}
         canSaveVocab={canSaveVocab}
+        historyHref={savedToJournal ? "/journal/scores" : undefined}
         backHref={backHref}
         onRetry={() => { setPhase("setup"); setAnswers({}); setMarked([]); }}
       />

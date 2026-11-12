@@ -34,8 +34,11 @@ export interface AttemptItem {
   modeLabel: string;
   correct: number | null;
   gradable: number | null;
-  /** Điểm quy đổi ETS — chỉ thi trọn đề mới có */
+  /** Điểm quy đổi ETS — chỉ thi trọn đề làm đủ 7 part mới có */
   total: number | null;
+  /** Điểm quy đổi từng phần (5–495), có cùng lúc với `total` */
+  listening: number | null;
+  reading: number | null;
   /** Số câu đã trả lời (dùng cho lượt đang làm dở) */
   answered: number;
   /** Nộp lúc nào (done) hoặc lưu lúc nào (in_progress) */
@@ -91,6 +94,7 @@ export async function loadAttemptHistory(userId: string): Promise<AttemptItem[]>
       select: {
         id: true, examSlug: true, testSlug: true, status: true, config: true,
         answers: true, correct: true, gradable: true, total: true,
+        listening: true, reading: true,
         completedAt: true, updatedAt: true,
       },
     }),
@@ -114,6 +118,8 @@ export async function loadAttemptHistory(userId: string): Promise<AttemptItem[]>
       correct: a.correct,
       gradable: a.gradable,
       total: null,
+      listening: null,
+      reading: null,
       answered: countAnswers(a.answers),
       at: a.completedAt ?? a.updatedAt,
     });
@@ -135,6 +141,8 @@ export async function loadAttemptHistory(userId: string): Promise<AttemptItem[]>
       correct: a.correct,
       gradable: a.gradable,
       total: a.total,
+      listening: a.listening,
+      reading: a.reading,
       answered: countAnswers(a.answers),
       at: a.completedAt ?? a.updatedAt,
     });
@@ -346,6 +354,8 @@ export async function loadAttemptDetail(userId: string, id: string): Promise<Att
       correct: part.correct,
       gradable: part.gradable,
       total: null,
+      listening: null,
+      reading: null,
       answered: countAnswers(part.answers),
       at: part.completedAt ?? part.updatedAt,
     };
@@ -364,6 +374,7 @@ export async function loadAttemptDetail(userId: string, id: string): Promise<Att
     select: {
       id: true, examSlug: true, testSlug: true, status: true, config: true,
       answers: true, marked: true, correct: true, gradable: true, total: true,
+      listening: true, reading: true,
       completedAt: true, updatedAt: true,
     },
   });
@@ -387,6 +398,8 @@ export async function loadAttemptDetail(userId: string, id: string): Promise<Att
     correct: full.correct,
     gradable: full.gradable,
     total: full.total,
+    listening: full.listening,
+    reading: full.reading,
     answered: countAnswers(full.answers),
     at: full.completedAt ?? full.updatedAt,
   };
