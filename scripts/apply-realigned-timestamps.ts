@@ -81,8 +81,13 @@ function checkLesson(id: string, L: OutLesson): { ok: boolean; reasons: string[]
     const s = L.sentences[i];
     if (s.newStart === null || s.newEnd === null) { reasons.push(`#${s.orderIndex} không align được`); continue; }
     if (s.newEnd <= s.newStart) reasons.push(`#${s.orderIndex} khoảng rỗng ${s.newStart}->${s.newEnd}`);
-    if (s.matchedWords / Math.max(1, s.words) < MIN_SENT_COVERAGE)
-      reasons.push(`#${s.orderIndex} chỉ khớp ${s.matchedWords}/${s.words} từ`);
+    // Câu rất ngắn ("Hi, Lirong.") chỉ cần ASR nghe nhầm một tên riêng là tụt
+    // xuống 50%, nên với câu dưới 4 từ chỉ đòi khớp được ít nhất một từ —
+    // bấy nhiêu đã đủ neo câu vào đúng chỗ trong audio.
+    const ok = s.words < 4
+      ? s.matchedWords >= 1
+      : s.matchedWords / s.words >= MIN_SENT_COVERAGE;
+    if (!ok) reasons.push(`#${s.orderIndex} chỉ khớp ${s.matchedWords}/${s.words} từ`);
     if (L.audioDuration > 0 && s.newStart > L.audioDuration)
       reasons.push(`#${s.orderIndex} bắt đầu ngoài file (${s.newStart} > ${L.audioDuration})`);
     // thứ tự phải tăng dần
