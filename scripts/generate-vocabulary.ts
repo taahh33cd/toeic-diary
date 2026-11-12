@@ -5,13 +5,18 @@
  *
  * Usage:
  *   tsx scripts/generate-vocabulary.ts
- *   tsx scripts/generate-vocabulary.ts --force   # re-generate even if already has vocab
+ *   tsx scripts/generate-vocabulary.ts --force          # re-generate even if already has vocab
+ *   tsx scripts/generate-vocabulary.ts --ids <file.json> --force
+ *
+ * --ids nhận một file JSON chứa mảng lessonId. Dùng khi transcript của một số
+ * bài vừa được thay: từ vựng cũ rút từ bản cũ nên không còn nằm trong bài.
  *
  * Rate: ~24 req/min (one request per 2.5 seconds) to stay under Gemini free-tier limits.
  * Resumable: skips lessons that already have keyVocabulary unless --force is passed.
  */
 
 import "dotenv/config";
+import fs from "node:fs";
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { GoogleGenAI } from "@google/genai";
@@ -27,6 +32,14 @@ const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
 
 const DELAY_MS = 8000; // 8s between calls → ~7 RPM (conservative for free tier)
 const force = process.argv.includes("--force");
+
+/** Chỉ làm những bài trong danh sách này, nếu có truyền --ids. */
+function readIdFilter(): Set<string> | null {
+  const i = process.argv.indexOf("--ids");
+  if (i === -1) return null;
+  const raw = JSON.parse(fs.readFileSync(process.argv[i + 1], "utf8")) as string[];
+  return new Set(raw);
+}
 
 // ─── Vocab extraction ─────────────────────────────────────────────────────────
 
@@ -126,9 +139,9 @@ async function main() {
     orderBy: { createdAt: "asc" },
   });
 
-  const lessons = force
-    ? allLessons
-    : allLessons.filter((l) => l.keyVocabulary === null);
+  const only = readIdFilter();
+  const scoped = only ? allLessons.filter((l) => only.has(l.id)) : allLessons;
+  const lessons = force ? scoped : scoped.filter((l) => l.keyVocabulary === null);
 
   const total = lessons.length;
   if (total === 0) {

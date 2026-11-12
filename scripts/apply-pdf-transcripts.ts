@@ -16,7 +16,9 @@
  *   - tách mỗi lượt nói thành câu (bài chép chính tả chạy theo từng câu);
  *   - thay toàn bộ câu của bài — số câu bản mới thường khác bản cũ;
  *   - sinh lại ô trống cho Level 1-2, dùng đúng thuật toán của
- *     add-blanks-part3.ts (tối đa 2 ô mỗi câu, không kề nhau, seed theo id câu).
+ *     add-blanks-part3.ts (tối đa 2 ô mỗi câu, không kề nhau, seed theo id câu);
+ *   - dựng lại `transcriptFull` — cột này là bản ghép của cả bài, dùng cho phần
+ *     học từ vựng và màn xem lại, nên bỏ quên là nó mâu thuẫn với từng câu.
  *
  * Mốc thời gian sau bước này còn SAI — phải chạy realign-broken-timestamps.py
  * rồi apply-realigned-timestamps.ts cho những bài vừa thay.
@@ -148,7 +150,13 @@ async function main() {
 
     if (!apply) continue;
 
+    const transcriptFull = fresh
+      .map((s) => (s.speaker ? `${s.speaker}: ${s.content}` : s.content))
+      .join("
+");
+
     await prisma.$transaction(async (tx) => {
+      await tx.lesson.update({ where: { id: lesson.id }, data: { transcriptFull } });
       await tx.sentence.deleteMany({ where: { lessonId: lesson.id } });
       for (let i = 0; i < fresh.length; i++) {
         const created = await tx.sentence.create({
