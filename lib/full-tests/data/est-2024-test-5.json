@@ -3254,8 +3254,9 @@
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) manufacturing",
+     "prompt": null,
      "options": {
+      "A": "manufacturing",
       "B": "hiring",
       "C": "political",
       "D": "sporting"
@@ -3272,8 +3273,9 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) If not",
+     "prompt": null,
      "options": {
+      "A": "If not",
       "B": "After all",
       "C": "Additionally",
       "D": "For example"
@@ -3290,8 +3292,9 @@
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) Its grand opening is scheduled for mid-November.",
+     "prompt": null,
      "options": {
+      "A": "Its grand opening is scheduled for mid-November.",
       "B": "Most applicants had prior experience.",
       "C": "Its appointment of Linda Okumu as its CEO has surprised analysts.",
       "D": "Local competitors cannot match its prices."
@@ -3308,8 +3311,9 @@
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) attending",
+     "prompt": null,
      "options": {
+      "A": "attending",
       "B": "to attend",
       "C": "attended",
       "D": "are attending"
@@ -3340,8 +3344,9 @@
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) tried",
+     "prompt": null,
      "options": {
+      "A": "tried",
       "B": "recommend",
       "C": "consider",
       "D": "started"
@@ -3358,8 +3363,9 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) Our filtration system will be redesigned within the next year.",
+     "prompt": null,
      "options": {
+      "A": "Our filtration system will be redesigned within the next year.",
       "B": "Water use may be reduced by running your dishwasher less frequently.",
       "C": "To do this, run cool tap water through the filter for three minutes.",
       "D": "There are 150 liters of water in the main storage tank at all times."
@@ -3376,8 +3382,9 @@
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) extremely",
+     "prompt": null,
      "options": {
+      "A": "extremely",
       "B": "highly",
       "C": "tightly",
       "D": "steadily"
@@ -3394,8 +3401,9 @@
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) diminished",
+     "prompt": null,
      "options": {
+      "A": "diminished",
       "B": "diminishes",
       "C": "diminish",
       "D": "diminishable"
@@ -3426,8 +3434,9 @@
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) condition",
+     "prompt": null,
      "options": {
+      "A": "condition",
       "B": "object",
       "C": "explanation",
       "D": "preview"
@@ -3444,8 +3453,9 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) asked",
+     "prompt": null,
      "options": {
+      "A": "asked",
       "B": "is asking",
       "C": "has asked",
       "D": "will ask"
@@ -3462,8 +3472,9 @@
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) Our employees have software training and are skilled at resolving problems.",
+     "prompt": null,
      "options": {
+      "A": "Our employees have software training and are skilled at resolving problems.",
       "B": "To cancel a furniture delivery, please call within 24 hours of ordering.",
       "C": "When you send back the product, be sure to include the authorization code.",
       "D": "The catalog has sections for kitchen goods, lighting, appliances, and more."
@@ -3480,8 +3491,9 @@
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) responsibly",
+     "prompt": null,
      "options": {
+      "A": "responsibly",
       "B": "responsible",
       "C": "responsibility",
       "D": "responsibleness"
@@ -3512,8 +3524,9 @@
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) If so",
+     "prompt": null,
      "options": {
+      "A": "If so",
       "B": "However",
       "C": "Otherwise",
       "D": "In that case"
@@ -3530,8 +3543,9 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) itself",
+     "prompt": null,
      "options": {
+      "A": "itself",
       "B": "his",
       "C": "whose",
       "D": "everyone"
@@ -3548,8 +3562,9 @@
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) sessions",
+     "prompt": null,
      "options": {
+      "A": "sessions",
       "B": "positions",
       "C": "conferences",
       "D": "competitions"
@@ -3566,8 +3581,9 @@
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) Cyberattacks are on the rise.",
+     "prompt": null,
      "options": {
+      "A": "Cyberattacks are on the rise.",
       "B": "The training is held each summer.",
       "C": "Please make every effort to sign up.",
       "D": "Last year's program was canceled."

@@ -4613,8 +4613,9 @@
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) difference",
+     "prompt": null,
      "options": {
+      "A": "difference",
       "B": "strategy",
       "C": "change",
       "D": "practice"
@@ -4631,8 +4632,9 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) mentors",
+     "prompt": null,
      "options": {
+      "A": "mentors",
       "B": "is mentoring",
       "C": "will mentor",
       "D": "has been mentoring"
@@ -4649,8 +4651,9 @@
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) last",
+     "prompt": null,
      "options": {
+      "A": "last",
       "B": "original",
       "C": "flexible",
       "D": "alternate"
@@ -4667,8 +4670,9 @@
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) Cometti Creative will hire a replacement soon.",
+     "prompt": null,
      "options": {
+      "A": "Cometti Creative will hire a replacement soon.",
       "B": "We hope that you can all attend to wish her well.",
       "C": "Ms. Shawn was the first director of human resources at Cometti Creative.",
       "D": "The first project will be the creation of a talent development program."
@@ -4699,8 +4703,9 @@
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) own",
+     "prompt": null,
      "options": {
+      "A": "own",
       "B": "owned",
       "C": "owner",
       "D": "owning"
@@ -4717,8 +4722,9 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) practice",
+     "prompt": null,
      "options": {
+      "A": "practice",
       "B": "specialize",
       "C": "report",
       "D": "purchase"
@@ -4735,8 +4741,9 @@
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) They can arrange transportation for your local elementary school.",
+     "prompt": null,
      "options": {
+      "A": "They can arrange transportation for your local elementary school.",
       "B": "That is because they live in the communities they serve.",
       "C": "They will be closed for the summer but will be back soon.",
       "D": "Therefore, they can help you with all your banking needs."
@@ -4753,8 +4760,9 @@
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) toward",
+     "prompt": null,
      "options": {
+      "A": "toward",
       "B": "fixing",
       "C": "because",
       "D": "along"
@@ -4785,8 +4793,9 @@
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) presenting",
+     "prompt": null,
      "options": {
+      "A": "presenting",
       "B": "presents",
       "C": "presentation",
       "D": "presented"
@@ -4803,8 +4812,9 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) You are encouraged to visit our office for a free portfolio review.",
+     "prompt": null,
      "options": {
+      "A": "You are encouraged to visit our office for a free portfolio review.",
       "B": "The series is designed to help you make informed financial decisions.",
       "C": "Please fill out the paperwork before your appointment.",
       "D": "Your responses will help us serve you better in the future."
@@ -4821,8 +4831,9 @@
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) regional",
+     "prompt": null,
      "options": {
+      "A": "regional",
       "B": "expensive",
       "C": "supplemental",
       "D": "playful"
@@ -4839,8 +4850,9 @@
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) consulting",
+     "prompt": null,
      "options": {
+      "A": "consulting",
       "B": "prescribing",
       "C": "listing",
       "D": "following"
@@ -4902,8 +4914,9 @@
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) I thought it went on longer than was necessary.",
+     "prompt": null,
      "options": {
+      "A": "I thought it went on longer than was necessary.",
       "B": "I wish we had been informed about it sooner.",
       "C": "I would like to make a suggestion on this topic.",
       "D": "I would be honored to lead a follow-up session."
@@ -4920,8 +4933,9 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) will offer",
+     "prompt": null,
      "options": {
+      "A": "will offer",
       "B": "have offered",
       "C": "were offering",
       "D": "should be offering"
@@ -4938,8 +4952,9 @@
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) After all",
+     "prompt": null,
      "options": {
+      "A": "After all",
       "B": "By the way",
       "C": "In the meantime",
       "D": "On the other hand"
@@ -4956,8 +4971,9 @@
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) useful",
+     "prompt": null,
      "options": {
+      "A": "useful",
       "B": "eventful",
       "C": "profitable",
       "D": "comfortable"

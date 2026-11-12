@@ -3679,8 +3679,9 @@
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) This year's celebrations are part of a weeklong national campaign.",
+     "prompt": null,
      "options": {
+      "A": "This year's celebrations are part of a weeklong national campaign.",
       "B": "Results of the survey will be presented at 6:00 Ρ.Μ.",
       "C": "Programs will be distributed at the next meeting.",
       "D": "Admission is free, but a donation is suggested."
@@ -3697,8 +3698,9 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) such",
+     "prompt": null,
      "options": {
+      "A": "such",
       "B": "that",
       "C": "what",
       "D": "all"
@@ -3715,8 +3717,9 @@
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) Conversely",
+     "prompt": null,
      "options": {
+      "A": "Conversely",
       "B": "Additionally",
       "C": "In the meantime",
       "D": "To this end"
@@ -3733,8 +3736,9 @@
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) will perform",
+     "prompt": null,
      "options": {
+      "A": "will perform",
       "B": "had to perform",
       "C": "was performing",
       "D": "could have performed"
@@ -3765,8 +3769,9 @@
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) internalizing",
+     "prompt": null,
      "options": {
+      "A": "internalizing",
       "B": "internalize",
       "C": "internally",
       "D": "internal"
@@ -3783,8 +3788,9 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) as",
+     "prompt": null,
      "options": {
+      "A": "as",
       "B": "in",
       "C": "about",
       "D": "with"
@@ -3801,8 +3807,9 @@
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) issues",
+     "prompt": null,
      "options": {
+      "A": "issues",
       "B": "clients",
       "C": "articles",
       "D": "proposals"
@@ -3819,8 +3826,9 @@
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) The network server will be expensive.",
+     "prompt": null,
      "options": {
+      "A": "The network server will be expensive.",
       "B": "Your computer may be corrupted.",
       "C": "Thank you for your patience.",
       "D": "Contact the IT help desk."
@@ -3851,8 +3859,9 @@
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) office",
+     "prompt": null,
      "options": {
+      "A": "office",
       "B": "system",
       "C": "vehicles",
       "D": "records"
@@ -3869,8 +3878,9 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) If not",
+     "prompt": null,
      "options": {
+      "A": "If not",
       "B": "Nonetheless",
       "C": "Unfortunately",
       "D": "On the other hand"
@@ -3887,8 +3897,9 @@
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) We apologize for the temporary inconvenience.",
+     "prompt": null,
      "options": {
+      "A": "We apologize for the temporary inconvenience.",
       "B": "We respond to most service requests within 24 hours.",
       "C": "Other companies specialize in lighting installations.",
       "D": "Here are some tips for reducing your energy bill."
@@ -3905,8 +3916,9 @@
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) sent",
+     "prompt": null,
      "options": {
+      "A": "sent",
       "B": "to send",
       "C": "will send",
       "D": "sending"
@@ -3944,8 +3956,9 @@
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) has been intended",
+     "prompt": null,
      "options": {
+      "A": "has been intended",
       "B": "will be intended",
       "C": "was intended",
       "D": "is intended"
@@ -3962,8 +3975,9 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) Furthermore",
+     "prompt": null,
      "options": {
+      "A": "Furthermore",
       "B": "Instead",
       "C": "However",
       "D": "Otherwise"
@@ -3980,8 +3994,9 @@
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) Our previous portal will no longer be updated.",
+     "prompt": null,
      "options": {
+      "A": "Our previous portal will no longer be updated.",
       "B": "The health app can be downloaded from our Web site.",
       "C": "Protecting your privacy is a responsibility we take seriously.",
       "D": "You will be locked out of your account after a third failed attempt."
@@ -3998,8 +4013,9 @@
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) selection",
+     "prompt": null,
      "options": {
+      "A": "selection",
       "B": "registration",
       "C": "invention",
       "D": "deletion"

@@ -3770,8 +3770,9 @@
     {
      "number": 131,
      "part": 6,
-     "prompt": "(A) is",
+     "prompt": null,
      "options": {
+      "A": "is",
       "B": "or",
       "C": "likely",
       "D": "from"
@@ -3788,8 +3789,9 @@
     {
      "number": 132,
      "part": 6,
-     "prompt": "(A) our",
+     "prompt": null,
      "options": {
+      "A": "our",
       "B": "ourselves",
       "C": "ours",
       "D": "us"
@@ -3806,8 +3808,9 @@
     {
      "number": 133,
      "part": 6,
-     "prompt": "(A) Contact a technician for questions about repairs.",
+     "prompt": null,
      "options": {
+      "A": "Contact a technician for questions about repairs.",
       "B": "A high-quality instrument will help you to perform at your best.",
       "C": "The best resource for you as a learner is an expert to guide your progress.",
       "D": "It took them several years to master their instruments."
@@ -3824,8 +3827,9 @@
     {
      "number": 134,
      "part": 6,
-     "prompt": "(A) So far",
+     "prompt": null,
      "options": {
+      "A": "So far",
       "B": "With that in mind",
       "C": "On a different note",
       "D": "At that point"
@@ -3856,8 +3860,9 @@
     {
      "number": 135,
      "part": 6,
-     "prompt": "(A) garden",
+     "prompt": null,
      "options": {
+      "A": "garden",
       "B": "records",
       "C": "residence",
       "D": "organization"
@@ -3874,8 +3879,9 @@
     {
      "number": 136,
      "part": 6,
-     "prompt": "(A) to schedule",
+     "prompt": null,
      "options": {
+      "A": "to schedule",
       "B": "is scheduling",
       "C": "as a schedule",
       "D": "that scheduled"
@@ -3892,8 +3898,9 @@
     {
      "number": 137,
      "part": 6,
-     "prompt": "(A) if so",
+     "prompt": null,
      "options": {
+      "A": "if so",
       "B": "when",
       "C": "though",
       "D": "in the meantime"
@@ -3910,8 +3917,9 @@
     {
      "number": 138,
      "part": 6,
-     "prompt": "(A) When buying a home, location is extremely important.",
+     "prompt": null,
      "options": {
+      "A": "When buying a home, location is extremely important.",
       "B": "Refinishing furniture is a form of art.",
       "C": "Furnished apartments can be found online.",
       "D": "All packing materials will be removed."
@@ -3942,8 +3950,9 @@
     {
      "number": 139,
      "part": 6,
-     "prompt": "(A) Thank you for your timely order.",
+     "prompt": null,
      "options": {
+      "A": "Thank you for your timely order.",
       "B": "We have processed your request.",
       "C": "This is a payment reminder.",
       "D": "Please contact us to update your information."
@@ -3960,8 +3969,9 @@
     {
      "number": 140,
      "part": 6,
-     "prompt": "(A) Starts",
+     "prompt": null,
      "options": {
+      "A": "Starts",
       "B": "Started",
       "C": "Starter",
       "D": "Starting"
@@ -3978,8 +3988,9 @@
     {
      "number": 141,
      "part": 6,
-     "prompt": "(A) distributor",
+     "prompt": null,
      "options": {
+      "A": "distributor",
       "B": "producer",
       "C": "reader",
       "D": "teacher"
@@ -3996,8 +4007,9 @@
     {
      "number": 142,
      "part": 6,
-     "prompt": "(A) until",
+     "prompt": null,
      "options": {
+      "A": "until",
       "B": "upon",
       "C": "without",
       "D": "next"
@@ -4028,8 +4040,9 @@
     {
      "number": 143,
      "part": 6,
-     "prompt": "(A) ranges",
+     "prompt": null,
      "options": {
+      "A": "ranges",
       "B": "ranger",
       "C": "ranged",
       "D": "ranging"
@@ -4046,8 +4059,9 @@
     {
      "number": 144,
      "part": 6,
-     "prompt": "(A) size",
+     "prompt": null,
      "options": {
+      "A": "size",
       "B": "safety",
       "C": "reliability",
       "D": "placement"
@@ -4064,8 +4078,9 @@
     {
      "number": 145,
      "part": 6,
-     "prompt": "(A) Remove them carefully.",
+     "prompt": null,
      "options": {
+      "A": "Remove them carefully.",
       "B": "This is typically inside the door.",
       "C": "It should be kept cool at all times.",
       "D": "They can also be purchased in bulk."
@@ -4082,8 +4097,9 @@
     {
      "number": 146,
      "part": 6,
-     "prompt": "(A) sold",
+     "prompt": null,
      "options": {
+      "A": "sold",
       "B": "seen",
       "C": "repaired",
       "D": "removed"
