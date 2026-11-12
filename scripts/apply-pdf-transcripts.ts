@@ -152,8 +152,7 @@ async function main() {
 
     const transcriptFull = fresh
       .map((s) => (s.speaker ? `${s.speaker}: ${s.content}` : s.content))
-      .join("
-");
+      .join("\n");
 
     await prisma.$transaction(async (tx) => {
       await tx.lesson.update({ where: { id: lesson.id }, data: { transcriptFull } });
