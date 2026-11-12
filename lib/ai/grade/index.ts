@@ -17,6 +17,7 @@ import {
 import { gradeSpeakingQ12 } from "./speaking/q1-2";
 import { gradeSpeakingQ34 } from "./speaking/q3-4";
 import { gradeSpeakingQ57 } from "./speaking/q5-7";
+import { gradeSpeakingQ11 } from "./speaking/q11";
 import { gradeSpeakingQ810 } from "./speaking/q8-10";
 import { gradeWritingQ15 } from "./writing-q1-5";
 import { gradeWritingQ67 } from "./writing-q6-7";
@@ -51,6 +52,8 @@ export async function gradeSubmission(input: GradeInput): Promise<SubmissionFeed
     graded = await gradeSpeakingQ57(input.testKey, input.items);
   } else if (input.skill === "speaking" && unit === "q8-10") {
     graded = await gradeSpeakingQ810(input.testKey, input.items);
+  } else if (input.skill === "speaking" && unit === "q11") {
+    graded = await gradeSpeakingQ11(input.testKey, input.items);
   } else {
     return null;
   }
