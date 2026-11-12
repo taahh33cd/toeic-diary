@@ -52,6 +52,8 @@ interface OutSentence {
   dbStart: number;
   dbEnd: number;
   content: string;
+  /** câu được lấp bằng nội suy chứ không align được — xem repairLesson */
+  filled?: boolean;
 }
 interface OutLesson {
   label: string;
@@ -60,6 +62,71 @@ interface OutLesson {
   coverage: number;
   asrText?: string;
   sentences: OutSentence[];
+}
+
+/**
+ * Vá hai lỗi align lẻ tẻ trước khi kiểm, thay vì loại cả bài vì một câu.
+ *
+ * 1. Câu bị KÉO DÀI. Sau hội thoại, audio còn giọng đọc câu hỏi ("Number 83.
+ *    What type of business…"). Nếu từ cuối của câu trùng với một từ trong phần
+ *    đó, câu bị kéo tới tận đấy — có câu 9 từ mà dài 37 giây. Co về nhịp đọc
+ *    trung vị của chính bài ấy.
+ * 2. Câu KHÔNG align được nhưng nằm giữa hai câu đã align: lấp bằng khoảng
+ *    trống giữa hai câu kia.
+ *
+ * Chỉ động vào câu hỏng; câu bình thường giữ nguyên.
+ */
+function repairLesson(L: OutLesson): string[] {
+  const fixes: string[] = [];
+  const rate = (s: OutSentence) =>
+    s.newStart === null || s.newEnd === null ? null : (s.newEnd - s.newStart) / Math.max(1, s.words);
+
+  const sane = L.sentences.map(rate).filter((r): r is number => r !== null && r >= SUSPECT_SEC_PER_WORD && r <= MAX_SEC_PER_WORD);
+  const median = sane.length ? [...sane].sort((a, b) => a - b)[Math.floor(sane.length / 2)] : 0.4;
+
+  // Lấp các câu không align được — kể cả khi chúng nằm liền nhau: tìm câu đã
+  // align gần nhất ở hai bên rồi chia khoảng trống theo số từ của từng câu.
+  for (let i = 0; i < L.sentences.length; i++) {
+    if (L.sentences[i].newStart !== null) continue;
+    let j = i;
+    while (j < L.sentences.length && L.sentences[j].newStart === null) j++;
+    const before = L.sentences[i - 1];
+    const after = L.sentences[j];
+    const from = before?.newEnd ?? null;
+    const to = after?.newStart ?? null;
+    if (from !== null && to !== null && to > from) {
+      const run = L.sentences.slice(i, j);
+      const totalWords = run.reduce((n, s) => n + Math.max(1, s.words), 0);
+      let cursor = from;
+      for (const s of run) {
+        const share = ((to - from) * Math.max(1, s.words)) / totalWords;
+        s.newStart = +cursor.toFixed(2);
+        s.newEnd = +(cursor + share).toFixed(2);
+        s.filled = true;
+        cursor += share;
+        fixes.push(`#${s.orderIndex} lấp khoảng trống giữa hai câu đã align`);
+      }
+    }
+    i = j - 1;
+  }
+
+  for (let i = 0; i < L.sentences.length; i++) {
+    const s = L.sentences[i];
+    if (s.newStart === null || s.newEnd === null) continue;
+
+    // Đo trên giá trị SẼ ghi vào DB (đã đệm), đúng như cổng kiểm phía sau —
+    // nếu đo trên giá trị thô thì câu sát ngưỡng vẫn trượt sau khi đệm.
+    const w = padded(s.newStart, s.newEnd, L.audioDuration);
+    const r = (w.end - w.start) / Math.max(1, s.words);
+    if (r > MAX_SEC_PER_WORD) {
+      const want = s.newStart + s.words * median;
+      // chỉ co lại, không bao giờ nới ra
+      const capped = Math.min(s.newEnd, Math.max(want, s.newStart + s.words * 0.32));
+      fixes.push(`#${s.orderIndex} co đuôi ${s.newEnd.toFixed(1)}s → ${capped.toFixed(1)}s`);
+      s.newEnd = capped;
+    }
+  }
+  return fixes;
 }
 
 function checkLesson(id: string, L: OutLesson): { ok: boolean; reasons: string[]; mismatch: boolean } {
@@ -84,9 +151,14 @@ function checkLesson(id: string, L: OutLesson): { ok: boolean; reasons: string[]
     // Câu rất ngắn ("Hi, Lirong.") chỉ cần ASR nghe nhầm một tên riêng là tụt
     // xuống 50%, nên với câu dưới 4 từ chỉ đòi khớp được ít nhất một từ —
     // bấy nhiêu đã đủ neo câu vào đúng chỗ trong audio.
-    const ok = s.words < 4
-      ? s.matchedWords >= 1
-      : s.matchedWords / s.words >= MIN_SENT_COVERAGE;
+    // Câu được lấp bằng nội suy thì không thể có từ khớp — ASR vốn không nghe
+    // ra nó ("Um.", "Seventeen."). Vị trí vẫn đúng vì kẹp giữa hai câu đã
+    // align, nên chỉ miễn cổng này; các cổng còn lại vẫn áp dụng.
+    const ok = s.filled
+      ? true
+      : s.words < 4
+        ? s.matchedWords >= 1
+        : s.matchedWords / s.words >= MIN_SENT_COVERAGE;
     if (!ok) reasons.push(`#${s.orderIndex} chỉ khớp ${s.matchedWords}/${s.words} từ`);
     if (L.audioDuration > 0 && s.newStart > L.audioDuration)
       reasons.push(`#${s.orderIndex} bắt đầu ngoài file (${s.newStart} > ${L.audioDuration})`);
@@ -119,6 +191,7 @@ async function main() {
   const mismatched: string[] = [];
 
   for (const [lessonId, L] of Object.entries(data)) {
+    const fixes = repairLesson(L);
     const { ok, reasons, mismatch } = checkLesson(lessonId, L);
     if (mismatch) {
       console.log(`\nLỆCH DỮ LIỆU ${L.label}   khớp ${(L.coverage * 100).toFixed(1)}%`);
@@ -130,6 +203,7 @@ async function main() {
       continue;
     }
     console.log(`\n${ok ? "ĐẠT " : "TRƯỢT"} ${L.label}   khớp ${(L.coverage * 100).toFixed(1)}%`);
+    fixes.forEach((f) => console.log(`     ~ vá: ${f}`));
     const bad = new Set(L.badIdx);
     for (let i = 0; i < L.sentences.length; i++) {
       const s = L.sentences[i];
