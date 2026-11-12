@@ -58,8 +58,8 @@ export function AttemptReviewClient({
       onToggleSkin={toggleSkin}
       onRetry={() => router.push(testHref)}
       canSaveVocab={canSaveVocab}
-      backHref="/journal/attempts"
-      backLabel="Kết quả luyện đề"
+      backHref="/journal/scores"
+      backLabel="Kết quả"
     />
   );
 }

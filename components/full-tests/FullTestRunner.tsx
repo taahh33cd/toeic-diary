@@ -31,6 +31,8 @@ export function FullTestRunner({
   const [marked, setMarked] = useState<number[]>([]);
   const [resumable, setResumable] = useState<AttemptRow | null>(null);
   const [busy, setBusy] = useState(false);
+  /** Lượt vừa nộp đã lưu lên server → màn kết quả có lối sang sổ học tập. */
+  const [savedToJournal, setSavedToJournal] = useState(false);
 
   const P = PALETTE[skin];
   const identity = useMemo(() => ({ examSlug }), [examSlug]);
@@ -86,7 +88,8 @@ export function FullTestRunner({
     setAnswers(a);
     setMarked(m);
     setBusy(true);
-    await attempt.submit(a, m);
+    const saved = await attempt.submit(a, m);
+    setSavedToJournal(saved !== null);
     setBusy(false);
     setPhase("result");
   }
@@ -159,6 +162,7 @@ export function FullTestRunner({
         skin={skin}
         onToggleSkin={toggleSkin}
         canSaveVocab={canSaveVocab}
+        historyHref={savedToJournal ? "/journal/scores" : undefined}
         onRetry={() => { setPhase("setup"); setAnswers({}); setMarked([]); }}
       />
     );

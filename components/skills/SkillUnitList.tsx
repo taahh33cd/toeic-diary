@@ -20,11 +20,11 @@ const READY: Record<string, string> = {
 export function SkillUnitList({ skill, savedCount = 0 }: { skill: Skill; savedCount?: number }) {
   const fam = FAMILY[skill.family];
 
-  // Listening/Reading lưu lượt làm bài (có điểm) ở /journal/attempts;
+  // Listening/Reading lưu lượt làm bài (có điểm) ở trang Kết quả /journal/scores;
   // Speaking/Writing lưu bài nói/bài viết chờ chấm ở /journal/submissions.
   const saved = skill.family === "lr"
     ? {
-        href: "/journal/attempts",
+        href: "/journal/scores",
         label: `Kết quả luyện ${skill.labelVi.toLowerCase()} của bạn`,
         unit: "lượt",
       }

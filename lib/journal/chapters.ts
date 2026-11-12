@@ -11,12 +11,16 @@
  *
  * /journal/error-log và /journal/booking chỉ là redirect sang scores/schedule
  * nên không có mặt ở đây; link cũ vẫn chạy như trước.
+ *
+ * /journal/attempts (Luyện đề) đã gộp vào trang Kết quả; route con
+ * /journal/attempts/[id] (xem lại một lượt) được coi là thuộc trang Kết quả
+ * qua PATH_ALIASES để chương + mục vẫn sáng đúng chỗ.
  */
 
 import {
   IconHome, IconScore, IconJournal, IconVocab,
   IconTasks, IconSchedule, IconFee, IconSettings,
-  IconProgress, IconTrophy, IconErrorLog, IconBooking, IconTarget,
+  IconProgress, IconTrophy, IconErrorLog, IconBooking,
 } from "@/components/journal/Icons";
 
 type IconFn = (props: { size?: number; className?: string }) => React.ReactElement;
@@ -59,10 +63,9 @@ export const CHAPTERS: Chapter[] = [
     labelEn: "Progress",
     Icon: IconScore,
     pages: [
-      { href: "/journal/scores", pathname: "/journal/scores", labelVi: "Điểm số", labelEn: "Scores", Icon: IconScore },
+      { href: "/journal/scores", pathname: "/journal/scores", labelVi: "Kết quả", labelEn: "Results", Icon: IconScore },
       { href: "/journal/scores?tab=errorlog", pathname: "/journal/scores", tab: "errorlog", labelVi: "Nhật ký lỗi", labelEn: "Error log", Icon: IconErrorLog },
       { href: "/journal/scores?tab=paraphrase", pathname: "/journal/scores", tab: "paraphrase", labelVi: "Paraphrase", labelEn: "Paraphrase", Icon: IconJournal },
-      { href: "/journal/attempts", pathname: "/journal/attempts", labelVi: "Luyện đề", labelEn: "Practice tests", Icon: IconTarget },
       { href: "/journal/progress", pathname: "/journal/progress", labelVi: "Biểu đồ", labelEn: "Charts", Icon: IconProgress },
       { href: "/journal/achievements", pathname: "/journal/achievements", labelVi: "Thành tựu", labelEn: "Achievements", Icon: IconTrophy },
     ],
@@ -100,7 +103,20 @@ export const CHAPTERS: Chapter[] = [
   },
 ];
 
-function pageMatches(page: ChapterPage, pathname: string, tab?: string | null): boolean {
+/** Route không có mục riêng trên thanh điều hướng → mục mà nó thuộc về. */
+const PATH_ALIASES: Array<[prefix: string, target: string]> = [
+  ["/journal/attempts", "/journal/scores"],
+];
+
+function normalizePath(pathname: string): string {
+  for (const [prefix, target] of PATH_ALIASES) {
+    if (pathname === prefix || pathname.startsWith(prefix + "/")) return target;
+  }
+  return pathname;
+}
+
+function pageMatches(page: ChapterPage, rawPathname: string, tab?: string | null): boolean {
+  const pathname = normalizePath(rawPathname);
   const pathOk = page.exact
     ? pathname === page.pathname
     : pathname === page.pathname || pathname.startsWith(page.pathname + "/");
@@ -110,7 +126,8 @@ function pageMatches(page: ChapterPage, pathname: string, tab?: string | null): 
 }
 
 /** Chương đang mở theo pathname. Trả null khi ở route journal lạ. */
-export function activeChapter(pathname: string): Chapter | null {
+export function activeChapter(rawPathname: string): Chapter | null {
+  const pathname = normalizePath(rawPathname);
   // Chỉ xét pathname: chương không đổi khi học viên nhảy giữa các ?tab=.
   for (const ch of CHAPTERS) {
     if (ch.pages.some((p) => pageMatches(p, pathname, undefined) || p.pathname === pathname)) {
