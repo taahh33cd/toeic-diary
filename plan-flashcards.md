@@ -35,7 +35,7 @@
 | 3.3 — Chế độ thi (bấm giờ, ẩn đáp án, soát lại) | ✅ xong | `3c13f7b5` |
 | 3.4a — Không mất kết quả khi mạng hỏng | ✅ xong, 22 kiểm | `4282b865` |
 | 3.4b — Học offline (SW cache + bản lưu bộ thẻ) | ✅ xong, 16 kiểm | `845d6219` |
-| 3.4c — Xếp hàng cho lượt ôn ĐƠN LẺ (lật thẻ) | ⬜ chưa làm | |
+| 3.4c — Xếp hàng cho lượt ôn ĐƠN LẺ (lật thẻ) | ✅ xong | `ecf61604` |
 
 **Lỗi công thức đã sửa (§5):** "nửa trọng số" ban đầu hiểu thành `ease × 0.5`,
 cho hệ số 0.65–1.4 nên `round(1 × 1.25) = 1` — lật thẻ không bao giờ thoát mốc
