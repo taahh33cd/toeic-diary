@@ -448,9 +448,7 @@ function bandFrom(
     name: string;
     testSizes: number[];
   }[]) {
-    let cumulative = 0;
     topic.testSizes.forEach((size, idx) => {
-      cumulative += size;
       const testNo = idx + 1;
       // Đề con càng về sau càng khó → chỉ mở cho tầm điểm cao hơn.
       const bandMin = idx < 2 ? 10 : idx < 6 ? 350 : 500;
@@ -470,9 +468,11 @@ function bandFrom(
         evidence: {
           source: "grammar",
           topicSlug: topic.slug,
-          // grammar_attempts không ghi số thứ tự đề, nên điều kiện là luỹ kế:
-          // xong đề 2 nghĩa là đã làm đúng ít nhất (đề 1 + đề 2) câu của thẻ này.
-          minQuestions: cumulative,
+          // grammar_attempts ghi từng CÂU và không ghi số thứ tự đề, nên điều
+          // kiện nói theo câu: làm đủ số câu của đề này kể từ lúc được giao.
+          // (Bản đầu đếm luỹ kế cả các đề trước — sai từ khi evidence có cửa sổ
+          // thời gian, vì khi đó "đề 3" đòi 55 câu làm trong đúng tuần được giao.)
+          minQuestions: size,
           minAccuracy: GRAMMAR_MIN_ACCURACY,
         },
       });

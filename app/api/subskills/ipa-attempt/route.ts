@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
+import { syncRoadmapAfterAttempt } from "@/lib/roadmap/hook";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -40,6 +41,9 @@ export async function POST(req: Request) {
         correctCount: body.correctCount ?? null,
       },
     });
+
+    if (body.passed) await syncRoadmapAfterAttempt(user.id);
+
     return NextResponse.json({ ok: true });
   } catch {
     // Table may not exist yet (before `prisma db push`) — don't break the UX.

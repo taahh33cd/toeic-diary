@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
+import { syncRoadmapAfterAttempt } from "@/lib/roadmap/hook";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -51,6 +52,8 @@ export async function POST(req: Request) {
       userAnswer: r.userAnswer,
     })),
   });
+
+  await syncRoadmapAfterAttempt(user.id);
 
   return NextResponse.json({ ok: true, saved: body.results.length });
 }

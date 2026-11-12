@@ -68,8 +68,15 @@ export default async function RoadmapPage() {
     list.push(t);
     tasksByDate.set(key, list);
   }
+  // Bỏ các ngày TRƯỚC khi lộ trình bắt đầu. Tuần luôn neo vào thứ Hai, nên học
+  // viên bắt đầu giữa tuần sẽ có mấy ngày đầu trống — hiện chúng là "ngày nghỉ"
+  // thì sai hẳn nghĩa: đó là ngày chưa có lộ trình, không phải ngày được nghỉ.
+  const planStart = (plan.intake as unknown as { startDate?: string })?.startDate ?? "";
+
   const days = week
-    ? weekDays(vnDateKey(week.startDate)).map((date) => ({
+    ? weekDays(vnDateKey(week.startDate))
+        .filter((date) => !planStart || date >= planStart)
+        .map((date) => ({
         date,
         tasks: (tasksByDate.get(date) ?? [])
           .sort((a, b) => a.order - b.order)

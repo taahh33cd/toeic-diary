@@ -701,14 +701,50 @@ tuần 1 đúng, chạy bằng script.
   Lịch vẫn đúng và câu mục tiêu có nói ra, nhưng nếu thấy khó chịu thì Phase 4
   đổi được thành "tuần 1 chạy 7 ngày kể từ hôm nay".
 
-### Phase 3 — Nhiệm vụ hằng ngày + tự tích xong
+### Phase 3 — Nhiệm vụ hằng ngày + tự tích xong — ✅ XONG 2026-11-13
 **Mục tiêu**: vòng lặp hằng ngày khép kín.
-- `/api/roadmap/today`, `/api/roadmap/tasks/sync`, `/api/roadmap/tasks/[id]`.
-- Khối "Lộ trình hôm nay" trong `/journal/missions`.
-- Bảng evidence cho 6 `kind`.
-- Dồn ngày (rollover) + cron `roadmap-rollover`.
-- **Verify**: làm thật 1 bài subskill → task tự xanh trong ≤1 lần tải trang;
-  để qua đêm 1 ngày không làm → hôm sau thấy đúng 1–2 việc dồn, phần còn lại "lỡ".
+- ✅ `lib/roadmap/evidence.ts` — 5 nguồn đối chiếu (subskill, ipa, grammar,
+  part_practice, full_test), có cửa sổ thời gian tính từ ngày giao.
+- ✅ `lib/roadmap/rollover.ts` — dồn tối đa 2 việc core, phần còn lại "lỡ",
+  đếm chuỗi ngày bỏ lỡ cho Phase 4.
+- ✅ `/api/roadmap/today`, `/api/roadmap/tasks/sync`, `PATCH /api/roadmap/tasks/[id]`.
+- ✅ Cron `/api/cron/roadmap-rollover` (`30 17 * * *` UTC = 00:30 giờ VN).
+- ✅ Khối "Lộ trình hôm nay" trong `/journal/missions`.
+- ✅ `lib/roadmap/hook.ts` cắm vào 5 route ghi nhận bài làm.
+- ✅ **Verify**: `npm run roadmap:verify3 -- --attempt <id>` — 13 khẳng định,
+  gồm "chưa làm bài thì không tự tích", "làm xong thì tự tích", "chạy lại không
+  tích trùng", "dồn tối đa 2 việc", "rollover chạy lại không đổi gì".
+  Và xem tận mắt trên tài khoản test: trang kết quả, trang toàn cảnh, khối trong
+  sổ học tập đều đúng.
+
+**Quyết định đáng ghi:**
+- **Tích tay ≠ hoàn thành.** PATCH chỉ có `skip` và `undo`, không có "đánh dấu
+  đã xong". Nếu tích tay cũng thành `done` thì mọi con số của lộ trình thành vô
+  nghĩa. Trước khi nhận `skip`, route đối chiếu lại một lần — học viên làm thật
+  mà hệ thống trượt thì nó tự sửa thành `done`.
+- **Móc đồng bộ đặt ở server, trong route lưu bài làm**, không rải vào client:
+  hơn mười màn hình subskill cùng POST vào `/api/subskills/attempt`, sửa từng
+  cái thì chắc chắn sót. Chỉ đồng bộ khi lượt làm ĐẠT, vì client còn POST sau
+  mỗi câu để lưu tiến độ giữa chừng.
+- **Điều kiện thẻ ngữ pháp đổi từ luỹ kế sang theo từng đề.** Bản Phase 1 đếm
+  dồn cả các đề trước; sai ngay khi evidence có cửa sổ thời gian, vì khi đó
+  "đề 3" đòi 55 câu làm trong đúng tuần được giao.
+
+**Bốn lỗi phát hiện khi nhìn bằng mắt** (dry-run và script đều không bắt được):
+1. Bốn ngày trước khi lộ trình bắt đầu hiện là "nghỉ — để dành sức cho hôm sau".
+   Sai nghĩa hẳn: đó là ngày chưa có lộ trình. Đã lọc theo `intake.startDate`.
+2. Việc **bonus xếp đầu** danh sách hôm nay — vì `orderBy priority asc` mà
+   "bonus" đứng trước "core" theo bảng chữ cái.
+3. Khối lộ trình nằm sau cổng chờ của BTVN, nên hôm nào Firebase chậm là học
+   viên không thấy việc của mình dù dữ liệu đã sẵn sàng. Đã cho render ở cả
+   nhánh đang tải.
+4. Một lần mở trang gọi `/api/roadmap/today` hàng chục lần (route này có GHI
+   xuống DB). Đã thêm bộ nhớ tạm 30 giây ở cấp module.
+
+**Hạn chế còn lại:**
+- Chưa cộng XP cho việc hoàn thành (Phase 5).
+- `runRollover` chạy mỗi lần mở trang; với lộ trình nhiều tuần thì nên giới hạn
+  phạm vi quét, hiện chưa cần.
 
 ### Phase 4 — Tái lập kế hoạch
 - Cron `roadmap-weekly`, `replan_after_test`, `replan_missed`, nút "Tính lại".

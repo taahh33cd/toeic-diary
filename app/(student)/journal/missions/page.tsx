@@ -16,6 +16,7 @@ import type { HwFilesForHw, HwViewed } from "@/lib/firebase/types";
 import { awardXp } from "@/lib/xp-client";
 import type { Homework } from "@/lib/firebase/types";
 import { EXAM_LABEL, goalDeadline, goalExamType, goalTotal } from "@/lib/exam-goal";
+import { RoadmapTodayBlock } from "@/components/roadmap/TodayBlock";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -866,10 +867,16 @@ export default function MissionsPage() {
 
   if (loading) {
     return (
-      <div className="space-y-3 animate-pulse">
-        {[...Array(3)].map((_, i) => (
-          <div key={i} style={{ height: 72, background: "var(--border)" }} />
-        ))}
+      <div>
+        {/* Lộ trình đọc từ Postgres qua API riêng, không dính gì tới RTDB. Để nó
+            sau cổng chờ này thì hôm nào Firebase chậm hoặc mất kết nối là học
+            viên không thấy việc của hôm nay — trong khi dữ liệu vẫn sẵn sàng. */}
+        <RoadmapTodayBlock />
+        <div className="space-y-3 animate-pulse">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} style={{ height: 72, background: "var(--border)" }} />
+          ))}
+        </div>
       </div>
     );
   }
@@ -895,6 +902,11 @@ export default function MissionsPage() {
         title="Nhiệm vụ & Bài tập"
         note="Bài tập thầy giao theo từng buổi, kèm chỗ nộp bằng chứng"
       />
+
+      {/* Việc của lộ trình AI, đặt TRÊN khối BTVN: bài thầy giao có hạn nộp nên
+          học viên vốn đã đi tìm, còn lộ trình là việc hằng ngày — để dưới là bị
+          cuộn qua. Khối tự ẩn với ai chưa có lộ trình. */}
+      <RoadmapTodayBlock />
 
       {/* Dải trạng thái: mục tiêu + số bài, một dòng thay cho ba khối chồng nhau */}
       {(goalTotal(goal) !== null || hwTotal > 0) && (

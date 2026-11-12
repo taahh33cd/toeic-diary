@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
+import { syncRoadmapAfterAttempt } from "@/lib/roadmap/hook";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -39,6 +40,10 @@ export async function POST(req: Request) {
       correctCount: body.correctCount ?? null,
     },
   });
+
+  // Chỉ đối chiếu lộ trình khi lượt làm đã ĐẠT: client còn POST vào đây sau mỗi
+  // câu để lưu tiến độ giữa chừng, đồng bộ mọi lần là phí hàng chục truy vấn.
+  if (body.passed) await syncRoadmapAfterAttempt(user.id);
 
   return NextResponse.json({ ok: true });
 }

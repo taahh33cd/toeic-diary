@@ -537,7 +537,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 235,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -565,7 +565,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 260,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -593,7 +593,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 285,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -621,7 +621,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 310,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -649,7 +649,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 40,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -677,7 +677,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 60,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -705,7 +705,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 85,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -733,7 +733,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 110,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -761,7 +761,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 135,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -789,7 +789,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 160,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -817,7 +817,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 185,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -845,7 +845,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "12-thi",
-      "minQuestions": 210,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -899,7 +899,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-bi-dong",
-      "minQuestions": 50,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -927,7 +927,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-bi-dong",
-      "minQuestions": 75,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -955,7 +955,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-bi-dong",
-      "minQuestions": 100,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -983,7 +983,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-bi-dong",
-      "minQuestions": 125,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1011,7 +1011,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-bi-dong",
-      "minQuestions": 150,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1039,7 +1039,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-bi-dong",
-      "minQuestions": 175,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1067,7 +1067,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-bi-dong",
-      "minQuestions": 200,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1121,7 +1121,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 200,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1149,7 +1149,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 220,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1177,7 +1177,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 240,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1205,7 +1205,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 260,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1233,7 +1233,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 40,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1261,7 +1261,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 60,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1289,7 +1289,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 80,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1317,7 +1317,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 100,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1345,7 +1345,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 120,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1373,7 +1373,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 140,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1401,7 +1401,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 160,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1429,7 +1429,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-dieu-kien",
-      "minQuestions": 180,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -1483,7 +1483,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 230,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1511,7 +1511,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 255,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1539,7 +1539,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 280,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1567,7 +1567,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 305,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1595,7 +1595,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 30,
+      "minQuestions": 15,
       "minAccuracy": 0.6
     }
   },
@@ -1623,7 +1623,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 55,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1651,7 +1651,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 80,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1679,7 +1679,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 105,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1707,7 +1707,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 130,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1735,7 +1735,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 155,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1763,7 +1763,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 180,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1791,7 +1791,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "cau-truc-cau",
-      "minQuestions": 205,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -1845,7 +1845,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-dong-tu-nguyen-the",
-      "minQuestions": 20,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -1873,7 +1873,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-dong-tu-nguyen-the",
-      "minQuestions": 30,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -1901,7 +1901,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-dong-tu-nguyen-the",
-      "minQuestions": 40,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -1929,7 +1929,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-dong-tu-nguyen-the",
-      "minQuestions": 50,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -1983,7 +1983,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 235,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2011,7 +2011,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 260,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2039,7 +2039,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 285,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2067,7 +2067,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 310,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2095,7 +2095,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 40,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -2123,7 +2123,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 60,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -2151,7 +2151,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 85,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2179,7 +2179,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 110,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2207,7 +2207,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 135,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2235,7 +2235,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 160,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2263,7 +2263,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 185,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2291,7 +2291,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "danh-tu-dai-tu",
-      "minQuestions": 210,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2345,7 +2345,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "dong-tu-khuyet-thieu",
-      "minQuestions": 20,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -2373,7 +2373,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "dong-tu-khuyet-thieu",
-      "minQuestions": 30,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -2401,7 +2401,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "dong-tu-khuyet-thieu",
-      "minQuestions": 40,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -2429,7 +2429,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "dong-tu-khuyet-thieu",
-      "minQuestions": 50,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -2483,7 +2483,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 235,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2511,7 +2511,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 260,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2539,7 +2539,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 285,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2567,7 +2567,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 310,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2595,7 +2595,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 40,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -2623,7 +2623,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 60,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -2651,7 +2651,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 85,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2679,7 +2679,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 110,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2707,7 +2707,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 135,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2735,7 +2735,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 160,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2763,7 +2763,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 185,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2791,7 +2791,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "gioi-tu",
-      "minQuestions": 210,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2845,7 +2845,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "hoa-hop-sv",
-      "minQuestions": 250,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2873,7 +2873,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "hoa-hop-sv",
-      "minQuestions": 50,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2901,7 +2901,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "hoa-hop-sv",
-      "minQuestions": 75,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2929,7 +2929,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "hoa-hop-sv",
-      "minQuestions": 100,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2957,7 +2957,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "hoa-hop-sv",
-      "minQuestions": 125,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -2985,7 +2985,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "hoa-hop-sv",
-      "minQuestions": 150,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3013,7 +3013,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "hoa-hop-sv",
-      "minQuestions": 175,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3041,7 +3041,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "hoa-hop-sv",
-      "minQuestions": 200,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3069,7 +3069,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "hoa-hop-sv",
-      "minQuestions": 225,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3123,7 +3123,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 235,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3151,7 +3151,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 260,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3179,7 +3179,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 285,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3207,7 +3207,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 310,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3235,7 +3235,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 40,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -3263,7 +3263,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 60,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -3291,7 +3291,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 85,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3319,7 +3319,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 110,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3347,7 +3347,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 135,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3375,7 +3375,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 160,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3403,7 +3403,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 185,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3431,7 +3431,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "lien-tu",
-      "minQuestions": 210,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3485,7 +3485,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 235,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3513,7 +3513,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 260,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3541,7 +3541,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 285,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3569,7 +3569,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 310,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3597,7 +3597,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 40,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -3625,7 +3625,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 60,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -3653,7 +3653,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 85,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3681,7 +3681,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 110,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3709,7 +3709,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 135,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3737,7 +3737,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 160,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3765,7 +3765,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 185,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3793,7 +3793,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "mdqh",
-      "minQuestions": 210,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -3847,7 +3847,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "menh-de-danh-ngu",
-      "minQuestions": 20,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -3875,7 +3875,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "menh-de-danh-ngu",
-      "minQuestions": 30,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -3903,7 +3903,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "menh-de-danh-ngu",
-      "minQuestions": 40,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -3931,7 +3931,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "menh-de-danh-ngu",
-      "minQuestions": 50,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -3985,7 +3985,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "nhan-dang-hau-to",
-      "minQuestions": 60,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4013,7 +4013,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "nhan-dang-hau-to",
-      "minQuestions": 90,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4041,7 +4041,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "nhan-dang-hau-to",
-      "minQuestions": 120,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4069,7 +4069,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "nhan-dang-hau-to",
-      "minQuestions": 150,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4097,7 +4097,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "nhan-dang-hau-to",
-      "minQuestions": 180,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4125,7 +4125,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "nhan-dang-hau-to",
-      "minQuestions": 210,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4153,7 +4153,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "nhan-dang-hau-to",
-      "minQuestions": 240,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4207,7 +4207,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 100,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4235,7 +4235,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 110,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4263,7 +4263,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 120,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4291,7 +4291,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 130,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4319,7 +4319,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 140,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4347,7 +4347,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 150,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4375,7 +4375,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 160,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4403,7 +4403,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 170,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4431,7 +4431,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 180,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4459,7 +4459,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 190,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4487,7 +4487,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 20,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4515,7 +4515,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 200,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4543,7 +4543,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 210,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4571,7 +4571,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 220,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4599,7 +4599,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 230,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4627,7 +4627,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 240,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4655,7 +4655,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 250,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4683,7 +4683,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 260,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4711,7 +4711,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 270,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4739,7 +4739,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 300,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4767,7 +4767,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 328,
+      "minQuestions": 28,
       "minAccuracy": 0.6
     }
   },
@@ -4795,7 +4795,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 30,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -4823,7 +4823,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 357,
+      "minQuestions": 29,
       "minAccuracy": 0.6
     }
   },
@@ -4851,7 +4851,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 387,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4879,7 +4879,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 416,
+      "minQuestions": 29,
       "minAccuracy": 0.6
     }
   },
@@ -4907,7 +4907,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 446,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4935,7 +4935,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 476,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4963,7 +4963,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 506,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -4991,7 +4991,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 536,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -5019,7 +5019,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 566,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -5047,7 +5047,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 586,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -5075,7 +5075,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 616,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -5103,7 +5103,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 40,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -5131,7 +5131,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 646,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -5159,7 +5159,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 676,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -5187,7 +5187,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 706,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -5215,7 +5215,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 736,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -5243,7 +5243,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 766,
+      "minQuestions": 30,
       "minAccuracy": 0.6
     }
   },
@@ -5271,7 +5271,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 50,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -5299,7 +5299,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 60,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -5327,7 +5327,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 70,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -5355,7 +5355,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 80,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -5383,7 +5383,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "part-5-tong-hop",
-      "minQuestions": 90,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -5437,7 +5437,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 220,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -5465,7 +5465,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 230,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -5493,7 +5493,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 240,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -5521,7 +5521,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 250,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -5549,7 +5549,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 50,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5577,7 +5577,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 75,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5605,7 +5605,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 100,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5633,7 +5633,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 125,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5661,7 +5661,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 150,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5689,7 +5689,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 175,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5717,7 +5717,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 200,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5745,7 +5745,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "so-sanh",
-      "minQuestions": 210,
+      "minQuestions": 10,
       "minAccuracy": 0.6
     }
   },
@@ -5799,7 +5799,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 235,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5827,7 +5827,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 260,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5855,7 +5855,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 285,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5883,7 +5883,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 310,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5911,7 +5911,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 40,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -5939,7 +5939,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 60,
+      "minQuestions": 20,
       "minAccuracy": 0.6
     }
   },
@@ -5967,7 +5967,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 85,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -5995,7 +5995,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 110,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -6023,7 +6023,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 135,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -6051,7 +6051,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 160,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -6079,7 +6079,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 185,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
@@ -6107,7 +6107,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     "evidence": {
       "source": "grammar",
       "topicSlug": "tinh-tu-trang-tu",
-      "minQuestions": 210,
+      "minQuestions": 25,
       "minAccuracy": 0.6
     }
   },
