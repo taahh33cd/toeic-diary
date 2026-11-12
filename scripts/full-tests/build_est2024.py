@@ -303,6 +303,22 @@ def read_explanations(text: str) -> dict[int, dict]:
 
 # ── Reading: 8/10 đề không có marker PART, cắt theo số câu ───────────────────
 
+# Lỗi ngay trong docx nguồn, sửa trên văn bản trước khi parse: (đoạn gốc, đoạn thay).
+# Đề 3 quên dấu chỗ trống của câu 134 (điền câu) — giải thích đáp án xác nhận
+# chỗ trống nằm ngay sau câu về buổi tiệc nghỉ hưu.
+RC_TEXT_FIXES: dict[int, list[tuple[str, str]]] = {
+    3: [("in the Terey Lobby.", "in the Terey Lobby. -------")],
+}
+
+
+def fix_rc_text(n: int, text: str) -> str:
+    for old, new in RC_TEXT_FIXES.get(n, []):
+        if text.count(old) != 1:
+            raise ValueError(f"RC_TEXT_FIXES đề {n}: không tìm thấy đúng một chỗ {old!r}")
+        text = text.replace(old, new)
+    return text
+
+
 def split_part6(q_raw: str, lo: int, hi: int) -> tuple[str, str]:
     """Tách khối Part 6 xen kẽ thành (phần đoạn văn còn lại, phần câu hỏi).
     Một dòng thuộc câu hỏi nếu là dòng số câu, dòng phương án, hoặc nằm giữa
@@ -385,7 +401,7 @@ def build(src: Src, n: int, image_map: dict[str, str]) -> dict:
     warnings += key_warn
 
     lcq = parse_mcq_block(docx_text(src.questions_docx(n)), 32, 100)
-    p5, reading_sets = parse_reading(docx_text(src.rc_docx(n)))
+    p5, reading_sets = parse_reading(fix_rc_text(n, docx_text(src.rc_docx(n))))
     images = src.images(n)
 
     def img_url(stem: str) -> str | None:

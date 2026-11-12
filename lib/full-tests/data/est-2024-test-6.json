@@ -17,20 +17,7 @@
    169,
    181
   ],
-  "brokenQuestions": [
-   132,
-   133,
-   134,
-   136,
-   137,
-   138,
-   140,
-   141,
-   142,
-   144,
-   145,
-   146
-  ]
+  "brokenQuestions": []
  },
  "groups": [
   {
@@ -3776,7 +3763,7 @@
    "passages": [
     {
      "label": "Advertisement",
-     "text": "Estella Guitar Lessons: Play with the Best\n\nWhether you play acoustic guitar --- [131] --- electric, taking lessons with an Estella Guitar teacher is the best way to improve your ability."
+     "text": "Estella Guitar Lessons: Play with the Best\n\nWhether you play acoustic guitar --- [131] --- electric, taking lessons with an Estella Guitar teacher is the best way to improve your ability.\nWith years of experience crafting playing techniques, --- [132] --- qualified instructors can tailor lessons to focus on the skills you want to fine-tune. \n\nReceive a customized learning plan to set goals and overcome the challenges that cause many players to get discouraged. --- [133] ---. An Estella Guitar teacher will help boost your confidence.\n\nAt Estella Guitar, we believe that playing music is a way of expressing yourself. --- [134] ---, we will help you go beyond the familiar chords and riffs to develop your own identity as a musician. \n\nReady to get started? Visit www.estellaguitar.com/lessons to get matched with the right instructor for you!"
     }
    ],
    "questions": [
@@ -3810,7 +3797,7 @@
       "D": "us"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "A",
      "explanation": {
       "reasoning": "(Đáp án: A): Cần điền tính từ sở hữu đứng trước cụm danh từ \"qualified instructors\", đáp án là \"our\".",
@@ -3829,7 +3816,7 @@
       "D": "It took them several years to master their instruments."
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "C",
      "explanation": {
       "reasoning": "(Đáp án: C): Câu phù hợp để điền nối tiếp ý là \"Nguồn lực tốt nhất dành cho bạn với tư cách là người học là một chuyên gia để hướng dẫn bạn tiến bộ\" (phù hợp với việc nhắc tới giáo viên ở câu sau).",
@@ -3848,7 +3835,7 @@
       "D": "At that point"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Cụm chuyển ý \"With that in mind\" (hãy ghi nhớ điều này) phù hợp để làm rõ ý cho việc phát triển bản sắc riêng.\n\nQuestions 135 - 138",
@@ -3866,7 +3853,7 @@
    "passages": [
     {
      "label": "Policy",
-     "text": "In-home delivery takes approximately one week after an order is shipped from our warehouse. The actual time may vary based on the location of your --- [135] --- and your availability for accepting the item."
+     "text": "In-home delivery takes approximately one week after an order is shipped from our warehouse. The actual time may vary based on the location of your --- [135] --- and your availability for accepting the item.\nVernico Furniture will work with a carrier --- [136] --- an appointment that is convenient for you.\n\nTypical hours are Monday through Friday between 8 A.M. and 5 P.M., --- [137] --- evening appointments can often be arranged. \n\nUpon arrival at your home, the item will be placed in the location you desire. --- [138] ---. Assembly is included as well."
     }
    ],
    "questions": [
@@ -3900,7 +3887,7 @@
       "D": "that scheduled"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "A",
      "explanation": {
       "reasoning": "(Đáp án: A): Cần dùng động từ ở dạng to-Vinf (\"to schedule\") để chỉ mục đích của hành động làm việc với nhà vận chuyển.",
@@ -3919,7 +3906,7 @@
       "D": "in the meantime"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "C",
      "explanation": {
       "reasoning": "(Đáp án: C): Liên từ chỉ sự tương phản, đối lập \"though\" (mặc dù) phù hợp với ngữ cảnh của câu.",
@@ -3938,7 +3925,7 @@
       "D": "All packing materials will be removed."
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "D",
      "explanation": {
       "reasoning": "(Đáp án: D): Câu phù hợp để điền vào ngữ cảnh giao hàng nội thất là \"Tất cả vật liệu đóng gói sẽ bị loại bỏ\".\n\nQuestions 139 - 142",
@@ -3956,7 +3943,7 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: Thao Pham <thaopham@amail.com>\nFrom: Leena Montoya <Imontoya@academemedia.com>\nDate: April 17\nSubject: Subscription\n\nDear Mr. Pham,\n\nYour subscription to Medical Innovations Quarterly has been canceled. --- [139] ---."
+     "text": "To: Thao Pham <thaopham@amail.com>\nFrom: Leena Montoya <Imontoya@academemedia.com>\nDate: April 17\nSubject: Subscription\n\nDear Mr. Pham,\n\nYour subscription to Medical Innovations Quarterly has been canceled. --- [139] ---.\n--- [140] --- May 1, you will no longer receive the print edition.\n\nWe hope that you will consider once again becoming a --- [141] --- of our publications. \n\nAcademe Media publishes many high-quality scientific journals in addition to Medical Innovations Quarterly. Should you wish to subscribe to one by May 31, we can offer you a two-year subscription at the annual rate. Visit www.academemedia.com/shop and enter the code DOUBLE --- [142] --- checkout.\n\nIf you have any feedback that could help us improve our products or services, please call me directly at 212-555-0122.\n\nSincerely,\nLeena Montoya\nCustomer Service Manager, Academe Media"
     }
    ],
    "questions": [
@@ -3990,7 +3977,7 @@
       "D": "Starting"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "D",
      "explanation": {
       "reasoning": "(Đáp án: D): Chỗ trống nằm trong mệnh đề rút gọn chủ ngữ mang nghĩa chủ động, đáp án là dạng thêm -ing: \"Starting\".",
@@ -4009,7 +3996,7 @@
       "D": "teacher"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "C",
      "explanation": {
       "reasoning": "(Đáp án: C): Dựa vào từ \"subscriptions\" và \"receive print edition\", từ phù hợp là \"reader\" (độc giả).",
@@ -4028,7 +4015,7 @@
       "D": "next"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Giới từ mang nghĩa \"khi\" là \"upon\" (upon checkout: khi thanh toán).\n\nQuestions 143 - 146",
@@ -4046,7 +4033,7 @@
    "passages": [
     {
      "label": "Information",
-     "text": "In a commercial kitchen, all refrigerators are required to have a thermometer that --- [143] --- from 0°F (-18°C) to 220°F (104°C)."
+     "text": "In a commercial kitchen, all refrigerators are required to have a thermometer that --- [143] --- from 0°F (-18°C) to 220°F (104°C).\nTo prevent the growth of bacteria, refrigerated foods must be stored at 41°F (5°C) or below. The head chef is responsible for checking these thermometers throughout the day to ensure that the kitchen is in compliance at all times.\nAlso important to consider is --- [144] ---. \n\nThermometers should always be located in the warmest spot in the refrigerator. --- [145] ---. \n\nThis location is also appropriate because it allows the thermometer to be easily --- [146] --- as soon as the door is opened."
     }
    ],
    "questions": [
@@ -4080,7 +4067,7 @@
       "D": "placement"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "D",
      "explanation": {
       "reasoning": "(Đáp án: D): Danh từ liên quan đến vị trí đặt nhiệt kế trong tủ lạnh là \"placement\" (vị trí, chỗ đặt).",
@@ -4099,7 +4086,7 @@
       "D": "They can also be purchased in bulk."
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Câu phù hợp miêu tả vị trí của nhiệt kế trong tủ lạnh là \"Cái này thường ở bên trong cánh cửa\".",
@@ -4118,7 +4105,7 @@
       "D": "removed"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "B",
      "explanation": {
       "reasoning": "(Đáp án: B): Động từ bị động phù hợp với ngữ cảnh thấy ngay khi mở cửa là \"seen\" (được nhìn thấy).\n\nPart 7 (Câu 147 - 150)\nQuestions 147-148 (Đề cập đến e-mail của Rapido Net):",
@@ -5366,7 +5353,6 @@
   }
  ],
  "warnings": [
-  "2 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 8, 30",
-  "12 câu Part 6 mất đoạn văn chứa chỗ trống (parser cũ) — tạm bỏ qua, build lại từ docx để khôi phục: [132, 133, 134, 136, 137, 138, 140, 141, 142, 144, 145, 146]"
+  "2 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 8, 30"
  ]
 }

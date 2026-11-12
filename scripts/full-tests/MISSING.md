@@ -56,20 +56,6 @@ Có giải thích thì thêm luôn, không bắt buộc:
 
 ---
 
-## 1b. Part 6 mất đoạn văn — cần build lại (đề 3, 4, 6, 7, 8, 9, 10)
-
-Docx các đề này xen kẽ đoạn văn với câu hỏi (đoạn → "131. (A)…(D)" → đoạn tiếp → "132. …"). Parser cũ chỉ giữ đoạn trước câu đầu tiên của mỗi set, phần sau bị bỏ mất — chữ không còn trong JSON nên không vá tay được.
-
-Đã sửa parser (`split_part6` trong `build_est2024.py`). Trong lúc chờ, các câu không còn chỗ trống trong đoạn văn bị đánh dấu `broken` (bỏ qua, không tính điểm). Build lại là tự khôi phục:
-
-```bash
-python scripts/full-tests/build_est2024.py --all
-```
-
-Sau khi build, kiểm tra mỗi set Part 6 có đủ 4 chỗ trống `--- [n] ---`.
-
----
-
 ## 2. Đáp án cần rà tay — 13 câu
 
 Những câu này các nguồn trong file đáp án **mâu thuẫn nhau**. Parser đã lấy nguồn tin cậy hơn (bảng đáp án và nhãn rõ ràng thắng nguồn suy luận), nhưng nên xác minh vì sai đáp án tệ hơn thiếu đáp án.
