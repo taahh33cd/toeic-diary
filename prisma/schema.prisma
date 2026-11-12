@@ -14,7 +14,7 @@ datasource db {
 
 model TestSeries {
   id          String    @id @default(uuid())
-  name        String    // "ETS 2026"
+  name        String // "ETS 2026"
   slug        String    @unique // "ets-2026"
   publisher   String    @default("ETS")
   year        Int?
@@ -32,7 +32,7 @@ model TestSet {
   id         String     @id @default(uuid())
   seriesId   String     @map("series_id")
   series     TestSeries @relation(fields: [seriesId], references: [id])
-  name       String     // "ETS 2026 - Test 1"
+  name       String // "ETS 2026 - Test 1"
   year       Int        @default(2026)
   slug       String     @unique // "ets-2026-test-1"
   orderIndex Int        @map("order_index")
@@ -47,7 +47,7 @@ model Part {
   testSetId     String              @map("test_set_id")
   testSet       TestSet             @relation(fields: [testSetId], references: [id], onDelete: Cascade)
   partNumber    Int                 @map("part_number") // 1, 2, 3, 4
-  title         String              // "Part 3 - Conversations"
+  title         String // "Part 3 - Conversations"
   description   String?
   totalLessons  Int                 @map("total_lessons")
   lessons       Lesson[]
@@ -61,7 +61,7 @@ model Lesson {
   id             String            @id @default(uuid())
   partId         String            @map("part_id")
   part           Part              @relation(fields: [partId], references: [id], onDelete: Cascade)
-  title          String            // "Questions 71-73"
+  title          String // "Questions 71-73"
   questionStart  Int?              @map("question_start")
   questionEnd    Int?              @map("question_end")
   transcriptFull String            @map("transcript_full") @db.Text
@@ -69,7 +69,7 @@ model Lesson {
   audioDuration  Float             @map("audio_duration") // seconds
   orderIndex     Int               @map("order_index")
   correctOption  String?           @map("correct_option") // "A"/"B"/"C" — Part 2 only
-  explanation    String?           @db.Text               // AI explanation — Part 2 only
+  explanation    String?           @db.Text // AI explanation — Part 2 only
   keyVocabulary  Json?             @map("key_vocabulary") // pre-generated vocab items
   createdAt      DateTime          @default(now()) @map("created_at")
   sentences      Sentence[]
@@ -82,13 +82,13 @@ model Lesson {
 }
 
 model Sentence {
-  id         String  @id @default(uuid())
-  lessonId   String  @map("lesson_id")
-  lesson     Lesson  @relation(fields: [lessonId], references: [id], onDelete: Cascade)
-  orderIndex Int     @map("order_index")
-  content    String  @db.Text
-  startTime  Float   @map("start_time") // seconds
-  endTime    Float   @map("end_time")   // seconds
+  id          String  @id @default(uuid())
+  lessonId    String  @map("lesson_id")
+  lesson      Lesson  @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  orderIndex  Int     @map("order_index")
+  content     String  @db.Text
+  startTime   Float   @map("start_time") // seconds
+  endTime     Float   @map("end_time") // seconds
   speaker     String? // "W" | "M" | "Narrator"
   optionLabel String? @map("option_label") // "A"/"B"/"C"/"D" — Part 1 & 2 options
   blanks      Blank[]
@@ -103,9 +103,9 @@ model Blank {
   sentence   Sentence @relation(fields: [sentenceId], references: [id], onDelete: Cascade)
   lessonId   String   @map("lesson_id") // denormalized for fast query
   lesson     Lesson   @relation(fields: [lessonId], references: [id])
-  answer     String   // correct keyword
-  position   Int      // word index in sentence (0-based)
-  hint       String?  // optional hint e.g. "n___" for "night"
+  answer     String // correct keyword
+  position   Int // word index in sentence (0-based)
+  hint       String? // optional hint e.g. "n___" for "night"
 
   @@index([lessonId])
   @@map("blanks")
@@ -117,27 +117,27 @@ model Blank {
 
 model Profile {
   // id mirrors auth.users.id from Supabase Auth
-  id            String              @id // UUID from Supabase Auth — NO @default
-  displayName   String?             @map("display_name")
-  avatarUrl     String?             @map("avatar_url")
-  toeicTarget   Int?                @map("toeic_target") // e.g. 750
-  currentStreak Int                 @default(0) @map("current_streak")
-  lastActive    DateTime?           @map("last_active")
-  createdAt     DateTime            @default(now()) @map("created_at")
+  id            String    @id // UUID from Supabase Auth — NO @default
+  displayName   String?   @map("display_name")
+  avatarUrl     String?   @map("avatar_url")
+  toeicTarget   Int?      @map("toeic_target") // e.g. 750
+  currentStreak Int       @default(0) @map("current_streak")
+  lastActive    DateTime? @map("last_active")
+  createdAt     DateTime  @default(now()) @map("created_at")
 
   // ── Journal/Admin platform ──
-  role           String    @default("student") @map("role") // "student" | "teacher" | "admin"
-  studentCode    String?   @unique @map("student_code")     // maps to Firebase students/{code}
-  teacherId      String?   @map("teacher_id")               // for students: assigned teacher Profile.id
-  invitedBy      String?   @map("invited_by")               // Profile.id of inviter
-  invitedAt      DateTime? @map("invited_at")
-  acceptedAt     DateTime? @map("accepted_at")
+  role        String    @default("student") @map("role") // "student" | "teacher" | "admin"
+  studentCode String?   @unique @map("student_code") // maps to Firebase students/{code}
+  teacherId   String?   @map("teacher_id") // for students: assigned teacher Profile.id
+  invitedBy   String?   @map("invited_by") // Profile.id of inviter
+  invitedAt   DateTime? @map("invited_at")
+  acceptedAt  DateTime? @map("accepted_at")
 
   // ── Preferences ──
-  journalTheme   String?   @map("journal_theme")
+  journalTheme String? @map("journal_theme")
 
   // ── Course access ──
-  enrolledCourses  Int[]  @default([]) @map("enrolled_courses") // courses 0-3 the user is enrolled in
+  enrolledCourses          Int[]     @default([]) @map("enrolled_courses") // courses 0-3 the user is enrolled in
   courseUnlockCelebratedAt DateTime? @map("course_unlock_celebrated_at") // when the user saw the "unlocked" celebration
 
   // ── Freemium usage ──
@@ -149,15 +149,20 @@ model Profile {
   longestStreak  Int       @default(0) @map("longest_streak")
   lastActiveDate DateTime? @map("last_active_date")
 
+  // ── Lộ trình học AI ──
+  /// Mở lộ trình cho tài khoản tạo TRƯỚC FEATURE_LAUNCH_DATE (xem lib/roadmap/config.ts).
+  /// Tài khoản tạo sau ngày đó tự có quyền, không cần cờ này.
+  roadmapEnabled Boolean @default(false) @map("roadmap_enabled")
+
   // ── Relations ──
-  progress        UserProgress[]
-  levelProgress   PartLevelProgress[]
-  vocabulary      SavedVocabulary[]
-  aiFeedback      AiFeedback[]
-  xpEvents        XpEvent[]
-  invitesSent     TeacherInvite[]
-  managedStudents Profile[] @relation("TeacherStudent")
-  teacher         Profile?  @relation("TeacherStudent", fields: [teacherId], references: [id])
+  progress             UserProgress[]
+  levelProgress        PartLevelProgress[]
+  vocabulary           SavedVocabulary[]
+  aiFeedback           AiFeedback[]
+  xpEvents             XpEvent[]
+  invitesSent          TeacherInvite[]
+  managedStudents      Profile[]                  @relation("TeacherStudent")
+  teacher              Profile?                   @relation("TeacherStudent", fields: [teacherId], references: [id])
   grammarAttempts      GrammarAttempt[]
   readingAttempts      ReadingAttempt[]
   postReadingAttempts  PostReadingAttempt[]
@@ -169,9 +174,13 @@ model Profile {
   partPracticeAttempts PartPracticeAttempt[]
   coursePurchases      CoursePurchase[]
   pictureNotes         PictureNote[]
-  skillSubmissions     SkillSubmission[] @relation("SubmissionAuthor")
-  ownedDecks           VocabDeck[]       @relation("DeckOwner")
+  skillSubmissions     SkillSubmission[]          @relation("SubmissionAuthor")
+  ownedDecks           VocabDeck[]                @relation("DeckOwner")
   vocabProgress        VocabProgress[]
+  studyPlans           StudyPlan[]
+  studyWeeks           StudyWeek[]
+  studyTasks           StudyTask[]
+  planEvents           PlanEvent[]
 
   @@map("profiles")
 }
@@ -179,18 +188,18 @@ model Profile {
 model CoursePurchase {
   id          String    @id @default(cuid())
   userId      String    @map("user_id")
-  email       String?                                  // buyer email, captured for the admin panel
-  courseId    Int       @map("course_id")              // course 0-3 being purchased (only 0 sold online)
-  code        String    @unique                         // transfer note the admin uses to match the payment
-  amount      Int                                        // price in VND
-  status      String    @default("pending")             // "pending" | "submitted" | "paid" | "rejected"
+  email       String? // buyer email, captured for the admin panel
+  courseId    Int       @map("course_id") // course 0-3 being purchased (only 0 sold online)
+  code        String    @unique // transfer note the admin uses to match the payment
+  amount      Int // price in VND
+  status      String    @default("pending") // "pending" | "submitted" | "paid" | "rejected"
   provider    String    @default("manual")
-  submittedAt DateTime? @map("submitted_at")           // when the buyer clicked "I have transferred"
-  paidAt      DateTime? @map("paid_at")                 // when an admin approved
-  approvedBy  String?   @map("approved_by")             // admin Profile.id who approved
+  submittedAt DateTime? @map("submitted_at") // when the buyer clicked "I have transferred"
+  paidAt      DateTime? @map("paid_at") // when an admin approved
+  approvedBy  String?   @map("approved_by") // admin Profile.id who approved
   createdAt   DateTime  @default(now()) @map("created_at")
 
-  user        Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId, status])
   @@index([status, createdAt])
@@ -208,7 +217,7 @@ model TeacherInvite {
   usedAt      DateTime? @map("used_at")
   createdAt   DateTime  @default(now()) @map("created_at")
 
-  teacher     Profile   @relation(fields: [teacherId], references: [id])
+  teacher Profile @relation(fields: [teacherId], references: [id])
 
   @@index([token])
   @@index([email])
@@ -218,12 +227,12 @@ model TeacherInvite {
 model XpEvent {
   id        String   @id @default(cuid())
   userId    String   @map("user_id")
-  source    String   // "dictation_lesson" | "vocab_review" | "homework_submit" | "test_score" | "streak_bonus" | "login"
+  source    String // "dictation_lesson" | "vocab_review" | "homework_submit" | "test_score" | "streak_bonus" | "login"
   xp        Int
   metadata  Json?
   createdAt DateTime @default(now()) @map("created_at")
 
-  user      Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId, createdAt])
   @@index([source])
@@ -236,9 +245,9 @@ model UserProgress {
   profile          Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
   lessonId         String    @map("lesson_id")
   lesson           Lesson    @relation(fields: [lessonId], references: [id])
-  level            Int       // 1-4
-  score            Int       @default(0)  // 0-100 (current attempt)
-  bestScore        Int       @default(0)  @map("best_score") // all-time best
+  level            Int // 1-4
+  score            Int       @default(0) // 0-100 (current attempt)
+  bestScore        Int       @default(0) @map("best_score") // all-time best
   status           String    @default("not_started") // "not_started" | "in_progress" | "completed"
   userAnswer       String?   @map("user_answer") @db.Text // JSON for L1, text for L2-4
   timeSpentSeconds Int?      @map("time_spent_seconds")
@@ -258,7 +267,7 @@ model PartLevelProgress {
   profile          Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
   partId           String    @map("part_id")
   part             Part      @relation(fields: [partId], references: [id])
-  level            Int       // 1-4
+  level            Int // 1-4
   lessonsCompleted Int       @default(0) @map("lessons_completed") // lessons with score >= 70
   lessonsTotal     Int       @map("lessons_total")
   isUnlocked       Boolean   @default(false) @map("is_unlocked")
@@ -304,7 +313,7 @@ model GrammarAttempt {
   userAnswer String   @map("user_answer")
   createdAt  DateTime @default(now()) @map("created_at")
 
-  profile    Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  profile Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId, questionId])
   @@index([userId, topicSlug])
@@ -317,7 +326,7 @@ model AiFeedback {
   profile       Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
   lessonId      String   @map("lesson_id")
   lesson        Lesson   @relation(fields: [lessonId], references: [id])
-  level         Int      // 3 or 4
+  level         Int // 3 or 4
   userSummary   String   @map("user_summary") @db.Text
   accuracyScore Int      @map("accuracy_score") // 0-100
   feedbackData  Json     @map("feedback_data") // Full structured AI response as JSONB
@@ -332,12 +341,12 @@ model AiFeedback {
 // ─────────────────────────────────────
 
 model ReadingPassage {
-  id         String            @id @default(uuid())
-  type       String            // "single" | "double" | "triple"
-  category   String?           // "A. E-MAIL - LETTER" etc. — only for single
-  texts      Json              // String[] of HTML passage content
-  orderIndex Int               @map("order_index")
-  createdAt  DateTime          @default(now()) @map("created_at")
+  id         String   @id @default(uuid())
+  type       String // "single" | "double" | "triple"
+  category   String? // "A. E-MAIL - LETTER" etc. — only for single
+  texts      Json // String[] of HTML passage content
+  orderIndex Int      @map("order_index")
+  createdAt  DateTime @default(now()) @map("created_at")
 
   questions           ReadingQuestion[]
   attempts            ReadingAttempt[]
@@ -348,17 +357,17 @@ model ReadingPassage {
 }
 
 model ReadingQuestion {
-  id         String         @id @default(uuid())
-  passageId  String         @map("passage_id")
-  passage    ReadingPassage @relation(fields: [passageId], references: [id], onDelete: Cascade)
-  orderIndex Int            @map("order_index")
-  text       String         @db.Text
-  optionA    String         @map("option_a")
-  optionB    String         @map("option_b")
-  optionC    String         @map("option_c")
-  optionD    String         @map("option_d")
-  correct    String         // "A" | "B" | "C" | "D"
-  explanation String        @db.Text
+  id          String         @id @default(uuid())
+  passageId   String         @map("passage_id")
+  passage     ReadingPassage @relation(fields: [passageId], references: [id], onDelete: Cascade)
+  orderIndex  Int            @map("order_index")
+  text        String         @db.Text
+  optionA     String         @map("option_a")
+  optionB     String         @map("option_b")
+  optionC     String         @map("option_c")
+  optionD     String         @map("option_d")
+  correct     String // "A" | "B" | "C" | "D"
+  explanation String         @db.Text
 
   @@index([passageId, orderIndex])
   @@map("reading_questions")
@@ -372,13 +381,13 @@ model SubskillAttempt {
   id            String   @id @default(uuid())
   userId        String   @map("user_id")
   profile       Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
-  part          String   // "part2"
+  part          String // "part2"
   questionWord  String   @map("question_word") // "who" | "what" | "when" | ...
   exerciseIndex Int      @map("exercise_index") // 0-3  (Bài 1-4)
-  score         Int      // 0-100
-  passed        Boolean  // score >= passThreshold (80)
-  itemIdx       Int?     @map("item_idx")       // null = completed; number = next question index to resume from
-  correctCount  Float?   @map("correct_count")  // running correct count when saved mid-exercise
+  score         Int // 0-100
+  passed        Boolean // score >= passThreshold (80)
+  itemIdx       Int?     @map("item_idx") // null = completed; number = next question index to resume from
+  correctCount  Float?   @map("correct_count") // running correct count when saved mid-exercise
   completedAt   DateTime @default(now()) @map("completed_at")
   createdAt     DateTime @default(now()) @map("created_at")
 
@@ -393,10 +402,10 @@ model TranslationVocabProgress {
   id         String   @id @default(uuid())
   userId     String   @map("user_id")
   profile    Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
-  topicSlug  String   @map("topic_slug")  // "cum-danh-tu"
-  levelSlug  String   @map("level_slug")  // "l1".."l6"
-  word       String                        // đã lowercase, dùng làm khoá
-  known      Boolean  @default(false)      // học viên đã đánh dấu thuộc
+  topicSlug  String   @map("topic_slug") // "cum-danh-tu"
+  levelSlug  String   @map("level_slug") // "l1".."l6"
+  word       String // đã lowercase, dùng làm khoá
+  known      Boolean  @default(false) // học viên đã đánh dấu thuộc
   wrongCount Int      @default(0) @map("wrong_count") // số lần trả lời sai trong quiz/điền từ
   seenCount  Int      @default(0) @map("seen_count")
   updatedAt  DateTime @updatedAt @map("updated_at")
@@ -430,13 +439,13 @@ model IpaAttempt {
   id            String   @id @default(uuid())
   userId        String   @map("user_id")
   profile       Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
-  section       String   // "vowels" | "diphthongs" | "consonants"
-  difficulty    String   // "easy" | "medium" | "hard"
+  section       String // "vowels" | "diphthongs" | "consonants"
+  difficulty    String // "easy" | "medium" | "hard"
   exerciseIndex Int      @map("exercise_index")
-  score         Int      // 0-100
-  passed        Boolean  // score >= passThreshold (80)
-  itemIdx       Int?     @map("item_idx")       // null = completed; number = next item to resume from
-  correctCount  Float?   @map("correct_count")  // running correct count when saved mid-exercise
+  score         Int // 0-100
+  passed        Boolean // score >= passThreshold (80)
+  itemIdx       Int?     @map("item_idx") // null = completed; number = next item to resume from
+  correctCount  Float?   @map("correct_count") // running correct count when saved mid-exercise
   completedAt   DateTime @default(now()) @map("completed_at")
   createdAt     DateTime @default(now()) @map("created_at")
 
@@ -464,16 +473,16 @@ model SpeakingRecordingAttempt {
 }
 
 model ReadingAttempt {
-  id          String         @id @default(uuid())
-  userId      String         @map("user_id")
-  profile     Profile        @relation(fields: [userId], references: [id], onDelete: Cascade)
-  passageId   String         @map("passage_id")
-  passage     ReadingPassage @relation(fields: [passageId], references: [id])
-  score       Int            // 0-100
-  answers     Json           // { "q0": "A", "q1": "C", ... }
-  durationSeconds Int?       @map("duration_seconds") // thời gian làm bài, không tính quiz từ vựng & lúc tạm dừng
-  completedAt DateTime       @default(now()) @map("completed_at")
-  createdAt   DateTime       @default(now()) @map("created_at")
+  id              String         @id @default(uuid())
+  userId          String         @map("user_id")
+  profile         Profile        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  passageId       String         @map("passage_id")
+  passage         ReadingPassage @relation(fields: [passageId], references: [id])
+  score           Int // 0-100
+  answers         Json // { "q0": "A", "q1": "C", ... }
+  durationSeconds Int?           @map("duration_seconds") // thời gian làm bài, không tính quiz từ vựng & lúc tạm dừng
+  completedAt     DateTime       @default(now()) @map("completed_at")
+  createdAt       DateTime       @default(now()) @map("created_at")
 
   @@index([userId, passageId])
   @@index([userId])
@@ -486,8 +495,8 @@ model PostReadingAttempt {
   profile     Profile        @relation(fields: [userId], references: [id], onDelete: Cascade)
   passageId   String         @map("passage_id")
   passage     ReadingPassage @relation(fields: [passageId], references: [id])
-  score       Int            // 0-100 overall
-  details     Json           // { vocab, paraphrase, translation, summary } each 0-100
+  score       Int // 0-100 overall
+  details     Json // { vocab, paraphrase, translation, summary } each 0-100
   completedAt DateTime       @default(now()) @map("completed_at")
   createdAt   DateTime       @default(now()) @map("created_at")
 
@@ -500,24 +509,24 @@ model PostReadingAttempt {
 /// auto-save mỗi vài giây để đổi máy vẫn làm tiếp được) lẫn lịch sử đã nộp
 /// (status "done"). Một user có thể có nhiều lượt cho cùng một đề.
 model FullTestAttempt {
-  id          String    @id @default(uuid())
-  userId      String    @map("user_id")
-  profile     Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  examSlug    String    @map("exam_slug")  // "est-2026"
-  testSlug    String    @map("test_slug")  // "est-2026-test-1"
-  status      String    @default("in_progress") // "in_progress" | "done"
-  config      Json      // { mode, parts, minutes, autoSubmit, instantFeedback }
-  answers     Json      @default("{}")     // { "1": "B", "32": "D", ... }
-  marked      Json      @default("[]")     // [12, 45, 78]
-  secondsLeft Int?      @map("seconds_left") // đồng hồ còn lại lúc lưu; null = không giới hạn
+  id          String  @id @default(uuid())
+  userId      String  @map("user_id")
+  profile     Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
+  examSlug    String  @map("exam_slug") // "est-2026"
+  testSlug    String  @map("test_slug") // "est-2026-test-1"
+  status      String  @default("in_progress") // "in_progress" | "done"
+  config      Json // { mode, parts, minutes, autoSubmit, instantFeedback }
+  answers     Json    @default("{}") // { "1": "B", "32": "D", ... }
+  marked      Json    @default("[]") // [12, 45, 78]
+  secondsLeft Int?    @map("seconds_left") // đồng hồ còn lại lúc lưu; null = không giới hạn
 
   // Điểm chỉ có khi đã nộp. Chấm ở server nên client không sửa được.
-  correct     Int?
-  gradable    Int?
-  listening   Int?      // 5-495, null nếu không làm đủ 7 part
-  reading     Int?      // 5-495
-  total       Int?      // 10-990
-  partScores  Json?     @map("part_scores") // [{ part, correct, gradable }]
+  correct    Int?
+  gradable   Int?
+  listening  Int? // 5-495, null nếu không làm đủ 7 part
+  reading    Int? // 5-495
+  total      Int? // 10-990
+  partScores Json? @map("part_scores") // [{ part, correct, gradable }]
 
   startedAt   DateTime  @default(now()) @map("started_at")
   updatedAt   DateTime  @updatedAt @map("updated_at")
@@ -532,21 +541,21 @@ model FullTestAttempt {
 /// Tách khỏi FullTestAttempt vì bài lẻ không quy đổi được thang điểm ETS và
 /// lịch sử không nên lẫn với thi thử trọn đề.
 model PartPracticeAttempt {
-  id          String    @id @default(uuid())
-  userId      String    @map("user_id")
-  profile     Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  skill       String    // "listening" | "reading"
-  part        Int       // 1..7
-  testSlug    String    @map("test_slug") // "ca-test-1-part1"
-  status      String    @default("in_progress") // "in_progress" | "done"
-  config      Json      // { mode, parts, minutes, autoSubmit, instantFeedback }
-  answers     Json      @default("{}")
-  marked      Json      @default("[]")
-  secondsLeft Int?      @map("seconds_left")
+  id          String  @id @default(uuid())
+  userId      String  @map("user_id")
+  profile     Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skill       String // "listening" | "reading"
+  part        Int // 1..7
+  testSlug    String  @map("test_slug") // "ca-test-1-part1"
+  status      String  @default("in_progress") // "in_progress" | "done"
+  config      Json // { mode, parts, minutes, autoSubmit, instantFeedback }
+  answers     Json    @default("{}")
+  marked      Json    @default("[]")
+  secondsLeft Int?    @map("seconds_left")
 
   // Điểm chỉ có khi đã nộp. Chấm ở server nên client không sửa được.
-  correct     Int?
-  gradable    Int?
+  correct  Int?
+  gradable Int?
 
   startedAt   DateTime  @default(now()) @map("started_at")
   updatedAt   DateTime  @updatedAt @map("updated_at")
@@ -562,20 +571,20 @@ model PartPracticeAttempt {
 /// gửi cho giáo viên chấm. Một bản ghi = một lượt làm trọn một bộ đề.
 /// Khung chung cho mọi unit: chỉ cần (skill, unit, testKey) nên unit mới cắm vào là chạy.
 model SkillSubmission {
-  id       String  @id @default(uuid())
-  userId   String  @map("user_id")
-  profile  Profile @relation("SubmissionAuthor", fields: [userId], references: [id], onDelete: Cascade)
+  id      String  @id @default(uuid())
+  userId  String  @map("user_id")
+  profile Profile @relation("SubmissionAuthor", fields: [userId], references: [id], onDelete: Cascade)
 
-  skill    String // "speaking" | "writing"
-  unit     String // "q3-4" | "q6-7" | "q1-5" | ...
-  testKey  String @map("test_key")   // slug bộ đề, vd "easy-1"; "" nếu unit không chia bộ
-  title    String                     // nhãn hiển thị, vd "Writing Q6-7 · Bộ 1 (Easy)"
+  skill   String // "speaking" | "writing"
+  unit    String // "q3-4" | "q6-7" | "q1-5" | ...
+  testKey String @map("test_key") // slug bộ đề, vd "easy-1"; "" nếu unit không chia bộ
+  title   String // nhãn hiển thị, vd "Writing Q6-7 · Bộ 1 (Easy)"
 
   /// "draft" = mới lưu vào sổ tay | "submitted" = đã gửi chấm | "graded" = đã có nhận xét
-  status   String @default("draft")
+  status String @default("draft")
 
   /// [{ idx, prompt, text?, audioUrl?, audioPublicId?, durationSec? }]
-  items    Json   @default("[]")
+  items Json @default("[]")
 
   /// { items: [{ idx, score, comment, corrected }], overall?, audioUrl?, audioPublicId?, band? }
   feedback Json?
@@ -616,35 +625,35 @@ model SkillSubmission {
 
 /// Một bộ thẻ. Học viên tự tạo, hoặc migrate từ kho từ RTDB, hoặc AI sinh.
 model VocabDeck {
-  id          String  @id @default(cuid())
-  ownerId     String  @map("owner_id")
-  owner       Profile @relation("DeckOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  id      String  @id @default(cuid())
+  ownerId String  @map("owner_id")
+  owner   Profile @relation("DeckOwner", fields: [ownerId], references: [id], onDelete: Cascade)
 
   title       String
   description String? @db.Text
 
   /// 10 ký tự base58, dùng cho link chia sẻ /flashcards/d/{slug}
-  slug        String  @unique
+  slug String @unique
 
   /// "private" = chỉ mình | "link" = ai có link cũng học được | "library" = thư viện bộ mẫu (chưa dùng)
-  visibility  String  @default("private")
+  visibility String @default("private")
 
   /// "manual" | "ai_bulk" | "ai_content" | "migrated"
-  source      String  @default("manual")
+  source    String  @default("manual")
   /// Truy nguồn khi source = ai_content: lessonId / passageId / "error-log" / "wrong-answers"
-  sourceRef   String? @map("source_ref")
+  sourceRef String? @map("source_ref")
 
   /// Part TOEIC 1-7, tuỳ chọn
-  part        Int?
+  part Int?
 
   /// Đếm sẵn số thẻ để list không phải JOIN
-  cardCount   Int     @default(0) @map("card_count")
+  cardCount Int @default(0) @map("card_count")
 
   /// VocabDeck.id gốc nếu bộ này được nhân bản từ bộ khác
-  clonedFrom  String? @map("cloned_from")
+  clonedFrom String? @map("cloned_from")
 
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   cards       VocabCard[]
   assignments VocabDeckAssignment[]
@@ -657,28 +666,28 @@ model VocabDeck {
 
 /// Nội dung một thẻ trong một bộ. Cùng một từ ở 2 bộ = 2 dòng, nội dung độc lập.
 model VocabCard {
-  id            String    @id @default(cuid())
-  deckId        String    @map("deck_id")
-  deck          VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
+  id     String    @id @default(cuid())
+  deckId String    @map("deck_id")
+  deck   VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
 
-  word          String
+  word    String
   /// normalizeWord(word) — khoá nối sang VocabProgress
-  wordKey       String    @map("word_key")
+  wordKey String @map("word_key")
 
-  ipa           String?
+  ipa        String?
   /// "n" | "v" | "adj" | "adv" | "phrase" | "idiom"
-  pos           String?
-  meaningVi     String?   @map("meaning_vi")
-  definition    String?   @db.Text
-  example       String?   @db.Text
+  pos        String?
+  meaningVi  String? @map("meaning_vi")
+  definition String? @db.Text
+  example    String? @db.Text
 
-  imageUrl      String?   @map("image_url")
+  imageUrl      String? @map("image_url")
   /// public_id của Cloudinary — cần để xoá được ảnh đã upload
-  imagePublicId String?   @map("image_public_id")
-  audioUrl      String?   @map("audio_url")
+  imagePublicId String? @map("image_public_id")
+  audioUrl      String? @map("audio_url")
 
-  order         Int       @default(0)
-  createdAt     DateTime  @default(now()) @map("created_at")
+  order     Int      @default(0)
+  createdAt DateTime @default(now()) @map("created_at")
 
   @@unique([deckId, wordKey])
   @@index([deckId, order])
@@ -688,36 +697,36 @@ model VocabCard {
 /// Tiến độ ôn một TỪ của một học viên — dùng chung cho mọi bộ có từ đó.
 /// Thay thế repCount/lastReview từng nằm trong RTDB vocab/{studentCode}.
 model VocabProgress {
-  id           String    @id @default(cuid())
-  userId       String    @map("user_id")
-  profile      Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id      String  @id @default(cuid())
+  userId  String  @map("user_id")
+  profile Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  wordKey      String    @map("word_key")
+  wordKey String @map("word_key")
   /// Dạng hiển thị gần nhất của từ (giữ hoa/thường như học viên gõ)
-  word         String
+  word    String
 
-  repCount     Int       @default(0) @map("rep_count")
+  repCount     Int   @default(0) @map("rep_count")
   /// Số ngày giãn cách hiện tại — SM-2 rút gọn, xem lib/vocab/srs.ts
-  intervalDays Int       @default(0) @map("interval_days")
-  ease         Float     @default(2.5)
+  intervalDays Int   @default(0) @map("interval_days")
+  ease         Float @default(2.5)
   /// Số lần từ đã thuộc rồi lại sai
-  lapses       Int       @default(0)
+  lapses       Int   @default(0)
 
-  seenCount    Int       @default(0) @map("seen_count")
-  wrongCount   Int       @default(0) @map("wrong_count")
-  mastered     Boolean   @default(false)
+  seenCount  Int     @default(0) @map("seen_count")
+  wrongCount Int     @default(0) @map("wrong_count")
+  mastered   Boolean @default(false)
 
-  lastReview   DateTime? @map("last_review")
+  lastReview DateTime? @map("last_review")
   /// Tính sẵn để badge "đến hạn" chỉ cần một câu COUNT
-  dueAt        DateTime? @map("due_at")
+  dueAt      DateTime? @map("due_at")
 
   /// Vài khoá client gần nhất đã áp cho TỪ NÀY, chống hàng đợi offline gửi
   /// lại một lượt rồi SRS bị đẩy thừa một bậc. Giữ 20 cái, cắt ở tầng ứng
   /// dụng nên không cần cron dọn.
-  recentRefs   String[]  @default([]) @map("recent_refs")
+  recentRefs String[] @default([]) @map("recent_refs")
 
-  createdAt    DateTime  @default(now()) @map("created_at")
-  updatedAt    DateTime  @updatedAt @map("updated_at")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   @@unique([userId, wordKey])
   @@index([userId, dueAt])
@@ -727,10 +736,10 @@ model VocabProgress {
 
 /// Một lượt làm quiz trọn một bộ. userId null = khách mở link chia sẻ.
 model VocabQuizSession {
-  id           String    @id @default(cuid())
-  userId       String?   @map("user_id")
+  id       String  @id @default(cuid())
+  userId   String? @map("user_id")
   /// Id ẩn danh sinh ở localStorage của khách — chỉ để đếm, không nhận dạng ai
-  guestKey     String?   @map("guest_key")
+  guestKey String? @map("guest_key")
 
   deckId       String    @map("deck_id")
   deck         VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
@@ -738,21 +747,21 @@ model VocabQuizSession {
 
   /// Khoá do client sinh, chống ghi trùng khi hàng đợi offline gửi lại một lượt
   /// mà nó không biết server đã nhận hay chưa. NULL = phiên cũ, không ràng buộc.
-  clientRef    String?   @unique @map("client_ref")
+  clientRef String? @unique @map("client_ref")
 
   /// Các dạng quiz học viên đã chọn, vd ["word-to-image","listen-to-typing"]
-  modes        String[]
+  modes   String[]
   /// "practice" = hiện đáp án ngay | "exam" = ẩn đến cuối (chưa dùng)
-  runMode      String    @default("practice") @map("run_mode")
+  runMode String   @default("practice") @map("run_mode")
 
-  total        Int       @default(0)
-  correct      Int       @default(0)
-  durationMs   Int?      @map("duration_ms")
+  total      Int  @default(0)
+  correct    Int  @default(0)
+  durationMs Int? @map("duration_ms")
 
-  startedAt    DateTime  @default(now()) @map("started_at")
-  finishedAt   DateTime? @map("finished_at")
+  startedAt  DateTime  @default(now()) @map("started_at")
+  finishedAt DateTime? @map("finished_at")
 
-  items        VocabQuizItem[]
+  items VocabQuizItem[]
 
   @@index([userId, finishedAt])
   @@index([deckId, finishedAt])
@@ -766,12 +775,12 @@ model VocabQuizItem {
   sessionId String           @map("session_id")
   session   VocabQuizSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
 
-  wordKey   String           @map("word_key")
-  quizType  String           @map("quiz_type")
-  correct   Boolean
-  answerMs  Int?             @map("answer_ms")
+  wordKey  String  @map("word_key")
+  quizType String  @map("quiz_type")
+  correct  Boolean
+  answerMs Int?    @map("answer_ms")
   /// Học viên gõ gì (chỉ các dạng *-to-typing)
-  given     String?
+  given    String?
 
   @@index([sessionId])
   @@index([wordKey, correct])
@@ -781,26 +790,26 @@ model VocabQuizItem {
 /// Giáo viên giao một bộ thẻ cho một học viên. Khớp với hệ homework ở RTDB
 /// qua homeworkId để ô bài tập tự tick khi học viên làm xong.
 model VocabDeckAssignment {
-  id          String    @id @default(cuid())
-  deckId      String    @map("deck_id")
-  deck        VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
+  id     String    @id @default(cuid())
+  deckId String    @map("deck_id")
+  deck   VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
 
   /// Profile.id của giáo viên giao bài
-  assignedBy  String    @map("assigned_by")
+  assignedBy  String  @map("assigned_by")
   /// Mã học viên, khớp hệ RTDB hiện có
-  studentCode String    @map("student_code")
-  classId     String?   @map("class_id")
+  studentCode String  @map("student_code")
+  classId     String? @map("class_id")
 
   /// "study" = chỉ lật thẻ | "quiz"
-  activity    String    @default("quiz")
-  modes       String[]
+  activity   String    @default("quiz")
+  modes      String[]
   /// % đúng tối thiểu để tính là xong
-  minScore    Int?      @map("min_score")
-  dueDate     DateTime? @map("due_date")
+  minScore   Int?      @map("min_score")
+  dueDate    DateTime? @map("due_date")
   /// Homework.id ở RTDB để đối chiếu
-  homeworkId  String?   @map("homework_id")
+  homeworkId String?   @map("homework_id")
 
-  createdAt   DateTime  @default(now()) @map("created_at")
+  createdAt DateTime @default(now()) @map("created_at")
 
   @@unique([deckId, studentCode])
   @@index([studentCode, dueDate])
@@ -817,29 +826,167 @@ model VocabDeckAssignment {
 /// lượt AI kiểm chéo khi sinh, nhưng vẫn để học viên báo sai — câu bị báo sẽ
 /// tắt ngay và chờ thầy xem lại.
 model VocabWordForm {
-  id           String   @id @default(cuid())
+  id String @id @default(cuid())
 
-  wordKey      String   @map("word_key")
+  wordKey     String @map("word_key")
   /// sha1 của câu ví dụ gốc — để một từ có nhiều câu ví dụ vẫn tách bạch
-  exampleHash  String   @map("example_hash")
+  exampleHash String @map("example_hash")
 
   /// Câu đã khoét lỗ, lưu sẵn để khỏi chạy lại taoChoTrong
-  cloze        String   @db.Text
+  cloze       String   @db.Text
   /// Dạng đúng — chính chữ đã bị khoét trong câu
-  answer       String
+  answer      String
   /// 3 phương án nhiễu cùng gốc
-  distractors  String[]
+  distractors String[]
 
   /// "ok" đang dùng · "reported" học viên báo sai, tạm tắt · "rejected" thầy bỏ
-  status       String   @default("ok")
-  reportCount  Int      @default(0) @map("report_count")
+  status      String  @default("ok")
+  reportCount Int     @default(0) @map("report_count")
   /// Học viên báo sai kèm lý do gì — để thầy xử nhanh
-  reportNote   String?  @map("report_note") @db.Text
+  reportNote  String? @map("report_note") @db.Text
 
-  createdAt    DateTime @default(now()) @map("created_at")
+  createdAt DateTime @default(now()) @map("created_at")
 
   @@unique([wordKey, exampleHash])
   @@index([wordKey, status])
   @@index([status, reportCount])
   @@map("vocab_word_forms")
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Lộ trình học cá nhân hoá bằng AI  (xem plan-roadmap-ai.md)
+//
+// Nguyên tắc: lộ trình KHÔNG giữ trạng thái "đã học xong" của riêng nó.
+// `StudyTask.status` chỉ là bản chụp lại kết quả suy ra từ các bảng làm bài thật
+// (subskill_attempts, part_practice_attempts, grammar_attempts, …) — xem
+// lib/roadmap/evidence.ts. Có hai nguồn chân lý là sớm muộn gì cũng lệch nhau.
+// ─────────────────────────────────────────────────────────────────────────────
+
+/// Lộ trình học cá nhân hoá. Một học viên chỉ có TỐI ĐA 1 bản active.
+/// Tái lập kế hoạch KHÔNG tạo plan mới — chỉ sinh StudyWeek mới và tăng `version`.
+model StudyPlan {
+  id      String  @id @default(uuid())
+  userId  String  @map("user_id")
+  profile Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  status   String @default("active") // "active" | "archived" | "completed"
+  examType String @default("lr") // "lr" | "sw"
+
+  /// Bài test đầu vào — nguồn của baseline
+  baselineAttemptId String? @map("baseline_attempt_id")
+
+  /// { total, listening, reading, parts: [{ part, correct, gradable, accuracy }] }
+  baseline Json
+  /// Mốc hiện tại, cập nhật sau mỗi full test mới. Cùng shape với baseline.
+  current  Json?
+
+  /// { minutesPerDay, daysPerWeek, preferredSkills[], startDate }
+  intake Json
+
+  targetScore Int?      @map("target_score")
+  deadline    DateTime?
+
+  /// [{ monthIndex, label, targetScore, focus[], summary }]
+  monthGoals Json @default("[]") @map("month_goals")
+
+  version   Int      @default(1)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  weeks  StudyWeek[]
+  tasks  StudyTask[]
+  events PlanEvent[]
+
+  @@index([userId, status])
+  @@map("study_plans")
+}
+
+/// Một tuần của lộ trình. Sinh cuốn chiếu: tuần N+1 chỉ ra đời vào cuối tuần N.
+model StudyWeek {
+  id      String    @id @default(uuid())
+  planId  String    @map("plan_id")
+  plan    StudyPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
+  userId  String    @map("user_id")
+  profile Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  weekIndex Int      @map("week_index")
+  startDate DateTime @map("start_date") @db.Date // luôn là thứ Hai
+  endDate   DateTime @map("end_date") @db.Date
+
+  theme         String
+  goalText      String @map("goal_text")
+  targetMinutes Int    @map("target_minutes")
+
+  status String @default("current") // "current" | "done" | "future"
+
+  /// { doneTasks, totalTasks, minutes, accuracyByPart, note }
+  review Json?
+
+  tasks StudyTask[]
+
+  @@unique([planId, weekIndex])
+  @@index([userId, startDate])
+  @@map("study_weeks")
+}
+
+/// Một đầu việc. Luôn trỏ tới một entry có thật trong lib/roadmap/catalog.
+model StudyTask {
+  id      String    @id @default(uuid())
+  planId  String    @map("plan_id")
+  plan    StudyPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
+  weekId  String    @map("week_id")
+  week    StudyWeek @relation(fields: [weekId], references: [id], onDelete: Cascade)
+  userId  String    @map("user_id")
+  profile Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  date  DateTime @db.Date
+  order Int
+
+  catalogId String @map("catalog_id")
+  title     String
+  /// Chụp lại lúc sinh, phòng khi catalog đổi đường dẫn
+  href      String
+  kind      String // "subskill" | "part_practice" | "full_test" | "grammar" | "ipa" | "dictation"
+
+  /// EvidenceSpec — điều kiện hoàn thành, xem lib/roadmap/types.ts
+  target Json
+
+  estMinutes Int    @map("est_minutes")
+  priority   String @default("core") // "core" | "bonus"
+
+  status String @default("pending") // "pending" | "done" | "skipped" | "rolled" | "missed"
+
+  /// { source, refId, score, at }
+  evidence Json?
+
+  rolledFromDate DateTime? @map("rolled_from_date") @db.Date
+  completedAt    DateTime? @map("completed_at")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @updatedAt @map("updated_at")
+
+  @@index([userId, date, status])
+  @@index([weekId, date])
+  @@map("study_tasks")
+}
+
+/// Nhật ký mọi lần sinh/đổi lộ trình. Vừa để dò lỗi, vừa là chỗ DUY NHẤT đếm
+/// hạn mức AI — đếm bằng `aiCalledAt` chứ không phải updatedAt, vì updatedAt
+/// bị ghi đè bởi đủ thứ việc khác (bài học từ cột ai_graded_at của submissions).
+model PlanEvent {
+  id      String    @id @default(uuid())
+  planId  String    @map("plan_id")
+  plan    StudyPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
+  userId  String    @map("user_id")
+  profile Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  type       String // "created" | "replan_weekly" | "replan_after_test" | "replan_missed" | "teacher_edit" | "ai_failed"
+  /// { weekIndex, model, reason, diff }
+  payload    Json      @default("{}")
+  /// null nếu lần đó không gọi AI (bản rule thuần)
+  aiCalledAt DateTime? @map("ai_called_at")
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([userId, type, aiCalledAt])
+  @@map("plan_events")
 }

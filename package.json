@@ -13,7 +13,10 @@
     "import": "tsx scripts/import-content.ts",
     "timestamps": "tsx scripts/assign-timestamps.ts",
     "apply-timestamps": "tsx scripts/apply-whisperx-timestamps.ts",
-    "analyze": "ANALYZE=true next build"
+    "analyze": "ANALYZE=true next build",
+    "build:catalog": "tsx scripts/roadmap/build-catalog.ts",
+    "check:catalog": "tsx scripts/roadmap/check-catalog.ts",
+    "roadmap:dry-run": "tsx scripts/roadmap/dry-run.ts"
   },
   "dependencies": {
     "@google/genai": "^1.50.0",

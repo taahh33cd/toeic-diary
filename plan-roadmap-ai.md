@@ -618,17 +618,45 @@ Khoảnh khắc quan trọng nhất của tính năng. Phải có:
 > Mỗi phase phải tự chạy được và deploy được. Theo lệ dự án: xong phase nào
 > commit + push phase đó ngay.
 
-### Phase 1 — Nền dữ liệu & chẩn đoán (không UI)
+### Phase 1 — Nền dữ liệu & chẩn đoán (không UI) — ✅ XONG 2026-11-12
 **Mục tiêu**: từ một `FullTestAttempt` ra được `WeaknessReport` và một `DraftPlan`
 tuần 1 đúng, chạy bằng script.
-- 4 bảng Prisma + cột `Profile.roadmapEnabled` + migration tay.
-- `lib/roadmap/config.ts` (ngày bật, đề ghim, số tháng mặc định — §15).
-- `lib/roadmap/diagnose.ts` + test đơn vị (3 hồ sơ mẫu: yếu đều 350, lệch nghe 550, lệch đọc 600).
-- `scripts/roadmap/build-catalog.mjs` + `catalog.meta.ts` + `catalog.ts`.
-- `npm run check:catalog` chặn href chết.
-- `lib/roadmap/planner.ts` (chưa AI).
-- **Verify**: `node scripts/roadmap/dry-run.mjs --attempt <id>` in ra lịch 1 tuần,
-  mọi href mở được, tổng phút khớp ngân sách ±10%.
+- ✅ 4 bảng Prisma + cột `Profile.roadmapEnabled` + `prisma/manual-migrations/012_study_plan.sql`
+  (đã áp lên Supabase).
+- ✅ `lib/roadmap/config.ts` · `types.ts` · `vn-date.ts`.
+- ✅ `lib/roadmap/diagnose.ts` + 3 hồ sơ mẫu (yếu đều 350, lệch nghe 550, lệch đọc 600).
+- ✅ `scripts/roadmap/catalog-source.ts` → `build-catalog.ts` → `lib/roadmap/catalog.generated.ts`
+  (**558 mục**: 313 subskill · 202 thẻ ngữ pháp · 18 luyện part · 16 full test · 9 IPA).
+- ✅ `npm run check:catalog` — ba lớp: route có thật · catalog khớp registry · ràng buộc nội bộ.
+- ✅ `lib/roadmap/planner.ts` (chưa AI).
+- ✅ **Verify**: `npm run roadmap:dry-run` (3 hồ sơ mẫu, ~30 khẳng định) và
+  `npm run roadmap:dry-run -- --attempt <id>` trên lượt thi thật. `tsc --noEmit`
+  và `eslint` sạch.
+
+**Năm lỗi dry-run bắt được** (đều là lỗi thật, không phải lỗi của script kiểm tra):
+1. Ba kho focus/foundation/maintenance chồng lấn nhau nên một ngày nhận hai lần
+   cùng một bài — xoá khỏi kho này không xoá khỏi kho kia.
+2. Mốc kiểm tra cuối tuần bị nhét vào sau khi đã rải đủ việc → ngày cuối tuần
+   luôn thừa một việc và vượt giờ. Giờ đặt mốc trước, tính vào ngân sách.
+3. Một bộ Part 2 là 30 phút, lớn hơn lát 60% của ngân sách 45 phút nên **không
+   bao giờ lọt** — học viên yếu Part 2 không được giao bài Part 2 nào. Đã tách
+   catalog thành từng bài con 8 phút (`evidence.exerciseIndex`).
+4. `bandMax` của cấp l1/l2 cộng với `prereq` khoá chặt học viên tầm giữa: người
+   600 điểm không còn bài nào để giao. Thêm nấc nới `ignoreBandMax` trong kho.
+5. `goalText` hứa "cuối tuần có bài kiểm tra ngắn" trong khi khu luyện từng part
+   mới có đề cho Part 1–2, nên học viên yếu Part 5–7 chẳng có mốc nào. Giờ chỉ
+   hứa khi thật sự đặt được mốc.
+
+**Hạn chế còn lại của Phase 1** (không chặn các phase sau):
+- **Part 7 chưa có bài đọc hiểu thật trong catalog.** Khu `/subskills/reading/part7`
+  lấy dữ liệu từ DB (`ReadingPassage`, 105 bài) chứ không từ file registry, nên
+  script chưa quét được. Hiện Part 7 chỉ được chữa gián tiếp qua Dịch và Từ nối.
+- **Mốc kiểm tra tuần chỉ có cho Part 1 và Part 2** — Part 3–7 chưa có nguồn đề
+  luyện part lẻ. Tuần nào chữa Part 5–7 thì không có bài đo ngắn.
+- **Lịch còn hơi máy móc**: mỗi ngày đều cùng một hình dạng (1 thẻ ngữ pháp +
+  1 động từ + 1 Part 2 + 1 từ nối) vì kho luôn được sắp theo bậc thấp trước.
+  Đây đúng là việc của lớp AI ở Phase 2 — đảo thứ tự ưu tiên trong biên độ cho phép.
+- **RLS chưa bật** cho 4 bảng mới (cũng như 29 bảng sẵn có) — xem §14.
 
 ### Phase 2 — Sinh lộ trình thật + màn hình kết quả
 **Mục tiêu**: học viên làm test xong là thấy lộ trình.
@@ -684,7 +712,8 @@ tuần 1 đúng, chạy bằng script.
 | Hai nguồn chân lý về "đã làm xong" | Lộ trình **không** có trạng thái riêng — luôn suy từ bảng làm bài thật (§9) |
 | Chi phí AI phình | Mỗi HV ≈ 1 lần sinh + 4 lần/tháng tái lập + tối đa 2 lần tự bấm ≈ 7 lần gọi/tháng với `flash-lite` |
 | HV làm test đầu vào dở dang | Chỉ nhận `FullTestAttempt.status="done"` và đủ 7 part (`total` khác null); thiếu part → báo "làm đủ 7 part mới chẩn đoán được" |
-| Script test phải là module | Theo `feedback_build_fixes`: script trong `scripts/` dùng `.mjs` |
+| Script test phải là module | Script trong `scripts/roadmap/` viết `.ts` chạy bằng `tsx` (để import thẳng registry nội dung). Lưu ý tsx biên dịch sang CJS nên **không có `import.meta.dirname`** — dùng `process.cwd()` |
+| **RLS chưa bật** cho `study_plans` / `study_weeks` / `study_tasks` / `plan_events` | Ứng dụng đọc ghi qua Prisma nên chạy bình thường, nhưng bất kỳ ai có anon key đều đọc/sửa được. 29 bảng sẵn có cũng đang vậy — cần xử lý chung một đợt, kèm policy theo `user_id`, chứ bật RLS trần thì chặn hết |
 
 ---
 
