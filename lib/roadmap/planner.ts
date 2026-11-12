@@ -276,10 +276,12 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
     startDate: weekStart,
     endDate: weekEnd,
     theme: themeFor(report, focusParts, weekIndex),
-    goalText: goalTextFor(report, focusParts, targetMinutes, {
-      monthCheckpoint: input.monthCheckpoint,
-      checkpointAdded,
-    }),
+    goalText:
+      goalHeadFor(report, focusParts) +
+      weekFacts(
+        { targetMinutes, studyDays: studyDates.length, checkpointAdded },
+        { daysPerWeek: intake.daysPerWeek, monthCheckpoint: input.monthCheckpoint },
+      ),
     targetMinutes,
     days,
   };
@@ -374,29 +376,46 @@ function themeFor(
  * Câu mục tiêu tuần, bản rule. Phase 2 sẽ để Gemini viết lại cho mượt, nhưng
  * câu này phải đứng được một mình — nó là thứ học viên đọc khi AI hỏng.
  */
-function goalTextFor(
-  report: WeaknessReport,
-  focusParts: PartNumber[],
-  targetMinutes: number,
-  checkpoint: { monthCheckpoint?: boolean; checkpointAdded: boolean },
-): string {
+/**
+ * Phần VĂN của câu mục tiêu tuần — phần duy nhất AI được viết lại.
+ */
+function goalHeadFor(report: WeaknessReport, focusParts: PartNumber[]): string {
   const main = report.parts.find((p) => p.part === focusParts[0]);
   const pct = main ? Math.round(main.accuracy * 100) : null;
-  const hours = Math.round((targetMinutes / 60) * 10) / 10;
+  return pct === null
+    ? `Tuần này tập trung vào ${PART_LABEL[focusParts[0]]}.`
+    : `Tuần này tập trung vào ${PART_LABEL[focusParts[0]]} — bài test đầu vào bạn đúng ${pct}% phần này.`;
+}
 
-  const head =
-    pct === null
-      ? `Tuần này tập trung vào ${PART_LABEL[focusParts[0]]}.`
-      : `Tuần này tập trung vào ${PART_LABEL[focusParts[0]]} — bài test đầu vào bạn đúng ${pct}% phần này.`;
+/**
+ * Phần SỰ THẬT của câu mục tiêu tuần: mấy giờ, mấy buổi, có mốc kiểm tra không.
+ *
+ * Tách khỏi phần văn vì AI được phép viết lại câu mục tiêu, mà lần chạy thử đầu
+ * tiên nó đã viết đè mất đúng mấy dữ kiện này — học viên mở ra không còn biết
+ * tuần này chỉ còn 2 buổi. Giờ lớp AI gọi lại hàm này và nối vào sau, nên dù AI
+ * viết gì thì mấy con số vẫn ở đó.
+ */
+export function weekFacts(
+  week: { targetMinutes: number; studyDays: number; checkpointAdded: boolean },
+  opts: { daysPerWeek: number; monthCheckpoint?: boolean },
+): string {
+  const hours = Math.round((week.targetMinutes / 60) * 10) / 10;
+
+  // Bắt đầu lộ trình giữa tuần thì tuần 1 chỉ còn vài ngày. Lịch vẫn đúng,
+  // nhưng phải nói ra, không thì học viên tưởng hệ thống giao thiếu việc.
+  const partial =
+    week.studyDays < opts.daysPerWeek
+      ? ` Tuần này bạn bắt đầu giữa chừng nên chỉ còn ${week.studyDays} buổi — tuần sau mới vào nhịp đầy đủ.`
+      : "";
 
   // Chỉ hứa mốc kiểm tra khi thật sự đặt được. Khu luyện từng part mới có đề
   // cho Part 1 và Part 2, nên học viên yếu Part 5-7 tuần này KHÔNG có bài kiểm
   // tra ngắn nào — viết sẵn câu hứa vào đây là nói sai với người học.
-  const tail = !checkpoint.checkpointAdded
+  const checkpoint = !week.checkpointAdded
     ? ""
-    : checkpoint.monthCheckpoint
+    : opts.monthCheckpoint
       ? " Cuối tuần có một đề thi thử trọn bộ để đo lại điểm."
       : " Cuối tuần có một bài kiểm tra ngắn để xem đã lên được chưa.";
 
-  return `${head} Tổng cộng khoảng ${hours} giờ.${tail}`;
+  return ` Tổng cộng khoảng ${hours} giờ.${partial}${checkpoint}`;
 }

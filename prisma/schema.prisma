@@ -870,7 +870,7 @@ model StudyPlan {
   profile Profile @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   status   String @default("active") // "active" | "archived" | "completed"
-  examType String @default("lr") // "lr" | "sw"
+  examType String @default("lr") @map("exam_type") // "lr" | "sw"
 
   /// Bài test đầu vào — nguồn của baseline
   baselineAttemptId String? @map("baseline_attempt_id")

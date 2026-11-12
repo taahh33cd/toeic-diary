@@ -67,3 +67,14 @@ export function formatDayLabel(dateKey: string): string {
   const [, m, d] = dateKey.split("-");
   return `${WEEKDAY_VI[weekdayOf(dateKey)]} ${d}/${m}`;
 }
+
+/**
+ * Nối danh sách theo lối tiếng Việt: "a, b và c".
+ *
+ * Nối bằng " và " cho mọi phần tử thì ra "Part 6 và Part 5 và Part 1" — đọc
+ * như máy. Để ở đây vì đây là file tiện ích chung của khu Lộ trình.
+ */
+export function joinVi(items: string[]): string {
+  if (items.length <= 1) return items[0] ?? "";
+  return `${items.slice(0, -1).join(", ")} và ${items[items.length - 1]}`;
+}

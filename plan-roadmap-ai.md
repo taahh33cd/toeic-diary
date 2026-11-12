@@ -658,13 +658,48 @@ tuần 1 đúng, chạy bằng script.
   Đây đúng là việc của lớp AI ở Phase 2 — đảo thứ tự ưu tiên trong biên độ cho phép.
 - **RLS chưa bật** cho 4 bảng mới (cũng như 29 bảng sẵn có) — xem §14.
 
-### Phase 2 — Sinh lộ trình thật + màn hình kết quả
+### Phase 2 — Sinh lộ trình thật + màn hình kết quả — ✅ XONG 2026-11-12
 **Mục tiêu**: học viên làm test xong là thấy lộ trình.
-- `lib/roadmap/ai.ts` + zod + fallback.
-- `/api/roadmap/intake`, `/api/roadmap/generate`, `/api/roadmap`.
-- `/journal/roadmap/start`, `/journal/roadmap/result`, `/journal/roadmap`.
-- **Verify**: tài khoản test mới → làm 1 đề (có thể nộp sớm) → có plan + tuần 1 +
-  4 tuần khung tháng; tắt `GEMINI_API_KEY` vẫn ra lộ trình (bản rule).
+- ✅ `lib/roadmap/ai.ts` (Gemini + zod + whitelist catalogId + timeout 12s + fallback),
+  `months.ts`, `persist.ts`, `access.ts`, `intake-storage.ts`.
+- ✅ `POST /api/roadmap/generate`, `GET /api/roadmap`.
+- ✅ `/roadmap`, `/roadmap/start`, `/roadmap/result` + `components/roadmap/*`.
+- ✅ **Verify**: `npm run roadmap:verify -- --attempt <id>` (12 khẳng định, chạy
+  trên DB thật rồi tự xoá lộ trình thử). Chạy cả hai đường: có AI (3,1s) và
+  `--no-ai` (0,7s) đều ra lộ trình đầy đủ. `npm run build` sạch, `tsc` + `eslint` sạch.
+
+**Khác với kế hoạch ban đầu — 3 điểm:**
+1. **Trang đặt ở `/roadmap` chứ không `/journal/roadmap`.** Layout `/journal` bắt
+   buộc có `studentCode` (mã do giáo viên cấp), không có thì bị đá sang trang bán
+   khoá — tức là đặt trong journal thì tính năng chỉ đến được học viên nội bộ,
+   trái quyết định #9. Phase 3 vẫn đổ việc hằng ngày vào `/journal/missions` cho
+   học viên có sổ.
+2. **Bỏ `/api/roadmap/intake`.** Câu trả lời form giữ ở `localStorage`
+   (`lib/roadmap/intake-storage.ts`): giữa form và lúc sinh lộ trình có một bài
+   test hai tiếng, lưu server-side nghĩa là đẻ thêm một bảng chỉ để giữ trạng
+   thái nửa chừng rồi phải tự dọn. Mất thì form hỏi lại, mỗi câu một cú bấm.
+3. **Mốc điểm từng tháng do code tính, AI chỉ viết chữ.** Khác với bản zod phác
+   trong §8 (có `targetScore` trong `monthGoals`): con số điểm là thứ học viên
+   bám vào, sai một lần là mất tin cả lộ trình.
+
+**Ba lỗi phát hiện khi chạy thử thật:**
+1. `examType` thiếu `@map("exam_type")` → Prisma gãy ngay truy vấn đầu tiên.
+   Migration đúng, schema sai — loại lỗi chỉ lộ ra khi chạm DB thật.
+2. **AI viết đè mất dữ kiện.** Nó viết lại câu mục tiêu tuần và xoá luôn "tuần
+   này chỉ còn 2 buổi" + số giờ. Đã tách `weekFacts()` khỏi phần văn: AI viết
+   câu, hệ thống nối dữ kiện vào sau, nên dù AI viết gì thì mấy con số vẫn còn.
+3. `setState` trong `useEffect` để đọc `localStorage` bị lint React chặn và gây
+   lệch hydrate. Đổi sang `useSyncExternalStore` — đúng API cho nguồn ngoài React.
+
+**Hạn chế còn lại:**
+- Việc **chưa tự tích xong** (đó là Phase 3) — trang nói rõ điều này với học viên
+  thay vì để họ chờ một dấu tích không bao giờ tới.
+- Chưa xem được giao diện với dữ liệu thật: `FEATURE_LAUNCH_DATE = null` nên mọi
+  tài khoản đều thấy màn "đang chạy thử". Bật bằng cờ `roadmap_enabled` cho một
+  tài khoản là xem được ngay.
+- Tuần đầu bị cụt khi học viên bắt đầu giữa tuần (tuần luôn neo vào thứ Hai).
+  Lịch vẫn đúng và câu mục tiêu có nói ra, nhưng nếu thấy khó chịu thì Phase 4
+  đổi được thành "tuần 1 chạy 7 ngày kể từ hôm nay".
 
 ### Phase 3 — Nhiệm vụ hằng ngày + tự tích xong
 **Mục tiêu**: vòng lặp hằng ngày khép kín.

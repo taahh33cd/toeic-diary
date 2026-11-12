@@ -189,6 +189,19 @@ export type DraftDay = {
   tasks: DraftTask[];
 };
 
+/** Một mục tiêu tháng. Mốc điểm do code tính, lời mô tả có thể do AI viết lại. */
+export type MonthGoal = {
+  monthIndex: number;
+  label: string;
+  targetScore: number;
+  /** Nhãn các part được chữa trong tháng, vd "Part 5 · Hoàn thành câu". */
+  focus: string[];
+  summary: string;
+  /** "YYYY-MM-DD" */
+  startDate: string;
+  endDate: string;
+};
+
 export type DraftWeek = {
   weekIndex: number;
   startDate: string;
