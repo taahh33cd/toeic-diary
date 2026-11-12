@@ -26,7 +26,7 @@
 | 11 | Tích hợp | Push nhắc việc · XP/streak/huy hiệu · trang GV ở `/admin` · biểu đồ tiến độ |
 | 12 | Quan hệ với BTVN | **BTVN ưu tiên** — ngày có BTVN thì lộ trình tự giảm tải |
 | 13 | Bỏ lỡ ngày | Lịch mềm: dồn tối đa 1–2 việc quan trọng sang hôm sau, phần còn lại đánh dấu "lỡ" |
-| 14 | HV cũ | **Chỉ dành cho HV mới** (xem §15 — điểm này còn một chỗ cần bạn chốt lại) |
+| 14 | HV cũ | **Chỉ tài khoản tạo sau ngày bật tính năng** (`Profile.createdAt >= FEATURE_LAUNCH_DATE`) — xem §15 |
 | 15 | Nơi lưu | **Postgres/Prisma**, bảng mới |
 | 16 | Quy mô | MVP gọn trước, mở rộng sau; mỗi phase chạy được độc lập |
 
@@ -76,8 +76,9 @@
       │                     5. Mỗi tuần học được mấy ngày?        (3/4/5/6/7)
       │                     (+ tuỳ chọn) Ưu tiên kỹ năng nào?
       ▼
-/skills/full-tests/est-2026/test-N   ← đề đầu vào, chế độ "thi thử", tính giờ
-      │                                 (engine, UI, chấm điểm: dùng y nguyên cái đang có)
+/skills/full-tests/est-2026/est-2026-test-1   ← đề đầu vào GHIM CỐ ĐỊNH, chế độ
+      │                                 "thi thử", tính giờ. Engine/UI/chấm điểm
+      │                                 dùng y nguyên cái đang có.
       ▼
 Nộp bài → FullTestAttempt.status = "done", có listening/reading/total/partScores
       │
@@ -278,8 +279,11 @@ model PlanEvent {
 }
 ```
 
-Thêm quan hệ ngược trong `model Profile`:
+Thêm vào `model Profile`:
 ```prisma
+  /// Mở lộ trình cho tài khoản tạo TRƯỚC ngày bật tính năng (xem §15.1).
+  roadmapEnabled Boolean @default(false) @map("roadmap_enabled")
+
   studyPlans  StudyPlan[]
   studyWeeks  StudyWeek[]
   studyTasks  StudyTask[]
@@ -617,7 +621,8 @@ Khoảnh khắc quan trọng nhất của tính năng. Phải có:
 ### Phase 1 — Nền dữ liệu & chẩn đoán (không UI)
 **Mục tiêu**: từ một `FullTestAttempt` ra được `WeaknessReport` và một `DraftPlan`
 tuần 1 đúng, chạy bằng script.
-- 4 bảng Prisma + migration tay.
+- 4 bảng Prisma + cột `Profile.roadmapEnabled` + migration tay.
+- `lib/roadmap/config.ts` (ngày bật, đề ghim, số tháng mặc định — §15).
 - `lib/roadmap/diagnose.ts` + test đơn vị (3 hồ sơ mẫu: yếu đều 350, lệch nghe 550, lệch đọc 600).
 - `scripts/roadmap/build-catalog.mjs` + `catalog.meta.ts` + `catalog.ts`.
 - `npm run check:catalog` chặn href chết.
@@ -660,7 +665,8 @@ tuần 1 đúng, chạy bằng script.
 - Speaking/Writing vào lộ trình (dùng AI chấm sẵn có làm thước đo; chú ý hạn mức AI
   đã có cột riêng theo `project_ai_grading`).
 - Mini-test đầu vào rút gọn 45 phút cho người ngại làm 2 tiếng.
-- Mở cho học viên cũ (xem §15).
+- Mở cho học viên cũ: bỏ điều kiện `createdAt >= FEATURE_LAUNCH_DATE` trong
+  `canUseRoadmap` (§15.1) — một dòng, không phải làm lại luồng.
 
 ---
 
@@ -682,23 +688,71 @@ tuần 1 đúng, chạy bằng script.
 
 ---
 
-## 15. Điểm còn cần bạn chốt
+## 15. Ba quyết định bổ sung (đã chốt 2026-11-12)
 
-1. **"Học viên mới" định nghĩa thế nào?**
-   Bạn chọn "chỉ dành cho HV mới", nhưng cần một ranh giới chạy được bằng code.
-   Đề xuất: *hiện lối vào lộ trình cho tài khoản chưa có `StudyPlan` nào* — tức là
-   gồm cả người đã dùng web lâu nhưng chưa từng tạo lộ trình. Nếu bạn muốn nghĩa hẹp
-   (chỉ tài khoản tạo sau ngày bật tính năng) thì nói, tôi đổi điều kiện thành
-   `Profile.createdAt >= FEATURE_LAUNCH_DATE`.
-   Dù chọn cách nào, HV đã thi thử full test trong 30 ngày gần nhất nên được dùng
-   luôn kết quả đó thay vì bắt làm lại.
+Gom hết vào một file hằng số `lib/roadmap/config.ts` để sau này đổi một chỗ:
 
-2. **Đề đầu vào lấy đề nào trong 10 đề EST 2026?**
-   Đề xuất: ghim cố định `est-2026-test-1` cho mọi HV mới (so sánh giữa các HV được,
-   và giữ 9 đề còn lại làm mốc kiểm tra hằng tháng). Nếu sợ lộ đề thì xoay vòng
-   theo `userId % 3` trong 3 đề đầu.
+```ts
+/** Ngày bật tính năng. Chỉ tài khoản tạo từ ngày này trở đi thấy lối vào lộ trình. */
+export const FEATURE_LAUNCH_DATE = new Date("2026-__-__T00:00:00+07:00"); // điền lúc deploy
 
-3. **Thời lượng lộ trình tối đa** khi HV không đặt ngày thi: đề xuất mặc định 3 tháng.
+/** Đề đầu vào ghim cố định cho mọi học viên mới. */
+export const BASELINE_EXAM_SLUG = "est-2026";
+export const BASELINE_TEST_SLUG = "est-2026-test-1";
+
+/** Độ dài lộ trình khi học viên không đặt ngày thi. */
+export const DEFAULT_PLAN_MONTHS = 3;
+```
+
+### 15.1 Ai thấy lối vào — `Profile.createdAt >= FEATURE_LAUNCH_DATE`
+
+Nghĩa hẹp, đúng chữ "học viên mới". Hệ quả phải xử lý:
+
+- **Người dùng cũ không thấy gì cả.** Không CTA trong `/journal`, không mục trong
+  điều hướng. Nếu họ gõ thẳng `/journal/roadmap` → trang nói rõ "Tính năng đang
+  chạy thử với học viên mới" chứ không phải 404 (404 làm người ta tưởng web hỏng).
+- **Cờ mở tay cho từng người.** Thêm `Profile.roadmapEnabled Boolean @default(false)`
+  để bật cho học viên cũ nào muốn thử (bạn hoặc GV bật ở `/admin`). Không có cờ này
+  thì mỗi lần muốn cho ai dùng thử lại phải sửa code và deploy.
+- **Điều kiện cuối cùng trong code**:
+  ```ts
+  const canUseRoadmap =
+    profile.roadmapEnabled || profile.createdAt >= FEATURE_LAUNCH_DATE;
+  ```
+- **Phase 6 mở rộng** cho người dùng cũ chỉ còn là việc đổi một dòng này, không phải
+  làm lại luồng.
+
+> Lưu ý về rủi ro: nhóm đang hoạt động là nhóm sẵn sàng làm 2 tiếng test nhất, nên
+> nghĩa hẹp sẽ làm lượng người thử nghiệm ban đầu rất mỏng — có thể cả tuần đầu
+> chưa có ai chạy hết một vòng lộ trình. Cờ `roadmapEnabled` ở trên chính là đường
+> thoát: tự bật cho 5–10 học viên cũ để có dữ liệu thật mà chỉnh engine.
+
+**Dùng lại kết quả thi thử cũ**: ai đã có `FullTestAttempt` done, đủ 7 part, trong
+**30 ngày** gần nhất thì màn hình onboarding hỏi "Dùng luôn kết quả ngày dd/mm
+(tổng NNN điểm) hay làm đề mới?" — không bắt làm lại 2 tiếng.
+
+### 15.2 Đề đầu vào — ghim `est-2026-test-1`
+
+- Mọi học viên mới làm **cùng một đề** → baseline so sánh được giữa các học viên,
+  và nếu đề có câu lỗi thì lộ ra ngay vì ai cũng đụng.
+- 9 đề còn lại dành làm **mốc kiểm tra hằng tháng**, chọn theo thứ tự
+  `est-2026-test-2`, `-3`, ... để không lặp đề đã làm.
+- Planner phải loại `est-2026-test-1` khỏi catalog mốc kiểm tra, nếu không tháng
+  thứ hai sẽ giao lại chính đề đầu vào (điểm tăng ảo vì nhớ đáp án).
+- Rủi ro lộ đề: chấp nhận ở giai đoạn này. Nếu sau thấy điểm đầu vào cao bất thường
+  so với mốc tháng, đổi sang xoay vòng `userId % 3` — chỉ là đổi hằng số
+  `BASELINE_TEST_SLUG` thành một hàm.
+
+### 15.3 Không đặt ngày thi → lộ trình 3 tháng
+
+- `monthGoals` sinh 3 phần tử, mốc điểm chia đều theo tốc độ ước tính
+  (≈ +50 điểm/tháng với 45 phút/ngày, co giãn theo `minutesPerDay` thật).
+- Hết tháng 3: `StudyPlan.status = "completed"` và màn hình tổng kết đề nghị
+  "Đặt mục tiêu mới" → sinh plan mới với baseline là full test gần nhất.
+- Có `deadline` thì lấy `min(deadline, +3 tháng)` làm tầm vẽ khung tháng, nhưng
+  `monthGoals` vẫn kéo tới đúng `deadline` nếu xa hơn — học viên cần thấy đường tới
+  ngày thi thật, chỉ là tháng thứ 4 trở đi chỉ có mục tiêu điểm chứ không có chủ đề
+  tuần chi tiết (sinh cuốn chiếu, §0 mục 4).
 
 ---
 
