@@ -3,15 +3,6 @@ import type { Skill, SkillUnit } from "@/lib/skills/structure";
 import type { ListeningPart, PracticeCatalogEntry } from "@/lib/listening-practice/types";
 import type { TestStat } from "@/lib/journal/attempts";
 
-/** Màu dòng điểm theo tỷ lệ đúng lần gần nhất. */
-function scoreColor(stat: TestStat): string {
-  if (stat.latestCorrect === null || !stat.latestGradable) return "var(--text-muted)";
-  const p = stat.latestCorrect / stat.latestGradable;
-  if (p >= 0.8) return "#15803d";
-  if (p >= 0.5) return "#a16207";
-  return "#b91c1c";
-}
-
 export function PracticeTestList({
   skill,
   unit,
@@ -108,9 +99,14 @@ export function PracticeTestList({
 
               {/* Kết quả của chính học viên: lần gần nhất, số lần, bài còn dở */}
               {!locked && stat && stat.attempts > 0 && (
-                <span style={{ display: "block", fontSize: "0.72rem", marginTop: 5, fontWeight: 600, color: scoreColor(stat) }}>
-                  Lần gần nhất {stat.latestCorrect}/{stat.latestGradable}
-                  <span style={{ fontWeight: 500, color: "var(--text-muted)" }}>
+                // Cố ý không tô màu theo điểm: thẻ đề đổi nền theo chế độ sáng/tối
+                // nên mọi màu đặt cứng đều chìm ở một trong hai chế độ.
+                <span style={{ display: "block", fontSize: "0.72rem", marginTop: 5, color: "var(--text-secondary)" }}>
+                  Lần gần nhất{" "}
+                  <b style={{ color: "var(--text-primary)" }}>
+                    {stat.latestCorrect}/{stat.latestGradable}
+                  </b>
+                  <span style={{ color: "var(--text-muted)" }}>
                     {" · "}{stat.attempts} lần
                   </span>
                 </span>
