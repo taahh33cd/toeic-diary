@@ -5,6 +5,7 @@ import type { FullTest, PartNumber } from "@/lib/full-tests/types";
 import { PALETTE, type Skin } from "@/components/full-tests/theme";
 import type { RunConfig } from "@/components/full-tests/SetupPanel";
 import { ExamScreen } from "@/components/full-tests/ExamScreen";
+import { SubmitFailedBanner } from "@/components/full-tests/SubmitFailedBanner";
 import { ReviewPanel } from "@/components/full-tests/ReviewPanel";
 import { useAttempt, type AttemptRow } from "@/components/shared/useAttempt";
 import { PartSetupPanel } from "./PartSetupPanel";
@@ -48,6 +49,9 @@ export function PartPracticeRunner({
   const [marked, setMarked] = useState<number[]>([]);
   const [resumable, setResumable] = useState<AttemptRow | null>(null);
   const [busy, setBusy] = useState(false);
+  /** Làm tiếp bài dở: đồng hồ + vị trí audio để ExamScreen chạy tiếp đúng chỗ */
+  const [resumeAt, setResumeAt] = useState<Pick<AttemptRow, "secondsLeft" | "progress"> | null>(null);
+  const [saveFailed, setSaveFailed] = useState(false);
 
   const P = PALETTE[skin];
   const identity = useMemo(() => ({ skill, part }), [skill, part]);
@@ -96,6 +100,8 @@ export function PartPracticeRunner({
     setConfig((resume?.config as RunConfig) ?? cfg);
     setAnswers(resume ? toAnswerMap(resume.answers) : {});
     setMarked(resume?.marked ?? []);
+    setResumeAt(resume ? { secondsLeft: resume.secondsLeft, progress: resume.progress } : null);
+    setSaveFailed(false);
     setResumable(null);
     if (!row) {
       // Không tạo được lượt trên server (mất mạng) — vẫn cho làm, chỉ là
@@ -109,9 +115,17 @@ export function PartPracticeRunner({
     setAnswers(a);
     setMarked(m);
     setBusy(true);
-    await attempt.submit(a, m);
+    const ok = await attempt.submit(a, m, config ?? undefined);
     setBusy(false);
+    setSaveFailed(!ok);
     setPhase("result");
+  }
+
+  async function retrySave() {
+    setBusy(true);
+    const ok = await attempt.submit(answers, marked, config ?? undefined);
+    setBusy(false);
+    setSaveFailed(!ok);
   }
 
   if (phase === "setup") {
@@ -168,6 +182,8 @@ export function PartPracticeRunner({
         onSubmit={finish}
         initialAnswers={answers}
         initialMarked={marked}
+        initialSecondsLeft={resumeAt ? resumeAt.secondsLeft : undefined}
+        initialProgress={resumeAt?.progress}
         saveState={attempt.saveState}
         onProgress={attempt.save}
         realLabel="Thi thử"
@@ -177,6 +193,8 @@ export function PartPracticeRunner({
 
   if (phase === "result" && config) {
     return (
+      <>
+      {saveFailed && <SubmitFailedBanner P={P} busy={busy} onRetry={retrySave} />}
       <ReviewPanel
         test={test}
         config={config}
@@ -188,6 +206,7 @@ export function PartPracticeRunner({
         backHref={backHref}
         onRetry={() => { setPhase("setup"); setAnswers({}); setMarked([]); }}
       />
+      </>
     );
   }
 

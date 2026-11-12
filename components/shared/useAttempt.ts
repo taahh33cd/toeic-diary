@@ -14,6 +14,14 @@ export interface AttemptRow {
   marked: number[];
   secondsLeft: number | null;
   updatedAt: string;
+  /** Vị trí phát audio của chế độ thi thật — chỉ có trong bản sao cục bộ */
+  progress?: ExamProgress;
+}
+
+/** Chế độ thi thật đang ở đâu: phần nghe tới đoạn nào, hay đã sang Reading. */
+export interface ExamProgress {
+  stage: "listening" | "reading";
+  playIndex: number;
 }
 
 /** Khớp RunConfig của cả full test lẫn luyện part — hook không cần biết chi tiết. */
@@ -30,8 +38,16 @@ interface LocalMirror {
   attemptId: string;
   answers: Record<number, string>;
   marked: number[];
+  secondsLeft?: number | null;
+  progress?: ExamProgress;
   savedAt: number;
 }
+
+type SaveBody = {
+  answers: Record<number, string>;
+  marked: number[];
+  secondsLeft: number | null;
+};
 
 const SAVE_DEBOUNCE_MS = 4000;
 
@@ -83,7 +99,7 @@ export function useAttempt({
   const [attemptId, setAttemptId] = useState<string | null>(null);
   const [saveState, setSaveState] = useState<SaveState>("idle");
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const pending = useRef<{ answers: Record<number, string>; marked: number[]; secondsLeft: number | null } | null>(null);
+  const pending = useRef<SaveBody | null>(null);
 
   /** Lượt đang làm dở trên server, kèm đáp án mới hơn từ bản sao cục bộ nếu có. */
   const fetchInProgress = useCallback(async (): Promise<AttemptRow | null> => {
@@ -96,14 +112,18 @@ export function useAttempt({
       if (!attempt) return null;
 
       const mirror = readMirror(mirrorKey);
-      if (mirror?.attemptId === attempt.id && mirror.savedAt > Date.parse(attempt.updatedAt)) {
+      if (mirror?.attemptId !== attempt.id) return attempt;
+      // Vị trí audio chỉ máy này biết, lấy luôn. Đáp án/đồng hồ thì lấy bản mới hơn.
+      const withProgress = { ...attempt, progress: mirror.progress };
+      if (mirror.savedAt > Date.parse(attempt.updatedAt)) {
         return {
-          ...attempt,
+          ...withProgress,
           answers: Object.fromEntries(Object.entries(mirror.answers)),
           marked: mirror.marked,
+          secondsLeft: mirror.secondsLeft !== undefined ? mirror.secondsLeft : attempt.secondsLeft,
         };
       }
-      return attempt;
+      return withProgress;
     } catch {
       return null;
     }
@@ -152,37 +172,76 @@ export function useAttempt({
     }
   }, [attemptId, basePath]);
 
-  /** Gọi mỗi khi đáp án đổi; ghi localStorage ngay, đẩy lên server sau debounce. */
+  /**
+   * Gọi mỗi khi đáp án/đồng hồ đổi; ghi localStorage ngay, đẩy lên server sau
+   * debounce. `now` = gửi ngay bằng keepalive (lúc ẩn tab / sắp đóng trang).
+   */
   const save = useCallback(
-    (answers: Record<number, string>, marked: number[], secondsLeft: number | null) => {
+    (
+      answers: Record<number, string>,
+      marked: number[],
+      secondsLeft: number | null,
+      opts?: { progress?: ExamProgress; now?: boolean },
+    ) => {
       if (!attemptId) return;
-      writeMirror(mirrorKey, { attemptId, answers, marked, savedAt: Date.now() });
+      writeMirror(mirrorKey, {
+        attemptId, answers, marked, secondsLeft, progress: opts?.progress, savedAt: Date.now(),
+      });
       pending.current = { answers, marked, secondsLeft };
       if (timer.current) clearTimeout(timer.current);
+      if (opts?.now) {
+        const body = pending.current;
+        pending.current = null;
+        fetch(`${basePath}/${attemptId}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+          keepalive: true,
+        }).catch(() => {});
+        return;
+      }
       timer.current = setTimeout(flush, SAVE_DEBOUNCE_MS);
     },
-    [attemptId, mirrorKey, flush],
+    [attemptId, basePath, mirrorKey, flush],
   );
 
+  /**
+   * Nộp bài. Trả true khi server đã chốt lượt làm. Thất bại thì giữ nguyên bản
+   * sao cục bộ để còn nộp lại. Chưa tạo được lượt (mất mạng lúc bắt đầu) thì
+   * tạo lượt trước rồi mới nộp.
+   */
   const submit = useCallback(
-    async (answers: Record<number, string>, marked: number[]) => {
+    async (answers: Record<number, string>, marked: number[], config?: AttemptConfig): Promise<boolean> => {
       if (timer.current) clearTimeout(timer.current);
       pending.current = null;
-      if (!attemptId) return null;
+      let id = attemptId;
       try {
-        const r = await fetch(`${basePath}/${attemptId}`, {
+        if (!id && config) {
+          const r = await fetch(basePath, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ...identity, testSlug, config, restart: false }),
+          });
+          if (r.ok) {
+            id = ((await r.json()) as { attempt: AttemptRow }).attempt.id;
+            setAttemptId(id);
+          }
+        }
+        if (!id) return false;
+        const r = await fetch(`${basePath}/${id}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ answers, marked }),
         });
-        clearMirror(mirrorKey);
-        if (!r.ok) return null;
-        return (await r.json()) as { attempt: AttemptRow; result: unknown };
+        // 409 = lượt này đã được nộp (vd lần bấm trước đã tới server) — coi như xong.
+        const ok = r.ok || r.status === 409;
+        if (ok) clearMirror(mirrorKey);
+        return ok;
       } catch {
-        return null;
+        return false;
       }
     },
-    [attemptId, basePath, mirrorKey],
+    [attemptId, basePath, mirrorKey, identity, testSlug],
   );
 
   // Đóng tab / chuyển tab giữa chừng thì đẩy nốt lần lưu đang chờ.

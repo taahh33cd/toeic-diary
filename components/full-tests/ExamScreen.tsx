@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { PARTS, partMeta } from "@/lib/full-tests/parts";
+import { PARTS, REAL_READING_MINUTES, partMeta } from "@/lib/full-tests/parts";
+import type { ExamProgress } from "@/components/shared/useAttempt";
 import type {
   FullTest, FullTestGroup, FullTestQuestion, PartNumber,
 } from "@/lib/full-tests/types";
@@ -61,6 +62,8 @@ export function ExamScreen({
   onSubmit,
   initialAnswers,
   initialMarked,
+  initialSecondsLeft,
+  initialProgress,
   saveState,
   onProgress,
   realLabel = "Thi thật",
@@ -72,8 +75,17 @@ export function ExamScreen({
   onSubmit: (answers: Record<number, string>, marked: number[]) => void;
   initialAnswers?: Record<number, string>;
   initialMarked?: number[];
+  /** Làm tiếp bài dở: đồng hồ còn lại lúc lưu (null = không bấm giờ / đang ở phần nghe) */
+  initialSecondsLeft?: number | null;
+  /** Làm tiếp bài dở ở chế độ thi thật: đang ở đoạn audio nào */
+  initialProgress?: ExamProgress;
   saveState?: "idle" | "saving" | "saved" | "error";
-  onProgress?: (answers: Record<number, string>, marked: number[], secondsLeft: number | null) => void;
+  onProgress?: (
+    answers: Record<number, string>,
+    marked: number[],
+    secondsLeft: number | null,
+    opts?: { progress?: ExamProgress; now?: boolean },
+  ) => void;
   /** Màn luyện một part gọi chế độ này là "Thi thử" thay vì "Thi thật" */
   realLabel?: string;
 }) {
@@ -88,7 +100,31 @@ export function ExamScreen({
 
   const [answers, setAnswers] = useState<Record<number, string>>(initialAnswers ?? {});
   const [marked, setMarked] = useState<Set<number>>(new Set(initialMarked ?? []));
-  const [stage, setStage] = useState<Stage>(real && listeningParts.length ? "listening" : "reading");
+
+  const playlist = useMemo(() => (real ? groups.filter((g) => g.audio) : []), [real, groups]);
+
+  // Điểm xuất phát của chế độ thi thật. Làm tiếp bài dở thì lấy vị trí đã lưu
+  // trên máy này; không có (đổi máy) thì suy ra: đồng hồ Reading đã chạy ⇒ đang
+  // ở Reading, còn không thì nghe tiếp từ đoạn sau câu cuối cùng đã trả lời.
+  const [start] = useState<ExamProgress>(() => {
+    if (!real || !playlist.length) return { stage: "reading", playIndex: 0 };
+    if (initialProgress) return initialProgress;
+    const resuming = initialAnswers !== undefined && (
+      initialSecondsLeft != null || Object.keys(initialAnswers).length > 0
+    );
+    if (!resuming) return { stage: "listening", playIndex: 0 };
+    if (initialSecondsLeft != null) return { stage: "reading", playIndex: playlist.length };
+    let last = -1;
+    playlist.forEach((g, i) => {
+      if (g.questions.some((q) => initialAnswers[q.number])) last = i;
+    });
+    const next = last + 1;
+    return next >= playlist.length
+      ? { stage: "reading", playIndex: playlist.length }
+      : { stage: "listening", playIndex: next };
+  });
+
+  const [stage, setStage] = useState<Stage>(start.stage);
   const [activePart, setActivePart] = useState<PartNumber>(
     (real && listeningParts.length ? listeningParts[0].part : partsInPlay[0]?.part) ?? 1,
   );
@@ -101,18 +137,24 @@ export function ExamScreen({
   const [zoomed, setZoomed] = useState<string | null>(null);
   const [splitPct, setSplitPct] = useState(58);
 
-  const countdownTotal = real
-    ? stage === "reading" && readingParts.length ? 75 * 60 : null
-    : config.minutes > 0 ? config.minutes * 60 : null;
-  const [secondsLeft, setSecondsLeft] = useState<number | null>(countdownTotal);
-
-  const stageRef = useRef(stage);
+  // Đồng hồ tính theo mốc giờ thật (deadline), không đếm từng nhịp setTimeout:
+  // tab bị ẩn thì trình duyệt làm chậm timer, còn mỗi lần render lại cũng không
+  // được làm lệch giờ. Làm tiếp bài dở thì chạy tiếp từ số giây đã lưu.
+  const [deadline, setDeadline] = useState<number | null>(() => {
+    const total = initialSecondsLeft != null
+      ? initialSecondsLeft
+      : real
+        ? start.stage === "reading" && readingParts.length ? REAL_READING_MINUTES * 60 : null
+        : config.minutes > 0 ? config.minutes * 60 : null;
+    return total == null ? null : Date.now() + total * 1000;
+  });
+  const [now, setNow] = useState(() => Date.now());
   useEffect(() => {
-    if (stageRef.current !== stage) {
-      stageRef.current = stage;
-      setSecondsLeft(real && stage === "reading" && readingParts.length ? 75 * 60 : null);
-    }
-  }, [stage, real, readingParts.length]);
+    if (deadline === null) return;
+    const t = setInterval(() => setNow(Date.now()), 500);
+    return () => clearInterval(t);
+  }, [deadline]);
+  const secondsLeft = deadline === null ? null : Math.max(0, Math.ceil((deadline - now) / 1000));
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 900px)");
@@ -120,31 +162,38 @@ export function ExamScreen({
     on();
     mq.addEventListener("change", on);
     const saved = Number(localStorage.getItem(SPLIT_KEY));
+    // localStorage chỉ đọc được sau khi mount (đọc lúc khởi tạo sẽ lệch hydration)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (saved >= 30 && saved <= 75) setSplitPct(saved);
     return () => mq.removeEventListener("change", on);
   }, []);
 
-  const submit = useCallback(() => onSubmit(answers, [...marked]), [answers, marked, onSubmit]);
+  // Nộp đúng một lần: bấm hai lần, hoặc hết giờ đúng lúc đang bấm, đều chỉ gửi một request.
+  const [submitting, setSubmitting] = useState(false);
+  const submittingRef = useRef(false);
+  const submit = useCallback(() => {
+    if (submittingRef.current) return;
+    submittingRef.current = true;
+    setSubmitting(true);
+    onSubmit(answers, [...marked]);
+  }, [answers, marked, onSubmit]);
 
+  const submitRef = useRef(submit);
+  useEffect(() => { submitRef.current = submit; }, [submit]);
   useEffect(() => {
-    if (secondsLeft === null) return;
-    if (secondsLeft <= 0) {
-      if (config.autoSubmit) submit();
-      return;
+    if (secondsLeft === 0 && config.autoSubmit) submitRef.current();
+  }, [secondsLeft, config.autoSubmit]);
+
+  // Rời trang giữa bài: hỏi lại trước khi thoát (đóng tab, tải lại, gõ địa chỉ khác).
+  useEffect(() => {
+    function warn(e: BeforeUnloadEvent) {
+      if (submittingRef.current) return;
+      e.preventDefault();
+      e.returnValue = "";
     }
-    const t = setTimeout(() => setSecondsLeft((s) => (s === null ? null : s - 1)), 1000);
-    return () => clearTimeout(t);
-  }, [secondsLeft, config.autoSubmit, submit]);
-
-  // Đồng hồ đổi mỗi giây nên đọc qua ref — chỉ lưu khi đáp án/đánh dấu thay đổi,
-  // không phải mỗi nhịp đếm.
-  const secondsRef = useRef(secondsLeft);
-  secondsRef.current = secondsLeft;
-
-  useEffect(() => {
-    onProgress?.(answers, [...marked], secondsRef.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [answers, marked]);
+    window.addEventListener("beforeunload", warn);
+    return () => window.removeEventListener("beforeunload", warn);
+  }, []);
 
   // Chỉ chọn part Listening thì hết audio vẫn giữ các part đó lại, không thì
   // màn hình trắng trơn chẳng còn gì bấm ngoài nút nộp bài.
@@ -156,6 +205,8 @@ export function ExamScreen({
 
   useEffect(() => {
     if (visibleParts.length && !visibleParts.some((p) => p.part === activePart)) {
+      // Sang Reading thì part đang mở bị khoá ⇒ chuyển sang part còn mở
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActivePart(visibleParts[0].part);
       setGroupIndex(0);
     }
@@ -196,14 +247,15 @@ export function ExamScreen({
 
   // ── Audio ──────────────────────────────────────────────────────────────────
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [playIndex, setPlayIndex] = useState(0);
+  const [playIndex, setPlayIndex] = useState(Math.min(start.playIndex, Math.max(0, playlist.length - 1)));
   const [playing, setPlaying] = useState(false);
+  /** Trình duyệt chặn tự phát (thường gặp trên iOS) ⇒ cần người dùng bấm lại */
+  const [blocked, setBlocked] = useState(false);
+  const [audioIssue, setAudioIssue] = useState<string | null>(null);
   const [gap, setGap] = useState(0);
   // Chỉ nhảy đoạn khi đoạn hiện tại đã phát xong. Không suy từ gap === 0 được:
   // lúc mới bấm bắt đầu thì gap cũng đang 0 và sẽ nhảy mất đoạn đầu.
   const [pendingNext, setPendingNext] = useState(false);
-
-  const playlist = useMemo(() => (real ? groups.filter((g) => g.audio) : []), [real, groups]);
 
   const advance = useCallback(() => {
     const cur = playlist[playIndex];
@@ -221,28 +273,98 @@ export function ExamScreen({
 
   useEffect(() => {
     if (!real || !playing || !pendingNext || gap > 0) return;
+    // Hết thời gian trả lời ⇒ sang đoạn kế: trạng thái suy từ đồng hồ gap
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPendingNext(false);
     const next = playIndex + 1;
     if (next >= playlist.length) {
       setPlaying(false);
       setStage("reading");
+      setDeadline(readingParts.length ? Date.now() + REAL_READING_MINUTES * 60 * 1000 : null);
       return;
     }
     setPlayIndex(next);
-  }, [gap, real, playing, pendingNext, playIndex, playlist.length]);
+  }, [gap, real, playing, pendingNext, playIndex, playlist.length, readingParts.length]);
 
   // đoạn đang phát quyết định nhóm đang hiển thị
   const current = playlist[playIndex];
   useEffect(() => {
     if (!real || !current) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     jumpToQuestion(current.questionStart);
   }, [real, current, jumpToQuestion]);
+
+  // play() bị từ chối vì trình duyệt chặn tự phát ⇒ hiện nút cho người dùng bấm.
+  // Lỗi tải file thì để onError lo (AbortError là do đổi src giữa chừng, bỏ qua).
+  function playCurrent() {
+    audioRef.current?.play().then(
+      () => setBlocked(false),
+      (err: unknown) => {
+        if ((err as { name?: string })?.name === "NotAllowedError") setBlocked(true);
+      },
+    );
+  }
+  const playRef = useRef(playCurrent);
+  useEffect(() => { playRef.current = playCurrent; });
 
   // đổi đoạn ⇒ phát ngay; autoPlay không kích lại khi chỉ src thay đổi
   useEffect(() => {
     if (!real || !playing) return;
-    audioRef.current?.play().catch(() => {});
+    playRef.current();
   }, [real, playing, playIndex]);
+
+  // File audio lỗi: thử tải lại một lần, vẫn lỗi thì bỏ qua đoạn đó (vẫn cho
+  // thời gian trả lời) — không thì playlist đứng im, không bao giờ sang Reading.
+  const failures = useRef({ index: -1, count: 0 });
+  function onAudioError() {
+    if (!playing) return;
+    const f = failures.current;
+    if (f.index !== playIndex) failures.current = { index: playIndex, count: 0 };
+    failures.current.count++;
+    if (failures.current.count === 1) {
+      setTimeout(() => {
+        const el = audioRef.current;
+        if (!el) return;
+        el.load();
+        playRef.current();
+      }, 1500);
+      return;
+    }
+    if (failures.current.count === 2) {
+      const cur = playlist[playIndex];
+      setAudioIssue(cur ? `Không tải được audio ${rangeLabel(cur)} nên đã bỏ qua đoạn này.` : null);
+      advance();
+    }
+  }
+
+  // Lưu tiến độ: mỗi khi đáp án / đánh dấu / đoạn audio đổi, định kỳ khi đồng hồ
+  // chạy (để làm tiếp không bị cộng lại giờ), và gửi ngay khi ẩn tab / đóng trang.
+  const latest = useRef({ answers, marked, secondsLeft, stage, playIndex });
+  useEffect(() => {
+    latest.current = { answers, marked, secondsLeft, stage, playIndex };
+  });
+  const report = useCallback((immediate?: boolean) => {
+    if (submittingRef.current) return;
+    const l = latest.current;
+    onProgress?.(l.answers, [...l.marked], l.secondsLeft, {
+      progress: real ? { stage: l.stage, playIndex: l.playIndex } : undefined,
+      now: immediate,
+    });
+  }, [onProgress, real]);
+
+  useEffect(() => { report(); }, [answers, marked, stage, playIndex, report]);
+  useEffect(() => {
+    if (deadline === null) return;
+    const t = setInterval(() => report(), 20000);
+    return () => clearInterval(t);
+  }, [deadline, report]);
+  useEffect(() => {
+    function onHide() {
+      if (document.visibilityState === "hidden") report(true);
+    }
+    document.addEventListener("visibilitychange", onHide);
+    return () => document.removeEventListener("visibilitychange", onHide);
+  }, [report]);
 
   useEffect(() => {
     const el = audioRef.current;
@@ -391,16 +513,18 @@ export function ExamScreen({
           <audio
             ref={audioRef}
             src={current?.audio ? `${test.audioBase}/${current.audio}` : undefined}
+            preload="none"
             onEnded={advance}
+            onError={onAudioError}
             style={{ display: "none" }}
           />
-          {!playing ? (
+          {!playing || blocked ? (
             <button
               type="button"
-              onClick={() => { setPlaying(true); audioRef.current?.play().catch(() => {}); }}
+              onClick={() => { setPlaying(true); playCurrent(); }}
               style={{ padding: "8px 18px", borderRadius: 8, border: "none", background: P.primary, color: P.onPrimary, fontWeight: 800, fontFamily: P.sans, fontSize: "0.88rem", cursor: "pointer" }}
             >
-              ▶ Bắt đầu phần nghe
+              {playing || playIndex > 0 ? `▶ Nghe tiếp từ ${current ? rangeLabel(current) : ""}` : "▶ Bắt đầu phần nghe"}
             </button>
           ) : (
             <span style={{ display: "inline-flex", alignItems: "center", gap: 9, fontSize: "0.86rem", fontWeight: 700 }}>
@@ -408,8 +532,8 @@ export function ExamScreen({
               {gap > 0 ? `Thời gian trả lời — còn ${gap}s` : current ? `Đang phát ${rangeLabel(current)}` : ""}
             </span>
           )}
-          <span style={{ fontSize: "0.78rem", color: P.muted }}>
-            Audio chạy liền mạch một lần — không tua, không nghe lại.
+          <span style={{ fontSize: "0.78rem", color: audioIssue ? P.warn : P.muted }}>
+            {audioIssue ?? "Audio chạy liền mạch một lần — không tua, không nghe lại."}
           </span>
         </div>
       )}
@@ -511,8 +635,8 @@ export function ExamScreen({
               <button type="button" onClick={() => setConfirming(false)} style={{ flex: 1, padding: "0.7rem", borderRadius: 9, border: `1px solid ${P.border}`, background: "transparent", color: P.inkSoft, fontWeight: 700, fontFamily: P.sans, cursor: "pointer" }}>
                 Làm tiếp
               </button>
-              <button type="button" onClick={submit} style={{ flex: 1, padding: "0.7rem", borderRadius: 9, border: "none", background: P.primary, color: P.onPrimary, fontWeight: 800, fontFamily: P.sans, cursor: "pointer" }}>
-                Nộp bài
+              <button type="button" onClick={submit} disabled={submitting} style={{ flex: 1, padding: "0.7rem", borderRadius: 9, border: "none", background: P.primary, color: P.onPrimary, fontWeight: 800, fontFamily: P.sans, cursor: submitting ? "wait" : "pointer", opacity: submitting ? 0.7 : 1 }}>
+                {submitting ? "Đang nộp…" : "Nộp bài"}
               </button>
             </div>
           </div>
