@@ -327,7 +327,7 @@ export function sanitizeFeedback(raw: unknown): SubmissionFeedback {
  */
 export const AI_GRADABLE_UNITS: Record<string, string[]> = {
   writing: ["q1-5", "q6-7", "q8"],
-  speaking: ["q1-2", "q5-7"],
+  speaking: ["q1-2", "q5-7", "q8-10"],
 };
 
 /**
