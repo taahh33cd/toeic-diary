@@ -8,9 +8,9 @@
  */
 
 import { prisma } from "@/lib/db/prisma";
-import { getPracticeEntry, loadPracticeTest } from "@/lib/listening-practice";
+import { countByPart, getPracticeEntry, listPracticeTests, loadPracticeTest } from "@/lib/listening-practice";
 import { parsePracticeAttemptSlug, toFullTest } from "@/lib/listening-practice/adapt";
-import { getCatalogEntry, getExamSet, loadTest } from "@/lib/full-tests";
+import { getCatalogEntry, getExamSet, listTests, loadTest } from "@/lib/full-tests";
 import type { FullTest, PartNumber } from "@/lib/full-tests/types";
 import type { RunConfig } from "@/components/full-tests/SetupPanel";
 
@@ -446,4 +446,39 @@ export function groupAttempts(items: AttemptItem[]): AttemptGroup[] {
   }
 
   return [...groups.values()];
+}
+
+// ── Mô tả dạng bài, cho phần gợi ý "nên luyện gì tiếp" ──────────────────────
+
+/** Lối vào và tổng số đề của một dạng bài, suy từ `groupKey`. */
+export interface AttemptGroupMeta {
+  groupKey: string;
+  /** Trang danh sách đề của dạng bài đó — trang này tự lo phần khoá/mở */
+  href: string;
+  /** Tổng số đề có trong dạng bài, để biết còn bao nhiêu đề chưa làm */
+  totalTests: number;
+}
+
+/**
+ * Giải mã `groupKey` thành lối vào + tổng số đề.
+ * Thuần đọc catalog, không chạm DB — nhưng vẫn phải gọi ở server vì catalog là JSON.
+ */
+export function describeAttemptGroups(groupKeys: string[]): AttemptGroupMeta[] {
+  return groupKeys.map((groupKey) => {
+    const part = /^(listening|reading)-(\d+)$/.exec(groupKey);
+    if (part) {
+      const [, skill, nStr] = part;
+      const n = Number(nStr);
+      // Chỉ Part 1-2 có đề trong catalog luyện nghe; part khác đếm 0.
+      const totalTests = n === 1 || n === 2
+        ? listPracticeTests().filter((t) => countByPart(t, n) > 0).length
+        : 0;
+      return { groupKey, href: `/skills/${skill}/part${n}`, totalTests };
+    }
+    const full = /^full-(.+)$/.exec(groupKey);
+    if (full) {
+      return { groupKey, href: "/skills/full-tests", totalTests: listTests(full[1]).length };
+    }
+    return { groupKey, href: "/skills", totalTests: 0 };
+  });
 }

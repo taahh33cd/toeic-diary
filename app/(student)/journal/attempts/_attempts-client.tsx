@@ -31,6 +31,13 @@ export interface ClientAttempt {
   atISO: string;
 }
 
+/** Lối vào và tổng số đề của một dạng bài — server suy ra từ catalog. */
+export interface GroupMeta {
+  groupKey: string;
+  href: string;
+  totalTests: number;
+}
+
 type SortKey = "recent" | "best";
 const ALL = "__all__";
 
@@ -58,6 +65,11 @@ function fmtDateTime(iso: string): string {
     day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit",
     timeZone: "Asia/Ho_Chi_Minh",
   });
+}
+
+/** "PRACTICE TEST EST 2026" → "EST 2026" — nhãn trong thanh ngang rất hẹp. */
+function shortGroup(label: string): string {
+  return label.replace(/^PRACTICE TEST\s+/i, "");
 }
 
 // ── Biểu đồ xu hướng ────────────────────────────────────────────────────────
@@ -232,9 +244,191 @@ function Delta({ d }: { d: number | null }) {
   );
 }
 
+// ── Nên luyện gì tiếp ───────────────────────────────────────────────────────
+
+interface GroupStat {
+  key: string;
+  label: string;
+  /** Tổng câu đúng / tổng câu chấm được của cả dạng bài */
+  p: number | null;
+  doneTests: number;
+  totalTests: number;
+  href: string;
+}
+
+interface Tip {
+  key: string;
+  text: string;
+  href: string;
+  cta: string;
+}
+
+/**
+ * Trả lời câu "nên luyện gì tiếp": so sức mạnh giữa các dạng bài rồi nêu vài
+ * việc cụ thể. Cố tình nằm TRƯỚC bộ lọc và không chịu lọc — câu hỏi này phải
+ * nhìn toàn cảnh, lọc còn một dạng thì chẳng còn gì để so.
+ *
+ * Thanh ngang, một chuỗi, sắp theo tỷ lệ tăng dần: dạng yếu nhất nằm trên.
+ */
+function NextUp({ rows, tips, onPick }: { rows: GroupStat[]; tips: Tip[]; onPick: (key: string) => void }) {
+  return (
+    <Sheet className="mb-5 p-4">
+      <h2 className="text-sm font-bold m-0" style={{ color: "var(--text-secondary)" }}>
+        Nên luyện gì tiếp
+      </h2>
+      <p className="text-xs m-0 mt-0.5 mb-3" style={{ color: "var(--text-muted)" }}>
+        Tính trên tất cả lượt đã nộp, không theo bộ lọc bên dưới. Lượt nộp khi chưa
+        làm được nửa đề không tính vào tỷ lệ.
+      </p>
+
+      {rows.length > 0 && (
+        <ul className="list-none p-0 m-0 grid gap-1.5 mb-3">
+          {rows.map((r) => (
+            <li key={r.key}>
+              <button
+                type="button"
+                onClick={() => onPick(r.key)}
+                title={r.p === null
+                  ? `${r.label} — chưa có lượt nào làm đủ nửa đề. Bấm để chỉ xem dạng này.`
+                  : `Chỉ xem ${r.label}`}
+                className="w-full flex items-center gap-2 text-left bg-transparent border-0 p-0 cursor-pointer"
+              >
+                <span className="text-xs truncate" style={{ width: 132, flexShrink: 0, color: "var(--text-secondary)" }}>
+                  {shortGroup(r.label)}
+                </span>
+                {/* Thanh rỗng trông như lỗi — chưa đo được thì nói thẳng ra. */}
+                {r.p === null ? (
+                  <span className="flex-1 text-xs italic" style={{ color: "var(--text-muted)" }}>
+                    chưa có lượt nào làm đủ nửa đề
+                  </span>
+                ) : (
+                  <span className="flex-1 rounded-full overflow-hidden" style={{ height: 8, background: "var(--border)" }}>
+                    <span className="block h-full rounded-full"
+                          style={{ width: `${r.p}%`, background: toneOf(r.p) }} />
+                  </span>
+                )}
+                {r.p !== null && (
+                  <span className="text-xs font-bold tabular-nums text-right" style={{ width: 34, color: toneOf(r.p) }}>
+                    {r.p}%
+                  </span>
+                )}
+                <span className="text-xs tabular-nums text-right hidden sm:block"
+                      style={{ width: 62, color: "var(--text-muted)" }}>
+                  {r.totalTests > 0 ? `${r.doneTests}/${r.totalTests} đề` : `${r.doneTests} đề`}
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {tips.length > 0 && (
+        <ul className="list-none p-0 m-0 grid gap-1.5" style={{ borderTop: "1px solid var(--border)", paddingTop: 12 }}>
+          {tips.map((t) => (
+            <li key={t.key} className="flex items-baseline gap-2 text-sm flex-wrap">
+              <span style={{ color: "var(--text-primary)" }}>{t.text}</span>
+              <Link href={t.href} className="text-xs font-bold no-underline whitespace-nowrap"
+                    style={{ color: "var(--accent-primary)" }}>
+                {t.cta} →
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </Sheet>
+  );
+}
+
+/** Một đề trong danh sách lịch sử, đã gom sẵn các lượt. */
+interface TestRow {
+  testTitle: string;
+  testHref: string;
+  attempts: ClientAttempt[];
+  deltas: Map<string, number | null>;
+  bestByMode: [string, { correct: number; gradable: number | null }][];
+  latestISO: string;
+}
+
+/** Số lượt hiện sẵn; đề làm nhiều lần thì phần còn lại nằm sau một nút. */
+const MAX_ROWS = 4;
+
+function TestCard({ t }: { t: TestRow }) {
+  const [all, setAll] = useState(false);
+  const shown = all ? t.attempts : t.attempts.slice(0, MAX_ROWS);
+
+  return (
+    <Sheet className="p-3">
+      <div className="flex items-center gap-2 mb-1.5">
+        <Link href={t.testHref}
+              className="flex-1 min-w-0 text-sm font-bold no-underline truncate"
+              style={{ color: "var(--text-primary)" }}>
+          {t.testTitle}
+        </Link>
+        <span className="text-xs whitespace-nowrap" style={{ color: "var(--text-muted)" }}>
+          {t.attempts.length} lượt
+        </span>
+      </div>
+
+      {/* Kết quả tốt nhất tách theo chế độ — hai chế độ không so với nhau được */}
+      {t.bestByMode.length > 0 && (
+        <div className="flex flex-wrap gap-x-3 gap-y-1 mb-2 text-xs"
+             style={{ color: "var(--text-muted)" }}>
+          {t.bestByMode.map(([m, b]) => (
+            <span key={m} className="whitespace-nowrap">
+              cao nhất {m.toLowerCase()}{" "}
+              <b className="tabular-nums" style={{ color: toneOf(pct(b.correct, b.gradable)) }}>
+                {b.correct}/{b.gradable ?? "–"}
+              </b>
+            </span>
+          ))}
+        </div>
+      )}
+
+      <ul className="list-none p-0 m-0" style={{ borderTop: "1px solid var(--border)" }}>
+        {shown.map((a) => (
+          <li key={a.id} style={{ borderBottom: "1px solid var(--border)" }}>
+            <Link
+              href={`/journal/attempts/${a.id}`}
+              className="flex items-center gap-2 px-1 py-2 no-underline transition-colors hover:brightness-95"
+              style={{ color: "var(--text-primary)" }}
+            >
+              <ScoreCell a={a} />
+              <Delta d={t.deltas.get(a.id) ?? null} />
+              <ModeBadge mode={a.modeLabel} />
+              {a.total !== null && (
+                <span className="text-xs tabular-nums" style={{ color: "var(--text-muted)" }}>
+                  {a.total} điểm
+                </span>
+              )}
+              <span className="flex-1" />
+              <span className="text-xs tabular-nums whitespace-nowrap"
+                    style={{ color: "var(--text-muted)" }}>
+                {fmtDate(a.atISO)}
+              </span>
+              <span aria-hidden className="text-xs font-bold"
+                    style={{ color: "var(--accent-primary)" }}>→</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+
+      {t.attempts.length > MAX_ROWS && (
+        <button
+          type="button"
+          onClick={() => setAll((v) => !v)}
+          className="mt-1.5 text-xs font-semibold bg-transparent border-0 p-0 cursor-pointer"
+          style={{ color: "var(--accent-primary)" }}
+        >
+          {all ? "Thu gọn" : `Xem thêm ${t.attempts.length - MAX_ROWS} lượt`}
+        </button>
+      )}
+    </Sheet>
+  );
+}
+
 // ── Trang ───────────────────────────────────────────────────────────────────
 
-export function AttemptsClient({ items }: { items: ClientAttempt[] }) {
+export function AttemptsClient({ items, groupMeta }: { items: ClientAttempt[]; groupMeta: GroupMeta[] }) {
   const [group, setGroup] = useState<string>(ALL);
   const [mode, setMode] = useState<string>(ALL);
   const [sort, setSort] = useState<SortKey>("recent");
@@ -266,6 +460,96 @@ export function AttemptsClient({ items }: { items: ClientAttempt[] }) {
     const tests = new Set(filtered.map((a) => a.groupKey + "|" + a.testTitle)).size;
     return { best, bestAttempt, tests, count: filtered.length };
   }, [filtered]);
+
+  /**
+   * Lượt đủ tư cách đo năng lực. Có những lượt nộp khi mới trả lời vài câu —
+   * dữ liệu thật có cả lượt 0/199 — mà một lượt như vậy không nói gì về trình
+   * độ, chỉ kéo cả dạng bài về 0% và biến gợi ý thành câu làm nản.
+   */
+  const attempted = useMemo(
+    () => done.filter((a) => a.correct !== null && !!a.gradable && a.answered >= a.gradable * 0.5),
+    [done]
+  );
+
+  /**
+   * Sức mạnh từng dạng bài.
+   * Tỷ lệ = tổng câu đúng / tổng câu chấm được, không phải trung bình các phần
+   * trăm: một lượt Part 1 (6 câu) không được nặng bằng một lượt Part 2 (25 câu).
+   * Số đề đã làm thì đếm trên mọi lượt đã nộp — đề mở ra rồi vẫn là đã mở.
+   */
+  const groupStats = useMemo<GroupStat[]>(() => {
+    const meta = new Map(groupMeta.map((m) => [m.groupKey, m]));
+    const acc = new Map<string, { key: string; label: string; correct: number; gradable: number; tests: Set<string> }>();
+    const ok = new Set(attempted.map((a) => a.id));
+    for (const a of done) {
+      let g = acc.get(a.groupKey);
+      if (!g) {
+        g = { key: a.groupKey, label: a.groupLabel, correct: 0, gradable: 0, tests: new Set() };
+        acc.set(a.groupKey, g);
+      }
+      g.tests.add(a.testTitle);
+      if (ok.has(a.id)) { g.correct += a.correct!; g.gradable += a.gradable!; }
+    }
+    return [...acc.values()]
+      .map((g) => ({
+        key: g.key,
+        label: g.label,
+        p: g.gradable ? Math.round((g.correct / g.gradable) * 100) : null,
+        doneTests: g.tests.size,
+        totalTests: meta.get(g.key)?.totalTests ?? 0,
+        href: meta.get(g.key)?.href ?? "/skills",
+      }))
+      .sort((x, y) => (x.p ?? 101) - (y.p ?? 101));
+  }, [done, attempted, groupMeta]);
+
+  /** Tối đa ba việc cụ thể, xếp theo mức đáng làm trước. */
+  const tips = useMemo<Tip[]>(() => {
+    const out: Tip[] = [];
+    const scored = groupStats.filter((g): g is GroupStat & { p: number } => g.p !== null);
+
+    // Dạng yếu nhất — chỉ có nghĩa khi có từ hai dạng để so và chúng khác nhau.
+    if (scored.length >= 2 && scored[0].p < scored[scored.length - 1].p) {
+      const w = scored[0];
+      out.push({
+        key: "weak",
+        text: `${shortGroup(w.label)} đang thấp nhất, ${w.p}%.`,
+        href: w.href,
+        cta: "Luyện dạng này",
+      });
+    }
+
+    // Đề mà kết quả TỐT NHẤT vẫn dưới 80%: làm lại đáng giá hơn mở đề mới.
+    const bestPerTest = new Map<string, { title: string; label: string; href: string; p: number }>();
+    for (const a of attempted) {
+      const p = pct(a.correct, a.gradable);
+      if (p === null) continue;
+      const k = `${a.groupKey}|${a.testTitle}`;
+      const cur = bestPerTest.get(k);
+      if (!cur || p > cur.p) bestPerTest.set(k, { title: a.testTitle, label: a.groupLabel, href: a.testHref, p });
+    }
+    const redo = [...bestPerTest.values()].filter((t) => t.p < 80).sort((a, b) => a.p - b.p)[0];
+    if (redo) {
+      out.push({
+        key: "redo",
+        text: `${shortGroup(redo.label)} · ${redo.title} cao nhất mới ${redo.p}%.`,
+        href: redo.href,
+        cta: "Làm lại",
+      });
+    }
+
+    // Còn đề chưa làm — groupStats đã xếp yếu trước nên ưu tiên đúng dạng cần.
+    const fresh = groupStats.find((g) => g.totalTests > g.doneTests);
+    if (fresh) {
+      out.push({
+        key: "new",
+        text: `Còn ${fresh.totalTests - fresh.doneTests} đề chưa làm ở ${shortGroup(fresh.label)}.`,
+        href: fresh.href,
+        cta: "Chọn đề",
+      });
+    }
+
+    return out;
+  }, [groupStats, attempted]);
 
   /**
    * Gom đề → lượt. Chênh lệch tính trong cùng đề VÀ cùng chế độ: điểm Thi thử
@@ -371,6 +655,10 @@ export function AttemptsClient({ items }: { items: ClientAttempt[] }) {
 
       {done.length > 0 && (
         <>
+          {(groupStats.length >= 2 || tips.length > 0) && (
+            <NextUp rows={groupStats} tips={tips} onPick={(k) => setGroup(k)} />
+          )}
+
           {/* Bộ lọc — một hàng, điều khiển cả biểu đồ lẫn danh sách */}
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-4">
             <div className="flex flex-wrap items-center gap-1.5">
@@ -451,61 +739,7 @@ export function AttemptsClient({ items }: { items: ClientAttempt[] }) {
 
                   <div className="grid gap-3 lg:grid-cols-2">
                     {g.tests.map((t) => (
-                      <Sheet key={t.testTitle} className="p-3">
-                        <div className="flex items-center gap-2 mb-1.5">
-                          <Link href={t.testHref}
-                                className="flex-1 min-w-0 text-sm font-bold no-underline truncate"
-                                style={{ color: "var(--text-primary)" }}>
-                            {t.testTitle}
-                          </Link>
-                          <span className="text-xs whitespace-nowrap" style={{ color: "var(--text-muted)" }}>
-                            {t.attempts.length} lượt
-                          </span>
-                        </div>
-
-                        {/* Kết quả tốt nhất tách theo chế độ — hai chế độ không so với nhau được */}
-                        {t.bestByMode.length > 0 && (
-                          <div className="flex flex-wrap gap-x-3 gap-y-1 mb-2 text-xs"
-                               style={{ color: "var(--text-muted)" }}>
-                            {t.bestByMode.map(([m, b]) => (
-                              <span key={m} className="whitespace-nowrap">
-                                cao nhất {m.toLowerCase()}{" "}
-                                <b className="tabular-nums" style={{ color: toneOf(pct(b.correct, b.gradable)) }}>
-                                  {b.correct}/{b.gradable ?? "–"}
-                                </b>
-                              </span>
-                            ))}
-                          </div>
-                        )}
-
-                        <ul className="list-none p-0 m-0" style={{ borderTop: "1px solid var(--border)" }}>
-                          {t.attempts.map((a) => (
-                            <li key={a.id} style={{ borderBottom: "1px solid var(--border)" }}>
-                              <Link
-                                href={`/journal/attempts/${a.id}`}
-                                className="flex items-center gap-2 px-1 py-2 no-underline transition-colors hover:brightness-95"
-                                style={{ color: "var(--text-primary)" }}
-                              >
-                                <ScoreCell a={a} />
-                                <Delta d={t.deltas.get(a.id) ?? null} />
-                                <ModeBadge mode={a.modeLabel} />
-                                {a.total !== null && (
-                                  <span className="text-xs tabular-nums" style={{ color: "var(--text-muted)" }}>
-                                    {a.total} điểm
-                                  </span>
-                                )}
-                                <span className="flex-1" />
-                                <span className="text-xs tabular-nums whitespace-nowrap"
-                                      style={{ color: "var(--text-muted)" }}>
-                                  {fmtDate(a.atISO)}
-                                </span>
-                                <span aria-hidden className="text-xs font-bold"
-                                      style={{ color: "var(--accent-primary)" }}>→</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </Sheet>
+                      <TestCard key={t.testTitle} t={t} />
                     ))}
                   </div>
                 </section>
