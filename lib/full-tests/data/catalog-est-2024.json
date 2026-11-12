@@ -33,19 +33,7 @@
    "questions": 200,
    "answered": 200,
    "missingAnswers": [],
-   "brokenQuestions": [
-    132,
-    133,
-    134,
-    137,
-    138,
-    140,
-    141,
-    142,
-    144,
-    145,
-    146
-   ]
+   "brokenQuestions": []
   },
   {
    "slug": "est-2024-test-4",
@@ -56,20 +44,7 @@
    "questions": 200,
    "answered": 200,
    "missingAnswers": [],
-   "brokenQuestions": [
-    132,
-    133,
-    134,
-    136,
-    137,
-    138,
-    140,
-    141,
-    142,
-    144,
-    145,
-    146
-   ]
+   "brokenQuestions": []
   },
   {
    "slug": "est-2024-test-5",
@@ -97,20 +72,7 @@
     169,
     181
    ],
-   "brokenQuestions": [
-    132,
-    133,
-    134,
-    136,
-    137,
-    138,
-    140,
-    141,
-    142,
-    144,
-    145,
-    146
-   ]
+   "brokenQuestions": []
   },
   {
    "slug": "est-2024-test-7",
@@ -125,20 +87,7 @@
     185,
     188
    ],
-   "brokenQuestions": [
-    132,
-    133,
-    134,
-    136,
-    137,
-    138,
-    140,
-    141,
-    142,
-    144,
-    145,
-    146
-   ]
+   "brokenQuestions": []
   },
   {
    "slug": "est-2024-test-8",
@@ -200,20 +149,7 @@
     149,
     150
    ],
-   "brokenQuestions": [
-    132,
-    133,
-    134,
-    136,
-    137,
-    138,
-    140,
-    141,
-    142,
-    144,
-    145,
-    146
-   ]
+   "brokenQuestions": []
   },
   {
    "slug": "est-2024-test-9",
@@ -224,20 +160,7 @@
    "questions": 200,
    "answered": 200,
    "missingAnswers": [],
-   "brokenQuestions": [
-    132,
-    133,
-    134,
-    136,
-    137,
-    138,
-    140,
-    141,
-    142,
-    144,
-    145,
-    146
-   ]
+   "brokenQuestions": []
   },
   {
    "slug": "est-2024-test-10",
@@ -248,20 +171,7 @@
    "questions": 200,
    "answered": 200,
    "missingAnswers": [],
-   "brokenQuestions": [
-    132,
-    133,
-    134,
-    136,
-    137,
-    138,
-    140,
-    141,
-    142,
-    144,
-    145,
-    146
-   ]
+   "brokenQuestions": []
   }
  ]
 }

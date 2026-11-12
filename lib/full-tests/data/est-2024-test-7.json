@@ -15,20 +15,7 @@
    185,
    188
   ],
-  "brokenQuestions": [
-   132,
-   133,
-   134,
-   136,
-   137,
-   138,
-   140,
-   141,
-   142,
-   144,
-   145,
-   146
-  ]
+  "brokenQuestions": []
  },
  "groups": [
   {
@@ -3274,7 +3261,7 @@
    "passages": [
     {
      "label": "E-mail",
-     "text": "To: Naomi Richter <naomirichter@mailcurrent.com>\nFrom: Watanu Sakamoto <wsakamoto@RHNimports.com>\nDate: 23 November\nSubject: Follow-up\nAttachment: Logistics coordinator description\n\nDear Ms. Richter,\n\nThank you for coming to our office to interview for the assistant import manager position last week. We were impressed with your credentials and enthusiasm. --- [131] --- we are moving ahead with another candidate, we would like to offer you a different position that just became available: logistics coordinator."
+     "text": "To: Naomi Richter <naomirichter@mailcurrent.com>\nFrom: Watanu Sakamoto <wsakamoto@RHNimports.com>\nDate: 23 November\nSubject: Follow-up\nAttachment: Logistics coordinator description\n\nDear Ms. Richter,\n\nThank you for coming to our office to interview for the assistant import manager position last week. We were impressed with your credentials and enthusiasm. --- [131] --- we are moving ahead with another candidate, we would like to offer you a different position that just became available: logistics coordinator.\n--- [132] ---. The attached document contains the detailed job description and pay rate. \n\nThis --- [133] --- has not yet been posted publicly. \n\nIf you are --- [134] ---, please let me know by the end of this week.\n\nSincerely,\nWatanu Sakamoto\nHuman Resource Manager, RHN Imports"
     }
    ],
    "questions": [
@@ -3308,7 +3295,7 @@
       "D": "Your experience and skill set make you a great fit."
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "D",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án: Câu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho câu phía sau chỗ trống.\nNghĩa các phương án:\n(A) Có một số ứng viên nội bộ khác.\n(B) Thật không may, vị trí đó không còn nữa.\n(C) Trợ lý của tôi sẽ lên lịch phỏng vấn lần thứ hai cho cô.\n(D) Kinh nghiệm và kỹ năng của cô rất phù hợp.\nCách định vị vùng thông tin chứa đáp án: Câu phía trước chỗ trống đang nhắc đến lời đề nghị về một vị trí tuyển dụng mới. Đáp án (D) nối tiếp ý của câu trước, chỉ ra lý do vì sao giám đốc nhân sự lại đề xuất vị trí này cho cô Richter (vì kinh nghiệm và kỹ năng của cô ấy rất phù hợp với công việc này).",
@@ -3327,7 +3314,7 @@
       "D": "capacity"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Từ vựng\nĐặc điểm đáp án:\nTừ cần điền đứng trước động từ chính trong câu, kết hợp với tính từ chỉ định \"this\" ở đầu câu để đóng vai trò là chủ ngữ của câu.\nNghĩa câu: Cơ hội này vẫn chưa được đăng công khai.\nĐáp án là danh từ mang nghĩa phù hợp với ngữ cảnh của câu.\nLựa chọn đáp án:\n(A) opportunity: danh từ (cơ hội)\n(B) authorization: danh từ (sự ủy quyền)\n(C) application: danh từ (tính ứng dụng)\n(D) capacity: danh từ (sức chứa, công suất)",
@@ -3346,7 +3333,7 @@
       "D": "interesting"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "C",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Dạng động từ\nĐặc điểm đáp án:\nTừ cần điền đứng sau động từ tobe, là tính từ đóng vai trò tân ngữ để bổ nghĩa cho chủ ngữ.\nNghĩa câu: Nếu cô thấy thích thú, vui lòng cho tôi biết trước cuối tuần này.\nĐáp án là một tính từ.\nLựa chọn đáp án:\n(A) interest: danh từ (sự quan tâm, sự chú ý)\n(B) interests: động từ chia ở thì hiện tại đơn (gây chú ý, gây thích thú)\n(C) interested: tính từ mang tính bị động (có quan tâm, có thích thú)\n(D) interesting: tính từ mang tính chủ động (làm thú vị)",
@@ -3389,7 +3376,7 @@
    "passages": [
     {
      "label": "Notice",
-     "text": "The Oakville Horticulture Club --- [135] --- a plant sale on Saturday, 9 September."
+     "text": "The Oakville Horticulture Club --- [135] --- a plant sale on Saturday, 9 September.\nThe sale will be held from 9:00 A.M. to 4:00 P.M. at the Oakville Community Centre at 478 Hill Avenue. There will be great deals on hanging baskets, grasses, and herbs. --- [136] ---.\n\nWe --- [137] --- have a delicious selection of fruits and vegetables available for purchase. \n\nEnjoy live talks and demonstrations --- [138] --- the day. For more information, visit the Oakville Horticulture Web site: www.oakvillehorticultureclub.co.uk/events."
     }
    ],
    "questions": [
@@ -3423,7 +3410,7 @@
       "D": "The community center was just renovated."
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án: Câu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho câu phía sau chỗ trống.\nNghĩa các phương án:\n(A) Hãy đến sớm để có được lựa chọn tốt nhất.\n(B) Cây giúp làm đẹp ngôi nhà của bạn.\n(C) Tham gia câu lạc bộ để được giảm giá khi tham gia các chuyến tham quan vườn địa phương.\n(D) Trung tâm cộng đồng vừa được cải tạo.\nCách định vị vùng thông tin chứa đáp án: Câu phía trước chỗ trống đang nhắc đến các ưu đãi lớn tại địa điểm bán. Đáp án (A) nối tiếp ý của câu trước, nhắc nhở mọi người nên đến sớm để mua được các sản phẩm với ưu đãi tốt nhất.",
@@ -3442,7 +3429,7 @@
       "D": "merely"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "B",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Trạng từ\nĐặc điểm đáp án:\nTừ cần điền đứng sau chủ ngữ và đứng trước động từ chính trong câu, đóng vai trò là một trạng từ.\nNghĩa câu: Chúng tôi cũng có sẵn nhiều loại trái cây và rau quả thơm ngon để mua.\nĐáp án là một trạng từ để bổ sung thêm ý hoặc thông tin tương tự với ý đã được đề cập trước đó.\nLựa chọn đáp án:\n(A) later: trạng từ (sau đó)\n(B) also: trạng từ (cũng)\n(C) nearly: trạng từ (gần, sắp, suýt)\n(D) merely: trạng từ (chỉ, đơn thuần)",
@@ -3461,7 +3448,7 @@
       "D": "throughout"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "D",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Giới từ\nĐặc điểm đáp án:\nTừ cần điền kết hợp với danh từ \"the day\" đứng sau nó, đóng vai trò là một cụm giới từ chỉ thời gian diễn ra một sự việc nào đó trong câu.\nNghĩa câu: Thưởng thức các cuộc nói chuyện và các buổi thuyết minh trực tiếp suốt cả ngày.\nĐáp án là một giới từ.\nLựa chọn đáp án:\n(A) within: giới từ (trong vòng)\n(B) forward: trạng từ (về phía trước)\n(C) following: giới từ (sau, theo sau)\n(D) throughout: giới từ (suốt)",
@@ -3510,7 +3497,7 @@
    "passages": [
     {
      "label": "Letter",
-     "text": "July 2\nDear Mr. Arakaki:\n\nI am writing to inform you of scheduled road maintenance on Briggs Avenue. Beginning on July 15, Briggs Avenue --- [139] --- reduced to one lane from Elm Street to Bay Road."
+     "text": "July 2\nDear Mr. Arakaki:\n\nI am writing to inform you of scheduled road maintenance on Briggs Avenue. Beginning on July 15, Briggs Avenue --- [139] --- reduced to one lane from Elm Street to Bay Road.\n--- [140] ---. Although your --- [141] --- is not located in this section of Briggs Avenue, traffic on most of the street will move more slowly than usual while work is being performed. \n\n\nYou may --- [142] --- consider advising your employees to take alternate routes to work during this time. The project is expected to be completed on or before October 22. Thank you for your cooperation and assistance.\n\nSincerely,\nAmalia Villalobos\nDirector of Transportation\nEnclosure"
     }
    ],
    "questions": [
@@ -3544,7 +3531,7 @@
       "D": "However, all city services will close during this time."
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "C",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án: Câu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho câu phía sau chỗ trống.\nNghĩa các phương án:\n(A) Đại lộ Briggs chỉ cách đó hai dặm.\n(B) Sự kiện sẽ diễn ra trên phố Elm.\n(C) Vui lòng tham khảo bản đồ đính kèm của khu vực bị ảnh hưởng.\n(D) Tuy nhiên, tất cả các dịch vụ của thành phố sẽ đóng cửa trong thời gian này.\nCách định vị vùng thông tin chứa đáp án: Câu phía trước chỗ trống đang nhắc đến việc chỉ còn một làn đường từ Phố Elm đến Đường Bay, câu phía sau chỗ trống đề cập đến việc giao thông trên hầu hết đường phố sẽ di chuyển chậm hơn bình thường. Đáp án (C) nối tiếp ý của câu trước và gợi mở ý cho câu phía sau khi yêu cầu người đọc tham khảo bản đồ đính kèm để hiểu rõ hơn về những khu vực bị ảnh hưởng, từ đó có được những sự tính toán trước nhằm giảm thiểu sự bất tiện trong quá trình di chuyển.",
@@ -3563,7 +3550,7 @@
       "D": "business"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "D",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Từ vựng\nĐặc điểm đáp án:\nChỗ trống đứng sau tính từ sở hữu \"your\" và đứng trước động từ tobe, do đó vị trí này cần điền một danh từ, kết hợp với \"your\" để đóng vai trò làm chủ ngữ trong câu. Xét ngữ cảnh xung quanh câu này, cụ thể, câu phía sau có chứa cụm \"consider advising your employees\" (cân nhắc việc khuyên nhân viên của mình), như vậy chỗ trống cần điền một danh từ có nghĩa liên quan đến việc quản lý và điều hành.\nNghĩa câu: Mặc dù doanh nghiệp của bạn không nằm ở khu vực này của Đại lộ Briggs nhưng giao thông trên hầu hết đường phố sẽ di chuyển chậm hơn bình thường khi đang thực hiện công việc.\nĐáp án là danh từ mang nghĩa phù hợp với ngữ cảnh của câu.\nLựa chọn đáp án:\n(A) mailbox: danh từ (hộp thư)\n(B) school: danh từ (trường học)\n(C) signage: danh từ (biển báo)\n(D) business: danh từ (doanh nghiệp)",
@@ -3582,7 +3569,7 @@
       "D": "therefore"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "D",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Trạng từ\nĐặc điểm đáp án:\nTừ cần điền đứng sau động từ khiếm khuyết \"may\" và đứng trước động từ thường \"consider\", đóng vai trò là một trạng từ. Xét nội dung của lá thư, câu trước đang thông báo về việc giao thông trên hầu hết đường phố sẽ di chuyển chậm hơn bình thường và câu tiếp theo (tức câu chứa chỗ trống này) dựa trên thông tin đó để nhắc nhở người nhận khuyên nhân viên chọn các tuyến đường khác để đi làm.\nNghĩa câu: Ông do đó có thể cân nhắc việc khuyên nhân viên của mình đi các tuyến đường khác để đi làm trong thời gian này.\nĐáp án là một trạng từ giúp chỉ ra mối liên hệ logic giữa thông tin đã được đề cập trước đó và đề xuất tiếp theo.\nLựa chọn đáp án:\n(A) fortunately: trạng từ (may mắn, may thay)\n(B) instead: trạng từ (thay vì, để thế cho)\n(C) likewise: trạng từ (cũng như thế, cũng như vậy)\n(D) therefore: trạng từ (do đó, vì thế)",
@@ -3643,7 +3630,7 @@
    "passages": [
     {
      "label": "Article",
-     "text": "Franklin Planetarium to Move Downtown\n(June 3)-After 48 years in its present location on Mayfield's south side, the Franklin Planetarium is moving to a new home. Construction is underway on the downtown facility, part of a complex that includes the new Natural History Museum. Both --- [143] --- are expected to open to the public next September."
+     "text": "Franklin Planetarium to Move Downtown\n(June 3)-After 48 years in its present location on Mayfield's south side, the Franklin Planetarium is moving to a new home. Construction is underway on the downtown facility, part of a complex that includes the new Natural History Museum. Both --- [143] --- are expected to open to the public next September.\nThe current planetarium's main attraction is a 300-seat theater, where visitors can view projections of stars and planets on the dome above. --- [144] --- a larger theater, the new planetarium will feature an upgraded digital projection system.\n\n--- [145] ---. Visitors will be able --- [146] --- the night sky more clearly and explore other planets and galaxies through new, interactive displays."
     }
    ],
    "questions": [
@@ -3677,7 +3664,7 @@
       "D": "For instance"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Cụm giới từ/trạng từ\nĐặc điểm đáp án:\nTừ cần điền đứng ở đầu câu và đứng trước cụm danh từ \"a larger theater\", ngăn cách với mệnh đề chính bởi dấu phẩy.\nNghĩa câu: Ngoài một nhà hát lớn hơn, cung thiên văn mới sẽ có hệ thống chiếu kỹ thuật số được nâng cấp.\nĐáp án là một cụm giới từ mang nghĩa phù hợp với ngữ cảnh của câu.\nLựa chọn đáp án:\n(A) In addition to: cụm giới từ (ngoài ra, thêm vào)\n(B) In particular: cụm giới từ (cụ thể)\n(C) In agreement with: cụm giới từ (đồng ý với)\n(D) For instance: trạng từ liên kết (ví dụ)",
@@ -3696,7 +3683,7 @@
       "D": "There will be room for three short-term exhibits as well."
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "D",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Điền câu thích hợp\nĐặc điểm đáp án: Câu cần điền nối tiếp ý câu phía trước chỗ trống và/hoặc gợi mở ý cho câu phía sau chỗ trống.\nNghĩa các phương án:\n(A) Hiện tại có ba bảo tàng khác ở khu vực Mayfield.\n(B) Số người đến cung thiên văn đã tăng lên trong những năm gần đây.\n(C) Kế hoạch cho cung thiên văn mới đã bắt đầu cách đây 5 năm.\n(D) Cũng sẽ có chỗ cho ba cuộc triển lãm ngắn hạn.\nCách định vị vùng thông tin chứa đáp án: Các câu phía trước chỗ trống đang mô tả những điểm thu hút và những điểm đã được cải tiến ở cung thiên văn như \"nhà hát có 300 chỗ ngồi\", \"hệ thống chiếu kỹ thuật số được nâng cấp\". Đáp án (D) nối tiếp ý của các câu trước khi đề cập thêm các buổi triển lãm ngắn hạn.",
@@ -3715,7 +3702,7 @@
       "D": "by seeing"
      },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "A",
      "explanation": {
       "reasoning": "Dạng câu hỏi: Dạng động từ\nĐặc điểm đáp án:\nTừ cần điền kết hợp cùng cụm từ \"will be able\" để tạo thành một cấu trúc diễn đạt khả năng có thể làm được điều gì đó trong tương lai.\nNghĩa câu: Du khách sẽ có thể nhìn thấy bầu trời đêm rõ ràng hơn và khám phá các hành tinh và thiên hà khác thông qua các màn hình tương tác mới.\nĐáp án là một động từ ở dạng \"to Vo\".\nLựa chọn đáp án:\n(A) to see: động từ \"see\" ở dạng \"to + Vo\"\n(B) will see: động từ \"see\" được chia ở thì tương lai\n(C) who saw: đại từ quan hệ chỉ người + động từ \"see\" được chia ở thì quá khứ\n(D) by seeing: giới từ + động từ \"see\" ở dạng \"Ving\"",
@@ -5007,7 +4994,6 @@
  ],
  "warnings": [
   "1 câu các nguồn đáp án không thống nhất (đã lấy nguồn tin cậy hơn): [199]",
-  "7 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 8-9, 15, 17, 21, 23, 31",
-  "12 câu Part 6 mất đoạn văn chứa chỗ trống (parser cũ) — tạm bỏ qua, build lại từ docx để khôi phục: [132, 133, 134, 136, 137, 138, 140, 141, 142, 144, 145, 146]"
+  "7 câu Part 1/2 không cắt đủ phương án từ ASR (dùng transcript thô): 8-9, 15, 17, 21, 23, 31"
  ]
 }
