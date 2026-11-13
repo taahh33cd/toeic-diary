@@ -38,13 +38,18 @@ type Props = {
 };
 
 /**
- * Lưu bài làm vào sổ tay và gửi giáo viên chấm.
+ * Lưu bài làm vào sổ tay và gửi đi chấm.
  * Dùng chung cho mọi unit Speaking/Writing của /skills.
+ *
+ * Phần nào có AI chấm thì hiện hai nút riêng, vì hai đường khác nhau thật:
+ * "Nhờ AI chấm" cho nhận xét ngay và bài nằm ở tab "AI đã chấm" để thầy soát
+ * lại; "Gửi giáo viên chấm" đi thẳng vào hàng chờ của thầy, không gọi AI nên
+ * không tốn lượt nào trong 5 lượt mỗi ngày. Phần chưa có AI chỉ hiện nút sau.
  */
 export function SubmissionPanel({ skill, unit, testKey, title, buildItems, canSubmit, variant = "app" }: Props) {
   const t = TOKENS[variant];
   const [id, setId] = useState<string | null>(null);
-  const [busy, setBusy] = useState<"save" | "submit" | null>(null);
+  const [busy, setBusy] = useState<"save" | "ai" | "teacher" | null>(null);
   const [savedAt, setSavedAt] = useState<number | null>(null);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -73,8 +78,13 @@ export function SubmissionPanel({ skill, unit, testKey, title, buildItems, canSu
     }
   }
 
-  async function post(submit: boolean) {
-    setBusy(submit ? "submit" : "save");
+  /**
+   * "save" = chỉ lưu nháp · "ai" = gửi rồi nhờ AI chấm ngay · "teacher" = gửi
+   * thẳng vào hàng chờ của thầy, KHÔNG gọi AI và không tốn lượt chấm nào.
+   */
+  async function post(mode: "save" | "ai" | "teacher") {
+    const submit = mode !== "save";
+    setBusy(mode);
     setError(null);
     try {
       const items = await buildItems();
@@ -89,7 +99,7 @@ export function SubmissionPanel({ skill, unit, testKey, title, buildItems, canSu
       setId(newId);
       if (submit) {
         setSent(true);
-        if (aiGrades && newId) void runAi(newId);
+        if (mode === "ai" && newId) void runAi(newId);
       } else setSavedAt(Date.now());
     } catch (e) {
       setError(e instanceof Error ? e.message : "Không lưu được, thử lại nhé");
@@ -153,27 +163,48 @@ export function SubmissionPanel({ skill, unit, testKey, title, buildItems, canSu
     <div style={{ border: `1px solid ${t.border}`, borderRadius: 10, background: t.bg, padding: "12px 14px" }}>
       <p style={{ margin: "0 0 9px", fontSize: "0.8rem", color: t.muted, lineHeight: 1.55 }}>
         Lưu bài này vào <strong style={{ color: t.ink }}>sổ tay</strong> để xem lại bất cứ lúc nào
-        {canSubmit ? ", hoặc gửi giáo viên chấm và nhận xét." : "."}
+        {!canSubmit
+          ? "."
+          : aiGrades
+          ? ". Nhờ AI chấm để có nhận xét ngay, hoặc gửi thẳng cho giáo viên."
+          : ", hoặc gửi giáo viên chấm và nhận xét."}
       </p>
 
       <div style={{ display: "flex", gap: 9, flexWrap: "wrap" }}>
         <button
           type="button"
-          onClick={() => post(false)}
+          onClick={() => post("save")}
           disabled={busy !== null}
           style={{ padding: "8px 18px", border: `1.5px solid ${t.border}`, background: "transparent", color: t.ink, borderRadius: 8, fontSize: "0.84rem", fontWeight: 600, cursor: busy ? "default" : "pointer", fontFamily: "inherit", opacity: busy ? 0.6 : 1 }}
         >
           {busy === "save" ? "Đang lưu…" : savedAt ? "Đã lưu ✓ — lưu lại" : "Lưu vào sổ tay"}
         </button>
 
-        {canSubmit && (
+        {canSubmit && aiGrades && (
           <button
             type="button"
-            onClick={() => post(true)}
+            onClick={() => post("ai")}
             disabled={busy !== null}
             style={{ padding: "8px 18px", border: "none", background: t.accent, color: "#fff", borderRadius: 8, fontSize: "0.84rem", fontWeight: 700, cursor: busy ? "default" : "pointer", fontFamily: "inherit", opacity: busy ? 0.6 : 1 }}
           >
-            {busy === "submit" ? "Đang gửi…" : "Gửi giáo viên chấm"}
+            {busy === "ai" ? "Đang gửi…" : "Nhờ AI chấm"}
+          </button>
+        )}
+
+        {canSubmit && (
+          // Phần đã có AI thì nút này là đường riêng: gửi thẳng cho thầy, không
+          // gọi AI — nên để viền thay vì nền đặc, khỏi tranh chỗ với nút AI.
+          <button
+            type="button"
+            onClick={() => post("teacher")}
+            disabled={busy !== null}
+            style={
+              aiGrades
+                ? { padding: "8px 18px", border: `1.5px solid ${t.accent}`, background: "transparent", color: t.accent, borderRadius: 8, fontSize: "0.84rem", fontWeight: 700, cursor: busy ? "default" : "pointer", fontFamily: "inherit", opacity: busy ? 0.6 : 1 }
+                : { padding: "8px 18px", border: "none", background: t.accent, color: "#fff", borderRadius: 8, fontSize: "0.84rem", fontWeight: 700, cursor: busy ? "default" : "pointer", fontFamily: "inherit", opacity: busy ? 0.6 : 1 }
+            }
+          >
+            {busy === "teacher" ? "Đang gửi…" : "Gửi giáo viên chấm"}
           </button>
         )}
       </div>
