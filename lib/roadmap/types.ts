@@ -63,6 +63,21 @@ export type EvidenceSpec =
       source: "full_test";
       examSlug: string;
       testSlug: string;
+    }
+  /**
+   * skill_submissions — bài Speaking/Writing học viên tự làm và lưu vào sổ.
+   *
+   * KHÔNG đòi `status = "graded"`: gửi bài cho thầy chấm chỉ mở cho học viên đã
+   * đăng ký khoá (xem lib/access.ts), nên đòi chấm xong là người dùng miễn phí
+   * không bao giờ hoàn thành được việc nào. Bằng chứng là bài có nội dung thật.
+   */
+  | {
+      source: "submission";
+      skill: "speaking" | "writing";
+      /** "q3-4" | "q6-7" | … */
+      unit: string;
+      /** slug bộ đề; để trống nghĩa là bộ nào của unit này cũng tính. */
+      testKey?: string;
     };
 
 export type CatalogKind =
@@ -70,7 +85,8 @@ export type CatalogKind =
   | "part_practice"
   | "full_test"
   | "grammar"
-  | "ipa";
+  | "ipa"
+  | "submission";
 
 /** Một đầu mục nội dung có thật trên web. */
 export type CatalogItem = {
@@ -81,9 +97,12 @@ export type CatalogItem = {
   href: string;
   kind: CatalogKind;
 
-  /** Bài này chữa cho (những) part nào của đề thi. */
+  /**
+   * Bài này chữa cho (những) part nào của đề thi L&R.
+   * Rỗng với bài Speaking/Writing — hai kỹ năng đó không có part trong đề L&R.
+   */
   parts: PartNumber[];
-  skill: "listening" | "reading" | "both";
+  skill: "listening" | "reading" | "both" | "speaking" | "writing";
 
   /** Nhãn kỹ năng nền, để planner biết bài nào là "nền" bài nào là "luyện đề". */
   tags: string[];
@@ -97,6 +116,15 @@ export type CatalogItem = {
   rank: number;
   /** Phải xong những catalogId này trước (vd bộ medium khoá sau bộ easy). */
   prereq: string[];
+  /**
+   * Giao lại được ở các tuần sau.
+   *
+   * Dành cho khu không chia bộ đề — viết email chẳng hạn, học viên chọn đề ngay
+   * trong trang. Luyện viết là việc hằng tuần chứ không phải làm một lần là
+   * xong, mà catalog chỉ có một mục cho cả khu. Không gameable: cửa sổ đối
+   * chiếu bằng chứng tính từ ngày giao, nên mỗi lần giao đòi một bài MỚI.
+   */
+  repeatable?: boolean;
 
   evidence: EvidenceSpec;
 };
@@ -162,6 +190,8 @@ export type Intake = {
   startDate: string;
   /** Part học viên muốn ưu tiên, nếu có khai. */
   preferredParts?: PartNumber[];
+  /** Có muốn xen bài Nói/Viết vào lộ trình không (mặc định: không). */
+  wantsSpeakingWriting?: boolean;
 };
 
 export type DraftTask = {
@@ -173,7 +203,7 @@ export type DraftTask = {
   estMinutes: number;
   priority: "core" | "bonus";
   /** Vì sao bài này được giao — để hiển thị cho học viên và để dò lỗi planner. */
-  reason: "focus" | "foundation" | "maintenance" | "checkpoint";
+  reason: "focus" | "foundation" | "maintenance" | "checkpoint" | "sw";
 };
 
 export type DraftDay = {

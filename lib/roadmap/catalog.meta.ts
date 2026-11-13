@@ -34,7 +34,7 @@ export const PART3_LEVEL_BANDS: Record<string, [number, number]> = {
 
 export type AreaMeta = {
   parts: PartNumber[];
-  skill: "listening" | "reading" | "both";
+  skill: "listening" | "reading" | "both" | "speaking" | "writing";
   tags: string[];
   /** Thời lượng ước tính cho MỘT mục của khu này. */
   estMinutes: number;
@@ -134,6 +134,27 @@ export const AREA_META = {
     skill: "listening" as const,
     tags: ["exam-format"],
     estMinutes: 15,
+    minScore: 0,
+  },
+
+  /**
+   * Nói — bài luyện theo đúng format đề S&W, học viên tự làm rồi lưu vào sổ.
+   * Mở cho mọi tầm điểm: đây là kỹ năng khác hẳn, không xếp theo band L&R được.
+   */
+  speaking: {
+    parts: [] as PartNumber[],
+    skill: "speaking" as const,
+    tags: ["sw", "speaking"],
+    estMinutes: 20,
+    minScore: 0,
+  },
+
+  /** Viết — tương tự Nói. */
+  writing: {
+    parts: [] as PartNumber[],
+    skill: "writing" as const,
+    tags: ["sw", "writing"],
+    estMinutes: 25,
     minScore: 0,
   },
 

@@ -134,8 +134,14 @@ for (const item of CATALOG_ITEMS) {
   if (item.estMinutes <= 0 || item.estMinutes > 180) {
     problems.push(`${item.id}: estMinutes bất thường (${item.estMinutes})`);
   }
-  if (!item.parts.length) {
+  // Bài Nói/Viết không gắn part — hai kỹ năng đó không có part trong đề L&R, và
+  // planner lấy chúng bằng một lối riêng chứ không qua kho theo part.
+  const isSw = item.skill === "speaking" || item.skill === "writing";
+  if (!isSw && !item.parts.length) {
     problems.push(`${item.id}: không gắn part nào — planner sẽ không bao giờ chọn`);
+  }
+  if (isSw && item.parts.length) {
+    problems.push(`${item.id}: bài Nói/Viết không được gắn part của đề L&R`);
   }
   if (!item.title.trim()) problems.push(`${item.id}: thiếu tiêu đề`);
 
@@ -163,6 +169,10 @@ for (const item of CATALOG_ITEMS) {
     case "full_test":
       if (!ev.examSlug || !ev.testSlug)
         problems.push(`${item.id}: evidence full_test thiếu slug`);
+      break;
+    case "submission":
+      if (!ev.skill || !ev.unit)
+        problems.push(`${item.id}: evidence submission thiếu skill/unit`);
       break;
   }
 }

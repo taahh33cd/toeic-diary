@@ -38,6 +38,11 @@ import { TOPICS as GRAMMAR_TOPICS } from "../../lib/grammar/topics";
 import { listPracticeTests, countByPart } from "../../lib/listening-practice/index";
 import { practiceAttemptSlug } from "../../lib/listening-practice/adapt";
 import { EXAM_SETS, listTests } from "../../lib/full-tests/index";
+import { Q12_TESTS } from "../../lib/skills/speaking-q1-2";
+import { SPEAKING_Q34_TESTS } from "../../lib/skills/speaking-q3-4";
+import { Q57_TESTS } from "../../lib/skills/speaking-q5-7";
+import { SPEAKING_Q810_TESTS } from "../../lib/skills/speaking-q8-10";
+import { Q11_TESTS } from "../../lib/skills/speaking-q11";
 
 import {
   AREA_META,
@@ -512,6 +517,86 @@ function bandFrom(
         },
       });
     }
+  }
+}
+
+// ── Nói · 5 dạng câu, mỗi dạng nhiều bộ đề ─────────────────────────────────
+//
+// Mỗi bộ đề là một mục riêng (href có slug bộ đề). Chỉ lấy vài bộ đầu của mỗi
+// dạng: lộ trình nhiều lắm giao một bài Nói/Viết mỗi tuần, nhét cả 129 bộ vào
+// catalog chỉ làm kho phình to mà chẳng bao giờ dùng tới.
+{
+  const m = AREA_META.speaking;
+  const MAX_PER_UNIT = 6;
+  const units: { unit: string; label: string; tests: { slug: string }[] }[] = [
+    { unit: "q1-2", label: "Đọc to đoạn văn", tests: Q12_TESTS as unknown as { slug: string }[] },
+    { unit: "q3-4", label: "Mô tả tranh", tests: SPEAKING_Q34_TESTS as unknown as { slug: string }[] },
+    { unit: "q5-7", label: "Trả lời câu hỏi", tests: Q57_TESTS as unknown as { slug: string }[] },
+    { unit: "q8-10", label: "Trả lời theo thông tin", tests: SPEAKING_Q810_TESTS as unknown as { slug: string }[] },
+    { unit: "q11", label: "Nêu ý kiến", tests: Q11_TESTS as unknown as { slug: string }[] },
+  ];
+
+  for (const u of units) {
+    if (!u.tests?.length) {
+      skipped.push(`speaking ${u.unit}: chưa có bộ đề`);
+      continue;
+    }
+    u.tests.slice(0, MAX_PER_UNIT).forEach((t, idx) => {
+      push({
+        id: `sw.speaking.${u.unit}.${t.slug}`,
+        title: `Nói · ${u.label} — ${t.slug}`,
+        href: `/skills/speaking/${u.unit}/${t.slug}`,
+        kind: "submission",
+        parts: m.parts,
+        skill: m.skill,
+        tags: m.tags,
+        bandMin: 10,
+        bandMax: 990,
+        estMinutes: m.estMinutes,
+        rank: idx + 1,
+        prereq: [],
+        evidence: {
+          source: "submission",
+          skill: "speaking",
+          unit: u.unit,
+          testKey: t.slug,
+        },
+      });
+    });
+  }
+}
+
+// ── Viết · 3 dạng câu, KHÔNG có slug bộ đề ─────────────────────────────────
+//
+// Ba khu Viết đều chọn đề ngay trong trang, đường dẫn dừng ở unit. Nên mỗi unit
+// chỉ có một mục, và mục đó phải `repeatable` — nếu không thì sau ba tuần là
+// hết bài Viết để giao. Bằng chứng tính theo cửa sổ thời gian từ ngày giao nên
+// mỗi lần giao vẫn đòi một bài mới.
+{
+  const m = AREA_META.writing;
+  const units = [
+    { unit: "q1-5", label: "Mô tả tranh bằng câu", minutes: 15 },
+    { unit: "q6-7", label: "Viết email", minutes: 25 },
+    { unit: "q8", label: "Viết luận", minutes: 35 },
+  ];
+
+  for (const u of units) {
+    push({
+      id: `sw.writing.${u.unit}`,
+      title: `Viết · ${u.label}`,
+      href: `/skills/writing/${u.unit}`,
+      kind: "submission",
+      parts: m.parts,
+      skill: m.skill,
+      tags: m.tags,
+      bandMin: 10,
+      bandMax: 990,
+      estMinutes: u.minutes,
+      rank: 1,
+      prereq: [],
+      repeatable: true,
+      evidence: { source: "submission", skill: "writing", unit: u.unit },
+    });
   }
 }
 

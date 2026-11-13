@@ -27,6 +27,7 @@ const BodySchema = z.object({
     .nullable()
     .optional(),
   preferredParts: z.array(z.number().int().min(1).max(7)).max(3).optional(),
+  wantsSpeakingWriting: z.boolean().optional(),
   attemptId: z.string().uuid().optional(),
 });
 
@@ -68,6 +69,7 @@ export async function POST(req: Request) {
       daysPerWeek: body.daysPerWeek,
       startDate: today,
       preferredParts: body.preferredParts as never,
+      wantsSpeakingWriting: body.wantsSpeakingWriting === true,
     },
     targetScore: body.targetScore ?? null,
     deadline,

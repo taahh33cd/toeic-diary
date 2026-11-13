@@ -20,4 +20,6 @@ export type StoredIntake = {
   /** "YYYY-MM-DD" hoặc null */
   deadline: string | null;
   preferredParts: number[];
+  /** Có muốn xen bài Nói/Viết vào lộ trình không. */
+  wantsSpeakingWriting: boolean;
 };

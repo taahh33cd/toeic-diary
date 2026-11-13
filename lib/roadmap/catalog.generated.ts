@@ -2,7 +2,7 @@
 // Sửa dải điểm / thời lượng / nhãn thì sửa lib/roadmap/catalog.meta.ts rồi chạy:
 //   npm run build:catalog
 //
-// Tổng: 558 mục.
+// Tổng: 587 mục.
 
 import type { CatalogItem } from "./types";
 
@@ -15769,6 +15769,673 @@ export const CATALOG_ITEMS: CatalogItem[] = [
       "questionWord": "l6",
       "minScore": 80,
       "minExercises": 1
+    }
+  },
+  {
+    "id": "sw.speaking.q1-2.ets-sample",
+    "title": "Nói · Đọc to đoạn văn — ets-sample",
+    "href": "/skills/speaking/q1-2/ets-sample",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 2,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q1-2",
+      "testKey": "ets-sample"
+    }
+  },
+  {
+    "id": "sw.speaking.q1-2.test-1",
+    "title": "Nói · Đọc to đoạn văn — test-1",
+    "href": "/skills/speaking/q1-2/test-1",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 1,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q1-2",
+      "testKey": "test-1"
+    }
+  },
+  {
+    "id": "sw.speaking.q11.agree-1",
+    "title": "Nói · Nêu ý kiến — agree-1",
+    "href": "/skills/speaking/q11/agree-1",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 2,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q11",
+      "testKey": "agree-1"
+    }
+  },
+  {
+    "id": "sw.speaking.q11.agree-2",
+    "title": "Nói · Nêu ý kiến — agree-2",
+    "href": "/skills/speaking/q11/agree-2",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 3,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q11",
+      "testKey": "agree-2"
+    }
+  },
+  {
+    "id": "sw.speaking.q11.agree-3",
+    "title": "Nói · Nêu ý kiến — agree-3",
+    "href": "/skills/speaking/q11/agree-3",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 4,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q11",
+      "testKey": "agree-3"
+    }
+  },
+  {
+    "id": "sw.speaking.q11.choice-1",
+    "title": "Nói · Nêu ý kiến — choice-1",
+    "href": "/skills/speaking/q11/choice-1",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 1,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q11",
+      "testKey": "choice-1"
+    }
+  },
+  {
+    "id": "sw.speaking.q11.choice-2",
+    "title": "Nói · Nêu ý kiến — choice-2",
+    "href": "/skills/speaking/q11/choice-2",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 5,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q11",
+      "testKey": "choice-2"
+    }
+  },
+  {
+    "id": "sw.speaking.q11.choice-3",
+    "title": "Nói · Nêu ý kiến — choice-3",
+    "href": "/skills/speaking/q11/choice-3",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 6,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q11",
+      "testKey": "choice-3"
+    }
+  },
+  {
+    "id": "sw.speaking.q3-4.easy-1",
+    "title": "Nói · Mô tả tranh — easy-1",
+    "href": "/skills/speaking/q3-4/easy-1",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 1,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q3-4",
+      "testKey": "easy-1"
+    }
+  },
+  {
+    "id": "sw.speaking.q3-4.easy-2",
+    "title": "Nói · Mô tả tranh — easy-2",
+    "href": "/skills/speaking/q3-4/easy-2",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 2,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q3-4",
+      "testKey": "easy-2"
+    }
+  },
+  {
+    "id": "sw.speaking.q3-4.easy-3",
+    "title": "Nói · Mô tả tranh — easy-3",
+    "href": "/skills/speaking/q3-4/easy-3",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 3,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q3-4",
+      "testKey": "easy-3"
+    }
+  },
+  {
+    "id": "sw.speaking.q3-4.easy-4",
+    "title": "Nói · Mô tả tranh — easy-4",
+    "href": "/skills/speaking/q3-4/easy-4",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 4,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q3-4",
+      "testKey": "easy-4"
+    }
+  },
+  {
+    "id": "sw.speaking.q3-4.easy-5",
+    "title": "Nói · Mô tả tranh — easy-5",
+    "href": "/skills/speaking/q3-4/easy-5",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 5,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q3-4",
+      "testKey": "easy-5"
+    }
+  },
+  {
+    "id": "sw.speaking.q3-4.easy-6",
+    "title": "Nói · Mô tả tranh — easy-6",
+    "href": "/skills/speaking/q3-4/easy-6",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 6,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q3-4",
+      "testKey": "easy-6"
+    }
+  },
+  {
+    "id": "sw.speaking.q5-7.life-1",
+    "title": "Nói · Trả lời câu hỏi — life-1",
+    "href": "/skills/speaking/q5-7/life-1",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 1,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q5-7",
+      "testKey": "life-1"
+    }
+  },
+  {
+    "id": "sw.speaking.q5-7.media-1",
+    "title": "Nói · Trả lời câu hỏi — media-1",
+    "href": "/skills/speaking/q5-7/media-1",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 3,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q5-7",
+      "testKey": "media-1"
+    }
+  },
+  {
+    "id": "sw.speaking.q5-7.shopping-1",
+    "title": "Nói · Trả lời câu hỏi — shopping-1",
+    "href": "/skills/speaking/q5-7/shopping-1",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 4,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q5-7",
+      "testKey": "shopping-1"
+    }
+  },
+  {
+    "id": "sw.speaking.q5-7.shopping-2",
+    "title": "Nói · Trả lời câu hỏi — shopping-2",
+    "href": "/skills/speaking/q5-7/shopping-2",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 5,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q5-7",
+      "testKey": "shopping-2"
+    }
+  },
+  {
+    "id": "sw.speaking.q5-7.tech-1",
+    "title": "Nói · Trả lời câu hỏi — tech-1",
+    "href": "/skills/speaking/q5-7/tech-1",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 6,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q5-7",
+      "testKey": "tech-1"
+    }
+  },
+  {
+    "id": "sw.speaking.q5-7.travel-1",
+    "title": "Nói · Trả lời câu hỏi — travel-1",
+    "href": "/skills/speaking/q5-7/travel-1",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 2,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q5-7",
+      "testKey": "travel-1"
+    }
+  },
+  {
+    "id": "sw.speaking.q8-10.conference-1",
+    "title": "Nói · Trả lời theo thông tin — conference-1",
+    "href": "/skills/speaking/q8-10/conference-1",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 1,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q8-10",
+      "testKey": "conference-1"
+    }
+  },
+  {
+    "id": "sw.speaking.q8-10.conference-2",
+    "title": "Nói · Trả lời theo thông tin — conference-2",
+    "href": "/skills/speaking/q8-10/conference-2",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 2,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q8-10",
+      "testKey": "conference-2"
+    }
+  },
+  {
+    "id": "sw.speaking.q8-10.conference-4",
+    "title": "Nói · Trả lời theo thông tin — conference-4",
+    "href": "/skills/speaking/q8-10/conference-4",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 3,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q8-10",
+      "testKey": "conference-4"
+    }
+  },
+  {
+    "id": "sw.speaking.q8-10.conference-5",
+    "title": "Nói · Trả lời theo thông tin — conference-5",
+    "href": "/skills/speaking/q8-10/conference-5",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 4,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q8-10",
+      "testKey": "conference-5"
+    }
+  },
+  {
+    "id": "sw.speaking.q8-10.conference-6",
+    "title": "Nói · Trả lời theo thông tin — conference-6",
+    "href": "/skills/speaking/q8-10/conference-6",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 5,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q8-10",
+      "testKey": "conference-6"
+    }
+  },
+  {
+    "id": "sw.speaking.q8-10.conference-7",
+    "title": "Nói · Trả lời theo thông tin — conference-7",
+    "href": "/skills/speaking/q8-10/conference-7",
+    "kind": "submission",
+    "parts": [],
+    "skill": "speaking",
+    "tags": [
+      "sw",
+      "speaking"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 20,
+    "rank": 6,
+    "prereq": [],
+    "evidence": {
+      "source": "submission",
+      "skill": "speaking",
+      "unit": "q8-10",
+      "testKey": "conference-7"
+    }
+  },
+  {
+    "id": "sw.writing.q1-5",
+    "title": "Viết · Mô tả tranh bằng câu",
+    "href": "/skills/writing/q1-5",
+    "kind": "submission",
+    "parts": [],
+    "skill": "writing",
+    "tags": [
+      "sw",
+      "writing"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 15,
+    "rank": 1,
+    "prereq": [],
+    "repeatable": true,
+    "evidence": {
+      "source": "submission",
+      "skill": "writing",
+      "unit": "q1-5"
+    }
+  },
+  {
+    "id": "sw.writing.q6-7",
+    "title": "Viết · Viết email",
+    "href": "/skills/writing/q6-7",
+    "kind": "submission",
+    "parts": [],
+    "skill": "writing",
+    "tags": [
+      "sw",
+      "writing"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 25,
+    "rank": 1,
+    "prereq": [],
+    "repeatable": true,
+    "evidence": {
+      "source": "submission",
+      "skill": "writing",
+      "unit": "q6-7"
+    }
+  },
+  {
+    "id": "sw.writing.q8",
+    "title": "Viết · Viết luận",
+    "href": "/skills/writing/q8",
+    "kind": "submission",
+    "parts": [],
+    "skill": "writing",
+    "tags": [
+      "sw",
+      "writing"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 35,
+    "rank": 1,
+    "prereq": [],
+    "repeatable": true,
+    "evidence": {
+      "source": "submission",
+      "skill": "writing",
+      "unit": "q8"
     }
   }
 ];

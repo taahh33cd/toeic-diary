@@ -47,6 +47,8 @@ type Fixture = {
   deadline: string;
   /** Part mà engine PHẢI xếp vào nhóm ưu tiên — kỳ vọng sư phạm của hồ sơ này. */
   expectFocusIncludes: number[];
+  /** Hồ sơ có khai muốn luyện Nói/Viết thì tuần phải có đúng một bài như vậy. */
+  expectSwTask?: boolean;
 };
 
 const START = "2026-11-16"; // Thứ Hai
@@ -86,6 +88,23 @@ const FIXTURES: Fixture[] = [
     targetScore: 800,
     deadline: "2027-01-10",
     expectFocusIncludes: [5, 6, 7],
+  },
+  {
+    name: "Có luyện Nói/Viết · 500 điểm · 45 phút/ngày × 5 ngày",
+    total: 500,
+    listening: 260,
+    reading: 240,
+    accuracy: { 1: 0.6, 2: 0.52, 3: 0.45, 4: 0.44, 5: 0.5, 6: 0.46, 7: 0.4 },
+    intake: {
+      minutesPerDay: 45,
+      daysPerWeek: 5,
+      startDate: START,
+      wantsSpeakingWriting: true,
+    },
+    targetScore: 650,
+    deadline: "2027-02-01",
+    expectFocusIncludes: [3, 4, 7],
+    expectSwTask: true,
   },
 ];
 
@@ -289,12 +308,26 @@ function runFixture(fx: Fixture) {
   if (!quiet) printWeek(week2);
   auditWeek(week2, fx.intake, new Set());
 
+  const swInWeek1 = week1.days.flatMap((d) => d.tasks.filter((t) => t.reason === "sw"));
+  if (fx.expectSwTask) {
+    check("tuần có đúng một bài Nói/Viết", swInWeek1.length === 1, `${swInWeek1.length} bài`);
+    check(
+      "bài Nói/Viết không rơi vào ngày bận",
+      week1.days.every((d) => !d.busy || !d.tasks.some((t) => t.reason === "sw")),
+    );
+  } else {
+    check("không khai luyện Nói/Viết thì không bị giao", swInWeek1.length === 0,
+      `${swInWeek1.length} bài`);
+  }
+
   const usedInWeek2 = week2.days.flatMap((d) => d.tasks.map((t) => t.catalogId));
-  check(
-    "tuần 2 không lặp lại bài của tuần 1",
-    usedInWeek2.every((id) => !usedInWeek1.has(id)),
-    usedInWeek2.filter((id) => usedInWeek1.has(id)).join(", "),
+  // Mục `repeatable` (khu Viết — catalog chỉ có một mục cho cả khu, học viên
+  // chọn đề trong trang) ĐƯỢC phép giao lại ở tuần sau; mỗi lần giao vẫn đòi
+  // một bài mới vì cửa sổ đối chiếu tính từ ngày giao.
+  const repeated = usedInWeek2.filter(
+    (id) => usedInWeek1.has(id) && !getCatalogItem(id)?.repeatable,
   );
+  check("tuần 2 không lặp lại bài của tuần 1", repeated.length === 0, repeated.join(", "));
 }
 
 // ── Chạy trên một lượt thi thật ──────────────────────────────────────────────

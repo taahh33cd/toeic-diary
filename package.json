@@ -20,7 +20,8 @@
     "roadmap:verify": "tsx scripts/roadmap/verify-phase2.ts",
     "roadmap:verify3": "tsx scripts/roadmap/verify-phase3.ts",
     "roadmap:verify4": "tsx scripts/roadmap/verify-phase4.ts",
-    "roadmap:verify5": "tsx scripts/roadmap/verify-phase5.ts"
+    "roadmap:verify5": "tsx scripts/roadmap/verify-phase5.ts",
+    "roadmap:verify6": "tsx scripts/roadmap/verify-phase6.ts"
   },
   "dependencies": {
     "@google/genai": "^1.50.0",

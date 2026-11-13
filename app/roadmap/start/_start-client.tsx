@@ -65,6 +65,7 @@ function parseIntake(raw: string | null): StoredIntake | null {
       targetScore: typeof v.targetScore === "number" ? v.targetScore : null,
       deadline: typeof v.deadline === "string" ? v.deadline : null,
       preferredParts: Array.isArray(v.preferredParts) ? v.preferredParts : [],
+      wantsSpeakingWriting: v.wantsSpeakingWriting === true,
     };
   } catch {
     return null;
@@ -82,6 +83,7 @@ function StartForm({
   const [targetScore, setTargetScore] = useState<number | null>(initial?.targetScore ?? 650);
   const [deadline, setDeadline] = useState(initial?.deadline ?? "");
   const [preferredParts, setPreferredParts] = useState<number[]>(initial?.preferredParts ?? []);
+  const [wantsSw, setWantsSw] = useState(initial?.wantsSpeakingWriting ?? false);
 
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -92,6 +94,7 @@ function StartForm({
     targetScore,
     deadline: deadline || null,
     preferredParts,
+    wantsSpeakingWriting: wantsSw,
   };
 
   function save() {
@@ -123,6 +126,7 @@ function StartForm({
           targetScore,
           deadline: deadline || null,
           preferredParts,
+          wantsSpeakingWriting: wantsSw,
           attemptId: baseline.attemptId,
         }),
       });
@@ -222,6 +226,20 @@ function StartForm({
             );
           })}
         </div>
+      </Field>
+
+      <Field
+        label="Bạn có luyện cả Nói và Viết không?"
+        hint="Bài test đầu vào chỉ đo Nghe – Đọc, nên phần này do bạn chọn. Chọn có thì mỗi tuần lộ trình xen thêm một bài Nói hoặc Viết."
+      >
+        <Chips
+          options={[
+            { value: 0, label: "Chỉ Nghe – Đọc" },
+            { value: 1, label: "Có, thêm Nói/Viết" },
+          ]}
+          value={wantsSw ? 1 : 0}
+          onChange={(v) => setWantsSw(v === 1)}
+        />
       </Field>
 
       {error && (

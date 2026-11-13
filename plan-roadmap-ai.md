@@ -839,12 +839,44 @@ hoàn thành — đã viết lại khẳng định cho đúng ("hết việc ch�
   đang chạy trên production.
 - Chưa có huy hiệu riêng cho lộ trình (mốc tuần/tháng), mới có XP.
 
-### Phase 6 — Mở rộng
-- Speaking/Writing vào lộ trình (dùng AI chấm sẵn có làm thước đo; chú ý hạn mức AI
-  đã có cột riêng theo `project_ai_grading`).
-- Mini-test đầu vào rút gọn 45 phút cho người ngại làm 2 tiếng.
-- Mở cho học viên cũ: bỏ điều kiện `createdAt >= FEATURE_LAUNCH_DATE` trong
-  `canUseRoadmap` (§15.1) — một dòng, không phải làm lại luồng.
+### Phase 6 — Speaking/Writing vào lộ trình — ✅ XONG 2026-11-13
+- ✅ Form onboarding hỏi thêm một câu: "Chỉ Nghe – Đọc" hay "Có, thêm Nói/Viết".
+- ✅ Catalog thêm **29 mục**: 26 bộ đề Nói (5 dạng câu, mỗi dạng 6 bộ đầu) và
+  3 khu Viết.
+- ✅ Nguồn bằng chứng mới `submission` đọc từ `skill_submissions`.
+- ✅ Planner giữ chỗ một bài Nói/Viết mỗi tuần, đặt vào buổi học thứ hai.
+- ✅ **Verify**: `npm run roadmap:verify6 -- --user <id>` (12 khẳng định) và
+  một hồ sơ mẫu mới trong `roadmap:dry-run`.
+
+**Ba quyết định đáng ghi:**
+- **Bằng chứng KHÔNG đòi "đã chấm".** Gửi bài cho thầy chấm chỉ mở cho học viên
+  đã đăng ký khoá (`lib/access.ts`), nên đòi chấm xong là người dùng miễn phí
+  không bao giờ hoàn thành được việc Nói/Viết nào. Bằng chứng là bài có **nội
+  dung thật** — ít nhất một câu có chữ hoặc có file ghi âm.
+- **Khu Viết là mục `repeatable`.** Ba khu Viết chọn đề ngay trong trang, đường
+  dẫn dừng ở unit, nên catalog chỉ có một mục cho cả khu. Không cho giao lại thì
+  sau ba tuần là hết bài Viết. Không gameable: cửa sổ đối chiếu tính từ ngày
+  giao nên mỗi lần giao vẫn đòi một bài mới.
+- **Nói/Viết giữ chỗ TRƯỚC khi rải, không nhét vào sau.** Lần đầu tôi xếp nó
+  thành một bước hậu kỳ và không bài nào lọt — mỗi ngày đã kín ba việc. Giữ chỗ
+  trước mới là giữ chỗ thật (cùng bài học với mốc kiểm tra ở Phase 1).
+
+**Hai lần script báo sai nhưng code đúng**: assertion "tuần 2 không lặp lại bài
+tuần 1" chưa biết về mục `repeatable`; và "chưa nộp gì thì chưa xong" chạy trên
+tài khoản vốn đã có bài Viết nộp sẵn — đã đổi mốc thời gian thành lúc chạy script.
+
+**Chưa làm (để ngỏ):**
+- **Mini-test đầu vào rút gọn 45 phút** — vẫn là đề full 2 tiếng.
+- **Mở cho học viên cũ** — vẫn theo quyết định #14 (chỉ tài khoản tạo sau
+  `FEATURE_LAUNCH_DATE`), đổi một dòng trong `canUseRoadmap` là xong.
+- **Chẩn đoán Nói/Viết** — đề đầu vào chỉ đo L&R, nên việc Nói/Viết được giao
+  theo ý học viên khai chứ không theo điểm yếu đo được. Muốn đo thật thì cần
+  bài S&W trong luồng đầu vào.
+
+### ⚠️ Việc còn lại trước khi bật cho người dùng
+`FEATURE_LAUNCH_DATE` trong `lib/roadmap/config.ts` đang là `null`, nghĩa là
+**chưa ai dùng được** ngoài tài khoản có cờ `roadmap_enabled`. Đặt ngày thật khi
+quyết định ra mắt.
 
 ---
 

@@ -26,6 +26,7 @@ import {
 import {
   checkpointForPart,
   filterCatalog,
+  getCatalogItem,
   nextFullTest,
   sortForPlanner,
 } from "./catalog";
@@ -81,7 +82,20 @@ export type PlanWeekInput = {
 export function planWeek(input: PlanWeekInput): DraftWeek {
   const { report, intake, weekIndex } = input;
   const completed = input.completed ?? new Set<string>();
+  /** Mọi bài đã từng giao — dùng để chọn mốc kiểm tra chưa làm. */
   const used = new Set(input.used ?? []);
+  /**
+   * Bài không được giao lại nữa khi dựng kho.
+   *
+   * Mục `repeatable` (khu Viết — chọn đề ngay trong trang, catalog chỉ có một
+   * mục cho cả khu) được bỏ ra: giao lại ở tuần sau là đúng ý, vì cửa sổ đối
+   * chiếu bằng chứng tính từ ngày giao nên vẫn đòi một bài mới.
+   */
+  const usedForPools = new Set(
+    [...used].filter((id) => !getCatalogItem(id)?.repeatable),
+  );
+  /** Bài đã giao TRONG tuần này — chặn trùng trong cùng một tuần. */
+  const assignedNow = new Set<string>();
   const busyDates = input.busyDates ?? new Set<string>();
 
   const weekStart = input.weekStart ?? mondayOf(intake.startDate);
@@ -122,19 +136,30 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
 
   const kinds = ["subskill", "grammar", "ipa"] as const;
   const pools = {
-    focus: poolFor({ parts: focusParts, exclude: used, completed, kinds: [...kinds] }),
+    focus: poolFor({ parts: focusParts, exclude: usedForPools, completed, kinds: [...kinds] }),
     foundation: poolFor({
       anyTag: FOUNDATION_TAGS,
-      exclude: used,
+      exclude: usedForPools,
       completed,
       kinds: [...kinds],
     }),
     maintenance: poolFor({
       parts: report.strongParts,
-      exclude: used,
+      exclude: usedForPools,
       completed,
       kinds: [...kinds],
     }),
+    // Kho Nói/Viết, chỉ dựng khi học viên khai là muốn luyện. Không lọc theo
+    // band: đây là kỹ năng khác hẳn, xếp theo thang điểm L&R là vô nghĩa.
+    sw: intake.wantsSpeakingWriting
+      ? sortForPlanner(
+          filterCatalog({
+            kinds: ["submission"],
+            exclude: usedForPools,
+            completed,
+          }),
+        )
+      : [],
   };
 
   // ── Rải vào từng ngày ─────────────────────────────────────────────────────
@@ -167,6 +192,22 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
 
   const lastStudyDate = studyDates[studyDates.length - 1];
 
+  /**
+   * Bài Nói/Viết của tuần: chọn TRƯỚC khi rải, giống mốc kiểm tra.
+   *
+   * Nhét vào sau khi đã xếp xong thì không bao giờ lọt — mỗi ngày đã kín ba
+   * việc. Giữ chỗ trước mới là giữ chỗ thật.
+   *
+   * Ngày được chọn: buổi học thứ hai trong tuần, tránh ngày bận và tránh ngày
+   * cuối (ngày đó đã có mốc kiểm tra).
+   */
+  const swItem = pools.sw[0];
+  const swDate = swItem
+    ? studyDates
+        .filter((d) => !busyDates.has(d) && d !== lastStudyDate)
+        .at(1) ?? studyDates.filter((d) => !busyDates.has(d) && d !== lastStudyDate).at(0)
+    : undefined;
+
   days.forEach((day, dayIdx) => {
     if (day.rest) return;
 
@@ -195,7 +236,7 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
       while (added < max && coreCount() < maxCore && remaining > 0) {
         const cap = Math.min(Math.max(slice, 0) || remaining, remaining);
         const fits = (it: CatalogItem, limit: number) =>
-          !used.has(it.id) && it.estMinutes <= limit && !groupsUsed.has(groupKey(it));
+          !assignedNow.has(it.id) && it.estMinutes <= limit && !groupsUsed.has(groupKey(it));
 
         let idx = pool.findIndex((it) => fits(it, cap));
         // Chưa lấy được việc nào mà lát ngân sách quá hẹp thì nới tới phần thời
@@ -208,6 +249,7 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
         if (idx === -1) break;
         const [item] = pool.splice(idx, 1);
         used.add(item.id);
+        assignedNow.add(item.id);
         groupsUsed.add(groupKey(item));
         day.tasks.push(toTask(item, "core", reason));
         remaining -= item.estMinutes;
@@ -223,6 +265,15 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
       return;
     }
 
+    // Bài Nói/Viết giữ chỗ trước, cùng lý do với mốc kiểm tra ở dưới.
+    if (swItem && date_eq(day.date, swDate)) {
+      used.add(swItem.id);
+      assignedNow.add(swItem.id);
+      groupsUsed.add(groupKey(swItem));
+      day.tasks.push(toTask(swItem, "core", "sw"));
+      remaining -= swItem.estMinutes;
+    }
+
     // Ngày học cuối tuần: đặt mốc kiểm tra TRƯỚC khi rải việc khác, để nó được
     // tính vào ngân sách. Nhét vào cuối thì ngày đó luôn thừa một việc và vượt
     // giờ — học viên thấy ngày cuối tuần nào cũng nặng bất thường.
@@ -232,6 +283,7 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
         : checkpointForPart(focusParts[0], used);
       if (cp) {
         used.add(cp.id);
+        assignedNow.add(cp.id);
         groupsUsed.add(groupKey(cp));
         day.tasks.push(toTask(cp, "core", "checkpoint"));
         remaining -= cp.estMinutes;
@@ -277,13 +329,14 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
       const pool = pools.focus.length ? pools.focus : pools.foundation;
       const idx = pool.findIndex(
         (it) =>
-          !used.has(it.id) &&
+          !assignedNow.has(it.id) &&
           it.estMinutes <= remaining &&
           !groupsUsed.has(groupKey(it)),
       );
       if (idx !== -1) {
         const [item] = pool.splice(idx, 1);
         used.add(item.id);
+        assignedNow.add(item.id);
         day.tasks.push(toTask(item, "bonus", "focus"));
         remaining -= item.estMinutes;
       }
@@ -316,6 +369,7 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
 function date_eq(a: string, b: string | undefined): boolean {
   return b !== undefined && a === b;
 }
+
 
 /**
  * Khoá nhóm để một ngày không nhận hai bài quá giống nhau.
