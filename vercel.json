@@ -3,7 +3,9 @@
   "buildCommand": "next build",
   "devCommand": "next dev",
   "installCommand": "npm install",
-  "regions": ["sin1"],
+  "regions": [
+    "sin1"
+  ],
   "crons": [
     {
       "path": "/api/cron/daily-student",
@@ -16,6 +18,10 @@
     {
       "path": "/api/cron/roadmap-rollover",
       "schedule": "30 17 * * *"
+    },
+    {
+      "path": "/api/cron/roadmap-weekly",
+      "schedule": "0 14 * * 0"
     }
   ]
 }

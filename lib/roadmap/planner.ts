@@ -64,6 +64,18 @@ export type PlanWeekInput = {
   busyDates?: Set<string>;
   /** Tuần này có mốc kiểm tra tháng (thi thử trọn đề) không. */
   monthCheckpoint?: boolean;
+  /**
+   * Điều chỉnh sau khi nhìn lại tuần trước (lib/roadmap/review.ts).
+   * Bỏ trống = tuần đầu, chưa có gì để nhìn lại.
+   */
+  adjustment?: {
+    /** Cộng vào mốc điểm khi lọc catalog — mở ra bài khó hơn. */
+    bandBoost: number;
+    /** Số part được chữa trong tuần. Đuối thì rút về đúng một. */
+    focusLimit: 1 | 2;
+    /** Ưu tiên bài nền hơn bài chữa part yếu. */
+    preferFoundation: boolean;
+  };
 };
 
 export function planWeek(input: PlanWeekInput): DraftWeek {
@@ -83,8 +95,13 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
     intake.daysPerWeek >= 7 ? studyWeekdays[studyWeekdays.length - 1] : null;
 
   // ── Dựng các kho bài ──────────────────────────────────────────────────────
-  const band = report.bandAnchor;
-  const focusParts = pickFocusParts(report, intake);
+  // `bandBoost` chỉ đổi ĐỘ KHÓ BÀI TẬP, không đụng tới mốc điểm của lộ trình:
+  // học viên làm tốt thì được bài khó hơn, chứ mục tiêu không tự nhiên nhảy lên.
+  const band = report.bandAnchor + (input.adjustment?.bandBoost ?? 0);
+  const focusParts = pickFocusParts(report, intake).slice(
+    0,
+    input.adjustment?.focusLimit ?? 2,
+  );
 
   /**
    * Dựng kho theo hai nấc: bài đúng tầm trước, rồi mới tới bài dễ hơn tầm.
@@ -229,13 +246,20 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
     // ưu tiên part yếu nhì. Không làm thế thì ba ngày liền toàn Part 5.
     const rotated = dayIdx % 2 === 1 ? rotatePool(pools.focus, focusParts[1]) : pools.focus;
 
-    take(rotated, Math.round(day.budgetMinutes * BUDGET_SPLIT.focus), "focus", 2);
-    take(
-      pools.foundation,
-      Math.round(day.budgetMinutes * BUDGET_SPLIT.foundation),
-      "foundation",
-      1,
-    );
+    // `preferFoundation`: học viên làm hết bài nhưng sai nhiều, nên đảo thứ tự —
+    // lấy bài nền trước, phần chữa điểm yếu lấy sau bằng chỗ còn lại.
+    if (input.adjustment?.preferFoundation) {
+      take(pools.foundation, Math.round(day.budgetMinutes * BUDGET_SPLIT.focus), "foundation", 2);
+      take(rotated, Math.round(day.budgetMinutes * BUDGET_SPLIT.foundation), "focus", 1);
+    } else {
+      take(rotated, Math.round(day.budgetMinutes * BUDGET_SPLIT.focus), "focus", 2);
+      take(
+        pools.foundation,
+        Math.round(day.budgetMinutes * BUDGET_SPLIT.foundation),
+        "foundation",
+        1,
+      );
+    }
     if (remaining >= 10) {
       take(
         pools.maintenance,

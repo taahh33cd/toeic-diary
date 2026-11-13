@@ -3,14 +3,15 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { canUseRoadmap } from "@/lib/roadmap/access";
-import { runRollover } from "@/lib/roadmap/rollover";
+import { maintainPlan } from "@/lib/roadmap/maintain";
 import { vnDateKey, vnToday } from "@/lib/roadmap/vn-date";
 
 /**
  * GET /api/roadmap/today — việc của hôm nay.
  *
- * Trước khi trả về, route tự chạy đối chiếu bằng chứng + dồn ngày bỏ lỡ. Nghĩa
- * là chỉ cần mở trang là lịch đã đúng, không phụ thuộc vào việc cron đêm qua có
+ * Trước khi trả về, route gọi `maintainPlan`: đối chiếu bằng chứng, dồn ngày bỏ
+ * lỡ, xếp lại theo điểm thi thử mới, sinh tuần kế nếu tuần cũ đã hết. Nghĩa là
+ * chỉ cần mở trang là lịch đã đúng, không phụ thuộc vào việc cron đêm qua có
  * chạy hay không — cron chỉ để sáng ra mở lên đã sẵn sàng.
  */
 export async function GET() {
@@ -30,7 +31,7 @@ export async function GET() {
     return NextResponse.json({ state: "closed" as const, tasks: [] });
   }
 
-  const rollover = await runRollover(user.id);
+  const rollover = await maintainPlan(user.id);
 
   const today = vnToday();
   const tasks = await prisma.studyTask.findMany({

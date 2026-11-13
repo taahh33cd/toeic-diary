@@ -4,8 +4,11 @@ import { redirect } from "next/navigation";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { MonthStrip } from "@/components/roadmap/MonthStrip";
+import { ReplanButton } from "@/components/roadmap/ReplanButton";
 import { WeekSchedule } from "@/components/roadmap/WeekSchedule";
 import { canUseRoadmap, ROADMAP_CLOSED_MESSAGE } from "@/lib/roadmap/access";
+import { maintainPlan } from "@/lib/roadmap/maintain";
+import { manualReplanLeft } from "@/lib/roadmap/replan";
 import { BASELINE_EXAM_SLUG, BASELINE_TEST_SLUG } from "@/lib/roadmap/config";
 import { vnDateKey, vnToday, weekDays } from "@/lib/roadmap/vn-date";
 import type { MonthGoal } from "@/lib/roadmap/types";
@@ -40,6 +43,11 @@ export default async function RoadmapPage() {
     );
   }
 
+  // Đưa lịch về đúng trạng thái TRƯỚC khi đọc: dồn ngày bỏ lỡ, tích việc đã
+  // làm, xếp lại theo điểm thi mới, sinh tuần kế nếu tuần cũ đã hết. Đọc trước
+  // rồi mới dọn thì trang hiện bản cũ, học viên phải tải lại mới thấy đúng.
+  await maintainPlan(user.id);
+
   const plan = await prisma.studyPlan.findFirst({
     where: { userId: user.id, status: "active" },
     include: {
@@ -58,27 +66,33 @@ export default async function RoadmapPage() {
     plan.weeks.find((w) => vnDateKey(w.startDate) <= today && today <= vnDateKey(w.endDate)) ??
     plan.weeks[plan.weeks.length - 1];
 
+  // Tuần đã xếp sẵn cho sau này. Phải hiện ra, nếu không học viên bấm "Tính lại"
+  // xong chẳng thấy gì đổi (tuần mới luôn bắt đầu từ thứ Hai tới) và tưởng nút
+  // hỏng.
+  const upcoming = plan.weeks.find((w) => vnDateKey(w.startDate) > today);
+
   const baseline = plan.baseline as unknown as { total: number };
 
-  // Dựng đủ 7 ô ngày, kể cả ngày không có việc — xem ghi chú trong WeekSchedule.
-  const tasksByDate = new Map<string, typeof week.tasks>();
-  for (const t of week?.tasks ?? []) {
-    const key = vnDateKey(t.date);
-    const list = tasksByDate.get(key) ?? [];
-    list.push(t);
-    tasksByDate.set(key, list);
-  }
   // Bỏ các ngày TRƯỚC khi lộ trình bắt đầu. Tuần luôn neo vào thứ Hai, nên học
   // viên bắt đầu giữa tuần sẽ có mấy ngày đầu trống — hiện chúng là "ngày nghỉ"
   // thì sai hẳn nghĩa: đó là ngày chưa có lộ trình, không phải ngày được nghỉ.
   const planStart = (plan.intake as unknown as { startDate?: string })?.startDate ?? "";
 
-  const days = week
-    ? weekDays(vnDateKey(week.startDate))
-        .filter((date) => !planStart || date >= planStart)
-        .map((date) => ({
+  /** Dựng đủ 7 ô ngày của một tuần, kể cả ngày không có việc. */
+  const buildDays = (w: typeof week | undefined) => {
+    if (!w) return [];
+    const byDate = new Map<string, typeof w.tasks>();
+    for (const t of w.tasks) {
+      const key = vnDateKey(t.date);
+      const list = byDate.get(key) ?? [];
+      list.push(t);
+      byDate.set(key, list);
+    }
+    return weekDays(vnDateKey(w.startDate))
+      .filter((date) => !planStart || date >= planStart)
+      .map((date) => ({
         date,
-        tasks: (tasksByDate.get(date) ?? [])
+        tasks: (byDate.get(date) ?? [])
           .sort((a, b) => a.order - b.order)
           .map((t) => ({
             id: t.id,
@@ -89,8 +103,11 @@ export default async function RoadmapPage() {
             priority: t.priority,
             status: t.status,
           })),
-      }))
-    : [];
+      }));
+  };
+
+  const days = buildDays(week);
+  const upcomingDays = buildDays(upcoming);
 
   const monthIndex = currentMonthIndex(months, today);
   const doneCount = (week?.tasks ?? []).filter((t) => t.status === "done").length;
@@ -110,6 +127,7 @@ export default async function RoadmapPage() {
             Xem lại kết quả chẩn đoán
           </Link>
         </p>
+        <ReplanButton initialLeft={await manualReplanLeft(user.id)} />
       </header>
 
       {months.length > 0 && (
@@ -131,6 +149,20 @@ export default async function RoadmapPage() {
             </p>
           </div>
           <WeekSchedule days={days} today={today} />
+        </section>
+      )}
+
+      {upcoming && (
+        <section className="space-y-4">
+          <div>
+            <h2 className="text-xl font-bold text-[var(--text-primary)]">
+              Tuần {upcoming.weekIndex} (tuần tới): {upcoming.theme}
+            </h2>
+            <p className="mt-1 text-[var(--text-secondary)] leading-relaxed">
+              {upcoming.goalText}
+            </p>
+          </div>
+          <WeekSchedule days={upcomingDays} />
         </section>
       )}
 

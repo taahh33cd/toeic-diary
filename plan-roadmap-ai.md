@@ -746,11 +746,50 @@ tuần 1 đúng, chạy bằng script.
 - `runRollover` chạy mỗi lần mở trang; với lộ trình nhiều tuần thì nên giới hạn
   phạm vi quét, hiện chưa cần.
 
-### Phase 4 — Tái lập kế hoạch
-- Cron `roadmap-weekly`, `replan_after_test`, `replan_missed`, nút "Tính lại".
-- `StudyWeek.review` + hạn mức AI.
-- **Verify**: giả lập tuần hoàn thành 95% → tuần sau level +1; giả lập 30% →
-  tuần sau nhẹ đi đúng 1/3.
+### Phase 4 — Tái lập kế hoạch — ✅ XONG 2026-11-13
+- ✅ `lib/roadmap/review.ts` — tổng kết tuần + bảng điều chỉnh tải (thuần code).
+- ✅ `lib/roadmap/replan.ts` — `replan_weekly`, `replan_after_test`,
+  `replan_missed`, `manual` + hạn mức AI 2 lần/30 ngày.
+- ✅ `lib/roadmap/maintain.ts` — một cửa: dồn ngày → xử điểm thi mới → sinh tuần
+  kế → giảm tải nếu đang đuối. Trang và cron dùng chung.
+- ✅ `POST /api/roadmap/replan` + cron `/api/cron/roadmap-weekly` (`0 14 * * 0`
+  UTC = 21:00 CN giờ VN).
+- ✅ Nút "Tính lại lộ trình" kèm số lần còn lại; trang toàn cảnh hiện cả tuần tới.
+- ✅ **Verify**: `npm run roadmap:verify4 -- --attempt <id>` — 4 kịch bản của
+  bảng điều chỉnh + hai lượt chạy thật trên DB (tuần tốt → lên bậc, tuần đuối →
+  24 phút/buổi so với 43). Bấm nút thật trên tài khoản test: hạn mức giảm đúng,
+  lý do hiện đúng, tuần mới xuất hiện.
+
+**Quyết định đáng ghi:**
+- **Mốc điểm không đổi khi lên bậc.** `bandBoost` chỉ mở ra bài tập khó hơn
+  trong catalog; mục tiêu của lộ trình giữ nguyên. Làm tốt một tuần mà mục tiêu
+  tự nhảy lên là cách chắc chắn để mất lòng tin.
+- **Lý do điều chỉnh luôn được nối vào câu mục tiêu tuần**, dù AI viết gì. Tuần
+  "tự nhiên nhẹ đi" mà không nói vì sao thì trông như lỗi.
+- **Việc không bắt buộc không tính vào tỉ lệ hoàn thành.** Tuần nào cũng có một
+  việc bonus; tính nó vào thì học viên làm hết phần bắt buộc vẫn không bao giờ
+  chạm ngưỡng 85% để được lên bậc.
+- **`replan_missed` không gọi AI.** Người đang đuối không cần lời văn mới, cần
+  ít việc hơn.
+- **Cron chỉ là lưới an toàn.** Mở trang là `maintainPlan` chạy đủ mọi bước, nên
+  cron trượt một hôm không ai thấy gì khác.
+
+**Hai lỗi phát hiện khi chạy thật:**
+1. **Bấm "Tính lại" giữa tuần chồng thêm một tuần tương lai** thay vì xếp lại
+   tuần đã có — bấm hai lần là lịch có ba tuần và trôi đi nửa tháng. Giờ nếu
+   tuần cuối nằm ở tương lai thì nó bị thay, giữ nguyên số tuần.
+2. Bấm xong **không thấy gì đổi**, vì tuần mới luôn bắt đầu từ thứ Hai tới mà
+   trang chỉ hiện tuần chứa hôm nay. Đã thêm khối "tuần tới".
+
+Hai khẳng định trong script lúc đầu báo sai nhưng **lỗi nằm ở phép đo, không
+phải ở code**: so tổng phút tuần cụt (2 buổi) với tuần đầy đủ (5 buổi), và thử
+"xếp lại tuần tương lai" trong tình huống tuần đó thật ra đang chạy. Đã sửa
+phép đo thành phút/buổi và dựng đúng tình huống.
+
+**Hạn chế còn lại:**
+- Chưa có push nhắc khi tuần mới được sinh (Phase 5).
+- `replan_after_test` chỉ xếp lại tuần đang chạy, chưa động tới các tuần tương
+  lai đã xếp sẵn.
 
 ### Phase 5 — Tích hợp hệ sinh thái
 - Push nhắc việc (tái dùng engine push đã có; cẩn thận VAPID phải thống nhất 4 nơi
