@@ -3966,14 +3966,8 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nVị trí trống đứng trước danh từ 'presentation' (bài thuyết trình). Chúng ta cần một tính từ sở hữu (Possessive Adjective) để bổ nghĩa cho danh từ này. (B) she: Đại từ nhân xưng đóng vai trò chủ ngữ. (C) hers: Đại từ sở hữu (bằng her + danh từ), không đứng trước danh từ. (D) herself: Đại từ phản thân.",
+      "reasoning": "* Dạng câu: Đại từ (tính từ sở hữu)\nDấu hiệu: chỗ trống đứng trước danh từ \"presentation\" → cần tính từ sở hữu bổ nghĩa cho danh từ.\n\nXét từng phương án:\n- her: của cô ấy (tính từ sở hữu) ✓\n- she: đại từ chủ ngữ ✗\n- hers: đại từ sở hữu (cái của cô ấy), không đi kèm danh từ ✗\n- herself: đại từ phản thân ✗\n\nGhi nhớ:\n- be permitted to V: được phép làm gì\n- after + mệnh đề hiện tại đơn, mệnh đề tương lai\n\nDịch: Sau khi cô Takido kết thúc bài thuyết trình của mình, khán giả sẽ được phép đặt câu hỏi.",
       "glossary": [
-       {
-        "term": "finish",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "hoàn thành"
-       },
        {
         "term": "presentation",
         "pos": "n",
@@ -3987,10 +3981,10 @@
         "meaning": "khán giả"
        },
        {
-        "term": "permit",
-        "pos": "v",
+        "term": "be permitted to",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "cho phép"
+        "meaning": "được phép (làm gì)"
        }
       ]
      }
@@ -4017,19 +4011,19 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nXét về mặt ý nghĩa (ngữ cảnh), một quán cà phê (Café) thường tặng kèm đồ uống (drink) miễn phí khi khách dùng bữa.",
+      "reasoning": "* Dạng câu: Từ vựng (danh từ)\nDấu hiệu: \"a free ___ with every meal\" → sau tính từ \"free\" cần danh từ; quán cà phê tặng kèm khi khách ăn → đồ uống.\n\nXét từng phương án:\n- table: bàn ✗\n- drink: đồ uống ✓\n- price: giá ✗\n- menu: thực đơn ✗\n\nGhi nhớ:\n- free + N: … miễn phí\n- with every meal: kèm mỗi bữa ăn\n\nDịch: Quán Mike's Café tặng một đồ uống miễn phí kèm mỗi bữa ăn vào các ngày thứ Ba từ 11 giờ sáng đến 7 giờ tối.",
       "glossary": [
-       {
-        "term": "offer",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "cung cấp, đưa ra"
-       },
        {
         "term": "free",
         "pos": "adj",
         "ipa": "",
         "meaning": "miễn phí"
+       },
+       {
+        "term": "drink",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đồ uống"
        },
        {
         "term": "meal",
@@ -4050,7 +4044,7 @@
     {
      "number": 103,
      "part": 5,
-     "prompt": "Mr. Ozawa generally prefers ------- by train instead of by car.",
+     "prompt": "Mr. Ozawa generally prefers ------- to work by train instead of by car.",
      "options": {
       "A": "commute",
       "B": "to commute",
@@ -4062,14 +4056,8 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCấu trúc động từ: Prefer + to-V hoặc Prefer + V-ing (thích làm việc gì hơn). Trong các lựa chọn, chỉ có 'to commute' là phù hợp cấu trúc ngữ pháp sau động từ 'prefers'.",
+      "reasoning": "* Dạng câu: Dạng động từ\nDấu hiệu: sau động từ \"prefers\" → cấu trúc \"prefer to V\" (hoặc prefer V-ing); trong các phương án chỉ có \"to commute\" đúng.\n\nXét từng phương án:\n- commute (V nguyên mẫu) → không đứng ngay sau \"prefers\" ✗\n- to commute (to V): đi làm ✓\n- having commuted: đã từng đi làm (nhấn mạnh việc đã xong) ✗\n- is commuting: đang đi làm → không thể có hai động từ chia thì ✗\n\nGhi nhớ:\n- prefer to V / V-ing: thích làm gì hơn\n- commute to work: đi làm (quãng đường đi về hằng ngày)\n- instead of: thay vì\n\nDịch: Ông Ozawa thường thích đi làm bằng tàu hỏa hơn là bằng ô tô.",
       "glossary": [
-       {
-        "term": "generally",
-        "pos": "adv",
-        "ipa": "",
-        "meaning": "nhìn chung, thường"
-       },
        {
         "term": "prefer",
         "pos": "v",
@@ -4080,10 +4068,10 @@
         "term": "commute",
         "pos": "v",
         "ipa": "",
-        "meaning": "đi lại, đi làm"
+        "meaning": "đi lại (đi làm hằng ngày)"
        },
        {
-        "term": "of",
+        "term": "instead of",
         "pos": "prep",
         "ipa": "",
         "meaning": "thay vì"
@@ -4113,10 +4101,10 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nSau khoảng trống là một mệnh đề hoàn chỉnh (S+V): 'the new branch office was understaffed'. Do đó, ta cần một liên từ (Conjunction) để chỉ nguyên nhân. (B) Having: Thường dùng trong cấu trúc rút gọn, không đứng trước một mệnh đề. (C) Usually: Trạng từ tần suất. (D) Following: Giới từ, đi kèm với một cụm danh từ.",
+      "reasoning": "* Dạng câu: Liên từ\nDấu hiệu: sau chỗ trống là mệnh đề đầy đủ \"the new branch office was understaffed\"; vế sau \"tuyển thêm nhân viên\" là kết quả → cần liên từ chỉ nguyên nhân.\n\nXét từng phương án:\n- Because: bởi vì ✓\n- Having: dùng trong rút gọn mệnh đề, không đứng trước mệnh đề đầy đủ ✗\n- Usually: thường thường → trạng từ ✗\n- Following: sau khi → giới từ, đi với cụm danh từ ✗\n\nGhi nhớ:\n- because + S + V: bởi vì\n- understaffed: thiếu nhân sự\n\nDịch: Bởi vì văn phòng chi nhánh mới bị thiếu nhân sự, công ty đã tuyển thêm nhân viên.",
       "glossary": [
        {
-        "term": "office",
+        "term": "branch office",
         "pos": "n",
         "ipa": "",
         "meaning": "văn phòng chi nhánh"
@@ -4131,7 +4119,7 @@
         "term": "hire",
         "pos": "v",
         "ipa": "",
-        "meaning": "thuê, mướn"
+        "meaning": "tuyển dụng"
        }
       ]
      }
@@ -4158,7 +4146,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nVị trí trống đứng sau động từ tobe 'are'. Chúng ta cần một tính từ (Adjective) để miêu tả đặc điểm của chủ ngữ 'Dumbbells' (tạ tay).",
+      "reasoning": "* Dạng câu: Từ loại (tính từ)\nDấu hiệu: sau động từ \"are\" cần tính từ mô tả chủ ngữ \"Dumbbells\" (tạ tay).\n\nXét từng phương án:\n- use (n/V): sự sử dụng / dùng ✗\n- using (V-ing): việc sử dụng ✗\n- to use (to V): để sử dụng ✗\n- useful (adj): hữu ích ✓\n\nGhi nhớ:\n- be useful for + V-ing: hữu ích cho việc…\n- also known as: còn được gọi là\n- keep fit: giữ dáng\n\nDịch: Tạ tay, còn được gọi là tạ rời, rất hữu ích để giữ dáng tại nhà.",
       "glossary": [
        {
         "term": "dumbbell",
@@ -4167,10 +4155,16 @@
         "meaning": "tạ tay"
        },
        {
-        "term": "fit",
-        "pos": "phr",
+        "term": "also known as",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "giữ dáng, giữ sức khỏe"
+        "meaning": "còn được gọi là"
+       },
+       {
+        "term": "keep fit",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "giữ dáng"
        },
        {
         "term": "useful",
@@ -4203,31 +4197,25 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nTrạng từ actually (thực sự/thực tế là) được dùng để nhấn mạnh một sự thật trái ngược hoặc bất ngờ so với dự tính ban đầu (ngày 4 tháng 9).",
+      "reasoning": "* Dạng câu: Từ vựng (trạng từ)\nDấu hiệu: \"was ___ finished two weeks ahead of schedule\" → chỗ trống đứng trước \"finished\"; vế trước \"ngày dự kiến là 4/9\" và liên từ \"but\" → nhấn mạnh thực tế khác với dự kiến.\n\nXét từng phương án:\n- additionally: thêm vào đó ✗\n- rarely: hiếm khi ✗\n- extremely: cực kỳ → bổ nghĩa cho tính từ, không hợp ✗\n- actually: thực tế là ✓\n\nGhi nhớ:\n- ahead of schedule: sớm hơn kế hoạch\n- actually: thật ra, thực tế là\n\nDịch: Ngày hoàn thành theo kế hoạch là 4/9, nhưng thực tế công việc đã xong sớm hơn hai tuần.",
       "glossary": [
        {
-        "term": "scheduled",
-        "pos": "adj",
-        "ipa": "",
-        "meaning": "theo lịch trình"
-       },
-       {
-        "term": "date",
+        "term": "completion date",
         "pos": "n",
         "ipa": "",
         "meaning": "ngày hoàn thành"
        },
        {
-        "term": "schedule",
-        "pos": "phr",
+        "term": "ahead of schedule",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "trước thời hạn"
+        "meaning": "sớm hơn kế hoạch"
        },
        {
         "term": "actually",
         "pos": "adv",
         "ipa": "",
-        "meaning": "thực sự, trên thực tế"
+        "meaning": "thực tế là"
        }
       ]
      }
@@ -4254,31 +4242,25 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nVị trí này cần một danh từ sau mạo từ 'the'.",
+      "reasoning": "* Dạng câu: Từ loại (danh từ)\nDấu hiệu: \"click on the ___ below\" → sau \"the\" cần danh từ; thứ nhấp vào để đăng ký → đường dẫn.\n\nXét từng phương án:\n- link (n): đường dẫn ✓\n- linker (n): người/vật liên kết → không dùng ở đây ✗\n- linking (V-ing): việc liên kết ✗\n- linkage (n): sự liên kết (trừu tượng) ✗\n\nGhi nhớ:\n- click on the link: nhấp vào đường dẫn\n- subscribe to: đăng ký nhận\n\nDịch: Vui lòng nhấp vào đường dẫn bên dưới để đăng ký nhận bản tin hằng tháng của chúng tôi.",
       "glossary": [
-       {
-        "term": "on",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "nhấp vào"
-       },
        {
         "term": "link",
         "pos": "n",
         "ipa": "",
-        "meaning": "liên kết"
+        "meaning": "đường dẫn"
        },
        {
-        "term": "subscribe",
-        "pos": "v",
+        "term": "subscribe to",
+        "pos": "phrasal verb",
         "ipa": "",
-        "meaning": "đăng ký (nhận tin/theo dõi)"
+        "meaning": "đăng ký nhận"
        },
        {
         "term": "newsletter",
         "pos": "n",
         "ipa": "",
-        "meaning": "bản tin hàng tháng"
+        "meaning": "bản tin"
        }
       ]
      }
@@ -4305,19 +4287,13 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCụm từ basic understanding (kiến thức cơ bản/sự hiểu biết cơ bản) là một kết hợp từ (collocation) phổ biến.",
+      "reasoning": "* Dạng câu: Từ vựng (tính từ)\nDấu hiệu: \"a ___ understanding of consumer behavior\" → chỗ trống đứng giữa \"a\" và danh từ \"understanding\"; vị trí mới vào nghề (entry-level) → hiểu biết cơ bản.\n\nXét từng phương án:\n- proud: tự hào ✗\n- basic: cơ bản ✓\n- short: ngắn ✗\n- considerate: chu đáo ✗\n\nGhi nhớ:\n- a basic understanding of: hiểu biết cơ bản về\n- entry-level: cấp đầu vào, mới vào nghề\n\nDịch: Ứng viên cho vị trí marketing cấp đầu vào cần có hiểu biết cơ bản về hành vi người tiêu dùng.",
       "glossary": [
-       {
-        "term": "candidate",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "ứng viên"
-       },
        {
         "term": "entry-level",
         "pos": "adj",
         "ipa": "",
-        "meaning": "cấp thấp, mới vào nghề"
+        "meaning": "cấp đầu vào"
        },
        {
         "term": "basic",
@@ -4326,13 +4302,7 @@
         "meaning": "cơ bản"
        },
        {
-        "term": "understanding",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "sự hiểu biết"
-       },
-       {
-        "term": "behavior",
+        "term": "consumer behavior",
         "pos": "n",
         "ipa": "",
         "meaning": "hành vi người tiêu dùng"
@@ -4362,13 +4332,13 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nVị trí này cần một trạng từ (Adverb) để bổ nghĩa cho động từ 'respond'.",
+      "reasoning": "* Dạng câu: Từ loại (trạng từ)\nDấu hiệu: \"respond ___ to government leaders\" → chỗ trống đứng sau động từ \"respond\" → cần trạng từ.\n\nXét từng phương án:\n- directly (adv): trực tiếp ✓\n- direct (adj/V): trực tiếp / chỉ đạo ✗\n- directions (N số nhiều): chỉ dẫn ✗\n- directed (V-ed) ✗\n\nGhi nhớ:\n- respond directly to: trả lời trực tiếp\n- regarding = concerning: liên quan đến\n\nDịch: Bà Persson đã có thể trả lời trực tiếp các lãnh đạo chính phủ về những lo ngại của họ liên quan đến kế hoạch tài trợ.",
       "glossary": [
        {
         "term": "respond",
         "pos": "v",
         "ipa": "",
-        "meaning": "phản hồi"
+        "meaning": "trả lời, phản hồi"
        },
        {
         "term": "directly",
@@ -4380,19 +4350,13 @@
         "term": "concern",
         "pos": "n",
         "ipa": "",
-        "meaning": "sự lo ngại"
+        "meaning": "mối lo ngại"
        },
        {
         "term": "regarding",
         "pos": "prep",
         "ipa": "",
         "meaning": "liên quan đến"
-       },
-       {
-        "term": "plan",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "kế hoạch tài trợ"
        }
       ]
      }
@@ -4419,13 +4383,13 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCấu trúc cố định chỉ độ tuổi: at the age of + số tuổi.",
+      "reasoning": "* Dạng câu: Giới từ\nDấu hiệu: \"___ the age of five\" → cụm cố định \"at the age of + số tuổi\".\n\nXét từng phương án:\n- on: trên ✗\n- at: ở (mốc tuổi) ✓\n- with: với ✗\n- along: dọc theo ✗\n\nGhi nhớ:\n- at the age of + số: ở tuổi…\n- featured soloist: nghệ sĩ độc tấu chính\n\nDịch: Leigh Ainsley, nghệ sĩ độc tấu chính trong buổi biểu diễn tối nay, bắt đầu học violin từ năm 5 tuổi.",
       "glossary": [
        {
         "term": "featured",
         "pos": "adj",
         "ipa": "",
-        "meaning": "nổi bật, đóng vai trò chính"
+        "meaning": "nổi bật, chính"
        },
        {
         "term": "soloist",
@@ -4434,16 +4398,10 @@
         "meaning": "nghệ sĩ độc tấu"
        },
        {
-        "term": "performance",
-        "pos": "n",
+        "term": "at the age of",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "buổi biểu diễn"
-       },
-       {
-        "term": "lessons",
-        "pos": "phr",
-        "ipa": "",
-        "meaning": "tham gia các bài học/khóa học"
+        "meaning": "ở tuổi"
        }
       ]
      }
@@ -4470,25 +4428,25 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nĐại từ one đại diện cho một người trong số nhóm đã được nhắc đến (seven candidates). (B) either: một trong hai (ở đây có 7 người). (C) such: không làm đại từ thay thế số lượng ở đây. (D) other: thường cần 'the' hoặc ở số nhiều 'others'.",
+      "reasoning": "* Dạng câu: Đại từ\nDấu hiệu: \"must choose only ___\" → chỗ trống làm tân ngữ, chỉ một người trong số bảy ứng viên.\n\nXét từng phương án:\n- one: một (người) ✓\n- either: một trong hai → có bảy ứng viên ✗\n- such: như vậy ✗\n- other: khác → cần \"the other\" hoặc \"others\" ✗\n\nGhi nhớ:\n- among + N số nhiều: trong số\n- choose only one: chỉ chọn một\n\nDịch: Trong số bảy ứng viên cho vị trí quản lý, hội đồng tuyển dụng chỉ được chọn một người.",
       "glossary": [
        {
-        "term": "position",
-        "pos": "n",
+        "term": "among",
+        "pos": "prep",
         "ipa": "",
-        "meaning": "vị trí quản lý"
+        "meaning": "trong số"
        },
        {
-        "term": "committee",
+        "term": "candidate",
         "pos": "n",
         "ipa": "",
-        "meaning": "ủy ban tuyển dụng"
+        "meaning": "ứng viên"
        },
        {
-        "term": "choose",
-        "pos": "v",
+        "term": "hiring committee",
+        "pos": "n",
         "ipa": "",
-        "meaning": "lựa chọn"
+        "meaning": "hội đồng tuyển dụng"
        }
       ]
      }
@@ -4515,7 +4473,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nTrạng từ elsewhere (ở nơi khác) hoàn thiện nghĩa của câu: những sản phẩm này khó tìm thấy ở bất kỳ nơi nào khác.",
+      "reasoning": "* Dạng câu: Từ vựng (trạng từ)\nDấu hiệu: \"unique products that are difficult to find ___\" → chỗ trống ở cuối câu bổ nghĩa cho \"find\"; sản phẩm độc đáo → khó tìm ở chỗ khác.\n\nXét từng phương án:\n- aside: sang một bên ✗\n- instead: thay vào đó ✗\n- likewise: tương tự ✗\n- elsewhere: ở nơi khác ✓\n\nGhi nhớ:\n- elsewhere: ở nơi khác\n- unique: độc đáo, duy nhất\n\nDịch: GT International Foods bán những sản phẩm độc đáo khó tìm thấy ở nơi khác.",
       "glossary": [
        {
         "term": "unique",
@@ -4524,22 +4482,16 @@
         "meaning": "độc đáo"
        },
        {
-        "term": "product",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "sản phẩm"
-       },
-       {
-        "term": "difficult",
-        "pos": "adj",
-        "ipa": "",
-        "meaning": "khó khăn"
-       },
-       {
         "term": "elsewhere",
         "pos": "adv",
         "ipa": "",
         "meaning": "ở nơi khác"
+       },
+       {
+        "term": "likewise",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "tương tự"
        }
       ]
      }
@@ -4554,49 +4506,37 @@
     {
      "number": 113,
      "part": 5,
-     "prompt": "Contact the hotel's main office ------- you wish to receive daily newspaper service.",
+     "prompt": "Contact the hotel's main office ------- you wish to receive daily linen service.",
      "options": {
       "A": "moreover",
-      "B": "if",
-      "C": "inside",
-      "D": "each"
+      "B": "besides",
+      "C": "if",
+      "D": "also"
      },
      "showText": true,
      "broken": false,
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nĐây là một câu điều kiện. (A), (B), (D) đều là các trạng từ liên kết, không dùng để nối mệnh đề phụ thuộc trong ngữ cảnh này.",
+      "reasoning": "* Dạng câu: Liên từ điều kiện\nDấu hiệu: sau chỗ trống là mệnh đề \"you wish to receive…\" → cần liên từ nối hai mệnh đề; nghĩa: liên hệ văn phòng nếu muốn dùng dịch vụ.\n\nXét từng phương án:\n- moreover: hơn nữa → trạng từ, không nối mệnh đề ✗\n- besides: ngoài ra → giới từ/trạng từ ✗\n- if: nếu ✓\n- also: cũng → trạng từ ✗\n\nGhi nhớ:\n- câu mệnh lệnh + if + mệnh đề: hãy… nếu…\n- linen service: dịch vụ thay khăn, ga trải giường\n\nDịch: Hãy liên hệ văn phòng chính của khách sạn nếu bạn muốn sử dụng dịch vụ thay ga gối hằng ngày.",
       "glossary": [
        {
-        "term": "contact",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "liên hệ"
-       },
-       {
-        "term": "office",
+        "term": "main office",
         "pos": "n",
         "ipa": "",
         "meaning": "văn phòng chính"
        },
        {
-        "term": "receive",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "nhận"
-       },
-       {
-        "term": "daily",
-        "pos": "adj",
-        "ipa": "",
-        "meaning": "hàng ngày"
-       },
-       {
-        "term": "service",
+        "term": "linen",
         "pos": "n",
         "ipa": "",
-        "meaning": "dịch vụ thay đồ vải (ga giường, khăn...)"
+        "meaning": "khăn, ga gối"
+       },
+       {
+        "term": "if",
+        "pos": "conj",
+        "ipa": "",
+        "meaning": "nếu"
        }
       ]
      }
@@ -4611,43 +4551,43 @@
     {
      "number": 114,
      "part": 5,
-     "prompt": "The recent study of hospital patients suggests a strong ------- between poor sleep and increased pain.",
+     "prompt": "Please ------- yourself with the company's tuition-reimbursement policy before enrolling in any classes.",
      "options": {
-      "A": "relation",
-      "B": "correlation",
-      "C": "perspective",
-      "D": "proportion"
+      "A": "organize",
+      "B": "identify",
+      "C": "consider",
+      "D": "familiarize"
      },
      "showText": true,
      "broken": false,
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCấu trúc familiarize oneself with something (làm cho bản thân quen thuộc với cái gì/tìm hiểu kỹ về cái gì).",
+      "reasoning": "* Dạng câu: Từ vựng (động từ)\nDấu hiệu: \"___ yourself with the … policy\" → cấu trúc \"familiarize oneself with\" = làm quen, tìm hiểu kỹ.\n\nXét từng phương án:\n- organize: tổ chức ✗\n- identify: xác định → không dùng với \"yourself with\" ✗\n- consider: cân nhắc ✗\n- familiarize: làm quen, nắm rõ ✓\n\nGhi nhớ:\n- familiarize oneself with: tìm hiểu kỹ, làm quen với\n- tuition reimbursement: hoàn trả học phí\n- enroll in: đăng ký (khóa học)\n\nDịch: Vui lòng tìm hiểu kỹ chính sách hoàn trả học phí của công ty trước khi đăng ký bất kỳ lớp học nào.",
       "glossary": [
        {
-        "term": "familiarize",
-        "pos": "v",
+        "term": "familiarize oneself with",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "làm cho quen thuộc, tìm hiểu"
+        "meaning": "tìm hiểu kỹ, làm quen với"
        },
        {
-        "term": "tuition-reimbursement",
+        "term": "tuition",
         "pos": "n",
         "ipa": "",
-        "meaning": "hoàn trả học phí"
+        "meaning": "học phí"
        },
        {
-        "term": "policy",
+        "term": "reimbursement",
         "pos": "n",
         "ipa": "",
-        "meaning": "chính sách"
+        "meaning": "sự hoàn trả"
        },
        {
-        "term": "enroll",
-        "pos": "v",
+        "term": "enroll in",
+        "pos": "phrasal verb",
         "ipa": "",
-        "meaning": "đăng ký tham gia"
+        "meaning": "đăng ký (khóa học)"
        }
       ]
      }
@@ -4674,16 +4614,10 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nVị trí này nằm giữa trợ động từ 'is' và động từ dạng bị động 'being evaluated'. Chúng ta cần một trạng từ.",
+      "reasoning": "* Dạng câu: Từ loại (trạng từ)\nDấu hiệu: \"is ___ being evaluated\" → chỗ trống nằm giữa \"is\" và \"being evaluated\" → cần trạng từ bổ nghĩa cho động từ.\n\nXét từng phương án:\n- active (adj): năng động ✗\n- actively (adv): một cách tích cực ✓\n- activity (n): hoạt động ✗\n- activate (V): kích hoạt ✗\n\nGhi nhớ:\n- be actively + V-ing: đang tích cực…\n- purchase agreement: thỏa thuận mua bán\n\nDịch: Thỏa thuận mua bán được đề xuất hiện đang được các quan chức của Corlan Tech tích cực xem xét.",
       "glossary": [
        {
-        "term": "proposed",
-        "pos": "adj",
-        "ipa": "",
-        "meaning": "được đề xuất"
-       },
-       {
-        "term": "agreement",
+        "term": "purchase agreement",
         "pos": "n",
         "ipa": "",
         "meaning": "thỏa thuận mua bán"
@@ -4698,13 +4632,7 @@
         "term": "evaluate",
         "pos": "v",
         "ipa": "",
-        "meaning": "đánh giá"
-       },
-       {
-        "term": "official",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "quan chức, viên chức"
+        "meaning": "đánh giá, xem xét"
        }
       ]
      }
@@ -4731,13 +4659,13 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nVị trí cần một tính từ bổ nghĩa cho danh từ 'option' (lựa chọn). Xét về ngữ cảnh di chuyển ra sân bay bằng tàu điện ngầm, từ convenient (tiện lợi) là phù hợp nhất.",
+      "reasoning": "* Dạng câu: Từ vựng (tính từ)\nDấu hiệu: \"Another ___ option for getting to the airport\" → cần tính từ bổ nghĩa cho \"option\"; ga tàu điện ngầm ở nhà ga quốc tế → lựa chọn thuận tiện.\n\nXét từng phương án:\n- convenient: thuận tiện ✓\n- receptive: sẵn sàng tiếp thu → dùng cho người ✗\n- fortunate: may mắn ✗\n- traditional: truyền thống → ga mới, không phải truyền thống ✗\n\nGhi nhớ:\n- once + mệnh đề: một khi\n- convenient option: lựa chọn thuận tiện\n\nDịch: Một lựa chọn thuận tiện khác để đến sân bay sẽ có khi ga tàu điện ngầm tại nhà ga quốc tế hoàn thành.",
       "glossary": [
        {
         "term": "convenient",
         "pos": "adj",
         "ipa": "",
-        "meaning": "tiện lợi"
+        "meaning": "thuận tiện"
        },
        {
         "term": "option",
@@ -4746,22 +4674,10 @@
         "meaning": "lựa chọn"
        },
        {
-        "term": "available",
-        "pos": "adj",
-        "ipa": "",
-        "meaning": "có sẵn"
-       },
-       {
-        "term": "station",
+        "term": "subway station",
         "pos": "n",
         "ipa": "",
         "meaning": "ga tàu điện ngầm"
-       },
-       {
-        "term": "terminal",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "nhà ga (sân bay)"
        }
       ]
      }
@@ -4788,8 +4704,14 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCâu có cụm 'Given the forecast for rain on Saturday' cho thấy đây là một sự kiện trong tương lai. Vì buổi lễ (ceremony) không thể tự tổ chức nên ta dùng dạng bị động thì tương lai đơn.",
+      "reasoning": "* Dạng câu: Thì + bị động\nDấu hiệu: \"Given the forecast for rain on Saturday\" → sự kiện sắp diễn ra (tương lai); buổi lễ \"được tổ chức\" → bị động tương lai.\n\nXét từng phương án:\n- is held: hiện tại đơn ✗\n- was held: quá khứ ✗\n- will be held: sẽ được tổ chức ✓\n- had been held: quá khứ hoàn thành ✗\n\nGhi nhớ:\n- given + N: xét đến, vì\n- will be + V3: sẽ được…\n\nDịch: Do dự báo có mưa vào thứ Bảy, buổi lễ sẽ được tổ chức trong nhà tại Raheen Gallery.",
       "glossary": [
+       {
+        "term": "given",
+        "pos": "prep",
+        "ipa": "",
+        "meaning": "xét đến, vì"
+       },
        {
         "term": "forecast",
         "pos": "n",
@@ -4807,12 +4729,6 @@
         "pos": "adv",
         "ipa": "",
         "meaning": "trong nhà"
-       },
-       {
-        "term": "hold",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "tổ chức (sự kiện)"
        }
       ]
      }
@@ -4839,25 +4755,13 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nĐây là câu về giới từ chỉ vị trí. Các tấm pallet gỗ được xếp chồng lên nhau ở phía sau (behind) là hợp lý nhất về mặt không gian.",
+      "reasoning": "* Dạng câu: Giới từ chỉ vị trí\nDấu hiệu: \"have been stacked ___ the old warehouse\" → sau chỗ trống chỉ có một danh từ (nhà kho) → giới từ chỉ vị trí so với một vật.\n\nXét từng phương án:\n- between: giữa (hai vật) → chỉ có một nhà kho ✗\n- across: ngang qua ✗\n- over: phía trên ✗\n- behind: phía sau ✓\n\nGhi nhớ:\n- as sb requested: theo yêu cầu của ai\n- stack: xếp chồng\n\nDịch: Theo yêu cầu của ông Rzayev, các pallet gỗ dư đã được xếp chồng phía sau nhà kho cũ.",
       "glossary": [
-       {
-        "term": "request",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "yêu cầu"
-       },
-       {
-        "term": "extra",
-        "pos": "adj",
-        "ipa": "",
-        "meaning": "thêm, thừa"
-       },
        {
         "term": "pallet",
         "pos": "n",
         "ipa": "",
-        "meaning": "tấm pallet gỗ"
+        "meaning": "tấm kê hàng (pallet)"
        },
        {
         "term": "stack",
@@ -4869,13 +4773,7 @@
         "term": "behind",
         "pos": "prep",
         "ipa": "",
-        "meaning": "ở phía sau"
-       },
-       {
-        "term": "warehouse",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "nhà kho"
+        "meaning": "phía sau"
        }
       ]
      }
@@ -4902,7 +4800,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nVị trí này cần một tính từ đứng trước danh từ 'range'. Cấu trúc a diverse range of + danh từ số nhiều (một loạt các... đa dạng).",
+      "reasoning": "* Dạng câu: Từ loại (tính từ)\nDấu hiệu: \"a ___ range of topics\" → chỗ trống đứng giữa \"a\" và danh từ \"range\" → cần tính từ.\n\nXét từng phương án:\n- diversion (n): sự chuyển hướng, giải trí ✗\n- diversely (adv) ✗\n- diverse (adj): đa dạng ✓\n- diversify (V): đa dạng hóa ✗\n\nGhi nhớ:\n- a diverse / wide range of + N: nhiều loại…\n- publish: xuất bản\n\nDịch: Giáo sư McNamara đã xuất bản sách về nhiều chủ đề đa dạng.",
       "glossary": [
        {
         "term": "publish",
@@ -4920,13 +4818,7 @@
         "term": "range",
         "pos": "n",
         "ipa": "",
-        "meaning": "phạm vi, một loạt"
-       },
-       {
-        "term": "topic",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "chủ đề"
+        "meaning": "phạm vi, loạt"
        }
       ]
      }
@@ -4953,37 +4845,25 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCụm danh từ A lack of something (Sự thiếu hụt cái gì đó). Ngữ cảnh 'dự án thất bại' phù hợp với việc 'thiếu các mốc thời gian rõ ràng'.",
+      "reasoning": "* Dạng câu: Từ vựng (danh từ)\nDấu hiệu: \"A ___ of clearly defined milestones\" → sau \"a\", trước \"of\" cần danh từ; dự án thất bại vì thiếu mốc tiến độ rõ ràng.\n\nXét từng phương án:\n- consent: sự đồng ý ✗\n- break: sự nghỉ ✗\n- lack: sự thiếu ✓\n- complex: tổ hợp ✗\n\nGhi nhớ:\n- a lack of + N: sự thiếu…\n- milestone: mốc tiến độ\n\nDịch: Việc thiếu các mốc tiến độ được xác định rõ ràng có lẽ là lý do dự án phát triển phần mềm thất bại.",
       "glossary": [
        {
         "term": "lack",
         "pos": "n",
         "ipa": "",
-        "meaning": "sự thiếu hụt"
+        "meaning": "sự thiếu"
        },
        {
-        "term": "clearly",
-        "pos": "adv",
+        "term": "clearly defined",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "một cách rõ ràng"
-       },
-       {
-        "term": "define",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "định nghĩa, xác định"
+        "meaning": "được xác định rõ ràng"
        },
        {
         "term": "milestone",
         "pos": "n",
         "ipa": "",
-        "meaning": "cột mốc (thời gian/giai đoạn)"
-       },
-       {
-        "term": "fail",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "thất bại"
+        "meaning": "mốc tiến độ"
        }
       ]
      }
@@ -5010,31 +4890,31 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nVị trí này cần một tính từ để liệt kê cùng với 'well-informed' và 'responsive' nhằm mô tả tính cách nhân viên.",
+      "reasoning": "* Dạng câu: Từ loại (tính từ, liệt kê song song)\nDấu hiệu: \"very well-informed, ___, and responsive\" → liệt kê ba tính từ song song mô tả nhân viên → cần tính từ.\n\nXét từng phương án:\n- person (n): người ✗\n- personably (adv) ✗\n- personify (V): nhân cách hóa ✗\n- personable (adj): dễ mến, thân thiện ✓\n\nGhi nhớ:\n- be said to V: được cho là\n- A, B, and C: các thành phần liệt kê phải cùng từ loại\n\nDịch: Nhân viên Cửa hàng bách hóa Rosemont được cho là rất am hiểu, dễ mến và phản hồi nhanh.",
       "glossary": [
        {
-        "term": "employee",
-        "pos": "n",
+        "term": "be said to",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "nhân viên"
+        "meaning": "được cho là"
        },
        {
         "term": "well-informed",
         "pos": "adj",
         "ipa": "",
-        "meaning": "am hiểu, có kiến thức"
+        "meaning": "am hiểu"
        },
        {
         "term": "personable",
         "pos": "adj",
         "ipa": "",
-        "meaning": "có duyên, nhã nhặn"
+        "meaning": "dễ mến, thân thiện"
        },
        {
         "term": "responsive",
         "pos": "adj",
         "ipa": "",
-        "meaning": "phản hồi nhanh, nhiệt tình"
+        "meaning": "phản hồi nhanh"
        }
       ]
      }
@@ -5061,19 +4941,13 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCấu trúc instruct someone as to/on something (hướng dẫn ai đó về việc gì).",
+      "reasoning": "* Dạng câu: Từ vựng (động từ)\nDấu hiệu: \"will ___ delivery drivers as to where to drop off packages\" → cần động từ đi với tân ngữ chỉ người + \"as to\" (về việc) → hướng dẫn.\n\nXét từng phương án:\n- invite: mời ✗\n- instruct: hướng dẫn, chỉ dẫn ✓\n- provide: cung cấp (provide sb with sth) ✗\n- present: trình bày, trao tặng ✗\n\nGhi nhớ:\n- instruct sb as to / on: hướng dẫn ai về\n- drop off: để lại, giao\n\nDịch: Nhân viên an ninh ở cổng trước sẽ hướng dẫn tài xế giao hàng nơi để lại các kiện hàng.",
       "glossary": [
        {
-        "term": "officer",
+        "term": "security officer",
         "pos": "n",
         "ipa": "",
-        "meaning": "nhân viên bảo vệ"
-       },
-       {
-        "term": "gate",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "cổng trước"
+        "meaning": "nhân viên an ninh"
        },
        {
         "term": "instruct",
@@ -5082,16 +4956,16 @@
         "meaning": "hướng dẫn"
        },
        {
-        "term": "driver",
-        "pos": "n",
+        "term": "as to",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "tài xế giao hàng"
+        "meaning": "về việc"
        },
        {
-        "term": "off",
-        "pos": "phr",
+        "term": "drop off",
+        "pos": "phrasal verb",
         "ipa": "",
-        "meaning": "thả xuống, giao lại"
+        "meaning": "để lại, giao"
        }
       ]
      }
@@ -5118,7 +4992,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nĐây là liên từ chỉ sự nhượng bộ (Mặc dù). Hai vế của câu có sự đối lập: 'vẫn còn vé' và 'chỗ tốt nhất đã hết'.",
+      "reasoning": "* Dạng câu: Liên từ\nDấu hiệu: chỗ trống đứng đầu, nối hai mệnh đề; \"vẫn còn vé\" và \"chỗ tốt nhất đã hết\" → quan hệ tương phản.\n\nXét từng phương án:\n- Although: mặc dù ✓\n- Except: ngoại trừ ✗\n- Notice: thông báo ✗\n- After: sau khi ✗\n\nGhi nhớ:\n- although + mệnh đề, mệnh đề: mặc dù… nhưng…\n- be available: còn, có sẵn\n\nDịch: Mặc dù vẫn còn một ít vé xem hòa nhạc, tất cả những chỗ ngồi tốt nhất đã hết.",
       "glossary": [
        {
         "term": "although",
@@ -5127,28 +5001,16 @@
         "meaning": "mặc dù"
        },
        {
-        "term": "ticket",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "vé"
-       },
-       {
         "term": "available",
         "pos": "adj",
         "ipa": "",
-        "meaning": "có sẵn"
+        "meaning": "còn, có sẵn"
        },
        {
-        "term": "seat",
-        "pos": "n",
+        "term": "be taken",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "chỗ ngồi"
-       },
-       {
-        "term": "take",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "lấy, đặt chỗ"
+        "meaning": "đã có người lấy"
        }
       ]
      }
@@ -5175,20 +5037,8 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nLiên từ or (hoặc nếu không thì) được dùng ở đây để đưa ra một lời cảnh báo về hậu quả nếu không thực hiện hành động trước đó.",
+      "reasoning": "* Dạng câu: Liên từ\nDấu hiệu: \"must park … ___ risk having their vehicle towed\" → cấu trúc cảnh báo: phải làm X, nếu không sẽ chịu hậu quả Y.\n\nXét từng phương án:\n- or: hoặc / nếu không thì ✓\n- but: nhưng ✗\n- yet: tuy nhiên ✗\n- and: và → sai nghĩa ✗\n\nGhi nhớ:\n- must V … or (else) …: phải… nếu không thì…\n- risk + V-ing: có nguy cơ\n- tow: kéo (xe)\n\nDịch: Khách tham quan phải đỗ xe tại khu vực quy định, nếu không xe có thể bị kéo đi.",
       "glossary": [
-       {
-        "term": "visitor",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "khách tham quan"
-       },
-       {
-        "term": "park",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "đỗ xe"
-       },
        {
         "term": "designated",
         "pos": "adj",
@@ -5197,21 +5047,15 @@
        },
        {
         "term": "risk",
-        "pos": "v/n",
+        "pos": "v",
         "ipa": "",
-        "meaning": "có nguy cơ, rủi ro"
-       },
-       {
-        "term": "vehicle",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "xe cộ"
+        "meaning": "có nguy cơ"
        },
        {
         "term": "tow",
         "pos": "v",
         "ipa": "",
-        "meaning": "kéo đi (xe bị hỏng hoặc đỗ sai quy định)"
+        "meaning": "kéo (xe)"
        }
       ]
      }
@@ -5238,19 +5082,13 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nVị trí này đứng sau mạo từ 'the' nên cần một danh từ (Noun) đóng vai trò làm chủ ngữ của mệnh đề.",
+      "reasoning": "* Dạng câu: Từ loại (danh từ)\nDấu hiệu: \"the ___ was to train her\" → sau \"the\", trước \"was\" cần danh từ làm chủ ngữ.\n\nXét từng phương án:\n- intend (V): dự định ✗\n- intention (n): ý định, dự định ✓\n- intended (V-ed/adj) ✗\n- intentional (adj): cố ý ✗\n\nGhi nhớ:\n- the intention is / was to V: dự định là\n- chemistry lab: phòng thí nghiệm hóa\n\nDịch: Khi cô Liu được tuyển dụng, dự định là đào tạo cô làm việc trong phòng thí nghiệm hóa học.",
       "glossary": [
-       {
-        "term": "hire",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "tuyển dụng"
-       },
        {
         "term": "intention",
         "pos": "n",
         "ipa": "",
-        "meaning": "ý định, mục đích"
+        "meaning": "ý định, dự định"
        },
        {
         "term": "train",
@@ -5259,7 +5097,7 @@
         "meaning": "đào tạo"
        },
        {
-        "term": "lab",
+        "term": "chemistry lab",
         "pos": "n",
         "ipa": "",
         "meaning": "phòng thí nghiệm hóa học"
@@ -5289,43 +5127,31 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nTính từ favorable (thuận lợi/có lợi) phù hợp về mặt ngữ nghĩa khi mô tả một tác động tích cực là 'sự tăng trưởng nhanh chóng của số lượng việc làm'.",
+      "reasoning": "* Dạng câu: Từ vựng (tính từ)\nDấu hiệu: \"A ___ effect of increased tourism … has been rapid growth in … jobs\" → tác động mang lại nhiều việc làm → tích cực.\n\nXét từng phương án:\n- tentative: tạm thời, chưa chắc chắn ✗\n- negotiable: có thể thương lượng ✗\n- favorable: thuận lợi, tích cực ✓\n- perceptive: nhạy bén → dùng cho người ✗\n\nGhi nhớ:\n- favorable effect: tác động tích cực\n- hospitality-related: liên quan đến ngành dịch vụ lưu trú, ăn uống\n\nDịch: Một tác động tích cực của du lịch tăng trưởng ở thành phố chúng ta là số việc làm trong ngành dịch vụ lưu trú tăng nhanh.",
       "glossary": [
        {
         "term": "favorable",
         "pos": "adj",
         "ipa": "",
-        "meaning": "thuận lợi, có lợi"
+        "meaning": "thuận lợi, tích cực"
        },
        {
         "term": "effect",
         "pos": "n",
         "ipa": "",
-        "meaning": "tác động, hiệu ứng"
+        "meaning": "tác động"
        },
        {
-        "term": "increased",
-        "pos": "adj",
-        "ipa": "",
-        "meaning": "được gia tăng"
-       },
-       {
-        "term": "rapid",
-        "pos": "adj",
-        "ipa": "",
-        "meaning": "nhanh chóng"
-       },
-       {
-        "term": "growth",
+        "term": "tourism",
         "pos": "n",
         "ipa": "",
-        "meaning": "sự tăng trưởng"
+        "meaning": "du lịch"
        },
        {
-        "term": "hospitality-related",
-        "pos": "adj",
+        "term": "hospitality",
+        "pos": "n",
         "ipa": "",
-        "meaning": "liên quan đến ngành nhà hàng khách sạn"
+        "meaning": "ngành dịch vụ lưu trú, ăn uống"
        }
       ]
      }
@@ -5352,19 +5178,13 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nWhenever (bất cứ khi nào) là liên từ chỉ thời gian, phù hợp để nói về một hành động tự động xảy ra mỗi khi có một điều kiện khác được thực hiện.",
+      "reasoning": "* Dạng câu: Liên từ\nDấu hiệu: chỗ trống nối hai mệnh đề \"will send an e-mail\" và \"a manager edits their time sheet\"; hệ thống tự động gửi mỗi khi có chỉnh sửa → bất cứ khi nào.\n\nXét từng phương án:\n- now that: vì giờ đây ✗\n- or else: nếu không thì ✗\n- despite: mặc dù → giới từ ✗\n- whenever: bất cứ khi nào ✓\n\nGhi nhớ:\n- whenever + mệnh đề: bất cứ khi nào\n- time sheet: bảng chấm công\n\nDịch: Hệ thống tính lương mới sẽ gửi email cho nhân viên bất cứ khi nào quản lý chỉnh sửa bảng chấm công của họ.",
       "glossary": [
        {
-        "term": "system",
+        "term": "payroll system",
         "pos": "n",
         "ipa": "",
-        "meaning": "hệ thống trả lương"
-       },
-       {
-        "term": "employee",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "nhân viên"
+        "meaning": "hệ thống tính lương"
        },
        {
         "term": "whenever",
@@ -5373,13 +5193,7 @@
         "meaning": "bất cứ khi nào"
        },
        {
-        "term": "edit",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "chỉnh sửa"
-       },
-       {
-        "term": "sheet",
+        "term": "time sheet",
         "pos": "n",
         "ipa": "",
         "meaning": "bảng chấm công"
@@ -5409,14 +5223,8 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCấu trúc in case + mệnh đề (phòng khi/trong trường hợp) dùng để nói về việc chuẩn bị cho một tình huống có thể xảy ra.",
+      "reasoning": "* Dạng câu: Liên từ\nDấu hiệu: chỗ trống nối hai mệnh đề; đổi thứ tự diễn giả để chuẩn bị cho khả năng ông Chen đến muộn → phòng khi.\n\nXét từng phương án:\n- so: vì vậy ✗\n- as of: kể từ (mốc thời gian) → giới từ ✗\n- during: trong suốt → giới từ ✗\n- in case: phòng khi ✓\n\nGhi nhớ:\n- in case + mệnh đề: phòng khi\n- in case of + N: trong trường hợp\n\nDịch: Thứ tự các diễn giả đã được thay đổi phòng khi ông Chen đến muộn.",
       "glossary": [
-       {
-        "term": "order",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "thứ tự"
-       },
        {
         "term": "speaker",
         "pos": "n",
@@ -5424,22 +5232,16 @@
         "meaning": "diễn giả"
        },
        {
-        "term": "change",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "thay đổi"
-       },
-       {
-        "term": "case",
+        "term": "in case",
         "pos": "conj",
         "ipa": "",
-        "meaning": "phòng khi, trong trường hợp"
+        "meaning": "phòng khi"
        },
        {
-        "term": "late",
-        "pos": "phr",
+        "term": "as of",
+        "pos": "prep",
         "ipa": "",
-        "meaning": "đến muộn"
+        "meaning": "kể từ"
        }
       ]
      }
@@ -5466,43 +5268,25 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCụm từ a maximum of + số lượng (tối đa là bao nhiêu) dùng để chỉ giới hạn dung tích.",
+      "reasoning": "* Dạng câu: Từ vựng (danh từ)\nDấu hiệu: \"hold up to a ___ of ten liters\" → sau \"a\", trước \"of\" cần danh từ; \"up to\" (tối đa) → a maximum of = tối đa là.\n\nXét từng phương án:\n- maximum: mức tối đa ✓\n- potential: tiềm năng ✗\n- greatness: sự vĩ đại ✗\n- collection: bộ sưu tập ✗\n\nGhi nhớ:\n- a maximum of + số: tối đa là\n- even though + mệnh đề: mặc dù\n\nDịch: Mặc dù bình nhiên liệu có thể chứa tối đa mười lít, nhà sản xuất khuyến nghị chỉ đổ chín lít.",
       "glossary": [
        {
-        "term": "though",
-        "pos": "conj",
-        "ipa": "",
-        "meaning": "mặc dù"
-       },
-       {
-        "term": "container",
+        "term": "fuel container",
         "pos": "n",
         "ipa": "",
-        "meaning": "bình chứa nhiên liệu"
+        "meaning": "bình nhiên liệu"
        },
        {
         "term": "hold",
         "pos": "v",
         "ipa": "",
-        "meaning": "chứa đựng"
+        "meaning": "chứa"
        },
        {
         "term": "maximum",
         "pos": "n",
         "ipa": "",
         "meaning": "mức tối đa"
-       },
-       {
-        "term": "manufacturer",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "nhà sản xuất"
-       },
-       {
-        "term": "recommend",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "khuyến nghị"
        }
       ]
      }
@@ -5529,37 +5313,25 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nDấu hiệu nhận biết là cụm từ Ever since (Kể từ khi). Khi một hành động bắt đầu trong quá khứ và kéo dài liên tục đến hiện tại, chúng ta sử dụng thì Hiện tại hoàn thành tiếp diễn.",
+      "reasoning": "* Dạng câu: Thì động từ\nDấu hiệu: \"Ever since + mốc quá khứ (opened last May)\" → hành động bắt đầu từ quá khứ, kéo dài liên tục đến hiện tại → hiện tại hoàn thành tiếp diễn.\n\nXét từng phương án:\n- to have hosted → không làm động từ chính ✗\n- has been hosting: đã và đang tổ chức ✓\n- was hosted: bị động quá khứ → sai nghĩa ✗\n- will be hosting: tương lai ✗\n\nGhi nhớ:\n- ever since + quá khứ đơn, hiện tại hoàn thành (tiếp diễn)\n- host an event: tổ chức sự kiện\n\nDịch: Kể từ khi quán Unicycle Café khai trương tháng Năm năm ngoái, quán đã liên tục tổ chức các đêm nhạc sống hằng tuần.",
       "glossary": [
        {
-        "term": "since",
+        "term": "ever since",
         "pos": "conj",
         "ipa": "",
         "meaning": "kể từ khi"
        },
        {
-        "term": "business",
-        "pos": "phr",
-        "ipa": "",
-        "meaning": "mở cửa kinh doanh"
-       },
-       {
         "term": "host",
         "pos": "v",
         "ipa": "",
-        "meaning": "tổ chức (sự kiện)"
+        "meaning": "tổ chức"
        },
        {
-        "term": "weekly",
-        "pos": "adj",
-        "ipa": "",
-        "meaning": "hàng tuần"
-       },
-       {
-        "term": "event",
+        "term": "live music",
         "pos": "n",
         "ipa": "",
-        "meaning": "sự kiện nhạc sống"
+        "meaning": "nhạc sống"
        }
       ]
      }
@@ -5593,19 +5365,19 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCâu trước nhắc đến 'fun' (vui vẻ). Danh từ laughter (tiếng cười) tạo thành cụm 'fun and laughter' rất phổ biến để mô tả bầu không khí giải trí tại một sự kiện trò chơi.",
+      "reasoning": "* Dạng câu: Từ vựng (danh từ)\nDấu hiệu: \"for some fun and ___\" → danh từ đi cặp với \"fun\" trong quảng cáo đêm chơi game → \"fun and laughter\" (niềm vui và tiếng cười).\n\nXét từng phương án:\n- cash: tiền mặt ✗\n- exercise: vận động ✗\n- laughter: tiếng cười ✓\n- lessons: bài học ✗\n\nGhi nhớ:\n- fun and laughter: niềm vui và tiếng cười\n- fancy + V-ing: thích làm gì (Anh – Anh)\n\nDịch: Mỗi tối thứ Sáu từ 6 đến 10 giờ, Chez Tournoi chào đón bạn tại 44 Broad Avenue, Kingston, cho những buổi tối đầy niềm vui và tiếng cười.",
       "glossary": [
        {
-        "term": "collection",
-        "pos": "n",
+        "term": "fancy",
+        "pos": "v",
         "ipa": "",
-        "meaning": "bộ sưu tập"
+        "meaning": "thích (làm gì)"
        },
        {
-        "term": "game",
+        "term": "mate",
         "pos": "n",
         "ipa": "",
-        "meaning": "trò chơi trên bàn (cờ bàn)"
+        "meaning": "bạn bè"
        },
        {
         "term": "laughter",
@@ -5631,19 +5403,25 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nĐoạn trước đó vừa liệt kê các loại trò chơi có sẵn tại địa điểm. Câu (A) bổ sung thêm lựa chọn cho khách hàng là có thể mang theo trò chơi riêng của họ.",
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nDấu hiệu: câu trước \"Choose from our collection of board games…\" (chọn từ bộ trò chơi có sẵn) → câu sau bổ sung lựa chọn khác cho khách.\n\nXét từng phương án:\n- (A) Hoặc mang theo trò chơi của riêng bạn nếu muốn ✓\n- (B) Bình chọn cho diễn viên hài yêu thích → lạc đề ✗\n- (C) Đồ uống được ưa chuộng nhất là caramel latte → đồ uống được nói ở câu sau ✗\n- (D) Chúng tôi đang tuyển nhân viên phục vụ → lạc đề ✗\n\nGhi nhớ:\n- bring your own: tự mang theo\n- if you prefer: nếu bạn muốn\n\nDịch: Hãy chọn từ bộ sưu tập trò chơi bàn cờ, trò chơi bài, đố vui và nhiều hơn nữa. Hoặc mang theo trò chơi của riêng bạn nếu muốn.",
       "glossary": [
        {
-        "term": "prefer",
-        "pos": "v",
+        "term": "board game",
+        "pos": "n",
         "ipa": "",
-        "meaning": "thích hơn"
+        "meaning": "trò chơi bàn cờ"
        },
        {
-        "term": "bring",
-        "pos": "v",
+        "term": "trivia",
+        "pos": "n",
         "ipa": "",
-        "meaning": "mang theo"
+        "meaning": "câu đố kiến thức"
+       },
+       {
+        "term": "opening",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "vị trí tuyển dụng"
        }
       ]
      }
@@ -5663,8 +5441,20 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCấu trúc as well as dùng để nối các danh từ cùng loại, có nghĩa là 'cũng như là'. Ở đây dùng để liệt kê thêm món ăn bên cạnh các loại đồ uống đã nêu.",
+      "reasoning": "* Dạng câu: Liên từ nối danh từ\nDấu hiệu: \"tea, coffee, and hot chocolate ___ our mouthwatering pastries\" → nối các danh từ ngang hàng (đồ uống và bánh) → \"as well as\".\n\nXét từng phương án:\n- in contrast to: trái ngược với ✗\n- furthermore: hơn nữa → không nối danh từ trực tiếp ✗\n- so that: để mà → cần mệnh đề ✗\n- as well as: cũng như ✓\n\nGhi nhớ:\n- A as well as B: A cũng như B\n- savour: thưởng thức\n- mouthwatering: ngon chảy nước miếng\n\nDịch: Trong lúc chơi, bạn có thể thưởng thức trà, cà phê, sô-cô-la nóng mới pha cũng như các loại bánh ngọt hấp dẫn.",
       "glossary": [
+       {
+        "term": "savour",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "thưởng thức"
+       },
+       {
+        "term": "freshly brewed",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "mới pha"
+       },
        {
         "term": "mouthwatering",
         "pos": "adj",
@@ -5676,12 +5466,6 @@
         "pos": "n",
         "ipa": "",
         "meaning": "bánh ngọt"
-       },
-       {
-        "term": "as",
-        "pos": "conj",
-        "ipa": "",
-        "meaning": "cũng như"
        }
       ]
      }
@@ -5701,7 +5485,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCấu trúc 'opportunity + to-V' dùng để chỉ mục đích của một cơ hội.",
+      "reasoning": "* Dạng câu: Dạng động từ\nDấu hiệu: \"the perfect opportunity ___ and socialise\" → cấu trúc \"opportunity to V\"; \"and socialise\" là động từ nguyên mẫu song song.\n\nXét từng phương án:\n- is relaxing → không thể có động từ chia thì ở đây ✗\n- to relax: để thư giãn ✓\n- relaxes (V-s) ✗\n- relaxation (n) → không song song với \"socialise\" ✗\n\nGhi nhớ:\n- opportunity to V: cơ hội để làm gì\n- socialise: giao lưu\n\nDịch: Đêm Game tại Chez Tournoi là cơ hội hoàn hảo để thư giãn và giao lưu.",
       "glossary": [
        {
         "term": "opportunity",
@@ -5719,7 +5503,7 @@
         "term": "socialise",
         "pos": "v",
         "ipa": "",
-        "meaning": "giao lưu, hòa nhập"
+        "meaning": "giao lưu"
        }
       ]
      }
@@ -5753,19 +5537,25 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nTrong ngữ cảnh thuê nhà và gia hạn hợp đồng (lease renewal), từ contract (hợp đồng) là từ phù hợp nhất.",
+      "reasoning": "* Dạng câu: Từ vựng (danh từ)\nDấu hiệu: email về \"lease renewal\" (gia hạn hợp đồng thuê nhà); \"renew your ___\" → gia hạn hợp đồng.\n\nXét từng phương án:\n- license: giấy phép ✗\n- contract: hợp đồng ✓\n- subscription: gói đăng ký (dịch vụ) ✗\n- membership: tư cách thành viên ✗\n\nGhi nhớ:\n- renew a contract / lease: gia hạn hợp đồng\n- be due to expire: sắp hết hạn\n\nDịch: Theo hồ sơ của tôi, hợp đồng thuê nhà của ông sẽ hết hạn vào ngày 31/3. Nếu ông muốn gia hạn hợp đồng, vui lòng cho tôi biết trước ngày 31/1.",
       "glossary": [
+       {
+        "term": "lease",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hợp đồng thuê"
+       },
+       {
+        "term": "expire",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "hết hạn"
+       },
        {
         "term": "renew",
         "pos": "v",
         "ipa": "",
         "meaning": "gia hạn"
-       },
-       {
-        "term": "contract",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "hợp đồng"
        }
       ]
      }
@@ -5785,19 +5575,25 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nNgười gửi email là Joanna Kanarak, đại diện cho Kanarak Realty. Người viết đang nói về giả định của chính họ nếu không nhận được phản hồi, nên dùng đại từ I (tôi) là chính xác nhất.",
+      "reasoning": "* Dạng câu: Đại từ (chủ ngữ)\nDấu hiệu: \"___ will assume that you do not wish to continue…\" → người viết (Joanna Kanarak) nói về giả định của chính mình → \"I\".\n\nXét từng phương án:\n- I: tôi (người viết) ✓\n- they: họ → không rõ chỉ ai ✗\n- some: một vài → không làm chủ ngữ độc lập ở đây ✗\n- everyone: mọi người → sai nghĩa ✗\n\nGhi nhớ:\n- assume that: cho rằng, mặc định rằng\n- property: bất động sản, căn nhà\n\nDịch: Nếu ông không trả lời email này, tôi sẽ hiểu rằng ông không muốn tiếp tục ở căn nhà số 22 đường Fister.",
       "glossary": [
-       {
-        "term": "reply",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "trả lời"
-       },
        {
         "term": "assume",
         "pos": "v",
         "ipa": "",
-        "meaning": "cho rằng, giả định"
+        "meaning": "cho rằng, mặc định"
+       },
+       {
+        "term": "continue",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tiếp tục"
+       },
+       {
+        "term": "property",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "căn nhà, bất động sản"
        }
       ]
      }
@@ -5817,11 +5613,11 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCụm từ In that case (Trong trường hợp đó) dùng để chỉ hệ quả của giả định ở câu trước (trường hợp khách không phản hồi và không muốn thuê tiếp).",
+      "reasoning": "* Dạng câu: Cụm từ nối\nDấu hiệu: câu trước nêu giả định (không trả lời → không thuê tiếp); câu này nêu hệ quả của giả định đó → \"Trong trường hợp đó\".\n\nXét từng phương án:\n- In any event: dù sao đi nữa ✗\n- As expected: như dự đoán ✗\n- In that case: trong trường hợp đó ✓\n- For instance: ví dụ ✗\n\nGhi nhớ:\n- in that case: trong trường hợp đó\n- tenant: người thuê nhà\n\nDịch: Trong trường hợp đó, căn nhà sẽ được niêm yết cho người thuê mới từ ngày 1/4.",
       "glossary": [
        {
-        "term": "case",
-        "pos": "phr",
+        "term": "in that case",
+        "pos": "phrase",
         "ipa": "",
         "meaning": "trong trường hợp đó"
        },
@@ -5829,13 +5625,13 @@
         "term": "list",
         "pos": "v",
         "ipa": "",
-        "meaning": "liệt kê, đăng tải"
+        "meaning": "niêm yết, đăng"
        },
        {
-        "term": "available",
-        "pos": "adj",
+        "term": "tenant",
+        "pos": "n",
         "ipa": "",
-        "meaning": "có sẵn"
+        "meaning": "người thuê nhà"
        }
       ]
      }
@@ -5855,25 +5651,19 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCâu trước đó đề cập đến việc nếu khách muốn chuyển sang căn hộ lớn hơn hoặc nhỏ hơn thì hãy báo cho người viết biết. Câu (B) khẳng định sự sẵn lòng hỗ trợ của công ty là lựa chọn logic nhất để kết lại email.",
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nDấu hiệu: chỗ trống ở cuối email của công ty bất động sản gửi khách thuê → câu kết lịch sự thể hiện sự sẵn sàng hỗ trợ.\n\nXét từng phương án:\n- (A) Công ty được thành lập 22 năm trước → thông tin lịch sử, không liên quan ✗\n- (B) Kanarak Realty luôn sẵn lòng hỗ trợ ông bằng mọi cách có thể ✓\n- (C) Ông đã ở căn nhà hiện tại gần hai năm → không có cơ sở, lạc ý ✗\n- (D) Căn hộ có ba phòng ngủ và hai phòng tắm → mô tả căn hộ, lạc ý ✗\n\nGhi nhớ:\n- however we can: bằng bất cứ cách nào có thể\n- occupy: ở, sử dụng (nhà)\n\nDịch: Kanarak Realty luôn sẵn lòng hỗ trợ ông bằng mọi cách có thể.",
       "glossary": [
-       {
-        "term": "realty",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "bất động sản"
-       },
-       {
-        "term": "happy",
-        "pos": "adj",
-        "ipa": "",
-        "meaning": "vui vẻ, sẵn lòng"
-       },
        {
         "term": "however",
         "pos": "adv",
         "ipa": "",
         "meaning": "bằng bất cứ cách nào"
+       },
+       {
+        "term": "occupy",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "ở, chiếm dụng"
        }
       ]
      }
@@ -5907,7 +5697,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCả đoạn văn đang liệt kê các lựa chọn về nơi ở như khách sạn (hotels), nhà nghỉ (inns), căn hộ cho thuê (apartment rentals). Do đó, danh từ tổng quát accommodation (chỗ ở) là chính xác nhất.",
+      "reasoning": "* Dạng câu: Từ vựng (danh từ)\nDấu hiệu: các câu sau liệt kê khách sạn, nhà trọ, căn hộ cho thuê, khu cắm trại, ký túc xá → từ bao quát là \"chỗ ở\".\n\nXét từng phương án:\n- dining: ăn uống ✗\n- investment: khoản đầu tư ✗\n- entertainment: giải trí ✗\n- accommodation: chỗ ở, lưu trú ✓\n\nGhi nhớ:\n- accommodation options: các lựa chọn lưu trú\n- a wide range of: nhiều loại\n\nDịch: Bán đảo Devegas có rất nhiều lựa chọn chỗ ở.",
       "glossary": [
        {
         "term": "peninsula",
@@ -5916,22 +5706,16 @@
         "meaning": "bán đảo"
        },
        {
-        "term": "feature",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "có, bao gồm"
-       },
-       {
-        "term": "range",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "một loạt đa dạng"
-       },
-       {
         "term": "accommodation",
         "pos": "n",
         "ipa": "",
-        "meaning": "chỗ ở"
+        "meaning": "chỗ ở, lưu trú"
+       },
+       {
+        "term": "a wide range of",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "nhiều loại"
        }
       ]
      }
@@ -5951,25 +5735,25 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCấu trúc bị động can be found (có thể được tìm thấy) thường dùng trong các bài quảng cáo hoặc brochure hướng dẫn.",
+      "reasoning": "* Dạng câu: Bị động với động từ khuyết thiếu\nDấu hiệu: \"More than twenty luxury hotels ___ found along Devegas Beach\" → khách sạn \"được tìm thấy\" (bị động); brochure mô tả thực tế hiện tại → can be found.\n\nXét từng phương án:\n- were: quá khứ → brochure nói về hiện tại ✗\n- can be: có thể được (tìm thấy) ✓\n- would be: giả định → không cần thiết ✗\n- have been: hiện tại hoàn thành → không hợp mô tả ✗\n\nGhi nhớ:\n- can be found: có thể tìm thấy\n- moderately priced: giá vừa phải\n\nDịch: Có thể tìm thấy hơn hai mươi khách sạn cao cấp dọc bãi biển Devegas, cùng một số khách sạn giá vừa phải ở khu Devegas Park.",
       "glossary": [
        {
         "term": "luxury",
         "pos": "adj",
         "ipa": "",
-        "meaning": "sang trọng"
+        "meaning": "cao cấp, sang trọng"
        },
        {
-        "term": "find",
-        "pos": "v",
+        "term": "moderately priced",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "tìm thấy"
+        "meaning": "giá vừa phải"
        },
        {
-        "term": "along",
-        "pos": "prep",
+        "term": "neighborhood",
+        "pos": "n",
         "ipa": "",
-        "meaning": "dọc theo"
+        "meaning": "khu vực, khu phố"
        }
       ]
      }
@@ -5989,19 +5773,19 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCâu trước đã liệt kê các khách sạn sang trọng và khách sạn giá trung bình. Câu này liệt kê thêm các nhà nghỉ nhỏ và căn hộ. Dùng In addition (Thêm vào đó) để bổ sung thông tin.",
+      "reasoning": "* Dạng câu: Trạng từ liên kết\nDấu hiệu: câu trước đã nêu khách sạn cao cấp và giá vừa phải; câu này liệt kê thêm nhà trọ nhỏ, căn hộ ngắn hạn → bổ sung cùng chiều.\n\nXét từng phương án:\n- After all: rốt cuộc ✗\n- In addition: ngoài ra ✓\n- Fortunately: may mắn thay ✗\n- Nevertheless: tuy nhiên ✗\n\nGhi nhớ:\n- in addition: ngoài ra\n- be scattered throughout: rải rác khắp\n\nDịch: Ngoài ra, nhiều nhà trọ nhỏ và căn hộ cho thuê ngắn hạn nằm rải rác khắp khu vực.",
       "glossary": [
        {
-        "term": "addition",
-        "pos": "phr",
+        "term": "in addition",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "thêm vào đó"
+        "meaning": "ngoài ra"
        },
        {
         "term": "inn",
         "pos": "n",
         "ipa": "",
-        "meaning": "nhà nghỉ"
+        "meaning": "nhà trọ"
        },
        {
         "term": "short-term",
@@ -6010,10 +5794,10 @@
         "meaning": "ngắn hạn"
        },
        {
-        "term": "scatter",
-        "pos": "v",
+        "term": "scattered",
+        "pos": "adj",
         "ipa": "",
-        "meaning": "nằm rải rác"
+        "meaning": "rải rác"
        }
       ]
      }
@@ -6024,7 +5808,7 @@
      "prompt": null,
      "options": {
       "A": "Tourists flock to the peninsula during the summer months.",
-      "B": "Plan your vacation while space remains.",
+      "B": "Plan your vacation while space remains available.",
       "C": "Travelers on a budget also have options.",
       "D": "The Devegas Peninsula is more than ten kilometers long."
      },
@@ -6033,25 +5817,31 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCâu ngay sau ô trống đề cập đến 'inexpensive campsites and youth hostels' (các khu cắm trại không đắt tiền và nhà trọ thanh niên). Đây là những lựa chọn dành cho người có ngân sách hạn chế.",
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nDấu hiệu: đoạn văn nói về chỗ ở theo các mức giá; câu sau nhắc \"các khu cắm trại giá rẻ và ký túc xá thanh niên\" → câu ở giữa giới thiệu lựa chọn cho người có ngân sách hạn chế.\n\nXét từng phương án:\n- (A) Du khách đổ về bán đảo vào mùa hè → không dẫn tới các chỗ ở giá rẻ ✗\n- (B) Hãy lên kế hoạch khi vẫn còn phòng → lạc ý ✗\n- (C) Du khách có ngân sách hạn chế cũng có nhiều lựa chọn ✓\n- (D) Bán đảo dài hơn mười cây số → lạc ý ✗\n\nGhi nhớ:\n- on a budget: với ngân sách hạn chế\n- flock to: đổ xô đến\n\nDịch: Du khách có ngân sách hạn chế cũng có nhiều lựa chọn. Một số khu cắm trại giá rẻ và ký túc xá thanh niên hoạt động quanh năm.",
       "glossary": [
        {
-        "term": "traveler",
-        "pos": "n",
+        "term": "on a budget",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "du khách"
+        "meaning": "với ngân sách hạn chế"
        },
        {
-        "term": "budget",
-        "pos": "phr",
-        "ipa": "",
-        "meaning": "có ngân sách hạn chế"
-       },
-       {
-        "term": "option",
+        "term": "campsite",
         "pos": "n",
         "ipa": "",
-        "meaning": "lựa chọn"
+        "meaning": "khu cắm trại"
+       },
+       {
+        "term": "youth hostel",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "ký túc xá thanh niên"
+       },
+       {
+        "term": "flock to",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "đổ xô đến"
        }
       ]
      }
@@ -6085,7 +5875,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nSau từ 'you will' chúng ta cần một động từ. Dựa vào ngữ cảnh, đối tượng nhận thông báo từ hệ thống phải ở thể bị động (will + be + V3/ed).",
+      "reasoning": "* Dạng câu: Bị động\nDấu hiệu: \"you will ___ by e-mail\" → người dùng \"được thông báo\" → bị động tương lai: will be + V3.\n\nXét từng phương án:\n- notify: thông báo (chủ động) → thiếu tân ngữ ✗\n- be notified: được thông báo ✓\n- notifying (V-ing) → không đứng sau \"will\" ✗\n- have notified: tương lai hoàn thành chủ động → sai nghĩa ✗\n\nGhi nhớ:\n- will be + V3: sẽ được…\n- notify sb of sth: thông báo cho ai về việc gì\n\nDịch: Sau khi tất cả các bên đã ký tài liệu Nelsign, bạn sẽ được thông báo qua email.",
       "glossary": [
        {
         "term": "party",
@@ -6094,16 +5884,16 @@
         "meaning": "bên (trong hợp đồng)"
        },
        {
-        "term": "sign",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "ký tên"
-       },
-       {
         "term": "notify",
         "pos": "v",
         "ipa": "",
         "meaning": "thông báo"
+       },
+       {
+        "term": "signature",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chữ ký"
        }
       ]
      }
@@ -6123,25 +5913,19 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nĐứng sau giới từ 'Upon' chúng ta cần một danh từ hoặc V-ing để chỉ một sự kiện vừa mới kết thúc.",
+      "reasoning": "* Dạng câu: Từ loại (danh từ sau giới từ)\nDấu hiệu: \"Upon ___, all signers may access…\" → sau giới từ \"upon\" cần danh từ.\n\nXét từng phương án:\n- complete (V/adj): hoàn thành ✗\n- completed (V-ed) ✗\n- completely (adv) ✗\n- completion (n): sự hoàn tất ✓\n\nGhi nhớ:\n- upon + N / V-ing: ngay khi, sau khi\n- upon completion: khi hoàn tất\n\nDịch: Khi hoàn tất, tất cả người ký đều có thể truy cập và lưu tài liệu.",
       "glossary": [
        {
-        "term": "upon",
-        "pos": "prep",
+        "term": "upon completion",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "ngay khi"
-       },
-       {
-        "term": "completion",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "sự hoàn thành"
+        "meaning": "khi hoàn tất"
        },
        {
         "term": "signer",
         "pos": "n",
         "ipa": "",
-        "meaning": "người ký tên"
+        "meaning": "người ký"
        },
        {
         "term": "access",
@@ -6167,25 +5951,25 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nCâu phía trước đang nói về lợi ích khi có tài khoản 'Nelsign account'. Vì vậy, câu tiếp theo hướng dẫn cách để tạo tài khoản là sự liên kết nội dung rất chặt chẽ.",
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nDấu hiệu: câu trước nói về trường hợp ĐÃ có tài khoản Nelsign → câu này bổ sung trường hợp chưa có tài khoản thì làm gì.\n\nXét từng phương án:\n- (A) Ai cần tạo tài khoản, chỉ cần truy cập website của chúng tôi ✓\n- (B) Ngày hiệu lực ghi ở đầu tài liệu → không nối với chuyện tài khoản ✗\n- (C) Điều khoản quyền riêng tư được đính kèm → lạc ý ✗\n- (D) Công ty chúng tôi đặt tại Utah → lạc ý ✗\n\nGhi nhớ:\n- for those who + V: đối với những ai…\n- create an account: tạo tài khoản\n\nDịch: Nếu bạn có tài khoản Nelsign, hợp đồng này và các tài liệu đã ký điện tử trước đó sẽ được lưu trong hồ sơ của bạn. Đối với những ai cần tạo tài khoản, chỉ cần truy cập website của chúng tôi.",
       "glossary": [
        {
-        "term": "create",
-        "pos": "v",
+        "term": "create an account",
+        "pos": "phrase",
         "ipa": "",
-        "meaning": "tạo"
+        "meaning": "tạo tài khoản"
        },
        {
-        "term": "account",
+        "term": "effective date",
         "pos": "n",
         "ipa": "",
-        "meaning": "tài khoản"
+        "meaning": "ngày có hiệu lực"
        },
        {
-        "term": "visit",
-        "pos": "v",
+        "term": "privacy terms",
+        "pos": "n",
         "ipa": "",
-        "meaning": "truy cập, ghé thăm"
+        "meaning": "điều khoản quyền riêng tư"
        }
       ]
      }
@@ -6205,7 +5989,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "3.\nGiới từ regarding có nghĩa là 'về việc/liên quan đến'. Cụm từ 'questions regarding the signing process' là cách diễn đạt chuyên nghiệp phổ biến.",
+      "reasoning": "* Dạng câu: Giới từ\nDấu hiệu: \"For any questions ___ the signing process\" → \"questions regarding + N\" = câu hỏi liên quan đến.\n\nXét từng phương án:\n- around: xung quanh ✗\n- through: thông qua ✗\n- regarding: liên quan đến ✓\n- assuming: giả sử ✗\n\nGhi nhớ:\n- regarding = concerning = about: liên quan đến\n- customer support center: trung tâm hỗ trợ khách hàng\n\nDịch: Mọi câu hỏi liên quan đến quy trình ký, vui lòng liên hệ trung tâm hỗ trợ khách hàng qua inquiries@nelsign.com.",
       "glossary": [
        {
         "term": "regarding",
@@ -6214,10 +5998,16 @@
         "meaning": "liên quan đến"
        },
        {
-        "term": "process",
+        "term": "signing process",
         "pos": "n",
         "ipa": "",
-        "meaning": "quá trình ký kết"
+        "meaning": "quy trình ký"
+       },
+       {
+        "term": "customer support",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hỗ trợ khách hàng"
        }
       ]
      }
