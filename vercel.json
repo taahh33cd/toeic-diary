@@ -14,18 +14,6 @@
     {
       "path": "/api/cron/inactivity-alert",
       "schedule": "0 2 * * *"
-    },
-    {
-      "path": "/api/cron/roadmap-rollover",
-      "schedule": "30 17 * * *"
-    },
-    {
-      "path": "/api/cron/roadmap-weekly",
-      "schedule": "0 14 * * 0"
-    },
-    {
-      "path": "/api/cron/roadmap-remind",
-      "schedule": "0 12 * * *"
     }
   ]
 }

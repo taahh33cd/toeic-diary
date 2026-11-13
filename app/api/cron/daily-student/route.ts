@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db/prisma";
 import { getAdminDb } from "@/lib/firebase/admin";
 import { sendPushToUser } from "@/lib/push";
+import { runRoadmapDaily } from "@/lib/roadmap/daily-job";
 import type { Homework } from "@/lib/firebase/types";
 
 export const runtime = "nodejs";
@@ -129,5 +130,18 @@ export async function GET(request: NextRequest) {
     })
   );
 
-  return NextResponse.json({ ok: true, notified });
+  // Việc nền của khu Lộ trình đi nhờ lượt chạy này: gói Hobby chỉ cho 2 cron
+  // mỗi project và cả hai suất đã dùng hết. Xem lib/roadmap/daily-job.ts.
+  // Có ngân sách thời gian riêng và tự nuốt lỗi, nên không kéo đổ phần nhắc
+  // bài tập phía trên — phần đó mới là việc chính của cron này.
+  const roadmap = await runRoadmapDaily({ budgetMs: 25_000 }).catch((e) => ({
+    plans: 0,
+    maintained: 0,
+    newWeeks: 0,
+    reminded: 0,
+    ranOutOfTime: false,
+    failures: [e instanceof Error ? e.message : "?"],
+  }));
+
+  return NextResponse.json({ ok: true, notified, roadmap });
 }

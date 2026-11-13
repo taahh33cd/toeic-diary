@@ -829,8 +829,14 @@ hoàn thành — đã viết lại khẳng định cho đúng ("hết việc ch�
   có chủ ý), site admin cần đăng nhập tài khoản admin, mà Next 16 không cho chạy
   hai dev server cùng thư mục. Trang đã build, typecheck và lint sạch nhưng chưa
   ai nhìn thấy nó chạy.
-- **5 cron trong `vercel.json`.** Gói Hobby của Vercel chỉ cho 2 — nếu dự án chưa
-  lên Pro thì deploy sẽ bị từ chối.
+- ~~5 cron trong `vercel.json`~~ — **đã xử lý 13/11**: kiểm tra thì tài khoản
+  đang ở gói **Hobby** và production đã dùng đúng 2 suất cron
+  (`daily-student`, `inactivity-alert`). Ba cron của lộ trình được gộp vào
+  `lib/roadmap/daily-job.ts`, chạy nhờ lượt của `daily-student` (20:00 giờ VN),
+  có ngân sách 25 giây và tự nuốt lỗi để không kéo đổ phần nhắc bài tập.
+  Ba route `/api/cron/roadmap-*` vẫn giữ để gọi tay khi cần, chỉ không còn lịch.
+  `maxDuration = 300` thì KHÔNG phải vấn đề — route chấm bài đã dùng mức đó và
+  đang chạy trên production.
 - Chưa có huy hiệu riêng cho lộ trình (mốc tuần/tháng), mới có XP.
 
 ### Phase 6 — Mở rộng
