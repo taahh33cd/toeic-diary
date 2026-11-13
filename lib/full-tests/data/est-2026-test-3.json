@@ -4350,8 +4350,27 @@
      "answer": "B",
      "explanation": {
       "translation": "Despite ------- youth, Ms. Cho is already quite popular on social media.(A) she (B) her (C) hers (D) herself\n2.\nMặc dù tuổi đời còn trẻ, cô Cho đã khá nổi tiếng trên mạng xã hội.- Phân tích: \"Despite her youth\" = mặc dù tuổi đời còn trẻ. \"she\" không đứng trước danh từ; \"hers\" không đi với danh từ; \"herself\" sai cấu trúc.- Glossary (Từ vựng/ Cụm từ):youth (n): tuổi trẻpopular (adj): nổi tiếng",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Đại từ / Tính từ sở hữu)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Đại từ (tính từ sở hữu)\nDấu hiệu: sau \"Despite\" cần danh từ / cụm danh từ; sau chỗ trống đã có danh từ \"youth\" → cần tính từ sở hữu bổ nghĩa cho danh từ.\n\nXét từng phương án:\n- she: đại từ nhân xưng làm chủ ngữ ✗\n- her: tính từ sở hữu (của cô ấy) / tân ngữ ✓\n- hers: đại từ sở hữu (= her + N) ✗\n- herself: đại từ phản thân ✗\n\nGhi nhớ:\n- despite + N / V-ing: mặc dù\n- despite one's youth: mặc dù còn trẻ\n\nDịch: Mặc dù còn trẻ, bà Cho đã khá nổi tiếng trên mạng xã hội.",
+      "glossary": [
+       {
+        "term": "despite",
+        "pos": "prep",
+        "ipa": "",
+        "meaning": "mặc dù (+ N/V-ing)"
+       },
+       {
+        "term": "youth",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tuổi trẻ"
+       },
+       {
+        "term": "social media",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "mạng xã hội"
+       }
+      ]
      }
     }
    ]
@@ -4376,8 +4395,33 @@
      "answer": "A",
      "explanation": {
       "translation": "Most of the materials distributed at last month's accounting conference are now ------- online.(A) available (B) intended (C) comparable (D) decisive\n2.\nHầu hết các tài liệu được phân phát tại hội nghị kế toán tháng trước hiện đã có sẵn trực tuyến.- Phân tích: \"be available online\" = có sẵn trên mạng. Các từ khác sai nghĩa/ngữ cảnh.- Glossary (Từ vựng/ Cụm từ):distribute (v): phân phátmaterial (n): tài liệu",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (tính từ)\nDấu hiệu: \"are now ___ online\" → cần tính từ sau \"be\", nói về tài liệu đã được đăng lên mạng.\n→ available online = có sẵn trên mạng.\n\nXét từng phương án:\n- available: có sẵn ✓\n- intended: được dự định ✗\n- comparable: có thể so sánh ✗\n- decisive: mang tính quyết định ✗\n\nGhi nhớ:\n- be available online: có sẵn trực tuyến\n- distribute: phân phát\n\nDịch: Hầu hết các tài liệu được phân phát tại hội nghị kế toán tháng trước hiện đã có sẵn trực tuyến.",
+      "glossary": [
+       {
+        "term": "material",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tài liệu"
+       },
+       {
+        "term": "distribute",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "phân phát"
+       },
+       {
+        "term": "available",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "có sẵn"
+       },
+       {
+        "term": "comparable",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "có thể so sánh"
+       }
+      ]
      }
     }
    ]
@@ -4402,8 +4446,27 @@
      "answer": "B",
      "explanation": {
       "translation": "A full-scale ------- will be conducted by the accounting department.(A) reviewer (B) review (C) reviewed (D) reviews\n2.\nMột cuộc đánh giá toàn diện sẽ được tiến hành bởi bộ phận kế toán.- Phân tích: \"conduct a review\" = tiến hành một cuộc đánh giá. \"reviewer\" là người, \"reviews\" số nhiều không hợp với mạo từ \"a\".- Glossary (Từ vựng/ Cụm từ):full-scale (adj): toàn diệnconduct (v): tiến hành",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Danh từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ loại (danh từ số ít)\nDấu hiệu: \"A full-scale ___ will be conducted\" → có mạo từ \"a\" và tính từ \"full-scale\" → cần danh từ đếm được số ít; \"conduct a review\" = tiến hành một cuộc đánh giá.\n\nXét từng phương án:\n- reviewer (n): người đánh giá → người không \"được tiến hành\" ✗\n- review (n): cuộc đánh giá ✓\n- reviewed (V-ed): đã được đánh giá ✗\n- reviews (N số nhiều / V-s) → không đi với \"a\" ✗\n\nGhi nhớ:\n- conduct a review: tiến hành một cuộc đánh giá\n- full-scale: toàn diện\n\nDịch: Một cuộc đánh giá toàn diện sẽ được tiến hành bởi phòng kế toán.",
+      "glossary": [
+       {
+        "term": "full-scale",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "toàn diện, quy mô đầy đủ"
+       },
+       {
+        "term": "conduct",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tiến hành"
+       },
+       {
+        "term": "review",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "cuộc đánh giá, rà soát"
+       }
+      ]
      }
     }
    ]
@@ -4428,8 +4491,27 @@
      "answer": "C",
      "explanation": {
       "translation": "Poshy Shoes vice president Lucille Jeris has been ------- to president of the company.(A) provided (B) decorated (C) promoted (D) responded\n2.\nPhó chủ tịch Poshy Shoes Lucille Jeris đã được thăng chức lên làm chủ tịch công ty.- Phân tích: \"be promoted to president\" = được thăng chức lên (vị trí chủ tịch).- Glossary (Từ vựng/ Cụm từ):promote (v): thăng chứcpresident (n): chủ tịch",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Động từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (động từ)\nDấu hiệu: \"has been ___ to president\" → sau chỗ trống là \"to + chức vụ\" → cần động từ mang nghĩa \"thăng chức\".\n\nXét từng phương án:\n- provided: được cung cấp ✗\n- decorated: được trang trí / trao huân chương ✗\n- promoted: được thăng chức ✓\n- responded: phản hồi (nội động từ, không dùng bị động) ✗\n\nGhi nhớ:\n- be promoted to + chức vụ: được thăng chức lên…\n- vice president: phó chủ tịch\n\nDịch: Phó chủ tịch của Poshy Shoes, bà Lucille Jeris, đã được thăng chức lên làm chủ tịch công ty.",
+      "glossary": [
+       {
+        "term": "vice president",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phó chủ tịch"
+       },
+       {
+        "term": "be promoted to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "được thăng chức lên"
+       },
+       {
+        "term": "decorate",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "trang trí; trao huân chương"
+       }
+      ]
      }
     }
    ]
@@ -4454,8 +4536,27 @@
      "answer": "D",
      "explanation": {
       "translation": "The report found that employees who take regular breaks are more ------- than those who take no breaks.(A) production (B) productively (C) productivity (D) productive\n2.\nBáo cáo cho thấy những nhân viên nghỉ giải lao thường xuyên thì làm việc năng suất hơn những người không nghỉ ngơi.- Phân tích: Cấu trúc so sánh \"more productive than\" = năng suất hơn. Cần tính từ ở vị trí này sau to be \"are\".- Glossary (Từ vựng/ Cụm từ):regular break (n): sự nghỉ ngơi thường xuyênproductive (adj): năng suất",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Tính từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: So sánh hơn (từ loại)\nDấu hiệu: \"are more ___ than\" → sau \"be more\" cần tính từ trong cấu trúc so sánh hơn.\n\nXét từng phương án:\n- production (n): sự sản xuất ✗\n- productively (adv): một cách hiệu quả ✗\n- productivity (n): năng suất ✗\n- productive (adj): làm việc hiệu quả, năng suất cao ✓\n\nGhi nhớ:\n- be more + adj dài + than: … hơn so với…\n- take a break: nghỉ giải lao\n\nDịch: Báo cáo cho thấy những nhân viên thường xuyên nghỉ giải lao làm việc năng suất hơn những người không nghỉ.",
+      "glossary": [
+       {
+        "term": "regular",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "thường xuyên, đều đặn"
+       },
+       {
+        "term": "take a break",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "nghỉ giải lao"
+       },
+       {
+        "term": "productive",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "làm việc hiệu quả, năng suất"
+       }
+      ]
      }
     }
    ]
@@ -4480,8 +4581,33 @@
      "answer": "B",
      "explanation": {
       "translation": "Customers of Twins Photocopiers are encouraged to contact a ------- if their machines need repairs.(A) replacement (B) technician (C) renewal (D) structure\n2.\nKhách hàng của Twins Photocopiers được khuyến khích liên hệ với kỹ thuật viên nếu máy của họ cần sửa chữa.- Phân tích: \"contact a technician\" = liên hệ kỹ thuật viên.- Glossary (Từ vựng/ Cụm từ):technician (n): kỹ thuật viênrepair (n): sự sửa chữa",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (danh từ)\nDấu hiệu: \"contact a ___ if their machines need repairs\" → sau \"a\" cần danh từ chỉ người có thể sửa máy.\n\nXét từng phương án:\n- replacement: sự thay thế / người thay thế ✗\n- technician: kỹ thuật viên ✓\n- renewal: sự gia hạn ✗\n- structure: cấu trúc ✗\n\nGhi nhớ:\n- be encouraged to V: được khuyến khích làm gì\n- need repairs: cần sửa chữa\n\nDịch: Khách hàng của Twins Photocopiers được khuyến khích liên hệ với một kỹ thuật viên nếu máy của họ cần sửa chữa.",
+      "glossary": [
+       {
+        "term": "photocopier",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "máy photocopy"
+       },
+       {
+        "term": "be encouraged to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "được khuyến khích"
+       },
+       {
+        "term": "technician",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "kỹ thuật viên"
+       },
+       {
+        "term": "renewal",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự gia hạn"
+       }
+      ]
      }
     }
    ]
@@ -4506,8 +4632,27 @@
      "answer": "A",
      "explanation": {
       "translation": "The heavy traffic on the way to the airport ------- caused Ms. Ikeda to miss her flight.(A) nearly (B) near (C) nears (D) nearness\n2.\nGiao thông đông đúc trên đường đến sân bay suýt nữa đã khiến cô Ikeda lỡ chuyến bay của mình.- Phân tích: \"nearly caused\" = suýt nữa gây ra. Cần trạng từ bổ nghĩa cho động từ \"caused\".- Glossary (Từ vựng/ Cụm từ):heavy traffic (n): giao thông đông đúcmiss (v): bỏ lỡ",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Trạng từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ loại (trạng từ)\nDấu hiệu: chỗ trống nằm giữa chủ ngữ \"The heavy traffic…\" và động từ \"caused\" → cần trạng từ bổ nghĩa cho động từ.\n→ nearly caused = suýt nữa đã khiến.\n\nXét từng phương án:\n- nearly (adv): gần như, suýt ✓\n- near (adj/adv/prep/V): gần (khoảng cách, thời gian) ✗\n- nears (V-s): đến gần ✗\n- nearness (n): sự gần gũi ✗\n\nGhi nhớ:\n- nearly + V-ed: suýt nữa\n- cause sb to V: khiến ai làm gì\n\nDịch: Giao thông đông đúc trên đường ra sân bay suýt khiến bà Ikeda lỡ chuyến bay.",
+      "glossary": [
+       {
+        "term": "heavy traffic",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "giao thông đông đúc"
+       },
+       {
+        "term": "nearly",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "gần như, suýt"
+       },
+       {
+        "term": "cause sb to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "khiến ai (làm gì)"
+       }
+      ]
      }
     }
    ]
@@ -4520,7 +4665,7 @@
     {
      "number": 108,
      "part": 5,
-     "prompt": "A news source ------- suggested that the merger will take place next year.",
+     "prompt": "A news source suggested that the merger will ------- take place next year.",
      "options": {
       "A": "originally",
       "B": "probably",
@@ -4532,8 +4677,33 @@
      "answer": "B",
      "explanation": {
       "translation": "A news source suggested that the merger will ------- take place next year.(A) originally (B) probably (C) regularly (D) thoughtfully\n2.\nMột nguồn tin cho rằng vụ sáp nhập có thể sẽ diễn ra vào năm tới.- Phân tích: \"will probably take place\" = có khả năng sẽ diễn ra.- Glossary (Từ vựng/ Cụm từ):merger (n): sự sáp nhậptake place (v): diễn ra",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Trạng từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (trạng từ)\nDấu hiệu: \"will ___ take place next year\" → cần trạng từ chỉ khả năng xảy ra trong tương lai; tin chỉ là \"a news source suggested\" (một nguồn tin cho rằng) nên không chắc chắn.\n\nXét từng phương án:\n- originally: ban đầu ✗\n- probably: có lẽ ✓\n- regularly: thường xuyên ✗\n- thoughtfully: một cách chu đáo ✗\n\nGhi nhớ:\n- will probably + V: có lẽ sẽ\n- merger: vụ sáp nhập\n\nDịch: Một nguồn tin cho rằng vụ sáp nhập có lẽ sẽ diễn ra vào năm tới.",
+      "glossary": [
+       {
+        "term": "news source",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nguồn tin"
+       },
+       {
+        "term": "merger",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "vụ sáp nhập"
+       },
+       {
+        "term": "probably",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "có lẽ"
+       },
+       {
+        "term": "take place",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "diễn ra"
+       }
+      ]
      }
     }
    ]
@@ -4558,8 +4728,27 @@
      "answer": "A",
      "explanation": {
       "translation": "The Seaborne Inn has ------- beautiful guest rooms that can be booked on a monthly basis.(A) various (B) among (C) throughout (D) itself\n2.\nNhà trọ Seaborne có nhiều phòng khách xinh đẹp khác nhau có thể được đặt theo tháng.- Phân tích: \"various beautiful rooms\" = nhiều phòng khác nhau.- Glossary (Từ vựng/ Cụm từ):various (adj): nhiều, đa dạngon a monthly basis (phr): theo tháng",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp / Từ vựng (Lượng từ / Tính từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Tính từ chỉ số lượng\nDấu hiệu: chỗ trống đứng trước cụm danh từ số nhiều \"beautiful guest rooms\" (tân ngữ của \"has\") → cần tính từ chỉ số lượng / sự đa dạng.\n\nXét từng phương án:\n- various: nhiều, đa dạng ✓\n- among: giữa → giới từ ✗\n- throughout: khắp → giới từ ✗\n- itself: chính nó → đại từ ✗\n\nGhi nhớ:\n- various + N số nhiều: nhiều, đa dạng\n- on a monthly basis: theo tháng\n\nDịch: Khách sạn Seaborne Inn có nhiều phòng nghỉ đẹp có thể đặt theo tháng.",
+      "glossary": [
+       {
+        "term": "various",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "nhiều, đa dạng"
+       },
+       {
+        "term": "guest room",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phòng khách (khách sạn)"
+       },
+       {
+        "term": "on a monthly basis",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "theo tháng"
+       }
+      ]
      }
     }
    ]
@@ -4572,7 +4761,7 @@
     {
      "number": 110,
      "part": 5,
-     "prompt": "Ahearn Accessories retail shop is located ------- Gordon Avenue and Hutch Street.",
+     "prompt": "Ahearn Accessories' retail shop is located ------- Gordon Avenue and Hutch Street.",
      "options": {
       "A": "until",
       "B": "against",
@@ -4584,8 +4773,27 @@
      "answer": "C",
      "explanation": {
       "translation": "Ahearn Accessories' retail shop is located ------- Gordon Avenue and Hutch Street.(A) until (B) against (C) at (D) aside from\n2.\nCửa hàng bán lẻ của Ahearn Accessories nằm tại giao lộ đại lộ Gordon và đường Hutch.- Phân tích: \"located at\" dùng cho vị trí cụ thể (tại một ngã tư/giao lộ).- Glossary (Từ vựng/ Cụm từ):retail shop (n): cửa hàng bán lẻlocate (v): tọa lạc",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Giới từ chỉ nơi chốn\nDấu hiệu: \"is located ___ Gordon Avenue and Hutch Street\" → chỉ một vị trí cụ thể (góc giao nhau của hai con đường) → giới từ \"at\".\n\nXét từng phương án:\n- until: cho đến ✗\n- against: chống lại; tựa vào ✗\n- at: tại (vị trí cụ thể) ✓\n- aside from: ngoài ra ✗\n\nGhi nhớ:\n- be located at + địa chỉ / giao lộ: tọa lạc tại\n- retail shop: cửa hàng bán lẻ\n\nDịch: Cửa hàng bán lẻ của Ahearn Accessories tọa lạc tại góc đường Gordon Avenue và Hutch Street.",
+      "glossary": [
+       {
+        "term": "retail shop",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "cửa hàng bán lẻ"
+       },
+       {
+        "term": "be located at",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "tọa lạc tại"
+       },
+       {
+        "term": "aside from",
+        "pos": "prep",
+        "ipa": "",
+        "meaning": "ngoài ra"
+       }
+      ]
      }
     }
    ]
@@ -4610,8 +4818,27 @@
      "answer": "B",
      "explanation": {
       "translation": "A majority of the city's residents rated its transportation app as -------.(A) acceptability (B) acceptable (C) acceptance (D) accepting\n2.\nPhần lớn cư dân thành phố đánh giá ứng dụng giao thông của họ là có thể chấp nhận được.- Phân tích: \"rated as acceptable\" = được đánh giá là chấp nhận được. Cần tính từ sau giới từ \"as\" để miêu tả ứng dụng.- Glossary (Từ vựng/ Cụm từ):majority (n): phần lớnacceptable (adj): có thể chấp nhận",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Tính từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ loại\nDấu hiệu: cấu trúc \"rate + N + as + adj\" → sau \"as\" cần tính từ đánh giá ứng dụng.\n\nXét từng phương án:\n- acceptability (n): tính chấp nhận được ✗\n- acceptable (adj): chấp nhận được ✓\n- acceptance (n): sự chấp nhận ✗\n- accepting (V-ing) ✗\n\nGhi nhớ:\n- rate sth as + adj: đánh giá cái gì là…\n- a majority of + N: đa số\n\nDịch: Đa số cư dân thành phố đánh giá ứng dụng giao thông của thành phố là chấp nhận được.",
+      "glossary": [
+       {
+        "term": "a majority of",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "đa số"
+       },
+       {
+        "term": "rate",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "đánh giá, xếp hạng"
+       },
+       {
+        "term": "acceptable",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "chấp nhận được"
+       }
+      ]
      }
     }
    ]
@@ -4636,8 +4863,21 @@
      "answer": "C",
      "explanation": {
       "translation": "Dr. Cheung ------- Silk Valley Hospital at next weekend's medical fair.(A) represent (B) did represent (C) is representing (D) had represented\n2.\nBác sĩ Cheung sẽ đại diện cho Bệnh viện Silk Valley tại hội chợ y tế cuối tuần tới.- Phân tích: \"next weekend\" là dấu hiệu của kế hoạch tương lai, dùng thì hiện tại tiếp diễn mang ý nghĩa tương lai dự định (is representing).- Glossary (Từ vựng/ Cụm từ):represent (v): đại diệnfair (n): hội chợ",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Thì của động từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Thì động từ\nDấu hiệu: mốc thời gian \"next weekend's medical fair\" → kế hoạch đã sắp xếp trong tương lai gần → hiện tại tiếp diễn mang nghĩa tương lai.\n\nXét từng phương án:\n- represent (V) → thiếu -s với chủ ngữ số ít, không chỉ tương lai ✗\n- did represent: quá khứ ✗\n- is representing: sẽ đại diện (kế hoạch đã định) ✓\n- had represented: quá khứ hoàn thành ✗\n\nGhi nhớ:\n- hiện tại tiếp diễn + mốc tương lai: kế hoạch đã sắp xếp\n- medical fair: hội chợ y tế\n\nDịch: Bác sĩ Cheung sẽ đại diện cho Bệnh viện Silk Valley tại hội chợ y tế vào cuối tuần tới.",
+      "glossary": [
+       {
+        "term": "represent",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "đại diện"
+       },
+       {
+        "term": "medical fair",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hội chợ y tế"
+       }
+      ]
      }
     }
    ]
@@ -4662,8 +4902,27 @@
      "answer": "B",
      "explanation": {
       "translation": "Frankie's Boutique had a financially ------- quarter after taking measures to reduce costs.(A) plain (B) profitable (C) full (D) additional\n2.\nFrankie's Boutique đã có một quý sinh lời về mặt tài chính sau khi thực hiện các biện pháp cắt giảm chi phí.- Phân tích: \"financially profitable\" = có lãi về mặt tài chính.- Glossary (Từ vựng/ Cụm từ):profitable (adj): sinh lờimeasure (n): biện pháp",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (tính từ)\nDấu hiệu: sau chỗ trống là danh từ \"quarter\" (quý), trước là trạng từ \"financially\" (về tài chính); nhờ cắt giảm chi phí → quý \"có lãi\".\n\nXét từng phương án:\n- plain: đơn giản ✗\n- profitable: có lợi nhuận, có lãi ✓\n- full: đầy ✗\n- additional: thêm ✗\n\nGhi nhớ:\n- financially profitable: có lãi về mặt tài chính\n- take measures to V: thực hiện biện pháp để…\n\nDịch: Frankie's Boutique đã có một quý kinh doanh có lãi sau khi thực hiện các biện pháp giảm chi phí.",
+      "glossary": [
+       {
+        "term": "profitable",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "có lãi, sinh lợi"
+       },
+       {
+        "term": "quarter",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "quý (3 tháng)"
+       },
+       {
+        "term": "take measures",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "thực hiện biện pháp"
+       }
+      ]
      }
     }
    ]
@@ -4688,8 +4947,27 @@
      "answer": "B",
      "explanation": {
       "translation": "Because it submitted the lowest bid, Deb's Gifting has been chosen as the ------- of this year's holiday cards.(A) supply (B) supplier (C) supplies (D) supplying\n2.\nVì họ đã nộp hồ sơ dự thầu thấp nhất, Deb's Gifting đã được chọn làm nhà cung cấp thiệp chúc mừng lễ của năm nay.- Phân tích: \"chosen as the supplier\" = được chọn làm nhà cung cấp.- Glossary (Từ vựng/ Cụm từ):submit (v): nộpbid (n): hồ sơ dự thầu",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Danh từ chỉ người/nhà cung cấp)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ loại (danh từ)\nDấu hiệu: \"the ___ of this year's holiday cards\" → sau \"the\", trước \"of\" cần danh từ; Deb's Gifting là một công ty được chọn → danh từ chỉ đơn vị cung cấp.\n\nXét từng phương án:\n- supply (n/V): sự cung cấp ✗\n- supplier (n): nhà cung cấp ✓\n- supplies (N số nhiều/V-s): vật tư ✗\n- supplying (V-ing) ✗\n\nGhi nhớ:\n- submit a bid: nộp hồ sơ thầu\n- be chosen as + N: được chọn làm…\n\nDịch: Vì đã nộp giá thầu thấp nhất, Deb's Gifting đã được chọn làm nhà cung cấp thiệp lễ năm nay.",
+      "glossary": [
+       {
+        "term": "submit",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "nộp"
+       },
+       {
+        "term": "bid",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "giá thầu"
+       },
+       {
+        "term": "supplier",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nhà cung cấp"
+       }
+      ]
      }
     }
    ]
@@ -4714,8 +4992,27 @@
      "answer": "D",
      "explanation": {
       "translation": "The Whitetail Institute is the only ------- that tracks deer populations in rapidly expanding suburban areas.(A) leadership (B) neighborhood (C) official (D) organization\n2.\nViện Whitetail là tổ chức duy nhất theo dõi quần thể hươu ở các khu vực ngoại ô đang mở rộng nhanh chóng.- Phân tích: \"only organization that tracks\" = tổ chức duy nhất theo dõi.- Glossary (Từ vựng/ Cụm từ):track (v): theo dõisuburban (adj): ngoại ô",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (danh từ)\nDấu hiệu: \"the only ___ that tracks deer populations\" → cần danh từ chỉ một tổ chức (Whitetail Institute là một viện).\n\nXét từng phương án:\n- leadership: ban lãnh đạo ✗\n- neighborhood: khu dân cư ✗\n- official: quan chức → chỉ người ✗\n- organization: tổ chức ✓\n\nGhi nhớ:\n- track: theo dõi\n- suburban: ngoại ô\n\nDịch: Viện Whitetail là tổ chức duy nhất theo dõi quần thể hươu ở các khu vực ngoại ô đang mở rộng nhanh.",
+      "glossary": [
+       {
+        "term": "track",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "theo dõi"
+       },
+       {
+        "term": "population",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "quần thể; dân số"
+       },
+       {
+        "term": "suburban",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "(thuộc) ngoại ô"
+       }
+      ]
      }
     }
    ]
@@ -4740,8 +5037,27 @@
      "answer": "A",
      "explanation": {
       "translation": "The committee members ------- attended the meeting are listed in the appendix.(A) who (B) they (C) when (D) some\n2.\nCác thành viên ủy ban những người đã tham dự cuộc họp được liệt kê trong phụ lục.- Phân tích: Cần đại từ quan hệ \"who\" thay thế cho danh từ chỉ người (\"members\") và làm chủ ngữ cho động từ \"attended\".- Glossary (Từ vựng/ Cụm từ):committee (n): ủy banappendix (n): phụ lục",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Đại từ quan hệ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Đại từ quan hệ\nDấu hiệu: trước chỗ trống là danh từ chỉ người \"members\", sau là động từ \"attended\" → cần đại từ quan hệ chỉ người làm chủ ngữ.\n\nXét từng phương án:\n- who: đại từ quan hệ chỉ người, làm chủ ngữ ✓\n- they: đại từ nhân xưng → tạo hai động từ chính không có từ nối ✗\n- when: khi ✗\n- some: một số ✗\n\nGhi nhớ:\n- N (người) + who + V: người mà…\n- appendix: phụ lục\n\nDịch: Những thành viên ủy ban đã tham dự cuộc họp được liệt kê trong phần phụ lục.",
+      "glossary": [
+       {
+        "term": "committee",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "ủy ban"
+       },
+       {
+        "term": "attend",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tham dự"
+       },
+       {
+        "term": "appendix",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phụ lục"
+       }
+      ]
      }
     }
    ]
@@ -4754,20 +5070,39 @@
     {
      "number": 117,
      "part": 5,
-     "prompt": "Our new app is designed to provide ------- data-driven insights to investment professionals.",
+     "prompt": "Our new app is ------- designed to provide data-driven insights to investment professionals.",
      "options": {
       "A": "specify",
       "B": "specific",
-      "C": "specifically",
-      "D": "specification"
+      "C": "specificity",
+      "D": "specifically"
      },
      "showText": true,
      "broken": false,
      "answer": "D",
      "explanation": {
       "translation": "Our new app is ------- designed to provide data-driven insights to investment professionals.(A) specify (B) specific (C) specificity (D) specifically\n2.\nỨng dụng mới của chúng tôi được thiết kế một cách đặc thù để cung cấp thông tin chuyên sâu dựa trên dữ liệu cho các chuyên gia đầu tư.- Phân tích: \"specifically designed\" = được thiết kế một cách cụ thể/đặc thù. Cần trạng từ bổ nghĩa cho phân từ \"designed\".- Glossary (Từ vựng/ Cụm từ):specifically (adv): một cách đặc thù/cụ thểinsight (n): thông tin chi tiết",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Trạng từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ loại (trạng từ)\nDấu hiệu: \"is ___ designed\" (bị động be + V3) → chỗ trống đứng giữa \"is\" và phân từ \"designed\" → cần trạng từ bổ nghĩa.\n\nXét từng phương án:\n- specify (V): chỉ định ✗\n- specific (adj): cụ thể ✗\n- specificity (n): tính cụ thể ✗\n- specifically (adv): đặc biệt, chuyên biệt ✓\n\nGhi nhớ:\n- be specifically designed to V: được thiết kế đặc biệt để…\n- data-driven: dựa trên dữ liệu\n\nDịch: Ứng dụng mới của chúng tôi được thiết kế đặc biệt để cung cấp các phân tích dựa trên dữ liệu cho các chuyên gia đầu tư.",
+      "glossary": [
+       {
+        "term": "specifically",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "đặc biệt, chuyên biệt"
+       },
+       {
+        "term": "data-driven",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "dựa trên dữ liệu"
+       },
+       {
+        "term": "insight",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hiểu biết sâu, phân tích"
+       }
+      ]
      }
     }
    ]
@@ -4780,7 +5115,7 @@
     {
      "number": 118,
      "part": 5,
-     "prompt": "Results of the study suggest that more drivers ------- with night driving than previously believed.",
+     "prompt": "The results of the study suggest that more people ------- with night driving than previously believed.",
      "options": {
       "A": "struggles",
       "B": "struggling",
@@ -4792,8 +5127,21 @@
      "answer": "D",
      "explanation": {
       "translation": "The results of the study suggest that more people ------- with night driving than previously believed.(A) struggles (B) struggling (C) to struggle (D) struggle\n2.\nKết quả của nghiên cứu cho thấy rằng có nhiều người gặp khó khăn với việc lái xe vào ban đêm hơn người ta từng tin trước đây.- Phân tích: Sau chủ ngữ số nhiều \"more people\" cần động từ chia ở số nhiều/nguyên thể (\"struggle\").- Glossary (Từ vựng/ Cụm từ):study (n): nghiên cứustruggle (v): gặp khó khăn",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Sự hòa hợp chủ ngữ - động từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chia động từ theo chủ ngữ\nDấu hiệu: sau \"that\" là một mệnh đề; đã có chủ ngữ số nhiều \"more people\" → thiếu động từ chính chia số nhiều.\n\nXét từng phương án:\n- struggles (V-s) → dùng cho chủ ngữ số ít ✗\n- struggling (V-ing) → không làm động từ chính ✗\n- to struggle (to V) → không làm động từ chính ✗\n- struggle (V): gặp khó khăn ✓\n\nGhi nhớ:\n- struggle with + N: gặp khó khăn với\n- than previously believed: hơn so với trước đây người ta nghĩ\n\nDịch: Kết quả nghiên cứu cho thấy có nhiều người gặp khó khăn khi lái xe ban đêm hơn so với trước đây người ta nghĩ.",
+      "glossary": [
+       {
+        "term": "struggle with",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "gặp khó khăn với"
+       },
+       {
+        "term": "previously",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "trước đây"
+       }
+      ]
      }
     }
    ]
@@ -4818,8 +5166,27 @@
      "answer": "A",
      "explanation": {
       "translation": "Each department has been asked to develop an action plan in ------- to the budget cuts announced last week.(A) response (B) effect (C) apology (D) confirmation\n2.\nMỗi bộ phận đã được yêu cầu phát triển một kế hoạch hành động để đối phó/phản hồi lại việc cắt giảm ngân sách được công bố vào tuần trước.- Phân tích: Cụm \"in response to\" = để phản ứng với, để đối phó với.- Glossary (Từ vựng/ Cụm từ):in response to (phr): để phản hồi lạibudget cut (n): cắt giảm ngân sách",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Cụm từ cố định)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Cụm cố định\nDấu hiệu: \"in ___ to the budget cuts\" → cụm \"in response to\" = để đáp lại.\n\nXét từng phương án:\n- response: sự phản hồi → in response to ✓\n- effect: tác động ✗\n- apology: lời xin lỗi ✗\n- confirmation: sự xác nhận ✗\n\nGhi nhớ:\n- in response to + N: để đáp lại, ứng phó với\n- budget cut: cắt giảm ngân sách\n\nDịch: Mỗi phòng ban đã được yêu cầu xây dựng kế hoạch hành động để ứng phó với các đợt cắt giảm ngân sách được công bố tuần trước.",
+      "glossary": [
+       {
+        "term": "action plan",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "kế hoạch hành động"
+       },
+       {
+        "term": "in response to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "để đáp lại, ứng phó với"
+       },
+       {
+        "term": "budget cut",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự cắt giảm ngân sách"
+       }
+      ]
      }
     }
    ]
@@ -4832,7 +5199,7 @@
     {
      "number": 120,
      "part": 5,
-     "prompt": "Our popular online training materials have been shown to ------- improve job seekers' skills.",
+     "prompt": "Our popular online training materials have ------- been shown to improve job seekers' skills.",
      "options": {
       "A": "consistently",
       "B": "emotionally",
@@ -4844,8 +5211,27 @@
      "answer": "A",
      "explanation": {
       "translation": "Our popular online training materials have ------- been shown to improve job seekers' skills.(A) consistently (B) emotionally (C) dressed (D) randomly\n2.\nTài liệu đào tạo trực tuyến phổ biến của chúng tôi đã luôn luôn được chứng minh là cải thiện các kỹ năng của người tìm việc.- Phân tích: \"have consistently been shown\" = luôn luôn/liên tục được chứng minh.- Glossary (Từ vựng/ Cụm từ):consistently (adv): liên tụcjob seeker (n): người tìm việc",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Trạng từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (trạng từ)\nDấu hiệu: \"have ___ been shown to\" → cần trạng từ bổ nghĩa cho cụm \"have been shown\"; nói về hiệu quả được chứng minh nhiều lần.\n\nXét từng phương án:\n- consistently: một cách nhất quán, liên tục ✓\n- emotionally: về mặt cảm xúc ✗\n- spaciously: rộng rãi ✗\n- randomly: ngẫu nhiên ✗\n\nGhi nhớ:\n- have been shown to V: đã được chứng minh là…\n- consistently: nhất quán, liên tục\n\nDịch: Các tài liệu đào tạo trực tuyến phổ biến của chúng tôi đã liên tục được chứng minh là giúp cải thiện kỹ năng của người tìm việc.",
+      "glossary": [
+       {
+        "term": "consistently",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "một cách nhất quán, liên tục"
+       },
+       {
+        "term": "be shown to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "được chứng minh là"
+       },
+       {
+        "term": "job seeker",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "người tìm việc"
+       }
+      ]
      }
     }
    ]
@@ -4870,8 +5256,27 @@
      "answer": "B",
      "explanation": {
       "translation": "Ms. Yamada, ------- director of the Midlands Chamber of Commerce, was recently appointed to the state trade commission.(A) formed (B) former (C) formalize (D) formality\n2.\nBà Yamada, cựu giám đốc Phòng Thương mại Midlands, gần đây đã được bổ nhiệm vào ủy ban thương mại tiểu bang.- Phân tích: \"former director\" = cựu giám đốc.- Glossary (Từ vựng/ Cụm từ):former (adj): cựu, cũappoint (v): bổ nhiệm",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ loại (tính từ)\nDấu hiệu: chỗ trống đứng trước danh từ \"director\" → cần tính từ; ngữ cảnh: bà vừa được bổ nhiệm vào ủy ban khác → \"cựu\" giám đốc.\n\nXét từng phương án:\n- formed (V-ed): đã thành lập ✗\n- former (adj): cựu, trước đây ✓\n- formalize (V): chính thức hóa ✗\n- formality (n): thủ tục, tính hình thức ✗\n\nGhi nhớ:\n- former + chức danh: cựu…\n- be appointed to: được bổ nhiệm vào\n\nDịch: Bà Yamada, cựu giám đốc Phòng Thương mại Midlands, gần đây đã được bổ nhiệm vào ủy ban thương mại bang.",
+      "glossary": [
+       {
+        "term": "former",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "cựu, trước đây"
+       },
+       {
+        "term": "chamber of commerce",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phòng thương mại"
+       },
+       {
+        "term": "be appointed to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "được bổ nhiệm vào"
+       }
+      ]
      }
     }
    ]
@@ -4896,8 +5301,27 @@
      "answer": "C",
      "explanation": {
       "translation": "The software uses computer memory efficiently, allowing users to open ------- five files simultaneously.(A) far from (B) as for (C) up to (D) out of\n2.\nPhần mềm sử dụng bộ nhớ máy tính một cách hiệu quả, cho phép người dùng mở cùng lúc tối đa năm tệp.- Phân tích: \"up to five files\" = tối đa năm tệp.- Glossary (Từ vựng/ Cụm từ):efficiently (adv): một cách hiệu quảsimultaneously (adv): đồng thời",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ / Cụm từ chỉ mức độ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Cụm từ chỉ số lượng\nDấu hiệu: chỗ trống đứng trước con số \"five files\" → cụm \"up to + số\" = tối đa.\n\nXét từng phương án:\n- far from: còn xa mới ✗\n- as for: về phần ✗\n- up to: lên đến, tối đa ✓\n- out of: hết; ra khỏi ✗\n\nGhi nhớ:\n- up to + số: tối đa, lên đến\n- simultaneously: cùng lúc\n\nDịch: Phần mềm sử dụng bộ nhớ máy tính hiệu quả, cho phép người dùng mở tối đa năm tệp cùng lúc.",
+      "glossary": [
+       {
+        "term": "efficiently",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "một cách hiệu quả"
+       },
+       {
+        "term": "up to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "tối đa, lên đến"
+       },
+       {
+        "term": "simultaneously",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "cùng lúc"
+       }
+      ]
      }
     }
    ]
@@ -4922,8 +5346,27 @@
      "answer": "D",
      "explanation": {
       "translation": "A monthly newsletter is an excellent way to ------- your group's activities and events.(A) realize (B) propose (C) observe (D) promote\n2.\nBản tin hàng tháng là một cách tuyệt vời để quảng bá các hoạt động và sự kiện của nhóm bạn.- Phân tích: \"promote activities\" = quảng bá hoạt động.- Glossary (Từ vựng/ Cụm từ):newsletter (n): bản tinpromote (v): quảng bá",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Động từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (động từ)\nDấu hiệu: \"an excellent way to ___ your group's activities and events\" → bản tin hàng tháng dùng để giới thiệu, quảng bá hoạt động.\n\nXét từng phương án:\n- realize: nhận ra ✗\n- propose: đề xuất ✗\n- observe: quan sát ✗\n- promote: quảng bá ✓\n\nGhi nhớ:\n- promote events: quảng bá sự kiện\n- newsletter: bản tin\n\nDịch: Bản tin hàng tháng là cách tuyệt vời để quảng bá các hoạt động và sự kiện của nhóm bạn.",
+      "glossary": [
+       {
+        "term": "newsletter",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "bản tin"
+       },
+       {
+        "term": "promote",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "quảng bá"
+       },
+       {
+        "term": "observe",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "quan sát"
+       }
+      ]
      }
     }
    ]
@@ -4948,8 +5391,27 @@
      "answer": "A",
      "explanation": {
       "translation": "------- the hotel does not have a restaurant on site, there are many dining options nearby.(A) While (B) Such as (C) Unless (D) Without\n2.\nMặc dù khách sạn không có nhà hàng trong khuôn viên, nhưng có rất nhiều lựa chọn ăn uống ở khu vực gần đó.- Phân tích: \"While\" ở đây mang nghĩa là mặc dù, phù hợp với ngữ cảnh tương phản giữa hai mệnh đề.- Glossary (Từ vựng/ Cụm từ):on site (adv): tại chỗdining option (n): lựa chọn ăn uống",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Liên từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên từ\nDấu hiệu: chỗ trống đứng đầu câu, nối hai mệnh đề; vế 1 (không có nhà hàng) và vế 2 (vẫn có nhiều chỗ ăn gần đó) tương phản → liên từ nhượng bộ.\n\nXét từng phương án:\n- While: mặc dù (+ mệnh đề) ✓\n- Such as: chẳng hạn như → không nối mệnh đề ✗\n- Unless: trừ khi ✗\n- Without: không có → giới từ ✗\n\nGhi nhớ:\n- while + mệnh đề, mệnh đề: mặc dù… nhưng…\n- on site: tại chỗ, trong khuôn viên\n\nDịch: Mặc dù khách sạn không có nhà hàng trong khuôn viên, vẫn có nhiều lựa chọn ăn uống ở gần đó.",
+      "glossary": [
+       {
+        "term": "on site",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "tại chỗ, trong khuôn viên"
+       },
+       {
+        "term": "dining option",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lựa chọn ăn uống"
+       },
+       {
+        "term": "unless",
+        "pos": "conj",
+        "ipa": "",
+        "meaning": "trừ khi"
+       }
+      ]
      }
     }
    ]
@@ -4974,8 +5436,33 @@
      "answer": "B",
      "explanation": {
       "translation": "------- a slight decline in revenue from the previous quarter, Blakely Components is moving forward with its expansion plan.(A) Aside (B) Despite (C) Becoming (D) Often\n2.\nBất chấp sự sụt giảm doanh thu nhẹ so với quý trước, Blakely Components vẫn đang tiến tới với kế hoạch mở rộng của mình.- Phân tích: \"Despite\" + cụm danh từ mang nghĩa \"mặc dù / bất chấp\".- Glossary (Từ vựng/ Cụm từ):decline (n): sự sụt giảmexpansion (n): sự mở rộng",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Giới từ\nDấu hiệu: chỗ trống đứng đầu câu, trước cụm danh từ \"a slight decline in revenue\"; vế sau \"vẫn tiếp tục mở rộng\" → quan hệ tương phản.\n\nXét từng phương án:\n- Aside: sang một bên (cần \"aside from\") ✗\n- Despite: mặc dù (+ cụm danh từ) ✓\n- Becoming: trở thành ✗\n- Often: thường xuyên ✗\n\nGhi nhớ:\n- despite + N: mặc dù\n- move forward with: tiếp tục tiến hành\n\nDịch: Mặc dù doanh thu giảm nhẹ so với quý trước, Blakely Components vẫn đang tiếp tục kế hoạch mở rộng.",
+      "glossary": [
+       {
+        "term": "decline",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự sụt giảm"
+       },
+       {
+        "term": "revenue",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "doanh thu"
+       },
+       {
+        "term": "move forward with",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "tiếp tục tiến hành"
+       },
+       {
+        "term": "expansion",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự mở rộng"
+       }
+      ]
      }
     }
    ]
@@ -5000,8 +5487,27 @@
      "answer": "A",
      "explanation": {
       "translation": "Abelia Dairy Company has undergone several changes in leadership ------- the past ten years.(A) over (B) into (C) since (D) beside\n2.\nCông ty sữa Abelia đã trải qua một vài thay đổi trong ban lãnh đạo trong suốt 10 năm qua.- Phân tích: Cụm \"over the past ten years\" = trong suốt 10 năm qua. Đi kèm với thì hiện tại hoàn thành.- Glossary (Từ vựng/ Cụm từ):undergo (v): trải qualeadership (n): ban lãnh đạo",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ chỉ thời gian)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Giới từ chỉ thời gian\nDấu hiệu: chỗ trống đứng trước khoảng thời gian \"the past ten years\" với thì hiện tại hoàn thành → \"over\" = trong suốt.\n\nXét từng phương án:\n- over: trong suốt (khoảng thời gian) ✓\n- into: vào ✗\n- since: kể từ (+ mốc thời gian, không đi với khoảng) ✗\n- beside: bên cạnh ✗\n\nGhi nhớ:\n- over the past + khoảng thời gian: trong suốt … qua\n- since + mốc thời gian ≠ for/over + khoảng thời gian\n\nDịch: Công ty sữa Abelia đã trải qua nhiều thay đổi trong ban lãnh đạo trong suốt mười năm qua.",
+      "glossary": [
+       {
+        "term": "dairy",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "(ngành) sữa"
+       },
+       {
+        "term": "undergo",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "trải qua"
+       },
+       {
+        "term": "over the past",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "trong suốt … qua"
+       }
+      ]
      }
     }
    ]
@@ -5026,8 +5532,27 @@
      "answer": "C",
      "explanation": {
       "translation": "Opal City's Community Theater is holding ------- for its spring production during the first week of December.(A) to audition (B) auditioned (C) auditions (D) audition\n2.\nNhà hát Cộng đồng Opal City đang tổ chức các buổi thử vai cho vở diễn mùa xuân của họ trong suốt tuần đầu tiên của tháng Mười Hai.- Phân tích: Cụm \"holding auditions\" = tổ chức các buổi tuyển vai/thử vai. Cần danh từ số nhiều (hoặc có mạo từ nếu số ít).- Glossary (Từ vựng/ Cụm từ):audition (n): buổi thử vaiproduction (n): vở diễn/sự sản xuất",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Danh từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ loại (danh từ số nhiều)\nDấu hiệu: \"is holding ___ for its spring production\" → sau động từ \"holding\" cần danh từ làm tân ngữ; không có mạo từ → danh từ số nhiều.\n\nXét từng phương án:\n- to audition (to V): thử vai ✗\n- auditioned (V-ed) ✗\n- auditions (N số nhiều): các buổi thử vai ✓\n- audition (N số ít/V) → danh từ số ít đếm được cần mạo từ ✗\n\nGhi nhớ:\n- hold auditions: tổ chức buổi thử vai\n- production: vở diễn\n\nDịch: Nhà hát cộng đồng Opal City đang tổ chức các buổi thử vai cho vở diễn mùa xuân trong tuần đầu tiên của tháng Mười Hai.",
+      "glossary": [
+       {
+        "term": "hold auditions",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "tổ chức buổi thử vai"
+       },
+       {
+        "term": "production",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "vở diễn, tác phẩm"
+       },
+       {
+        "term": "community theater",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nhà hát cộng đồng"
+       }
+      ]
      }
     }
    ]
@@ -5052,8 +5577,27 @@
      "answer": "C",
      "explanation": {
       "translation": "Mr. Kane said he packed so ------- this morning that he forgot to bring a suit and tie for tomorrow's dinner.(A) enormously (B) briefly (C) hastily (D) mysteriously\n2.\nÔng Kane nói rằng sáng nay ông ấy đã đóng gói hành lý quá vội vàng đến nỗi ông ấy đã quên mang theo bộ vest và cà vạt cho bữa tối ngày mai.- Phân tích: \"packed so hastily\" = đóng đồ quá vội vàng.- Glossary (Từ vựng/ Cụm từ):hastily (adv): một cách vội vàngsuit and tie (n): áo vest và cà vạt",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Trạng từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (trạng từ)\nDấu hiệu: cấu trúc \"so + adv + that + S + V\" (… đến mức mà…); kết quả \"quên mang vest\" → đóng gói vội vàng.\n\nXét từng phương án:\n- enormously: rất nhiều ✗\n- briefly: trong thời gian ngắn ✗\n- hastily: vội vàng ✓\n- mysteriously: một cách bí ẩn ✗\n\nGhi nhớ:\n- so + adj/adv + that + mệnh đề: … đến mức mà…\n- hastily = hurriedly: vội vàng\n\nDịch: Ông Kane nói rằng sáng nay ông đóng gói hành lý vội vàng đến nỗi quên mang bộ vest và cà vạt cho bữa tối ngày mai.",
+      "glossary": [
+       {
+        "term": "pack",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "đóng gói hành lý"
+       },
+       {
+        "term": "hastily",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "vội vàng"
+       },
+       {
+        "term": "so … that",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "… đến mức mà"
+       }
+      ]
      }
     }
    ]
@@ -5078,8 +5622,27 @@
      "answer": "C",
      "explanation": {
       "translation": "Long before the training program began, Ms. Morris ------- the schedule to allow her team to attend.(A) was revised (B) is revising (C) had revised (D) has to revise\n2.\nRất lâu trước khi chương trình đào tạo bắt đầu, cô Morris đã sửa đổi lại lịch trình để cho phép đội của cô ấy tham dự.- Phân tích: Hành động \"revised\" xảy ra trước một hành động khác trong quá khứ (\"began\"), do đó yêu cầu thì quá khứ hoàn thành (\"had revised\").- Glossary (Từ vựng/ Cụm từ):revise (v): sửa đổiattend (v): tham dự",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Thì của động từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Thì động từ\nDấu hiệu: \"Long before the training program began\" (mốc quá khứ) → hành động sửa lịch xảy ra trước mốc quá khứ đó → quá khứ hoàn thành.\n\nXét từng phương án:\n- was revised: bị động quá khứ → có tân ngữ \"the schedule\" nên không dùng bị động ✗\n- is revising: hiện tại tiếp diễn ✗\n- had revised: quá khứ hoàn thành ✓\n- has to revise: phải sửa ✗\n\nGhi nhớ:\n- before + quá khứ đơn, … quá khứ hoàn thành\n- revise: sửa đổi\n\nDịch: Từ lâu trước khi chương trình đào tạo bắt đầu, bà Morris đã sửa lịch trình để nhóm của bà có thể tham dự.",
+      "glossary": [
+       {
+        "term": "long before",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "từ lâu trước khi"
+       },
+       {
+        "term": "revise",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "sửa đổi, điều chỉnh"
+       },
+       {
+        "term": "allow sb to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "cho phép ai (làm gì)"
+       }
+      ]
      }
     }
    ]
@@ -5104,8 +5667,27 @@
      "answer": "A",
      "explanation": {
       "translation": "Mr. Swan will return to the planning meeting ------- the interns have arrived.(A) once (B) unlike (C) whereas (D) regarding\n2.\nÔng Swan sẽ quay lại cuộc họp lập kế hoạch ngay khi các thực tập sinh đến.- Phân tích: \"once\" = ngay khi, đóng vai trò liên từ nối hai mệnh đề chỉ thời gian.- Glossary (Từ vựng/ Cụm từ):intern (n): thực tập sinharrive (v): đến nơi\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 6",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Liên từ thời gian)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên từ chỉ thời gian\nDấu hiệu: chỗ trống nối hai mệnh đề \"will return…\" và \"the interns have arrived\" → cần liên từ chỉ thời điểm.\n\nXét từng phương án:\n- once: khi, ngay sau khi ✓\n- unlike: không giống → giới từ ✗\n- whereas: trong khi (đối lập) ✗\n- regarding: liên quan đến → giới từ ✗\n\nGhi nhớ:\n- once + mệnh đề: một khi, ngay khi\n- intern: thực tập sinh\n\nDịch: Ông Swan sẽ quay lại cuộc họp lập kế hoạch sau khi các thực tập sinh đã đến.",
+      "glossary": [
+       {
+        "term": "once",
+        "pos": "conj",
+        "ipa": "",
+        "meaning": "một khi, ngay khi"
+       },
+       {
+        "term": "intern",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thực tập sinh"
+       },
+       {
+        "term": "whereas",
+        "pos": "conj",
+        "ipa": "",
+        "meaning": "trong khi (đối lập)"
+       }
+      ]
      }
     }
    ]
@@ -5137,8 +5719,27 @@
      "answer": "A",
      "explanation": {
       "translation": "(A) purchase (B) purchaser (C) purchased (D) purchasing\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại)- Dịch nghĩa các đáp án: (A) đơn hàng/sự mua sắm (B) người mua (C) đã mua (D) việc mua- Phân tích: Sau \"every\" cần danh từ số ít đếm được. Dựa vào ngữ cảnh, \"purchase\" (đơn hàng/việc mua hàng) là phù hợp nhất.- Glossary (Từ vựng/ Cụm từ):purchase (n): đơn hàng/sự mua sắm",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ loại (danh từ)\nDấu hiệu: \"every ___ of $50 or more\" → sau \"every\" cần danh từ số ít; theo nghĩa là lần mua hàng (không phải người mua).\n\nXét từng phương án:\n- purchase (n): lần mua hàng ✓\n- purchaser (n): người mua → \"người mua trị giá 50 đô\", vô lý ✗\n- purchased (V-ed) ✗\n- purchasing (V-ing) ✗\n\nGhi nhớ:\n- every + N số ít\n- shopping spree: đợt mua sắm thỏa thích\n- cash back: tiền hoàn lại\n\nDịch: Kéo dài đợt mua sắm mùa lễ của bạn sang tháng Một, và chúng tôi sẽ hoàn 4 đô la cho mỗi lần mua hàng từ 50 đô la trở lên.",
+      "glossary": [
+       {
+        "term": "shopping spree",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đợt mua sắm thỏa thích"
+       },
+       {
+        "term": "cash back",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tiền hoàn lại"
+       },
+       {
+        "term": "purchase",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lần mua hàng, món hàng đã mua"
+       }
+      ]
      }
     },
     {
@@ -5156,8 +5757,27 @@
      "answer": "D",
      "explanation": {
       "translation": "(A) automate (B) automatic (C) automation (D) automatically\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Trạng từ)- Dịch nghĩa các đáp án: (A) tự động hóa (động từ) (B) tự động (tính từ) (C) sự tự động hóa (danh từ) (D) một cách tự động (trạng từ)- Phân tích: Cần trạng từ bổ nghĩa cho phân từ \"deposited\" (được gửi/được nạp một cách tự động).- Glossary (Từ vựng/ Cụm từ):deposit (v): gửi tiền/nạp tiềnautomatically (adv): một cách tự động",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ loại (trạng từ)\nDấu hiệu: câu bị động \"will be ___ deposited\" → chỗ trống bổ nghĩa cho phân từ \"deposited\" → cần trạng từ.\n\nXét từng phương án:\n- automate (V): tự động hóa ✗\n- automatic (adj): tự động ✗\n- automation (n): sự tự động hóa ✗\n- automatically (adv): một cách tự động ✓\n\nGhi nhớ:\n- be + adv + V3\n- deposit: nạp tiền vào (tài khoản)\n\nDịch: Ngoài ra, tiền hoàn sẽ được tự động chuyển vào một tài khoản tiết kiệm Avanti riêng và hưởng lãi suất 3%/năm.",
+      "glossary": [
+       {
+        "term": "deposit",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "gửi, nạp (tiền)"
+       },
+       {
+        "term": "automatically",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "một cách tự động"
+       },
+       {
+        "term": "annual interest rate",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lãi suất năm"
+       }
+      ]
      }
     },
     {
@@ -5175,8 +5795,27 @@
      "answer": "A",
      "explanation": {
       "translation": "(A) Alternatively (B) Likewise (C) Nevertheless (D) Frequently\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Trạng từ liên kết)- Dịch nghĩa các đáp án: (A) Ngoài ra / Hoặc là (B) Tương tự như vậy (C) Tuy nhiên (D) Thường xuyên- Phân tích: Nối tiếp phương án trước, \"Alternatively\" (Ngoài ra/Hoặc là) đưa ra một sự lựa chọn thay thế trong ngữ cảnh đoạn văn.- Glossary (Từ vựng/ Cụm từ):alternatively (adv): ngoài ra/hoặc là",
-      "glossary": []
+      "reasoning": "* Dạng câu: Trạng từ liên kết\nDấu hiệu: câu trước: đăng ký qua ứng dụng; câu sau: đến chi nhánh để được hỗ trợ → một lựa chọn khác.\n\nXét từng phương án:\n- Alternatively: hoặc là, như một cách khác ✓\n- Likewise: tương tự như vậy ✗\n- Nevertheless: tuy nhiên ✗\n- Frequently: thường xuyên ✗\n\nGhi nhớ:\n- alternatively: như một phương án khác\n- enroll in: đăng ký tham gia\n\nDịch: Hãy đăng ký chương trình thưởng kép trên ứng dụng Avanti dành cho điện thoại hoặc máy tính. Hoặc bạn có thể ghé chi nhánh Avanti để được hỗ trợ.",
+      "glossary": [
+       {
+        "term": "enroll in",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "đăng ký tham gia"
+       },
+       {
+        "term": "alternatively",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "như một phương án khác"
+       },
+       {
+        "term": "stop by",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "ghé qua"
+       }
+      ]
      }
     },
     {
@@ -5194,8 +5833,27 @@
      "answer": "B",
      "explanation": {
       "translation": "(A) The use of double rewards...(B) Don't wait-the double-rewards promotion ends on January 31.(C) Please make sure...(D) Thank you for...\n2.",
-      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)- Dịch nghĩa các đáp án:(A) Việc sử dụng điểm thưởng nhân đôi...(B) Đừng chần chừ - chương trình khuyến mãi điểm thưởng nhân đôi kết thúc vào ngày 31 tháng 1.(C) Vui lòng đảm bảo...(D) Cảm ơn bạn vì...- Phân tích: Câu sau nhắc việc mức thưởng trở lại bình thường vào ngày 1/2, nên câu này thông báo ngày kết thúc khuyến mãi (31/1) là hợp lý nhất về mặt logic.- Glossary (Từ vựng/ Cụm từ):promotion (n): chương trình khuyến mãi",
-      "glossary": []
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nDấu hiệu: quảng cáo ưu đãi \"trong thời gian có hạn\"; câu trước báo từ 1/2 mức hoàn tiền trở lại 2 đô → câu kết nên nhắc hạn chót để thúc giục.\n\nXét từng phương án:\n- (A) Thưởng kép là thông lệ phổ biến trong ngành ngân hàng → không kết thúc lời quảng cáo ✗\n- (B) Đừng chần chừ — chương trình thưởng kép kết thúc vào 31/1 ✓\n- (C) Vui lòng kiểm tra số dư thẻ tín dụng hằng tuần → lạc đề ✗\n- (D) Cảm ơn bạn đã phản hồi về giao dịch gần đây → lạc đề ✗\n\nGhi nhớ:\n- for a limited time: trong thời gian có hạn\n- promotion: chương trình khuyến mãi\n\nDịch: Từ ngày 1/2, tiền hoàn sẽ trở lại mức 2 đô la cho mỗi giao dịch 50 đô la. Đừng chần chừ — chương trình thưởng kép kết thúc vào ngày 31/1.",
+      "glossary": [
+       {
+        "term": "for a limited time",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "trong thời gian có hạn"
+       },
+       {
+        "term": "promotion",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chương trình khuyến mãi"
+       },
+       {
+        "term": "balance",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "số dư (tài khoản)"
+       }
+      ]
      }
     }
    ]
@@ -5227,8 +5885,27 @@
      "answer": "B",
      "explanation": {
       "translation": "(A) Originally (B) Instead (C) Regardless (D) Moreover\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Trạng từ liên kết)- Dịch nghĩa các đáp án: (A) Ban đầu (B) Thay vào đó (C) Bất kể (D) Hơn nữa- Phân tích: Cô ấy không rời công ty, \"Instead\" (Thay vào đó) cô ấy đảm nhiệm vị trí mới.- Glossary (Từ vựng/ Cụm từ):instead (adv): thay vào đó",
-      "glossary": []
+      "reasoning": "* Dạng câu: Trạng từ liên kết\nDấu hiệu: câu trước \"cô ấy sẽ không rời công ty\"; câu này nói cô sẽ đảm nhận vị trí mới → thay vì rời đi thì… → \"Instead\".\n\nXét từng phương án:\n- Originally: ban đầu ✗\n- Instead: thay vào đó ✓\n- Regardless: bất chấp ✗\n- Moreover: hơn nữa → không có ý bổ sung cùng chiều ✗\n\nGhi nhớ:\n- instead: thay vào đó\n- move on: chuyển sang việc khác\n\nDịch: May mắn thay, cô ấy sẽ không rời công ty. Thay vào đó, Winnie sẽ đảm nhận vị trí quản lý phân phối khu vực mới của chúng ta.",
+      "glossary": [
+       {
+        "term": "move on",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "chuyển sang (vai trò/việc khác)"
+       },
+       {
+        "term": "instead",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "thay vào đó"
+       },
+       {
+        "term": "regional",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "(thuộc) khu vực"
+       }
+      ]
      }
     },
     {
@@ -5246,8 +5923,27 @@
      "answer": "B",
      "explanation": {
       "translation": "(A) availability (B) promotion (C) cooperation (D) generosity\n2.",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)- Dịch nghĩa các đáp án: (A) sự có sẵn (B) sự thăng chức/khuyến mãi (C) sự hợp tác (D) sự hào phóng- Phân tích: Việc chuyển lên làm quản lý vùng là một sự thăng chức (\"promotion\").- Glossary (Từ vựng/ Cụm từ):generosity (n): sự hào phóng",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (danh từ)\nDấu hiệu: sau tính từ sở hữu \"her\" cần danh từ; việc từ đội trưởng lên quản lý khu vực là sự thăng chức.\n\nXét từng phương án:\n- availability: sự sẵn có ✗\n- promotion: sự thăng chức ✓\n- cooperation: sự hợp tác ✗\n- generosity: sự hào phóng ✗\n\nGhi nhớ:\n- be thrilled about: rất phấn khởi về\n- promotion: sự thăng chức\n\nDịch: Chúng tôi vô cùng phấn khởi trước sự thăng chức của cô ấy.",
+      "glossary": [
+       {
+        "term": "be thrilled about",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "rất phấn khởi về"
+       },
+       {
+        "term": "promotion",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự thăng chức"
+       },
+       {
+        "term": "generosity",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự hào phóng"
+       }
+      ]
      }
     },
     {
@@ -5265,8 +5961,27 @@
      "answer": "A",
      "explanation": {
       "translation": "(A) final (B) finalize (C) finalized (D) finally\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Tính từ)- Dịch nghĩa các đáp án: (A) cuối cùng (tính từ) (B) hoàn tất (động từ) (C) đã hoàn tất (phân từ) (D) cuối cùng (trạng từ)- Phân tích: Cần tính từ bổ nghĩa cho danh từ \"day\" (ngày làm việc cuối cùng).- Glossary (Từ vựng/ Cụm từ):finalize (v): hoàn tất",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ loại (tính từ)\nDấu hiệu: \"her ___ day with us\" → cần tính từ bổ nghĩa cho danh từ \"day\"; ngày tiệc chia tay là ngày làm việc cuối cùng.\n\nXét từng phương án:\n- final (adj): cuối cùng ✓\n- finalize (V): hoàn tất ✗\n- finalized (V-ed): đã hoàn tất ✗\n- finally (adv): cuối cùng (trạng từ) ✗\n\nGhi nhớ:\n- one's final day: ngày (làm việc) cuối cùng\n- break room: phòng nghỉ\n\nDịch: Chúng tôi sẽ tổ chức tiệc cho Winnie tại phòng nghỉ lúc 3 giờ chiều ngày 28/2, ngày làm việc cuối cùng của cô ấy với chúng ta.",
+      "glossary": [
+       {
+        "term": "host a party",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "tổ chức tiệc"
+       },
+       {
+        "term": "break room",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phòng nghỉ"
+       },
+       {
+        "term": "final",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "cuối cùng"
+       }
+      ]
      }
     },
     {
@@ -5284,8 +5999,21 @@
      "answer": "C",
      "explanation": {
       "translation": "(A) Our day will start...(B) She was the best...(C) Please join us for coffee and cake.(D) The break room is...\n2.",
-      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)- Dịch nghĩa các đáp án:(A) Ngày của chúng ta sẽ bắt đầu...(B) Cô ấy là người giỏi nhất...(C) Vui lòng tham gia cùng chúng tôi để dùng cà phê và bánh.(D) Phòng nghỉ thì...- Phân tích: Câu trước đề cập tổ chức bữa tiệc (party), nên mời dùng cà phê và bánh là hợp lý nhất.- Glossary (Từ vựng/ Cụm từ):break room (n): phòng nghỉ",
-      "glossary": []
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nDấu hiệu: câu trước thông báo tổ chức tiệc; câu sau \"Chúng tôi mong được gặp mọi người tại đó\" → câu ở giữa là lời mời tham dự.\n\nXét từng phương án:\n- (A) Ngày làm việc bắt đầu lúc 8 giờ như thường lệ → lạc đề ✗\n- (B) Cô ấy là ứng viên tốt nhất cho vị trí này → không nối với lời mời ✗\n- (C) Vui lòng tham gia cùng chúng tôi để uống cà phê và ăn bánh ✓\n- (D) Phòng nghỉ đang đóng cửa bảo trì → mâu thuẫn với tiệc ở phòng nghỉ ✗\n\nGhi nhớ:\n- join sb for + N: tham gia cùng ai để…\n- look forward to + V-ing: mong chờ\n\nDịch: Vui lòng tham gia cùng chúng tôi để uống cà phê và ăn bánh. Chúng tôi rất mong được gặp mọi người tại đó.",
+      "glossary": [
+       {
+        "term": "join sb for",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "tham gia cùng ai (ăn uống, sự kiện)"
+       },
+       {
+        "term": "maintenance",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự bảo trì"
+       }
+      ]
      }
     }
    ]
@@ -5317,8 +6045,33 @@
      "answer": "B",
      "explanation": {
       "translation": "(A) Investors often expect...(B) Reveal your company's greatest strength from the outset.(C) Make sure to cite...(D) An infusion of cash...\n2.",
-      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)- Dịch nghĩa các đáp án:(A) Các nhà đầu tư thường mong đợi...(B) Hãy tiết lộ điểm mạnh lớn nhất của công ty bạn ngay từ đầu.(C) Hãy chắc chắn trích dẫn...(D) Một sự truyền tiền mặt/bơm vốn...- Phân tích: Câu trước khuyên không để nhà đầu tư chờ đợi, nên câu này khuyên tiết lộ điểm mạnh lớn nhất ngay từ đầu là sự tiếp nối logic.- Glossary (Từ vựng/ Cụm từ):strength (n): điểm mạnhoutset (n): sự bắt đầu",
-      "glossary": []
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nDấu hiệu: câu trước \"đừng để nhà đầu tư phải chờ đợi trong tò mò\"; câu sau \"điều này còn giúp thu hút sự chú ý\" → câu ở giữa khuyên tiết lộ điều gì đó ngay từ đầu.\n\nXét từng phương án:\n- (A) Nhà đầu tư thường mong đợi một phần quyền sở hữu → không nối ý ✗\n- (B) Hãy tiết lộ thế mạnh lớn nhất của công ty ngay từ đầu ✓\n- (C) Hãy trích dẫn nguồn trong bài thuyết trình → lạc ý ✗\n- (D) Việc bơm vốn thường cần cho sự tăng trưởng → không nối ý ✗\n\nGhi nhớ:\n- keep sb in suspense: để ai chờ đợi trong tò mò\n- from the outset: ngay từ đầu\n\nDịch: Khi lên kế hoạch thuyết trình cho các nhà đầu tư tiềm năng, đừng để họ chờ đợi trong tò mò. Hãy tiết lộ thế mạnh lớn nhất của công ty ngay từ đầu.",
+      "glossary": [
+       {
+        "term": "pitch",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "trình bày, chào mời (ý tưởng)"
+       },
+       {
+        "term": "keep sb in suspense",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "để ai chờ đợi trong tò mò"
+       },
+       {
+        "term": "from the outset",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "ngay từ đầu"
+       },
+       {
+        "term": "infusion of cash",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "sự bơm vốn"
+       }
+      ]
      }
     },
     {
@@ -5336,8 +6089,27 @@
      "answer": "D",
      "explanation": {
       "translation": "(A) capable (B) progressive (C) first (D) relevant\n2.",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ đi kèm giới từ)- Dịch nghĩa các đáp án: (A) có khả năng (B) tiến bộ (C) đầu tiên (D) có liên quan/thích hợp- Phân tích: Cụm từ \"relevant to something\" = liên quan đến/thích hợp với cái gì đó.- Glossary (Từ vựng/ Cụm từ):relevant (adj): có liên quan",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (tính từ + giới từ)\nDấu hiệu: \"this is ___ to the product or service\" → sau \"be\" cần tính từ; phía sau có \"to\" → tính từ đi với \"to\".\n→ relevant to = liên quan đến.\n\nXét từng phương án:\n- capable: có khả năng (đi với \"of\") ✗\n- progressive: tiến bộ ✗\n- first: đầu tiên ✗\n- relevant: liên quan, phù hợp (đi với \"to\") ✓\n\nGhi nhớ:\n- be relevant to: liên quan đến\n- be capable of + V-ing: có khả năng\n\nDịch: Mặt khác, nếu nhóm của bạn có nhiều năm kinh nghiệm quý giá làm việc cùng nhau và điều này liên quan đến sản phẩm hoặc dịch vụ bạn cung cấp, hãy đề cập sớm.",
+      "glossary": [
+       {
+        "term": "asset",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tài sản"
+       },
+       {
+        "term": "be relevant to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "liên quan đến"
+       },
+       {
+        "term": "on the other hand",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "mặt khác"
+       }
+      ]
      }
     },
     {
@@ -5346,17 +6118,36 @@
      "prompt": null,
      "options": {
       "A": "it",
-      "B": "what",
-      "C": "which",
-      "D": "this"
+      "B": "that",
+      "C": "what",
+      "D": "anything"
      },
      "showText": true,
      "broken": false,
      "answer": "C",
      "explanation": {
       "translation": "(A) it (B) that (C) what (D) anything\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Đại từ quan hệ)- Dịch nghĩa các đáp án: (A) nó (B) rằng/cái mà (C) điều mà/những gì (D) bất cứ thứ gì- Phân tích: \"what\" (điều mà/những gì) làm đại từ quan hệ đóng vai trò chủ ngữ cho mệnh đề danh ngữ trong câu.- Glossary (Từ vựng/ Cụm từ):investor (n): nhà đầu tư",
-      "glossary": []
+      "reasoning": "* Dạng câu: Đại từ (mệnh đề danh từ)\nDấu hiệu: \"if ___ sets your company apart is its unique vision\" → chỗ trống làm chủ ngữ cho \"sets\", và cả cụm \"___ sets your company apart\" lại làm chủ ngữ cho \"is\" → cần \"what\" (điều mà) mở mệnh đề danh từ.\n\nXét từng phương án:\n- it: nó → tạo hai động từ chính \"sets… is\" không có từ nối ✗\n- that: rằng / mà → không mở mệnh đề danh từ làm chủ ngữ kiểu này ✗\n- what: điều mà ✓\n- anything: bất cứ điều gì → \"anything sets… is\" vẫn thiếu từ nối ✗\n\nGhi nhớ:\n- What + V + is…: Điều mà… là…\n- set sth apart: tạo sự khác biệt\n\nDịch: Cuối cùng, nếu điều tạo nên sự khác biệt cho công ty bạn là tầm nhìn độc đáo, hãy lấy đó làm thông điệp mở đầu.",
+      "glossary": [
+       {
+        "term": "set apart",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "làm cho khác biệt"
+       },
+       {
+        "term": "vision",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tầm nhìn"
+       },
+       {
+        "term": "leading statement",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thông điệp mở đầu"
+       }
+      ]
      }
     },
     {
@@ -5374,8 +6165,27 @@
      "answer": "A",
      "explanation": {
       "translation": "(A) funding (B) property (C) materials (D) awards\n2.",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)- Dịch nghĩa các đáp án: (A) nguồn vốn/kinh phí (B) tài sản (C) vật liệu (D) giải thưởng- Phân tích: Mục đích thuyết trình trước nhà đầu tư là tìm kiếm nguồn vốn/sự tài trợ (\"funding\").- Glossary (Từ vựng/ Cụm từ):funding (n): nguồn vốn",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (danh từ)\nDấu hiệu: bài viết về việc thuyết trình với nhà đầu tư; nếu thuyết phục được họ thì kết quả là nhận được vốn.\n\nXét từng phương án:\n- funding: vốn, nguồn tài trợ ✓\n- property: tài sản, bất động sản ✗\n- materials: vật liệu ✗\n- awards: giải thưởng ✗\n\nGhi nhớ:\n- acquire funding: nhận được vốn\n- be destined for success: chắc chắn thành công\n\nDịch: Nếu bạn có thể thuyết phục khán giả rằng sản phẩm hoặc dịch vụ của công ty được định sẵn để thành công, rất có thể bạn sẽ nhận được nguồn vốn đầu tư mà bạn đang tìm kiếm.",
+      "glossary": [
+       {
+        "term": "convince",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "thuyết phục"
+       },
+       {
+        "term": "be destined for",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "được định sẵn để"
+       },
+       {
+        "term": "funding",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "vốn, nguồn tài trợ"
+       }
+      ]
      }
     }
    ]
@@ -5407,8 +6217,27 @@
      "answer": "B",
      "explanation": {
       "translation": "(A) course (B) system (C) account (D) plan\n2.",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)- Dịch nghĩa các đáp án: (A) khóa học (B) hệ thống (C) tài khoản (D) kế hoạch- Phân tích: Đang nói về \"online payroll portal\" (cổng thông tin trả lương trực tuyến), tức là một hệ thống (\"system\").- Glossary (Từ vựng/ Cụm từ):payroll (n): bảng lương",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ vựng (danh từ)\nDấu hiệu: câu trước nói cổng trả lương trực tuyến tạm ngưng để nâng cấp phần mềm → \"the ___\" chỉ chính hệ thống đó.\n\nXét từng phương án:\n- course: khóa học ✗\n- system: hệ thống ✓\n- account: tài khoản ✗\n- plan: kế hoạch ✗\n\nGhi nhớ:\n- refrain from + V-ing: tránh làm gì\n- payroll portal: cổng thông tin trả lương\n\nDịch: Vui lòng không truy cập vào hệ thống trong suốt năm ngày này.",
+      "glossary": [
+       {
+        "term": "payroll",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "bảng lương"
+       },
+       {
+        "term": "refrain from",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "tránh, kiềm chế (+ V-ing)"
+       },
+       {
+        "term": "unavailable",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "không khả dụng"
+       }
+      ]
      }
     },
     {
@@ -5426,8 +6255,27 @@
      "answer": "C",
      "explanation": {
       "translation": "(A) enabled (B) enabling (C) will enable (D) would have enabled\n2.\nsẽ cho phép- Phân tích: Đang nói về tính năng của trang web sau khi hoàn thành việc nâng cấp trong tương lai, do đó dùng thì tương lai đơn (\"will enable\").- Glossary (Từ vựng/ Cụm từ):enable (v): cho phép",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Thì của động từ)-",
-      "glossary": []
+      "reasoning": "* Dạng câu: Thì động từ\nDấu hiệu: chủ ngữ \"The updated site\", sau chỗ trống là tân ngữ \"users\" → cần động từ chia thì; trang web đang nâng cấp, sau đó mới có chức năng mới → tương lai.\n\nXét từng phương án:\n- enabled: quá khứ ✗\n- enabling (V-ing) → không làm động từ chính ✗\n- will enable: sẽ cho phép ✓\n- would have enabled: đã có thể cho phép (giả định quá khứ) ✗\n\nGhi nhớ:\n- enable sb to V: cho phép ai làm gì\n- direct deposit: chuyển khoản lương trực tiếp\n\nDịch: Trang web sau khi cập nhật sẽ cho phép người dùng thực hiện các thao tác nâng cao, bao gồm thiết lập và quản lý tùy chọn chuyển khoản trực tiếp cũng như truy cập tài liệu thuế.",
+      "glossary": [
+       {
+        "term": "enable sb to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "cho phép ai (làm gì)"
+       },
+       {
+        "term": "direct deposit",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chuyển khoản (lương) trực tiếp"
+       },
+       {
+        "term": "tax document",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tài liệu thuế"
+       }
+      ]
      }
     },
     {
@@ -5445,8 +6293,27 @@
      "answer": "D",
      "explanation": {
       "translation": "(A) This gathering will...(B) Our shareholders will...(C) Productivity reductions...(D) This function will optimize the services offered by the department.\n2.",
-      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)- Dịch nghĩa các đáp án:(A) Sự tụ tập này sẽ...(B) Các cổ đông của chúng ta sẽ...(C) Sự sụt giảm năng suất...(D) Chức năng này sẽ tối ưu hóa các dịch vụ do bộ phận cung cấp.- Phân tích: Câu trước nói về chức năng \"live-chat\" (trò chuyện trực tiếp) mới, do vậy câu này giải thích rằng chức năng đó sẽ tối ưu hóa dịch vụ là phù hợp ngữ cảnh nhất.- Glossary (Từ vựng/ Cụm từ):optimize (v): tối ưu hóa",
-      "glossary": []
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nDấu hiệu: câu trước giới thiệu chức năng trò chuyện trực tiếp (live chat) với nhân viên nhân sự → câu sau nên nêu lợi ích của chức năng này.\n\nXét từng phương án:\n- (A) Buổi tụ họp này sẽ thúc đẩy đổi mới → không có buổi tụ họp nào ✗\n- (B) Cổ đông sẽ hài lòng với sản phẩm mới → đây là nâng cấp nội bộ, không phải sản phẩm ✗\n- (C) Năng suất có thể giảm vào tháng tới → lạc đề ✗\n- (D) Chức năng này sẽ tối ưu hóa các dịch vụ do bộ phận cung cấp ✓\n\nGhi nhớ:\n- optimize: tối ưu hóa\n- live chat: trò chuyện trực tiếp\n\nDịch: Hệ thống cũng sẽ có chức năng trò chuyện trực tiếp để người dùng liên hệ ngay với nhân viên nhân sự khi cần. Chức năng này sẽ tối ưu hóa các dịch vụ do bộ phận cung cấp.",
+      "glossary": [
+       {
+        "term": "live chat",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "trò chuyện trực tiếp"
+       },
+       {
+        "term": "optimize",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tối ưu hóa"
+       },
+       {
+        "term": "shareholder",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "cổ đông"
+       }
+      ]
      }
     },
     {
@@ -5464,8 +6331,27 @@
      "answer": "C",
      "explanation": {
       "translation": "(A) apart from (B) along with (C) during (D) toward\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ)- Dịch nghĩa các đáp án: (A) ngoại trừ (B) cùng với (C) trong suốt (D) hướng về- Phân tích: Dùng \"during\" (trong suốt) để nói về việc cần xem chi tiết lương trong khoảng thời gian hệ thống đang bảo trì.- Glossary (Từ vựng/ Cụm từ):apart from (phr): ngoại trừ\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 7 (Phần 1)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Giới từ chỉ thời gian\nDấu hiệu: sau chỗ trống là \"the period mentioned above\" (khoảng thời gian đã nêu) → giới từ \"trong suốt\".\n\nXét từng phương án:\n- apart from: ngoài ra, ngoại trừ ✗\n- along with: cùng với ✗\n- during: trong, trong suốt ✓\n- toward: hướng tới ✗\n\nGhi nhớ:\n- during + khoảng thời gian: trong suốt\n- benefits: phúc lợi\n\nDịch: Nếu bạn cần truy cập thông tin lương và phúc lợi trong khoảng thời gian nêu trên, vui lòng gửi email đến hr@botswanamining.co.bw hoặc đến văn phòng chúng tôi tại phòng 107, tòa nhà Ujima.",
+      "glossary": [
+       {
+        "term": "during",
+        "pos": "prep",
+        "ipa": "",
+        "meaning": "trong suốt"
+       },
+       {
+        "term": "benefits",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phúc lợi"
+       },
+       {
+        "term": "apart from",
+        "pos": "prep",
+        "ipa": "",
+        "meaning": "ngoài ra, ngoại trừ"
+       }
+      ]
      }
     }
    ]
