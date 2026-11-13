@@ -158,6 +158,37 @@ export async function checkEvidence(
       return null;
     }
 
+    case "submission": {
+      // Bài Nói/Viết lưu trong skill_submissions. Chấp nhận cả bản nháp MIỄN LÀ
+      // có nội dung thật: gửi bài cho thầy chấm chỉ mở cho học viên đã đăng ký
+      // khoá, nên đòi "đã chấm" là người dùng miễn phí không bao giờ xong được
+      // việc nào. Bù lại phải tự kiểm nội dung, vì bản nháp không qua cửa
+      // `hasContent` của API.
+      const rows = await prisma.skillSubmission.findMany({
+        where: {
+          userId,
+          skill: spec.skill,
+          unit: spec.unit,
+          ...(spec.testKey ? { testKey: spec.testKey } : {}),
+          createdAt: { gte: since },
+        },
+        select: { id: true, items: true, status: true, band: true, createdAt: true },
+        orderBy: { createdAt: "desc" },
+      });
+
+      for (const r of rows) {
+        if (r.status !== "draft" || hasRealContent(r.items)) {
+          return {
+            source: "submission",
+            refId: r.id,
+            score: r.band ?? undefined,
+            at: r.createdAt.toISOString(),
+          };
+        }
+      }
+      return null;
+    }
+
     case "full_test": {
       // Mốc kiểm tra chỉ cần LÀM XONG, không đặt ngưỡng điểm: đây là bài để đo,
       // không phải bài để đạt. Đặt ngưỡng thì học viên trượt mốc lại thấy mình
@@ -181,7 +212,25 @@ export async function checkEvidence(
         at: (r.completedAt ?? new Date()).toISOString(),
       };
     }
+
+    // Nguồn lạ — spec hỏng, hoặc một loại việc mới thêm mà quên viết nhánh ở
+    // đây. Coi như CHƯA xong thay vì ném lỗi: một spec sai không được phép làm
+    // sập cả lượt kiểm tiến độ của học viên.
+    default:
+      return null;
   }
+}
+
+/**
+ * Bài Nói/Viết có nội dung thật chưa: ít nhất một câu có chữ hoặc có file ghi âm.
+ * Khớp với cách API submissions kiểm trước khi cho gửi bài.
+ */
+function hasRealContent(items: unknown): boolean {
+  if (!Array.isArray(items)) return false;
+  return items.some((it) => {
+    const i = it as { text?: unknown; audioUrl?: unknown };
+    return (typeof i.text === "string" && i.text.trim().length > 0) || !!i.audioUrl;
+  });
 }
 
 /**

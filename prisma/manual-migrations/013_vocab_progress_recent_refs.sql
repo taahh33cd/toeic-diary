@@ -1,4 +1,5 @@
--- 011 — khoá chống ghi trùng cho lượt ôn đơn lẻ
+-- 013 — khoá chống ghi trùng cho lượt ôn đơn lẻ
+-- (đánh lại từ 011: số đó đã bị 011_ai_grade_quota.sql dùng ở nhánh khác)
 -- Đã chạy qua Supabase MCP trên project tcpolxjxtgptbzpbtwvq.
 --
 -- Khác phiên quiz (migration 010): ở đây không có bảng log nào để gắn unique
