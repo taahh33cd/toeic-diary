@@ -791,13 +791,47 @@ phép đo thành phút/buổi và dựng đúng tình huống.
 - `replan_after_test` chỉ xếp lại tuần đang chạy, chưa động tới các tuần tương
   lai đã xếp sẵn.
 
-### Phase 5 — Tích hợp hệ sinh thái
-- Push nhắc việc (tái dùng engine push đã có; cẩn thận VAPID phải thống nhất 4 nơi
-  theo `project_push_vapid`).
-- XP: thêm `XpSource` `"roadmap_task"` (5 XP) và `"roadmap_day"` (20 XP), huy hiệu
-  tuần/tháng. Chỉ cộng XP cho task **tự tích tự động**, không cộng cho tích tay.
-- Trang GV `/admin/students/[code]` thêm tab Lộ trình: xem, đổi/xoá/thêm task, ghi chú tuần.
-- Biểu đồ điểm dự kiến vs thực tế ở `/journal/progress`.
+### Phase 5 — Tích hợp hệ sinh thái — ✅ XONG 2026-11-13
+- ✅ **XP**: `roadmap_task` (5) và `roadmap_day` (20), cộng trong `evidence.ts`
+  đúng lúc việc chuyển `pending` → `done`. Việc tích tay KHÔNG được cộng.
+- ✅ **Push**: cron `/api/cron/roadmap-remind` 19:00 giờ VN (`0 12 * * *` UTC)
+  nhắc việc còn lại trong ngày; cron tuần báo khi tuần mới sẵn sàng.
+- ✅ **Trang GV**: `/admin/students/[code]/roadmap` + `PATCH /api/admin/roadmap/[code]`
+  (xoá việc, thêm việc theo catalogId, ghi chú tuần). Có link từ trang hồ sơ học viên.
+- ✅ **Biểu đồ** điểm dự kiến vs thực tế — đặt ở `/roadmap`, không phải
+  `/journal/progress` (lý do như Phase 2: journal đòi `studentCode`).
+- ✅ **Verify**: `npm run roadmap:verify5 -- --attempt <id>` — 13 khẳng định về
+  XP, gồm "tự bỏ qua không được cộng", "đồng bộ lại không cộng lần hai",
+  "ngày còn việc tự bỏ qua thì chưa có thưởng". Script tự hoàn lại XP đã cộng.
+
+**Quyết định đáng ghi:**
+- **Trang GV để riêng, không nhét vào trang hồ sơ học viên.** Trang đó 2.600
+  dòng, là client component chạy hoàn toàn trên RTDB theo `studentCode`, còn lộ
+  trình ở Postgres theo `userId`. Trộn vào nhau để tiết kiệm một cú bấm là đổi
+  lấy rủi ro làm hỏng trang GV dùng nhiều nhất.
+- **GV không sửa được tiêu đề/đường dẫn của việc**, chỉ xoá và thêm theo
+  `catalogId`. Cho sửa tự do thì chốt chặn `check:catalog` mất tác dụng và học
+  viên có thể nhận link chết.
+- **Không xoá được việc học viên đã làm xong** — xoá là xoá cả bằng chứng lẫn XP
+  đã cộng, và thống kê tuần sai từ đó trở đi.
+- **Push báo tuần mới gửi từ cron, không từ `replanWeek`.** Hàm đó còn chạy khi
+  học viên đang mở trang; lúc ấy họ nhìn thấy tuần mới rồi, đẩy thêm thông báo
+  chỉ làm phiền.
+- **Biểu đồ chỉ hiện khi đã có từ 2 mốc điểm thật trở lên.** Một đường dự kiến
+  đứng một mình không nói lên gì mà lại trông như một lời hứa.
+
+**Một lần script báo sai nhưng code đúng**: thưởng "xong cả ngày" không nổ khi
+trong ngày có một việc học viên tự bỏ qua. Đó chính là nguyên tắc tích tay ≠
+hoàn thành — đã viết lại khẳng định cho đúng ("hết việc chờ" khác "xong cả ngày").
+
+**Hạn chế còn lại:**
+- **Chưa xem được trang GV bằng mắt.** Site học viên ẩn `/admin` (proxy trả 404
+  có chủ ý), site admin cần đăng nhập tài khoản admin, mà Next 16 không cho chạy
+  hai dev server cùng thư mục. Trang đã build, typecheck và lint sạch nhưng chưa
+  ai nhìn thấy nó chạy.
+- **5 cron trong `vercel.json`.** Gói Hobby của Vercel chỉ cho 2 — nếu dự án chưa
+  lên Pro thì deploy sẽ bị từ chối.
+- Chưa có huy hiệu riêng cho lộ trình (mốc tuần/tháng), mới có XP.
 
 ### Phase 6 — Mở rộng
 - Speaking/Writing vào lộ trình (dùng AI chấm sẵn có làm thước đo; chú ý hạn mức AI

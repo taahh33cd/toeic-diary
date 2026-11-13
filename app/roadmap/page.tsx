@@ -5,6 +5,7 @@ import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { MonthStrip } from "@/components/roadmap/MonthStrip";
 import { ReplanButton } from "@/components/roadmap/ReplanButton";
+import { ScoreChart } from "@/components/roadmap/ScoreChart";
 import { WeekSchedule } from "@/components/roadmap/WeekSchedule";
 import { canUseRoadmap, ROADMAP_CLOSED_MESSAGE } from "@/lib/roadmap/access";
 import { maintainPlan } from "@/lib/roadmap/maintain";
@@ -109,6 +110,26 @@ export default async function RoadmapPage() {
   const days = buildDays(week);
   const upcomingDays = buildDays(upcoming);
 
+  // Lịch sử thi thử để vẽ đường điểm thật. Chỉ lấy lượt từ ngày bắt đầu lộ
+  // trình trở đi — điểm của nửa năm trước không nói gì về kế hoạch này.
+  const attempts = await prisma.fullTestAttempt.findMany({
+    where: {
+      userId: user.id,
+      status: "done",
+      total: { not: null },
+      completedAt: { gte: new Date(`${planStart || today}T00:00:00+07:00`) },
+    },
+    orderBy: { completedAt: "asc" },
+    select: { total: true, completedAt: true, testSlug: true },
+  });
+  const actualPoints = attempts
+    .filter((a) => a.completedAt && a.total !== null)
+    .map((a) => ({
+      date: vnDateKey(a.completedAt!),
+      score: a.total!,
+      label: a.testSlug,
+    }));
+
   const monthIndex = currentMonthIndex(months, today);
   const doneCount = (week?.tasks ?? []).filter((t) => t.status === "done").length;
   const totalCount = week?.tasks.length ?? 0;
@@ -134,6 +155,19 @@ export default async function RoadmapPage() {
         <section className="space-y-4">
           <h2 className="text-xl font-bold text-[var(--text-primary)]">Mục tiêu từng tháng</h2>
           <MonthStrip months={months} currentMonthIndex={monthIndex} />
+        </section>
+      )}
+
+      {actualPoints.length >= 2 && (
+        <section className="space-y-3">
+          <h2 className="text-xl font-bold text-[var(--text-primary)]">Điểm thật so với kế hoạch</h2>
+          <ScoreChart
+            months={months}
+            actual={actualPoints}
+            startScore={baseline.total}
+            startDate={planStart || today}
+            targetScore={plan.targetScore}
+          />
         </section>
       )}
 

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import { prisma } from "@/lib/db/prisma";
+import { sendPushToUser } from "@/lib/push";
 import { replanWeek } from "@/lib/roadmap/replan";
 import { vnDateKey, vnToday } from "@/lib/roadmap/vn-date";
 
@@ -45,8 +46,17 @@ export async function GET(request: NextRequest) {
     }
     try {
       const r = await replanWeek(p.userId, "replan_weekly");
-      if (r.ok) created++;
-      else skipped++;
+      if (r.ok) {
+        created++;
+        // Báo tin ở ĐÂY chứ không trong replanWeek: hàm đó còn được gọi khi học
+        // viên đang mở trang, lúc ấy họ nhìn thấy tuần mới rồi, đẩy thêm một
+        // thông báo chỉ làm phiền.
+        await sendPushToUser(p.userId, {
+          title: `Tuần ${r.weekIndex} đã sẵn sàng`,
+          body: r.adjustment.reason,
+          url: "/roadmap",
+        }).catch(() => {});
+      } else skipped++;
     } catch (e) {
       failures.push(`${p.userId.slice(0, 8)}: ${e instanceof Error ? e.message : "?"}`);
     }

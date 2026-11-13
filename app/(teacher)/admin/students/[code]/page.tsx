@@ -2540,7 +2540,16 @@ export default function StudentEditorPage() {
         <div className="flex-1 min-w-0">
           <h1 className="text-xl font-bold" style={{ color: "var(--text-primary)" }}>{student.name}</h1>
           <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-            ID: {code} · Tuần {student.currentWeek}
+            ID: {code} · Tuần {student.currentWeek} ·{" "}
+            {/* Lộ trình AI nằm ở Postgres chứ không phải RTDB như trang này, nên
+                để riêng một trang — xem ghi chú ở app/(teacher)/.../roadmap/page.tsx */}
+            <Link
+              href={`/admin/students/${code}/roadmap`}
+              className="underline"
+              style={{ color: "var(--accent-primary)" }}
+            >
+              Lộ trình học
+            </Link>
           </p>
         </div>
         <button

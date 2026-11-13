@@ -22,6 +22,8 @@ export type XpSource =
   | "vocab_master"
   | "mission_task"
   | "mission_day"
+  | "roadmap_task"
+  | "roadmap_day"
   | "homework_submit"
   | "test_score"
   | "daily_login"
@@ -37,6 +39,10 @@ export const XP_RULES: Record<XpSource, number> = {
   vocab_master: 20,
   mission_task: 5,
   mission_day: 20,          // bonus when 100% done in a day
+  // Lộ trình AI. Chỉ cộng cho việc TỰ TÍCH bằng dữ liệu làm bài thật — việc học
+  // viên tự đánh dấu "bỏ qua" không được cộng, nếu không XP đo công sức bấm nút.
+  roadmap_task: 5,
+  roadmap_day: 20,          // bonus khi xong hết việc chính của một ngày
   homework_submit: 30,
   test_score: 15,
   daily_login: 5,

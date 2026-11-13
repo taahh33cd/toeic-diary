@@ -15,8 +15,10 @@
  */
 
 import { prisma } from "@/lib/db/prisma";
+import { recordXp } from "@/lib/xp";
 
 import type { EvidenceSpec } from "./types";
+import { vnDateKey } from "./vn-date";
 
 /** Bằng chứng ghi vào `StudyTask.evidence` khi việc được tích xong. */
 export type EvidenceProof = {
@@ -236,7 +238,64 @@ export async function syncTasks(
       },
     });
     completed.push(task.id);
+    await awardTaskXp(userId, task.id, vnDateKey(task.date));
+  }
+
+  // Thưởng ngày trọn vẹn tính SAU khi đã tích hết lượt này: nếu tính trong vòng
+  // lặp thì việc cuối cùng của ngày chưa kịp đổi trạng thái, và học viên không
+  // bao giờ nhận được thưởng.
+  for (const date of new Set(
+    tasks.filter((t) => completed.includes(t.id)).map((t) => vnDateKey(t.date)),
+  )) {
+    await awardDayXp(userId, date);
   }
 
   return { completed, checked: tasks.length };
+}
+
+/**
+ * XP cho một việc vừa tự tích xong.
+ *
+ * Gọi đúng tại lúc việc chuyển `pending` → `done`, nên tự nhiên chỉ chạy một
+ * lần cho mỗi việc. Lỗi bị nuốt: không cộng được XP thì thôi, không được để nó
+ * làm hỏng việc tích xanh.
+ */
+async function awardTaskXp(userId: string, taskId: string, date: string): Promise<void> {
+  try {
+    await recordXp(userId, "roadmap_task", undefined, { taskId, date });
+  } catch {
+    /* XP hỏng không được kéo theo lộ trình */
+  }
+}
+
+/** Thưởng khi xong HẾT việc chính của một ngày. Mỗi ngày chỉ một lần. */
+async function awardDayXp(userId: string, date: string): Promise<void> {
+  try {
+    const day = new Date(`${date}T00:00:00Z`);
+    const [total, done] = await Promise.all([
+      prisma.studyTask.count({
+        where: { userId, date: day, priority: "core", plan: { status: "active" } },
+      }),
+      prisma.studyTask.count({
+        where: {
+          userId,
+          date: day,
+          priority: "core",
+          status: "done",
+          plan: { status: "active" },
+        },
+      }),
+    ]);
+    if (total === 0 || done < total) return;
+
+    const already = await prisma.xpEvent.findFirst({
+      where: { userId, source: "roadmap_day", metadata: { path: ["date"], equals: date } },
+      select: { id: true },
+    });
+    if (already) return;
+
+    await recordXp(userId, "roadmap_day", undefined, { date });
+  } catch {
+    /* XP hỏng không được kéo theo lộ trình */
+  }
 }
