@@ -1,8 +1,8 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { describeAttemptGroups, loadAttemptHistory } from "@/lib/journal/attempts";
+import { describeAttemptGroups, loadAttemptHistory, toClientAttempt } from "@/lib/journal/attempts";
 import { ScoresClient } from "./_scores-client";
-import type { ClientAttempt, GroupMeta } from "./_results";
+import type { ClientAttempt, GroupMeta } from "@/components/results/ResultsParts";
 
 export const metadata = { title: "Kết quả" };
 
@@ -30,24 +30,7 @@ export default async function ScoresPage({
 
     try {
       const items = await loadAttemptHistory(user.id);
-      // Date không qua ranh giới server/client an toàn — đổi sang ISO.
-      attempts = items.map((a) => ({
-        id: a.id,
-        kind: a.kind,
-        status: a.status,
-        groupKey: a.groupKey,
-        groupLabel: a.groupLabel,
-        testTitle: a.testTitle,
-        testHref: a.testHref,
-        modeLabel: a.modeLabel,
-        correct: a.correct,
-        gradable: a.gradable,
-        total: a.total,
-        listening: a.listening,
-        reading: a.reading,
-        answered: a.answered,
-        atISO: a.at.toISOString(),
-      }));
+      attempts = items.map(toClientAttempt);
       // Tổng số đề mỗi dạng bài — "nên luyện gì tiếp" cần biết còn bao nhiêu đề
       // chưa làm. Catalog là JSON chỉ đọc được ở server.
       groupMeta = describeAttemptGroups([...new Set(items.map((i) => i.groupKey))]);

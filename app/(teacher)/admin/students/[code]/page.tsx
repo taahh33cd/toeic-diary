@@ -2550,6 +2550,14 @@ export default function StudentEditorPage() {
             >
               Lộ trình học
             </Link>
+            {" · "}
+            <Link
+              href={`/admin/students/${code}/results`}
+              className="underline font-semibold"
+              style={{ color: "var(--accent-primary)" }}
+            >
+              Kết quả luyện đề &amp; thi thử
+            </Link>
           </p>
         </div>
         <button

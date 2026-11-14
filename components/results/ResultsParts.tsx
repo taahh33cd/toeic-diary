@@ -9,34 +9,18 @@
  * _scores-client.tsx vì cần form nhập điểm ở đó — truyền vào qua `renderReal`.
  */
 
-import { useMemo, useState } from "react";
+import { createContext, useContext, useMemo, useState } from "react";
 import Link from "next/link";
 import { Sheet } from "@/components/journal/paper/Sheet";
 import { useLocale } from "@/hooks/useLocale";
 import type { ToeicScore } from "@/lib/firebase/types";
+import { REAL_MODE_LABEL, estimateFromTotals } from "@/lib/journal/results-math";
+// Chỉ import kiểu — xoá hết khi biên dịch nên không kéo code server vào trình duyệt.
+import type { ClientAttempt } from "@/lib/journal/attempts";
+
+export type { ClientAttempt };
 
 // ─── Kiểu dữ liệu từ server ──────────────────────────────────────────────────
-
-export interface ClientAttempt {
-  id: string;
-  kind: "part" | "full";
-  status: "in_progress" | "done";
-  groupKey: string;
-  groupLabel: string;
-  testTitle: string;
-  testHref: string;
-  /** "Thi thử" | "Luyện tập" */
-  modeLabel: string;
-  correct: number | null;
-  gradable: number | null;
-  /** Điểm quy đổi 10–990 — chỉ lượt trọn đề làm đủ 7 part mới có */
-  total: number | null;
-  listening: number | null;
-  reading: number | null;
-  answered: number;
-  /** ISO — Date không qua được ranh giới server/client an toàn */
-  atISO: string;
-}
 
 /** Lối vào và tổng số đề của một dạng bài — server suy ra từ catalog. */
 export interface GroupMeta {
@@ -45,7 +29,31 @@ export interface GroupMeta {
   totalTests: number;
 }
 
-const REAL_MODE = "Thi thử";
+const REAL_MODE = REAL_MODE_LABEL;
+
+/**
+ * Ai đang xem. Học viên (mặc định): link xem lại trỏ vào sổ học tập, có nút
+ * "Làm tiếp", link sang khu Luyện đề. Giáo viên (admin): link xem lại trỏ vào
+ * khu admin, bỏ mọi lối sang /skills — site admin không phục vụ khu đó.
+ */
+export interface ResultsView {
+  staff: boolean;
+  reviewHref: (attemptId: string) => string;
+}
+
+const ResultsViewContext = createContext<ResultsView>({
+  staff: false,
+  reviewHref: (id) => `/journal/attempts/${id}`,
+});
+
+export const ResultsViewProvider = ResultsViewContext.Provider;
+
+function useResultsView(): ResultsView {
+  return useContext(ResultsViewContext);
+}
+
+/** Nền tờ giấy ở sổ học tập; ở admin không có biến --paper-sheet nên rơi về nền thẻ. */
+const SHEET_STYLE: React.CSSProperties = { background: "var(--paper-sheet, var(--bg-elevated))" };
 const TZ = "Asia/Ho_Chi_Minh";
 
 // ─── Tiện ích ────────────────────────────────────────────────────────────────
@@ -106,13 +114,12 @@ export function isChartMock(a: ClientAttempt): boolean {
  * như thang TOEIC. Bài ở chế độ Luyện tập không tính: có thể đã xem đáp án.
  */
 export function estimateFromMocks(attempts: ClientAttempt[]): { value: number; n: number } | null {
-  const recent = attempts
-    .filter(isChartMock)
-    .sort((a, b) => b.atISO.localeCompare(a.atISO))
-    .slice(0, 3);
-  if (recent.length === 0) return null;
-  const avg = recent.reduce((s, a) => s + a.total!, 0) / recent.length;
-  return { value: Math.round(avg / 5) * 5, n: recent.length };
+  return estimateFromTotals(
+    attempts
+      .filter(isChartMock)
+      .sort((a, b) => b.atISO.localeCompare(a.atISO))
+      .map((a) => a.total!),
+  );
 }
 
 // ─── Biểu đồ điểm: thi thật (chấm đặc) + thi thử trong app (chấm rỗng) ───────
@@ -274,7 +281,7 @@ export function RowShell({
 }) {
   return (
     <span className="flex flex-wrap items-center gap-x-3 gap-y-1.5 px-4 py-3"
-      style={{ background: highlight ? "var(--accent-faint)" : "transparent" }}>
+      style={{ background: highlight ? "var(--accent-faint, color-mix(in srgb, var(--accent-primary) 8%, transparent))" : "transparent" }}>
       {/* Điện thoại: ngày một dòng riêng để tên bài đủ chỗ; từ sm là cột cố định. */}
       <span className="w-full sm:w-20 text-xs tabular-nums shrink-0" style={{ color: "var(--text-muted)" }}>{day}</span>
       <span className="block flex-1 min-w-0">
@@ -297,6 +304,7 @@ export function RowShell({
 
 export function UnfinishedList({ attempts }: { attempts: ClientAttempt[] }) {
   const { t } = useLocale();
+  const { staff } = useResultsView();
   const list = useMemo(
     () => attempts
       .filter((a) => a.status === "in_progress" && a.answered > 0)
@@ -306,7 +314,7 @@ export function UnfinishedList({ attempts }: { attempts: ClientAttempt[] }) {
   if (list.length === 0) return null;
 
   return (
-    <Sheet className="p-4">
+    <Sheet className="p-4" style={SHEET_STYLE}>
       <h2 className="text-sm font-bold m-0 mb-2" style={{ color: "var(--text-secondary)" }}>
         {t("Đang làm dở", "In progress")}
         <span className="ml-2 text-xs font-normal" style={{ color: "var(--text-muted)" }}>
@@ -316,21 +324,29 @@ export function UnfinishedList({ attempts }: { attempts: ClientAttempt[] }) {
       <ul className="list-none p-0 m-0 grid gap-2 sm:grid-cols-2">
         {list.map((a) => (
           <li key={a.id}>
-            <Link
-              href={a.testHref}
-              className="flex items-center gap-3 px-3 py-2.5 no-underline rounded-lg transition-colors"
-              style={{ color: "var(--text-primary)", border: "1px solid var(--border)" }}
-            >
-              <span className="flex-1 min-w-0">
-                <span className="block text-sm font-semibold truncate">{a.groupLabel} · {a.testTitle}</span>
-                <span className="block text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
-                  {t("Đã trả lời", "Answered")} {a.answered} {t("câu", "questions")} · {t("lưu lúc", "saved")} {fmtDateTime(a.atISO)}
-                </span>
-              </span>
-              <span className="text-xs font-bold whitespace-nowrap" style={{ color: "var(--accent-primary)" }}>
-                {t("Làm tiếp", "Continue")} →
-              </span>
-            </Link>
+            {(() => {
+              const body = (
+                <>
+                  <span className="flex-1 min-w-0">
+                    <span className="block text-sm font-semibold truncate">{a.groupLabel} · {a.testTitle}</span>
+                    <span className="block text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
+                      {t("Đã trả lời", "Answered")} {a.answered} {t("câu", "questions")} · {t("lưu lúc", "saved")} {fmtDateTime(a.atISO)}
+                    </span>
+                  </span>
+                  {!staff && (
+                    <span className="text-xs font-bold whitespace-nowrap" style={{ color: "var(--accent-primary)" }}>
+                      {t("Làm tiếp", "Continue")} →
+                    </span>
+                  )}
+                </>
+              );
+              const cls = "flex items-center gap-3 px-3 py-2.5 no-underline rounded-lg transition-colors";
+              const st = { color: "var(--text-primary)", border: "1px solid var(--border)" };
+              // Giáo viên không làm tiếp bài của HV, và site admin không có khu /skills.
+              return staff
+                ? <div className={cls} style={st}>{body}</div>
+                : <Link href={a.testHref} className={cls} style={st}>{body}</Link>;
+            })()}
           </li>
         ))}
       </ul>
@@ -368,6 +384,7 @@ export function NextUp({ attempts, groupMeta, onPick }: {
   onPick: (groupKey: string) => void;
 }) {
   const { t } = useLocale();
+  const { staff } = useResultsView();
   const done = useMemo(() => attempts.filter((a) => a.status === "done"), [attempts]);
 
   /**
@@ -462,7 +479,7 @@ export function NextUp({ attempts, groupMeta, onPick }: {
   if (rows.length < 2 && tips.length === 0) return null;
 
   return (
-    <Sheet className="p-4">
+    <Sheet className="p-4" style={SHEET_STYLE}>
       <h2 className="text-sm font-bold m-0" style={{ color: "var(--text-secondary)" }}>
         {t("Nên luyện gì tiếp", "What to practice next")}
       </h2>
@@ -515,9 +532,9 @@ export function NextUp({ attempts, groupMeta, onPick }: {
           {tips.map((tip) => (
             <li key={tip.key} className="flex items-baseline gap-2 text-sm flex-wrap">
               <span style={{ color: "var(--text-primary)" }}>{tip.text}</span>
-              <Link href={tip.href} className="text-xs font-bold no-underline whitespace-nowrap" style={{ color: "var(--accent-primary)" }}>
+              {!staff && <Link href={tip.href} className="text-xs font-bold no-underline whitespace-nowrap" style={{ color: "var(--accent-primary)" }}>
                 {tip.cta} →
-              </Link>
+              </Link>}
             </li>
           ))}
         </ul>
@@ -586,13 +603,14 @@ function ReviewArrow() {
 
 function MockRow({ a, highlight }: { a: ClientAttempt; highlight: boolean }) {
   const { t } = useLocale();
+  const { reviewHref } = useResultsView();
   const p = pct(a.correct, a.gradable);
   const practice = a.modeLabel !== REAL_MODE;
   const sub = a.total !== null
     ? `Listening ${a.listening ?? "–"} · Reading ${a.reading ?? "–"}${practice ? ` · ${t("chế độ luyện tập, không tính vào ước tính", "practice mode, not counted in estimate")}` : ""}`
     : `${t("Đúng", "Correct")} ${a.correct ?? "–"}/${a.gradable ?? "–"} · ${t("chưa làm đủ 7 part nên chưa quy đổi điểm", "not all 7 parts, no scaled score")}`;
   return (
-    <Link href={`/journal/attempts/${a.id}`} className="block no-underline transition-colors hover:brightness-95">
+    <Link href={reviewHref(a.id)} className="block no-underline transition-colors hover:brightness-95">
       <RowShell
         day={fmtDay(vnStamp(a.atISO))}
         badge={<KindBadge kind="mock" />}
@@ -609,9 +627,10 @@ function MockRow({ a, highlight }: { a: ClientAttempt; highlight: boolean }) {
 
 function PartLine({ a }: { a: ClientAttempt }) {
   const { t } = useLocale();
+  const { reviewHref } = useResultsView();
   const p = pct(a.correct, a.gradable);
   return (
-    <Link href={`/journal/attempts/${a.id}`}
+    <Link href={reviewHref(a.id)}
       className="flex flex-wrap items-center gap-x-3 gap-y-0.5 py-2 no-underline transition-colors hover:brightness-95"
       style={{ color: "var(--text-primary)", borderTop: "1px solid var(--border)" }}>
       <span className="flex-1 min-w-0 text-sm truncate" style={{ minWidth: 140 }}>
@@ -634,6 +653,7 @@ function PartLine({ a }: { a: ClientAttempt }) {
 
 function PartDayRow({ day, items, highlight }: { day: string; items: ClientAttempt[]; highlight: boolean }) {
   const { t } = useLocale();
+  const { reviewHref } = useResultsView();
   const [open, setOpen] = useState(false);
 
   // Một lượt trong ngày thì hiện thẳng, không cần gộp.
@@ -641,7 +661,7 @@ function PartDayRow({ day, items, highlight }: { day: string; items: ClientAttem
     const a = items[0];
     const p = pct(a.correct, a.gradable);
     return (
-      <Link href={`/journal/attempts/${a.id}`} className="block no-underline transition-colors hover:brightness-95">
+      <Link href={reviewHref(a.id)} className="block no-underline transition-colors hover:brightness-95">
         <RowShell
           day={fmtDay(day)}
           badge={<KindBadge kind="part" />}
@@ -701,7 +721,8 @@ export function LrHistory({
   filter: HistoryFilter;
   onFilter: (f: HistoryFilter) => void;
   renderReal: (score: ToeicScore, idx: number, highlight: boolean) => React.ReactNode;
-  onAddScore: () => void;
+  /** Bỏ trống ở màn giáo viên: không có lối nhập điểm / làm bài. */
+  onAddScore?: () => void;
 }) {
   const { t } = useLocale();
   const [limit, setLimit] = useState(PAGE);
@@ -769,7 +790,7 @@ export function LrHistory({
 
       {attemptsError && (
         <p className="text-xs px-5 py-2 m-0" style={{ color: "var(--accent-red, #b91c1c)", borderBottom: "1px solid var(--border)" }}>
-          {t("Không tải được lịch sử luyện đề. Tải lại trang để thử lại.", "Couldn't load your practice history. Reload the page to try again.")}
+          {t("Không tải được lịch sử luyện đề. Tải lại trang để thử lại.", "Couldn't load the practice history. Reload the page to try again.")}
         </p>
       )}
 
@@ -778,6 +799,8 @@ export function LrHistory({
           <p className="text-sm font-semibold m-0" style={{ color: "var(--text-primary)" }}>
             {t("Chưa có kết quả nào", "No results yet")}
           </p>
+          {onAddScore && (
+          <>
           <p className="text-xs mt-1 mb-4" style={{ color: "var(--text-muted)" }}>
             {t("Nhập điểm kỳ thi thật bạn đã thi, hoặc làm một bài thi thử trong app.", "Add a real test score, or take a mock test in the app.")}
           </p>
@@ -793,6 +816,8 @@ export function LrHistory({
               {t("Làm bài thi thử", "Take a mock test")} →
             </Link>
           </div>
+          </>
+          )}
         </div>
       ) : entries.length === 0 ? (
         <p className="text-sm text-center py-8 m-0" style={{ color: "var(--text-muted)" }}>

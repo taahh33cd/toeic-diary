@@ -29,7 +29,7 @@ function practiceHref(part: PartNumber) {
 
 export function ReviewPanel({
   test, config, answers, marked, skin, onToggleSkin, onRetry, canSaveVocab,
-  backHref = "/skills/full-tests", backLabel = "Danh sách đề", historyHref,
+  backHref = "/skills/full-tests", backLabel = "Danh sách đề", historyHref, readOnly = false,
 }: {
   test: FullTest;
   config: RunConfig;
@@ -37,7 +37,8 @@ export function ReviewPanel({
   marked: number[];
   skin: Skin;
   onToggleSkin: () => void;
-  onRetry: () => void;
+  /** Bỏ trống khi `readOnly` — giáo viên xem bài của HV thì không có "Làm lại". */
+  onRetry?: () => void;
   canSaveVocab: boolean;
   /** Màn luyện một part quay về danh sách đề của part đó, không về /skills/full-tests */
   backHref?: string;
@@ -45,6 +46,8 @@ export function ReviewPanel({
   backLabel?: string;
   /** Lượt đã lưu vào sổ học tập → hiện lối sang trang Kết quả. Bỏ trống thì ẩn. */
   historyHref?: string;
+  /** Giáo viên xem bài của học viên: ẩn "Làm lại đề này" và lối sang khu luyện Part. */
+  readOnly?: boolean;
 }) {
   const P = PALETTE[skin];
   const [filter, setFilter] = useState<Filter>("wrong");
@@ -234,7 +237,7 @@ export function ReviewPanel({
             })}
           </div>
 
-          {weakParts.length > 0 && (
+          {weakParts.length > 0 && !readOnly && (
             <div style={{ marginTop: "1.1rem", paddingTop: "0.9rem", borderTop: `1px solid ${P.borderSoft}` }}>
               <p style={{ fontSize: "0.88rem", margin: "0 0 0.6rem", color: P.inkSoft }}>
                 Dưới 60% ở {weakParts.length} part — luyện riêng phần đó trước khi làm đề tiếp:
@@ -317,6 +320,7 @@ export function ReviewPanel({
           ))
         )}
 
+          {!readOnly && onRetry && (
           <button
             type="button"
             onClick={onRetry}
@@ -324,6 +328,7 @@ export function ReviewPanel({
           >
             Làm lại đề này
           </button>
+          )}
         </div>
 
         {!narrow && (

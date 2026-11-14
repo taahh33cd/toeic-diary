@@ -21,7 +21,7 @@ import {
   ScoreChart, KindBadge, RowShell, UnfinishedList, NextUp, LrHistory,
   estimateFromMocks, isChartMock, vnStamp,
   type ClientAttempt, type GroupMeta, type ChartPoint, type HistoryFilter,
-} from "./_results";
+} from "@/components/results/ResultsParts";
 
 // ─── Scores: Part definitions ─────────────────────────────────────────────────
 

@@ -45,6 +45,51 @@ export interface AttemptItem {
   at: Date;
 }
 
+/**
+ * Lượt làm bài đã đổi sang dạng gửi được xuống client (Date → ISO).
+ * Dùng chung cho trang Kết quả của học viên và trang Kết quả HV ở admin.
+ */
+export interface ClientAttempt {
+  id: string;
+  kind: "part" | "full";
+  status: AttemptStatus;
+  groupKey: string;
+  groupLabel: string;
+  testTitle: string;
+  testHref: string;
+  /** "Thi thử" | "Luyện tập" */
+  modeLabel: string;
+  correct: number | null;
+  gradable: number | null;
+  /** Điểm quy đổi 10–990 — chỉ lượt trọn đề làm đủ 7 part mới có */
+  total: number | null;
+  listening: number | null;
+  reading: number | null;
+  answered: number;
+  /** ISO — Date không qua được ranh giới server/client an toàn */
+  atISO: string;
+}
+
+export function toClientAttempt(a: AttemptItem): ClientAttempt {
+  return {
+    id: a.id,
+    kind: a.kind,
+    status: a.status,
+    groupKey: a.groupKey,
+    groupLabel: a.groupLabel,
+    testTitle: a.testTitle,
+    testHref: a.testHref,
+    modeLabel: a.modeLabel,
+    correct: a.correct,
+    gradable: a.gradable,
+    total: a.total,
+    listening: a.listening,
+    reading: a.reading,
+    answered: a.answered,
+    atISO: a.at.toISOString(),
+  };
+}
+
 /** Số câu đã trả lời trong cột answers dạng { "1": "B", ... }. */
 function countAnswers(answers: unknown): number {
   if (!answers || typeof answers !== "object" || Array.isArray(answers)) return 0;
@@ -311,6 +356,8 @@ function toRunConfig(raw: unknown, fallbackParts: PartNumber[]): RunConfig {
 }
 
 export interface AttemptDetail {
+  /** Chủ của lượt làm bài */
+  userId: string;
   /** Dòng lịch sử của chính lượt này */
   item: AttemptItem;
   /** Đề đã nạp lại từ data, đủ audio + transcript + đáp án đúng */
@@ -325,10 +372,23 @@ export interface AttemptDetail {
  * Trả null khi lượt không tồn tại, không thuộc học viên này, hay data đề đã mất.
  */
 export async function loadAttemptDetail(userId: string, id: string): Promise<AttemptDetail | null> {
+  return loadDetail(id, userId);
+}
+
+/**
+ * Như loadAttemptDetail nhưng không lọc theo chủ lượt làm — CHỈ gọi từ khu
+ * admin (layout admin đã chặn ai không phải giáo viên/admin).
+ */
+export async function loadAttemptDetailForStaff(id: string): Promise<AttemptDetail | null> {
+  return loadDetail(id, null);
+}
+
+async function loadDetail(id: string, userId: string | null): Promise<AttemptDetail | null> {
+  const where = userId === null ? { id } : { id, userId };
   const part = await prisma.partPracticeAttempt.findFirst({
-    where: { id, userId },
+    where,
     select: {
-      id: true, skill: true, part: true, testSlug: true, status: true, config: true,
+      id: true, userId: true, skill: true, part: true, testSlug: true, status: true, config: true,
       answers: true, marked: true, correct: true, gradable: true,
       completedAt: true, updatedAt: true,
     },
@@ -361,6 +421,7 @@ export async function loadAttemptDetail(userId: string, id: string): Promise<Att
     };
 
     return {
+      userId: part.userId,
       item,
       test: toFullTest(practice, parsed.part),
       config: toRunConfig(part.config, [part.part as PartNumber]),
@@ -370,9 +431,9 @@ export async function loadAttemptDetail(userId: string, id: string): Promise<Att
   }
 
   const full = await prisma.fullTestAttempt.findFirst({
-    where: { id, userId },
+    where,
     select: {
-      id: true, examSlug: true, testSlug: true, status: true, config: true,
+      id: true, userId: true, examSlug: true, testSlug: true, status: true, config: true,
       answers: true, marked: true, correct: true, gradable: true, total: true,
       listening: true, reading: true,
       completedAt: true, updatedAt: true,
@@ -405,6 +466,7 @@ export async function loadAttemptDetail(userId: string, id: string): Promise<Att
   };
 
   return {
+    userId: full.userId,
     item,
     test,
     // Dedupe: mỗi part có nhiều nhóm câu, mà scoreAttempt cộng theo từng part trong danh sách.

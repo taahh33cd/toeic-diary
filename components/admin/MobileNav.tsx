@@ -15,7 +15,7 @@ const NAV = [
   { href: "/admin/students",   emoji: "👥", label: "Học viên" },
   { href: "/admin/homework",   emoji: "📝", label: "Bài tập" },
   { href: "/admin/grading",    emoji: "🖊️", label: "Chấm bài" },
-  { href: "/admin/practice",   emoji: "🎧", label: "Luyện đề" },
+  { href: "/admin/practice",   emoji: "📊", label: "Kết quả HV" },
   { href: "/admin/progress",   emoji: "📈", label: "Tiến độ" },
   { href: "/admin/classes",    emoji: "🏫", label: "Lớp học" },
   { href: "/admin/scores",     emoji: "🎯", label: "Điểm số" },
