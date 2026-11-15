@@ -19,6 +19,12 @@ import { CourseUnlockCelebration } from "@/components/course/CourseUnlockCelebra
 // (giấy phép OFL, kèm trong app/fonts/), đã cắt còn latin + latin-ext +
 // vietnamese và nén woff2. MUỐN THÊM/ĐỔI WEIGHT thì sửa cả script đó lẫn danh
 // sách dưới đây — lệch nhau là trình duyệt giả lập nét đậm/nghiêng.
+//
+// `preload` CHỈ bật cho Be Vietnam Pro. Mặc định `next/font/local` preload MỌI
+// face đã khai báo, tức 26 file / 1.387 KB tải ngay ở mọi trang — kể cả Noto
+// Serif (289 KB, chỉ khu admin) và Playpen Sans (557 KB, chỉ sổ học tập). Tắt
+// preload bốn họ kia thì trang nào dùng mới tải, tiết kiệm 1.059 KB mỗi lượt
+// vào trang; `display: "swap"` lo phần hiện tạm bằng font dự phòng.
 
 const jetbrainsMono = localFont({
   src: [
@@ -27,6 +33,7 @@ const jetbrainsMono = localFont({
   ],
   variable: "--font-jetbrains-mono",
   display: "swap",
+  preload: false,
 });
 
 // ── Journal fonts (warm beige theme — matches STUDENT.html) ──────────────────
@@ -41,6 +48,7 @@ const lora = localFont({
   ],
   variable: "--font-lora",
   display: "swap",
+  preload: false,
   adjustFontFallback: "Times New Roman",
 });
 
@@ -73,6 +81,7 @@ const playpenSans = localFont({
   ],
   variable: "--font-hand-face",
   display: "swap",
+  preload: false,
 });
 
 // ── Admin "Silk & Alexandria" fonts ─────────────────────
@@ -85,6 +94,7 @@ const notoSerif = localFont({
   ],
   variable: "--font-noto-serif",
   display: "swap",
+  preload: false,
   adjustFontFallback: "Times New Roman",
 });
 
