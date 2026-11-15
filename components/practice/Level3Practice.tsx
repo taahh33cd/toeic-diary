@@ -10,7 +10,7 @@ import { PostSubmitView } from "./PostSubmitView";
 import { KeyboardHints } from "./KeyboardHints";
 import { useAudioShortcuts } from "./useAudioShortcuts";
 import { tokenizeSentence, normalizeToken, matchWords, tokenMatches } from "@/lib/practice/match";
-import { buildSegmentWindows, TAIL_PAD, type SegmentWindow } from "@/lib/practice/segment";
+import { buildSegmentWindows, type SegmentWindow } from "@/lib/practice/segment";
 
 interface Sentence {
   id: string;
@@ -211,10 +211,10 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     const t = audio.currentTime;
     setAudioCurrent(t);
     if (seekingRef.current) return;
-    const end = windowRef.current?.end;
+    const end = windowRef.current?.playUntil;
     // end vô hạn = dữ liệu timestamp không dùng được, để audio chạy tới hết file
     if (end === undefined || !Number.isFinite(end)) return;
-    if (t >= end + TAIL_PAD) onSegmentEnd(audio);
+    if (t >= end) onSegmentEnd(audio);
   }
 
   // File hết trước khi tới mốc cuối câu (timestamp vượt độ dài file)

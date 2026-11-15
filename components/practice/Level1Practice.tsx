@@ -11,7 +11,7 @@ import { PostSubmitView } from "./PostSubmitView";
 import { KeyboardHints } from "./KeyboardHints";
 import { useAudioShortcuts } from "./useAudioShortcuts";
 import { tokenMatches, normalizeToken } from "@/lib/practice/match";
-import { buildSegmentWindows, TAIL_PAD, type SegmentWindow } from "@/lib/practice/segment";
+import { buildSegmentWindows, type SegmentWindow } from "@/lib/practice/segment";
 
 interface Blank {
   id: string;
@@ -215,11 +215,11 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
     if (!activeSentence) return;
     if (activeSentence.blanks.length === 0) return;
 
-    const end = windowRef.current?.end;
+    const end = windowRef.current?.playUntil;
     // end vô hạn = dữ liệu timestamp không dùng được, để audio chạy tới hết file
     if (end === undefined || !Number.isFinite(end)) return;
 
-    if (t >= end + TAIL_PAD) {
+    if (t >= end) {
       const state = replayStateRef.current;
       if (state.sentenceId !== activeSentence.id) return;
 

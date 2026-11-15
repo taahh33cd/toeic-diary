@@ -16,10 +16,22 @@
  * p1 = 0.202, p5 = 0.252, p25 = 0.320, trung vị = 0.399 giây/từ.
  */
 
-/** Bù trước câu để không cụt từ đầu. */
+/**
+ * Bù trước câu để không cụt từ đầu, và bù sau câu trước khi coi là đã phát hết.
+ *
+ * Đây là NGÂN SÁCH TỐI ĐA, không phải lượng cộng cứng. Hai hằng này vốn hiệu
+ * chỉnh cho Part 1-2, nơi các câu cách nhau hàng giây nên cộng thẳng vào vẫn
+ * rơi trọn vào khoảng lặng. Hội thoại Part 3-4 thì không: đo trên 54 mối nối
+ * của hai bộ part3-practice, khoảng nghỉ thật giữa hai lượt thoại chỉ trung vị
+ * 0.54s (p10 = 0.30s). Cộng cứng 0.5s vào đuôi là lấn sang tiếng của người nói
+ * kế tiếp ở gần như mọi mối nối — học viên bấm nghe một câu lại nghe thêm chữ
+ * đầu của câu sau.
+ *
+ * Nên `buildSegmentWindows` chỉ cấp phần bù trong khoảng lặng CÓ THẬT giữa hai
+ * câu. Bất biến: phần bù chỉ bị CO LẠI, không bao giờ làm khoảng nghe ngắn hơn
+ * mốc trong DB — nên không bài nào đang đúng bị cắt đi.
+ */
 export const LEAD_IN = 0.2;
-
-/** Bù sau câu trước khi coi là đã phát hết. */
 export const TAIL_PAD = 0.5;
 
 /** Dưới mức này thì timestamp chắc chắn sai (thấp hơn cả phân vị 1%). */
@@ -39,6 +51,12 @@ export interface SegmentWindow {
   start: number;
   /** Thời điểm coi là hết câu. `Infinity` = phát tới hết file, không tự cắt. */
   end: number;
+  /**
+   * Thời điểm DỪNG phát thật sự — `end` cộng phần bù đuôi còn chỗ, kẹp lại để
+   * không lấn sang vùng câu kế tiếp và không vượt quá độ dài file. Luôn >= `end`.
+   * Trình phát so `currentTime` với mốc này, không tự cộng TAIL_PAD nữa.
+   */
+  playUntil: number;
   /** true khi khoảng phát do lưới an toàn suy ra, không phải lấy từ DB. */
   repaired: boolean;
 }
@@ -95,9 +113,14 @@ export function buildSegmentWindows(
     const s = sentences[i];
     const words = wordCount(s.content);
 
-    // start theo DB; câu thiếu start_time thì nối tiếp câu trước, không về 0
+    // start theo DB; câu thiếu start_time thì nối tiếp câu trước, không về 0.
+    // Phần bù đầu chỉ lùi tới chỗ câu TRƯỚC dừng (floorAt), và không bao giờ
+    // lùi quá chính mốc của câu này — nên với bài mà mốc hai câu liền kề chồng
+    // nhau (dữ liệu dictation đệm ±0.4s) kết quả vẫn là đúng mốc DB, không cụt.
     let stampedStart =
-      s.startTime > 0 ? Math.max(0, s.startTime - LEAD_IN) : (i > 0 ? floorAt[i] : 0);
+      s.startTime > 0
+        ? Math.min(s.startTime, Math.max(0, s.startTime - LEAD_IN, floorAt[i]))
+        : (i > 0 ? floorAt[i] : 0);
 
     const floor = Math.max(0, Math.min(prevStartAt[i], stampedStart));
     const fileEnd = hasDuration ? audioDuration : Infinity;
@@ -146,9 +169,29 @@ export function buildSegmentWindows(
       end = Infinity;
     }
 
+    // Phần bù đuôi: chỉ cấp tới chỗ câu KẾ TIẾP bắt đầu (ceilAt), và không
+    // vượt quá độ dài file. Kẹp bằng max(…) nên không bao giờ ngắn hơn khoảng
+    // nghe hiện có.
+    //
+    // Kẹp theo độ dài file (98 câu, chủ yếu đáp án cuối của Part 1-2, có
+    // end_time vượt ra ngoài audio) KHÔNG phải để chữa lỗi: mốc đó vốn đã được
+    // `onEnded` của trình phát đỡ. Chỉ là mốc dừng giờ nói đúng sự thật — phần
+    // vượt ra ngoài file không có tiếng nào để nghe.
+    let playUntil = Infinity;
+    if (Number.isFinite(end)) {
+      // Sàn gồm cả `stampedEnd`, không chỉ `end`: ở vài bài lưới an toàn đã
+      // tính ra `end` nhỏ hơn mốc DB (câu bị nghi ngờ nên bị `ceiling` kẹp).
+      // Lấy max với mốc DB thì bất biến "không bao giờ phát ngắn hơn cửa sổ
+      // trong DB" đúng theo cấu trúc, chứ không phải nhờ may.
+      const floorEnd = stampedEnd > 0 ? Math.max(end, stampedEnd) : end;
+      playUntil = Math.max(floorEnd, Math.min(end + TAIL_PAD, ceilAt[i]));
+      if (hasDuration) playUntil = Math.min(playUntil, audioDuration);
+    }
+
     windows.push({
       start,
       end,
+      playUntil,
       repaired: start !== stampedStart || end !== stampedEnd,
     });
   }

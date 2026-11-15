@@ -36,12 +36,6 @@ const MAX_SEC_PER_WORD = 1.6;      // chậm hơn mức này là nhịp đọc v
 const PAD_START = 0.25;
 const PAD_END = 0.4;
 
-function padded(start: number, end: number, duration: number) {
-  const s = Math.max(0, start - PAD_START);
-  const e = duration > 0 ? Math.min(end + PAD_END, duration) : end + PAD_END;
-  return { start: +s.toFixed(2), end: +e.toFixed(2) };
-}
-
 interface OutSentence {
   id: string;
   orderIndex: number;
@@ -62,6 +56,43 @@ interface OutLesson {
   coverage: number;
   asrText?: string;
   sentences: OutSentence[];
+}
+
+/**
+ * Đệm quanh mốc ASR của câu thứ `i`, nhưng CHIA ĐÔI khoảng lặng thật với câu
+ * liền kề thay vì cộng cứng PAD_START/PAD_END.
+ *
+ * Vì sao: PAD_START/PAD_END vốn chọn cho Part 1-2, nơi hai câu cách nhau hàng
+ * giây nên cộng cứng vẫn rơi trọn vào khoảng lặng. Hội thoại Part 3-4 thì
+ * khoảng nghỉ giữa hai lượt thoại chỉ trung vị 0.54s (đo trên 54 mối nối của
+ * part3-basic + part3-advanced), nên +0.4s vào đuôi là đã chạm tiếng người nói
+ * kế tiếp — rồi trình phát còn cộng TAIL_PAD lên nữa.
+ *
+ * Chia đôi khoảng lặng thì mỗi câu lấy phần của mình, cửa sổ hai câu liền kề
+ * không bao giờ chồng nhau và không bao giờ chạm lời câu bên cạnh. Chỗ nào
+ * khoảng lặng rộng (Part 1-2) thì min() trả về đúng PAD_START/PAD_END như cũ,
+ * nên dữ liệu dictation chạy lại vẫn ra y hệt.
+ */
+function paddedAt(L: OutLesson, i: number): { start: number; end: number } | null {
+  const ss = L.sentences;
+  const cur = ss[i];
+  if (cur.newStart === null || cur.newEnd === null) return null;
+  const dur = L.audioDuration;
+
+  let prevEnd = 0;
+  for (let j = i - 1; j >= 0; j--) {
+    if (ss[j].newEnd !== null) { prevEnd = ss[j].newEnd!; break; }
+  }
+  let nextStart = dur > 0 ? dur : Infinity;
+  for (let j = i + 1; j < ss.length; j++) {
+    if (ss[j].newStart !== null) { nextStart = ss[j].newStart!; break; }
+  }
+
+  const lead = Math.min(PAD_START, Math.max(0, (cur.newStart - prevEnd) / 2));
+  const tail = Math.min(PAD_END, Math.max(0, (nextStart - cur.newEnd) / 2));
+  const start = Math.max(0, cur.newStart - lead);
+  const end = dur > 0 ? Math.min(cur.newEnd + tail, dur) : cur.newEnd + tail;
+  return { start: +start.toFixed(2), end: +end.toFixed(2) };
 }
 
 /**
@@ -116,7 +147,7 @@ function repairLesson(L: OutLesson): string[] {
 
     // Đo trên giá trị SẼ ghi vào DB (đã đệm), đúng như cổng kiểm phía sau —
     // nếu đo trên giá trị thô thì câu sát ngưỡng vẫn trượt sau khi đệm.
-    const w = padded(s.newStart, s.newEnd, L.audioDuration);
+    const w = paddedAt(L, i)!;
     const r = (w.end - w.start) / Math.max(1, s.words);
     if (r > MAX_SEC_PER_WORD) {
       const want = s.newStart + s.words * median;
@@ -171,7 +202,7 @@ function checkLesson(id: string, L: OutLesson): { ok: boolean; reasons: string[]
     // Nhịp đọc phải hợp lý — xét trên giá trị SẼ ghi vào DB (đã đệm).
     // MỌI câu đều phải qua, không chỉ câu bị gắn cờ: nhanh quá là không đọc
     // kịp, chậm quá là align bắt sai từ cuối (có câu bị kéo ra 46s).
-    const w = padded(s.newStart, s.newEnd, L.audioDuration);
+    const w = paddedAt(L, i)!;
     const perWord = (w.end - w.start) / Math.max(1, s.words);
     if (perWord < SUSPECT_SEC_PER_WORD)
       reasons.push(`#${s.orderIndex} quá nhanh: ${perWord.toFixed(2)} s/từ (${(w.end - w.start).toFixed(2)}s / ${s.words} từ)`);
@@ -208,7 +239,7 @@ async function main() {
     for (let i = 0; i < L.sentences.length; i++) {
       const s = L.sentences[i];
       const mark = bad.has(i) ? "HỎNG" : "    ";
-      const w = s.newStart !== null && s.newEnd !== null ? padded(s.newStart, s.newEnd, L.audioDuration) : null;
+      const w = paddedAt(L, i);
       const nd = w ? `${w.start.toFixed(2)}->${w.end.toFixed(2)} (${(w.end - w.start).toFixed(2)}s)` : "KHÔNG ALIGN";
       console.log(`  ${mark} #${s.orderIndex} DB ${s.dbStart.toFixed(2)}->${s.dbEnd.toFixed(2)} | MỚI ${nd} | ${s.matchedWords}/${s.words} từ  "${s.content.slice(0, 44)}"`);
     }
@@ -216,9 +247,10 @@ async function main() {
     pass++;
 
     if (apply) {
-      for (const s of L.sentences) {
-        if (s.newStart === null || s.newEnd === null) continue;
-        const p = padded(s.newStart, s.newEnd, L.audioDuration);
+      for (let i = 0; i < L.sentences.length; i++) {
+        const s = L.sentences[i];
+        const p = paddedAt(L, i);
+        if (!p) continue;
         await prisma.sentence.update({
           where: { id: s.id },
           data: { startTime: p.start, endTime: p.end },
