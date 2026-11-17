@@ -44,8 +44,8 @@
 1,98-100,5,"Oh, and before you leave today, please sign up for our mailing list to stay informed of future lectures.",34.43,33.36,33.38,33.32,1.05,sửa,33.11,
 2,4-4,0,A man is chopping some wood into pieces.,5.92,6.04,5.06,6.92,0.86,không muộn,,bắt đầu nói ở 6.04s — DB không muộn
 2,14-14,3,The topic is professional networking.,15.11,15.4,14.46,14.6,0.65,không muộn,,bắt đầu nói ở 15.4s — DB không muộn
-2,22-22,2,A hundred and forty dollars per year.,17.99,12.19,11.44,,6.55,cần nghe lại,,onset 12.19s không khớp align 11.44s hay ASR —s
-2,22-22,3,"Yes, I'd love a glass of water.",22.22,15.93,15.0,15.92,7.22,cần nghe lại,,start mới 15.68 lùi qua câu trước (17.99)
+2,22-22,2,A hundred and forty dollars per year.,17.99,12.19,11.44,,6.55,sửa (đặt lại cả bài),,"mốc thời gian lộn xộn — đặt lại theo đoạn tiếng nói, xem fix-part2-timings-est2024.sql"
+2,22-22,3,"Yes, I'd love a glass of water.",22.22,15.93,15.0,15.92,7.22,sửa (đặt lại cả bài),,"mốc thời gian lộn xộn — đặt lại theo đoạn tiếng nói, xem fix-part2-timings-est2024.sql"
 2,25-25,3,"No, that department's upstairs.",15.36,15.09,15.02,15.06,0.34,không muộn,,bắt đầu nói ở 15.09s — DB không muộn
 2,44-46,12,I hope to get some experience doing that next quarter.,38.75,37.98,37.98,37.66,0.77,sửa,37.73,
 2,47-49,9,So I started working as a trainer.,45.38,44.21,44.26,44.1,1.12,sửa,43.96,
@@ -180,9 +180,9 @@
 7,19-19,0,How long will the online course take?,1.75,2.59,1.08,1.48,0.67,không muộn,,bắt đầu nói ở 2.59s — DB không muộn
 7,20-20,0,Will this month's company gathering be held in Benson Park?,1.75,2.19,1.04,1.94,0.71,không muộn,,bắt đầu nói ở 2.19s — DB không muộn
 7,22-22,0,I don't know if the packaging materials were ordered already.,1.75,2.68,0.92,2.14,0.83,không muộn,,bắt đầu nói ở 2.68s — DB không muộn
-7,23-23,1,Fifty percent off last season's merchandise.,8.75,7.35,6.46,,2.29,cần nghe lại,,onset 7.35s không khớp align 6.46s hay ASR —s
-7,23-23,2,Of course-I'll do it now.,13.18,12.15,11.42,11.16,1.76,cần nghe lại,,onset 12.15s không khớp align 11.42s hay ASR 11.16s
-7,23-23,3,Did you check the weather report?,17.76,15.82,15.02,14.94,2.74,cần nghe lại,,onset 15.82s không khớp align 15.02s hay ASR 14.94s
+7,23-23,1,Fifty percent off last season's merchandise.,8.75,7.35,6.46,,2.29,sửa (đặt lại cả bài),,"mốc thời gian lộn xộn — đặt lại theo đoạn tiếng nói, xem fix-part2-timings-est2024.sql"
+7,23-23,2,Of course-I'll do it now.,13.18,12.15,11.42,11.16,1.76,sửa (đặt lại cả bài),,"mốc thời gian lộn xộn — đặt lại theo đoạn tiếng nói, xem fix-part2-timings-est2024.sql"
+7,23-23,3,Did you check the weather report?,17.76,15.82,15.02,14.94,2.74,sửa (đặt lại cả bài),,"mốc thời gian lộn xộn — đặt lại theo đoạn tiếng nói, xem fix-part2-timings-est2024.sql"
 7,26-26,0,Where can I find the vitamins?,1.75,2.7,0.92,1.54,0.83,không muộn,,bắt đầu nói ở 2.7s — DB không muộn
 7,29-29,0,Don't forget to turn off the projector after your presentation.,1.75,2.62,1.0,2.16,0.75,không muộn,,bắt đầu nói ở 2.62s — DB không muộn
 7,30-30,0,Didn't there use to be a parking garage on this street?,1.75,2.27,1.02,1.22,0.73,không muộn,,bắt đầu nói ở 2.27s — DB không muộn
