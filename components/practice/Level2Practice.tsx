@@ -28,6 +28,7 @@ interface Props {
   startTime: number | null;
   transcriptFull: string;
   keyVocab: VocabItem[] | null;
+  partNumber: number;
   onScored: (score: number) => void;
 }
 
@@ -55,7 +56,7 @@ function cleanAnswer(answer: string) {
   return normalizeToken(answer);
 }
 
-export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessionStart, transcriptFull, keyVocab, onScored }: Props) {
+export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessionStart, transcriptFull, keyVocab, partNumber, onScored }: Props) {
   const seed = useMemo(() => Math.floor(Math.random() * 10000), []);
 
   const sentencesWithBlanks = useMemo(() =>
@@ -441,6 +442,13 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
         transcriptFull={transcriptFull}
         vocabItems={keyVocab}
         onRetry={() => window.location.reload()}
+        shadow={{
+          partNumber,
+          sentences: sentencesWithBlanks,
+          errorsBySentence: Object.fromEntries(
+            sentencesWithBlanks.map((s) => [s.id, s.blanks.filter((b) => blankStates[b.id]?.status !== "correct").length])
+          ),
+        }}
       />
     );
   }

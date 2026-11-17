@@ -511,6 +511,14 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
         vocabItems={keyVocab}
         nextLessonUrl={nextLessonUrl}
         onRetry={() => window.location.reload()}
+        shadow={{
+          partNumber,
+          sentences: processedSentences,
+          correctOption,
+          errorsBySentence: Object.fromEntries(
+            processedSentences.map((s) => [s.id, s.blanks.filter((b) => blankStates[b.id]?.status !== "correct").length])
+          ),
+        }}
       />
     );
   }

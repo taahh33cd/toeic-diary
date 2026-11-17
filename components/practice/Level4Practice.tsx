@@ -6,11 +6,14 @@ import { Level3Feedback } from "@/lib/ai/gemini";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { CheckCircle2, XCircle, Sparkles, ChevronDown, ChevronUp } from "lucide-react";
 import { KeyboardHints } from "./KeyboardHints";
+import { ShadowSection } from "./shadow/ShadowSection";
 
 interface Sentence {
   id: string;
   content: string;
   speaker: string | null;
+  startTime: number;
+  endTime: number;
 }
 
 interface Props {
@@ -18,10 +21,13 @@ interface Props {
   sentences: Sentence[];
   transcriptFull: string;
   startTime: number | null;
+  audioUrl: string;
+  audioDuration: number;
+  partNumber: number;
   onScored: (score: number) => void;
 }
 
-export function Level4Practice({ lessonId, sentences, transcriptFull, startTime, onScored }: Props) {
+export function Level4Practice({ lessonId, sentences, transcriptFull, startTime, audioUrl, audioDuration, partNumber, onScored }: Props) {
   const [userSummary, setUserSummary] = useState("");
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState<Level3Feedback | null>(null);
@@ -182,6 +188,12 @@ export function Level4Practice({ lessonId, sentences, transcriptFull, startTime,
               {s.content}
             </p>
           ))}
+        </div>
+      )}
+
+      {feedback && (
+        <div className="mb-6">
+          <ShadowSection audioUrl={audioUrl} audioDuration={audioDuration} partNumber={partNumber} sentences={sentences} />
         </div>
       )}
 

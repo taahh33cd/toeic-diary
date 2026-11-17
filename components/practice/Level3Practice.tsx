@@ -490,6 +490,14 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
         vocabItems={keyVocab}
         nextLessonUrl={nextLessonUrl}
         onRetry={() => window.location.reload()}
+        shadow={{
+          partNumber,
+          sentences,
+          correctOption,
+          errorsBySentence: Object.fromEntries(
+            sentences.map((s) => [s.id, (sentenceStates[s.id]?.wordResults ?? []).filter((w) => !w.correct).length])
+          ),
+        }}
       />
     );
   }

@@ -1,6 +1,9 @@
 # Spec: Luyện đọc / Shadow sau Dictation
 
-Trạng thái: **đã chốt, chưa làm**. Chỉ bắt đầu giai đoạn 1 khi có lệnh.
+Trạng thái: **xong giai đoạn 1** (giao diện, tiến độ chỉ giữ trên trình duyệt). Giai đoạn 2 chờ lệnh.
+
+Code: `components/practice/shadow/` (giao diện, ghi âm), `lib/shadow/` (luật ngữ điệu, chọn câu ⭐, phân tích giọng, mốc từ).
+Huy hiệu ✓ trên danh sách bài cần lưu tiến độ nên dời sang giai đoạn 3.
 
 ## Mục tiêu
 
