@@ -10,6 +10,7 @@ import { PostSubmitView } from "./PostSubmitView";
 import { KeyboardHints } from "./KeyboardHints";
 import { useAudioShortcuts } from "./useAudioShortcuts";
 import { tokenMatches, normalizeToken } from "@/lib/practice/match";
+import type { WordTiming } from "@/lib/shadow/timing";
 import { buildSegmentWindows, TAIL_PAD, type SegmentWindow } from "@/lib/practice/segment";
 
 interface Sentence {
@@ -19,6 +20,8 @@ interface Sentence {
   startTime: number;
   endTime: number;
   speaker: string | null;
+  /** Mốc từng từ cho Shadow, null khi chưa căn. */
+  wordTimings?: WordTiming[] | null;
 }
 
 interface Props {

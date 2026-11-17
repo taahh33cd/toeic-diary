@@ -11,6 +11,7 @@ import { PostSubmitView } from "./PostSubmitView";
 import { KeyboardHints } from "./KeyboardHints";
 import { useAudioShortcuts } from "./useAudioShortcuts";
 import { tokenMatches, normalizeToken } from "@/lib/practice/match";
+import type { WordTiming } from "@/lib/shadow/timing";
 import { buildSegmentWindows, TAIL_PAD, type SegmentWindow } from "@/lib/practice/segment";
 
 interface Blank {
@@ -29,6 +30,8 @@ interface Sentence {
   speaker: string | null;
   optionLabel?: string | null;
   blanks: Blank[];
+  /** Mốc từng từ cho Shadow, null khi chưa căn. */
+  wordTimings?: WordTiming[] | null;
 }
 
 interface Props {

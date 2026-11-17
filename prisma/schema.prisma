@@ -91,6 +91,8 @@ model Sentence {
   endTime     Float   @map("end_time") // seconds
   speaker     String? // "W" | "M" | "Narrator"
   optionLabel String? @map("option_label") // "A"/"B"/"C"/"D" — Part 1 & 2 options
+  /// Mốc từng từ cho Shadow: [[start, end], ...] theo từ của content tách khoảng trắng
+  wordTimings Json?   @map("word_timings")
   blanks      Blank[]
 
   @@index([lessonId, orderIndex])

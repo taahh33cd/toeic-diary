@@ -9,7 +9,7 @@ import { analyzeProsody, splitDisplayWords } from "@/lib/shadow/prosody";
 import { pickStarred } from "@/lib/shadow/stars";
 import { activeWordIndex, referenceSeconds, usableTimings, type WordTiming } from "@/lib/shadow/timing";
 import { analyzeBlob, passesVoiceCheck, type VoiceAnalysis } from "@/lib/shadow/voice";
-import { buildSegmentWindows, type SegmentWindow } from "@/lib/practice/segment";
+import { buildSegmentWindows, LEAD_IN, type SegmentWindow } from "@/lib/practice/segment";
 import { IntonationText } from "./IntonationText";
 import { useRecorder } from "./useRecorder";
 
@@ -49,6 +49,8 @@ interface Take {
 }
 
 const RATES = [1, 0.75, 0.5] as const;
+/** Đệm sau từ cuối khi phát theo mốc từ — đủ cho âm cuối ngân, chưa chạm câu sau. */
+const WORD_TAIL = 0.35;
 const STYLE_KEY = "shadow-style";
 
 /** Câu ⭐ và số phút ước tính cho CTA "Shadow 3 câu (~2 phút)". */
@@ -98,12 +100,21 @@ export function ShadowSection(input: ShadowInput) {
   const [loadedDuration, setLoadedDuration] = useState(0);
   const audioDuration = input.audioDuration || loadedDuration;
 
-  const windows = useMemo<SegmentWindow[]>(() => buildSegmentWindows(sentences, audioDuration), [sentences, audioDuration]);
   const prosodies = useMemo(() => sentences.map((s) => analyzeProsody(s.content)), [sentences]);
   const timings = useMemo(
     () => sentences.map((s) => usableTimings(s.wordTimings, splitDisplayWords(s.content).length)),
     [sentences]
   );
+  // Câu có mốc từng từ thì phát theo mốc đó: chính xác hơn start/end của câu trong DB
+  // (đo được ~6% câu bắt đầu muộn 0.7–3.3s). Câu chưa có thì dùng lưới an toàn của dictation.
+  const windows = useMemo<SegmentWindow[]>(() => {
+    const base = buildSegmentWindows(sentences, audioDuration);
+    return base.map((w, i) => {
+      const tm = timings[i];
+      if (!tm?.length) return w;
+      return { start: Math.max(0, tm[0].start - LEAD_IN), end: tm[tm.length - 1].end + WORD_TAIL, repaired: false };
+    });
+  }, [sentences, audioDuration, timings]);
   const { stars } = useMemo(() => shadowPlan(input), [input]);
   const starSet = useMemo(() => new Set(stars), [stars]);
   const speakerColor = useMemo(() => {

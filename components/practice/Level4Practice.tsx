@@ -6,6 +6,7 @@ import { Level3Feedback } from "@/lib/ai/gemini";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { CheckCircle2, XCircle, Sparkles, ChevronDown, ChevronUp } from "lucide-react";
 import { KeyboardHints } from "./KeyboardHints";
+import type { WordTiming } from "@/lib/shadow/timing";
 import { ShadowSection } from "./shadow/ShadowSection";
 
 interface Sentence {
@@ -14,6 +15,8 @@ interface Sentence {
   speaker: string | null;
   startTime: number;
   endTime: number;
+  /** Mốc từng từ cho Shadow, null khi chưa căn. */
+  wordTimings?: WordTiming[] | null;
 }
 
 interface Props {

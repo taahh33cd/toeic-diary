@@ -8,6 +8,20 @@ export interface WordTiming {
   end: number;
 }
 
+/**
+ * Đọc cột `sentences.word_timings` (JSONB `[[start, end], ...]`).
+ * Dữ liệu sai dạng thì trả null để giao diện quay về làm nổi cả câu.
+ */
+export function parseWordTimings(raw: unknown): WordTiming[] | null {
+  if (!Array.isArray(raw)) return null;
+  const out: WordTiming[] = [];
+  for (const p of raw) {
+    if (!Array.isArray(p) || p.length !== 2 || typeof p[0] !== "number" || typeof p[1] !== "number") return null;
+    out.push({ start: p[0], end: p[1] });
+  }
+  return out;
+}
+
 /** Chỉ số từ đang được đọc tại thời điểm `t` (giây), -1 nếu đang ở khoảng lặng ngoài câu. */
 export function activeWordIndex(timings: WordTiming[], t: number): number {
   for (let i = 0; i < timings.length; i++) {

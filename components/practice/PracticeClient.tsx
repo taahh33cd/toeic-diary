@@ -9,6 +9,7 @@ import { Level4Practice } from "./Level4Practice";
 import { PenLine, FileText, Sparkles, CheckCircle2 } from "lucide-react";
 import { usePracticeStore } from "@/stores/practiceStore";
 import type { VocabItem } from "./TranscriptVocabModal";
+import type { WordTiming } from "@/lib/shadow/timing";
 import { VocabWarmup } from "./VocabWarmup";
 
 interface Blank {
@@ -26,6 +27,8 @@ interface Sentence {
   endTime: number;
   speaker: string | null;
   blanks: Blank[];
+  /** Mốc từng từ cho Shadow, null khi chưa căn. */
+  wordTimings?: WordTiming[] | null;
 }
 
 interface LessonData {

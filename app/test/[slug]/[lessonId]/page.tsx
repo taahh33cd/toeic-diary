@@ -9,6 +9,7 @@ import type { VocabItem } from "@/components/practice/TranscriptVocabModal";
 import { ensureMinBlanks } from "@/lib/generateBlanks";
 import { ChevronLeft } from "lucide-react";
 import { isUsageExempt } from "@/lib/access";
+import { parseWordTimings } from "@/lib/shadow/timing";
 import { UsageGate } from "@/components/shared/UsageGate";
 
 export default async function LessonPage({
@@ -75,6 +76,7 @@ export default async function LessonPage({
     endTime: s.endTime,
     speaker: s.speaker,
     optionLabel: s.optionLabel ?? null,
+    wordTimings: parseWordTimings(s.wordTimings),
     blanks: s.blanks.map((b) => ({
       id: b.id,
       position: b.position,
