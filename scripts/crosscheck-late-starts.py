@@ -71,7 +71,8 @@ def find_onset(e, quiet, start, limit):
     limit van chua thay.
     """
     need = int(MIN_SILENCE / HOP)
-    i, end = max(0, int(start / HOP)), min(len(e), int(limit / HOP))
+    # moc align cua cau cuoi co the nam sat/qua cuoi file -> kep vao trong mang
+    i, end = min(len(e), max(0, int(start / HOP))), min(len(e), int(limit / HOP))
     sil, j = 0, i - 1
     while j >= 0 and e[j] < quiet and sil < need:
         sil += 1
@@ -154,6 +155,8 @@ def main():
             row["onset"] = find_onset(e, quiet, c - 0.05, max(cands) + 3.0)
         aligned[key]["asrCoverage"] = round(matched / max(1, len(exp)), 3)
         print("[%d/%d] %s  ASR khop %d/%d tu" % (n, len(keys), key, matched, len(exp)), flush=True)
+        if n % 10 == 0:  # ghi dan, chet giua chung khong mat het
+            json.dump(aligned, open(args.aligned_json, "w", encoding="utf-8"), ensure_ascii=False)
 
     json.dump(aligned, open(args.aligned_json, "w", encoding="utf-8"), ensure_ascii=False)
 
