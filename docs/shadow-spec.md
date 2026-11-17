@@ -57,9 +57,25 @@ Ghi sự kiện: `shadow_open`, `shadow_record`, `shadow_sentence_done`, `shadow
 
 ## Timing từng từ
 
-- Pipeline: dùng `scripts/forced_align_timestamps.py` (stable-whisper forced alignment). Script này căn chính transcript có sẵn vào audio nên mốc từ khớp 1:1 với `content`, chính xác hơn ASR (nhận dạng lại từ đầu) ở chỗ số, ký hiệu `$`, từ viết tắt. Thêm bước ghi `wordTimings` vào DB. Script chạy trên máy admin, từng đề một.
-- Fallback khi câu chưa có `wordTimings`: chia `startTime..endTime` theo số âm tiết của từng từ, cộng thêm khoảng nghỉ ở dấu câu.
+- Pipeline: forced alignment **cả bài** (stable-ts, model `small`) trên audio production, căn transcript `Sentence.content` vào file. Ghi `wordTimings` vào DB. Script chạy trên máy admin, từng đề một. Audio phải tải từ Supabase Storage: file trong `scripts/data/*/audio` bị lệch 1 track so với `parsed.json`.
+- Sau khi căn, đánh dấu những từ có độ dài 0s hoặc dài hơn 2.5s. Câu chứa từ như vậy thì căn lại riêng câu đó, rồi đưa vào danh sách để admin kiểm tra.
+- Part 1/2: thêm phần audio có đọc mà transcript không có ("Number N.", chữ "A./B./C.") vào văn bản đem căn, rồi bỏ đi khi ghi kết quả. Lỗi hiện tại tập trung ở từ đầu câu Part 2.
+- **Không dùng ước lượng theo âm tiết làm phương án dự phòng.** Đo được chỉ 12% số từ lệch dưới 100ms. Câu chưa có `wordTimings` thì chỉ highlight cả câu, không highlight từng từ.
 - Phát chậm dùng `playbackRate` với `preservesPitch`. Highlight bám theo `audio.currentTime` nên vẫn khớp ở mọi tốc độ.
+
+### Kết quả đo (2026-11-17, 31 bài × 10 đề EST 2024, 2.171 từ)
+
+So mốc đầu mỗi từ với Whisper nhận dạng lại (ASR, faster-whisper `small`). ASR dùng cùng model với forced alignment, nên con số này là **độ đồng thuận**, chưa phải độ chính xác. Độ chính xác thật đo bằng tai qua trang nghe thử.
+
+| Cách | Từ có mốc hợp lệ | Lệch < 100ms | Lệch < 200ms | Trung vị | p90 |
+|---|---|---|---|---|---|
+| A1 căn cả bài | 97.8% | **91.8%** | 95.9% | 0ms | 80ms |
+| A2 căn từng câu theo khung trong DB | 93.8% | 89.5% | 92.7% | 10ms | 110ms |
+| C ước lượng theo âm tiết | 99.9% | 12.4% | 23.1% | 486ms | 1.569ms |
+
+- Theo Part, cách A1 lệch dưới 100ms ở: P1 91.7%, P2 **82.3%**, P3 92.9%, P4 91.6%.
+- A2 kém hơn vì phụ thuộc mốc câu trong DB, mà mốc này có chỗ sai.
+- Mốc câu trong DB: trung vị bắt đầu sớm hơn tiếng đọc 0.42s (do cố ý chừa đệm). Riêng 13/228 câu (5.7%) bắt đầu **muộn** hơn tiếng đọc từ 0.7 đến 3.3s, phần lớn là câu cuối bài. Phần chừa `LEAD_IN = 0.2s` không bù được, nên học viên nghe từng câu sẽ mất mấy từ đầu.
 
 ## Báo cáo
 
@@ -71,10 +87,10 @@ Ghi sự kiện: `shadow_open`, `shadow_record`, `shadow_sentence_done`, `shadow
 
 ## Giai đoạn
 
-1. **UI Shadow**: chạy với timing ước lượng, gồm ngữ điệu, highlight, ghi âm, so sánh, cao độ của HV, Tự chạy, phím tắt, CTA. Tiến độ tạm giữ ở state trên trình duyệt.
-2. **Dữ liệu tiến độ**: migration, API ghi `ShadowProgress`, kiểm tra câu đạt, streak, trang tiến độ HV, ghi sự kiện đo lường.
-3. **Báo cáo + admin**: cột Shadow trong bảng admin, nhiệm vụ trong lộ trình, trang admin sửa từ nhấn và câu ⭐.
-4. **Timing thật**: script forced-align ghi `wordTimings` vào DB, chạy lần lượt từng đề.
+1. **UI Shadow**: gồm ngữ điệu, highlight, ghi âm, so sánh, cao độ của HV, Tự chạy, phím tắt, CTA. Câu chưa có `wordTimings` thì highlight cả câu. Tiến độ tạm giữ ở state trên trình duyệt.
+2. **Timing thật** (làm trước khi ra mắt, vì không có phương án dự phòng dùng được): migration `wordTimings`, script forced-align cả bài kèm bước căn lại các câu lỗi, chạy hết các đề.
+3. **Dữ liệu tiến độ**: migration, API ghi `ShadowProgress`, kiểm tra câu đạt, streak, trang tiến độ HV, ghi sự kiện đo lường.
+4. **Báo cáo + admin**: cột Shadow trong bảng admin, nhiệm vụ trong lộ trình, trang admin sửa từ nhấn và câu ⭐.
 
 ## Rủi ro đã cân nhắc
 
@@ -85,5 +101,5 @@ Ghi sự kiện: `shadow_open`, `shadow_record`, `shadow_sentence_done`, `shadow
 | HV bỏ qua section tùy chọn | CTA ghi rõ thời gian ước tính cạnh "Bài tiếp", huy hiệu ✓ |
 | Số câu quá nhiều gây ngán | Chỉ cần 3 câu ⭐ là xong bài |
 | HV trình độ thấp không tự nghe ra lỗi | Nghe gốc → giọng mình liền nhau + đường cao độ vẽ chồng |
-| Timing ước lượng bị lệch | Forced alignment ở giai đoạn 4 |
+| Timing lệch | Forced alignment cả bài (91.8% từ lệch < 100ms), tự căn lại câu lỗi, câu chưa có mốc từ thì chỉ highlight cả câu |
 | Tiếng loa lọt vào mic khi đọc đồng thời | Nhắc đeo tai nghe, bật `echoCancellation` |
