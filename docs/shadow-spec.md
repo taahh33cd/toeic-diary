@@ -73,6 +73,7 @@ So mốc đầu mỗi từ với Whisper nhận dạng lại (ASR, faster-whispe
 | A2 căn từng câu theo khung trong DB | 93.8% | 89.5% | 92.7% | 10ms | 110ms |
 | C ước lượng theo âm tiết | 99.9% | 12.4% | 23.1% | 486ms | 1.569ms |
 
+- **Kiểm tra bằng tai** (50 câu, highlight theo A1, chấm trên trang nghe thử): **Khớp 48 (96%) · Lệch nhẹ 2 (4%) · Sai 0**. Khoảng tin cậy 95% của tỷ lệ Khớp là 86–99%. Không có câu Sai nghĩa là tỷ lệ Sai thật nhiều khả năng dưới 6%. Hai câu Lệch nhẹ đều là câu Part 4 dài: T1 Q89–91 câu 2 (có "30-second", "20-second") và T4 Q71–73 câu 5. Cả 8 câu Part 2 đều Khớp.
 - Theo Part, cách A1 lệch dưới 100ms ở: P1 91.7%, P2 **82.3%**, P3 92.9%, P4 91.6%.
 - A2 kém hơn vì phụ thuộc mốc câu trong DB, mà mốc này có chỗ sai.
 - Mốc câu trong DB: trung vị bắt đầu sớm hơn tiếng đọc 0.42s (do cố ý chừa đệm). Riêng 13/228 câu (5.7%) bắt đầu **muộn** hơn tiếng đọc từ 0.7 đến 3.3s, phần lớn là câu cuối bài. Phần chừa `LEAD_IN = 0.2s` không bù được, nên học viên nghe từng câu sẽ mất mấy từ đầu.
