@@ -1,0 +1,25 @@
+-- Hoàn tác fix-split-abbrev-est2024-batch2.sql
+begin;
+delete from sentences where lesson_id = '4cef06e0-7b02-44be-8ba4-e343946280f3' and content = 'In the system, if you click on that product, you''ll see a link that says, "Set Custom Alert."';
+update sentences set start_time = 20.67, end_time = 21.75, content = 'M.' where id = 'a8e773c1-83b0-4e47-962e-7149ab22bfd1';
+update sentences set start_time = 30.13, end_time = 33.8, content = 'will be towed at the owner''s expense.', order_index = 5 where id = '123de6cd-ea0b-4729-9dad-1fb64a122547';
+update sentences set order_index = 6 where id = '481dc657-ffb9-4411-988d-4acfe020c54b';
+update sentences set start_time = 38.75, end_time = 42.4, content = '" And you can set it to any number from there.', order_index = 9 where id = 'e4b9de38-c2cf-4d58-a4a6-7d19b69aa1df';
+update sentences set order_index = 10 where id = '3ded0845-82ca-49df-b8bc-eb1451a03f7f';
+update sentences set order_index = 11 where id = '445762ff-8bae-440c-a7a5-6971ca5faad6';
+update sentences set start_time = 31.27, end_time = 36.03, content = 'We''ll open at eight A.' where id = '6256add0-a0b3-41d7-8ed6-bbd73c5e6fb8';
+update sentences set start_time = 27.35, end_time = 28.4, content = ', right?' where id = '8c52ab4c-e379-4f86-a936-05a888527f03';
+update sentences set start_time = 11.78, end_time = 12.73, content = 'M.' where id = '57c6d242-ca65-4355-a54f-3c46d96fe5e4';
+update sentences set start_time = 10.02, end_time = 11.04, content = 'M.' where id = '6e6d3f07-ac24-4269-91a0-40038e02fc24';
+update sentences set start_time = 16.41, end_time = 21.95, order_index = 3 where id = 'ee4867d1-5427-4307-ae1c-1d84817344f7';
+update sentences set order_index = 4 where id = '2d16259d-2abc-44e7-b635-88a18a990e99';
+update sentences set order_index = 5 where id = 'ba107dae-2ed5-4113-92ba-685dde8fbc32';
+update sentences set start_time = 35.0, end_time = 38.86, content = ', and there are food kiosks on platform one.' where id = '71b9b0a5-11ac-484a-b454-b7a5005a7e43';
+update blanks set position = 2 where sentence_id = '123de6cd-ea0b-4729-9dad-1fb64a122547' and position = 11 and answer = 'towed';
+update blanks set position = 5 where sentence_id = '123de6cd-ea0b-4729-9dad-1fb64a122547' and position = 14 and answer = 'owner''s';
+update blanks set position = 8 where sentence_id = 'e4b9de38-c2cf-4d58-a4a6-7d19b69aa1df' and position = 7 and answer = 'number';
+update blanks set position = 5 where sentence_id = '71b9b0a5-11ac-484a-b454-b7a5005a7e43' and position = 15 and answer = 'kiosks';
+update blanks set position = 7 where sentence_id = '71b9b0a5-11ac-484a-b454-b7a5005a7e43' and position = 17 and answer = 'platform';
+insert into sentences (id, lesson_id, order_index, content, start_time, end_time, speaker) values ('2e1f8878-94ed-4bce-a200-05eb61b8c895','f16214a5-1f9e-4a5f-b148-4a355109ed6e',3,'on Monday.',25.4,26.91,'M-AU'),('c5ecbd80-c720-4afa-8ab1-b90caf68c7e8','f16214a5-1f9e-4a5f-b148-4a355109ed6e',4,'M.',29.7,30.78,'M-AU'),('730d014d-645c-4d8d-b3fd-70fb4085f0dc','e25850bb-8489-4cf9-bdaf-7322afd5aed1',7,'M.',35.38,36.4,null),('a23c6b71-a77f-4a1e-8e35-d2d24a145188','f370444b-f455-4ba4-8137-1a0ef5729b77',2,'on Main Street.',15.28,17.06,'W-BR');
+update lessons x set transcript_full = (select string_agg(coalesce(nullif(speaker,'')||': ','')||content, E'\n' order by order_index) from sentences where lesson_id = x.id) where x.id in ('f16214a5-1f9e-4a5f-b148-4a355109ed6e','4cef06e0-7b02-44be-8ba4-e343946280f3','e25850bb-8489-4cf9-bdaf-7322afd5aed1','beb6093b-1e2e-42f9-a6d6-75a5be2d1fc0','c95ad590-10bd-4ea5-b893-566d85f62d6d','f370444b-f455-4ba4-8137-1a0ef5729b77','22bb891f-64b3-42b7-8faa-14b74ebbfd7f');
+commit;

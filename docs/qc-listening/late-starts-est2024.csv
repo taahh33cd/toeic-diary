@@ -16,9 +16,9 @@
 1,56-58,10,So what's your schedule like?,39.25,37.11,37.14,37.02,2.11,sửa,36.86,
 1,62-64,14,I can do that.,48.55,48.22,48.24,48.14,0.31,sửa,47.97,
 1,65-67,12,I'll do that right away.,43.25,42.3,42.3,42.18,0.95,sửa,42.05,
-1,71-73,3,on Monday.,25.4,26.78,24.92,25.66,0.48,không muộn,,bắt đầu nói ở 26.78s — DB không muộn
-1,71-73,4,M.,29.7,29.82,27.4,29.34,2.3,không muộn,,bắt đầu nói ở 29.82s — DB không muộn
-1,71-73,5,will be towed at the owner's expense.,30.13,29.82,27.94,29.66,2.19,cần nghe lại,,start mới 29.57 lùi qua câu trước (29.7)
+1,71-73,3,on Monday.,25.4,26.78,24.92,25.66,0.48,sửa (transcript + thời gian),,đã sửa nội dung theo transcript gốc — xem fix-split-abbrev-est2024-batch2.sql
+1,71-73,4,M.,29.7,29.82,27.4,29.34,2.3,sửa (transcript + thời gian),,đã sửa nội dung theo transcript gốc — xem fix-split-abbrev-est2024-batch2.sql
+1,71-73,5,will be towed at the owner's expense.,30.13,29.82,27.94,29.66,2.19,sửa (transcript + thời gian),,đã sửa nội dung theo transcript gốc — xem fix-split-abbrev-est2024-batch2.sql
 1,71-73,6,A map of alternate parking sites was mailed to residents last week and is also posted in the building lobby.,33.15,32.53,32.66,31.74,0.49,sửa,32.28,
 1,74-76,4,"With your trowel and some roof cement, you can seal any cracks or chips.",28.86,27.83,27.84,27.06,1.02,sửa,27.58,
 1,74-76,5,The crowbar will help you remove loose shingles that you can then replace.,34.49,33.13,33.12,33.08,1.37,sửa,32.88,
@@ -51,7 +51,7 @@
 2,47-49,9,So I started working as a trainer.,45.38,44.21,44.26,44.1,1.12,sửa,43.96,
 2,50-52,9,So we have some great images you could use.,45.15,44.51,44.54,44.36,0.61,sửa,44.26,
 2,53-55,9,We don't really need to do that.,40.4,39.38,39.38,39.28,1.02,sửa,39.13,
-2,56-58,9,""" And you can set it to any number from there.",38.75,36.73,36.14,39.72,2.61,cần nghe lại,,onset 36.73s không khớp align 36.14s hay ASR 39.72s
+2,56-58,9,""" And you can set it to any number from there.",38.75,36.73,36.14,39.72,2.61,sửa (transcript + thời gian),,đã sửa nội dung theo transcript gốc — xem fix-split-abbrev-est2024-batch2.sql
 2,56-58,11,Thanks for your help.,44.25,43.37,43.38,43.3,0.87,sửa,43.12,
 2,59-61,7,I'll check what we have left after we finish measuring the rose garden.,30.55,29.96,30.0,29.3,0.55,sửa,29.71,
 2,62-64,8,We want to be sure they're all fully charged.,34.45,33.06,33.16,33.0,1.29,sửa,32.81,
@@ -110,7 +110,7 @@
 3,86-88,5,"And later this afternoon, we'll enjoy a prepared lunch, which has been generously donated to us by Blue Star Catering Company.",32.83,31.84,31.86,31.8,0.97,sửa,31.59,
 3,86-88,6,We're grateful to them for their support.,41.02,38.85,38.94,38.84,2.08,sửa,38.60,
 3,89-91,5,"Oh, by the way, we're closing early tomorrow, but we can get you in the day after.",27.26,26.66,26.62,26.0,0.64,sửa,26.41,
-3,89-91,6,We'll open at eight A.,33.54,31.52,31.54,31.52,2.0,sửa,31.27,
+3,89-91,6,We'll open at eight A.,33.54,31.52,31.54,31.52,2.0,sửa (transcript + thời gian),31.27,đã sửa nội dung theo transcript gốc — xem fix-split-abbrev-est2024-batch2.sql
 3,92-94,4,I'll post a new employee schedule!,29.5,28.46,28.46,28.34,1.04,sửa,28.21,
 3,92-94,5,"Oh, and one more quick announcement—I need all of you to put in an order for a new uniform.",31.75,30.79,30.8,30.66,0.95,sửa,30.54,
 3,92-94,6,It's time we replaced them.,38.88,36.72,36.74,36.62,2.14,sửa,36.47,
@@ -133,7 +133,7 @@
 5,30-30,3,How much does it cost?,14.78,15.24,14.44,14.34,0.34,không muộn,,bắt đầu nói ở 15.24s — DB không muộn
 5,32-34,12,"Here, you can use this one.",37.06,36.06,36.02,36.02,1.04,sửa,35.81,
 5,32-34,13,Just leave it plugged in when you're finished.,39.5,37.54,37.56,37.5,1.94,sửa,37.29,
-5,35-37,7,", right?",27.35,29.09,26.22,28.16,1.13,không muộn,,bắt đầu nói ở 29.09s — DB không muộn
+5,35-37,7,", right?",27.35,29.09,26.22,28.16,1.13,sửa (transcript + thời gian),,đã sửa nội dung theo transcript gốc — xem fix-split-abbrev-est2024-batch2.sql
 5,35-37,9,I hope you enjoy the conference!,35.45,34.21,34.3,34.08,1.15,sửa,33.96,
 5,47-49,8,The Renova Hotel is offering discounted corporate rates this month.,36.49,35.62,35.7,35.58,0.79,sửa,35.37,
 5,50-52,0,Good morning.,5.12,5.9,3.92,5.56,1.2,không muộn,,bắt đầu nói ở 5.9s — DB không muộn
@@ -215,7 +215,7 @@
 7,95-97,4,"Junko, I'm concerned the lumber you're carrying will be considered oversize.",32.84,31.49,31.52,31.4,1.32,sửa,31.24,
 7,95-97,5,I think the company will need to obtain a permit for you-we'll talk after the meeting.,37.28,36.19,36.3,36.12,0.98,sửa,35.94,
 7,98-100,0,Welcome to the evening news program on WXNL Radio.,5.13,6.31,4.78,5.84,0.35,không muộn,,bắt đầu nói ở 6.31s — DB không muộn
-7,98-100,2,on Main Street.,15.28,15.47,12.58,17.0,2.7,không muộn,,bắt đầu nói ở 15.47s — DB không muộn
+7,98-100,2,on Main Street.,15.28,15.47,12.58,17.0,2.7,sửa (transcript + thời gian),,đã sửa nội dung theo transcript gốc — xem fix-split-abbrev-est2024-batch2.sql
 8,2-2,0,A man is repairing a railing.,7.09,6.17,6.16,7.08,0.93,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
 8,2-2,1,A man is climbing some stairs.,10.75,11.0,10.28,10.96,0.47,không muộn,,bắt đầu nói ở 11s — DB không muộn
 8,10-10,0,What do you think I should take to the conference?,1.75,2.07,1.14,1.26,0.61,không muộn,,bắt đầu nói ở 2.07s — DB không muộn
