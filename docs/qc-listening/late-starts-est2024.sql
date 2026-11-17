@@ -145,3 +145,14 @@ update sentences set start_time = 35.95 where id = '3ba6f305-cc96-42ef-a8a2-45ad
 update sentences set start_time = 34.88 where id = '7413891e-c058-49b5-a8e8-243c6854b934' and start_time = 36.05;
 update sentences set start_time = 44.53 where id = 'e142a749-48b5-4d1f-80ea-0370265aee04' and start_time = 45.75;
 update sentences set start_time = 40.28 where id = '14037ef2-bc81-4239-817c-7dd8305a63e1' and start_time = 41.25;
+
+-- Đợt 2 (ĐÃ ÁP DỤNG 2026-11-17, 7/7): câu cuối ngắn mà end_time cũng sai — sửa cả start lẫn end.
+-- end mới = hết tiếng nói (năng lượng âm thanh / align, lấy cái muộn hơn) + 0.4s. Kèm T1 Q32-34 #11 vì #12 không thể
+-- dời lên trước start cũ của #11; #11 cũng muộn (align 33.70, ASR 33.56, nói 33.63). Bỏ qua "C." và "M." — lỗi transcript.
+update sentences set start_time = 33.38, end_time = 35.68 where id = 'e170a4a7-a343-454e-bd82-abf7606893f2' and start_time = 36.16 and end_time = 39.56;
+update sentences set start_time = 35.44, end_time = 37.4 where id = '1d7f6acb-597b-4cfe-8fdd-4511b09922d5' and start_time = 39.37 and end_time = 41.4;
+update sentences set start_time = 35.17, end_time = 36.44 where id = 'f9f75e44-de48-4a86-8c94-df08e9d9d5fc' and start_time = 38.34 and end_time = 39.4;
+update sentences set start_time = 40.08, end_time = 41.38 where id = 'e9f492e4-4714-487b-a6bd-4bd58555b7a9' and start_time = 41.75 and end_time = 44.4;
+update sentences set start_time = 31.67, end_time = 32.96 where id = '93892961-a2dc-483d-8753-4de079587960' and start_time = 35.36 and end_time = 36.4;
+update sentences set start_time = 35.6, end_time = 39.61 where id = '35e1e631-2c45-459f-b838-c7987b7bd119' and start_time = 40.81 and end_time = 43.01;
+update sentences set start_time = 39.31, end_time = 40.38 where id = '92a6bec8-5c68-47e6-9cdf-ede9d51db7d3' and start_time = 42.36 and end_time = 43.4;

@@ -8,8 +8,8 @@
 1,17-17,0,We achieved our sales targets this month.,1.75,2.6,0.92,1.52,0.83,không muộn,,bắt đầu nói ở 2.6s — DB không muộn
 1,18-18,1,It turned out well.,6.75,6.8,6.0,5.9,0.75,không muộn,,bắt đầu nói ở 6.8s — DB không muộn
 1,32-34,10,There's a really helpful video that walks you through all the steps.,30.64,29.62,29.64,29.66,1.0,sửa,29.37,
-1,32-34,11,I recommend you watch it first.,36.16,35.69,33.7,33.56,2.46,cần nghe lại,,onset 35.69s không khớp align 33.7s hay ASR 33.56s
-1,32-34,12,"All right, thanks.",39.37,35.69,35.68,,3.69,cần nghe lại,,start mới 35.44 lùi qua câu trước (36.16); khoảng mới quá dài: 1.99 s/từ — end_time cũng sai
+1,32-34,11,I recommend you watch it first.,36.16,35.69,33.7,33.56,2.46,"sửa (đợt 2, cả end_time)",33.38 (end 35.68),onset 35.69s không khớp align 33.7s hay ASR 33.56s
+1,32-34,12,"All right, thanks.",39.37,35.69,35.68,,3.69,"sửa (đợt 2, cả end_time)",35.44 (end 37.4),start mới 35.44 lùi qua câu trước (36.16); khoảng mới quá dài: 1.99 s/từ — end_time cũng sai
 1,35-37,10,"As a supervisor, I can approve the expense this one time.",38.53,37.95,37.96,37.82,0.57,sửa,37.70,
 1,47-49,9,I have some time available tomorrow afternoon.,44.25,42.37,42.38,42.28,1.87,sửa,42.12,
 1,50-52,9,That'll give me an idea of how much time this project will take.,34.88,34.42,34.44,34.36,0.44,sửa,34.17,
@@ -67,7 +67,7 @@
 2,80-82,0,Are you a certified commercial truck driver?,5.18,5.75,4.14,5.24,1.04,không muộn,,bắt đầu nói ở 5.75s — DB không muộn
 2,80-82,7,We can't wait to work with you.,39.76,39.13,39.14,39.08,0.62,sửa,38.88,
 2,83-85,5,"And just as a reminder, I'm still planning to be out of town next week for the Springdale Pastry and Dessert Festival.",29.33,28.42,28.46,27.84,0.87,sửa,28.17,
-2,83-85,6,Thanks!,38.34,35.42,35.4,35.32,2.94,cần nghe lại,,khoảng mới quá dài: 4.23 s/từ — end_time cũng sai
+2,83-85,6,Thanks!,38.34,35.42,35.4,35.32,2.94,"sửa (đợt 2, cả end_time)",35.17 (end 36.44),khoảng mới quá dài: 4.23 s/từ — end_time cũng sai
 2,86-88,0,Good evening and thank you for watching Channel Four News.,5.18,,0.92,,4.26,cần nghe lại,,không tìm được chỗ bắt đầu nói
 2,86-88,2,Rockville was recently chosen as the site of a multimillion-dollar electric vehicle battery factory.,13.69,13.22,13.26,,0.43,sửa,12.97,
 2,86-88,3,"This project promises to bring thousands of jobs, both directly and indirectly, to the surrounding community.",19.64,19.29,19.3,,0.34,sửa,19.04,
@@ -82,14 +82,14 @@
 2,95-97,4,", will be arriving shortly.",24.52,23.73,21.04,23.3,3.48,sửa,23.48,
 2,95-97,5,"All passengers to Washington, please proceed to Track 26B.",26.39,25.52,25.58,25.48,0.81,sửa,25.27,
 2,95-97,6,"If you need assistance handling your baggage, please speak to a ticket agent immediately.",30.61,29.99,30.02,29.3,0.59,sửa,29.74,
-2,95-97,7,C.,43.28,35.49,35.5,40.88,7.78,cần nghe lại,,khoảng mới quá dài: 9.16 s/từ — end_time cũng sai
+2,95-97,7,C.,43.28,35.49,35.5,40.88,7.78,cần nghe lại,,khoảng mới quá dài: 9.16 s/từ — end_time cũng sai; transcript hỏng — sửa nội dung trước
 2,98-100,5,Please feel free to visit our Web site so you can view it.,42.29,41.74,41.78,41.56,0.51,sửa,41.49,
 3,17-17,1,A nearby lake.,7.75,7.78,6.9,6.9,0.85,không muộn,,bắt đầu nói ở 7.78s — DB không muộn
 3,24-24,0,When is the harvest festival taking place?,1.33,2.96,1.0,1.62,0.33,không muộn,,bắt đầu nói ở 2.96s — DB không muộn
 3,26-26,0,Why don't we go on our camping trip next weekend?,1.75,2.65,0.96,2.38,0.79,không muộn,,bắt đầu nói ở 2.65s — DB không muộn
 3,29-29,0,When can I see the speech therapist?,1.75,2.55,0.94,2.18,0.81,không muộn,,bắt đầu nói ở 2.55s — DB không muộn
 3,30-30,3,He prefers an aisle seat.,14.01,14.44,13.68,14.4,0.33,không muộn,,bắt đầu nói ở 14.44s — DB không muộn
-3,35-37,12,Certainly!,41.75,40.33,40.38,40.28,1.37,cần nghe lại,,khoảng mới quá dài: 4.32 s/từ — end_time cũng sai
+3,35-37,12,Certainly!,41.75,40.33,40.38,40.28,1.37,"sửa (đợt 2, cả end_time)",40.08 (end 41.38),khoảng mới quá dài: 4.32 s/từ — end_time cũng sai
 3,38-40,10,I'll make sure I check those.,34.25,32.46,32.5,32.48,1.75,sửa,32.21,
 3,41-43,0,Excuse me.,5.08,5.99,3.98,5.64,1.1,không muộn,,bắt đầu nói ở 5.99s — DB không muộn
 3,47-49,10,It'll be a good experience for him.,33.67,32.98,32.98,32.96,0.69,sửa,32.73,
@@ -158,13 +158,13 @@
 6,71-73,4,"I know all of you have been very busy answering phones, scheduling appointments, and checking patients in, so hopefully, this helps to make your work easier.",22.54,21.2,21.24,21.06,1.3,sửa,20.95,
 6,71-73,5,We'll have a very short training session next Tuesday on how the check-in kiosk works.,32.82,31.29,31.34,31.14,1.48,sửa,31.04,
 6,74-76,4,I'll share some resources at the end of this podcast to guide your application process.,27.71,26.27,26.28,25.38,1.43,sửa,26.02,
-6,77-79,4,M.,31.51,31.14,31.18,34.42,0.33,cần nghe lại,,khoảng mới quá dài: 1.72 s/từ — end_time cũng sai
+6,77-79,4,M.,31.51,31.14,31.18,34.42,0.33,cần nghe lại,,khoảng mới quá dài: 1.72 s/từ — end_time cũng sai; transcript hỏng — sửa nội dung trước
 6,77-79,5,today so that exhibitors can attend this evening's reception.,35.59,33.88,32.76,34.6,2.83,cần nghe lại,,onset 33.88s không khớp align 32.76s hay ASR 34.6s
 6,77-79,6,That will be held in the building's main lobby.,39.67,,38.72,37.94,0.95,cần nghe lại,,không tìm được chỗ bắt đầu nói
 6,80-82,0,"Welcome to Money Reveals, the podcast for smart investors.",4.75,5.72,4.42,5.3,0.33,không muộn,,bắt đầu nói ở 5.72s — DB không muộn
 6,80-82,5,"If CodeWord finds any discounts, an Apply Coupon button will automatically appear at checkout.",30.46,29.79,29.82,29.22,0.64,sửa,29.54,
 6,83-85,8,"Could you call me back, so we can arrange a time to meet there?",29.86,28.72,28.74,28.5,1.12,sửa,28.47,
-6,83-85,9,Thanks.,35.36,31.92,32.0,31.84,3.36,cần nghe lại,,khoảng mới quá dài: 4.73 s/từ — end_time cũng sai
+6,83-85,9,Thanks.,35.36,31.92,32.0,31.84,3.36,"sửa (đợt 2, cả end_time)",31.67 (end 32.96),khoảng mới quá dài: 4.73 s/từ — end_time cũng sai
 6,86-88,6,"Now that our work is mostly paperless, the south corner of the office has a lot of empty file cabinets.",34.42,33.51,33.52,33.34,0.9,sửa,33.26,
 6,89-91,6,"To claim the discount, enter your invoice number on our Web site.",37.76,37.33,37.44,37.2,0.32,sửa,37.08,
 6,89-91,7,"Once you do, your discount code will arrive in an e-mail.",42.97,41.57,41.6,41.52,1.37,sửa,41.32,
@@ -199,8 +199,8 @@
 7,77-79,3,"It's been sore since after the race, and I might need an x-ray.",24.91,22.99,23.02,22.94,1.89,sửa,22.82,
 7,77-79,4,Could you call me back?,29.95,27.15,27.14,26.76,2.81,sửa,26.90,
 7,77-79,5,"I'll be conducting some job interviews this morning, so I may not be able to answer my phone, but please leave a message.",31.89,28.71,28.82,28.56,3.07,sửa,28.46,
-7,77-79,6,My number is 555-0167.,40.81,35.85,35.88,35.6,4.93,cần nghe lại,,khoảng mới quá dài: 1.85 s/từ — end_time cũng sai
-7,77-79,7,Thanks!,42.36,39.56,39.56,39.18,2.8,cần nghe lại,,start mới 39.31 lùi qua câu trước (40.81); khoảng mới quá dài: 4.09 s/từ — end_time cũng sai
+7,77-79,6,My number is 555-0167.,40.81,35.85,35.88,35.6,4.93,"sửa (đợt 2, cả end_time)",35.6 (end 39.61),khoảng mới quá dài: 1.85 s/từ — end_time cũng sai
+7,77-79,7,Thanks!,42.36,39.56,39.56,39.18,2.8,"sửa (đợt 2, cả end_time)",39.31 (end 40.38),start mới 39.31 lùi qua câu trước (40.81); khoảng mới quá dài: 4.09 s/từ — end_time cũng sai
 7,83-85,5,Let's break into groups of three and start brainstorming technical solutions.,43.11,40.62,40.76,40.46,2.35,sửa,40.37,
 7,86-88,1,M.,12.28,13.81,10.88,12.38,1.4,không muộn,,bắt đầu nói ở 13.81s — DB không muộn
 7,86-88,5,"Ushers take tickets, help patrons find their seats, and then, of course, get to enjoy the concert for free.",32.04,31.19,31.32,31.14,0.72,sửa,30.94,

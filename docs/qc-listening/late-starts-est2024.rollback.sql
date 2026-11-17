@@ -144,3 +144,11 @@ update sentences set start_time = 36.85 where id = '3ba6f305-cc96-42ef-a8a2-45ad
 update sentences set start_time = 36.05 where id = '7413891e-c058-49b5-a8e8-243c6854b934' and start_time = 34.88;
 update sentences set start_time = 45.75 where id = 'e142a749-48b5-4d1f-80ea-0370265aee04' and start_time = 44.53;
 update sentences set start_time = 41.25 where id = '14037ef2-bc81-4239-817c-7dd8305a63e1' and start_time = 40.28;
+-- Đợt 2
+update sentences set start_time = 36.16, end_time = 39.56 where id = 'e170a4a7-a343-454e-bd82-abf7606893f2' and start_time = 33.38 and end_time = 35.68;
+update sentences set start_time = 39.37, end_time = 41.4 where id = '1d7f6acb-597b-4cfe-8fdd-4511b09922d5' and start_time = 35.44 and end_time = 37.4;
+update sentences set start_time = 38.34, end_time = 39.4 where id = 'f9f75e44-de48-4a86-8c94-df08e9d9d5fc' and start_time = 35.17 and end_time = 36.44;
+update sentences set start_time = 41.75, end_time = 44.4 where id = 'e9f492e4-4714-487b-a6bd-4bd58555b7a9' and start_time = 40.08 and end_time = 41.38;
+update sentences set start_time = 35.36, end_time = 36.4 where id = '93892961-a2dc-483d-8753-4de079587960' and start_time = 31.67 and end_time = 32.96;
+update sentences set start_time = 40.81, end_time = 43.01 where id = '35e1e631-2c45-459f-b838-c7987b7bd119' and start_time = 35.6 and end_time = 39.61;
+update sentences set start_time = 42.36, end_time = 43.4 where id = '92a6bec8-5c68-47e6-9cdf-ede9d51db7d3' and start_time = 39.31 and end_time = 40.38;
