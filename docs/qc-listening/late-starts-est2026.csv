@@ -1,0 +1,814 @@
+﻿de,cau_hoi,order_index,noi_dung,db_start,bat_dau_noi,align_start,asr_start,db_muon_hon_align_s,ket_luan,start_moi,ly_do
+1,1-1,0,The woman is carrying a tray of food.,7.3,7.19,6.46,7.06,0.84,không muộn,,bắt đầu nói ở 7.19s — DB không muộn
+1,1-1,1,The woman is wearing a jacket.,11.06,11.08,10.32,10.94,0.74,không muộn,,bắt đầu nói ở 11.08s — DB không muộn
+1,3-3,0,A woman is holding a phone up to her ear.,7.6,6.35,6.36,7.3,1.24,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+1,3-3,1,A woman is pouring a beverage into a glass.,11.94,11.96,11.28,11.92,0.66,không muộn,,bắt đầu nói ở 11.96s — DB không muộn
+1,4-4,0,A wooden crate is filled with vegetables.,6.86,7.11,6.28,6.82,0.58,không muộn,,bắt đầu nói ở 7.11s — DB không muộn
+1,4-4,1,One of the men is putting vegetables into a shopping bag.,11.76,10.56,10.58,11.68,1.18,sửa start,10.31,
+1,4-4,2,A backpack has been set on the ground.,17.06,17.03,16.4,17.0,0.66,không muộn,,bắt đầu nói ở 17.03s — DB không muộn
+1,5-5,1,He's laying a brush down on a windowsill.,11.84,11.85,10.8,11.82,1.04,không muộn,,bắt đầu nói ở 11.85s — DB không muộn
+1,6-6,0,A path is covered with fallen branches.,7.14,7.5,6.66,7.3,0.48,không muộn,,bắt đầu nói ở 7.5s — DB không muộn
+1,6-6,1,A tree is lying across a grassy area.,12.04,12.06,10.98,12.0,1.06,không muộn,,bắt đầu nói ở 12.06s — DB không muộn
+1,7-7,0,Where is the conference being held?,2.28,2.01,0.78,1.72,1.5,không muộn,,bắt đầu nói ở 2.01s — DB không muộn
+1,7-7,2,At the Riverview Hotel.,9.36,8.23,8.24,9.38,1.12,sửa start,7.98,
+1,8-8,0,When does the warehouse manager arrive?,2.22,1.95,1.0,1.66,1.22,không muộn,,bắt đầu nói ở 1.95s — DB không muộn
+1,8-8,1,"Sure, no problem.",5.98,5.83,5.32,5.58,0.66,không muộn,,bắt đầu nói ở 5.83s — DB không muộn
+1,9-9,1,Did you order paper for the copier?,6.42,6.42,5.64,5.52,0.78,không muộn,,bắt đầu nói ở 6.42s — DB không muộn
+1,9-9,2,Yes-it's next to Greendale Lake.,11.02,10.3,10.32,10.74,0.7,sửa start,10.05,
+1,10-10,0,Who sent the meeting minutes to the accounting department?,1.74,2.04,1.02,1.94,0.72,không muộn,,bắt đầu nói ở 2.04s — DB không muộn
+1,10-10,1,Our office assistant.,6.78,6.73,6.0,6.72,0.78,không muộn,,bắt đầu nói ở 6.73s — DB không muộn
+1,10-10,2,They have a savings account.,10.1,10.05,9.34,10.12,0.76,không muộn,,bắt đầu nói ở 10.05s — DB không muộn
+1,11-11,0,I'd like to know what you think of our new finance analyst.,2.16,2.15,0.76,2.08,1.4,không muộn,,bắt đầu nói ở 2.15s — DB không muộn
+1,11-11,2,He seems very competent.,11.78,11.79,11.04,11.76,0.74,không muộn,,bắt đầu nói ở 11.79s — DB không muộn
+1,12-12,0,Let's go on the company retreat.,2.3,2.23,1.08,1.9,1.22,không muộn,,bắt đầu nói ở 2.23s — DB không muộn
+1,12-12,1,"Oh, did he?",6.08,5.92,5.62,5.8,0.46,không muộn,,bắt đầu nói ở 5.92s — DB không muộn
+1,13-13,0,What time can I pick up my glasses?,2.6,2.36,0.76,2.04,1.84,không muộn,,bắt đầu nói ở 2.36s — DB không muộn
+1,13-13,1,"No, it's not very heavy.",6.64,6.42,5.66,6.3,0.98,không muộn,,bắt đầu nói ở 6.42s — DB không muộn
+1,13-13,3,We close at six o'clock.,13.38,13.35,12.74,13.34,0.64,không muộn,,bắt đầu nói ở 13.35s — DB không muộn
+1,14-14,0,"The sales team knows how to use the tracking software, don't they?",2.56,2.36,0.84,1.4,1.72,không muộn,,bắt đầu nói ở 2.36s — DB không muộn
+1,14-14,2,A twelve-thirty departure.,11.2,11.18,10.54,10.3,0.66,không muộn,,bắt đầu nói ở 11.18s — DB không muộn
+1,15-15,0,Are you going to the hardware store on Mill Street?,2.58,2.36,0.72,1.96,1.86,không muộn,,bắt đầu nói ở 2.36s — DB không muộn
+1,15-15,1,That store hasn't opened yet.,6.76,6.75,6.02,6.68,0.74,không muộn,,bắt đầu nói ở 6.75s — DB không muộn
+1,15-15,3,Some nails and a hammer.,13.94,13.89,13.24,13.96,0.7,không muộn,,bắt đầu nói ở 13.89s — DB không muộn
+1,16-16,0,Would you be able to write the introduction for the workshop?,2.24,2.43,0.84,1.36,1.4,không muộn,,bắt đầu nói ở 2.43s — DB không muộn
+1,16-16,1,That was a great book.,7.34,7.33,6.56,6.48,0.78,không muộn,,bắt đầu nói ở 7.33s — DB không muộn
+1,16-16,3,He doesn't have any more.,14.12,14.14,13.46,13.36,0.66,không muộn,,bắt đầu nói ở 14.14s — DB không muộn
+1,17-17,0,I picked up some flowers for Tunji's retirement party.,1.94,2.51,0.84,1.44,1.1,không muộn,,bắt đầu nói ở 2.51s — DB không muộn
+1,18-18,0,Which meeting room did you tell the interns to go to?,2.66,2.37,0.82,2.06,1.84,không muộn,,bắt đầu nói ở 2.37s — DB không muộn
+1,18-18,1,The Jefferson Room.,6.98,6.94,6.22,6.96,0.76,không muộn,,bắt đầu nói ở 6.94s — DB không muộn
+1,19-19,0,Is your dental appointment next Tuesday?,2.66,2.48,0.86,1.42,1.8,không muộn,,bắt đầu nói ở 2.48s — DB không muộn
+1,19-19,1,You can borrow mine.,7.0,7.0,6.24,6.12,0.76,không muộn,,bắt đầu nói ở 7s — DB không muộn
+1,20-20,0,Why aren't there any brochures in the lobby?,2.36,2.14,0.9,1.8,1.46,không muộn,,bắt đầu nói ở 2.14s — DB không muộn
+1,20-20,1,"No, I haven't received my confirmation e-mail yet.",6.3,6.24,5.52,6.16,0.78,không muộn,,bắt đầu nói ở 6.24s — DB không muộn
+1,21-21,0,What's the process for submitting my expense report?,1.92,2.44,0.76,1.94,1.16,không muộn,,bắt đầu nói ở 2.44s — DB không muộn
+1,21-21,1,You send it to the finance department.,7.58,7.47,6.74,7.38,0.84,không muộn,,bắt đầu nói ở 7.47s — DB không muộn
+1,21-21,2,The end of the day.,11.66,11.56,10.94,11.46,0.72,không muộn,,bắt đầu nói ở 11.56s — DB không muộn
+1,22-22,0,Do you sell your products online or in stores?,2.68,2.55,0.78,1.42,1.9,không muộn,,bắt đầu nói ở 2.55s — DB không muộn
+1,22-22,1,About twenty percent off.,7.38,7.37,6.68,6.54,0.7,không muộn,,bắt đầu nói ở 7.37s — DB không muộn
+1,22-22,2,A product demonstration.,11.0,10.95,10.26,10.1,0.74,không muộn,,bắt đầu nói ở 10.95s — DB không muộn
+1,23-23,0,How often do you charge this device?,2.82,2.55,0.82,1.44,2.0,không muộn,,bắt đầu nói ở 2.55s — DB không muộn
+1,23-23,1,Whenever the light turns red.,7.1,7.07,6.46,6.28,0.64,không muộn,,bắt đầu nói ở 7.07s — DB không muộn
+1,23-23,3,At the hardware store.,13.3,13.28,12.72,12.5,0.58,không muộn,,bắt đầu nói ở 13.28s — DB không muộn
+1,24-24,0,The tickets to Friday night's concert cost ten dollars each.,2.22,2.54,1.0,1.48,1.22,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
+1,24-24,1,"Actually, they're fifteen.",8.44,8.3,7.64,7.48,0.8,không muộn,,bắt đầu nói ở 8.3s — DB không muộn
+1,24-24,2,"No, I can't play the guitar.",11.94,11.84,11.4,10.98,0.54,không muộn,,bắt đầu nói ở 11.84s — DB không muộn
+1,25-25,0,Can't you update the database today?,2.76,2.54,0.84,2.1,1.92,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
+1,25-25,1,I did it yesterday.,6.62,6.58,5.64,6.2,0.98,không muộn,,bắt đầu nói ở 6.58s — DB không muộn
+1,26-26,0,How are we going to fit the extra supplies in that closet?,2.86,2.55,0.86,1.46,2.0,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.55s không khớp align 0.86s hay ASR 1.46s
+1,27-27,0,Have all the new windows been installed?,2.22,2.56,0.9,1.48,1.32,không muộn,,bắt đầu nói ở 2.56s — DB không muộn
+1,27-27,1,"Sure, I'll close the blinds.",6.22,6.6,5.86,5.78,0.36,không muộn,,bắt đầu nói ở 6.6s — DB không muộn
+1,28-28,0,Would you rather go to lunch now or at noon?,2.6,2.4,0.84,2.1,1.76,không muộn,,bắt đầu nói ở 2.4s — DB không muộn
+1,28-28,2,On the corner of Fourth and Main.,10.5,10.48,10.16,10.46,0.34,không muộn,,bắt đầu nói ở 10.48s — DB không muộn
+1,29-29,0,"You're taking the training in the afternoon, aren't you?",2.68,2.52,0.82,1.48,1.86,không muộn,,bắt đầu nói ở 2.52s — DB không muộn
+1,29-29,1,The new head of the accounting department.,7.02,6.97,6.24,6.2,0.78,không muộn,,bắt đầu nói ở 6.97s — DB không muộn
+1,29-29,2,"No, I take my coffee black.",11.24,11.09,10.42,10.22,0.82,không muộn,,bắt đầu nói ở 11.09s — DB không muộn
+1,30-30,0,Shouldn't Ms. Ishida look over the financial projections?,2.5,2.15,0.8,1.94,1.7,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+1,30-30,1,I just got this monitor.,7.4,7.37,6.64,7.32,0.76,không muộn,,bắt đầu nói ở 7.37s — DB không muộn
+1,30-30,2,To the south entrance.,11.04,11.01,10.28,11.06,0.76,không muộn,,bắt đầu nói ở 11.01s — DB không muộn
+1,31-31,0,When are you going to choose a new project manager?,2.72,2.45,0.94,2.1,1.78,không muộn,,bắt đầu nói ở 2.45s — DB không muộn
+1,31-31,1,The projector's not working correctly.,6.98,6.89,6.16,6.8,0.82,không muộn,,bắt đầu nói ở 6.89s — DB không muộn
+1,35-37,3,"Well, there's only one group of three seats together. Advance payment is required to hold them.",30.26,28.36,28.36,30.2,1.9,sửa start,28.11,
+1,44-46,2,"Yes, that's right. We'll take all electronics.",22.8,20.39,20.28,22.74,2.52,sửa start,20.14,
+1,47-49,1,"Great, thanks. I was just in the neighborhood and thought I'd stop in for a cookie or a piece of cake. You have so many delicious baked goods here.",14.1,14.13,13.08,14.04,1.02,không muộn,,bắt đầu nói ở 14.13s — DB không muộn
+1,62-64,1,OK. Which day would you prefer to meet with her?,19.86,19.83,17.74,19.78,2.12,không muộn,,bắt đầu nói ở 19.83s — DB không muộn
+1,65-67,1,"It is, but you have to click on the ""About Us"" page and scroll to the bottom of that page. Maybe people don't see it.",19.84,17.5,17.52,17.44,2.32,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+1,65-67,2,"Oh, I think we should move that information from the ""About Us"" page and make a separate page for directions and parking information.",31.6,25.88,25.74,25.2,5.86,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+1,65-67,3,"I'd be happy to make that change. But we're in the middle of updating our software, so it'll have to wait until Monday.",41.76,37.28,37.3,37.16,4.46,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+1,74-76,4,"Once that's complete, you'll have access to all your department's files.",35.96,25.63,25.68,35.7,10.28,cần nghe lại,,bài lệch cả bài nhưng tín hiệu không nhất quán — cần nghe lại
+1,74-76,5,Please note that you can only access them from your company computer.,41.32,28.87,25.82,41.22,15.5,cần nghe lại,,bài lệch cả bài nhưng tín hiệu không nhất quán — cần nghe lại
+1,77-79,4,I heard you may be releasing a new game soon.,26.42,22.26,22.26,26.18,4.16,cần nghe lại,,bài lệch cả bài nhưng tín hiệu không nhất quán — cần nghe lại
+1,80-82,0,The first agenda item for our board meeting is the annual sales report.,5.98,5.99,4.18,5.76,1.8,không muộn,,bắt đầu nói ở 5.99s — DB không muộn
+1,83-85,2,They expect to complete the repair within the hour.,16.76,16.74,13.12,16.62,3.64,không muộn,,bắt đầu nói ở 16.74s — DB không muộn
+1,83-85,3,A bus will be departing for that destination in fifteen minutes.,26.02,26.59,23.48,25.86,2.54,không muộn,,bắt đầu nói ở 26.59s — DB không muộn
+1,89-91,1,We hired a firm to determine if this upgrade would be feasible for our trains.,24.58,23.01,23.02,24.08,1.56,sửa start,23.00,
+1,89-91,4,"If you're interested in more details, e-mail our media relations department to receive a summary of the findings.",43.9,41.83,41.84,44.5,2.06,sửa start,41.58,
+1,92-94,0,I want to explore the use of a more modernized payment system in our cosmetics stores.,8.22,,7.56,8.16,0.66,cần nghe lại,,không tìm được chỗ bắt đầu nói
+1,92-94,2,The main complaint about shopping at our stores is waiting in long lines to pay.,21.54,21.57,20.1,21.4,1.44,không muộn,,bắt đầu nói ở 21.57s — DB không muộn
+1,92-94,3,I've decided to conduct a trial run at our store in the Center City Mall.,29.66,29.5,27.34,29.6,2.32,không muộn,,bắt đầu nói ở 29.5s — DB không muộn
+1,95-97,2,We interviewed the CEO of Barnum Financial Services about its new offices.,20.2,19.95,16.7,20.12,3.5,không muộn,,bắt đầu nói ở 19.95s — DB không muộn
+1,98-100,0,Thank you for attending this meeting for prospective investors.,8.14,6.94,4.94,8.06,3.2,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 6.94s không khớp align 4.94s hay ASR 8.06s
+1,98-100,2,"The site with 390 grams per ton has a larger deposit, so that's where we'll build the new mine.",37.14,23.88,18.88,36.96,18.26,cần nghe lại,,onset 23.88s không khớp align 18.88s hay ASR 36.96s
+2,1-1,0,A man is closing a metal gate.,7.1,5.97,5.96,6.82,1.14,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+2,1-1,1,A man is walking down a stone path.,10.86,9.72,9.76,10.8,1.1,sửa start,9.47,
+2,3-3,0,Some wooden planks are leaning against a wall.,7.72,7.64,6.96,7.22,0.76,không muộn,,bắt đầu nói ở 7.64s — DB không muộn
+2,3-3,1,A vehicle is parked next to a building.,12.14,12.12,11.44,11.24,0.7,không muộn,,bắt đầu nói ở 12.12s — DB không muộn
+2,3-3,3,A package has been left near a door.,20.38,20.39,19.96,19.58,0.42,không muộn,,bắt đầu nói ở 20.39s — DB không muộn
+2,4-4,0,A man is holding up his phone.,7.14,6.22,6.24,7.08,0.9,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+2,4-4,1,A man is pinning a note to a bulletin board.,11.02,9.87,9.9,10.96,1.12,sửa start,9.62,
+2,4-4,2,A man is dropping an item into a bin.,15.38,15.37,14.78,15.3,0.6,không muộn,,bắt đầu nói ở 15.37s — DB không muộn
+2,4-4,3,A man is washing some windows.,19.5,19.49,19.14,19.38,0.36,không muộn,,bắt đầu nói ở 19.49s — DB không muộn
+2,5-5,1,She's reaching for food on a shelf.,11.64,11.59,10.52,11.26,1.12,không muộn,,bắt đầu nói ở 11.59s — DB không muộn
+2,6-6,1,He's putting plates on dining tables.,11.14,11.15,10.06,11.1,1.08,không muộn,,bắt đầu nói ở 11.15s — DB không muộn
+2,7-7,0,Will you order the pasta or the chicken?,2.4,2.26,0.96,1.92,1.44,không muộn,,bắt đầu nói ở 2.26s — DB không muộn
+2,9-9,0,Would you like the report to be e-mailed or printed out?,2.28,2.09,0.96,2.02,1.32,không muộn,,bắt đầu nói ở 2.09s — DB không muộn
+2,9-9,1,An electric heater.,6.92,6.84,6.12,6.82,0.8,không muộn,,bắt đầu nói ở 6.84s — DB không muộn
+2,10-10,0,Have you decided how much to charge for your concert tickets?,2.24,2.08,1.02,1.72,1.22,không muộn,,bắt đầu nói ở 2.08s — DB không muộn
+2,11-11,0,How often does the store offer a sales promotion?,2.68,2.41,0.74,2.18,1.94,không muộn,,bắt đầu nói ở 2.41s — DB không muộn
+2,11-11,1,A discount on appliances.,7.08,7.16,6.36,6.98,0.72,không muộn,,bắt đầu nói ở 7.16s — DB không muộn
+2,11-11,2,"Sure, I can buy some.",10.9,10.8,9.72,10.74,1.18,không muộn,,bắt đầu nói ở 10.8s — DB không muộn
+2,12-12,1,Please start this washing machine.,6.34,6.22,5.46,6.14,0.88,không muộn,,bắt đầu nói ở 6.22s — DB không muộn
+2,12-12,3,No—it's been postponed an hour.,13.9,13.1,13.1,13.84,0.8,sửa start,12.85,
+2,13-13,0,Let's begin our meeting about the Taylor project.,2.28,2.44,0.64,1.34,1.64,không muộn,,bắt đầu nói ở 2.44s — DB không muộn
+2,13-13,1,Good idea—we have a lot to get through.,7.34,7.1,6.44,6.3,0.9,không muộn,,bắt đầu nói ở 7.1s — DB không muộn
+2,13-13,3,"No, in room 725.",14.86,14.7,14.48,13.94,0.38,không muộn,,bắt đầu nói ở 14.7s — DB không muộn
+2,14-14,0,"There's a dental clinic on Main Street, isn't there?",2.48,2.37,0.84,2.04,1.64,không muộn,,bắt đầu nói ở 2.37s — DB không muộn
+2,14-14,1,"Yes, it's very convenient.",7.28,7.05,6.36,6.96,0.92,không muộn,,bắt đầu nói ở 7.05s — DB không muộn
+2,14-14,2,A toothbrush and toothpaste.,11.1,11.06,10.34,11.04,0.76,không muộn,,bắt đầu nói ở 11.06s — DB không muộn
+2,15-15,0,Where is the book reading going to take place?,2.62,2.4,0.72,2.12,1.9,không muộn,,bắt đầu nói ở 2.4s — DB không muộn
+2,15-15,1,Sure—I can give you a tour later.,7.28,6.65,6.66,7.42,0.62,sửa start,6.40,
+2,15-15,2,At the library.,10.8,10.79,10.22,10.76,0.58,không muộn,,bắt đầu nói ở 10.79s — DB không muộn
+2,15-15,3,It lasts a while.,13.48,13.47,12.8,13.44,0.68,không muộn,,bắt đầu nói ở 13.47s — DB không muộn
+2,16-16,0,When's the bus going to be here?,2.68,2.45,0.68,2.2,2.0,không muộn,,bắt đầu nói ở 2.45s — DB không muộn
+2,16-16,1,A round-trip ticket.,6.16,6.04,5.22,5.92,0.94,không muộn,,bắt đầu nói ở 6.04s — DB không muộn
+2,16-16,2,Let's break for lunch.,9.12,7.98,8.04,9.1,1.08,sửa start,7.73,
+2,17-17,0,The estimated price for this car insurance is higher than we expected.,2.8,2.62,0.84,1.42,1.96,không muộn,,bắt đầu nói ở 2.62s — DB không muộn
+2,18-18,0,Why haven't the renovations been completed yet?,2.78,2.53,0.82,1.34,1.96,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+2,18-18,1,It's on the top shelf.,7.0,7.07,6.3,6.28,0.7,không muộn,,bắt đầu nói ở 7.07s — DB không muộn
+2,19-19,0,I'll give you my office number in case you have questions about the data.,1.94,2.43,0.76,2.12,1.18,không muộn,,bắt đầu nói ở 2.43s — DB không muộn
+2,19-19,1,The theater is reserved for that date.,7.9,7.79,7.06,7.66,0.84,không muộn,,bắt đầu nói ở 7.79s — DB không muộn
+2,19-19,3,Thanks—I appreciate that.,16.32,15.63,15.66,16.36,0.66,sửa start,15.38,
+2,20-20,0,Which parking area should we use?,2.32,2.14,0.78,1.82,1.54,không muộn,,bắt đầu nói ở 2.14s — DB không muộn
+2,20-20,1,The fee is fifteen dollars.,6.1,6.03,5.3,6.0,0.8,không muộn,,bắt đầu nói ở 6.03s — DB không muộn
+2,21-21,0,Let's take a taxi to the airport.,2.7,2.44,0.76,2.1,1.94,không muộn,,bắt đầu nói ở 2.44s — DB không muộn
+2,21-21,1,My seats are in section 21.,6.58,6.45,5.74,6.4,0.84,không muộn,,bắt đầu nói ở 6.45s — DB không muộn
+2,22-22,0,"Our team training session was well attended, wasn't it?",2.08,2.55,0.66,2.18,1.42,không muộn,,bắt đầu nói ở 2.55s — DB không muộn
+2,22-22,1,They were delivered yesterday.,7.24,7.25,6.5,7.18,0.74,không muộn,,bắt đầu nói ở 7.25s — DB không muộn
+2,22-22,2,"No, just down the hall.",10.62,10.51,10.26,10.48,0.36,không muộn,,bắt đầu nói ở 10.51s — DB không muộn
+2,23-23,0,Why's the company discontinuing its newsletter?,2.82,2.56,0.64,2.18,2.18,không muộn,,bắt đầu nói ở 2.56s — DB không muộn
+2,23-23,1,Only the print version.,7.38,7.33,6.62,7.14,0.76,không muộn,,bắt đầu nói ở 7.33s — DB không muộn
+2,24-24,0,Weren't you planning to take the afternoon off?,2.3,2.62,0.74,2.28,1.56,không muộn,,bắt đầu nói ở 2.62s — DB không muộn
+2,24-24,1,The clients wanted to meet today.,6.82,6.78,5.96,6.66,0.86,không muộn,,bắt đầu nói ở 6.78s — DB không muộn
+2,24-24,3,He created a great project plan.,14.18,14.19,13.54,14.18,0.64,không muộn,,bắt đầu nói ở 14.19s — DB không muộn
+2,25-25,0,Dr. Molina sees patients in her Middleville office.,2.92,2.6,0.66,1.54,2.26,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.6s không khớp align 0.66s hay ASR 1.54s
+2,25-25,1,The instructor was so patient with the students.,7.58,7.61,6.86,7.46,0.72,không muộn,,bắt đầu nói ở 7.61s — DB không muộn
+2,25-25,3,We have some digital thermometers in stock.,16.48,16.49,15.92,16.46,0.56,không muộn,,bắt đầu nói ở 16.49s — DB không muộn
+2,26-26,0,Who's going out for lunch?,2.84,2.63,0.86,1.46,1.98,không muộn,,bắt đầu nói ở 2.63s — DB không muộn
+2,26-26,1,I enjoyed that book too.,6.0,5.98,5.24,5.18,0.76,không muộn,,bắt đầu nói ở 5.98s — DB không muộn
+2,27-27,0,Do the tickets go on sale this week or next?,2.84,2.63,0.68,2.14,2.16,không muộn,,bắt đầu nói ở 2.63s — DB không muộn
+2,27-27,1,The cafeteria downstairs.,7.66,7.52,6.86,7.46,0.8,không muộn,,bắt đầu nói ở 7.52s — DB không muộn
+2,28-28,0,When will you finish updating the sales data?,2.4,2.31,0.78,2.12,1.62,không muộn,,bắt đầu nói ở 2.31s — DB không muộn
+2,29-29,0,Who's leading the planning session tomorrow?,2.28,2.52,0.8,2.16,1.48,không muộn,,bắt đầu nói ở 2.52s — DB không muộn
+2,30-30,0,Aren't we meeting with the clients this evening?,2.3,2.12,1.0,1.78,1.3,không muộn,,bắt đầu nói ở 2.12s — DB không muộn
+2,30-30,1,"No, it's on the opposite side.",6.56,6.31,5.54,6.2,1.02,không muộn,,bắt đầu nói ở 6.31s — DB không muộn
+2,30-30,2,The television was fixed.,10.5,10.42,9.74,10.34,0.76,không muộn,,bắt đầu nói ở 10.42s — DB không muộn
+2,31-31,0,"They invited me to the opening, didn't they?",1.84,2.53,0.86,1.38,0.98,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+2,31-31,1,I plan to submit my application.,6.52,6.93,6.14,6.1,0.38,không muộn,,bắt đầu nói ở 6.93s — DB không muộn
+2,53-55,1,"Right, and they often travel on short notice. Flight arrangements made at the last minute are expensive, especially for nonstop flights. It would be cheaper if they took connecting flights.",24.48,15.94,16.0,15.9,8.48,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+2,53-55,2,"Yes, but that can take a lot of time.",54.5,26.77,26.74,26.72,27.76,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+2,53-55,3,True. Maybe we can make up for the cost of the flights by economizing on hotels. Let's look into that.,64.5,29.63,29.62,29.14,34.88,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+2,65-67,2,OK—that's not far. Let me see. I could come any morning this week.,22.98,22.49,22.48,22.88,0.5,sửa start,22.24,
+2,65-67,5,Hoffman—Claudia Hoffman. Thank you. Talk to you soon.,38.68,38.53,37.96,38.56,0.72,không muộn,,bắt đầu nói ở 38.53s — DB không muộn
+2,89-91,5,We welcome the assistance of motivated individuals.,35.86,29.91,29.96,29.16,5.9,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+2,89-91,6,"For all other inquiries, please leave a message after the tone.",52.48,33.43,33.48,33.22,19.0,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+2,92-94,1,"Now—if you're hearing about this olive oil for the first time, you're not alone.",14.82,14.34,14.34,14.9,0.48,sửa start,14.09,
+3,1-1,1,He's rolling up his sleeves.,10.8,9.65,9.68,9.92,1.12,sửa start,9.40,
+3,3-3,0,A man is changing a tire on his car.,7.58,6.44,6.44,7.34,1.14,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+3,3-3,1,A man is opening a car door.,11.66,11.6,10.88,11.56,0.78,không muộn,,bắt đầu nói ở 11.6s — DB không muộn
+3,3-3,2,A man is putting fuel into his car.,15.28,15.26,14.82,15.22,0.46,không muộn,,bắt đầu nói ở 15.26s — DB không muộn
+3,3-3,3,A man is spreading out a map on top of his car.,19.1,19.06,18.64,19.0,0.46,không muộn,,bắt đầu nói ở 19.06s — DB không muộn
+3,4-4,1,They're seated next to each other.,10.88,10.9,9.82,10.88,1.06,không muộn,,bắt đầu nói ở 10.9s — DB không muộn
+3,5-5,0,A selection of luggage is on display.,7.68,6.6,6.62,7.58,1.06,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+3,5-5,1,A lamp and some papers are on a desk.,12.3,12.3,11.6,12.24,0.7,không muộn,,bắt đầu nói ở 12.3s — DB không muộn
+3,5-5,2,Some boxes are arranged under some lamps.,16.94,16.88,16.22,16.86,0.72,không muộn,,bắt đầu nói ở 16.88s — DB không muộn
+3,6-6,0,A cyclist is riding past a pedestrian.,7.34,6.34,6.36,7.2,0.98,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+3,6-6,1,A tent is set up next to a lake.,11.76,11.67,11.04,11.64,0.72,không muộn,,bắt đầu nói ở 11.67s — DB không muộn
+3,7-7,0,Where's the coffeemaker?,2.32,2.07,0.76,1.72,1.56,không muộn,,bắt đầu nói ở 2.07s — DB không muộn
+3,7-7,1,On the bottom shelf.,5.36,5.38,4.66,5.34,0.7,không muộn,,bắt đầu nói ở 5.38s — DB không muộn
+3,7-7,3,It was discounted.,11.86,11.87,11.18,11.84,0.68,không muộn,,bắt đầu nói ở 11.87s — DB không muộn
+3,8-8,0,Why are you calling the clients?,1.48,1.96,0.8,1.72,0.68,không muộn,,bắt đầu nói ở 1.96s — DB không muộn
+3,8-8,1,A spreadsheet with their contact information.,5.58,5.51,4.72,5.34,0.86,không muộn,,bắt đầu nói ở 5.51s — DB không muộn
+3,9-9,0,Would you like to attend our next company retreat?,2.34,2.12,0.64,1.8,1.7,không muộn,,bắt đầu nói ở 2.12s — DB không muộn
+3,10-10,1,"I like the new Web site, too.",6.04,6.0,5.26,5.92,0.78,không muộn,,bắt đầu nói ở 6s — DB không muộn
+3,11-11,0,Does your desk face the door or the window?,2.58,2.38,0.98,2.06,1.6,không muộn,,bắt đầu nói ở 2.38s — DB không muộn
+3,11-11,1,It faces the door.,6.58,6.58,5.84,6.52,0.74,không muộn,,bắt đầu nói ở 6.58s — DB không muộn
+3,11-11,2,About forty minutes.,10.02,9.93,9.32,9.9,0.7,không muộn,,bắt đầu nói ở 9.93s — DB không muộn
+3,12-12,0,When will your performance take place?,2.3,2.25,0.92,2.0,1.38,không muộn,,bắt đầu nói ở 2.25s — DB không muộn
+3,12-12,2,"No, I just checked.",9.44,9.3,8.62,9.24,0.82,không muộn,,bắt đầu nói ở 9.3s — DB không muộn
+3,13-13,0,What will you get for completing the program?,2.58,2.53,0.7,1.36,1.88,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+3,13-13,1,How many hours a week?,6.64,6.61,5.88,6.52,0.76,không muộn,,bắt đầu nói ở 6.61s — DB không muộn
+3,13-13,2,"OK, thanks for asking.",9.86,9.78,9.14,9.74,0.72,không muộn,,bắt đầu nói ở 9.78s — DB không muộn
+3,14-14,0,How did the company get its name?,2.62,2.5,0.96,1.34,1.66,không muộn,,bắt đầu nói ở 2.5s — DB không muộn
+3,14-14,1,There's a new guest list.,6.26,6.17,5.4,5.36,0.86,không muộn,,bắt đầu nói ở 6.17s — DB không muộn
+3,15-15,0,Your kitchen looks nice painted in this shade of yellow.,1.94,2.36,0.72,2.18,1.22,không muộn,,bắt đầu nói ở 2.36s — DB không muộn
+3,15-15,1,"Twenty color copies, please.",7.4,7.25,6.64,7.18,0.76,không muộn,,bắt đầu nói ở 7.25s — DB không muộn
+3,15-15,3,"Yes, it really brightens up the room.",14.84,14.68,14.04,14.68,0.8,không muộn,,bắt đầu nói ở 14.68s — DB không muộn
+3,16-16,0,Are you considering hiring a public relations firm?,2.8,2.56,0.86,1.34,1.94,không muộn,,bắt đầu nói ở 2.56s — DB không muộn
+3,16-16,1,I wasn't at that press conference.,8.08,8.04,7.28,7.22,0.8,không muộn,,bắt đầu nói ở 8.04s — DB không muộn
+3,17-17,0,Does this hallway lead to the lobby or to the courtyard?,2.14,2.54,0.84,1.48,1.3,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
+3,17-17,1,My brother mentioned that.,7.58,7.47,6.74,6.64,0.84,không muộn,,bắt đầu nói ở 7.47s — DB không muộn
+3,17-17,2,How much does the box weigh?,10.88,10.85,10.18,10.0,0.7,không muộn,,bắt đầu nói ở 10.85s — DB không muộn
+3,17-17,3,"To the lobby, I think.",14.26,14.24,13.52,13.46,0.74,không muộn,,bắt đầu nói ở 14.24s — DB không muộn
+3,18-18,0,"The company's headquarters is in Houston, right?",2.48,2.37,0.98,2.28,1.5,không muộn,,bắt đầu nói ở 2.37s — DB không muộn
+3,18-18,1,This quarter's budget.,6.96,6.88,6.38,6.84,0.58,không muộn,,bắt đầu nói ở 6.88s — DB không muộn
+3,18-18,2,Let me look at the directory.,10.18,10.12,9.54,10.1,0.64,không muộn,,bắt đầu nói ở 10.12s — DB không muộn
+3,19-19,0,Aren't the windows in the warehouse supposed to be replaced?,2.64,2.45,0.88,1.42,1.76,không muộn,,bắt đầu nói ở 2.45s — DB không muộn
+3,19-19,1,"Sure, I'll frame the picture.",7.3,7.1,6.44,6.28,0.86,không muộn,,bắt đầu nói ở 7.1s — DB không muộn
+3,20-20,0,Who's leading the workshop on Friday?,2.06,2.01,0.78,1.78,1.28,không muộn,,bắt đầu nói ở 2.01s — DB không muộn
+3,20-20,2,The other team has a ten-point lead.,9.4,9.4,8.62,9.32,0.78,không muộn,,bắt đầu nói ở 9.4s — DB không muộn
+3,21-21,0,Should we join our department's book club?,2.84,2.61,0.9,1.56,1.94,không muộn,,bắt đầu nói ở 2.61s — DB không muộn
+3,21-21,1,An award-winning author.,6.74,6.71,5.98,5.9,0.76,không muộn,,bắt đầu nói ở 6.71s — DB không muộn
+3,21-21,2,The office supplies are in the storage room.,10.08,10.05,9.38,9.14,0.7,không muộn,,bắt đầu nói ở 10.05s — DB không muộn
+3,22-22,0,Shouldn't this package be returned?,3.06,2.63,0.82,1.42,2.24,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.63s không khớp align 0.82s hay ASR 1.42s
+3,22-22,1,Several packets of stamps from the post office.,7.06,6.93,6.24,6.12,0.82,không muộn,,bắt đầu nói ở 6.93s — DB không muộn
+3,22-22,2,"Yes, it has to go back to the manufacturer.",11.48,11.38,11.02,10.48,0.46,không muộn,,bắt đầu nói ở 11.38s — DB không muộn
+3,23-23,0,When will the training sessions for the new security measures take place?,2.06,2.61,0.64,2.16,1.42,không muộn,,bắt đầu nói ở 2.61s — DB không muộn
+3,23-23,1,"Yes, it was a complete success.",8.26,8.03,7.32,7.98,0.94,không muộn,,bắt đầu nói ở 8.03s — DB không muộn
+3,23-23,2,The upstairs conference room is large enough.,12.2,12.14,11.46,12.16,0.74,không muộn,,bắt đầu nói ở 12.14s — DB không muộn
+3,24-24,0,Do you want the draft of the proposal e-mailed to you or printed out?,2.84,2.71,0.86,2.18,1.98,không muộn,,bắt đầu nói ở 2.71s — DB không muộn
+3,25-25,0,Which day is most convenient for you?,2.92,2.6,0.94,2.3,1.98,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+3,25-25,1,"Yes, I'd appreciate it.",7.06,6.86,6.16,6.78,0.9,không muộn,,bắt đầu nói ở 6.86s — DB không muộn
+3,26-26,1,My phone has an extended warranty.,6.74,6.69,5.9,6.6,0.84,không muộn,,bắt đầu nói ở 6.69s — DB không muộn
+3,27-27,0,How was your lunch at the park?,2.86,2.64,0.82,1.5,2.04,không muộn,,bắt đầu nói ở 2.64s — DB không muộn
+3,27-27,1,I had an unexpected client meeting.,6.14,6.07,5.3,5.22,0.84,không muộn,,bắt đầu nói ở 6.07s — DB không muộn
+3,28-28,0,Does your company send out the same promotional material every month?,1.88,2.4,0.68,2.1,1.2,không muộn,,bắt đầu nói ở 2.4s — DB không muộn
+3,28-28,2,The bank across the street.,11.92,11.78,10.98,11.76,0.94,không muộn,,bắt đầu nói ở 11.78s — DB không muộn
+3,29-29,0,Where can I look at floor plans for our new office building?,2.6,2.72,0.84,2.3,1.76,không muộn,,bắt đầu nói ở 2.72s — DB không muộn
+3,29-29,1,"Yes, I'd like some coffee.",7.64,7.62,6.9,7.44,0.74,không muộn,,bắt đầu nói ở 7.62s — DB không muộn
+3,30-30,0,Can I use the company car to pick up the clients from the airport?,2.16,2.13,0.64,2.06,1.52,không muộn,,bắt đầu nói ở 2.13s — DB không muộn
+3,30-30,1,Shenchao is the best project manager I know.,7.92,7.39,7.38,7.34,0.54,sửa start,7.14,
+3,30-30,2,"No, thanks—I've already been there.",13.18,12.4,11.72,12.36,1.46,sửa start,12.15,
+3,31-31,0,How often should our heating system be inspected?,2.68,2.46,0.7,2.18,1.98,không muộn,,bắt đầu nói ở 2.46s — DB không muộn
+3,31-31,1,Approximately $400.,6.94,6.65,6.64,6.72,0.3,không muộn,,bắt đầu nói ở 6.65s — DB không muộn
+3,31-31,3,The recommendation is in the manual.,14.72,14.71,14.0,14.68,0.72,không muộn,,bắt đầu nói ở 14.71s — DB không muộn
+3,35-37,0,"Excuse me, does train 1401 stop at the Lexington Street station?",7.68,7.4,4.14,7.04,3.54,không muộn,,bắt đầu nói ở 7.4s — DB không muộn
+3,47-49,11,Let me find the manager.,66.59,36.61,33.2,66.84,33.39,cần nghe lại,,onset 36.61s không khớp align 33.2s hay ASR 66.84s; khoảng mới quá dài: 6.43 s/từ — end_time cũng sai
+3,59-61,5,Thank you—I appreciate that.,32.4,32.03,32.08,31.98,0.32,sửa start,31.78,
+3,62-64,1,No problem—that shouldn't take long. What else can I help with?,21.72,21.32,21.34,21.2,0.38,sửa start,21.07,
+3,65-67,0,Thanks for calling Kwon Photography Studio.,7.08,7.06,5.22,6.68,1.86,không muộn,,bắt đầu nói ở 7.06s — DB không muộn
+3,68-70,4,"Oh, sorry. I forgot to tell you. Use number 1009.",33.52,33.48,33.22,33.44,0.3,không muộn,,bắt đầu nói ở 33.48s — DB không muộn
+3,71-73,0,"The town's annual music festival is only a few months away, and our committee still has a lot of planning to do.",5.22,6.66,4.82,6.14,0.4,không muộn,,bắt đầu nói ở 6.66s — DB không muộn
+3,80-82,1,Welcome to Ag-Cast—a podcast all about the latest news in agriculture.,6.66,6.16,6.24,6.14,0.42,sửa start,5.91,
+3,83-85,4,"Unfortunately, this has caused some frame alignment issues.",22.54,22.22,22.24,22.2,0.3,sửa start,21.97,
+3,98-100,0,"Hi, Takuma.",5.14,6.54,3.92,6.22,1.22,không muộn,,bắt đầu nói ở 6.54s — DB không muộn
+4,1-1,1,She's removing her eyeglasses.,10.84,10.82,9.8,10.46,1.04,không muộn,,bắt đầu nói ở 10.82s — DB không muộn
+4,2-2,2,A garden is being planted along a fence.,15.78,15.76,15.14,15.72,0.64,không muộn,,bắt đầu nói ở 15.76s — DB không muộn
+4,3-3,0,A woman is following a man down a corridor.,7.26,6.31,6.32,7.2,0.94,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+4,3-3,1,A woman is putting together some cardboard boxes.,11.7,11.72,10.98,11.68,0.72,không muộn,,bắt đầu nói ở 11.72s — DB không muộn
+4,4-4,1,He's pulling a cart on a walkway.,11.6,10.43,10.48,11.24,1.12,sửa start,10.18,
+4,7-7,0,Will you let me know when the catering order arrives?,2.26,2.02,0.74,1.1,1.52,không muộn,,bắt đầu nói ở 2.02s — DB không muộn
+4,7-7,1,A reservation for two.,7.1,7.04,6.22,6.22,0.88,không muộn,,bắt đầu nói ở 7.04s — DB không muộn
+4,7-7,2,The front office.,10.34,9.2,9.22,9.5,1.12,sửa start,8.95,
+4,8-8,0,Why is the manager being replaced?,2.2,1.97,0.7,1.74,1.5,không muộn,,bắt đầu nói ở 1.97s — DB không muộn
+4,9-9,0,Ms. Cho should close the store early on Friday.,2.38,2.06,0.96,1.8,1.42,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+4,9-9,1,I prefer a salad.,6.72,6.74,6.0,6.68,0.72,không muộn,,bắt đầu nói ở 6.74s — DB không muộn
+4,9-9,3,"Yes, I agree.",13.06,12.97,12.46,12.92,0.6,không muộn,,bắt đầu nói ở 12.97s — DB không muộn
+4,10-10,0,Why did you decide to become a pilot?,2.28,2.06,0.68,1.18,1.6,không muộn,,bắt đầu nói ở 2.06s — DB không muộn
+4,10-10,1,Is there free Internet access?,6.14,6.1,5.38,5.28,0.76,không muộn,,bắt đầu nói ở 6.1s — DB không muộn
+4,11-11,0,Have you always commuted by train?,2.38,2.2,0.74,1.3,1.64,không muộn,,bắt đầu nói ở 2.2s — DB không muộn
+4,11-11,1,The training starts at two o'clock.,6.08,6.02,5.26,5.42,0.82,không muộn,,bắt đầu nói ở 6.02s — DB không muộn
+4,12-12,0,When does your manager usually come in?,2.34,2.27,0.92,1.94,1.42,không muộn,,bắt đầu nói ở 2.27s — DB không muộn
+4,12-12,1,Early in the morning.,6.56,6.39,5.72,6.3,0.84,không muộn,,bắt đầu nói ở 6.39s — DB không muộn
+4,12-12,2,"No, I just left it there.",9.42,9.35,9.12,9.28,0.3,không muộn,,bắt đầu nói ở 9.35s — DB không muộn
+4,13-13,0,Isn't there a discount on this computer monitor?,2.6,2.4,0.68,1.96,1.92,không muộn,,bắt đầu nói ở 2.4s — DB không muộn
+4,13-13,1,"Yes, a ten percent discount.",6.86,6.67,5.9,6.54,0.96,không muộn,,bắt đầu nói ở 6.67s — DB không muộn
+4,13-13,2,An inventory check.,10.56,10.5,9.92,10.48,0.64,không muộn,,bắt đầu nói ở 10.5s — DB không muộn
+4,14-14,0,How is the new group of interns doing?,2.64,2.39,0.72,2.0,1.92,không muộn,,bắt đầu nói ở 2.39s — DB không muộn
+4,14-14,1,"No, we have five people in total.",6.82,6.75,6.02,6.7,0.8,không muộn,,bắt đầu nói ở 6.75s — DB không muộn
+4,15-15,0,They're carrying those boxes to the storage room.,2.66,2.4,0.8,1.36,1.86,không muộn,,bắt đầu nói ở 2.4s — DB không muộn
+4,15-15,1,That's a good price.,6.82,6.87,6.06,6.04,0.76,không muộn,,bắt đầu nói ở 6.87s — DB không muộn
+4,16-16,0,Where can I send the money?,2.64,2.4,0.84,2.04,1.8,không muộn,,bắt đầu nói ở 2.4s — DB không muộn
+4,16-16,1,To my bank account.,5.66,5.62,4.94,5.52,0.72,không muộn,,bắt đầu nói ở 5.62s — DB không muộn
+4,17-17,0,Who's coming in tomorrow to help us prepare for the grand opening?,2.08,2.51,0.72,1.44,1.36,không muộn,,bắt đầu nói ở 2.51s — DB không muộn
+4,17-17,2,An online job posting.,11.02,10.96,10.32,10.06,0.7,không muộn,,bắt đầu nói ở 10.96s — DB không muộn
+4,18-18,0,How often does the bus stop at this location?,2.7,2.41,0.66,1.32,2.04,không muộn,,bắt đầu nói ở 2.41s — DB không muộn
+4,19-19,0,What's the candidate review process?,1.8,2.52,0.88,1.44,0.92,không muộn,,bắt đầu nói ở 2.52s — DB không muộn
+4,19-19,1,We review the résumés first.,7.06,6.99,6.26,6.98,0.8,không muộn,,bắt đầu nói ở 6.99s — DB không muộn
+4,19-19,2,A few good reviews.,11.04,10.96,10.26,10.96,0.78,không muộn,,bắt đầu nói ở 10.96s — DB không muộn
+4,19-19,3,OK-I'll just follow them.,14.8,14.12,14.12,14.76,0.68,sửa start,13.87,
+4,20-20,0,"There's coffee in the break room, right?",2.5,2.16,0.86,1.92,1.64,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+4,20-20,1,That shift starts at noon.,6.6,6.59,5.86,6.54,0.74,không muộn,,bắt đầu nói ở 6.59s — DB không muộn
+4,20-20,2,We decided to paint this room gray.,10.1,10.13,9.42,10.08,0.68,không muộn,,bắt đầu nói ở 10.13s — DB không muộn
+4,20-20,3,Yes I just made a fresh pot.,14.16,14.06,13.38,13.98,0.78,không muộn,,bắt đầu nói ở 14.06s — DB không muộn
+4,21-21,0,Who's going to the company picnic today?,2.74,2.48,0.76,1.68,1.98,không muộn,,bắt đầu nói ở 2.48s — DB không muộn
+4,21-21,3,A two-year maintenance contract.,13.9,13.58,13.56,13.56,0.34,sửa start,13.33,
+4,22-22,0,Will the bakery be open tomorrow?,2.78,2.54,0.68,2.14,2.1,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
+4,22-22,1,"No, it's closed until mid-August.",6.4,6.27,5.46,6.18,0.94,không muộn,,bắt đầu nói ở 6.27s — DB không muộn
+4,22-22,2,Have you checked the oven?,10.44,10.42,9.72,10.38,0.72,không muộn,,bắt đầu nói ở 10.42s — DB không muộn
+4,23-23,0,Are you installing the new software on Monday or Tuesday?,2.68,2.5,0.64,1.46,2.04,không muộn,,bắt đầu nói ở 2.5s — DB không muộn
+4,23-23,1,"Thanks, but they already have one.",7.7,7.51,6.7,6.7,1.0,không muộn,,bắt đầu nói ở 7.51s — DB không muộn
+4,23-23,3,It was an older model laptop.,14.96,14.95,14.3,14.18,0.66,không muộn,,bắt đầu nói ở 14.95s — DB không muộn
+4,24-24,0,Let me find a sales associate to help you.,2.7,2.57,0.68,2.16,2.02,không muộn,,bắt đầu nói ở 2.57s — DB không muộn
+4,24-24,1,At the top of the list.,6.64,6.64,5.9,6.56,0.74,không muộn,,bắt đầu nói ở 6.64s — DB không muộn
+4,24-24,2,My article is ready to be uploaded.,9.92,9.9,9.22,9.84,0.7,không muộn,,bắt đầu nói ở 9.9s — DB không muộn
+4,25-25,0,"You're offering discounts to students, right?",2.06,2.57,0.82,1.48,1.24,không muộn,,bắt đầu nói ở 2.57s — DB không muộn
+4,26-26,0,The sales department posted an advertisement for an assistant.,2.76,2.58,0.86,1.48,1.9,không muộn,,bắt đầu nói ở 2.58s — DB không muộn
+4,26-26,1,I didn't know they were hiring.,7.76,7.78,7.02,7.74,0.74,không muộn,,bắt đầu nói ở 7.78s — DB không muộn
+4,26-26,2,An additional charge for shipping.,11.6,11.54,10.94,11.56,0.66,không muộn,,bắt đầu nói ở 11.54s — DB không muộn
+4,27-27,0,Does the new accounting software work well?,2.78,2.53,0.8,2.16,1.98,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+4,27-27,1,I haven't downloaded it yet.,6.72,6.68,5.94,6.56,0.78,không muộn,,bắt đầu nói ở 6.68s — DB không muộn
+4,28-28,0,When's the finance department going to confirm our first-quarter budget?,2.74,2.44,0.72,2.26,2.02,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+4,28-28,1,Their deadline is next week.,8.62,8.64,7.88,8.54,0.74,không muộn,,bắt đầu nói ở 8.64s — DB không muộn
+4,28-28,2,"Yes, I'll be there.",12.14,12.05,11.38,12.0,0.76,không muộn,,bắt đầu nói ở 12.05s — DB không muộn
+4,28-28,3,In the mail room.,15.08,15.1,14.44,15.08,0.64,không muộn,,bắt đầu nói ở 15.1s — DB không muộn
+4,29-29,0,Who canceled the conference call?,2.56,2.54,0.86,2.02,1.7,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
+4,29-29,1,The upstairs conference room.,6.3,6.21,5.5,6.26,0.8,không muộn,,bắt đầu nói ở 6.21s — DB không muộn
+4,30-30,0,Can you please transfer the service to my new phone?,2.32,2.15,0.68,1.92,1.64,không muộn,,bắt đầu nói ở 2.15s — DB không muộn
+4,30-30,2,At the Maple Street station.,10.8,10.8,10.4,10.78,0.4,không muộn,,bắt đầu nói ở 10.8s — DB không muộn
+4,31-31,0,How was today's manufacturing seminar?,2.72,2.43,0.7,1.42,2.02,không muộn,,bắt đầu nói ở 2.43s — DB không muộn
+4,31-31,1,A new pair of shoes.,6.44,6.49,5.7,5.7,0.74,không muộn,,bắt đầu nói ở 6.49s — DB không muộn
+4,31-31,2,We didn't get there in time.,9.62,8.53,8.56,8.76,1.06,sửa start,8.28,
+4,38-40,0,"This morning I got an e-mail from Pelicon, a local producer of beauty products. They're interested in purchasing lanolin from us to use in their new line of all-natural makeup.",5.58,5.53,3.92,5.08,1.66,không muộn,,bắt đầu nói ở 5.53s — DB không muộn
+4,44-46,5,All right. I'll update the contract with the new date and e-mail it to you.,38.58,37.22,37.24,,1.34,sửa start,36.97,
+4,56-58,4,I heard you recommended working with an online influencer.,37.36,36.65,36.64,36.6,0.72,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+4,56-58,5,"Yes-Saskia Hoffman. Saskia's very knowledgeable about exercise, and lots of people use her online exercise routines. Her viewers will pay attention to what she recommends and wears.",83.76,40.14,40.16,40.94,43.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+4,62-64,3,"Oh, yes-I was out of the country at that time. Thanks for clarifying. Can you provide me with a list of all the bank fees for transactions made abroad?",33.18,32.47,32.54,31.92,0.64,sửa start,32.22,
+4,65-67,5,"Well, Xinyu Gu is a very popular pianist. And she's staying after the concert to sign autographs. Which reminds me, where should we set up the table for that?",31.46,30.62,30.62,30.54,0.84,sửa start,30.37,
+4,68-70,0,Welcome to the garden center. Can I help you?,7.22,7.14,5.9,6.76,1.32,không muộn,,bắt đầu nói ở 7.14s — DB không muộn
+4,68-70,3,"No, I haven't.",23.8,23.14,23.12,23.1,0.68,sửa start,22.89,
+4,68-70,4,"We have monthly posts on many gardening topics, and there's a recent one about growing roses.",24.98,24.53,24.56,24.1,0.42,sửa start,24.28,
+4,68-70,5,I'll check it out! Thanks so much.,30.9,30.38,30.4,30.26,0.5,sửa start,30.13,
+4,68-70,6,You're welcome. Now- let me show you our fertilizers. They're in aisle six.,73.6,33.67,32.74,32.62,40.86,cần nghe lại,,onset 33.67s không khớp align 32.74s hay ASR 32.62s; khoảng mới quá dài: 3.28 s/từ — end_time cũng sai
+4,71-73,6,Purchase your e-ticket through the mobile app as well.,28.4,27.95,28.0,27.9,0.4,sửa start,27.70,
+4,74-76,0,"Good morning, Glenman House Living Museum staff.",6.8,6.79,5.54,6.2,1.26,không muộn,,bắt đầu nói ở 6.79s — DB không muộn
+4,77-79,1,Toward the end of the session you'll each be given a list of prospective parties to call.,15.38,15.33,11.2,15.24,4.18,không muộn,,bắt đầu nói ở 15.33s — DB không muộn
+4,77-79,2,Your job's to persuade them that what you have to say is worth their while.,25.44,25.13,21.06,25.02,4.38,sửa start,24.88,
+4,89-91,0,Welcome to the annual Soundtrack Music Awards show.,6.02,5.93,4.22,5.36,1.8,không muộn,,bắt đầu nói ở 5.93s — DB không muộn
+4,95-97,4,"And fortunately, today's forecast shows a mix of sun and clouds, with no rain.",26.4,25.47,25.5,,0.9,sửa start,25.22,
+4,98-100,0,"As you all know, we're hosting a large event tonight.",7.46,7.24,4.92,6.9,2.54,không muộn,,bắt đầu nói ở 7.24s — DB không muộn
+5,1-1,1,She's looking at information on a laptop screen.,12.06,12.04,10.96,12.06,1.1,không muộn,,bắt đầu nói ở 12.04s — DB không muộn
+5,2-2,0,A worker is painting lines on the floor.,7.16,6.17,6.18,7.18,0.98,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+5,2-2,1,A worker is using a machine to move some boxes.,11.38,11.39,10.64,11.3,0.74,không muộn,,bắt đầu nói ở 11.39s — DB không muộn
+5,2-2,2,A worker is sealing some packages.,15.76,15.77,15.1,15.72,0.66,không muộn,,bắt đầu nói ở 15.77s — DB không muộn
+5,2-2,3,A worker is repairing a motor.,19.5,19.51,18.9,19.38,0.6,không muộn,,bắt đầu nói ở 19.51s — DB không muộn
+5,3-3,1,There are some people riding in an automobile.,12.08,12.1,11.5,12.04,0.58,không muộn,,bắt đầu nói ở 12.1s — DB không muộn
+5,4-4,0,The door of a clothing store has been propped open.,7.4,7.42,6.68,7.36,0.72,không muộn,,bắt đầu nói ở 7.42s — DB không muộn
+5,4-4,2,One of the customers is trying on a jacket.,16.34,16.3,15.72,16.26,0.62,không muộn,,bắt đầu nói ở 16.3s — DB không muộn
+5,5-5,0,One of the men is lowering some window shades.,7.7,7.63,6.9,7.44,0.8,không muộn,,bắt đầu nói ở 7.63s — DB không muộn
+5,5-5,2,One of the women is putting on a sweater.,16.22,16.19,15.68,16.14,0.54,không muộn,,bắt đầu nói ở 16.19s — DB không muộn
+5,6-6,0,One of the cars is stopped at a stop sign.,7.6,7.54,6.68,7.42,0.92,không muộn,,bắt đầu nói ở 7.54s — DB không muộn
+5,6-6,3,A motorcycle is going through a gate.,19.84,19.76,19.4,19.6,0.44,không muộn,,bắt đầu nói ở 19.76s — DB không muộn
+5,7-7,0,Where did you put the invoice from Stanson Incorporated?,2.1,2.08,0.68,1.81,1.42,không muộn,,bắt đầu nói ở 2.08s — DB không muộn
+5,7-7,1,"No, not yet.",7.44,7.28,6.58,7.12,0.86,không muộn,,bắt đầu nói ở 7.28s — DB không muộn
+5,8-8,0,Is the inspector coming this afternoon or tomorrow morning?,2.18,1.96,0.66,1.62,1.52,không muộn,,bắt đầu nói ở 1.96s — DB không muộn
+5,8-8,1,The exterior light isn't working.,7.34,7.25,6.56,7.06,0.78,không muộn,,bắt đầu nói ở 7.25s — DB không muộn
+5,9-9,0,What's the total cost to remodel the office lobby?,2.28,2.07,0.78,1.32,1.5,không muộn,,bắt đầu nói ở 2.07s — DB không muộn
+5,9-9,1,The view from this window is great.,6.9,6.85,6.1,6.06,0.8,không muộn,,bắt đầu nói ở 6.85s — DB không muộn
+5,9-9,3,"No, a sofa and table.",14.94,14.74,14.54,13.94,0.4,không muộn,,bắt đầu nói ở 14.74s — DB không muộn
+5,10-10,0,Are you getting the same type of desk or a different one?,2.22,2.05,1.0,1.74,1.22,không muộn,,bắt đầu nói ở 2.05s — DB không muộn
+5,11-11,0,We're taking the clients to the theater this evening.,2.34,2.18,0.74,1.18,1.6,không muộn,,bắt đầu nói ở 2.18s — DB không muộn
+5,11-11,1,He already ate.,6.7,6.71,5.96,6.08,0.74,không muộn,,bắt đầu nói ở 6.71s — DB không muộn
+5,12-12,0,When is your budget report due?,2.3,2.27,1.06,1.92,1.24,không muộn,,bắt đầu nói ở 2.27s — DB không muộn
+5,12-12,1,It was too expensive.,5.82,5.83,5.08,5.76,0.74,không muộn,,bắt đầu nói ở 5.83s — DB không muộn
+5,13-13,0,Who can I talk to about getting a membership at this fitness center?,2.42,2.41,0.8,2.0,1.62,không muộn,,bắt đầu nói ở 2.41s — DB không muộn
+5,13-13,1,A monthly bill.,7.94,8.0,7.2,7.74,0.74,không muộn,,bắt đầu nói ở 8s — DB không muộn
+5,13-13,2,Some new workout equipment.,11.18,9.97,10.02,11.12,1.16,sửa start,9.72,
+5,14-14,0,Are you planning to buy a house in the city?,2.58,2.39,0.68,1.34,1.9,không muộn,,bắt đầu nói ở 2.39s — DB không muộn
+5,14-14,2,I don't want to move.,9.96,10.0,8.94,9.1,1.02,không muộn,,bắt đầu nói ở 10s — DB không muộn
+5,15-15,0,How did you decide on a venue for the fund-raising event?,2.36,2.38,0.7,1.36,1.66,không muộn,,bắt đầu nói ở 2.38s — DB không muộn
+5,15-15,1,A small contribution.,7.46,7.49,6.7,6.7,0.76,không muộn,,bắt đầu nói ở 7.49s — DB không muộn
+5,15-15,2,I got a recommendation from a friend.,10.96,9.83,9.86,10.1,1.1,sửa start,9.58,
+5,15-15,3,To buy books for the library.,14.78,14.79,14.14,14.06,0.64,không muộn,,bắt đầu nói ở 14.79s — DB không muộn
+5,16-16,0,Could you help Ms. Ishida update the expense reports?,2.62,2.42,0.66,2.12,1.96,không muộn,,bắt đầu nói ở 2.42s — DB không muộn
+5,16-16,2,This restaurant is expensive.,10.74,10.7,10.04,10.68,0.7,không muộn,,bắt đầu nói ở 10.7s — DB không muộn
+5,17-17,0,The sales representatives really appreciated the training we led.,2.68,2.5,0.84,2.06,1.84,không muộn,,bắt đầu nói ở 2.5s — DB không muộn
+5,17-17,1,The new transportation center nearby.,7.84,7.87,7.14,7.82,0.7,không muộn,,bắt đầu nói ở 7.87s — DB không muộn
+5,18-18,0,Do you know who was promoted to senior director?,2.62,2.41,0.96,1.3,1.66,không muộn,,bắt đầu nói ở 2.41s — DB không muộn
+5,18-18,1,It hasn't been announced yet.,7.02,7.04,6.34,6.24,0.68,không muộn,,bắt đầu nói ở 7.04s — DB không muộn
+5,19-19,0,Isn't the registration deadline tomorrow?,2.7,2.48,0.82,2.0,1.88,không muộn,,bắt đầu nói ở 2.48s — DB không muộn
+5,20-20,0,Would you like some help installing that new software?,2.32,2.13,0.64,1.8,1.68,không muộn,,bắt đầu nói ở 2.13s — DB không muộn
+5,20-20,1,"No, I'm sure we sent it out yesterday.",6.86,6.63,5.82,6.54,1.04,không muộn,,bắt đầu nói ở 6.63s — DB không muộn
+5,20-20,3,He can type very fast.,15.2,15.16,14.42,15.14,0.78,không muộn,,bắt đầu nói ở 15.16s — DB không muộn
+5,21-21,0,Our factory makes the best cookies in the city.,2.78,2.47,0.76,1.4,2.02,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.47s không khớp align 0.76s hay ASR 1.4s
+5,21-21,1,A cup of sugar.,7.5,7.42,6.62,6.64,0.88,không muộn,,bắt đầu nói ở 7.42s — DB không muộn
+5,21-21,2,He worked an afternoon shift.,10.26,9.13,9.16,9.4,1.1,sửa start,8.88,
+5,22-22,0,"The fruit market is still selling mangoes, isn't it?",2.66,2.54,0.68,1.42,1.98,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
+5,22-22,1,No thanks—I don't need anything.,7.52,7.12,7.1,6.32,0.42,sửa start,6.87,
+5,22-22,3,"Yes, I bought some there yesterday.",15.14,15.04,14.36,14.26,0.78,không muộn,,bắt đầu nói ở 15.04s — DB không muộn
+5,23-23,0,Why are you staying in the office for lunch?,2.84,2.54,0.78,2.3,2.06,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
+5,23-23,1,"No, they weren't.",6.64,6.48,5.76,6.42,0.88,không muộn,,bắt đầu nói ở 6.48s — DB không muộn
+5,24-24,0,How did the company basketball team play last night?,2.82,2.53,0.86,2.1,1.96,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+5,24-24,1,"Sure, I'll have a few.",7.9,7.72,7.08,7.64,0.82,không muộn,,bắt đầu nói ở 7.72s — DB không muộn
+5,24-24,3,The game was canceled.,14.18,14.18,13.56,14.06,0.62,không muộn,,bắt đầu nói ở 14.18s — DB không muộn
+5,25-25,0,Isn't our department's quarterly report supposed to be sent out today?,2.82,2.57,0.84,2.34,1.98,không muộn,,bắt đầu nói ở 2.57s — DB không muộn
+5,25-25,1,"No, he drinks coffee.",8.7,8.58,7.92,8.5,0.78,không muộn,,bắt đầu nói ở 8.58s — DB không muộn
+5,26-26,0,Would you like a copy of the article I mentioned?,2.78,2.58,0.86,1.46,1.92,không muộn,,bắt đầu nói ở 2.58s — DB không muộn
+5,26-26,1,"No, I'm not.",7.08,6.77,6.58,5.96,0.5,sửa start,6.52,
+5,26-26,2,"Yes, I'd appreciate that.",10.02,9.95,9.2,9.04,0.82,không muộn,,bắt đầu nói ở 9.95s — DB không muộn
+5,27-27,0,Did you decide on the design for the new logo?,2.76,2.52,0.8,1.48,1.96,không muộn,,bắt đầu nói ở 2.52s — DB không muộn
+5,27-27,1,There are so many good options.,7.38,7.35,6.6,6.54,0.78,không muộn,,bắt đầu nói ở 7.35s — DB không muộn
+5,27-27,2,Please adjust that sign by the door.,12.06,12.03,11.36,11.18,0.7,không muộn,,bắt đầu nói ở 12.03s — DB không muộn
+5,28-28,0,"Our bookstore is having a sale today, isn't it?",1.96,2.43,0.78,2.18,1.18,không muộn,,bắt đầu nói ở 2.43s — DB không muộn
+5,28-28,1,"Sure, you can use my printer.",7.06,6.91,6.24,6.82,0.82,không muộn,,bắt đầu nói ở 6.91s — DB không muộn
+5,29-29,0,Why haven't the painters arrived yet?,2.3,2.5,0.78,1.44,1.52,không muộn,,bắt đầu nói ở 2.5s — DB không muộn
+5,29-29,1,The keys are in the desk drawer.,6.44,6.38,5.62,5.56,0.82,không muộn,,bắt đầu nói ở 6.38s — DB không muộn
+5,41-43,5,I also think that we should ask if our delivery service can pick up our packages twice a day instead of just once a day—maybe every morning and afternoon.,33.38,28.58,28.62,28.52,4.76,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+5,41-43,6,I'll call them today.,71.6,39.42,39.44,39.3,32.16,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+5,47-49,0,"Thanks for coming in, Marcos. I just got the results from the consulting firm we hired. They have some ideas about how we can increase sales of our denim blue jeans.",6.12,6.04,4.06,5.64,2.06,không muộn,,bắt đầu nói ở 6.04s — DB không muộn
+5,53-55,0,The first item on today's meeting agenda is our bid to renovate the Morrisville Bridge. Do we have an update on that yet?,7.4,7.3,3.72,6.76,3.68,không muộn,,bắt đầu nói ở 7.3s — DB không muộn
+5,53-55,1,Yes—unfortunately we didn't get the contract.,16.64,,15.68,16.5,0.96,cần nghe lại,,không tìm được chỗ bắt đầu nói
+5,65-67,2,We could start using bicycle delivery whenever possible. That should help.,44.82,36.39,36.42,36.26,8.4,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+5,65-67,3,Good idea. I'll talk to our drivers to see who's willing to switch to bicycle deliveries for customers nearby. Some people really like the exercise.,49.48,41.36,41.36,41.32,8.12,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+5,71-73,0,Welcome to the monthly company staff meeting.,6.76,6.7,4.94,6.26,1.82,không muộn,,bắt đầu nói ở 6.7s — DB không muộn
+5,77-79,0,Welcome to the culinary tour of downtown Springfield.,6.36,6.3,4.42,5.8,1.94,không muộn,,bắt đầu nói ở 6.3s — DB không muộn
+5,83-85,0,Thank you for allowing me the opportunity to speak at this city council meeting.,6.5,6.46,4.76,6.1,1.74,không muộn,,bắt đầu nói ở 6.46s — DB không muộn
+5,86-88,7,"However, the animal-themed prints you sent—the thing is, we have a full supply of those in stock.",28.22,27.63,27.66,26.98,0.56,sửa start,27.38,
+5,89-91,0,"In local news, the opening of the Stewart Performing Arts Center tomorrow night has attracted widespread attention.",5.88,5.83,4.98,5.3,0.9,không muộn,,bắt đầu nói ở 5.83s — DB không muộn
+5,89-91,1,This state-of-the-art center holds three different theaters.,13.2,12.48,12.68,12.44,0.52,sửa start,12.23,
+5,98-100,0,"In today's meeting, we'll discuss where we are in our software development process for Universal Banking.",6.9,6.87,0.74,6.32,6.16,không muộn,,bắt đầu nói ở 6.87s — DB không muộn
+6,1-1,0,A restaurant buffet is filled with food.,6.9,5.99,4.86,6.94,2.04,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 5.99s không khớp align 4.86s hay ASR 6.94s
+6,2-2,1,He's lifting up a machine.,10.39,10.65,9.5,10.56,0.89,không muộn,,bắt đầu nói ở 10.65s — DB không muộn
+6,3-3,0,A man is tying his shoe.,7.12,6.13,6.14,7.0,0.98,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+6,3-3,1,A woman is looking through her purse.,10.9,10.9,10.14,10.84,0.76,không muộn,,bắt đầu nói ở 10.9s — DB không muộn
+6,4-4,1,She's holding a water bottle.,11.08,11.06,9.96,10.8,1.12,không muộn,,bắt đầu nói ở 11.06s — DB không muộn
+6,5-5,0,A woman is lifting a suitcase onto a counter.,7.7,6.7,6.7,7.62,1.0,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+6,5-5,1,A woman is writing on a piece of paper.,12.7,12.74,11.78,12.66,0.92,không muộn,,bắt đầu nói ở 12.74s — DB không muộn
+6,5-5,2,A woman is leaning against a glass door.,16.86,16.87,16.22,16.82,0.64,không muộn,,bắt đầu nói ở 16.87s — DB không muộn
+6,6-6,0,Some paintings have been hung above a sofa.,7.5,7.43,6.7,7.3,0.8,không muộn,,bắt đầu nói ở 7.43s — DB không muộn
+6,7-7,0,How long will the renovations take?,2.32,2.1,0.78,1.16,1.54,không muộn,,bắt đầu nói ở 2.1s — DB không muộn
+6,7-7,3,I finished that book.,11.56,11.58,10.92,10.8,0.64,không muộn,,bắt đầu nói ở 11.58s — DB không muộn
+6,9-9,0,Hasn't our merchandise arrived yet?,2.4,2.08,0.82,1.24,1.58,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.08s không khớp align 0.82s hay ASR 1.24s
+6,9-9,2,I can drive you there.,9.8,9.81,9.46,8.86,0.34,không muộn,,bắt đầu nói ở 9.81s — DB không muộn
+6,10-10,0,Who's buying beverages for the retreat?,2.12,2.08,1.06,1.74,1.06,không muộn,,bắt đầu nói ở 2.08s — DB không muộn
+6,10-10,1,At the café.,5.96,5.91,5.16,5.86,0.8,không muộn,,bắt đầu nói ở 5.91s — DB không muộn
+6,10-10,2,I parked the car by the tree.,8.76,8.74,8.08,8.7,0.68,không muộn,,bắt đầu nói ở 8.74s — DB không muộn
+6,11-11,0,Why is the reception at a different location?,2.22,2.1,0.76,1.76,1.46,không muộn,,bắt đầu nói ở 2.1s — DB không muộn
+6,11-11,1,"Sure, let's go greet the guests.",6.72,6.54,5.74,6.44,0.98,không muộn,,bắt đầu nói ở 6.54s — DB không muộn
+6,11-11,2,Because the conference room wasn't big enough.,10.82,10.79,10.06,10.72,0.76,không muộn,,bắt đầu nói ở 10.79s — DB không muộn
+6,11-11,3,"Yes, I can hear you very well-thank you.",15.04,14.95,14.24,14.94,0.8,không muộn,,bắt đầu nói ở 14.95s — DB không muộn
+6,12-12,0,Would you like me to process your travel voucher?,2.44,2.21,1.04,1.38,1.4,không muộn,,bắt đầu nói ở 2.21s — DB không muộn
+6,12-12,1,I didn't know that.,6.82,6.76,6.04,5.96,0.78,không muộn,,bắt đầu nói ở 6.76s — DB không muộn
+6,13-13,0,How far away is Azuma's Dry Cleaning Company?,2.7,2.48,0.68,1.32,2.02,không muộn,,bắt đầu nói ở 2.48s — DB không muộn
+6,13-13,1,"No, not until I've seen it.",7.08,6.89,6.14,6.08,0.94,không muộn,,bắt đầu nói ở 6.89s — DB không muộn
+6,13-13,2,"Oh, it's only a few minutes' walk from here.",10.7,10.6,9.94,9.72,0.76,không muộn,,bắt đầu nói ở 10.6s — DB không muộn
+6,13-13,3,Five dollars per shirt.,15.06,14.94,14.26,,0.8,không muộn,,bắt đầu nói ở 14.94s — DB không muộn
+6,14-14,0,Do we have the registration forms ready for the students?,2.54,2.35,0.78,1.32,1.76,không muộn,,bắt đầu nói ở 2.35s — DB không muộn
+6,14-14,1,The manager's signature.,7.8,7.68,6.9,6.8,0.9,không muộn,,bắt đầu nói ở 7.68s — DB không muộn
+6,15-15,0,I could provide you with a copy of the lease.,2.52,2.35,0.74,1.94,1.78,không muộn,,bắt đầu nói ở 2.35s — DB không muộn
+6,15-15,1,Great-I need it for my records.,7.34,6.52,6.52,7.34,0.82,sửa start,6.27,
+6,16-16,1,A few replacement pieces.,7.54,7.47,6.66,6.68,0.88,không muộn,,bắt đầu nói ở 7.47s — DB không muộn
+6,16-16,2,"Right now, there are five.",11.06,9.82,9.84,10.08,1.22,sửa start,9.57,
+6,16-16,3,Can you change the channel?,14.3,14.28,13.32,13.56,0.98,không muộn,,bắt đầu nói ở 14.28s — DB không muộn
+6,17-17,0,When was the last time you traveled for business?,2.14,2.53,0.9,1.44,1.24,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+6,18-18,0,Should I order the parts online or over the phone?,2.58,2.33,0.98,2.06,1.6,không muộn,,bắt đầu nói ở 2.33s — DB không muộn
+6,18-18,1,Just half-thank you.,7.54,7.48,6.74,7.42,0.8,không muộn,,bắt đầu nói ở 7.48s — DB không muộn
+6,18-18,2,"No, I've never been there.",10.66,10.58,10.16,10.5,0.5,không muộn,,bắt đầu nói ở 10.58s — DB không muộn
+6,19-19,0,Where should I pick up my conference badge?,2.54,2.46,0.84,1.4,1.7,không muộn,,bắt đầu nói ở 2.46s — DB không muộn
+6,19-19,1,We signed the lease.,6.76,6.81,6.0,5.92,0.76,không muộn,,bắt đầu nói ở 6.81s — DB không muộn
+6,19-19,2,"About 10,000 units per week.",10.56,10.07,10.08,9.04,0.48,sửa start,9.82,
+6,20-20,0,Isn't the computer network running a bit slow?,2.16,2.03,0.82,1.28,1.34,không muộn,,bắt đầu nói ở 2.03s — DB không muộn
+6,20-20,1,To an upgraded service.,6.14,6.11,5.46,5.3,0.68,không muộn,,bắt đầu nói ở 6.11s — DB không muộn
+6,21-21,0,How do you like this office space?,2.58,2.39,0.8,2.3,1.78,không muộn,,bắt đầu nói ở 2.39s — DB không muộn
+6,21-21,1,An afternoon appointment.,6.4,6.32,5.54,6.18,0.86,không muộn,,bắt đầu nói ở 6.32s — DB không muộn
+6,22-22,0,You can use the company van to make your deliveries.,2.58,2.46,0.8,1.42,1.78,không muộn,,bắt đầu nói ở 2.46s — DB không muộn
+6,22-22,1,"OK, I'll go get the key.",7.26,7.23,6.44,6.34,0.82,không muộn,,bắt đầu nói ở 7.23s — DB không muộn
+6,22-22,2,A clothing manufacturer.,10.86,10.85,10.16,9.98,0.7,không muộn,,bắt đầu nói ở 10.85s — DB không muộn
+6,23-23,0,Isn't the city council meeting tonight?,2.7,2.47,0.66,1.48,2.04,không muộn,,bắt đầu nói ở 2.47s — DB không muộn
+6,23-23,1,Thanks that would be great.,6.7,6.57,5.7,5.74,1.0,không muộn,,bắt đầu nói ở 6.57s — DB không muộn
+6,23-23,3,Did you check their Web site?,13.64,13.62,12.94,12.84,0.7,không muộn,,bắt đầu nói ở 13.62s — DB không muộn
+6,24-24,0,Could you look at the revised logo tomorrow?,2.66,2.48,0.7,1.48,1.96,không muộn,,bắt đầu nói ở 2.48s — DB không muộn
+6,24-24,1,A color printer.,6.96,6.9,6.08,6.12,0.88,không muộn,,bắt đầu nói ở 6.9s — DB không muộn
+6,24-24,2,The score was tied.,9.74,8.6,8.62,8.88,1.12,sửa start,8.35,
+6,24-24,3,I have time now.,12.82,12.84,12.16,12.02,0.66,không muộn,,bắt đầu nói ở 12.84s — DB không muộn
+6,25-25,0,Is the business local or national?,2.66,2.5,0.94,2.34,1.72,không muộn,,bắt đầu nói ở 2.5s — DB không muộn
+6,25-25,1,At the community center nearby.,6.7,6.7,5.88,6.66,0.82,không muộn,,bắt đầu nói ở 6.7s — DB không muộn
+6,25-25,2,We have stores in every province.,10.68,10.66,9.92,10.6,0.76,không muộn,,bắt đầu nói ở 10.66s — DB không muộn
+6,26-26,0,How do you make sure your products will sell well?,2.52,2.45,0.78,2.16,1.74,không muộn,,bắt đầu nói ở 2.45s — DB không muộn
+6,26-26,1,"No, I bought it last month.",7.28,7.12,6.34,7.04,0.94,không muộn,,bắt đầu nói ở 7.12s — DB không muộn
+6,26-26,2,I conduct market research.,10.8,10.82,10.42,10.8,0.38,không muộn,,bắt đầu nói ở 10.82s — DB không muộn
+6,27-27,0,Who will fill the open manager position?,2.58,2.43,0.78,2.1,1.8,không muộn,,bắt đầu nói ở 2.43s — DB không muộn
+6,27-27,2,"I'd like a refill on my coffee, please.",10.6,10.6,9.9,10.54,0.7,không muộn,,bắt đầu nói ở 10.6s — DB không muộn
+6,28-28,1,The price lists for new products.,6.98,6.89,6.18,6.08,0.8,không muộn,,bắt đầu nói ở 6.89s — DB không muộn
+6,30-30,0,Shouldn't we update our security protocol?,2.64,2.3,1.0,1.22,1.64,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.3s không khớp align 1s hay ASR 1.22s
+6,30-30,2,We have a good plan in place.,9.72,9.66,8.92,8.76,0.8,không muộn,,bắt đầu nói ở 9.66s — DB không muộn
+6,30-30,3,"No, it wasn't.",13.62,13.49,13.3,12.7,0.32,không muộn,,bắt đầu nói ở 13.49s — DB không muộn
+6,31-31,1,"Yes, Mr. Tamura is from Kyoto.",7.42,7.27,6.54,6.54,0.88,không muộn,,bắt đầu nói ở 7.27s — DB không muộn
+6,31-31,3,That was a long baseball game.,16.06,16.04,15.72,15.22,0.34,không muộn,,bắt đầu nói ở 16.04s — DB không muộn
+6,41-43,1,"Sorry, I'm helping another patron on the phone right now. Let me get one of my coworkers for you.",61.9,14.83,14.94,14.8,46.96,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+6,47-49,5,I'll be sure to check it out.,35.74,34.49,34.52,34.38,1.22,sửa start,34.24,
+6,50-52,5,"Oh, that is exciting!",29.32,26.23,26.22,26.16,3.1,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+6,50-52,6,Do you know if we'll be able to camp in the reserve overnight?,33.62,28.45,28.44,27.68,5.18,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+6,50-52,7,"Yes, that's an option. But I don't know if all our staff have tents and camping equipment. I'm sure we can rent enough for everybody, though. Let me look into it.",37.44,31.85,31.84,31.82,5.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+6,56-58,2,"Yeah-Sabine can't make it, so the project coordinator asked me to take her place.",17.06,16.02,16.08,16.84,0.98,sửa start,15.77,
+6,74-76,0,Welcome to this course about computer programming.,6.22,5.94,4.62,5.54,1.6,không muộn,,bắt đầu nói ở 5.94s — DB không muộn
+6,80-82,0,Welcome to another segment of Belmack City Business News.,5.44,5.41,4.34,5.0,1.1,không muộn,,bắt đầu nói ở 5.41s — DB không muộn
+6,80-82,5,"Unfortunately, lease costs for storage space in the area are too high for many shipping companies to afford.",32.68,32.28,32.3,32.24,0.38,sửa start,32.03,
+6,89-91,0,"Good morning, everyone.",6.46,6.4,4.56,6.0,1.9,không muộn,,bắt đầu nói ở 6.4s — DB không muộn
+6,95-97,0,Are you looking for a convenient way to get around the city?,6.78,6.74,4.7,6.28,2.08,không muộn,,bắt đầu nói ở 6.74s — DB không muộn
+6,95-97,4,"This easy-to-use service will take you to any destination within the service area, like your doctor's office or the library.",28.18,27.49,27.5,26.7,0.68,sửa start,27.24,
+7,1-1,1,She's looking at a newspaper.,10.86,9.68,9.74,10.58,1.12,sửa start,9.43,
+7,2-2,0,A tire is leaning against a car.,7.04,7.3,6.5,7.0,0.54,không muộn,,bắt đầu nói ở 7.3s — DB không muộn
+7,2-2,1,A chain has been left on the ground.,11.26,10.14,10.2,11.2,1.06,sửa start,9.89,
+7,3-3,1,He's spraying cleaning liquid onto a glass door.,12.02,12.03,10.96,12.0,1.06,không muộn,,bắt đầu nói ở 12.03s — DB không muộn
+7,4-4,0,The woman is walking across the street.,7.38,7.28,6.52,7.2,0.86,không muộn,,bắt đầu nói ở 7.28s — DB không muộn
+7,4-4,1,The woman is repairing a bicycle.,11.52,11.55,10.8,11.44,0.72,không muộn,,bắt đầu nói ở 11.55s — DB không muộn
+7,4-4,2,The woman is wearing a helmet.,15.44,15.46,14.78,15.34,0.66,không muộn,,bắt đầu nói ở 15.46s — DB không muộn
+7,4-4,3,The woman is getting into a vehicle.,19.08,19.11,18.42,18.88,0.66,không muộn,,bắt đầu nói ở 19.11s — DB không muộn
+7,7-7,0,Where do I sign this contract?,2.5,2.21,0.78,1.1,1.72,không muộn,,bắt đầu nói ở 2.21s — DB không muộn
+7,7-7,1,A large account.,5.96,5.87,5.06,5.04,0.9,không muộn,,bắt đầu nói ở 5.87s — DB không muộn
+7,7-7,2,Here at the bottom.,8.88,8.87,7.76,7.98,1.12,không muộn,,bắt đầu nói ở 8.87s — DB không muộn
+7,7-7,3,Hang it on the wall.,11.82,11.78,10.78,11.0,1.04,không muộn,,bắt đầu nói ở 11.78s — DB không muộn
+7,8-8,1,There's parking available on the next street.,6.16,6.13,5.32,6.04,0.84,không muộn,,bắt đầu nói ở 6.13s — DB không muộn
+7,9-9,0,When did the conference committee meeting get canceled?,2.18,2.11,0.98,1.86,1.2,không muộn,,bắt đầu nói ở 2.11s — DB không muộn
+7,10-10,1,I have a layover in Dubai.,6.74,6.7,5.96,6.54,0.78,không muộn,,bắt đầu nói ở 6.7s — DB không muộn
+7,11-11,0,Our team's going to inspect the construction site tomorrow.,2.6,2.32,0.74,1.18,1.86,không muộn,,bắt đầu nói ở 2.32s — DB không muộn
+7,11-11,1,His name is Alberto.,7.3,7.21,6.46,6.38,0.84,không muộn,,bắt đầu nói ở 7.21s — DB không muộn
+7,11-11,2,The office down the hall.,10.7,10.6,9.9,9.7,0.8,không muộn,,bắt đầu nói ở 10.6s — DB không muộn
+7,12-12,0,Why does the Moon look so close in this photograph?,2.44,2.28,1.02,1.32,1.42,không muộn,,bắt đầu nói ở 2.28s — DB không muộn
+7,12-12,1,Are there seats available for the astronomy presentation?,6.96,6.93,6.2,6.14,0.76,không muộn,,bắt đầu nói ở 6.93s — DB không muộn
+7,13-13,0,How do I log on to this computer?,1.88,2.5,0.78,1.32,1.1,không muộn,,bắt đầu nói ở 2.5s — DB không muộn
+7,13-13,1,Some printer ink and paper.,5.98,6.35,5.66,5.5,0.32,không muộn,,bắt đầu nói ở 6.35s — DB không muộn
+7,14-14,0,When does the property manager arrive?,2.54,2.33,0.76,2.04,1.78,không muộn,,bắt đầu nói ở 2.33s — DB không muộn
+7,14-14,1,On Whitmer Boulevard.,6.42,6.38,5.7,6.36,0.72,không muộn,,bắt đầu nói ở 6.38s — DB không muộn
+7,15-15,0,Let's have dinner at the French restaurant tonight.,2.14,2.43,0.68,1.38,1.46,không muộn,,bắt đầu nói ở 2.43s — DB không muộn
+7,15-15,1,"OK, I'll see you there.",6.92,6.78,6.06,5.96,0.86,không muộn,,bắt đầu nói ở 6.78s — DB không muộn
+7,16-16,0,Who's supervising the production line?,2.9,2.59,0.84,2.06,2.06,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.59s không khớp align 0.84s hay ASR 2.06s
+7,16-16,1,Please sign on the line.,6.48,6.51,5.88,6.42,0.6,không muộn,,bắt đầu nói ở 6.51s — DB không muộn
+7,16-16,3,A 45-minute lunch break.,12.92,12.69,12.06,12.64,0.86,không muộn,,bắt đầu nói ở 12.69s — DB không muộn
+7,17-17,0,When will the reception for the artists start?,2.56,2.53,1.02,2.02,1.54,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+7,17-17,1,After the lecture.,6.82,6.76,6.08,6.62,0.74,không muộn,,bắt đầu nói ở 6.76s — DB không muộn
+7,17-17,3,At the conference center.,12.56,12.55,11.96,12.52,0.6,không muộn,,bắt đầu nói ở 12.55s — DB không muộn
+7,18-18,0,How often should I submit my travel expenses?,2.78,2.45,0.82,1.34,1.96,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.45s không khớp align 0.82s hay ASR 1.34s
+7,18-18,1,"Sure, I'll trim the branches a little.",7.56,7.41,6.6,6.48,0.96,không muộn,,bắt đầu nói ở 7.41s — DB không muộn
+7,18-18,3,An updated owner's manual.,14.38,14.36,13.72,13.58,0.66,không muộn,,bắt đầu nói ở 14.36s — DB không muộn
+7,19-19,0,Our print shop is going to have a sale on shirts.,2.04,2.44,1.0,1.42,1.04,không muộn,,bắt đầu nói ở 2.44s — DB không muộn
+7,19-19,3,OK-when will it start?,15.32,14.62,14.62,14.9,0.7,sửa start,14.37,
+7,20-20,0,"You already bought a new part for the sprinkler system, right?",2.34,2.19,0.78,1.2,1.56,không muộn,,bắt đầu nói ở 2.19s — DB không muộn
+7,20-20,1,Check the weather forecast.,7.34,7.32,6.6,6.52,0.74,không muộn,,bắt đầu nói ở 7.32s — DB không muộn
+7,20-20,2,"Yes, I did that last week.",10.74,10.68,10.02,9.8,0.72,không muộn,,bắt đầu nói ở 10.68s — DB không muộn
+7,21-21,0,How many lamps are made at the factory every day?,2.66,2.48,0.82,1.38,1.84,không muộn,,bắt đầu nói ở 2.48s — DB không muộn
+7,22-22,0,"Are you going out to eat, or did you bring your lunch from home?",2.8,2.67,0.82,1.4,1.98,không muộn,,bắt đầu nói ở 2.67s — DB không muộn
+7,22-22,1,Right next to my office.,7.86,7.8,7.08,6.96,0.78,không muộn,,bắt đầu nói ở 7.8s — DB không muộn
+7,22-22,3,It's in the microwave.,14.8,14.77,14.06,14.0,0.74,không muộn,,bắt đầu nói ở 14.77s — DB không muộn
+7,23-23,0,Can I place an order online?,2.62,2.59,0.8,1.48,1.82,không muộn,,bắt đầu nói ở 2.59s — DB không muộn
+7,23-23,1,The post office on Main Street.,6.18,6.15,5.38,5.3,0.8,không muộn,,bắt đầu nói ở 6.15s — DB không muộn
+7,23-23,3,"No, he put it in the filing cabinet.",14.52,14.4,14.2,13.62,0.32,không muộn,,bắt đầu nói ở 14.4s — DB không muộn
+7,24-24,0,Shouldn't the new floor plan be finished today?,2.94,2.61,0.86,2.32,2.08,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+7,24-24,1,I enjoyed the movie.,7.32,7.29,6.52,7.2,0.8,không muộn,,bắt đầu nói ở 7.29s — DB không muộn
+7,24-24,2,My team is short-staffed right now.,10.76,10.73,10.04,10.66,0.72,không muộn,,bắt đầu nói ở 10.73s — DB không muộn
+7,25-25,0,Who's the new head of the legal department?,2.72,2.53,0.86,2.3,1.86,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+7,25-25,1,"No, I think it's on the second floor.",6.8,6.65,5.92,6.52,0.88,không muộn,,bắt đầu nói ở 6.65s — DB không muộn
+7,26-26,0,Who's scheduled to repair the water heater in building two?,2.88,2.6,0.78,2.16,2.1,không muộn,,bắt đầu nói ở 2.6s — DB không muộn
+7,26-26,1,There's a bottle of water in the refrigerator.,7.94,7.97,7.16,7.76,0.78,không muộn,,bắt đầu nói ở 7.97s — DB không muộn
+7,27-27,0,Why were the sales figures so high last quarter?,2.92,2.6,0.92,1.5,2.0,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.6s không khớp align 0.92s hay ASR 1.5s
+7,27-27,1,I think that the storefront is vacant.,7.5,7.52,6.78,6.7,0.72,không muộn,,bắt đầu nói ở 7.52s — DB không muộn
+7,28-28,0,Ms. Martin is demonstrating the new software at the conference.,2.58,2.35,0.78,,1.8,không muộn,,bắt đầu nói ở 2.35s — DB không muộn
+7,28-28,1,I live on Vine Street.,7.58,7.57,6.82,6.78,0.76,không muộn,,bắt đầu nói ở 7.57s — DB không muộn
+7,29-29,0,Let's hire Johnson Construction to fix this roof.,2.2,2.39,0.8,1.48,1.4,không muộn,,bắt đầu nói ở 2.39s — DB không muộn
+7,29-29,1,They don't seem to be.,7.24,7.25,6.5,6.44,0.74,không muộn,,bắt đầu nói ở 7.25s — DB không muộn
+7,29-29,2,They can't start until next month.,10.42,10.44,9.74,9.54,0.68,không muộn,,bắt đầu nói ở 10.44s — DB không muộn
+7,30-30,0,"Your travel itinerary says you're going to Seattle, right?",2.44,2.08,1.02,1.22,1.42,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.08s không khớp align 1.02s hay ASR 1.22s
+7,30-30,1,But I'm going to London.,7.66,7.66,6.9,6.78,0.76,không muộn,,bắt đầu nói ở 7.66s — DB không muộn
+7,30-30,2,"Turn left at the light, please.",11.26,11.22,10.48,10.34,0.78,không muộn,,bắt đầu nói ở 11.22s — DB không muộn
+7,30-30,3,An e-mail update.,14.74,14.65,14.04,13.88,0.7,không muộn,,bắt đầu nói ở 14.65s — DB không muộn
+7,31-31,0,Won't theater tickets become available later today?,2.22,2.44,0.94,2.06,1.28,không muộn,,bắt đầu nói ở 2.44s — DB không muộn
+7,31-31,1,A new pair of work boots.,7.1,7.04,6.18,6.7,0.92,không muộn,,bắt đầu nói ở 7.04s — DB không muộn
+7,31-31,2,It should say on their Web site.,10.54,10.56,9.86,10.54,0.68,không muộn,,bắt đầu nói ở 10.56s — DB không muộn
+7,44-46,0,"On today's podcast, we have Gabriela Espinoza, a former history professor who focuses on ancient civilizations. Recently, however, she left the university for another position—tell us about that.",6.22,6.12,5.12,5.82,1.1,không muộn,,bắt đầu nói ở 6.12s — DB không muộn
+7,71-73,0,"Good morning, everyone.",6.64,6.65,5.8,6.14,0.84,không muộn,,bắt đầu nói ở 6.65s — DB không muộn
+7,86-88,0,I have good news!,5.94,6.33,4.54,5.78,1.4,không muộn,,bắt đầu nói ở 6.33s — DB không muộn
+7,89-91,0,A market research firm has reported that the department store chain Willoughby is partnering with the beauty retailer Rossi.,5.8,5.81,4.68,5.22,1.12,không muộn,,bắt đầu nói ở 5.81s — DB không muộn
+7,95-97,0,Thank you for attending.,6.32,6.29,0.78,5.94,5.54,không muộn,,bắt đầu nói ở 6.29s — DB không muộn
+7,98-100,7,"00, so I'd like to order tulips in that price range.",34.42,31.65,30.8,,3.62,cần nghe lại,,"onset 31.65s không khớp align 30.8s hay ASR —s; transcript hỏng (tách tại ""$250.00"")"
+8,1-1,0,A wooden post is being painted.,6.98,5.99,6.0,7.02,0.98,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+8,1-1,1,Flowerpots have been placed under some chairs.,11.36,10.89,9.9,11.18,1.46,sửa start,10.64,
+8,1-1,2,A rug has spread out on the ground.,15.48,15.46,14.8,15.44,0.68,không muộn,,bắt đầu nói ở 15.46s — DB không muộn
+8,2-2,1,A woman is walking past a pedestrian crosswalk.,11.82,11.82,11.14,11.82,0.68,không muộn,,bắt đầu nói ở 11.82s — DB không muộn
+8,3-3,0,A man is standing behind a counter.,7.38,6.37,6.36,7.32,1.02,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+8,3-3,1,A man is setting up a display of items.,11.3,11.28,10.5,11.24,0.8,không muộn,,bắt đầu nói ở 11.28s — DB không muộn
+8,4-4,1,A light fixture is hanging from the ceiling.,11.8,11.79,11.08,11.78,0.72,không muộn,,bắt đầu nói ở 11.79s — DB không muộn
+8,5-5,0,The women are assembling a shelving unit.,7.68,6.48,6.46,7.44,1.22,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+8,6-6,1,They're sitting in a park.,10.94,10.93,9.86,10.92,1.08,không muộn,,bắt đầu nói ở 10.93s — DB không muộn
+8,7-7,0,Can I pick up my prescription glasses here?,2.3,2.13,0.6,2.0,1.7,không muộn,,bắt đầu nói ở 2.13s — DB không muộn
+8,7-7,1,It's a new magazine subscription.,6.44,6.44,5.62,6.3,0.82,không muộn,,bắt đầu nói ở 6.44s — DB không muộn
+8,8-8,0,Have you signed up for delivery updates?,2.2,2.01,0.66,1.14,1.54,không muộn,,bắt đầu nói ở 2.01s — DB không muộn
+8,8-8,1,I'm sorry-you can't park here.,6.34,5.89,5.88,5.08,0.46,sửa start,5.64,
+8,8-8,2,"Yes, I get alerts on my phone.",10.32,10.21,9.54,9.32,0.78,không muộn,,bắt đầu nói ở 10.21s — DB không muộn
+8,9-9,1,"No, I already have plans.",6.34,6.16,5.3,6.12,1.04,không muộn,,bắt đầu nói ở 6.16s — DB không muộn
+8,9-9,2,"Yes, eight o'clock is fine.",10.82,10.14,9.6,10.14,1.22,sửa start,9.89,
+8,9-9,3,I saved them on my laptop.,14.02,14.04,13.62,14.0,0.4,không muộn,,bắt đầu nói ở 14.04s — DB không muộn
+8,10-10,0,Does Dr. Cao schedule appointments in the morning or in the afternoon?,2.32,2.08,0.98,1.78,1.34,không muộn,,bắt đầu nói ở 2.08s — DB không muộn
+8,10-10,1,She leaves at noon.,8.2,8.1,7.38,7.94,0.82,không muộn,,bắt đầu nói ở 8.1s — DB không muộn
+8,11-11,0,Can you bring these agendas to the staff meeting?,2.6,2.35,0.76,1.94,1.84,không muộn,,bắt đầu nói ở 2.35s — DB không muộn
+8,11-11,1,The new travel agency.,7.14,7.14,6.4,7.04,0.74,không muộn,,bắt đầu nói ở 7.14s — DB không muộn
+8,12-12,0,It'll be nice to get a bonus this month.,2.28,2.16,1.02,1.8,1.26,không muộn,,bắt đầu nói ở 2.16s — DB không muộn
+8,12-12,1,My office wasn't cleaned last night.,6.6,6.54,5.86,6.42,0.74,không muộn,,bắt đầu nói ở 6.54s — DB không muộn
+8,13-13,0,When is the city council going to vote on the new housing development?,2.7,2.57,0.7,2.18,2.0,không muộn,,bắt đầu nói ở 2.57s — DB không muộn
+8,13-13,1,"Yes, I'm going.",8.0,7.85,7.2,7.78,0.8,không muộn,,bắt đầu nói ở 7.85s — DB không muộn
+8,13-13,2,It's near the library.,10.88,10.88,10.12,10.86,0.76,không muộn,,bắt đầu nói ở 10.88s — DB không muộn
+8,13-13,3,At the next meeting.,13.96,13.93,13.28,13.88,0.68,không muộn,,bắt đầu nói ở 13.93s — DB không muộn
+8,14-14,0,Why can't we keep the factory open for an overnight shift?,2.72,2.48,0.92,2.18,1.8,không muộn,,bắt đầu nói ở 2.48s — DB không muộn
+8,14-14,2,"No, production costs haven't increased.",12.48,12.35,12.08,12.34,0.4,không muộn,,bắt đầu nói ở 12.35s — DB không muộn
+8,15-15,0,I put out more of our informational brochures in the waiting room.,2.06,2.42,0.68,1.34,1.38,không muộn,,bắt đầu nói ở 2.42s — DB không muộn
+8,15-15,1,Thanks for doing that.,8.1,8.09,7.38,7.26,0.72,không muộn,,bắt đầu nói ở 8.09s — DB không muộn
+8,15-15,2,"No, he's still waiting.",11.2,11.1,10.64,10.22,0.56,không muộn,,bắt đầu nói ở 11.1s — DB không muộn
+8,16-16,0,What's the starting pay rate for a software engineer at your firm?,2.9,2.66,0.84,2.18,2.06,không muộn,,bắt đầu nói ở 2.66s — DB không muộn
+8,17-17,0,"That flight is scheduled to take off at seven P.M., right?",2.86,2.62,0.84,1.42,2.02,không muộn,,bắt đầu nói ở 2.62s — DB không muộn
+8,17-17,3,In the lower right corner.,14.98,14.96,14.28,14.2,0.7,không muộn,,bắt đầu nói ở 14.96s — DB không muộn
+8,18-18,0,Should we take the client to Asako's Steakhouse?,2.58,2.39,0.98,2.1,1.6,không muộn,,bắt đầu nói ở 2.39s — DB không muộn
+8,19-19,0,How often do you travel abroad?,1.94,2.44,0.9,1.4,1.04,không muộn,,bắt đầu nói ở 2.44s — DB không muộn
+8,19-19,1,An overseas assignment.,5.68,5.98,5.26,5.16,0.42,không muộn,,bắt đầu nói ở 5.98s — DB không muộn
+8,20-20,1,"No, I haven't eaten yet.",6.94,6.76,6.02,6.68,0.92,không muộn,,bắt đầu nói ở 6.76s — DB không muộn
+8,20-20,2,"Yes, we already have a lot of orders.",10.46,10.37,9.7,10.36,0.76,không muộn,,bắt đầu nói ở 10.37s — DB không muộn
+8,21-21,0,How many books are in this mystery series?,2.72,2.49,0.74,1.4,1.98,không muộn,,bắt đầu nói ở 2.49s — DB không muộn
+8,21-21,1,There are seven.,7.04,6.96,6.24,6.2,0.8,không muộn,,bắt đầu nói ở 6.96s — DB không muộn
+8,21-21,2,You can book an appointment online.,9.76,9.75,9.06,8.84,0.7,không muộn,,bắt đầu nói ở 9.75s — DB không muộn
+8,22-22,0,Can we finalize the budget today?,2.7,2.51,0.72,1.88,1.98,không muộn,,bắt đầu nói ở 2.51s — DB không muộn
+8,22-22,1,We haven't received the report from marketing.,6.32,6.32,5.6,6.18,0.72,không muộn,,bắt đầu nói ở 6.32s — DB không muộn
+8,22-22,3,A representative from the bank.,14.64,14.6,14.12,14.58,0.52,không muộn,,bắt đầu nói ở 14.6s — DB không muộn
+8,23-23,0,Who should I talk to about moving some bookshelves?,2.54,2.52,0.8,1.7,1.74,không muộn,,bắt đầu nói ở 2.52s — DB không muộn
+8,23-23,1,Mr. Kim can help you.,7.14,7.04,6.3,6.94,0.84,không muộn,,bắt đầu nói ở 7.04s — DB không muộn
+8,23-23,2,"Yes, I moved to Chicago a few years ago.",10.62,10.5,9.8,10.44,0.82,không muộn,,bắt đầu nói ở 10.5s — DB không muộn
+8,24-24,0,Wouldn't you rather lead the workshop next week?,2.8,2.56,0.68,1.76,2.12,không muộn,,bắt đầu nói ở 2.56s — DB không muộn
+8,24-24,1,Twenty dollars per person.,7.28,7.18,6.5,,0.78,không muộn,,bắt đầu nói ở 7.18s — DB không muộn
+8,25-25,0,When does the bookstore open?,2.58,2.54,0.8,1.48,1.78,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
+8,25-25,1,A new travel guide.,6.16,6.04,5.24,5.24,0.92,không muộn,,bắt đầu nói ở 6.04s — DB không muộn
+8,25-25,2,At eight o'clock.,9.18,8.03,8.08,8.32,1.1,sửa start,7.78,
+8,26-26,0,Can't you help me install this furniture?,2.76,2.53,0.64,2.16,2.12,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+8,26-26,1,"Sure, if you can wait a minute.",6.72,6.53,5.82,6.44,0.9,không muộn,,bắt đầu nói ở 6.53s — DB không muộn
+8,27-27,0,Where can I find the eating utensils?,2.94,2.6,0.8,1.48,2.14,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.6s không khớp align 0.8s hay ASR 1.48s
+8,27-27,1,The meal was delicious.,6.88,6.85,6.14,6.06,0.74,không muộn,,bắt đầu nói ở 6.85s — DB không muộn
+8,27-27,2,In the drawer next to the sink.,10.32,10.34,9.66,9.48,0.66,không muộn,,bắt đầu nói ở 10.34s — DB không muộn
+8,28-28,0,"What can I do for you, ma'am?",2.42,2.4,0.78,2.12,1.64,không muộn,,bắt đầu nói ở 2.4s — DB không muộn
+8,28-28,1,Tomorrow would be fine.,5.92,5.86,5.04,5.78,0.88,không muộn,,bắt đầu nói ở 5.86s — DB không muộn
+8,28-28,3,"Thanks, I will.",12.54,12.45,12.04,12.36,0.5,không muộn,,bắt đầu nói ở 12.45s — DB không muộn
+8,29-29,0,Why is the conference in London this year?,2.04,2.54,0.84,1.42,1.2,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
+8,30-30,0,Dr. Tong's arriving at the laboratory tomorrow.,2.28,1.97,0.72,1.8,1.56,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+8,30-30,1,"No, an extra microscope.",6.56,6.35,5.72,6.22,0.84,không muộn,,bắt đầu nói ở 6.35s — DB không muộn
+8,31-31,0,The restaurant is finally getting a new stove.,2.64,2.46,0.68,1.38,1.96,không muộn,,bắt đầu nói ở 2.46s — DB không muộn
+8,31-31,1,The recipe requires a saucepan.,6.88,6.85,6.12,6.02,0.76,không muộn,,bắt đầu nói ở 6.85s — DB không muộn
+8,31-31,2,Can I have a salad for lunch?,10.56,10.56,10.12,9.72,0.44,không muộn,,bắt đầu nói ở 10.56s — DB không muộn
+8,38-40,1,"Excellent! I'm glad we'll finally be able to expand access to our collections. Right now, only local residents can see those books.",12.04,11.72,11.72,11.66,0.32,sửa start,11.47,
+8,47-49,1,I'll go grab some lunch for us before we get started. Do you like Danny's Café on the corner?,57.48,16.98,17.0,16.94,40.48,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,62-64,3,"Let me look at the work order. It looks like I billed you for the wrong tire. Apologies- let me fix that. Also, if you'd like to share your e-mail, I can sign you up for our rewards program.",51.54,24.93,24.94,24.66,26.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,71-73,0,Thank you for attending Port Jefferson's city council meeting.,6.76,6.71,4.82,6.28,1.94,không muộn,,bắt đầu nói ở 6.71s — DB không muộn
+8,80-82,0,I just want to have a quick meeting while we have all the nurses from the night shift and day shift here at the same time.,5.42,5.94,4.2,5.44,1.22,không muộn,,bắt đầu nói ở 5.94s — DB không muộn
+8,83-85,1,Postela makes high-quality posters that are easy to order and easy to display in your store.,9.06,8.44,8.64,8.44,0.42,sửa start,8.19,
+8,86-88,1,"On our train today, you should take advantage of all the services we have to offer-including our café car, which is fully stocked with refreshments, and the observation car, with its floor-to-ceiling windows.",30.14,9.68,9.84,9.62,20.3,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,86-88,2,Our wireless Internet service has also been upgraded!,59.94,22.65,22.68,22.64,37.26,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,86-88,3,You can connect to our complimentary service using the access code printed on your ticket.,74.74,26.23,26.24,25.6,48.5,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,89-91,6,I'd like to find out how much it would cost to make 30 new covers.,31.82,30.1,30.12,30.1,1.7,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,89-91,7,Please call our office at 555-0102.,43.84,34.36,34.56,34.28,9.28,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,89-91,8,"While I'll be away most of next week, Lihong Hao, the assistant superintendent, will be in the office.",46.6,38.93,39.1,38.8,7.5,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,89-91,9,She can take your call.,74.26,45.12,45.14,45.08,29.12,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,89-91,10,Thank you.,75.72,46.6,46.64,46.52,29.08,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,92-94,5,"I know you hoped that I'd complete the project before you go away on your vacation, but I'm completely booked for the month of March.",28.42,26.37,26.4,25.76,2.02,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,92-94,6,"I could start at the beginning of April, though.",36.96,34.26,34.38,33.54,2.58,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,92-94,7,I look forward to hearing back from you soon.,58.74,36.99,37.1,36.62,21.64,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,95-97,0,The time is right for Snowville Refrigeration to begin marketing our commercial refrigerators internationally.,7.2,7.17,4.52,6.74,2.68,không muộn,,bắt đầu nói ở 7.17s — DB không muộn
+8,98-100,0,Thank you for calling the Wilson Park visitor center.,7.48,5.02,5.06,7.12,2.42,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+9,1-1,0,A man is placing books into a shelving unit.,7.0,6.01,6.02,7.0,0.98,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+9,1-1,1,A man is hanging up some flyers.,11.7,11.72,10.64,11.68,1.06,không muộn,,bắt đầu nói ở 11.72s — DB không muộn
+9,1-1,2,A man is picking up tools from the floor.,15.62,15.61,15.0,15.56,0.62,không muộn,,bắt đầu nói ở 15.61s — DB không muộn
+9,1-1,3,A man is bending over some wires.,19.84,19.84,19.24,19.78,0.6,không muộn,,bắt đầu nói ở 19.84s — DB không muộn
+9,2-2,0,A picnic area is covered by a roof.,6.92,7.24,6.44,6.94,0.48,không muộn,,bắt đầu nói ở 7.24s — DB không muộn
+9,2-2,1,A bin is filled with flowers.,11.5,11.45,10.36,11.42,1.14,không muộn,,bắt đầu nói ở 11.45s — DB không muộn
+9,3-3,1,She's loading paper into a copy machine.,10.94,10.9,9.82,10.9,1.12,không muộn,,bắt đầu nói ở 10.9s — DB không muộn
+9,4-4,2,A server is placing some food on a tray.,15.78,15.75,15.14,15.72,0.64,không muộn,,bắt đầu nói ở 15.75s — DB không muộn
+9,6-6,0,The woman is standing in front of a painting.,7.62,6.43,4.46,7.4,3.16,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 6.43s không khớp align 4.46s hay ASR 7.4s
+9,6-6,1,The woman is carrying a painting through a doorway.,11.84,11.88,11.06,11.76,0.78,không muộn,,bắt đầu nói ở 11.88s — DB không muộn
+9,7-7,0,Would you like me to check the price on that item?,2.34,2.17,0.76,1.95,1.58,không muộn,,bắt đầu nói ở 2.17s — DB không muộn
+9,7-7,1,A couple of bowls.,6.68,6.55,5.74,6.28,0.94,không muộn,,bắt đầu nói ở 6.55s — DB không muộn
+9,7-7,2,I hadn't noticed.,9.86,9.86,8.78,9.86,1.08,không muộn,,bắt đầu nói ở 9.86s — DB không muộn
+9,8-8,0,Shouldn't we have submitted the expense report by now?,2.36,2.11,0.7,1.16,1.66,không muộn,,bắt đầu nói ở 2.11s — DB không muộn
+9,8-8,1,"No, the deadline is tomorrow.",7.24,7.06,6.36,6.24,0.88,không muộn,,bắt đầu nói ở 7.06s — DB không muộn
+9,8-8,3,Did you check the batteries?,15.06,15.07,14.4,14.28,0.66,không muộn,,bắt đầu nói ở 15.07s — DB không muộn
+9,9-9,1,Please change the ink cartridge.,6.78,6.67,6.08,6.5,0.7,không muộn,,bắt đầu nói ở 6.67s — DB không muộn
+9,9-9,2,By hiring a consulting firm.,10.36,10.35,9.68,10.3,0.68,không muộn,,bắt đầu nói ở 10.35s — DB không muộn
+9,9-9,3,His office is on the third floor.,14.06,14.0,13.36,13.98,0.7,không muộn,,bắt đầu nói ở 14s — DB không muộn
+9,10-10,0,Was the restaurant really expensive?,2.36,2.16,1.02,1.72,1.34,không muộn,,bắt đầu nói ở 2.16s — DB không muộn
+9,10-10,1,I can pick up some today.,6.22,6.19,5.42,6.0,0.8,không muộn,,bắt đầu nói ở 6.19s — DB không muộn
+9,11-11,0,When will the dishwasher prototype be ready?,2.48,2.42,0.74,2.24,1.74,không muộn,,bắt đầu nói ở 2.42s — DB không muộn
+9,11-11,3,"OK, thanks for the update.",13.06,12.95,12.3,12.92,0.76,không muộn,,bắt đầu nói ở 12.95s — DB không muộn
+9,12-12,0,Let's cancel our appointment.,2.36,2.09,1.02,1.84,1.34,không muộn,,bắt đầu nói ở 2.09s — DB không muộn
+9,12-12,1,The shipping and receiving department.,5.86,5.81,5.02,5.68,0.84,không muộn,,bắt đầu nói ở 5.81s — DB không muộn
+9,13-13,0,It's OK if we don't check these receipts until later.,2.56,2.38,0.68,1.32,1.88,không muộn,,bắt đầu nói ở 2.38s — DB không muộn
+9,13-13,1,"Good, because I'm busy at the moment.",7.4,7.37,6.72,6.54,0.68,không muộn,,bắt đầu nói ở 7.37s — DB không muộn
+9,13-13,2,I haven't seen that show either.,11.44,11.42,11.1,10.52,0.34,không muộn,,bắt đầu nói ở 11.42s — DB không muộn
+9,14-14,0,Where can I find the shipping address?,2.6,2.36,0.96,1.34,1.64,không muộn,,bắt đầu nói ở 2.36s — DB không muộn
+9,14-14,1,He doesn't mind.,6.18,6.14,5.4,5.32,0.78,không muộn,,bắt đầu nói ở 6.14s — DB không muộn
+9,14-14,3,"No, I'm fine.",12.94,12.8,12.32,12.02,0.62,không muộn,,bắt đầu nói ở 12.8s — DB không muộn
+9,15-15,0,Which bus stop is closest to the apartment building?,2.82,2.4,0.86,1.42,1.96,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.4s không khớp align 0.86s hay ASR 1.42s
+9,15-15,1,"No, I don't have any coins.",7.6,7.45,6.76,6.64,0.84,không muộn,,bắt đầu nói ở 7.45s — DB không muộn
+9,15-15,3,An extra bag for groceries.,14.32,14.3,13.84,13.54,0.48,không muộn,,bắt đầu nói ở 14.3s — DB không muộn
+9,16-16,0,Who's the main performer at the music festival next weekend?,1.96,2.56,0.7,1.36,1.26,không muộn,,bắt đầu nói ở 2.56s — DB không muộn
+9,16-16,1,The famous singer Bradley Patel.,7.56,7.48,6.74,6.66,0.82,không muộn,,bắt đầu nói ở 7.48s — DB không muộn
+9,17-17,0,When are we meeting again?,2.72,2.51,0.86,2.1,1.86,không muộn,,bắt đầu nói ở 2.51s — DB không muộn
+9,17-17,2,It was about two hours long.,8.92,8.91,8.2,8.9,0.72,không muộn,,bắt đầu nói ở 8.91s — DB không muộn
+9,18-18,0,"That project's been approved, right?",2.8,2.48,0.98,1.32,1.82,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.48s không khớp align 0.98s hay ASR 1.32s
+9,19-19,0,Did you put the brochures in the lobby?,2.68,2.48,0.78,1.38,1.9,không muộn,,bắt đầu nói ở 2.48s — DB không muộn
+9,19-19,1,The conference center is on Walnut Avenue.,6.4,6.36,5.64,5.52,0.76,không muộn,,bắt đầu nói ở 6.36s — DB không muộn
+9,19-19,2,Do you have a reservation?,11.02,11.0,10.3,10.12,0.72,không muộn,,bắt đầu nói ở 11s — DB không muộn
+9,19-19,3,"Yes, I left them at the front desk.",14.38,14.28,13.68,13.48,0.7,không muộn,,bắt đầu nói ở 14.28s — DB không muộn
+9,20-20,0,How soon will we be able to replace the furniture in the waiting room?,2.3,2.06,0.64,1.9,1.66,không muộn,,bắt đầu nói ở 2.06s — DB không muộn
+9,20-20,2,Agreed that painting looks good in this room!,11.58,11.44,10.64,11.42,0.94,không muộn,,bắt đầu nói ở 11.44s — DB không muộn
+9,20-20,3,Put all the old files upstairs.,15.74,15.73,15.1,15.7,0.64,không muộn,,bắt đầu nói ở 15.73s — DB không muộn
+9,21-21,1,The keys are on my desk.,6.72,6.66,5.88,5.8,0.84,không muộn,,bắt đầu nói ở 6.66s — DB không muộn
+9,22-22,0,When should we order the gift baskets?,2.92,2.64,0.8,1.42,2.12,không muộn,,bắt đầu nói ở 2.64s — DB không muộn
+9,22-22,1,"No, just me this time.",6.68,6.54,5.8,5.72,0.88,không muộn,,bắt đầu nói ở 6.54s — DB không muộn
+9,22-22,2,From the florist down the street.,10.06,10.01,9.32,9.14,0.74,không muộn,,bắt đầu nói ở 10.01s — DB không muộn
+9,23-23,0,Why was the seminar agenda changed?,2.76,2.64,0.78,1.46,1.98,không muộn,,bắt đầu nói ở 2.64s — DB không muộn
+9,24-24,0,Are you taking the bus or a taxi to the client's office?,2.78,2.63,0.86,1.46,1.92,không muộn,,bắt đầu nói ở 2.63s — DB không muộn
+9,24-24,1,To pick up some coffee.,7.92,7.93,7.2,7.12,0.72,không muộn,,bắt đầu nói ở 7.93s — DB không muộn
+9,24-24,3,They weren't too expensive.,14.26,14.3,13.54,13.48,0.72,không muộn,,bắt đầu nói ở 14.3s — DB không muộn
+9,25-25,0,Could you help me set up these chairs for the picnic?,2.76,2.51,0.64,1.48,2.12,không muộn,,bắt đầu nói ở 2.51s — DB không muộn
+9,25-25,1,She moved to Singapore last year.,7.16,7.11,6.36,6.3,0.8,không muộn,,bắt đầu nói ở 7.11s — DB không muộn
+9,25-25,2,The furniture store on Maple Street.,11.04,10.99,10.3,10.16,0.74,không muộn,,bắt đầu nói ở 10.99s — DB không muộn
+9,26-26,0,Who'll be selected to work on the prototype?,2.72,2.7,0.8,1.48,1.92,không muộn,,bắt đầu nói ở 2.7s — DB không muộn
+9,26-26,1,"No, it's not too heavy.",7.32,7.11,6.4,6.3,0.92,không muộn,,bắt đầu nói ở 7.11s — DB không muộn
+9,27-27,0,Ms. Lambert is responsible for the payroll.,3.0,2.73,0.94,1.5,2.06,không muộn,,bắt đầu nói ở 2.73s — DB không muộn
+9,27-27,1,On the second floor.,7.24,7.22,6.5,6.4,0.74,không muộn,,bắt đầu nói ở 7.22s — DB không muộn
+9,27-27,2,"Yes, she's done it for years.",10.34,10.26,9.6,9.42,0.74,không muộn,,bắt đầu nói ở 10.26s — DB không muộn
+9,28-28,0,Can't we extend the advertising campaign?,2.46,2.41,0.92,2.0,1.54,không muộn,,bắt đầu nói ở 2.41s — DB không muộn
+9,28-28,2,"Yes, it's a new printer.",10.1,10.03,9.72,9.98,0.38,không muộn,,bắt đầu nói ở 10.03s — DB không muộn
+9,29-29,0,Please close the door so that the presentation can start.,2.72,2.45,0.68,2.08,2.04,không muộn,,bắt đầu nói ở 2.45s — DB không muộn
+9,29-29,1,The car keys are on my desk.,7.58,7.58,6.86,7.42,0.72,không muộn,,bắt đầu nói ở 7.58s — DB không muộn
+9,30-30,0,How often have our packages been damaged during delivery?,2.34,2.06,0.8,1.9,1.54,không muộn,,bắt đầu nói ở 2.06s — DB không muộn
+9,30-30,1,We need to find a new shipping partner.,7.12,7.12,6.4,7.04,0.72,không muộn,,bắt đầu nói ở 7.12s — DB không muộn
+9,30-30,3,"No, we don't need to eat.",16.26,16.12,15.86,16.08,0.4,không muộn,,bắt đầu nói ở 16.12s — DB không muộn
+9,31-31,0,"They're bringing a piano into the café, aren't they?",2.82,2.54,0.96,1.4,1.86,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
+9,31-31,2,The food is fantastic.,10.74,10.72,10.02,9.84,0.72,không muộn,,bắt đầu nói ở 10.72s — DB không muộn
+9,32-34,2,"I'll just purchase the pass for now, thanks.",28.68,24.43,24.44,24.16,4.24,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+9,32-34,3,"Great. First, I'll need to set you up in our system. Can I have your name and e-mail address?",65.22,27.28,27.28,26.76,37.94,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+9,38-40,3,All right. I'll start working on it after I've finished with the Web site update.,28.82,22.22,22.22,22.16,6.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+9,38-40,4,I'll ask Hiroki to take care of that so you're free to work on the newsletter.,36.78,26.74,26.76,26.06,10.02,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+9,56-58,0,"Thanks for joining my podcast, Bianca. I'm enjoying your unique cookbook, which takes traditional dishes from around the world and adds unusual ingredients-which gives them a contemporary flair. What's your inspiration?",6.1,6.0,3.86,5.62,2.24,không muộn,,bắt đầu nói ở 6s — DB không muộn
+9,89-91,2,"Unlike other job-training programs, our courses are tuition-free.",19.06,18.65,18.72,18.58,0.34,sửa start,18.40,
+9,98-100,1,Flight AU354 will now be departing from a different gate.,9.48,9.12,9.14,9.2,0.34,sửa start,8.87,
+9,98-100,6,Size-check templates are available throughout the terminal for your reference.,39.16,38.64,38.68,38.98,0.48,sửa start,38.39,
+10,1-1,1,He's carrying a bucket of paint.,10.72,10.75,9.82,10.36,0.9,không muộn,,bắt đầu nói ở 10.75s — DB không muộn
+10,2-2,1,A chair is propped against the door.,11.08,11.06,10.18,11.04,0.9,không muộn,,bắt đầu nói ở 11.06s — DB không muộn
+10,2-2,2,A laptop has been left open.,14.82,14.75,14.22,14.7,0.6,không muộn,,bắt đầu nói ở 14.75s — DB không muộn
+10,3-3,1,They're shaking hands.,11.0,10.95,10.1,10.66,0.9,không muộn,,bắt đầu nói ở 10.95s — DB không muộn
+10,4-4,0,A car is being towed down a street.,7.34,7.29,6.5,7.16,0.84,không muộn,,bắt đầu nói ở 7.29s — DB không muộn
+10,4-4,1,Some men are removing a tire from a truck.,11.28,11.21,10.16,11.22,1.12,không muộn,,bắt đầu nói ở 11.21s — DB không muộn
+10,4-4,3,A building has a clock tower on top of it.,19.82,19.78,19.26,19.72,0.56,không muộn,,bắt đầu nói ở 19.78s — DB không muộn
+10,5-5,0,Some of the bicycles are being repaired.,7.68,7.63,6.98,7.54,0.7,không muộn,,bắt đầu nói ở 7.63s — DB không muộn
+10,5-5,1,The bicycles are lined up in a row.,11.74,11.73,11.0,11.72,0.74,không muộn,,bắt đầu nói ở 11.73s — DB không muộn
+10,5-5,3,A bicycle path is being painted.,20.26,20.25,19.92,20.2,0.34,không muộn,,bắt đầu nói ở 20.25s — DB không muộn
+10,6-6,2,A ferryboat is traveling through a marina.,16.42,16.07,16.04,16.02,0.38,sửa start,15.82,
+10,7-7,0,Would you like me to order some more business cards for you?,2.18,2.05,0.62,1.18,1.56,không muộn,,bắt đầu nói ở 2.05s — DB không muộn
+10,7-7,1,"Sure, that'd be great.",6.66,6.43,6.18,6.24,0.48,không muộn,,bắt đầu nói ở 6.43s — DB không muộn
+10,7-7,3,"No, it wasn't.",13.66,13.53,13.36,13.2,0.3,không muộn,,bắt đầu nói ở 13.53s — DB không muộn
+10,8-8,0,Why don't you ask Ms. Kim for help?,1.52,1.95,0.68,1.96,0.84,không muộn,,bắt đầu nói ở 1.95s — DB không muộn
+10,9-9,0,"Do you want to review the report together, or on your own?",2.28,2.17,1.0,1.84,1.28,không muộn,,bắt đầu nói ở 2.17s — DB không muộn
+10,9-9,1,"No, I don't need any more copies.",7.32,7.14,6.46,7.06,0.86,không muộn,,bắt đầu nói ở 7.14s — DB không muộn
+10,9-9,3,A fifteen-page document.,15.32,15.14,14.74,15.08,0.58,không muộn,,bắt đầu nói ở 15.14s — DB không muộn
+10,10-10,0,When's the marketing conference?,2.32,2.06,1.0,1.22,1.32,không muộn,,bắt đầu nói ở 2.06s — DB không muộn
+10,10-10,1,The convention center downtown.,5.82,5.76,5.04,4.94,0.78,không muộn,,bắt đầu nói ở 5.76s — DB không muộn
+10,10-10,3,I need a room with a projector.,12.64,12.65,12.02,11.9,0.62,không muộn,,bắt đầu nói ở 12.65s — DB không muộn
+10,11-11,0,Where are the safety goggles kept?,2.48,2.18,0.72,1.22,1.76,không muộn,,bắt đầu nói ở 2.18s — DB không muộn
+10,12-12,0,When did this restaurant change its name?,2.3,2.24,0.84,2.02,1.46,không muộn,,bắt đầu nói ở 2.24s — DB không muộn
+10,12-12,1,"Yes, it is well-known.",6.22,6.04,5.32,5.98,0.9,không muộn,,bắt đầu nói ở 6.04s — DB không muộn
+10,13-13,0,"Did we complete the inventory, or is there more to do?",2.62,2.47,0.94,1.34,1.68,không muộn,,bắt đầu nói ở 2.47s — DB không muộn
+10,13-13,1,"OK, that'd be fine.",7.42,7.33,6.54,6.52,0.88,không muộn,,bắt đầu nói ở 7.33s — DB không muộn
+10,14-14,0,Can you get me a sandwich from the café down the street?,2.6,2.39,0.62,1.34,1.98,không muộn,,bắt đầu nói ở 2.39s — DB không muộn
+10,14-14,1,He left an hour ago.,7.02,7.04,6.32,6.26,0.7,không muộn,,bắt đầu nói ở 7.04s — DB không muộn
+10,15-15,0,How can we interest the client in our business?,2.64,2.42,0.76,2.1,1.88,không muộn,,bắt đầu nói ở 2.42s — DB không muộn
+10,15-15,1,By sharing positive customer reviews.,7.2,7.22,6.52,7.14,0.68,không muộn,,bắt đầu nói ở 7.22s — DB không muộn
+10,15-15,2,"No, I didn't go this year.",11.4,11.36,10.8,11.3,0.6,không muộn,,bắt đầu nói ở 11.36s — DB không muộn
+10,15-15,3,At the meeting last Wednesday.,14.86,14.87,14.24,14.86,0.62,không muộn,,bắt đầu nói ở 14.87s — DB không muộn
+10,16-16,0,Are you planning to work at home tomorrow?,2.58,2.43,0.76,1.98,1.82,không muộn,,bắt đầu nói ở 2.43s — DB không muộn
+10,16-16,1,"Yes, in the city directory.",6.62,6.44,5.74,6.38,0.88,không muộn,,bắt đầu nói ở 6.44s — DB không muộn
+10,16-16,2,Every day at three o'clock.,10.3,10.11,9.34,10.08,0.96,không muộn,,bắt đầu nói ở 10.11s — DB không muộn
+10,16-16,3,"No, I'll be going into the office.",13.64,13.53,13.02,13.52,0.62,không muộn,,bắt đầu nói ở 13.53s — DB không muộn
+10,17-17,0,Don't you have the promotional materials with you?,2.62,2.59,0.84,1.44,1.78,không muộn,,bắt đầu nói ở 2.59s — DB không muộn
+10,17-17,1,"Thanks, that's great news.",7.0,6.78,6.16,5.98,0.84,không muộn,,bắt đầu nói ở 6.78s — DB không muộn
+10,17-17,2,"Yes, they're in my bag.",10.66,10.58,9.98,9.7,0.68,không muộn,,bắt đầu nói ở 10.58s — DB không muộn
+10,18-18,0,The projector needs to be fixed before our presentation.,2.6,2.42,0.96,2.28,1.64,không muộn,,bắt đầu nói ở 2.42s — DB không muộn
+10,18-18,1,A technician has been notified.,7.32,7.41,6.62,7.38,0.7,không muộn,,bắt đầu nói ở 7.41s — DB không muộn
+10,18-18,2,The quarterly sales figures.,11.26,10.12,10.18,11.28,1.08,sửa start,9.87,
+10,19-19,0,What's the price of this printer?,2.7,2.53,0.84,1.4,1.86,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+10,19-19,1,I don't work here.,5.98,5.96,5.26,5.18,0.72,không muộn,,bắt đầu nói ở 5.96s — DB không muộn
+10,19-19,3,"Yes, I like it a lot.",12.32,12.23,11.78,11.48,0.54,không muộn,,bắt đầu nói ở 12.23s — DB không muộn
+10,20-20,0,How many people are attending the orientation session?,2.32,2.18,0.84,1.24,1.48,không muộn,,bắt đầu nói ở 2.18s — DB không muộn
+10,20-20,1,There should be 21 people.,6.78,6.69,5.9,5.84,0.88,không muộn,,bắt đầu nói ở 6.69s — DB không muộn
+10,21-21,0,"There's a free shuttle bus to the airport, right?",2.78,2.48,0.72,1.52,2.06,không muộn,,bắt đầu nói ở 2.48s — DB không muộn
+10,21-21,1,She has an overnight flight.,7.48,7.44,6.72,6.62,0.76,không muộn,,bắt đầu nói ở 7.44s — DB không muộn
+10,21-21,2,"Yes, it stops right outside.",10.9,10.8,10.16,9.96,0.74,không muộn,,bắt đầu nói ở 10.8s — DB không muộn
+10,22-22,1,The library is on Walton Street.,6.38,6.32,5.58,6.3,0.8,không muộn,,bắt đầu nói ở 6.32s — DB không muộn
+10,23-23,0,What time does the factory shift end?,2.72,2.53,0.78,1.46,1.94,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+10,24-24,0,These train tickets are expensive.,2.98,2.54,0.96,1.48,2.02,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.54s không khớp align 0.96s hay ASR 1.48s
+10,24-24,1,"Just a one-way ticket, please.",6.86,6.83,6.16,6.02,0.7,không muộn,,bắt đầu nói ở 6.83s — DB không muộn
+10,24-24,2,Did you complete the training?,10.36,10.34,9.7,9.5,0.66,không muộn,,bắt đầu nói ở 10.34s — DB không muộn
+10,25-25,0,Isn't this television prototype supposed to have more advanced features?,2.94,2.66,0.82,2.42,2.12,không muộn,,bắt đầu nói ở 2.66s — DB không muộn
+10,25-25,1,He has an advanced degree in economics.,8.36,8.3,7.56,8.26,0.8,không muộn,,bắt đầu nói ở 8.3s — DB không muộn
+10,26-26,0,What should we do to prepare for the sales meeting?,2.8,2.57,0.8,2.1,2.0,không muộn,,bắt đầu nói ở 2.57s — DB không muộn
+10,26-26,2,With the sixteen summer interns.,10.54,10.52,9.86,10.5,0.68,không muộn,,bắt đầu nói ở 10.52s — DB không muộn
+10,27-27,0,Do you think Ms. Wang would be interested in joining the event planning committee?,2.12,2.72,0.78,2.18,1.34,không muộn,,bắt đầu nói ở 2.72s — DB không muộn
+10,27-27,1,Let's reserve the hotel ballroom.,9.06,9.04,8.28,8.26,0.78,không muộn,,bắt đầu nói ở 9.04s — DB không muộn
+10,28-28,0,Dr. Marino has the survey results on his desk.,2.7,2.41,0.7,2.18,2.0,không muộn,,bắt đầu nói ở 2.41s — DB không muộn
+10,28-28,1,His office door is locked.,7.06,7.06,6.4,7.02,0.66,không muộn,,bắt đầu nói ở 7.06s — DB không muộn
+10,28-28,2,He passed his driving test.,10.82,10.83,10.2,10.82,0.62,không muộn,,bắt đầu nói ở 10.83s — DB không muộn
+10,29-29,0,"The keynote speech wasn't very inspiring, was it?",1.8,2.53,0.94,2.06,0.86,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
+10,29-29,1,It was too technical.,7.56,7.49,6.72,7.44,0.84,không muộn,,bắt đầu nói ở 7.49s — DB không muộn
+10,30-30,0,Our company is upgrading its bookkeeping software.,2.46,2.2,1.0,2.0,1.46,không muộn,,bắt đầu nói ở 2.2s — DB không muộn
+10,30-30,1,"No, I took a different flight.",7.54,7.36,6.58,7.32,0.96,không muộn,,bắt đầu nói ở 7.36s — DB không muộn
+10,31-31,0,Should we set up the buffet table for tomorrow's luncheon indoors or outdoors?,2.72,2.46,0.94,1.42,1.78,không muộn,,bắt đầu nói ở 2.46s — DB không muộn
+10,31-31,1,I haven't seen her.,8.8,8.76,8.02,7.98,0.78,không muộn,,bắt đầu nói ở 8.76s — DB không muộn
+10,31-31,2,We won't need any more copies.,11.86,11.88,11.12,10.98,0.74,không muộn,,bắt đầu nói ở 11.88s — DB không muộn
+10,38-40,3,Yes-here it is. Can I go to the unclaimed baggage area and pick up my luggage?,20.56,19.94,19.96,20.52,0.6,sửa start,19.69,
+10,41-43,4,"Great. Also, remember that our office closes every day from twelve to one thirty for lunch, so please be mindful of that when scheduling patients.",31.4,31.07,31.08,31.02,0.32,sửa start,30.82,
+10,44-46,3,"So far, they seem to be as durable as we anticipated.",38.9,27.24,27.28,26.7,11.62,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+10,44-46,4,But we still have a few tests to run.,43.34,31.02,31.02,30.76,12.32,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+10,44-46,5,"Great. Please keep me posted on your progress. In the meantime, we should start putting together a promotional video to show at our booth at the trade show. Who'd like to help me with that project?",61.0,33.68,33.66,33.76,27.34,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+10,47-49,0,Excuse me-officer? Do you happen to know where rideshare drivers park to wait for passengers? It's my first time at this airport.,6.62,6.14,0.78,5.84,5.84,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
+10,77-79,0,"Good morning, and thanks for tuning in to News at Four.",6.04,6.02,0.72,5.54,5.32,không muộn,,bắt đầu nói ở 6.02s — DB không muộn
+10,77-79,5,"Video tours will soon be available on the museum's Web site, and videos showing the progress of the project will also be posted regularly.",31.46,31.15,31.16,31.08,0.3,sửa start,30.90,
+10,86-88,0,The topic for today's workshop is writing business correspondence.,6.24,6.33,0.86,5.82,5.38,không muộn,,bắt đầu nói ở 6.33s — DB không muộn
+10,89-91,0,"In the world of business, athletic retailer Clementine Stores has filed a complaint against software firm Stephion.",5.6,5.61,4.04,5.4,1.56,không muộn,,bắt đầu nói ở 5.61s — DB không muộn
+10,92-94,0,Thanks for coming in early this morning.,6.08,6.43,3.94,6.02,2.14,không muộn,,bắt đầu nói ở 6.43s — DB không muộn
+10,95-97,1,"Won-Sang Kwon has joined the human resources department as a junior associate, and So-Jin Cho is our newest chief of building security.",11.64,11.17,11.22,,0.42,sửa start,10.92,
+10,98-100,2,"You wanted to know about my availability for haircuts-yes, I am accepting new clients.",25.98,11.45,11.46,11.4,14.52,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+10,98-100,3,"This week, I can fit you in on Wednesday at four o'clock.",34.04,17.52,17.54,17.4,16.5,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+10,98-100,4,Please let me know whether that day and time work for you.,37.28,21.71,21.74,21.6,15.54,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+10,98-100,5,"And in case you didn't know, there's a parking garage with reasonable rates right under our building.",71.68,25.22,25.24,25.12,46.44,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
