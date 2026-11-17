@@ -1,6 +1,6 @@
 # Spec: Luyện đọc / Shadow sau Dictation
 
-Trạng thái: **xong giai đoạn 1** (giao diện, tiến độ chỉ giữ trên trình duyệt). Giai đoạn 2 chờ lệnh.
+Trạng thái: **xong giai đoạn 2** (đã ghi mốc từng từ cho 98.9% số câu trên production). Giai đoạn 3 chờ lệnh.
 
 Code: `components/practice/shadow/` (giao diện, ghi âm), `lib/shadow/` (luật ngữ điệu, chọn câu ⭐, phân tích giọng, mốc từ).
 Huy hiệu ✓ trên danh sách bài cần lưu tiến độ nên dời sang giai đoạn 3.
@@ -52,7 +52,7 @@ Ghi sự kiện: `shadow_open`, `shadow_record`, `shadow_sentence_done`, `shadow
 
 ## Dữ liệu
 
-- `Sentence.wordTimings Json?`: `[{ w, start, end }]`, theo thứ tự từ của `content`.
+- `Sentence.wordTimings Json?` (cột `word_timings`): `[[start, end], ...]`, mỗi cặp ứng với một token của `content.split(/\s+/)`. Null thì chỉ highlight cả câu.
 - `Sentence.stressOverride Json?`: chỉ số các từ đỉnh nhấn do admin sửa. Null thì dùng luật tự động.
 - `Sentence.isStarred Boolean?`: câu ⭐ do admin ghi đè.
 - Bảng `ShadowProgress`: `userId, sentenceId, lessonId, part, day (date)`, unique `(userId, sentenceId, day)`.
@@ -80,6 +80,22 @@ So mốc đầu mỗi từ với Whisper nhận dạng lại (ASR, faster-whispe
 - Theo Part, cách A1 lệch dưới 100ms ở: P1 91.7%, P2 **82.3%**, P3 92.9%, P4 91.6%.
 - A2 kém hơn vì phụ thuộc mốc câu trong DB, mà mốc này có chỗ sai.
 - Mốc câu trong DB: trung vị bắt đầu sớm hơn tiếng đọc 0.42s (do cố ý chừa đệm). Riêng 13/228 câu (5.7%) bắt đầu **muộn** hơn tiếng đọc từ 0.7 đến 3.3s, phần lớn là câu cuối bài. Phần chừa `LEAD_IN = 0.2s` không bù được, nên học viên nghe từng câu sẽ mất mấy từ đầu.
+
+### Kết quả chạy toàn bộ (2026-11-17)
+
+Đã chạy `scripts/shadow/align_word_timings.py` trên **1.265 bài / 6.723 câu**, mất khoảng 4,7 giờ trên CPU. Các bước: căn cả bài → căn lại riêng câu lỗi trong khung giữa hai câu tốt gần nhất → ASR dự phòng → hậu kiểm.
+
+| Part | Câu có mốc |
+|---|---|
+| P1 | 478/480 (99.6%) |
+| P2 | 2.561/2.600 (98.5%) |
+| P3 | 2.170/2.192 (99.0%) |
+| P4 | 1.442/1.451 (99.4%) |
+| **Tổng** | **6.651/6.723 (98.9%)** |
+
+- 793 câu được căn lại riêng, 820 câu lấy mốc từ ASR. 72 câu không căn được nên để null (giao diện highlight cả câu).
+- Đã ghi vào `sentences.word_timings` trên production. Kiểm tra lại: 6.651 câu có mốc, khớp với kết quả căn.
+- Khi thêm đề mới: `export-lessons.ts --only-missing` → `align_word_timings.py` → `apply-word-timings.ts --apply`.
 
 ## Báo cáo
 
