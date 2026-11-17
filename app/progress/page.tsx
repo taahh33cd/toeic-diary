@@ -8,6 +8,7 @@ import { HeatmapCalendar } from "@/components/progress/HeatmapCalendar";
 import { LevelMatrix } from "@/components/progress/LevelMatrix";
 import { AchievementBadge } from "@/components/progress/AchievementBadge";
 import { ACHIEVEMENTS, type Achievement } from "@/lib/achievements";
+import { getShadowSummary } from "@/lib/shadow/progress";
 import { Flame, Clock, Star, BookCheck, TrendingUp, RotateCcw } from "lucide-react";
 
 export default async function ProgressPage() {
@@ -15,7 +16,7 @@ export default async function ProgressPage() {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect("/auth/login");
 
-  const [profile, allProgress, allLessons, seriesList] = await Promise.all([
+  const [profile, allProgress, allLessons, seriesList, shadow] = await Promise.all([
     prisma.profile.findUnique({
       where: { id: user.id },
       select: { displayName: true, currentStreak: true, toeicTarget: true },
@@ -60,6 +61,7 @@ export default async function ProgressPage() {
         },
       },
     }),
+    getShadowSummary(user.id),
   ]);
 
   // ── Overview stats ───────────────────────────────────────────────────────
@@ -217,6 +219,26 @@ export default async function ProgressPage() {
         {/* ── Level matrix ── */}
         <Section title="📊 Tiến độ theo Level" subtitle="% bài đạt ≥70 cho từng Part × Level">
           <LevelMatrix matrix={matrix} />
+        </Section>
+
+        {/* ── Shadow ── */}
+        <Section title="🎙 Luyện đọc theo (Shadow)" subtitle={`Shadow đủ ${shadow.streakGoal} câu đạt trong ngày được tính giữ streak`}>
+          {shadow.totalSentences === 0 ? (
+            <p className="text-sm text-[var(--text-secondary)]">
+              Bạn chưa shadow câu nào. Làm xong một bài dictation rồi bấm <b>🎙 Shadow 3 câu</b> ở màn kết quả để bắt đầu.
+            </p>
+          ) : (
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+              <MiniStat
+                label={`Hôm nay (cần ${shadow.streakGoal} câu)`}
+                value={shadow.todayCount >= shadow.streakGoal ? `${shadow.todayCount} ✓` : `${shadow.todayCount}/${shadow.streakGoal}`}
+              />
+              <MiniStat label="Câu đã shadow" value={shadow.uniqueSentences.toString()} />
+              <MiniStat label="Bài xong 3 câu ⭐" value={shadow.lessonsDone.toString()} />
+              <MiniStat label="Ngày có shadow" value={shadow.activeDays.toString()} />
+              <MiniStat label={`Ngày đủ ${shadow.streakGoal} câu`} value={shadow.streakDays.toString()} />
+            </div>
+          )}
         </Section>
 
         {/* ── Series progress ── */}

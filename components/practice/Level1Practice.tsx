@@ -11,6 +11,7 @@ import { PostSubmitView } from "./PostSubmitView";
 import { KeyboardHints } from "./KeyboardHints";
 import { useAudioShortcuts } from "./useAudioShortcuts";
 import { tokenMatches, normalizeToken } from "@/lib/practice/match";
+import type { WordTiming } from "@/lib/shadow/timing";
 import { buildSegmentWindows, TAIL_PAD, type SegmentWindow } from "@/lib/practice/segment";
 
 interface Blank {
@@ -29,6 +30,10 @@ interface Sentence {
   speaker: string | null;
   optionLabel?: string | null;
   blanks: Blank[];
+  /** Mốc từng từ cho Shadow, null khi chưa căn. */
+  wordTimings?: WordTiming[] | null;
+  stressOverride?: number[] | null;
+  isStarred?: boolean | null;
 }
 
 interface Props {
@@ -511,6 +516,15 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
         vocabItems={keyVocab}
         nextLessonUrl={nextLessonUrl}
         onRetry={() => window.location.reload()}
+        shadow={{
+          lessonId,
+          partNumber,
+          sentences: processedSentences,
+          correctOption,
+          errorsBySentence: Object.fromEntries(
+            processedSentences.map((s) => [s.id, s.blanks.filter((b) => blankStates[b.id]?.status !== "correct").length])
+          ),
+        }}
       />
     );
   }

@@ -61,6 +61,15 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
       })
     : [];
 
+  const shadowDone = new Set(
+    lessonIds.length
+      ? (await prisma.shadowLesson.findMany({
+          where: { userId: user.id, lessonId: { in: lessonIds } },
+          select: { lessonId: true },
+        })).map((r) => r.lessonId)
+      : []
+  );
+
   const progressMap = new Map<string, Map<number, { status: string; score: number; bestScore: number }>>();
   for (const row of progressRows) {
     if (!progressMap.has(row.lessonId)) progressMap.set(row.lessonId, new Map());
@@ -201,6 +210,11 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                               <span className="flex-shrink-0 bg-green-100 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-0.5">
                                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>
                                 ĐẠT
+                              </span>
+                            )}
+                            {shadowDone.has(lesson.id) && (
+                              <span className="flex-shrink-0 bg-rose-100 text-rose-700 dark:bg-rose-500/15 dark:text-rose-300 text-[10px] font-bold px-2 py-0.5 rounded" title="Đã shadow đủ 3 câu ⭐">
+                                🎙 SHADOW ✓
                               </span>
                             )}
                           </div>

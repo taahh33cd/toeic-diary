@@ -116,6 +116,14 @@ export default async function PartPracticePage({
       })
     : [];
   const progressMap = Object.fromEntries(progress.map((p) => [p.lessonId, p.bestScore]));
+  const shadowDone = new Set(
+    lessonIds.length > 0
+      ? (await prisma.shadowLesson.findMany({
+          where: { userId: user.id, lessonId: { in: lessonIds } },
+          select: { lessonId: true },
+        })).map((r) => r.lessonId)
+      : []
+  );
   const completedCount = progress.filter((p) => p.bestScore >= 70).length;
 
   // ── Filtered view: lessons for a specific test set ────────────────────────
@@ -201,6 +209,11 @@ export default async function PartPracticePage({
                       <div className="px-2.5 py-1 bg-[var(--bg-secondary)]/60 rounded text-[var(--text-secondary)] text-xs font-medium flex items-center gap-1">
                         <span>🎧</span> {info.label}
                       </div>
+                      {shadowDone.has(lesson.id) && (
+                        <div className="px-2.5 py-1 bg-rose-500/10 rounded text-rose-600 dark:text-rose-300 text-xs font-semibold" title="Đã shadow đủ 3 câu ⭐">
+                          🎙 Shadow ✓
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">

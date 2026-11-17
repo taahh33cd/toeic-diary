@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import {
   BookOpen, FileText, CheckCircle2, XCircle,
-  ArrowRight, RotateCcw, Play, Pause,
+  ArrowRight, RotateCcw, Play, Pause, Mic,
 } from "lucide-react";
 import type { VocabItem } from "./TranscriptVocabModal";
+import { ShadowSection, SHADOW_SECTION_ID, shadowPlan, type ShadowInput } from "./shadow/ShadowSection";
 
 const SPEEDS = [0.75, 1.0, 1.25, 1.5];
 
@@ -22,13 +23,17 @@ interface Props {
   vocabItems: VocabItem[] | null;
   nextLessonUrl?: string | null;
   onRetry: () => void;
+  /** Có thì hiện phần Luyện đọc theo (Shadow) dưới transcript. */
+  shadow?: Omit<ShadowInput, "audioUrl">;
 }
 
 export function PostSubmitView({
   score, levelLabel, detail, audioUrl, transcriptFull,
-  vocabItems, nextLessonUrl, onRetry,
+  vocabItems, nextLessonUrl, onRetry, shadow,
 }: Props) {
   const passed = score >= 70;
+  const shadowInput = useMemo(() => (shadow ? { ...shadow, audioUrl } : null), [shadow, audioUrl]);
+  const plan = useMemo(() => (shadowInput ? shadowPlan(shadowInput) : null), [shadowInput]);
 
   // ── Self-contained audio player (starts fresh at 0:00) ──────────────────────
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -77,7 +82,16 @@ export function PostSubmitView({
           </div>
           <div className="text-xs text-[var(--text-muted)]">{detail}</div>
         </div>
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-2 flex-shrink-0 flex-wrap">
+          {plan && (
+            <button
+              onClick={() => document.getElementById(SHADOW_SECTION_ID)?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold bg-rose-500 text-white hover:bg-rose-600 transition-colors"
+            >
+              <Mic size={13} />
+              Shadow {plan.stars.length} câu (~{plan.minutes} phút)
+            </button>
+          )}
           <button
             onClick={onRetry}
             className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm border border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--practice-accent)] hover:text-[var(--practice-accent)] transition-all"
@@ -166,6 +180,8 @@ export function PostSubmitView({
           {transcriptFull}
         </div>
       </section>
+
+      {shadowInput && <ShadowSection {...shadowInput} />}
 
       {/* ── Vocabulary ── */}
       {vocabItems && vocabItems.length > 0 && (

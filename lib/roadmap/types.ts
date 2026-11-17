@@ -78,6 +78,15 @@ export type EvidenceSpec =
       unit: string;
       /** slug bộ đề; để trống nghĩa là bộ nào của unit này cũng tính. */
       testKey?: string;
+    }
+  /**
+   * shadow_progress — luyện đọc theo (Shadow) sau dictation. Đếm câu đạt của
+   * part này từ ngày giao; mỗi câu tính một lần mỗi ngày (unique trong bảng).
+   */
+  | {
+      source: "shadow";
+      part: 1 | 2 | 3 | 4;
+      minSentences: number;
     };
 
 export type CatalogKind =
@@ -86,7 +95,8 @@ export type CatalogKind =
   | "full_test"
   | "grammar"
   | "ipa"
-  | "submission";
+  | "submission"
+  | "shadow";
 
 /** Một đầu mục nội dung có thật trên web. */
 export type CatalogItem = {
@@ -203,7 +213,7 @@ export type DraftTask = {
   estMinutes: number;
   priority: "core" | "bonus";
   /** Vì sao bài này được giao — để hiển thị cho học viên và để dò lỗi planner. */
-  reason: "focus" | "foundation" | "maintenance" | "checkpoint" | "sw";
+  reason: "focus" | "foundation" | "maintenance" | "checkpoint" | "sw" | "shadow";
 };
 
 export type DraftDay = {

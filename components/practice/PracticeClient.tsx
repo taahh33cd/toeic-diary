@@ -9,6 +9,7 @@ import { Level4Practice } from "./Level4Practice";
 import { PenLine, FileText, Sparkles, CheckCircle2 } from "lucide-react";
 import { usePracticeStore } from "@/stores/practiceStore";
 import type { VocabItem } from "./TranscriptVocabModal";
+import type { WordTiming } from "@/lib/shadow/timing";
 import { VocabWarmup } from "./VocabWarmup";
 
 interface Blank {
@@ -26,6 +27,10 @@ interface Sentence {
   endTime: number;
   speaker: string | null;
   blanks: Blank[];
+  /** Mốc từng từ cho Shadow, null khi chưa căn. */
+  wordTimings?: WordTiming[] | null;
+  stressOverride?: number[] | null;
+  isStarred?: boolean | null;
 }
 
 interface LessonData {
@@ -275,6 +280,7 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl,
           startTime={startTime}
           transcriptFull={lesson.transcriptFull}
           keyVocab={keyVocab}
+          partNumber={lesson.partNumber}
           onScored={(s) => handleScored(2, s)}
         />
       )}
@@ -297,6 +303,9 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl,
       {activeLevel === 4 && (
         <Level4Practice
           lessonId={lesson.id}
+          audioUrl={lesson.audioUrl}
+          audioDuration={lesson.audioDuration}
+          partNumber={lesson.partNumber}
           sentences={lesson.sentences}
           transcriptFull={lesson.transcriptFull}
           startTime={startTime}

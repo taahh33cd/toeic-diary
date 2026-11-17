@@ -55,3 +55,4 @@ node_modules/
 
 # Cache mp3 của TTS Part 2 — file thật nằm trên Supabase Storage
 scripts/data/part2-audio/
+scripts/data/shadow-audio-cache/

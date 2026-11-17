@@ -2,7 +2,7 @@
 // Sửa dải điểm / thời lượng / nhãn thì sửa lib/roadmap/catalog.meta.ts rồi chạy:
 //   npm run build:catalog
 //
-// Tổng: 587 mục.
+// Tổng: 591 mục.
 
 import type { CatalogItem } from "./types";
 
@@ -6814,6 +6814,102 @@ export const CATALOG_ITEMS: CatalogItem[] = [
       "part": 2,
       "testSlug": "ca-test-9-part2",
       "minAccuracy": 0.6
+    }
+  },
+  {
+    "id": "shadow.part1",
+    "title": "Shadow 10 câu Part 1",
+    "href": "/practice/part-1",
+    "kind": "shadow",
+    "parts": [
+      1
+    ],
+    "skill": "listening",
+    "tags": [
+      "shadow"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 10,
+    "rank": 1,
+    "prereq": [],
+    "repeatable": true,
+    "evidence": {
+      "source": "shadow",
+      "part": 1,
+      "minSentences": 10
+    }
+  },
+  {
+    "id": "shadow.part2",
+    "title": "Shadow 10 câu Part 2",
+    "href": "/practice/part-2",
+    "kind": "shadow",
+    "parts": [
+      2
+    ],
+    "skill": "listening",
+    "tags": [
+      "shadow"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 10,
+    "rank": 1,
+    "prereq": [],
+    "repeatable": true,
+    "evidence": {
+      "source": "shadow",
+      "part": 2,
+      "minSentences": 10
+    }
+  },
+  {
+    "id": "shadow.part3",
+    "title": "Shadow 10 câu Part 3",
+    "href": "/practice/part-3",
+    "kind": "shadow",
+    "parts": [
+      3
+    ],
+    "skill": "listening",
+    "tags": [
+      "shadow"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 10,
+    "rank": 1,
+    "prereq": [],
+    "repeatable": true,
+    "evidence": {
+      "source": "shadow",
+      "part": 3,
+      "minSentences": 10
+    }
+  },
+  {
+    "id": "shadow.part4",
+    "title": "Shadow 10 câu Part 4",
+    "href": "/practice/part-4",
+    "kind": "shadow",
+    "parts": [
+      4
+    ],
+    "skill": "listening",
+    "tags": [
+      "shadow"
+    ],
+    "bandMin": 10,
+    "bandMax": 990,
+    "estMinutes": 10,
+    "rank": 1,
+    "prereq": [],
+    "repeatable": true,
+    "evidence": {
+      "source": "shadow",
+      "part": 4,
+      "minSentences": 10
     }
   },
   {

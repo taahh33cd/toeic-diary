@@ -10,6 +10,7 @@ import { PostSubmitView } from "./PostSubmitView";
 import { KeyboardHints } from "./KeyboardHints";
 import { useAudioShortcuts } from "./useAudioShortcuts";
 import { tokenMatches, normalizeToken } from "@/lib/practice/match";
+import type { WordTiming } from "@/lib/shadow/timing";
 import { buildSegmentWindows, TAIL_PAD, type SegmentWindow } from "@/lib/practice/segment";
 
 interface Sentence {
@@ -19,6 +20,10 @@ interface Sentence {
   startTime: number;
   endTime: number;
   speaker: string | null;
+  /** Mốc từng từ cho Shadow, null khi chưa căn. */
+  wordTimings?: WordTiming[] | null;
+  stressOverride?: number[] | null;
+  isStarred?: boolean | null;
 }
 
 interface Props {
@@ -28,6 +33,7 @@ interface Props {
   startTime: number | null;
   transcriptFull: string;
   keyVocab: VocabItem[] | null;
+  partNumber: number;
   onScored: (score: number) => void;
 }
 
@@ -55,7 +61,7 @@ function cleanAnswer(answer: string) {
   return normalizeToken(answer);
 }
 
-export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessionStart, transcriptFull, keyVocab, onScored }: Props) {
+export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessionStart, transcriptFull, keyVocab, partNumber, onScored }: Props) {
   const seed = useMemo(() => Math.floor(Math.random() * 10000), []);
 
   const sentencesWithBlanks = useMemo(() =>
@@ -441,6 +447,14 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
         transcriptFull={transcriptFull}
         vocabItems={keyVocab}
         onRetry={() => window.location.reload()}
+        shadow={{
+          lessonId,
+          partNumber,
+          sentences: sentencesWithBlanks,
+          errorsBySentence: Object.fromEntries(
+            sentencesWithBlanks.map((s) => [s.id, s.blanks.filter((b) => blankStates[b.id]?.status !== "correct").length])
+          ),
+        }}
       />
     );
   }

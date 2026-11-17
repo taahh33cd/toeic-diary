@@ -30,6 +30,15 @@ export interface StudentPracticeSummary {
   trend: number | null;
   /** Part có tỷ lệ đúng thấp nhất */
   weakest: { part: number; pct: number; gradable: number } | null;
+  /** Shadow: số câu đạt (mỗi câu tính 1 lần/ngày) 7 ngày qua / tổng, số bài xong 3 câu ⭐ */
+  shadow: { sentences7d: number; sentencesTotal: number; lessons: number };
+}
+
+interface ShadowRow {
+  userId: string;
+  total: number;
+  last7: number;
+  lessons: number;
 }
 
 interface PartRow {
@@ -70,7 +79,8 @@ function toPartScores(raw: unknown): PartTally[] {
 }
 
 export async function loadStudentPracticeSummaries(now: Date = new Date()): Promise<StudentPracticeSummary[]> {
-  const [profiles, parts, fulls] = await Promise.all([
+  const since7dDay = new Date(now.getTime() - 7 * DAY_MS);
+  const [profiles, parts, fulls, shadows] = await Promise.all([
     prisma.profile.findMany({
       where: { studentCode: { not: null } },
       select: { id: true, studentCode: true, displayName: true },
@@ -93,7 +103,24 @@ export async function loadStudentPracticeSummaries(now: Date = new Date()): Prom
                   ELSE 0 END AS "answered"
       FROM full_test_attempts
     `,
+    // Shadow lỗi (vd. bảng chưa có) không được làm hỏng cả bảng kết quả.
+    prisma.$queryRaw<ShadowRow[]>`
+      SELECT u.user_id AS "userId",
+             COALESCE(sp.total, 0)::int AS "total",
+             COALESCE(sp.last7, 0)::int AS "last7",
+             COALESCE(sl.lessons, 0)::int AS "lessons"
+      FROM (SELECT user_id FROM shadow_progress UNION SELECT user_id FROM shadow_lessons) u
+      LEFT JOIN (
+        SELECT user_id, count(*) AS total, count(*) FILTER (WHERE day >= ${since7dDay}::date) AS last7
+        FROM shadow_progress GROUP BY user_id
+      ) sp ON sp.user_id = u.user_id
+      LEFT JOIN (SELECT user_id, count(*) AS lessons FROM shadow_lessons GROUP BY user_id) sl ON sl.user_id = u.user_id
+    `.catch((e) => {
+      console.error("[staff-results] shadow summary failed", e);
+      return [] as ShadowRow[];
+    }),
   ]);
+  const shadowByUser = new Map(shadows.map((r) => [r.userId, r]));
 
   type Acc = {
     last: Date | null; done7d: number; doneTotal: number; unfinished: number;
@@ -162,6 +189,11 @@ export async function loadStudentPracticeSummaries(now: Date = new Date()): Prom
       estimate: estimateFromTotals(mocks.map((m) => m.total)),
       trend: mocks.length >= 2 ? mocks[0].total - mocks[1].total : null,
       weakest: a ? weakestPart(a.tallies.values()) : null,
+      shadow: {
+        sentences7d: shadowByUser.get(p.id)?.last7 ?? 0,
+        sentencesTotal: shadowByUser.get(p.id)?.total ?? 0,
+        lessons: shadowByUser.get(p.id)?.lessons ?? 0,
+      },
     };
   });
 }

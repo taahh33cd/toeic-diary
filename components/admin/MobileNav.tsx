@@ -24,6 +24,7 @@ const NAV = [
   { href: "/admin/attendance", emoji: "✅", label: "Điểm danh" },
   { href: "/admin/purchases",  emoji: "💳", label: "Mở khoá" },
   { href: "/admin/wordforms",  emoji: "🚩", label: "Câu báo sai" },
+  { href: "/admin/shadow",     emoji: "🎙", label: "Shadow" },
   { href: "/admin/settings",   emoji: "⚙️", label: "Cài đặt" },
 ];
 

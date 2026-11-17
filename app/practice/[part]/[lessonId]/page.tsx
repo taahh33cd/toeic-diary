@@ -8,6 +8,8 @@ import { PracticeClient } from "@/components/practice/PracticeClient";
 import type { VocabItem } from "@/components/practice/TranscriptVocabModal";
 import { ensureMinBlanks } from "@/lib/generateBlanks";
 import { isUsageExempt } from "@/lib/access";
+import { parseWordTimings } from "@/lib/shadow/timing";
+import { parseStressOverride } from "@/lib/shadow/prosody";
 import { UsageGate } from "@/components/shared/UsageGate";
 
 const PART_INFO: Record<string, { label: string; partNumber: number }> = {
@@ -80,6 +82,9 @@ export default async function PartLessonPage({
     endTime: s.endTime,
     speaker: s.speaker,
     optionLabel: s.optionLabel ?? null,
+    wordTimings: parseWordTimings(s.wordTimings),
+    stressOverride: parseStressOverride(s.stressOverride),
+    isStarred: s.isStarred ?? null,
     blanks: s.blanks.map((b) => ({
       id: b.id,
       position: b.position,

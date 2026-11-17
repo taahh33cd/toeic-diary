@@ -50,6 +50,7 @@ import {
   DIFFICULTY_RANK,
   EXAM_STYLE_MIN_ACCURACY,
   GRAMMAR_MIN_ACCURACY,
+  SHADOW_TASK_SENTENCES,
   LEVEL_BANDS,
   PART3_LEVEL_BANDS,
   grammarMinutes,
@@ -596,6 +597,33 @@ function bandFrom(
       prereq: [],
       repeatable: true,
       evidence: { source: "submission", skill: "writing", unit: u.unit },
+    });
+  }
+}
+
+// ── Shadow · đọc theo audio sau dictation, một mục mỗi Part 1–4 ────────────
+//
+// `repeatable`: học viên tự chọn bài dictation trong trang danh sách, catalog
+// chỉ có một mục mỗi part. Cửa sổ bằng chứng tính từ ngày giao nên mỗi lần giao
+// vẫn đòi câu shadow MỚI trong khoảng đó.
+{
+  const m = AREA_META.shadow;
+  for (const part of [1, 2, 3, 4] as const) {
+    push({
+      id: `shadow.part${part}`,
+      title: `Shadow ${SHADOW_TASK_SENTENCES} câu Part ${part}`,
+      href: `/practice/part-${part}`,
+      kind: "shadow",
+      parts: [part],
+      skill: m.skill,
+      tags: m.tags,
+      bandMin: 10,
+      bandMax: 990,
+      estMinutes: m.estMinutes,
+      rank: 1,
+      prereq: [],
+      repeatable: true,
+      evidence: { source: "shadow", part, minSentences: SHADOW_TASK_SENTENCES },
     });
   }
 }
