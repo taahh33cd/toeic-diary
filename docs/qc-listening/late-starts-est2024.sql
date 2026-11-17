@@ -1,3 +1,5 @@
+-- ĐÃ ÁP DỤNG lên production (toeic-dictation-master) ngày 2026-11-17: 145/145 câu.
+-- Hoàn tác: docs/qc-listening/late-starts-est2024.rollback.sql
 update sentences set start_time = 18.83 where id = '4510cce2-3d6c-4732-90c0-d429210725e9' and start_time = 21.75;
 update sentences set start_time = 19.86 where id = '53395180-37ea-4698-a443-50da45916dc3' and start_time = 21.75;
 update sentences set start_time = 29.37 where id = '88dfd4aa-43e7-477d-948f-b07ace162900' and start_time = 30.64;
