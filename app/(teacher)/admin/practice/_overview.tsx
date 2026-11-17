@@ -247,11 +247,11 @@ export function PracticeTable({
         </div>
       ) : (
         <div className="rounded-xl border overflow-x-auto" style={{ background: "var(--bg-elevated)", borderColor: "var(--border)" }}>
-          <table className="w-full text-sm" style={{ minWidth: 820, borderCollapse: "collapse" }}>
+          <table className="w-full text-sm" style={{ minWidth: 920, borderCollapse: "collapse" }}>
             <thead>
               <tr style={{ background: "var(--bg-primary)", borderBottom: "1px solid var(--border)" }}>
-                {["Học viên", "Thi thật", "Ước tính", "Mục tiêu", "Part yếu nhất", "Hoạt động"].map((h, i) => (
-                  <th key={h} className={`px-3 py-2.5 text-[11px] font-bold uppercase tracking-wider ${i === 0 ? "text-left" : i === 5 ? "text-left" : "text-right"}`}
+                {["Học viên", "Thi thật", "Ước tính", "Mục tiêu", "Part yếu nhất", "Shadow", "Hoạt động"].map((h, i) => (
+                  <th key={h} className={`px-3 py-2.5 text-[11px] font-bold uppercase tracking-wider ${i === 0 ? "text-left" : i === 6 ? "text-left" : "text-right"}`}
                     style={{ color: "var(--text-muted)" }}>
                     {h}
                   </th>
@@ -268,6 +268,7 @@ export function PracticeTable({
       <p className="text-xs m-0" style={{ color: "var(--text-muted)" }}>
         Ước tính = trung bình tối đa 3 bài thi thử trọn đề gần nhất (đủ 7 part, chế độ thi thử).
         Part yếu nhất tính trên các lượt làm được ít nhất nửa đề, gồm cả từng part trong bài thi thử.
+        Shadow = số câu luyện đọc theo đạt yêu cầu (mỗi câu tính 1 lần/ngày); bài xong ⭐ = đủ 3 câu gợi ý.
         ⚠ = không nộp bài nào trong {STALE_DAYS} ngày.
       </p>
     </div>
@@ -335,6 +336,14 @@ function OverviewRow({ r }: { r: Row }) {
           <>
             <span className="font-bold" style={{ color: toneOfPct(s.weakest.pct) }}>{s.weakest.pct}%</span>
             <span className="block text-xs" style={muted}>{partShortLabel(s.weakest.part)}</span>
+          </>
+        ) : <span style={muted}>—</span>}
+      </td>
+      <td className={`${cell} text-right tabular-nums`}>
+        {s && s.shadow.sentencesTotal > 0 ? (
+          <>
+            <span className="font-bold" title="Số câu shadow đạt trong 7 ngày (mỗi câu tính 1 lần/ngày)">{s.shadow.sentences7d} câu/7 ngày</span>
+            <span className="block text-xs" style={muted}>{s.shadow.sentencesTotal} tổng · {s.shadow.lessons} bài xong ⭐</span>
           </>
         ) : <span style={muted}>—</span>}
       </td>

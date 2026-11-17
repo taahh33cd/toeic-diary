@@ -1,6 +1,6 @@
 # Spec: Luyện đọc / Shadow sau Dictation
 
-Trạng thái: **xong giai đoạn 3** (lưu tiến độ, streak, trang tiến độ HV, huy hiệu ✓, sự kiện đo lường). Giai đoạn 4 chờ lệnh.
+Trạng thái: **xong cả 4 giai đoạn**. Còn chờ: merge + deploy, rồi đo thước đo thành công sau 4 tuần.
 
 Code: `components/practice/shadow/` (giao diện, ghi âm), `lib/shadow/` (luật ngữ điệu, chọn câu ⭐, phân tích giọng, mốc từ).
 Tiến độ: `lib/shadow/progress.ts` (server), `lib/shadow/client.ts`, API `app/api/shadow/{progress,event}`.
@@ -53,8 +53,8 @@ Ghi sự kiện: `shadow_open`, `shadow_record`, `shadow_sentence_done`, `shadow
 ## Dữ liệu
 
 - `Sentence.wordTimings Json?` (cột `word_timings`): `[[start, end], ...]`, mỗi cặp ứng với một token của `content.split(/\s+/)`. Null thì chỉ highlight cả câu.
-- `Sentence.stressOverride Json?`: chỉ số các từ đỉnh nhấn do admin sửa. Null thì dùng luật tự động.
-- `Sentence.isStarred Boolean?`: câu ⭐ do admin ghi đè.
+- `Sentence.stressOverride Json?` (`stress_override`): chỉ số các từ đỉnh nhấn do admin sửa; thay hẳn đỉnh của luật, cụm và kiểu kết câu giữ nguyên. Null thì dùng luật tự động. Migration 016.
+- `Sentence.isStarred Boolean?` (`is_starred`): true = luôn ⭐ (đứng trước), false = không bao giờ ⭐, null = tự chọn; còn chỗ thì luật tự chọn lấp tiếp.
 - Bảng `shadow_progress`: `userId, sentenceId, lessonId, part, day (date, giờ VN)`, unique `(userId, sentenceId, day)`.
 - Bảng `shadow_lessons`: bài đã đạt đủ câu ⭐ (lần đầu), unique `(userId, lessonId)`. Server chỉ ghi khi mọi câu ⭐ client gửi lên đều thuộc bài và đã có trong `shadow_progress`.
 - Bảng `shadow_events`: `shadow_open` (khu Shadow hiện ≥35% lần đầu), `shadow_record` (mỗi lần ghi, kèm ok/style/auto), `shadow_sentence_done` và `shadow_lesson_done` (server ghi khi tính tiến độ, không trùng).
@@ -115,12 +115,12 @@ from sub left join shadow_lessons sl using (user_id, lesson_id);
 
 ## Báo cáo
 
-- **Bảng Kết quả HV (admin)**: thêm cột Shadow (số câu, số bài đã xong).
+- **Bảng Kết quả HV (admin)** (đã làm): cột Shadow = số câu đạt 7 ngày, tổng, số bài xong ⭐.
 - **Streak**: tính shadow là hoạt động học trong ngày, theo luật ở trên.
-- **Lộ trình**: loại nhiệm vụ mới "Shadow N câu Part X", kiểm tra qua `ShadowProgress`.
+- **Lộ trình** (đã làm): việc `shadow.partX` "Shadow 10 câu Part X" (`kind: "shadow"`, `repeatable`). Planner giao 1 việc/tuần dạng **bonus** vào ngày học thường đầu tiên, Part nghe yếu nhất; không chiếm chỗ việc chính, không ảnh hưởng thưởng "xong ngày". Tự tích khi có ≥10 dòng `shadow_progress` của Part đó từ ngày giao; API lưu câu đạt gọi `syncRoadmapAfterAttempt`.
 - **Trang tiến độ HV** (`/progress`, đã làm): hôm nay x/5, số câu, số bài xong 3 ⭐, ngày có shadow, ngày đủ 5 câu.
 - **Huy hiệu "🎙 Shadow ✓"** (đã làm) trên danh sách bài ở `/test/[slug]` và `/practice/[part]`.
-- **Trang admin riêng**: danh sách câu theo đề/Part, sửa từ nhấn và câu ⭐ hàng loạt.
+- **Trang admin `/admin/shadow`** (đã làm): chọn đề × Part, mỗi câu có xem trước đường ngữ điệu, bấm từ để đặt/bỏ đỉnh nhấn, nút Tự/⭐/✕; chọn nhiều câu để đặt ⭐/bỏ ⭐/trả về tự động hàng loạt; lưu một lần qua `PATCH /api/admin/shadow`.
 
 ## Giai đoạn
 

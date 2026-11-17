@@ -12,6 +12,7 @@
  *   • ngày có BTVN của giáo viên → chỉ 1 việc ngắn
  *   • luôn có ít nhất một ngày nghỉ trong tuần
  *   • ngày cuối tuần học: một mốc kiểm tra để đo tiến bộ thật
+ *   • Shadow: một việc bonus "Shadow N câu Part X" mỗi tuần, part nghe yếu nhất
  */
 
 import {
@@ -208,6 +209,18 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
         .at(1) ?? studyDates.filter((d) => !busyDates.has(d) && d !== lastStudyDate).at(0)
     : undefined;
 
+  /**
+   * Shadow: part nghe (1–4) yếu nhất theo chẩn đoán, giao một lần mỗi tuần ở
+   * dạng BONUS vào ngày học thường đầu tiên (không bận, không phải ngày mốc
+   * kiểm tra). Là thói quen luyện nói ngắn đi kèm dictation: không được chiếm
+   * chỗ bài chữa điểm yếu, không được làm hỏng thưởng "xong hết việc chính".
+   */
+  const shadowPart = report.parts.find((p) => p.part <= 4)?.part;
+  const shadowItem = shadowPart ? getCatalogItem(`shadow.part${shadowPart}`) : undefined;
+  const shadowDate = shadowItem
+    ? studyDates.find((d) => !busyDates.has(d) && d !== lastStudyDate)
+    : undefined;
+
   days.forEach((day, dayIdx) => {
     if (day.rest) return;
 
@@ -319,6 +332,14 @@ export function planWeek(input: PlanWeekInput): DraftWeek {
         "maintenance",
         1,
       );
+    }
+
+    // Ngày Shadow: việc bonus của ngày là Shadow.
+    if (shadowItem && date_eq(day.date, shadowDate)) {
+      used.add(shadowItem.id);
+      assignedNow.add(shadowItem.id);
+      day.tasks.push(toTask(shadowItem, "bonus", "shadow"));
+      remaining -= shadowItem.estMinutes;
     }
 
     // Còn thừa thời gian thì thêm một việc bonus (không bắt buộc).

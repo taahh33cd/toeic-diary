@@ -32,6 +32,8 @@ interface Sentence {
   blanks: Blank[];
   /** Mốc từng từ cho Shadow, null khi chưa căn. */
   wordTimings?: WordTiming[] | null;
+  stressOverride?: number[] | null;
+  isStarred?: boolean | null;
 }
 
 interface Props {

@@ -213,6 +213,21 @@ export async function checkEvidence(
       };
     }
 
+    case "shadow": {
+      // Cột `day` là ngày giờ VN; `created_at` mới so được với mốc `since`.
+      const rows = await prisma.shadowProgress.findMany({
+        where: { userId, part: spec.part, createdAt: { gte: since } },
+        select: { createdAt: true },
+        orderBy: { createdAt: "desc" },
+      });
+      if (rows.length < spec.minSentences) return null;
+      return {
+        source: "shadow",
+        score: rows.length,
+        at: rows[0].createdAt.toISOString(),
+      };
+    }
+
     // Nguồn lạ — spec hỏng, hoặc một loại việc mới thêm mà quên viết nhánh ở
     // đây. Coi như CHƯA xong thay vì ném lỗi: một spec sai không được phép làm
     // sập cả lượt kiểm tiến độ của học viên.

@@ -174,6 +174,10 @@ for (const item of CATALOG_ITEMS) {
       if (!ev.skill || !ev.unit)
         problems.push(`${item.id}: evidence submission thiếu skill/unit`);
       break;
+    case "shadow":
+      if (![1, 2, 3, 4].includes(ev.part) || ev.minSentences < 1)
+        problems.push(`${item.id}: evidence shadow sai part/minSentences`);
+      break;
   }
 }
 

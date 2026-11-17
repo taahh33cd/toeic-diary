@@ -22,6 +22,8 @@ interface Sentence {
   speaker: string | null;
   /** Mốc từng từ cho Shadow, null khi chưa căn. */
   wordTimings?: WordTiming[] | null;
+  stressOverride?: number[] | null;
+  isStarred?: boolean | null;
 }
 
 interface Props {

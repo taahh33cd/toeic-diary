@@ -20,6 +20,7 @@ const NAV = [
   { href: "/admin/attendance", icon: "fact_check",   label: "Điểm danh" },
   { href: "/admin/purchases",  icon: "payments",     label: "Mở khoá" },
   { href: "/admin/wordforms",  icon: "flag",         label: "Câu báo sai" },
+  { href: "/admin/shadow",     icon: "record_voice_over", label: "Shadow" },
   { href: "/admin/settings",   icon: "settings",     label: "Cài đặt" },
   { href: "/admin/teachers",   icon: "badge",        label: "Giáo viên", adminOnly: true },
 ];

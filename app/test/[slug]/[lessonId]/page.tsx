@@ -10,6 +10,7 @@ import { ensureMinBlanks } from "@/lib/generateBlanks";
 import { ChevronLeft } from "lucide-react";
 import { isUsageExempt } from "@/lib/access";
 import { parseWordTimings } from "@/lib/shadow/timing";
+import { parseStressOverride } from "@/lib/shadow/prosody";
 import { UsageGate } from "@/components/shared/UsageGate";
 
 export default async function LessonPage({
@@ -77,6 +78,8 @@ export default async function LessonPage({
     speaker: s.speaker,
     optionLabel: s.optionLabel ?? null,
     wordTimings: parseWordTimings(s.wordTimings),
+    stressOverride: parseStressOverride(s.stressOverride),
+    isStarred: s.isStarred ?? null,
     blanks: s.blanks.map((b) => ({
       id: b.id,
       position: b.position,

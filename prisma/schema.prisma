@@ -95,6 +95,10 @@ model Sentence {
   optionLabel    String?          @map("option_label") // "A"/"B"/"C"/"D" — Part 1 & 2 options
   /// Mốc từng từ cho Shadow: [[start, end], ...] theo từ của content tách khoảng trắng
   wordTimings    Json?            @map("word_timings")
+  /// Shadow: chỉ số từ đỉnh nhấn do admin sửa (theo từ của content). Null = luật tự động.
+  stressOverride Json?            @map("stress_override")
+  /// Shadow: câu ⭐ do admin ghi đè. true = luôn ⭐, false = không bao giờ ⭐, null = tự chọn.
+  isStarred      Boolean?         @map("is_starred")
   blanks         Blank[]
   shadowProgress ShadowProgress[]
 

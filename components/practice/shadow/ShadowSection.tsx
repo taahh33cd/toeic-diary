@@ -23,6 +23,10 @@ export interface ShadowSentence {
   optionLabel?: string | null;
   /** Mốc từng từ theo `splitDisplayWords(content)` — có từ giai đoạn 2. */
   wordTimings?: WordTiming[] | null;
+  /** Chỉ số từ đỉnh nhấn do admin sửa; null = luật tự động. */
+  stressOverride?: number[] | null;
+  /** Câu ⭐ do admin ghi đè; null = tự chọn. */
+  isStarred?: boolean | null;
 }
 
 export interface ShadowInput {
@@ -103,7 +107,7 @@ export function ShadowSection(input: ShadowInput) {
   const [loadedDuration, setLoadedDuration] = useState(0);
   const audioDuration = input.audioDuration || loadedDuration;
 
-  const prosodies = useMemo(() => sentences.map((s) => analyzeProsody(s.content)), [sentences]);
+  const prosodies = useMemo(() => sentences.map((s) => analyzeProsody(s.content, s.stressOverride)), [sentences]);
   const timings = useMemo(
     () => sentences.map((s) => usableTimings(s.wordTimings, splitDisplayWords(s.content).length)),
     [sentences]

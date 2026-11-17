@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { getShadowLessonState, recordShadowSentence } from "@/lib/shadow/progress";
+import { syncRoadmapAfterAttempt } from "@/lib/roadmap/hook";
 
 /** GET ?lessonId= — câu đã đạt, bài đã xong chưa, số câu hôm nay. */
 export async function GET(request: NextRequest) {
@@ -36,5 +37,7 @@ export async function POST(request: NextRequest) {
 
   const result = await recordShadowSentence(user.id, { lessonId, sentenceId, starIds });
   if (!result) return NextResponse.json({ error: "sentence not in lesson" }, { status: 400 });
+  // Việc lộ trình "Shadow N câu Part X" tự tích ngay khi đủ câu.
+  if (result.counted) await syncRoadmapAfterAttempt(user.id);
   return NextResponse.json(result);
 }

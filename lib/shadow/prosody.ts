@@ -74,7 +74,18 @@ export function splitDisplayWords(content: string): string[] {
   return content.trim().split(/\s+/).filter(Boolean);
 }
 
-export function analyzeProsody(content: string): Prosody {
+/** Đọc cột `stress_override` (JSONB): mảng chỉ số từ, không hợp lệ thì null. */
+export function parseStressOverride(raw: unknown): number[] | null {
+  if (!Array.isArray(raw)) return null;
+  const idx = raw.filter((x): x is number => Number.isInteger(x) && x >= 0);
+  return idx.length ? [...new Set(idx)].sort((a, b) => a - b) : null;
+}
+
+/**
+ * `nuclei`: chỉ số từ đỉnh nhấn do admin sửa. Có thì thay hẳn đỉnh do luật chọn
+ * (đỉnh cũ quay về gợn nhẹ / đáy); cách cắt cụm và kiểu kết câu giữ nguyên.
+ */
+export function analyzeProsody(content: string, nuclei?: number[] | null): Prosody {
   const texts = splitDisplayWords(content);
   const cores = texts.map(coreWord);
   const n = texts.length;
@@ -104,6 +115,11 @@ export function analyzeProsody(content: string): Prosody {
     if (nucleus === -1) nucleus = i;
     stress[nucleus] = "nucleus";
     chunkStart = i + 1;
+  }
+  const manual = (nuclei ?? []).filter((k) => k < n);
+  if (manual.length) {
+    for (let i = 0; i < n; i++) if (stress[i] === "nucleus") stress[i] = isContent(cores[i]) ? "minor" : "none";
+    for (const k of manual) stress[k] = "nucleus";
   }
 
   // 3. Kiểu kết câu.

@@ -8,6 +8,8 @@ export interface StarInput {
   id: string;
   content: string;
   optionLabel?: string | null;
+  /** Admin ghi đè: true = luôn ⭐, false = không bao giờ ⭐. */
+  isStarred?: boolean | null;
 }
 
 export const STAR_COUNT = 3;
@@ -19,10 +21,15 @@ export function pickStarred(
 ): string[] {
   const errors = opts.errorsBySentence ?? {};
   const answer = opts.correctOption?.trim().toUpperCase() || null;
-  const eligible = sentences.filter((s) => splitDisplayWords(s.content).length >= MIN_WORDS);
-  const pool = eligible.length >= Math.min(STAR_COUNT, sentences.length) ? eligible : sentences;
+  // Câu admin đánh ⭐ đứng trước; câu admin loại thì không bao giờ chọn. Còn chỗ thì tự chọn tiếp.
+  const forced = sentences.filter((s) => s.isStarred === true).slice(0, STAR_COUNT).map((s) => s.id);
+  const free = sentences.filter((s) => s.isStarred !== true && s.isStarred !== false);
+  const need = Math.min(STAR_COUNT - forced.length, free.length);
+  if (need <= 0) return forced;
+  const eligible = free.filter((s) => splitDisplayWords(s.content).length >= MIN_WORDS);
+  const pool = eligible.length >= need ? eligible : free;
 
-  return [...pool]
+  return forced.concat([...pool]
     .map((s, i) => ({
       id: s.id,
       i,
@@ -36,6 +43,6 @@ export function pickStarred(
       b.len - a.len ||
       a.i - b.i
     )
-    .slice(0, STAR_COUNT)
-    .map((s) => s.id);
+    .slice(0, need)
+    .map((s) => s.id));
 }

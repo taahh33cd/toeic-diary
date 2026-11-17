@@ -158,6 +158,19 @@ export const AREA_META = {
     minScore: 0,
   },
 
+  /**
+   * Shadow — đọc theo audio sau khi chép chính tả xong một bài dictation.
+   * Không vào kho chữa/nền chung (planner giao riêng, mỗi tuần vài lần, ở dạng
+   * bonus) nên tag "shadow" không trùng FOUNDATION_TAGS.
+   */
+  shadow: {
+    parts: [1, 2, 3, 4] as PartNumber[],
+    skill: "listening" as const,
+    tags: ["shadow"],
+    estMinutes: 10,
+    minScore: 0,
+  },
+
   /** Full test — mốc kiểm tra cuối tháng. */
   fullTest: {
     parts: [1, 2, 3, 4, 5, 6, 7] as PartNumber[],
@@ -199,4 +212,7 @@ export function grammarMinutes(size: number): number {
  * tích được việc nào.
  */
 export const EXAM_STYLE_MIN_ACCURACY = 0.6;
+
+/** Số câu Shadow đạt cần có cho một việc "Shadow N câu Part X" (~10 phút). */
+export const SHADOW_TASK_SENTENCES = 10;
 export const GRAMMAR_MIN_ACCURACY = 0.6;
