@@ -11,6 +11,11 @@
  *
  * Usage:
  *   tsx scripts/apply-realigned-timestamps.ts <realigned.json> [--apply]
+ *   tsx scripts/apply-realigned-timestamps.ts <late-starts.json> --starts-only [--sql out.sql] [--apply]
+ *
+ * --starts-only chỉ dời start_time của câu bắt đầu muộn (xem mainStartsOnly).
+ * --sql ghi các câu UPDATE đã qua cổng ra file, để chạy ở nơi không có
+ * DATABASE_URL (vd. qua Supabase SQL editor).
  */
 
 import "dotenv/config";
@@ -181,10 +186,100 @@ function checkLesson(id: string, L: OutLesson): { ok: boolean; reasons: string[]
   return { ok: reasons.length === 0, reasons, mismatch: false };
 }
 
+/**
+ * --starts-only: chỉ dời start_time của những câu bắt đầu MUỘN hơn audio thật
+ * (scripts/audit-late-starts.py + crosscheck-late-starts.py). Không đụng
+ * end_time, không đụng câu khác — khác hẳn chế độ thường (ghi lại cả bài).
+ *
+ * Vì sao cần kiểm chéo ASR: forced alignment có thể kéo từ đầu câu 0 vào giọng
+ * đọc "Questions 89 through 91 refer to…" (không có trong transcript), báo DB
+ * muộn trong khi thật ra không. Câu nào ASR không xác nhận thì để người xem.
+ */
+const LATE_THRESHOLD = 0.3;   // DB muộn hơn mức này mới coi là cắt mất chữ
+// Align và ASR lệch nhau quá mức này = một trong hai bắt nhầm chỗ. Dưới mức
+// này cả hai cùng xác nhận DB muộn, chỉ khác mốc chính xác — lấy mốc sớm hơn
+// (vd. EST 2024 Test 3 Q77–79 #4: align 27.58, ASR 26.88, nghe thật ~26.9).
+const MAX_ALIGN_ASR_GAP = 1.5;
+
+interface LateStart {
+  id: string;
+  orderIndex: number;
+  words: number;
+  content: string;
+  dbStart: number;
+  dbEnd: number;
+  /** start_time của câu trước trong DB — không được dời lên trước nó */
+  prevDbStart: number | null;
+  /** từ đầu tiên theo forced alignment (thô, chưa đệm) */
+  alignStart: number;
+  /** từ cuối của câu trước theo forced alignment */
+  prevAlignEnd: number | null;
+  /** từ đầu tiên theo ASR độc lập; null = ASR không nghe ra đúng từ đầu */
+  asrStart: number | null;
+}
+interface LateLesson { label: string; audioDuration: number; sentences: LateStart[] }
+
+function planLateStart(s: LateStart): { ok: boolean; newStart: number; reasons: string[] } {
+  const reasons: string[] = [];
+  // Lấy mốc sớm hơn trong hai nguồn: thừa một chút lặng còn hơn cụt chữ.
+  const heard = s.asrStart === null ? s.alignStart : Math.min(s.alignStart, s.asrStart);
+  let newStart = Math.max(0, heard - PAD_START);
+  // Không lùi vào giữa từ cuối của câu trước.
+  if (s.prevAlignEnd !== null && s.prevAlignEnd < heard) newStart = Math.max(newStart, s.prevAlignEnd);
+  newStart = +newStart.toFixed(2);
+
+  if (s.asrStart === null) reasons.push("ASR không nghe ra từ đầu câu — không kiểm chéo được");
+  else if (Math.abs(s.asrStart - s.alignStart) > MAX_ALIGN_ASR_GAP)
+    reasons.push(`align ${s.alignStart}s và ASR ${s.asrStart}s lệch nhau > ${MAX_ALIGN_ASR_GAP}s`);
+  else if (s.dbStart - s.asrStart <= LATE_THRESHOLD)
+    reasons.push(`ASR không xác nhận DB muộn (ASR ${s.asrStart}s, DB ${s.dbStart}s)`);
+  if (s.dbStart - s.alignStart <= LATE_THRESHOLD) reasons.push("align không thấy DB muộn");
+  if (newStart >= s.dbEnd) reasons.push(`start mới ${newStart} >= end ${s.dbEnd}`);
+  if (s.prevDbStart !== null && newStart < s.prevDbStart)
+    reasons.push(`start mới ${newStart} lùi qua câu trước (${s.prevDbStart})`);
+  const perWord = (s.dbEnd - newStart) / Math.max(1, s.words);
+  if (perWord > MAX_SEC_PER_WORD) reasons.push(`khoảng mới quá dài: ${perWord.toFixed(2)} s/từ`);
+  return { ok: reasons.length === 0, newStart, reasons };
+}
+
+async function mainStartsOnly(file: string, apply: boolean, sqlOut: string | null) {
+  const data: Record<string, LateLesson> = JSON.parse(fs.readFileSync(file, "utf8"));
+  let ok = 0, held = 0, written = 0;
+  const sql: string[] = [];
+  for (const L of Object.values(data)) {
+    console.log(`\n${L.label}`);
+    for (const s of L.sentences) {
+      const p = planLateStart(s);
+      const late = (s.dbStart - s.alignStart).toFixed(2);
+      console.log(`  ${p.ok ? "SỬA " : "GIỮ "} #${s.orderIndex} DB ${s.dbStart.toFixed(2)} | align ${s.alignStart.toFixed(2)} | ASR ${s.asrStart?.toFixed(2) ?? "—"} | muộn ${late}s -> ${p.newStart.toFixed(2)}  "${s.content.slice(0, 44)}"`);
+      p.reasons.forEach((r) => console.log(`       ! ${r}`));
+      if (!p.ok) { held++; continue; }
+      ok++;
+      // Khoá theo giá trị cũ: nếu DB đã đổi từ lúc xuất thì câu UPDATE không ăn.
+      sql.push(`update sentences set start_time = ${p.newStart} where id = '${s.id}' and start_time = ${s.dbStart};`);
+      if (apply) {
+        const r = await prisma.sentence.updateMany({
+          where: { id: s.id, startTime: s.dbStart },
+          data: { startTime: p.newStart },
+        });
+        written += r.count;
+      }
+    }
+  }
+  console.log(`\n${ok} câu sẽ sửa, ${held} câu giữ lại cho người xem.`);
+  if (sqlOut) { fs.writeFileSync(sqlOut, sql.join("\n") + "\n", "utf8"); console.log(`SQL -> ${sqlOut}`); }
+  if (apply) console.log(`Đã ghi ${written} câu.`);
+  else console.log("Đây là xem trước. Thêm --apply để ghi DB.");
+}
+
 async function main() {
   const file = process.argv[2];
   const apply = process.argv.includes("--apply");
   if (!file) { console.error("Thiếu đường dẫn realigned.json"); process.exit(1); }
+  if (process.argv.includes("--starts-only")) {
+    const i = process.argv.indexOf("--sql");
+    return mainStartsOnly(file, apply, i !== -1 ? process.argv[i + 1] : null);
+  }
 
   const data: Record<string, OutLesson> = JSON.parse(fs.readFileSync(file, "utf8"));
   let pass = 0, fail = 0, written = 0;
