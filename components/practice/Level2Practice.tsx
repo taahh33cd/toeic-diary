@@ -446,6 +446,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
         vocabItems={keyVocab}
         onRetry={() => window.location.reload()}
         shadow={{
+          lessonId,
           partNumber,
           sentences: sentencesWithBlanks,
           errorsBySentence: Object.fromEntries(

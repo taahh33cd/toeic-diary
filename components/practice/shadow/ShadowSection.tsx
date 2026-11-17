@@ -9,6 +9,7 @@ import { analyzeProsody, splitDisplayWords } from "@/lib/shadow/prosody";
 import { pickStarred } from "@/lib/shadow/stars";
 import { activeWordIndex, referenceSeconds, usableTimings, type WordTiming } from "@/lib/shadow/timing";
 import { analyzeBlob, passesVoiceCheck, type VoiceAnalysis } from "@/lib/shadow/voice";
+import { fetchShadowState, saveShadowSentence, trackShadow } from "@/lib/shadow/client";
 import { buildSegmentWindows, LEAD_IN, type SegmentWindow } from "@/lib/practice/segment";
 import { IntonationText } from "./IntonationText";
 import { useRecorder } from "./useRecorder";
@@ -25,6 +26,8 @@ export interface ShadowSentence {
 }
 
 export interface ShadowInput {
+  /** Có thì lưu tiến độ lên server; bỏ trống thì chỉ giữ trên trình duyệt. */
+  lessonId?: string;
   audioUrl: string;
   /** Độ dài file (giây); bỏ trống thì đọc từ thẻ audio khi tải xong. */
   audioDuration?: number;
@@ -143,6 +146,9 @@ export function ShadowSection(input: ShadowInput) {
   const [playing, setPlaying] = useState<{ sentence: number; word: number }>({ sentence: -1, word: -1 });
   const [takes, setTakes] = useState<Record<number, Take>>({});
   const [done, setDone] = useState<Set<number>>(() => new Set());
+  // Tiến độ đã lưu: câu đạt ở các lần trước, bài đã xong, số câu hôm nay cho streak.
+  const [saved, setSaved] = useState<{ ids: Set<string>; lessonDone: boolean; today: number; goal: number } | null>(null);
+  const lessonId = input.lessonId;
   const [fullscreen, setFullscreen] = useState(false);
 
   const sectionRef = useRef<HTMLElement>(null);
@@ -154,6 +160,28 @@ export function ShadowSection(input: ShadowInput) {
   rateRef.current = rate;
   const rec = useRecorder();
   const micBlocked = rec.state === "denied" || rec.state === "unsupported";
+  const autoRunRef = useRef(false);
+  const starsRef = useRef(stars);
+  starsRef.current = stars;
+
+  useEffect(() => {
+    if (!lessonId) return;
+    let alive = true;
+    fetchShadowState(lessonId).then((st) => {
+      if (!alive || !st) return;
+      setSaved({ ids: new Set(st.doneSentenceIds), lessonDone: st.lessonDone, today: st.todayCount, goal: st.streakGoal });
+    });
+    return () => { alive = false; };
+  }, [lessonId]);
+
+  /** Câu đạt → lưu server, cập nhật số câu hôm nay / bài xong. */
+  const persistDone = useCallback((i: number) => {
+    if (!lessonId) return;
+    saveShadowSentence({ lessonId, sentenceId: sentences[i].id, starIds: starsRef.current }).then((r) => {
+      if (!r) return;
+      setSaved({ ids: new Set(r.doneSentenceIds), lessonDone: r.lessonDone, today: r.todayCount, goal: r.streakGoal });
+    });
+  }, [lessonId, sentences]);
 
   useEffect(() => {
     try {
@@ -253,10 +281,16 @@ export function ShadowSection(input: ShadowInput) {
     const ok = analysis ? passesVoiceCheck(analysis, refSec) : recording.durationSec >= refSec * 0.5;
     const take: Take = { url: recording.url, analysis, ok, refSec };
     setTakes((t) => ({ ...t, [i]: take }));
-    if (ok) setDone((d) => new Set(d).add(i));
+    if (lessonId) {
+      trackShadow("shadow_record", lessonId, sentences[i].id, {
+        ok, style, auto: autoRunRef.current, refSec: Math.round(refSec * 10) / 10,
+        voicedSec: analysis ? Math.round(analysis.voicedSec * 10) / 10 : null,
+      });
+    }
+    if (ok) { setDone((d) => new Set(d).add(i)); persistDone(i); }
     if (runRef.current === run) setPhase("idle");
     return take;
-  }, [style, windows, timings, playSentence, rec]);
+  }, [style, windows, timings, playSentence, rec, lessonId, sentences, persistDone]);
 
   // ── Hành động của nút ───────────────────────────────────────────────────────
   const onListen = (i = idx) => { stopAll(); const run = runRef.current; playSentence(i, run).then(() => { if (runRef.current === run) setPhase("idle"); }); };
@@ -303,6 +337,7 @@ export function ShadowSection(input: ShadowInput) {
   };
 
   // ── Tự chạy: nghe → ghi → nghe lại → câu tiếp ───────────────────────────────
+  useEffect(() => { autoRunRef.current = autoRun; }, [autoRun]);
   useEffect(() => {
     if (!autoRun || mode !== "sentence") return;
     stopAll();
@@ -366,6 +401,14 @@ export function ShadowSection(input: ShadowInput) {
     return () => document.removeEventListener("keydown", onKey);
   }, [visible, fullscreen, rec]);
 
+  // Đo lường: lần đầu khu Shadow hiện rõ trên màn hình thì tính là "mở".
+  const openedRef = useRef(false);
+  useEffect(() => {
+    if (!visible || openedRef.current || !lessonId) return;
+    openedRef.current = true;
+    trackShadow("shadow_open", lessonId, undefined, { part: partNumber, sentences: n });
+  }, [visible, lessonId, partNumber, n]);
+
   // ── Toàn màn hình ───────────────────────────────────────────────────────────
   useEffect(() => {
     const on = () => setFullscreen(document.fullscreenElement === sectionRef.current);
@@ -378,8 +421,11 @@ export function ShadowSection(input: ShadowInput) {
   };
 
   // ── Hiển thị ────────────────────────────────────────────────────────────────
-  const starsDone = stars.filter((id) => done.has(sentences.findIndex((s) => s.id === id))).length;
-  const lessonDone = stars.length > 0 && starsDone === stars.length;
+  const isDone = (i: number) => done.has(i) || !!saved?.ids.has(sentences[i]?.id);
+  const doneCount = sentences.filter((_, i) => isDone(i)).length;
+  const starsDone = stars.filter((id) => isDone(sentences.findIndex((s) => s.id === id))).length;
+  const lessonDone = (stars.length > 0 && starsDone === stars.length) || !!saved?.lessonDone;
+  const streakMet = !!saved && saved.today >= saved.goal;
   const cur = sentences[idx];
   const take = takes[idx];
   const busy = phase !== "idle";
@@ -410,8 +456,16 @@ export function ShadowSection(input: ShadowInput) {
         </div>
         <div className="flex items-center gap-2">
           <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border tabular-nums ${lessonDone ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-600 dark:text-emerald-300" : "border-[var(--border)] text-[var(--text-secondary)]"}`}>
-            {lessonDone ? "✓ Xong bài · " : "⭐ "}{starsDone}/{stars.length} câu gợi ý · {done.size}/{n} câu
+            {lessonDone ? "✓ Xong bài · " : "⭐ "}{starsDone}/{stars.length} câu gợi ý · {doneCount}/{n} câu
           </span>
+          {saved && (
+            <span
+              className={`text-xs font-semibold px-2.5 py-1 rounded-full border tabular-nums ${streakMet ? "border-orange-500/40 bg-orange-500/10 text-orange-600 dark:text-orange-300" : "border-[var(--border)] text-[var(--text-secondary)]"}`}
+              title={`Shadow đạt ${saved.goal} câu trong ngày để giữ streak`}
+            >
+              🔥 {streakMet ? `Hôm nay ${saved.today} câu ✓` : `Hôm nay ${saved.today}/${saved.goal} câu`}
+            </span>
+          )}
           <button onMouseDown={keep} onClick={toggleFullscreen} className="p-2 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--practice-accent)]" aria-label={fullscreen ? "Thoát toàn màn hình" : "Toàn màn hình"}>
             {fullscreen ? <Minimize2 size={15} /> : <Maximize2 size={15} />}
           </button>
@@ -483,10 +537,10 @@ export function ShadowSection(input: ShadowInput) {
               <button key={s.id} onMouseDown={keep} onClick={() => go(i)}
                 className={`min-w-8 h-8 px-2 rounded-lg text-xs font-semibold tabular-nums border transition-all ${
                   i === idx ? "border-[var(--practice-accent)] text-[var(--practice-accent)] bg-[var(--practice-accent)]/10"
-                  : done.has(i) ? "border-emerald-500/40 text-emerald-600 dark:text-emerald-300"
+                  : isDone(i) ? "border-emerald-500/40 text-emerald-600 dark:text-emerald-300"
                   : "border-[var(--border)] text-[var(--text-muted)]"}`}
-                aria-label={`Câu ${i + 1}${starSet.has(s.id) ? ", gợi ý" : ""}${done.has(i) ? ", đã shadow" : ""}`}>
-                {done.has(i) ? "✓" : i + 1}{starSet.has(s.id) && <Star size={10} className="inline ml-0.5 -mt-0.5 fill-amber-400 text-amber-400" />}
+                aria-label={`Câu ${i + 1}${starSet.has(s.id) ? ", gợi ý" : ""}${isDone(i) ? ", đã shadow" : ""}`}>
+                {isDone(i) ? "✓" : i + 1}{starSet.has(s.id) && <Star size={10} className="inline ml-0.5 -mt-0.5 fill-amber-400 text-amber-400" />}
               </button>
             ))}
           </div>

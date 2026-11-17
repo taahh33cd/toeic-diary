@@ -196,7 +196,7 @@ export function Level4Practice({ lessonId, sentences, transcriptFull, startTime,
 
       {feedback && (
         <div className="mb-6">
-          <ShadowSection audioUrl={audioUrl} audioDuration={audioDuration} partNumber={partNumber} sentences={sentences} />
+          <ShadowSection lessonId={lessonId} audioUrl={audioUrl} audioDuration={audioDuration} partNumber={partNumber} sentences={sentences} />
         </div>
       )}
 

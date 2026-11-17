@@ -1,9 +1,9 @@
 # Spec: Luyện đọc / Shadow sau Dictation
 
-Trạng thái: **xong giai đoạn 2** (đã ghi mốc từng từ cho 98.9% số câu trên production). Giai đoạn 3 chờ lệnh.
+Trạng thái: **xong giai đoạn 3** (lưu tiến độ, streak, trang tiến độ HV, huy hiệu ✓, sự kiện đo lường). Giai đoạn 4 chờ lệnh.
 
 Code: `components/practice/shadow/` (giao diện, ghi âm), `lib/shadow/` (luật ngữ điệu, chọn câu ⭐, phân tích giọng, mốc từ).
-Huy hiệu ✓ trên danh sách bài cần lưu tiến độ nên dời sang giai đoạn 3.
+Tiến độ: `lib/shadow/progress.ts` (server), `lib/shadow/client.ts`, API `app/api/shadow/{progress,event}`.
 
 ## Mục tiêu
 
@@ -55,7 +55,11 @@ Ghi sự kiện: `shadow_open`, `shadow_record`, `shadow_sentence_done`, `shadow
 - `Sentence.wordTimings Json?` (cột `word_timings`): `[[start, end], ...]`, mỗi cặp ứng với một token của `content.split(/\s+/)`. Null thì chỉ highlight cả câu.
 - `Sentence.stressOverride Json?`: chỉ số các từ đỉnh nhấn do admin sửa. Null thì dùng luật tự động.
 - `Sentence.isStarred Boolean?`: câu ⭐ do admin ghi đè.
-- Bảng `ShadowProgress`: `userId, sentenceId, lessonId, part, day (date)`, unique `(userId, sentenceId, day)`.
+- Bảng `shadow_progress`: `userId, sentenceId, lessonId, part, day (date, giờ VN)`, unique `(userId, sentenceId, day)`.
+- Bảng `shadow_lessons`: bài đã đạt đủ câu ⭐ (lần đầu), unique `(userId, lessonId)`. Server chỉ ghi khi mọi câu ⭐ client gửi lên đều thuộc bài và đã có trong `shadow_progress`.
+- Bảng `shadow_events`: `shadow_open` (khu Shadow hiện ≥35% lần đầu), `shadow_record` (mỗi lần ghi, kèm ok/style/auto), `shadow_sentence_done` và `shadow_lesson_done` (server ghi khi tính tiến độ, không trùng).
+- Streak: câu thứ 5 trong ngày giờ VN → XP `shadow_day` (+10) một lần/ngày; `recordXp` cập nhật streak như mọi hoạt động khác.
+- Migration: `prisma/manual-migrations/015_shadow_progress.sql` (RLS bật, 0 policy).
 - Không lưu file ghi âm. Bản ghi chỉ nằm trong bộ nhớ trình duyệt suốt phiên học.
 
 ## Timing từng từ
@@ -97,12 +101,25 @@ So mốc đầu mỗi từ với Whisper nhận dạng lại (ASR, faster-whispe
 - Đã ghi vào `sentences.word_timings` trên production. Kiểm tra lại: 6.651 câu có mốc, khớp với kết quả căn.
 - Khi thêm đề mới: `export-lessons.ts --only-missing` → `align_word_timings.py` → `apply-word-timings.ts --apply`.
 
+### Đo thước đo thành công
+
+```sql
+-- % bài dictation nộp trong 4 tuần có shadow đủ 3 câu ⭐ (theo cặp HV × bài)
+with sub as (
+  select distinct user_id, lesson_id from user_progress
+  where completed_at >= now() - interval '28 days'
+)
+select count(sl.id)::float / nullif(count(*), 0) as rate
+from sub left join shadow_lessons sl using (user_id, lesson_id);
+```
+
 ## Báo cáo
 
 - **Bảng Kết quả HV (admin)**: thêm cột Shadow (số câu, số bài đã xong).
 - **Streak**: tính shadow là hoạt động học trong ngày, theo luật ở trên.
 - **Lộ trình**: loại nhiệm vụ mới "Shadow N câu Part X", kiểm tra qua `ShadowProgress`.
-- **Trang tiến độ HV**: tổng số câu và số bài đã shadow.
+- **Trang tiến độ HV** (`/progress`, đã làm): hôm nay x/5, số câu, số bài xong 3 ⭐, ngày có shadow, ngày đủ 5 câu.
+- **Huy hiệu "🎙 Shadow ✓"** (đã làm) trên danh sách bài ở `/test/[slug]` và `/practice/[part]`.
 - **Trang admin riêng**: danh sách câu theo đề/Part, sửa từ nhấn và câu ⭐ hàng loạt.
 
 ## Giai đoạn

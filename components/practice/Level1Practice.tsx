@@ -515,6 +515,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
         nextLessonUrl={nextLessonUrl}
         onRetry={() => window.location.reload()}
         shadow={{
+          lessonId,
           partNumber,
           sentences: processedSentences,
           correctOption,

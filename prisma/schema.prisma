@@ -77,23 +77,26 @@ model Lesson {
   progress       UserProgress[]
   vocabulary     SavedVocabulary[]
   aiFeedback     AiFeedback[]
+  shadowProgress ShadowProgress[]
+  shadowLessons  ShadowLesson[]
 
   @@map("lessons")
 }
 
 model Sentence {
-  id          String  @id @default(uuid())
-  lessonId    String  @map("lesson_id")
-  lesson      Lesson  @relation(fields: [lessonId], references: [id], onDelete: Cascade)
-  orderIndex  Int     @map("order_index")
-  content     String  @db.Text
-  startTime   Float   @map("start_time") // seconds
-  endTime     Float   @map("end_time") // seconds
-  speaker     String? // "W" | "M" | "Narrator"
-  optionLabel String? @map("option_label") // "A"/"B"/"C"/"D" — Part 1 & 2 options
+  id             String           @id @default(uuid())
+  lessonId       String           @map("lesson_id")
+  lesson         Lesson           @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  orderIndex     Int              @map("order_index")
+  content        String           @db.Text
+  startTime      Float            @map("start_time") // seconds
+  endTime        Float            @map("end_time") // seconds
+  speaker        String? // "W" | "M" | "Narrator"
+  optionLabel    String?          @map("option_label") // "A"/"B"/"C"/"D" — Part 1 & 2 options
   /// Mốc từng từ cho Shadow: [[start, end], ...] theo từ của content tách khoảng trắng
-  wordTimings Json?   @map("word_timings")
-  blanks      Blank[]
+  wordTimings    Json?            @map("word_timings")
+  blanks         Blank[]
+  shadowProgress ShadowProgress[]
 
   @@index([lessonId, orderIndex])
   @@map("sentences")
@@ -183,6 +186,9 @@ model Profile {
   studyWeeks           StudyWeek[]
   studyTasks           StudyTask[]
   planEvents           PlanEvent[]
+  shadowProgress       ShadowProgress[]
+  shadowLessons        ShadowLesson[]
+  shadowEvents         ShadowEvent[]
 
   @@map("profiles")
 }
@@ -261,6 +267,55 @@ model UserProgress {
   @@unique([userId, lessonId, level])
   @@index([userId, level])
   @@map("user_progress")
+}
+
+/// Shadow: mỗi câu đạt (tiếng nói ≥ 50% độ dài câu gốc) tính 1 lần mỗi ngày giờ VN.
+model ShadowProgress {
+  id         String   @id @default(uuid())
+  userId     String   @map("user_id")
+  profile    Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sentenceId String   @map("sentence_id")
+  sentence   Sentence @relation(fields: [sentenceId], references: [id], onDelete: Cascade)
+  lessonId   String   @map("lesson_id")
+  lesson     Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  part       Int
+  /// Ngày theo giờ VN (UTC+7)
+  day        DateTime @db.Date
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@unique([userId, sentenceId, day])
+  @@index([userId, day])
+  @@index([userId, lessonId])
+  @@map("shadow_progress")
+}
+
+/// Shadow: bài đã shadow đủ 3 câu ⭐ (lần đầu). Dùng cho huy hiệu ✓ và thước đo thành công.
+model ShadowLesson {
+  id          String   @id @default(uuid())
+  userId      String   @map("user_id")
+  profile     Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId    String   @map("lesson_id")
+  lesson      Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  completedAt DateTime @default(now()) @map("completed_at")
+
+  @@unique([userId, lessonId])
+  @@map("shadow_lessons")
+}
+
+/// Sự kiện đo lường Shadow: shadow_open | shadow_record | shadow_sentence_done | shadow_lesson_done
+model ShadowEvent {
+  id         String   @id @default(uuid())
+  userId     String   @map("user_id")
+  profile    Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type       String
+  lessonId   String   @map("lesson_id")
+  sentenceId String?  @map("sentence_id")
+  metadata   Json?
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@index([type, createdAt])
+  @@index([userId, createdAt])
+  @@map("shadow_events")
 }
 
 model PartLevelProgress {

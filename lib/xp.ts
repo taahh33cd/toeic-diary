@@ -24,6 +24,7 @@ export type XpSource =
   | "mission_day"
   | "roadmap_task"
   | "roadmap_day"
+  | "shadow_day"
   | "homework_submit"
   | "test_score"
   | "daily_login"
@@ -43,6 +44,7 @@ export const XP_RULES: Record<XpSource, number> = {
   // viên tự đánh dấu "bỏ qua" không được cộng, nếu không XP đo công sức bấm nút.
   roadmap_task: 5,
   roadmap_day: 20,          // bonus khi xong hết việc chính của một ngày
+  shadow_day: 10,           // shadow đủ 5 câu đạt trong ngày (giờ VN) — tính là hoạt động học cho streak
   homework_submit: 30,
   test_score: 15,
   daily_login: 5,
