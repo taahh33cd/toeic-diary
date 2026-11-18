@@ -549,7 +549,7 @@ function ReviewQuestion({
       </div>
 
       {q.prompt && (
-        <p style={{ margin: "0 0 0.6rem", fontSize: "0.95rem", lineHeight: 1.55 }}>{q.prompt}</p>
+        <p style={{ margin: "0 0 0.6rem", fontSize: "0.95rem", lineHeight: 1.55, whiteSpace: "pre-line" }}>{q.prompt}</p>
       )}
 
       <div style={{ display: "grid", gap: 5, marginBottom: exp ? "0.8rem" : 0 }}>
