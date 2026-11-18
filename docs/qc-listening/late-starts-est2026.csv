@@ -4,17 +4,17 @@
 1,3-3,0,A woman is holding a phone up to her ear.,7.6,6.35,6.36,7.3,1.24,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
 1,3-3,1,A woman is pouring a beverage into a glass.,11.94,11.96,11.28,11.92,0.66,không muộn,,bắt đầu nói ở 11.96s — DB không muộn
 1,4-4,0,A wooden crate is filled with vegetables.,6.86,7.11,6.28,6.82,0.58,không muộn,,bắt đầu nói ở 7.11s — DB không muộn
-1,4-4,1,One of the men is putting vegetables into a shopping bag.,11.76,10.56,10.58,11.68,1.18,sửa start,10.31,
+1,4-4,1,One of the men is putting vegetables into a shopping bag.,11.76,10.56,10.58,11.68,1.18,sửa start,10.31,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 1,4-4,2,A backpack has been set on the ground.,17.06,17.03,16.4,17.0,0.66,không muộn,,bắt đầu nói ở 17.03s — DB không muộn
 1,5-5,1,He's laying a brush down on a windowsill.,11.84,11.85,10.8,11.82,1.04,không muộn,,bắt đầu nói ở 11.85s — DB không muộn
 1,6-6,0,A path is covered with fallen branches.,7.14,7.5,6.66,7.3,0.48,không muộn,,bắt đầu nói ở 7.5s — DB không muộn
 1,6-6,1,A tree is lying across a grassy area.,12.04,12.06,10.98,12.0,1.06,không muộn,,bắt đầu nói ở 12.06s — DB không muộn
 1,7-7,0,Where is the conference being held?,2.28,2.01,0.78,1.72,1.5,không muộn,,bắt đầu nói ở 2.01s — DB không muộn
-1,7-7,2,At the Riverview Hotel.,9.36,8.23,8.24,9.38,1.12,sửa start,7.98,
+1,7-7,2,At the Riverview Hotel.,9.36,8.23,8.24,9.38,1.12,sửa start,7.98,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 1,8-8,0,When does the warehouse manager arrive?,2.22,1.95,1.0,1.66,1.22,không muộn,,bắt đầu nói ở 1.95s — DB không muộn
 1,8-8,1,"Sure, no problem.",5.98,5.83,5.32,5.58,0.66,không muộn,,bắt đầu nói ở 5.83s — DB không muộn
 1,9-9,1,Did you order paper for the copier?,6.42,6.42,5.64,5.52,0.78,không muộn,,bắt đầu nói ở 6.42s — DB không muộn
-1,9-9,2,Yes-it's next to Greendale Lake.,11.02,10.3,10.32,10.74,0.7,sửa start,10.05,
+1,9-9,2,Yes-it's next to Greendale Lake.,11.02,10.3,10.32,10.74,0.7,sửa start,10.05,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 1,10-10,0,Who sent the meeting minutes to the accounting department?,1.74,2.04,1.02,1.94,0.72,không muộn,,bắt đầu nói ở 2.04s — DB không muộn
 1,10-10,1,Our office assistant.,6.78,6.73,6.0,6.72,0.78,không muộn,,bắt đầu nói ở 6.73s — DB không muộn
 1,10-10,2,They have a savings account.,10.1,10.05,9.34,10.12,0.76,không muộn,,bắt đầu nói ở 10.05s — DB không muộn
@@ -67,21 +67,21 @@
 1,30-30,2,To the south entrance.,11.04,11.01,10.28,11.06,0.76,không muộn,,bắt đầu nói ở 11.01s — DB không muộn
 1,31-31,0,When are you going to choose a new project manager?,2.72,2.45,0.94,2.1,1.78,không muộn,,bắt đầu nói ở 2.45s — DB không muộn
 1,31-31,1,The projector's not working correctly.,6.98,6.89,6.16,6.8,0.82,không muộn,,bắt đầu nói ở 6.89s — DB không muộn
-1,35-37,3,"Well, there's only one group of three seats together. Advance payment is required to hold them.",30.26,28.36,28.36,30.2,1.9,sửa start,28.11,
-1,44-46,2,"Yes, that's right. We'll take all electronics.",22.8,20.39,20.28,22.74,2.52,sửa start,20.14,
+1,35-37,3,"Well, there's only one group of three seats together. Advance payment is required to hold them.",30.26,28.36,28.36,30.2,1.9,sửa start,28.11,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+1,44-46,2,"Yes, that's right. We'll take all electronics.",22.8,20.39,20.28,22.74,2.52,sửa start,20.14,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 1,47-49,1,"Great, thanks. I was just in the neighborhood and thought I'd stop in for a cookie or a piece of cake. You have so many delicious baked goods here.",14.1,14.13,13.08,14.04,1.02,không muộn,,bắt đầu nói ở 14.13s — DB không muộn
 1,62-64,1,OK. Which day would you prefer to meet with her?,19.86,19.83,17.74,19.78,2.12,không muộn,,bắt đầu nói ở 19.83s — DB không muộn
-1,65-67,1,"It is, but you have to click on the ""About Us"" page and scroll to the bottom of that page. Maybe people don't see it.",19.84,17.5,17.52,17.44,2.32,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-1,65-67,2,"Oh, I think we should move that information from the ""About Us"" page and make a separate page for directions and parking information.",31.6,25.88,25.74,25.2,5.86,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-1,65-67,3,"I'd be happy to make that change. But we're in the middle of updating our software, so it'll have to wait until Monday.",41.76,37.28,37.3,37.16,4.46,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+1,65-67,1,"It is, but you have to click on the ""About Us"" page and scroll to the bottom of that page. Maybe people don't see it.",19.84,17.5,17.52,17.44,2.32,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+1,65-67,2,"Oh, I think we should move that information from the ""About Us"" page and make a separate page for directions and parking information.",31.6,25.88,25.74,25.2,5.86,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+1,65-67,3,"I'd be happy to make that change. But we're in the middle of updating our software, so it'll have to wait until Monday.",41.76,37.28,37.3,37.16,4.46,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 1,74-76,4,"Once that's complete, you'll have access to all your department's files.",35.96,25.63,25.68,35.7,10.28,cần nghe lại,,bài lệch cả bài nhưng tín hiệu không nhất quán — cần nghe lại
 1,74-76,5,Please note that you can only access them from your company computer.,41.32,28.87,25.82,41.22,15.5,cần nghe lại,,bài lệch cả bài nhưng tín hiệu không nhất quán — cần nghe lại
 1,77-79,4,I heard you may be releasing a new game soon.,26.42,22.26,22.26,26.18,4.16,cần nghe lại,,bài lệch cả bài nhưng tín hiệu không nhất quán — cần nghe lại
 1,80-82,0,The first agenda item for our board meeting is the annual sales report.,5.98,5.99,4.18,5.76,1.8,không muộn,,bắt đầu nói ở 5.99s — DB không muộn
 1,83-85,2,They expect to complete the repair within the hour.,16.76,16.74,13.12,16.62,3.64,không muộn,,bắt đầu nói ở 16.74s — DB không muộn
 1,83-85,3,A bus will be departing for that destination in fifteen minutes.,26.02,26.59,23.48,25.86,2.54,không muộn,,bắt đầu nói ở 26.59s — DB không muộn
-1,89-91,1,We hired a firm to determine if this upgrade would be feasible for our trains.,24.58,23.01,23.02,24.08,1.56,sửa start,23.00,
-1,89-91,4,"If you're interested in more details, e-mail our media relations department to receive a summary of the findings.",43.9,41.83,41.84,44.5,2.06,sửa start,41.58,
+1,89-91,1,We hired a firm to determine if this upgrade would be feasible for our trains.,24.58,23.01,23.02,24.08,1.56,sửa start,23.00,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+1,89-91,4,"If you're interested in more details, e-mail our media relations department to receive a summary of the findings.",43.9,41.83,41.84,44.5,2.06,sửa start,41.58,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 1,92-94,0,I want to explore the use of a more modernized payment system in our cosmetics stores.,8.22,,7.56,8.16,0.66,cần nghe lại,,không tìm được chỗ bắt đầu nói
 1,92-94,2,The main complaint about shopping at our stores is waiting in long lines to pay.,21.54,21.57,20.1,21.4,1.44,không muộn,,bắt đầu nói ở 21.57s — DB không muộn
 1,92-94,3,I've decided to conduct a trial run at our store in the Center City Mall.,29.66,29.5,27.34,29.6,2.32,không muộn,,bắt đầu nói ở 29.5s — DB không muộn
@@ -89,12 +89,12 @@
 1,98-100,0,Thank you for attending this meeting for prospective investors.,8.14,6.94,4.94,8.06,3.2,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 6.94s không khớp align 4.94s hay ASR 8.06s
 1,98-100,2,"The site with 390 grams per ton has a larger deposit, so that's where we'll build the new mine.",37.14,23.88,18.88,36.96,18.26,cần nghe lại,,onset 23.88s không khớp align 18.88s hay ASR 36.96s
 2,1-1,0,A man is closing a metal gate.,7.1,5.97,5.96,6.82,1.14,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
-2,1-1,1,A man is walking down a stone path.,10.86,9.72,9.76,10.8,1.1,sửa start,9.47,
+2,1-1,1,A man is walking down a stone path.,10.86,9.72,9.76,10.8,1.1,sửa start,9.47,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 2,3-3,0,Some wooden planks are leaning against a wall.,7.72,7.64,6.96,7.22,0.76,không muộn,,bắt đầu nói ở 7.64s — DB không muộn
 2,3-3,1,A vehicle is parked next to a building.,12.14,12.12,11.44,11.24,0.7,không muộn,,bắt đầu nói ở 12.12s — DB không muộn
 2,3-3,3,A package has been left near a door.,20.38,20.39,19.96,19.58,0.42,không muộn,,bắt đầu nói ở 20.39s — DB không muộn
 2,4-4,0,A man is holding up his phone.,7.14,6.22,6.24,7.08,0.9,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
-2,4-4,1,A man is pinning a note to a bulletin board.,11.02,9.87,9.9,10.96,1.12,sửa start,9.62,
+2,4-4,1,A man is pinning a note to a bulletin board.,11.02,9.87,9.9,10.96,1.12,sửa start,9.62,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 2,4-4,2,A man is dropping an item into a bin.,15.38,15.37,14.78,15.3,0.6,không muộn,,bắt đầu nói ở 15.37s — DB không muộn
 2,4-4,3,A man is washing some windows.,19.5,19.49,19.14,19.38,0.36,không muộn,,bắt đầu nói ở 19.49s — DB không muộn
 2,5-5,1,She's reaching for food on a shelf.,11.64,11.59,10.52,11.26,1.12,không muộn,,bắt đầu nói ở 11.59s — DB không muộn
@@ -107,7 +107,7 @@
 2,11-11,1,A discount on appliances.,7.08,7.16,6.36,6.98,0.72,không muộn,,bắt đầu nói ở 7.16s — DB không muộn
 2,11-11,2,"Sure, I can buy some.",10.9,10.8,9.72,10.74,1.18,không muộn,,bắt đầu nói ở 10.8s — DB không muộn
 2,12-12,1,Please start this washing machine.,6.34,6.22,5.46,6.14,0.88,không muộn,,bắt đầu nói ở 6.22s — DB không muộn
-2,12-12,3,No—it's been postponed an hour.,13.9,13.1,13.1,13.84,0.8,sửa start,12.85,
+2,12-12,3,No—it's been postponed an hour.,13.9,13.1,13.1,13.84,0.8,sửa start,12.85,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 2,13-13,0,Let's begin our meeting about the Taylor project.,2.28,2.44,0.64,1.34,1.64,không muộn,,bắt đầu nói ở 2.44s — DB không muộn
 2,13-13,1,Good idea—we have a lot to get through.,7.34,7.1,6.44,6.3,0.9,không muộn,,bắt đầu nói ở 7.1s — DB không muộn
 2,13-13,3,"No, in room 725.",14.86,14.7,14.48,13.94,0.38,không muộn,,bắt đầu nói ở 14.7s — DB không muộn
@@ -115,18 +115,18 @@
 2,14-14,1,"Yes, it's very convenient.",7.28,7.05,6.36,6.96,0.92,không muộn,,bắt đầu nói ở 7.05s — DB không muộn
 2,14-14,2,A toothbrush and toothpaste.,11.1,11.06,10.34,11.04,0.76,không muộn,,bắt đầu nói ở 11.06s — DB không muộn
 2,15-15,0,Where is the book reading going to take place?,2.62,2.4,0.72,2.12,1.9,không muộn,,bắt đầu nói ở 2.4s — DB không muộn
-2,15-15,1,Sure—I can give you a tour later.,7.28,6.65,6.66,7.42,0.62,sửa start,6.40,
+2,15-15,1,Sure—I can give you a tour later.,7.28,6.65,6.66,7.42,0.62,sửa start,6.40,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 2,15-15,2,At the library.,10.8,10.79,10.22,10.76,0.58,không muộn,,bắt đầu nói ở 10.79s — DB không muộn
 2,15-15,3,It lasts a while.,13.48,13.47,12.8,13.44,0.68,không muộn,,bắt đầu nói ở 13.47s — DB không muộn
 2,16-16,0,When's the bus going to be here?,2.68,2.45,0.68,2.2,2.0,không muộn,,bắt đầu nói ở 2.45s — DB không muộn
 2,16-16,1,A round-trip ticket.,6.16,6.04,5.22,5.92,0.94,không muộn,,bắt đầu nói ở 6.04s — DB không muộn
-2,16-16,2,Let's break for lunch.,9.12,7.98,8.04,9.1,1.08,sửa start,7.73,
+2,16-16,2,Let's break for lunch.,9.12,7.98,8.04,9.1,1.08,sửa start,7.73,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 2,17-17,0,The estimated price for this car insurance is higher than we expected.,2.8,2.62,0.84,1.42,1.96,không muộn,,bắt đầu nói ở 2.62s — DB không muộn
 2,18-18,0,Why haven't the renovations been completed yet?,2.78,2.53,0.82,1.34,1.96,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
 2,18-18,1,It's on the top shelf.,7.0,7.07,6.3,6.28,0.7,không muộn,,bắt đầu nói ở 7.07s — DB không muộn
 2,19-19,0,I'll give you my office number in case you have questions about the data.,1.94,2.43,0.76,2.12,1.18,không muộn,,bắt đầu nói ở 2.43s — DB không muộn
 2,19-19,1,The theater is reserved for that date.,7.9,7.79,7.06,7.66,0.84,không muộn,,bắt đầu nói ở 7.79s — DB không muộn
-2,19-19,3,Thanks—I appreciate that.,16.32,15.63,15.66,16.36,0.66,sửa start,15.38,
+2,19-19,3,Thanks—I appreciate that.,16.32,15.63,15.66,16.36,0.66,sửa start,15.38,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 2,20-20,0,Which parking area should we use?,2.32,2.14,0.78,1.82,1.54,không muộn,,bắt đầu nói ở 2.14s — DB không muộn
 2,20-20,1,The fee is fifteen dollars.,6.1,6.03,5.3,6.0,0.8,không muộn,,bắt đầu nói ở 6.03s — DB không muộn
 2,21-21,0,Let's take a taxi to the airport.,2.7,2.44,0.76,2.1,1.94,không muộn,,bắt đầu nói ở 2.44s — DB không muộn
@@ -153,15 +153,15 @@
 2,30-30,2,The television was fixed.,10.5,10.42,9.74,10.34,0.76,không muộn,,bắt đầu nói ở 10.42s — DB không muộn
 2,31-31,0,"They invited me to the opening, didn't they?",1.84,2.53,0.86,1.38,0.98,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
 2,31-31,1,I plan to submit my application.,6.52,6.93,6.14,6.1,0.38,không muộn,,bắt đầu nói ở 6.93s — DB không muộn
-2,53-55,1,"Right, and they often travel on short notice. Flight arrangements made at the last minute are expensive, especially for nonstop flights. It would be cheaper if they took connecting flights.",24.48,15.94,16.0,15.9,8.48,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-2,53-55,2,"Yes, but that can take a lot of time.",54.5,26.77,26.74,26.72,27.76,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-2,53-55,3,True. Maybe we can make up for the cost of the flights by economizing on hotels. Let's look into that.,64.5,29.63,29.62,29.14,34.88,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-2,65-67,2,OK—that's not far. Let me see. I could come any morning this week.,22.98,22.49,22.48,22.88,0.5,sửa start,22.24,
+2,53-55,1,"Right, and they often travel on short notice. Flight arrangements made at the last minute are expensive, especially for nonstop flights. It would be cheaper if they took connecting flights.",24.48,15.94,16.0,15.9,8.48,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+2,53-55,2,"Yes, but that can take a lot of time.",54.5,26.77,26.74,26.72,27.76,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+2,53-55,3,True. Maybe we can make up for the cost of the flights by economizing on hotels. Let's look into that.,64.5,29.63,29.62,29.14,34.88,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+2,65-67,2,OK—that's not far. Let me see. I could come any morning this week.,22.98,22.49,22.48,22.88,0.5,sửa start,22.24,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 2,65-67,5,Hoffman—Claudia Hoffman. Thank you. Talk to you soon.,38.68,38.53,37.96,38.56,0.72,không muộn,,bắt đầu nói ở 38.53s — DB không muộn
-2,89-91,5,We welcome the assistance of motivated individuals.,35.86,29.91,29.96,29.16,5.9,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-2,89-91,6,"For all other inquiries, please leave a message after the tone.",52.48,33.43,33.48,33.22,19.0,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-2,92-94,1,"Now—if you're hearing about this olive oil for the first time, you're not alone.",14.82,14.34,14.34,14.9,0.48,sửa start,14.09,
-3,1-1,1,He's rolling up his sleeves.,10.8,9.65,9.68,9.92,1.12,sửa start,9.40,
+2,89-91,5,We welcome the assistance of motivated individuals.,35.86,29.91,29.96,29.16,5.9,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+2,89-91,6,"For all other inquiries, please leave a message after the tone.",52.48,33.43,33.48,33.22,19.0,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+2,92-94,1,"Now—if you're hearing about this olive oil for the first time, you're not alone.",14.82,14.34,14.34,14.9,0.48,sửa start,14.09,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+3,1-1,1,He's rolling up his sleeves.,10.8,9.65,9.68,9.92,1.12,sửa start,9.40,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 3,3-3,0,A man is changing a tire on his car.,7.58,6.44,6.44,7.34,1.14,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
 3,3-3,1,A man is opening a car door.,11.66,11.6,10.88,11.56,0.78,không muộn,,bắt đầu nói ở 11.6s — DB không muộn
 3,3-3,2,A man is putting fuel into his car.,15.28,15.26,14.82,15.22,0.46,không muộn,,bắt đầu nói ở 15.26s — DB không muộn
@@ -225,29 +225,29 @@
 3,29-29,0,Where can I look at floor plans for our new office building?,2.6,2.72,0.84,2.3,1.76,không muộn,,bắt đầu nói ở 2.72s — DB không muộn
 3,29-29,1,"Yes, I'd like some coffee.",7.64,7.62,6.9,7.44,0.74,không muộn,,bắt đầu nói ở 7.62s — DB không muộn
 3,30-30,0,Can I use the company car to pick up the clients from the airport?,2.16,2.13,0.64,2.06,1.52,không muộn,,bắt đầu nói ở 2.13s — DB không muộn
-3,30-30,1,Shenchao is the best project manager I know.,7.92,7.39,7.38,7.34,0.54,sửa start,7.14,
-3,30-30,2,"No, thanks—I've already been there.",13.18,12.4,11.72,12.36,1.46,sửa start,12.15,
+3,30-30,1,Shenchao is the best project manager I know.,7.92,7.39,7.38,7.34,0.54,sửa start,7.14,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+3,30-30,2,"No, thanks—I've already been there.",13.18,12.4,11.72,12.36,1.46,sửa start,12.15,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 3,31-31,0,How often should our heating system be inspected?,2.68,2.46,0.7,2.18,1.98,không muộn,,bắt đầu nói ở 2.46s — DB không muộn
 3,31-31,1,Approximately $400.,6.94,6.65,6.64,6.72,0.3,không muộn,,bắt đầu nói ở 6.65s — DB không muộn
 3,31-31,3,The recommendation is in the manual.,14.72,14.71,14.0,14.68,0.72,không muộn,,bắt đầu nói ở 14.71s — DB không muộn
 3,35-37,0,"Excuse me, does train 1401 stop at the Lexington Street station?",7.68,7.4,4.14,7.04,3.54,không muộn,,bắt đầu nói ở 7.4s — DB không muộn
 3,47-49,11,Let me find the manager.,66.59,36.61,33.2,66.84,33.39,cần nghe lại,,onset 36.61s không khớp align 33.2s hay ASR 66.84s; khoảng mới quá dài: 6.43 s/từ — end_time cũng sai
-3,59-61,5,Thank you—I appreciate that.,32.4,32.03,32.08,31.98,0.32,sửa start,31.78,
-3,62-64,1,No problem—that shouldn't take long. What else can I help with?,21.72,21.32,21.34,21.2,0.38,sửa start,21.07,
+3,59-61,5,Thank you—I appreciate that.,32.4,32.03,32.08,31.98,0.32,sửa start,31.78,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+3,62-64,1,No problem—that shouldn't take long. What else can I help with?,21.72,21.32,21.34,21.2,0.38,sửa start,21.07,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 3,65-67,0,Thanks for calling Kwon Photography Studio.,7.08,7.06,5.22,6.68,1.86,không muộn,,bắt đầu nói ở 7.06s — DB không muộn
 3,68-70,4,"Oh, sorry. I forgot to tell you. Use number 1009.",33.52,33.48,33.22,33.44,0.3,không muộn,,bắt đầu nói ở 33.48s — DB không muộn
 3,71-73,0,"The town's annual music festival is only a few months away, and our committee still has a lot of planning to do.",5.22,6.66,4.82,6.14,0.4,không muộn,,bắt đầu nói ở 6.66s — DB không muộn
-3,80-82,1,Welcome to Ag-Cast—a podcast all about the latest news in agriculture.,6.66,6.16,6.24,6.14,0.42,sửa start,5.91,
-3,83-85,4,"Unfortunately, this has caused some frame alignment issues.",22.54,22.22,22.24,22.2,0.3,sửa start,21.97,
+3,80-82,1,Welcome to Ag-Cast—a podcast all about the latest news in agriculture.,6.66,6.16,6.24,6.14,0.42,sửa start,5.91,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+3,83-85,4,"Unfortunately, this has caused some frame alignment issues.",22.54,22.22,22.24,22.2,0.3,sửa start,21.97,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 3,98-100,0,"Hi, Takuma.",5.14,6.54,3.92,6.22,1.22,không muộn,,bắt đầu nói ở 6.54s — DB không muộn
 4,1-1,1,She's removing her eyeglasses.,10.84,10.82,9.8,10.46,1.04,không muộn,,bắt đầu nói ở 10.82s — DB không muộn
 4,2-2,2,A garden is being planted along a fence.,15.78,15.76,15.14,15.72,0.64,không muộn,,bắt đầu nói ở 15.76s — DB không muộn
 4,3-3,0,A woman is following a man down a corridor.,7.26,6.31,6.32,7.2,0.94,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
 4,3-3,1,A woman is putting together some cardboard boxes.,11.7,11.72,10.98,11.68,0.72,không muộn,,bắt đầu nói ở 11.72s — DB không muộn
-4,4-4,1,He's pulling a cart on a walkway.,11.6,10.43,10.48,11.24,1.12,sửa start,10.18,
+4,4-4,1,He's pulling a cart on a walkway.,11.6,10.43,10.48,11.24,1.12,sửa start,10.18,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 4,7-7,0,Will you let me know when the catering order arrives?,2.26,2.02,0.74,1.1,1.52,không muộn,,bắt đầu nói ở 2.02s — DB không muộn
 4,7-7,1,A reservation for two.,7.1,7.04,6.22,6.22,0.88,không muộn,,bắt đầu nói ở 7.04s — DB không muộn
-4,7-7,2,The front office.,10.34,9.2,9.22,9.5,1.12,sửa start,8.95,
+4,7-7,2,The front office.,10.34,9.2,9.22,9.5,1.12,sửa start,8.95,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 4,8-8,0,Why is the manager being replaced?,2.2,1.97,0.7,1.74,1.5,không muộn,,bắt đầu nói ở 1.97s — DB không muộn
 4,9-9,0,Ms. Cho should close the store early on Friday.,2.38,2.06,0.96,1.8,1.42,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
 4,9-9,1,I prefer a salad.,6.72,6.74,6.0,6.68,0.72,không muộn,,bắt đầu nói ở 6.74s — DB không muộn
@@ -274,13 +274,13 @@
 4,19-19,0,What's the candidate review process?,1.8,2.52,0.88,1.44,0.92,không muộn,,bắt đầu nói ở 2.52s — DB không muộn
 4,19-19,1,We review the résumés first.,7.06,6.99,6.26,6.98,0.8,không muộn,,bắt đầu nói ở 6.99s — DB không muộn
 4,19-19,2,A few good reviews.,11.04,10.96,10.26,10.96,0.78,không muộn,,bắt đầu nói ở 10.96s — DB không muộn
-4,19-19,3,OK-I'll just follow them.,14.8,14.12,14.12,14.76,0.68,sửa start,13.87,
+4,19-19,3,OK-I'll just follow them.,14.8,14.12,14.12,14.76,0.68,sửa start,13.87,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 4,20-20,0,"There's coffee in the break room, right?",2.5,2.16,0.86,1.92,1.64,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
 4,20-20,1,That shift starts at noon.,6.6,6.59,5.86,6.54,0.74,không muộn,,bắt đầu nói ở 6.59s — DB không muộn
 4,20-20,2,We decided to paint this room gray.,10.1,10.13,9.42,10.08,0.68,không muộn,,bắt đầu nói ở 10.13s — DB không muộn
 4,20-20,3,Yes I just made a fresh pot.,14.16,14.06,13.38,13.98,0.78,không muộn,,bắt đầu nói ở 14.06s — DB không muộn
 4,21-21,0,Who's going to the company picnic today?,2.74,2.48,0.76,1.68,1.98,không muộn,,bắt đầu nói ở 2.48s — DB không muộn
-4,21-21,3,A two-year maintenance contract.,13.9,13.58,13.56,13.56,0.34,sửa start,13.33,
+4,21-21,3,A two-year maintenance contract.,13.9,13.58,13.56,13.56,0.34,sửa start,13.33,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 4,22-22,0,Will the bakery be open tomorrow?,2.78,2.54,0.68,2.14,2.1,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
 4,22-22,1,"No, it's closed until mid-August.",6.4,6.27,5.46,6.18,0.94,không muộn,,bắt đầu nói ở 6.27s — DB không muộn
 4,22-22,2,Have you checked the oven?,10.44,10.42,9.72,10.38,0.72,không muộn,,bắt đầu nói ở 10.42s — DB không muộn
@@ -306,24 +306,24 @@
 4,30-30,2,At the Maple Street station.,10.8,10.8,10.4,10.78,0.4,không muộn,,bắt đầu nói ở 10.8s — DB không muộn
 4,31-31,0,How was today's manufacturing seminar?,2.72,2.43,0.7,1.42,2.02,không muộn,,bắt đầu nói ở 2.43s — DB không muộn
 4,31-31,1,A new pair of shoes.,6.44,6.49,5.7,5.7,0.74,không muộn,,bắt đầu nói ở 6.49s — DB không muộn
-4,31-31,2,We didn't get there in time.,9.62,8.53,8.56,8.76,1.06,sửa start,8.28,
+4,31-31,2,We didn't get there in time.,9.62,8.53,8.56,8.76,1.06,sửa start,8.28,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 4,38-40,0,"This morning I got an e-mail from Pelicon, a local producer of beauty products. They're interested in purchasing lanolin from us to use in their new line of all-natural makeup.",5.58,5.53,3.92,5.08,1.66,không muộn,,bắt đầu nói ở 5.53s — DB không muộn
-4,44-46,5,All right. I'll update the contract with the new date and e-mail it to you.,38.58,37.22,37.24,,1.34,sửa start,36.97,
-4,56-58,4,I heard you recommended working with an online influencer.,37.36,36.65,36.64,36.6,0.72,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-4,56-58,5,"Yes-Saskia Hoffman. Saskia's very knowledgeable about exercise, and lots of people use her online exercise routines. Her viewers will pay attention to what she recommends and wears.",83.76,40.14,40.16,40.94,43.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-4,62-64,3,"Oh, yes-I was out of the country at that time. Thanks for clarifying. Can you provide me with a list of all the bank fees for transactions made abroad?",33.18,32.47,32.54,31.92,0.64,sửa start,32.22,
-4,65-67,5,"Well, Xinyu Gu is a very popular pianist. And she's staying after the concert to sign autographs. Which reminds me, where should we set up the table for that?",31.46,30.62,30.62,30.54,0.84,sửa start,30.37,
+4,44-46,5,All right. I'll update the contract with the new date and e-mail it to you.,38.58,37.22,37.24,,1.34,sửa start,36.97,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+4,56-58,4,I heard you recommended working with an online influencer.,37.36,36.65,36.64,36.6,0.72,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+4,56-58,5,"Yes-Saskia Hoffman. Saskia's very knowledgeable about exercise, and lots of people use her online exercise routines. Her viewers will pay attention to what she recommends and wears.",83.76,40.14,40.16,40.94,43.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+4,62-64,3,"Oh, yes-I was out of the country at that time. Thanks for clarifying. Can you provide me with a list of all the bank fees for transactions made abroad?",33.18,32.47,32.54,31.92,0.64,sửa start,32.22,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+4,65-67,5,"Well, Xinyu Gu is a very popular pianist. And she's staying after the concert to sign autographs. Which reminds me, where should we set up the table for that?",31.46,30.62,30.62,30.54,0.84,sửa start,30.37,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 4,68-70,0,Welcome to the garden center. Can I help you?,7.22,7.14,5.9,6.76,1.32,không muộn,,bắt đầu nói ở 7.14s — DB không muộn
-4,68-70,3,"No, I haven't.",23.8,23.14,23.12,23.1,0.68,sửa start,22.89,
-4,68-70,4,"We have monthly posts on many gardening topics, and there's a recent one about growing roses.",24.98,24.53,24.56,24.1,0.42,sửa start,24.28,
-4,68-70,5,I'll check it out! Thanks so much.,30.9,30.38,30.4,30.26,0.5,sửa start,30.13,
+4,68-70,3,"No, I haven't.",23.8,23.14,23.12,23.1,0.68,sửa start,22.89,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+4,68-70,4,"We have monthly posts on many gardening topics, and there's a recent one about growing roses.",24.98,24.53,24.56,24.1,0.42,sửa start,24.28,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+4,68-70,5,I'll check it out! Thanks so much.,30.9,30.38,30.4,30.26,0.5,sửa start,30.13,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 4,68-70,6,You're welcome. Now- let me show you our fertilizers. They're in aisle six.,73.6,33.67,32.74,32.62,40.86,cần nghe lại,,onset 33.67s không khớp align 32.74s hay ASR 32.62s; khoảng mới quá dài: 3.28 s/từ — end_time cũng sai
-4,71-73,6,Purchase your e-ticket through the mobile app as well.,28.4,27.95,28.0,27.9,0.4,sửa start,27.70,
+4,71-73,6,Purchase your e-ticket through the mobile app as well.,28.4,27.95,28.0,27.9,0.4,sửa start,27.70,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 4,74-76,0,"Good morning, Glenman House Living Museum staff.",6.8,6.79,5.54,6.2,1.26,không muộn,,bắt đầu nói ở 6.79s — DB không muộn
 4,77-79,1,Toward the end of the session you'll each be given a list of prospective parties to call.,15.38,15.33,11.2,15.24,4.18,không muộn,,bắt đầu nói ở 15.33s — DB không muộn
-4,77-79,2,Your job's to persuade them that what you have to say is worth their while.,25.44,25.13,21.06,25.02,4.38,sửa start,24.88,
+4,77-79,2,Your job's to persuade them that what you have to say is worth their while.,25.44,25.13,21.06,25.02,4.38,sửa start,24.88,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 4,89-91,0,Welcome to the annual Soundtrack Music Awards show.,6.02,5.93,4.22,5.36,1.8,không muộn,,bắt đầu nói ở 5.93s — DB không muộn
-4,95-97,4,"And fortunately, today's forecast shows a mix of sun and clouds, with no rain.",26.4,25.47,25.5,,0.9,sửa start,25.22,
+4,95-97,4,"And fortunately, today's forecast shows a mix of sun and clouds, with no rain.",26.4,25.47,25.5,,0.9,sửa start,25.22,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 4,98-100,0,"As you all know, we're hosting a large event tonight.",7.46,7.24,4.92,6.9,2.54,không muộn,,bắt đầu nói ở 7.24s — DB không muộn
 5,1-1,1,She's looking at information on a laptop screen.,12.06,12.04,10.96,12.06,1.1,không muộn,,bắt đầu nói ở 12.04s — DB không muộn
 5,2-2,0,A worker is painting lines on the floor.,7.16,6.17,6.18,7.18,0.98,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
@@ -351,12 +351,12 @@
 5,12-12,1,It was too expensive.,5.82,5.83,5.08,5.76,0.74,không muộn,,bắt đầu nói ở 5.83s — DB không muộn
 5,13-13,0,Who can I talk to about getting a membership at this fitness center?,2.42,2.41,0.8,2.0,1.62,không muộn,,bắt đầu nói ở 2.41s — DB không muộn
 5,13-13,1,A monthly bill.,7.94,8.0,7.2,7.74,0.74,không muộn,,bắt đầu nói ở 8s — DB không muộn
-5,13-13,2,Some new workout equipment.,11.18,9.97,10.02,11.12,1.16,sửa start,9.72,
+5,13-13,2,Some new workout equipment.,11.18,9.97,10.02,11.12,1.16,sửa start,9.72,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 5,14-14,0,Are you planning to buy a house in the city?,2.58,2.39,0.68,1.34,1.9,không muộn,,bắt đầu nói ở 2.39s — DB không muộn
 5,14-14,2,I don't want to move.,9.96,10.0,8.94,9.1,1.02,không muộn,,bắt đầu nói ở 10s — DB không muộn
 5,15-15,0,How did you decide on a venue for the fund-raising event?,2.36,2.38,0.7,1.36,1.66,không muộn,,bắt đầu nói ở 2.38s — DB không muộn
 5,15-15,1,A small contribution.,7.46,7.49,6.7,6.7,0.76,không muộn,,bắt đầu nói ở 7.49s — DB không muộn
-5,15-15,2,I got a recommendation from a friend.,10.96,9.83,9.86,10.1,1.1,sửa start,9.58,
+5,15-15,2,I got a recommendation from a friend.,10.96,9.83,9.86,10.1,1.1,sửa start,9.58,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 5,15-15,3,To buy books for the library.,14.78,14.79,14.14,14.06,0.64,không muộn,,bắt đầu nói ở 14.79s — DB không muộn
 5,16-16,0,Could you help Ms. Ishida update the expense reports?,2.62,2.42,0.66,2.12,1.96,không muộn,,bắt đầu nói ở 2.42s — DB không muộn
 5,16-16,2,This restaurant is expensive.,10.74,10.7,10.04,10.68,0.7,không muộn,,bắt đầu nói ở 10.7s — DB không muộn
@@ -370,9 +370,9 @@
 5,20-20,3,He can type very fast.,15.2,15.16,14.42,15.14,0.78,không muộn,,bắt đầu nói ở 15.16s — DB không muộn
 5,21-21,0,Our factory makes the best cookies in the city.,2.78,2.47,0.76,1.4,2.02,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.47s không khớp align 0.76s hay ASR 1.4s
 5,21-21,1,A cup of sugar.,7.5,7.42,6.62,6.64,0.88,không muộn,,bắt đầu nói ở 7.42s — DB không muộn
-5,21-21,2,He worked an afternoon shift.,10.26,9.13,9.16,9.4,1.1,sửa start,8.88,
+5,21-21,2,He worked an afternoon shift.,10.26,9.13,9.16,9.4,1.1,sửa start,8.88,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 5,22-22,0,"The fruit market is still selling mangoes, isn't it?",2.66,2.54,0.68,1.42,1.98,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
-5,22-22,1,No thanks—I don't need anything.,7.52,7.12,7.1,6.32,0.42,sửa start,6.87,
+5,22-22,1,No thanks—I don't need anything.,7.52,7.12,7.1,6.32,0.42,sửa start,6.87,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 5,22-22,3,"Yes, I bought some there yesterday.",15.14,15.04,14.36,14.26,0.78,không muộn,,bắt đầu nói ở 15.04s — DB không muộn
 5,23-23,0,Why are you staying in the office for lunch?,2.84,2.54,0.78,2.3,2.06,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
 5,23-23,1,"No, they weren't.",6.64,6.48,5.76,6.42,0.88,không muộn,,bắt đầu nói ở 6.48s — DB không muộn
@@ -382,7 +382,7 @@
 5,25-25,0,Isn't our department's quarterly report supposed to be sent out today?,2.82,2.57,0.84,2.34,1.98,không muộn,,bắt đầu nói ở 2.57s — DB không muộn
 5,25-25,1,"No, he drinks coffee.",8.7,8.58,7.92,8.5,0.78,không muộn,,bắt đầu nói ở 8.58s — DB không muộn
 5,26-26,0,Would you like a copy of the article I mentioned?,2.78,2.58,0.86,1.46,1.92,không muộn,,bắt đầu nói ở 2.58s — DB không muộn
-5,26-26,1,"No, I'm not.",7.08,6.77,6.58,5.96,0.5,sửa start,6.52,
+5,26-26,1,"No, I'm not.",7.08,6.77,6.58,5.96,0.5,sửa start,6.52,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 5,26-26,2,"Yes, I'd appreciate that.",10.02,9.95,9.2,9.04,0.82,không muộn,,bắt đầu nói ở 9.95s — DB không muộn
 5,27-27,0,Did you decide on the design for the new logo?,2.76,2.52,0.8,1.48,1.96,không muộn,,bắt đầu nói ở 2.52s — DB không muộn
 5,27-27,1,There are so many good options.,7.38,7.35,6.6,6.54,0.78,không muộn,,bắt đầu nói ở 7.35s — DB không muộn
@@ -391,19 +391,19 @@
 5,28-28,1,"Sure, you can use my printer.",7.06,6.91,6.24,6.82,0.82,không muộn,,bắt đầu nói ở 6.91s — DB không muộn
 5,29-29,0,Why haven't the painters arrived yet?,2.3,2.5,0.78,1.44,1.52,không muộn,,bắt đầu nói ở 2.5s — DB không muộn
 5,29-29,1,The keys are in the desk drawer.,6.44,6.38,5.62,5.56,0.82,không muộn,,bắt đầu nói ở 6.38s — DB không muộn
-5,41-43,5,I also think that we should ask if our delivery service can pick up our packages twice a day instead of just once a day—maybe every morning and afternoon.,33.38,28.58,28.62,28.52,4.76,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-5,41-43,6,I'll call them today.,71.6,39.42,39.44,39.3,32.16,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+5,41-43,5,I also think that we should ask if our delivery service can pick up our packages twice a day instead of just once a day—maybe every morning and afternoon.,33.38,28.58,28.62,28.52,4.76,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+5,41-43,6,I'll call them today.,71.6,39.42,39.44,39.3,32.16,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 5,47-49,0,"Thanks for coming in, Marcos. I just got the results from the consulting firm we hired. They have some ideas about how we can increase sales of our denim blue jeans.",6.12,6.04,4.06,5.64,2.06,không muộn,,bắt đầu nói ở 6.04s — DB không muộn
 5,53-55,0,The first item on today's meeting agenda is our bid to renovate the Morrisville Bridge. Do we have an update on that yet?,7.4,7.3,3.72,6.76,3.68,không muộn,,bắt đầu nói ở 7.3s — DB không muộn
 5,53-55,1,Yes—unfortunately we didn't get the contract.,16.64,,15.68,16.5,0.96,cần nghe lại,,không tìm được chỗ bắt đầu nói
-5,65-67,2,We could start using bicycle delivery whenever possible. That should help.,44.82,36.39,36.42,36.26,8.4,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-5,65-67,3,Good idea. I'll talk to our drivers to see who's willing to switch to bicycle deliveries for customers nearby. Some people really like the exercise.,49.48,41.36,41.36,41.32,8.12,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+5,65-67,2,We could start using bicycle delivery whenever possible. That should help.,44.82,36.39,36.42,36.26,8.4,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+5,65-67,3,Good idea. I'll talk to our drivers to see who's willing to switch to bicycle deliveries for customers nearby. Some people really like the exercise.,49.48,41.36,41.36,41.32,8.12,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 5,71-73,0,Welcome to the monthly company staff meeting.,6.76,6.7,4.94,6.26,1.82,không muộn,,bắt đầu nói ở 6.7s — DB không muộn
 5,77-79,0,Welcome to the culinary tour of downtown Springfield.,6.36,6.3,4.42,5.8,1.94,không muộn,,bắt đầu nói ở 6.3s — DB không muộn
 5,83-85,0,Thank you for allowing me the opportunity to speak at this city council meeting.,6.5,6.46,4.76,6.1,1.74,không muộn,,bắt đầu nói ở 6.46s — DB không muộn
-5,86-88,7,"However, the animal-themed prints you sent—the thing is, we have a full supply of those in stock.",28.22,27.63,27.66,26.98,0.56,sửa start,27.38,
+5,86-88,7,"However, the animal-themed prints you sent—the thing is, we have a full supply of those in stock.",28.22,27.63,27.66,26.98,0.56,sửa start,27.38,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 5,89-91,0,"In local news, the opening of the Stewart Performing Arts Center tomorrow night has attracted widespread attention.",5.88,5.83,4.98,5.3,0.9,không muộn,,bắt đầu nói ở 5.83s — DB không muộn
-5,89-91,1,This state-of-the-art center holds three different theaters.,13.2,12.48,12.68,12.44,0.52,sửa start,12.23,
+5,89-91,1,This state-of-the-art center holds three different theaters.,13.2,12.48,12.68,12.44,0.52,sửa start,12.23,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 5,98-100,0,"In today's meeting, we'll discuss where we are in our software development process for Universal Banking.",6.9,6.87,0.74,6.32,6.16,không muộn,,bắt đầu nói ở 6.87s — DB không muộn
 6,1-1,0,A restaurant buffet is filled with food.,6.9,5.99,4.86,6.94,2.04,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 5.99s không khớp align 4.86s hay ASR 6.94s
 6,2-2,1,He's lifting up a machine.,10.39,10.65,9.5,10.56,0.89,không muộn,,bắt đầu nói ở 10.65s — DB không muộn
@@ -434,9 +434,9 @@
 6,14-14,0,Do we have the registration forms ready for the students?,2.54,2.35,0.78,1.32,1.76,không muộn,,bắt đầu nói ở 2.35s — DB không muộn
 6,14-14,1,The manager's signature.,7.8,7.68,6.9,6.8,0.9,không muộn,,bắt đầu nói ở 7.68s — DB không muộn
 6,15-15,0,I could provide you with a copy of the lease.,2.52,2.35,0.74,1.94,1.78,không muộn,,bắt đầu nói ở 2.35s — DB không muộn
-6,15-15,1,Great-I need it for my records.,7.34,6.52,6.52,7.34,0.82,sửa start,6.27,
+6,15-15,1,Great-I need it for my records.,7.34,6.52,6.52,7.34,0.82,sửa start,6.27,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 6,16-16,1,A few replacement pieces.,7.54,7.47,6.66,6.68,0.88,không muộn,,bắt đầu nói ở 7.47s — DB không muộn
-6,16-16,2,"Right now, there are five.",11.06,9.82,9.84,10.08,1.22,sửa start,9.57,
+6,16-16,2,"Right now, there are five.",11.06,9.82,9.84,10.08,1.22,sửa start,9.57,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 6,16-16,3,Can you change the channel?,14.3,14.28,13.32,13.56,0.98,không muộn,,bắt đầu nói ở 14.28s — DB không muộn
 6,17-17,0,When was the last time you traveled for business?,2.14,2.53,0.9,1.44,1.24,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
 6,18-18,0,Should I order the parts online or over the phone?,2.58,2.33,0.98,2.06,1.6,không muộn,,bắt đầu nói ở 2.33s — DB không muộn
@@ -444,7 +444,7 @@
 6,18-18,2,"No, I've never been there.",10.66,10.58,10.16,10.5,0.5,không muộn,,bắt đầu nói ở 10.58s — DB không muộn
 6,19-19,0,Where should I pick up my conference badge?,2.54,2.46,0.84,1.4,1.7,không muộn,,bắt đầu nói ở 2.46s — DB không muộn
 6,19-19,1,We signed the lease.,6.76,6.81,6.0,5.92,0.76,không muộn,,bắt đầu nói ở 6.81s — DB không muộn
-6,19-19,2,"About 10,000 units per week.",10.56,10.07,10.08,9.04,0.48,sửa start,9.82,
+6,19-19,2,"About 10,000 units per week.",10.56,10.07,10.08,9.04,0.48,sửa start,9.82,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 6,20-20,0,Isn't the computer network running a bit slow?,2.16,2.03,0.82,1.28,1.34,không muộn,,bắt đầu nói ở 2.03s — DB không muộn
 6,20-20,1,To an upgraded service.,6.14,6.11,5.46,5.3,0.68,không muộn,,bắt đầu nói ở 6.11s — DB không muộn
 6,21-21,0,How do you like this office space?,2.58,2.39,0.8,2.3,1.78,không muộn,,bắt đầu nói ở 2.39s — DB không muộn
@@ -457,7 +457,7 @@
 6,23-23,3,Did you check their Web site?,13.64,13.62,12.94,12.84,0.7,không muộn,,bắt đầu nói ở 13.62s — DB không muộn
 6,24-24,0,Could you look at the revised logo tomorrow?,2.66,2.48,0.7,1.48,1.96,không muộn,,bắt đầu nói ở 2.48s — DB không muộn
 6,24-24,1,A color printer.,6.96,6.9,6.08,6.12,0.88,không muộn,,bắt đầu nói ở 6.9s — DB không muộn
-6,24-24,2,The score was tied.,9.74,8.6,8.62,8.88,1.12,sửa start,8.35,
+6,24-24,2,The score was tied.,9.74,8.6,8.62,8.88,1.12,sửa start,8.35,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 6,24-24,3,I have time now.,12.82,12.84,12.16,12.02,0.66,không muộn,,bắt đầu nói ở 12.84s — DB không muộn
 6,25-25,0,Is the business local or national?,2.66,2.5,0.94,2.34,1.72,không muộn,,bắt đầu nói ở 2.5s — DB không muộn
 6,25-25,1,At the community center nearby.,6.7,6.7,5.88,6.66,0.82,không muộn,,bắt đầu nói ở 6.7s — DB không muộn
@@ -473,21 +473,21 @@
 6,30-30,3,"No, it wasn't.",13.62,13.49,13.3,12.7,0.32,không muộn,,bắt đầu nói ở 13.49s — DB không muộn
 6,31-31,1,"Yes, Mr. Tamura is from Kyoto.",7.42,7.27,6.54,6.54,0.88,không muộn,,bắt đầu nói ở 7.27s — DB không muộn
 6,31-31,3,That was a long baseball game.,16.06,16.04,15.72,15.22,0.34,không muộn,,bắt đầu nói ở 16.04s — DB không muộn
-6,41-43,1,"Sorry, I'm helping another patron on the phone right now. Let me get one of my coworkers for you.",61.9,14.83,14.94,14.8,46.96,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-6,47-49,5,I'll be sure to check it out.,35.74,34.49,34.52,34.38,1.22,sửa start,34.24,
-6,50-52,5,"Oh, that is exciting!",29.32,26.23,26.22,26.16,3.1,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-6,50-52,6,Do you know if we'll be able to camp in the reserve overnight?,33.62,28.45,28.44,27.68,5.18,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-6,50-52,7,"Yes, that's an option. But I don't know if all our staff have tents and camping equipment. I'm sure we can rent enough for everybody, though. Let me look into it.",37.44,31.85,31.84,31.82,5.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-6,56-58,2,"Yeah-Sabine can't make it, so the project coordinator asked me to take her place.",17.06,16.02,16.08,16.84,0.98,sửa start,15.77,
+6,41-43,1,"Sorry, I'm helping another patron on the phone right now. Let me get one of my coworkers for you.",61.9,14.83,14.94,14.8,46.96,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+6,47-49,5,I'll be sure to check it out.,35.74,34.49,34.52,34.38,1.22,sửa start,34.24,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+6,50-52,5,"Oh, that is exciting!",29.32,26.23,26.22,26.16,3.1,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+6,50-52,6,Do you know if we'll be able to camp in the reserve overnight?,33.62,28.45,28.44,27.68,5.18,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+6,50-52,7,"Yes, that's an option. But I don't know if all our staff have tents and camping equipment. I'm sure we can rent enough for everybody, though. Let me look into it.",37.44,31.85,31.84,31.82,5.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+6,56-58,2,"Yeah-Sabine can't make it, so the project coordinator asked me to take her place.",17.06,16.02,16.08,16.84,0.98,sửa start,15.77,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 6,74-76,0,Welcome to this course about computer programming.,6.22,5.94,4.62,5.54,1.6,không muộn,,bắt đầu nói ở 5.94s — DB không muộn
 6,80-82,0,Welcome to another segment of Belmack City Business News.,5.44,5.41,4.34,5.0,1.1,không muộn,,bắt đầu nói ở 5.41s — DB không muộn
-6,80-82,5,"Unfortunately, lease costs for storage space in the area are too high for many shipping companies to afford.",32.68,32.28,32.3,32.24,0.38,sửa start,32.03,
+6,80-82,5,"Unfortunately, lease costs for storage space in the area are too high for many shipping companies to afford.",32.68,32.28,32.3,32.24,0.38,sửa start,32.03,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 6,89-91,0,"Good morning, everyone.",6.46,6.4,4.56,6.0,1.9,không muộn,,bắt đầu nói ở 6.4s — DB không muộn
 6,95-97,0,Are you looking for a convenient way to get around the city?,6.78,6.74,4.7,6.28,2.08,không muộn,,bắt đầu nói ở 6.74s — DB không muộn
-6,95-97,4,"This easy-to-use service will take you to any destination within the service area, like your doctor's office or the library.",28.18,27.49,27.5,26.7,0.68,sửa start,27.24,
-7,1-1,1,She's looking at a newspaper.,10.86,9.68,9.74,10.58,1.12,sửa start,9.43,
+6,95-97,4,"This easy-to-use service will take you to any destination within the service area, like your doctor's office or the library.",28.18,27.49,27.5,26.7,0.68,sửa start,27.24,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+7,1-1,1,She's looking at a newspaper.,10.86,9.68,9.74,10.58,1.12,sửa start,9.43,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 7,2-2,0,A tire is leaning against a car.,7.04,7.3,6.5,7.0,0.54,không muộn,,bắt đầu nói ở 7.3s — DB không muộn
-7,2-2,1,A chain has been left on the ground.,11.26,10.14,10.2,11.2,1.06,sửa start,9.89,
+7,2-2,1,A chain has been left on the ground.,11.26,10.14,10.2,11.2,1.06,sửa start,9.89,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 7,3-3,1,He's spraying cleaning liquid onto a glass door.,12.02,12.03,10.96,12.0,1.06,không muộn,,bắt đầu nói ở 12.03s — DB không muộn
 7,4-4,0,The woman is walking across the street.,7.38,7.28,6.52,7.2,0.86,không muộn,,bắt đầu nói ở 7.28s — DB không muộn
 7,4-4,1,The woman is repairing a bicycle.,11.52,11.55,10.8,11.44,0.72,không muộn,,bắt đầu nói ở 11.55s — DB không muộn
@@ -521,7 +521,7 @@
 7,18-18,1,"Sure, I'll trim the branches a little.",7.56,7.41,6.6,6.48,0.96,không muộn,,bắt đầu nói ở 7.41s — DB không muộn
 7,18-18,3,An updated owner's manual.,14.38,14.36,13.72,13.58,0.66,không muộn,,bắt đầu nói ở 14.36s — DB không muộn
 7,19-19,0,Our print shop is going to have a sale on shirts.,2.04,2.44,1.0,1.42,1.04,không muộn,,bắt đầu nói ở 2.44s — DB không muộn
-7,19-19,3,OK-when will it start?,15.32,14.62,14.62,14.9,0.7,sửa start,14.37,
+7,19-19,3,OK-when will it start?,15.32,14.62,14.62,14.9,0.7,sửa start,14.37,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 7,20-20,0,"You already bought a new part for the sprinkler system, right?",2.34,2.19,0.78,1.2,1.56,không muộn,,bắt đầu nói ở 2.19s — DB không muộn
 7,20-20,1,Check the weather forecast.,7.34,7.32,6.6,6.52,0.74,không muộn,,bắt đầu nói ở 7.32s — DB không muộn
 7,20-20,2,"Yes, I did that last week.",10.74,10.68,10.02,9.8,0.72,không muộn,,bắt đầu nói ở 10.68s — DB không muộn
@@ -558,9 +558,9 @@
 7,86-88,0,I have good news!,5.94,6.33,4.54,5.78,1.4,không muộn,,bắt đầu nói ở 6.33s — DB không muộn
 7,89-91,0,A market research firm has reported that the department store chain Willoughby is partnering with the beauty retailer Rossi.,5.8,5.81,4.68,5.22,1.12,không muộn,,bắt đầu nói ở 5.81s — DB không muộn
 7,95-97,0,Thank you for attending.,6.32,6.29,0.78,5.94,5.54,không muộn,,bắt đầu nói ở 6.29s — DB không muộn
-7,98-100,7,"00, so I'd like to order tulips in that price range.",34.42,31.65,30.8,,3.62,cần nghe lại,,"onset 31.65s không khớp align 30.8s hay ASR —s; transcript hỏng (tách tại ""$250.00"")"
+7,98-100,7,"00, so I'd like to order tulips in that price range.",34.42,31.65,30.8,,3.62,sửa (transcript + thời gian),30.48 (end 39.02),đã sửa nội dung theo transcript gốc — xem fix-late-starts-est2026.sql
 8,1-1,0,A wooden post is being painted.,6.98,5.99,6.0,7.02,0.98,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
-8,1-1,1,Flowerpots have been placed under some chairs.,11.36,10.89,9.9,11.18,1.46,sửa start,10.64,
+8,1-1,1,Flowerpots have been placed under some chairs.,11.36,10.89,9.9,11.18,1.46,sửa start,10.64,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 8,1-1,2,A rug has spread out on the ground.,15.48,15.46,14.8,15.44,0.68,không muộn,,bắt đầu nói ở 15.46s — DB không muộn
 8,2-2,1,A woman is walking past a pedestrian crosswalk.,11.82,11.82,11.14,11.82,0.68,không muộn,,bắt đầu nói ở 11.82s — DB không muộn
 8,3-3,0,A man is standing behind a counter.,7.38,6.37,6.36,7.32,1.02,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
@@ -571,10 +571,10 @@
 8,7-7,0,Can I pick up my prescription glasses here?,2.3,2.13,0.6,2.0,1.7,không muộn,,bắt đầu nói ở 2.13s — DB không muộn
 8,7-7,1,It's a new magazine subscription.,6.44,6.44,5.62,6.3,0.82,không muộn,,bắt đầu nói ở 6.44s — DB không muộn
 8,8-8,0,Have you signed up for delivery updates?,2.2,2.01,0.66,1.14,1.54,không muộn,,bắt đầu nói ở 2.01s — DB không muộn
-8,8-8,1,I'm sorry-you can't park here.,6.34,5.89,5.88,5.08,0.46,sửa start,5.64,
+8,8-8,1,I'm sorry-you can't park here.,6.34,5.89,5.88,5.08,0.46,sửa start,5.64,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 8,8-8,2,"Yes, I get alerts on my phone.",10.32,10.21,9.54,9.32,0.78,không muộn,,bắt đầu nói ở 10.21s — DB không muộn
 8,9-9,1,"No, I already have plans.",6.34,6.16,5.3,6.12,1.04,không muộn,,bắt đầu nói ở 6.16s — DB không muộn
-8,9-9,2,"Yes, eight o'clock is fine.",10.82,10.14,9.6,10.14,1.22,sửa start,9.89,
+8,9-9,2,"Yes, eight o'clock is fine.",10.82,10.14,9.6,10.14,1.22,sửa start,9.89,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 8,9-9,3,I saved them on my laptop.,14.02,14.04,13.62,14.0,0.4,không muộn,,bắt đầu nói ở 14.04s — DB không muộn
 8,10-10,0,Does Dr. Cao schedule appointments in the morning or in the afternoon?,2.32,2.08,0.98,1.78,1.34,không muộn,,bắt đầu nói ở 2.08s — DB không muộn
 8,10-10,1,She leaves at noon.,8.2,8.1,7.38,7.94,0.82,không muộn,,bắt đầu nói ở 8.1s — DB không muộn
@@ -612,7 +612,7 @@
 8,24-24,1,Twenty dollars per person.,7.28,7.18,6.5,,0.78,không muộn,,bắt đầu nói ở 7.18s — DB không muộn
 8,25-25,0,When does the bookstore open?,2.58,2.54,0.8,1.48,1.78,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
 8,25-25,1,A new travel guide.,6.16,6.04,5.24,5.24,0.92,không muộn,,bắt đầu nói ở 6.04s — DB không muộn
-8,25-25,2,At eight o'clock.,9.18,8.03,8.08,8.32,1.1,sửa start,7.78,
+8,25-25,2,At eight o'clock.,9.18,8.03,8.08,8.32,1.1,sửa start,7.78,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 8,26-26,0,Can't you help me install this furniture?,2.76,2.53,0.64,2.16,2.12,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
 8,26-26,1,"Sure, if you can wait a minute.",6.72,6.53,5.82,6.44,0.9,không muộn,,bắt đầu nói ở 6.53s — DB không muộn
 8,27-27,0,Where can I find the eating utensils?,2.94,2.6,0.8,1.48,2.14,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại; onset 2.6s không khớp align 0.8s hay ASR 1.48s
@@ -627,23 +627,23 @@
 8,31-31,0,The restaurant is finally getting a new stove.,2.64,2.46,0.68,1.38,1.96,không muộn,,bắt đầu nói ở 2.46s — DB không muộn
 8,31-31,1,The recipe requires a saucepan.,6.88,6.85,6.12,6.02,0.76,không muộn,,bắt đầu nói ở 6.85s — DB không muộn
 8,31-31,2,Can I have a salad for lunch?,10.56,10.56,10.12,9.72,0.44,không muộn,,bắt đầu nói ở 10.56s — DB không muộn
-8,38-40,1,"Excellent! I'm glad we'll finally be able to expand access to our collections. Right now, only local residents can see those books.",12.04,11.72,11.72,11.66,0.32,sửa start,11.47,
-8,47-49,1,I'll go grab some lunch for us before we get started. Do you like Danny's Café on the corner?,57.48,16.98,17.0,16.94,40.48,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-8,62-64,3,"Let me look at the work order. It looks like I billed you for the wrong tire. Apologies- let me fix that. Also, if you'd like to share your e-mail, I can sign you up for our rewards program.",51.54,24.93,24.94,24.66,26.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,38-40,1,"Excellent! I'm glad we'll finally be able to expand access to our collections. Right now, only local residents can see those books.",12.04,11.72,11.72,11.66,0.32,sửa start,11.47,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,47-49,1,I'll go grab some lunch for us before we get started. Do you like Danny's Café on the corner?,57.48,16.98,17.0,16.94,40.48,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,62-64,3,"Let me look at the work order. It looks like I billed you for the wrong tire. Apologies- let me fix that. Also, if you'd like to share your e-mail, I can sign you up for our rewards program.",51.54,24.93,24.94,24.66,26.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 8,71-73,0,Thank you for attending Port Jefferson's city council meeting.,6.76,6.71,4.82,6.28,1.94,không muộn,,bắt đầu nói ở 6.71s — DB không muộn
 8,80-82,0,I just want to have a quick meeting while we have all the nurses from the night shift and day shift here at the same time.,5.42,5.94,4.2,5.44,1.22,không muộn,,bắt đầu nói ở 5.94s — DB không muộn
-8,83-85,1,Postela makes high-quality posters that are easy to order and easy to display in your store.,9.06,8.44,8.64,8.44,0.42,sửa start,8.19,
-8,86-88,1,"On our train today, you should take advantage of all the services we have to offer-including our café car, which is fully stocked with refreshments, and the observation car, with its floor-to-ceiling windows.",30.14,9.68,9.84,9.62,20.3,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-8,86-88,2,Our wireless Internet service has also been upgraded!,59.94,22.65,22.68,22.64,37.26,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-8,86-88,3,You can connect to our complimentary service using the access code printed on your ticket.,74.74,26.23,26.24,25.6,48.5,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-8,89-91,6,I'd like to find out how much it would cost to make 30 new covers.,31.82,30.1,30.12,30.1,1.7,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-8,89-91,7,Please call our office at 555-0102.,43.84,34.36,34.56,34.28,9.28,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-8,89-91,8,"While I'll be away most of next week, Lihong Hao, the assistant superintendent, will be in the office.",46.6,38.93,39.1,38.8,7.5,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-8,89-91,9,She can take your call.,74.26,45.12,45.14,45.08,29.12,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-8,89-91,10,Thank you.,75.72,46.6,46.64,46.52,29.08,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-8,92-94,5,"I know you hoped that I'd complete the project before you go away on your vacation, but I'm completely booked for the month of March.",28.42,26.37,26.4,25.76,2.02,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-8,92-94,6,"I could start at the beginning of April, though.",36.96,34.26,34.38,33.54,2.58,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-8,92-94,7,I look forward to hearing back from you soon.,58.74,36.99,37.1,36.62,21.64,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+8,83-85,1,Postela makes high-quality posters that are easy to order and easy to display in your store.,9.06,8.44,8.64,8.44,0.42,sửa start,8.19,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,86-88,1,"On our train today, you should take advantage of all the services we have to offer-including our café car, which is fully stocked with refreshments, and the observation car, with its floor-to-ceiling windows.",30.14,9.68,9.84,9.62,20.3,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,86-88,2,Our wireless Internet service has also been upgraded!,59.94,22.65,22.68,22.64,37.26,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,86-88,3,You can connect to our complimentary service using the access code printed on your ticket.,74.74,26.23,26.24,25.6,48.5,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,89-91,6,I'd like to find out how much it would cost to make 30 new covers.,31.82,30.1,30.12,30.1,1.7,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,89-91,7,Please call our office at 555-0102.,43.84,34.36,34.56,34.28,9.28,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,89-91,8,"While I'll be away most of next week, Lihong Hao, the assistant superintendent, will be in the office.",46.6,38.93,39.1,38.8,7.5,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,89-91,9,She can take your call.,74.26,45.12,45.14,45.08,29.12,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,89-91,10,Thank you.,75.72,46.6,46.64,46.52,29.08,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,92-94,5,"I know you hoped that I'd complete the project before you go away on your vacation, but I'm completely booked for the month of March.",28.42,26.37,26.4,25.76,2.02,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,92-94,6,"I could start at the beginning of April, though.",36.96,34.26,34.38,33.54,2.58,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+8,92-94,7,I look forward to hearing back from you soon.,58.74,36.99,37.1,36.62,21.64,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 8,95-97,0,The time is right for Snowville Refrigeration to begin marketing our commercial refrigerators internationally.,7.2,7.17,4.52,6.74,2.68,không muộn,,bắt đầu nói ở 7.17s — DB không muộn
 8,98-100,0,Thank you for calling the Wilson Park visitor center.,7.48,5.02,5.06,7.12,2.42,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
 9,1-1,0,A man is placing books into a shelving unit.,7.0,6.01,6.02,7.0,0.98,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
@@ -717,14 +717,14 @@
 9,30-30,3,"No, we don't need to eat.",16.26,16.12,15.86,16.08,0.4,không muộn,,bắt đầu nói ở 16.12s — DB không muộn
 9,31-31,0,"They're bringing a piano into the café, aren't they?",2.82,2.54,0.96,1.4,1.86,không muộn,,bắt đầu nói ở 2.54s — DB không muộn
 9,31-31,2,The food is fantastic.,10.74,10.72,10.02,9.84,0.72,không muộn,,bắt đầu nói ở 10.72s — DB không muộn
-9,32-34,2,"I'll just purchase the pass for now, thanks.",28.68,24.43,24.44,24.16,4.24,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-9,32-34,3,"Great. First, I'll need to set you up in our system. Can I have your name and e-mail address?",65.22,27.28,27.28,26.76,37.94,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-9,38-40,3,All right. I'll start working on it after I've finished with the Web site update.,28.82,22.22,22.22,22.16,6.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-9,38-40,4,I'll ask Hiroki to take care of that so you're free to work on the newsletter.,36.78,26.74,26.76,26.06,10.02,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+9,32-34,2,"I'll just purchase the pass for now, thanks.",28.68,24.43,24.44,24.16,4.24,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+9,32-34,3,"Great. First, I'll need to set you up in our system. Can I have your name and e-mail address?",65.22,27.28,27.28,26.76,37.94,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+9,38-40,3,All right. I'll start working on it after I've finished with the Web site update.,28.82,22.22,22.22,22.16,6.6,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+9,38-40,4,I'll ask Hiroki to take care of that so you're free to work on the newsletter.,36.78,26.74,26.76,26.06,10.02,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 9,56-58,0,"Thanks for joining my podcast, Bianca. I'm enjoying your unique cookbook, which takes traditional dishes from around the world and adds unusual ingredients-which gives them a contemporary flair. What's your inspiration?",6.1,6.0,3.86,5.62,2.24,không muộn,,bắt đầu nói ở 6s — DB không muộn
-9,89-91,2,"Unlike other job-training programs, our courses are tuition-free.",19.06,18.65,18.72,18.58,0.34,sửa start,18.40,
-9,98-100,1,Flight AU354 will now be departing from a different gate.,9.48,9.12,9.14,9.2,0.34,sửa start,8.87,
-9,98-100,6,Size-check templates are available throughout the terminal for your reference.,39.16,38.64,38.68,38.98,0.48,sửa start,38.39,
+9,89-91,2,"Unlike other job-training programs, our courses are tuition-free.",19.06,18.65,18.72,18.58,0.34,sửa start,18.40,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+9,98-100,1,Flight AU354 will now be departing from a different gate.,9.48,9.12,9.14,9.2,0.34,sửa start,8.87,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+9,98-100,6,Size-check templates are available throughout the terminal for your reference.,39.16,38.64,38.68,38.98,0.48,sửa start,38.39,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 10,1-1,1,He's carrying a bucket of paint.,10.72,10.75,9.82,10.36,0.9,không muộn,,bắt đầu nói ở 10.75s — DB không muộn
 10,2-2,1,A chair is propped against the door.,11.08,11.06,10.18,11.04,0.9,không muộn,,bắt đầu nói ở 11.06s — DB không muộn
 10,2-2,2,A laptop has been left open.,14.82,14.75,14.22,14.7,0.6,không muộn,,bắt đầu nói ở 14.75s — DB không muộn
@@ -735,7 +735,7 @@
 10,5-5,0,Some of the bicycles are being repaired.,7.68,7.63,6.98,7.54,0.7,không muộn,,bắt đầu nói ở 7.63s — DB không muộn
 10,5-5,1,The bicycles are lined up in a row.,11.74,11.73,11.0,11.72,0.74,không muộn,,bắt đầu nói ở 11.73s — DB không muộn
 10,5-5,3,A bicycle path is being painted.,20.26,20.25,19.92,20.2,0.34,không muộn,,bắt đầu nói ở 20.25s — DB không muộn
-10,6-6,2,A ferryboat is traveling through a marina.,16.42,16.07,16.04,16.02,0.38,sửa start,15.82,
+10,6-6,2,A ferryboat is traveling through a marina.,16.42,16.07,16.04,16.02,0.38,sửa start,15.82,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 10,7-7,0,Would you like me to order some more business cards for you?,2.18,2.05,0.62,1.18,1.56,không muộn,,bắt đầu nói ở 2.05s — DB không muộn
 10,7-7,1,"Sure, that'd be great.",6.66,6.43,6.18,6.24,0.48,không muộn,,bắt đầu nói ở 6.43s — DB không muộn
 10,7-7,3,"No, it wasn't.",13.66,13.53,13.36,13.2,0.3,không muộn,,bắt đầu nói ở 13.53s — DB không muộn
@@ -766,7 +766,7 @@
 10,17-17,2,"Yes, they're in my bag.",10.66,10.58,9.98,9.7,0.68,không muộn,,bắt đầu nói ở 10.58s — DB không muộn
 10,18-18,0,The projector needs to be fixed before our presentation.,2.6,2.42,0.96,2.28,1.64,không muộn,,bắt đầu nói ở 2.42s — DB không muộn
 10,18-18,1,A technician has been notified.,7.32,7.41,6.62,7.38,0.7,không muộn,,bắt đầu nói ở 7.41s — DB không muộn
-10,18-18,2,The quarterly sales figures.,11.26,10.12,10.18,11.28,1.08,sửa start,9.87,
+10,18-18,2,The quarterly sales figures.,11.26,10.12,10.18,11.28,1.08,sửa start,9.87,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 10,19-19,0,What's the price of this printer?,2.7,2.53,0.84,1.4,1.86,không muộn,,bắt đầu nói ở 2.53s — DB không muộn
 10,19-19,1,I don't work here.,5.98,5.96,5.26,5.18,0.72,không muộn,,bắt đầu nói ở 5.96s — DB không muộn
 10,19-19,3,"Yes, I like it a lot.",12.32,12.23,11.78,11.48,0.54,không muộn,,bắt đầu nói ở 12.23s — DB không muộn
@@ -796,19 +796,19 @@
 10,31-31,0,Should we set up the buffet table for tomorrow's luncheon indoors or outdoors?,2.72,2.46,0.94,1.42,1.78,không muộn,,bắt đầu nói ở 2.46s — DB không muộn
 10,31-31,1,I haven't seen her.,8.8,8.76,8.02,7.98,0.78,không muộn,,bắt đầu nói ở 8.76s — DB không muộn
 10,31-31,2,We won't need any more copies.,11.86,11.88,11.12,10.98,0.74,không muộn,,bắt đầu nói ở 11.88s — DB không muộn
-10,38-40,3,Yes-here it is. Can I go to the unclaimed baggage area and pick up my luggage?,20.56,19.94,19.96,20.52,0.6,sửa start,19.69,
-10,41-43,4,"Great. Also, remember that our office closes every day from twelve to one thirty for lunch, so please be mindful of that when scheduling patients.",31.4,31.07,31.08,31.02,0.32,sửa start,30.82,
-10,44-46,3,"So far, they seem to be as durable as we anticipated.",38.9,27.24,27.28,26.7,11.62,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-10,44-46,4,But we still have a few tests to run.,43.34,31.02,31.02,30.76,12.32,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-10,44-46,5,"Great. Please keep me posted on your progress. In the meantime, we should start putting together a promotional video to show at our booth at the trade show. Who'd like to help me with that project?",61.0,33.68,33.66,33.76,27.34,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+10,38-40,3,Yes-here it is. Can I go to the unclaimed baggage area and pick up my luggage?,20.56,19.94,19.96,20.52,0.6,sửa start,19.69,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+10,41-43,4,"Great. Also, remember that our office closes every day from twelve to one thirty for lunch, so please be mindful of that when scheduling patients.",31.4,31.07,31.08,31.02,0.32,sửa start,30.82,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+10,44-46,3,"So far, they seem to be as durable as we anticipated.",38.9,27.24,27.28,26.7,11.62,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+10,44-46,4,But we still have a few tests to run.,43.34,31.02,31.02,30.76,12.32,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+10,44-46,5,"Great. Please keep me posted on your progress. In the meantime, we should start putting together a promotional video to show at our booth at the trade show. Who'd like to help me with that project?",61.0,33.68,33.66,33.76,27.34,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 10,47-49,0,Excuse me-officer? Do you happen to know where rideshare drivers park to wait for passengers? It's my first time at this airport.,6.62,6.14,0.78,5.84,5.84,cần nghe lại,,câu đầu bài: có thể lẫn với giọng đọc đề — cần nghe lại
 10,77-79,0,"Good morning, and thanks for tuning in to News at Four.",6.04,6.02,0.72,5.54,5.32,không muộn,,bắt đầu nói ở 6.02s — DB không muộn
-10,77-79,5,"Video tours will soon be available on the museum's Web site, and videos showing the progress of the project will also be posted regularly.",31.46,31.15,31.16,31.08,0.3,sửa start,30.90,
+10,77-79,5,"Video tours will soon be available on the museum's Web site, and videos showing the progress of the project will also be posted regularly.",31.46,31.15,31.16,31.08,0.3,sửa start,30.90,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
 10,86-88,0,The topic for today's workshop is writing business correspondence.,6.24,6.33,0.86,5.82,5.38,không muộn,,bắt đầu nói ở 6.33s — DB không muộn
 10,89-91,0,"In the world of business, athletic retailer Clementine Stores has filed a complaint against software firm Stephion.",5.6,5.61,4.04,5.4,1.56,không muộn,,bắt đầu nói ở 5.61s — DB không muộn
 10,92-94,0,Thanks for coming in early this morning.,6.08,6.43,3.94,6.02,2.14,không muộn,,bắt đầu nói ở 6.43s — DB không muộn
-10,95-97,1,"Won-Sang Kwon has joined the human resources department as a junior associate, and So-Jin Cho is our newest chief of building security.",11.64,11.17,11.22,,0.42,sửa start,10.92,
-10,98-100,2,"You wanted to know about my availability for haircuts-yes, I am accepting new clients.",25.98,11.45,11.46,11.4,14.52,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-10,98-100,3,"This week, I can fit you in on Wednesday at four o'clock.",34.04,17.52,17.54,17.4,16.5,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-10,98-100,4,Please let me know whether that day and time work for you.,37.28,21.71,21.74,21.6,15.54,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
-10,98-100,5,"And in case you didn't know, there's a parking garage with reasonable rates right under our building.",71.68,25.22,25.24,25.12,46.44,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu
+10,95-97,1,"Won-Sang Kwon has joined the human resources department as a junior associate, and So-Jin Cho is our newest chief of building security.",11.64,11.17,11.22,,0.42,sửa start,10.92,ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+10,98-100,2,"You wanted to know about my availability for haircuts-yes, I am accepting new clients.",25.98,11.45,11.46,11.4,14.52,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+10,98-100,3,"This week, I can fit you in on Wednesday at four o'clock.",34.04,17.52,17.54,17.4,16.5,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+10,98-100,4,Please let me know whether that day and time work for you.,37.28,21.71,21.74,21.6,15.54,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
+10,98-100,5,"And in case you didn't know, there's a parking garage with reasonable rates right under our building.",71.68,25.22,25.24,25.12,46.44,đặt lại cả bài,,mốc của cả bài trải quá đoạn hội thoại — đặt lại start+end mọi câu; ĐÃ ÁP DỤNG 2026-11-18 — xem fix-late-starts-est2026.sql
