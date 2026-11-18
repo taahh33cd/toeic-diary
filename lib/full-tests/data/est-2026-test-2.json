@@ -6062,8 +6062,33 @@
      "answer": "D",
      "explanation": {
       "translation": "What is NOT offered to Radial Tunes subscribers?\n(A) Access to a large library of songs\n(B) Music playlists posted by subscribers\n(C) Music videos\n(D) Audio interviews with popular musicians",
-      "reasoning": "* Loại câu hỏi: Chi tiết (Phủ định)\nNghĩa: Điều gì KHÔNG được cung cấp cho người đăng ký Radial Tunes?\n- Dẫn chứng trong bài: Thông tin cung cấp gồm bài hát, playlist, music video. Không có \"audio interviews\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: NOT question\nCâu hỏi: Điều gì KHÔNG được cung cấp cho người đăng ký Radial Tunes?\nCăn cứ: \"you can access hundreds of songs, music videos, and playlists specially curated by other users.\" → Bạn có thể truy cập hàng trăm bài hát, video âm nhạc và danh sách phát do người dùng khác tuyển chọn.\n\nXét từng phương án:\n- (A) Truy cập kho bài hát lớn → hundreds of songs / extensive library ✗\n- (B) Danh sách phát do người đăng ký đăng → playlists curated by other users ✗\n- (C) Video âm nhạc → music videos ✗\n- (D) Phỏng vấn âm thanh với nghệ sĩ nổi tiếng → không nhắc ✓\n\nGhi nhớ:\n- Câu NOT: dò từng phương án trong bài, phương án không tìm thấy là đáp án.\n- curated by other users = posted by subscribers",
+      "glossary": [
+       {
+        "term": "subscription",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "gói đăng ký"
+       },
+       {
+        "term": "extensive",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "rộng lớn, phong phú"
+       },
+       {
+        "term": "curate",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tuyển chọn"
+       },
+       {
+        "term": "redeem",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "sử dụng (mã, phiếu)"
+       }
+      ]
      }
     },
     {
@@ -6081,8 +6106,27 @@
      "answer": "C",
      "explanation": {
       "translation": "What is indicated about Mr. Furuta?\n(A) He recently moved to Canada.\n(B) He could not activate a special service.\n(C) He recently bought a Gregerson Pro Phone 13.\n(D) He is employed by PNE Retailers.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì được chỉ ra về ông Furuta?\n- Dẫn chứng trong bài: Email mở đầu bằng: \"Chúc mừng bạn đã mua điện thoại Gregerson Pro Phone 13\".\nĐoạn văn: Memo from Jun Heo about New business cards",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is indicated)\nCâu hỏi: Điều gì được nêu về ông Furuta?\nCăn cứ: \"Congratulations on your purchase of a Gregerson Pro Phone 13.\" + mẫu đơn điền tên \"Terrence Furuta\" → Ông Furuta là người vừa mua điện thoại Gregerson Pro Phone 13.\n\nXét từng phương án:\n- (A) Mới chuyển đến Canada → chỉ biết ông mua máy ở Winnipeg ✗\n- (B) Không kích hoạt được dịch vụ → không nhắc ✗\n- (C) Vừa mua điện thoại Gregerson Pro Phone 13 ✓\n- (D) Làm việc cho PNE Retailers → đó là nơi ông mua hàng ✗\n\nGhi nhớ:\n- Congratulations on your purchase = he recently bought",
+      "glossary": [
+       {
+        "term": "purchase",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự mua hàng"
+       },
+       {
+        "term": "retailer",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nhà bán lẻ"
+       },
+       {
+        "term": "activate",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "kích hoạt"
+       }
+      ]
      }
     }
    ]
@@ -6114,8 +6158,33 @@
      "answer": "B",
      "explanation": {
       "translation": "What prompted the need for the memo?\n(A) A recent increase in remote work\n(B) A change in a company's name\n(C) A series of printing errors\n(D) A complaint about paper quality",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Điều gì đã dẫn đến sự cần thiết của bản ghi nhớ?\n- Dẫn chứng trong bài: Trong ghi chú có viết: \"Kết quả của việc sáp nhập... Danh thiếp mới sẽ có tên công ty mới\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (nguyên nhân)\nCâu hỏi: Điều gì khiến cần có bản ghi nhớ này?\nCăn cứ: \"As a result of our merger with Frantum Corporation, printed business cards... will be replaced... The new cards will feature the new corporate name\" → Do sáp nhập với Frantum, danh thiếp sẽ được thay; danh thiếp mới in tên công ty mới.\n\nXét từng phương án:\n- (A) Làm việc từ xa tăng → không nhắc ✗\n- (B) Công ty đổi tên ✓\n- (C) Một loạt lỗi in ấn → không nhắc ✗\n- (D) Khiếu nại về chất lượng giấy → nhân viên chỉ \"yêu cầu\" giấy tốt hơn, không phải lý do chính ✗\n\nGhi nhớ:\n- prompt (v): thúc đẩy, gây ra\n- new corporate name = a change in a company's name",
+      "glossary": [
+       {
+        "term": "merger",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự sáp nhập"
+       },
+       {
+        "term": "business card",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "danh thiếp"
+       },
+       {
+        "term": "corporate name",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tên công ty"
+       },
+       {
+        "term": "prompt",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "thúc đẩy, gây ra"
+       }
+      ]
      }
     },
     {
@@ -6133,8 +6202,33 @@
      "answer": "C",
      "explanation": {
       "translation": "What is suggested about the new business cards?\n(A) They will be issued only to full-time employees.\n(B) They will be mailed to employees' homes.\n(C) They will be printed during the month of April.\n(D) They will include the original Frantum Corporation logo.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì được gợi ý về danh thiếp mới?\n- Dẫn chứng trong bài: \"Tất cả nhân viên sẽ nhận được danh thiếp mới trước ngày 1 tháng 5\", suy ra việc in ấn diễn ra trong tháng 4.\nĐoạn văn: Online chat discussion (Priya Begani & Jared Oxley)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (What is suggested)\nCâu hỏi: Điều gì được gợi ý về danh thiếp mới?\nCăn cứ: Ghi nhớ ngày 31/3: \"All employees should receive the new business cards by May 1.\" → Mọi nhân viên sẽ nhận danh thiếp mới trước 1/5.\n→ Danh thiếp sẽ được in trong khoảng tháng 4.\n\nXét từng phương án:\n- (A) Chỉ phát cho nhân viên toàn thời gian → \"all employees\" ✗\n- (B) Gửi qua bưu điện về nhà → giao đến bàn làm việc (delivered to your desk) ✗\n- (C) Được in trong tháng 4 ✓\n- (D) In logo gốc của Frantum → dùng logo mới ✗\n\nGhi nhớ:\n- memo 31/3 + nhận trước 1/5 → in trong tháng 4",
+      "glossary": [
+       {
+        "term": "distribute",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "phát, phân phát"
+       },
+       {
+        "term": "reveal",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tiết lộ"
+       },
+       {
+        "term": "paper stock",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "loại giấy in"
+       },
+       {
+        "term": "extension",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "số máy lẻ"
+       }
+      ]
      }
     }
    ]
@@ -6166,8 +6260,27 @@
      "answer": "A",
      "explanation": {
       "translation": "At 9:05 A.M., what does Ms. Begani imply when she writes, \"I wouldn't miss it\"?\n(A) She will be present at an upcoming workshop.\n(B) The accounting meeting is extremely important.\n(C) A social event after work promises to be fun.\n(D) She does not expect Mr. Oxley to return a document he borrowed.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Vào lúc 9:05 sáng, cô Begani ngụ ý gì khi viết 'Tôi sẽ không bỏ lỡ đâu'?\n- Dẫn chứng trong bài: \"I wouldn't miss it!\" (Mình sẽ không bỏ lỡ đâu!) đáp lại câu hỏi \"Bạn vẫn dự định tham gia chứ?\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Ý định người viết (câu trích dẫn)\nCâu hỏi: Lúc 9:05, cô Begani ngụ ý gì khi viết \"I wouldn't miss it\"?\nCăn cứ: Ông Oxley hỏi: \"Are you still planning to come?\" (hỏi về buổi workshop kỹ năng quản lý ngày 4/9) → Cô vẫn định đến chứ?\nCô đáp \"I wouldn't miss it!\" → Tôi nhất định không bỏ lỡ.\n\nXét từng phương án:\n- (A) Cô sẽ có mặt ở buổi workshop sắp tới ✓\n- (B) Cuộc họp kế toán rất quan trọng → câu này trả lời về workshop ✗\n- (C) Buổi gặp sau giờ làm sẽ vui → cô từ chối buổi đó ✗\n- (D) Không mong ông trả tài liệu → không có ✗\n\nGhi nhớ:\n- I wouldn't miss it = chắc chắn sẽ đến",
+      "glossary": [
+       {
+        "term": "wouldn't miss it",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "nhất định không bỏ lỡ"
+       },
+       {
+        "term": "workshop",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "buổi hội thảo thực hành"
+       },
+       {
+        "term": "lead",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "dẫn dắt"
+       }
+      ]
      }
     },
     {
@@ -6185,8 +6298,27 @@
      "answer": "B",
      "explanation": {
       "translation": "When most likely will Ms. Begani meet with the accounting department?\n(A) On September 2\n(B) On September 3\n(C) On September 4\n(D) On September 15",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Khi nào cô Begani có khả năng sẽ gặp bộ phận kế toán nhất?\n- Dẫn chứng trong bài: Begani ở VP ngày 2, 3, 4. Sáng mùng 2 đóng cửa bảo trì (có thể cả ngày). Ngày 4 kẹt hội thảo cả ngày. Khả thi duy nhất là ngày mùng 3.\nĐoạn văn: E-mail from Connie Watkins about Employee handbook",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (thời gian)\nCâu hỏi: Cô Begani nhiều khả năng họp với phòng kế toán khi nào?\nCăn cứ:\n- Cô chỉ ở văn phòng ngày 2, 3, 4/9; ngày 15/9 thì quá muộn.\n- Ngày 4/9: workshop gần như cả ngày.\n- Sáng 2/9: văn phòng đóng cửa để bảo trì, lần trước đóng cả ngày.\n- \"That leaves only one sure date\" → Chỉ còn một ngày chắc chắn.\n→ Ngày 3/9.\n\nXét từng phương án:\n- (A) 2/9 → có thể đóng cửa cả ngày ✗\n- (B) 3/9 ✓\n- (C) 4/9 → ngày workshop ✗\n- (D) 15/9 → quá muộn ✗\n\nGhi nhớ:\n- Câu suy luận ngày: loại trừ từng ngày bận.",
+      "glossary": [
+       {
+        "term": "maintenance",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự bảo trì"
+       },
+       {
+        "term": "end up",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "rốt cuộc"
+       },
+       {
+        "term": "remind",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "nhắc nhở"
+       }
+      ]
      }
     }
    ]
@@ -6218,8 +6350,33 @@
      "answer": "C",
      "explanation": {
       "translation": "What is the purpose of the e-mail?\n(A) To notify Mr. Tso about a Web site address change\n(B) To explain how to access an employee payment system\n(C) To remind Mr. Tso of the requirement to sign a form\n(D) To inform Mr. Tso about a change to his work schedule",
-      "reasoning": "* Loại câu hỏi: Mục đích\nNghĩa: Mục đích của email là gì?\n- Dẫn chứng trong bài: Mục đích nhắc nhở nhân viên chưa ký sổ tay: \"Việc chấp thuận... là yêu cầu bắt buộc\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Mục đích văn bản\nCâu hỏi: Mục đích của email là gì?\nCăn cứ: \"This e-mail is being sent to all employees who have not yet signed the... acceptance page. Acceptance of the terms is required of all employees\" → Email gửi cho nhân viên chưa ký trang xác nhận; việc chấp nhận điều khoản là bắt buộc.\n\nXét từng phương án:\n- (A) Báo đổi địa chỉ web → không có ✗\n- (B) Hướng dẫn vào hệ thống trả lương → chỉ nói lương có thể bị chậm ✗\n- (C) Nhắc ông Tso về yêu cầu phải ký một biểu mẫu ✓\n- (D) Báo thay đổi lịch làm việc → không có ✗\n\nGhi nhớ:\n- not yet signed + required → remind of the requirement to sign a form",
+      "glossary": [
+       {
+        "term": "handbook",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sổ tay"
+       },
+       {
+        "term": "acceptance",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự chấp nhận"
+       },
+       {
+        "term": "failure to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "việc không (làm gì)"
+       },
+       {
+        "term": "salary",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lương"
+       }
+      ]
      }
     },
     {
@@ -6237,8 +6394,27 @@
      "answer": "C",
      "explanation": {
       "translation": "What does the e-mail indicate about Ms. Watkins?\n(A) She is a new employee at Faeber Electric.\n(B) She wrote the Faeber Electric Employee Handbook.\n(C) She sent an e-mail to employees on May 1.\n(D) She is Mr. Tso's manager.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Email chỉ ra điều gì về cô Watkins?\n- Dẫn chứng trong bài: Tác giả (Connie Watkins) viết: \"...đã được yêu cầu trong một email tôi gửi vào ngày 1 tháng 5\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is indicated)\nCâu hỏi: Email cho biết gì về cô Watkins?\nCăn cứ: \"...was requested in an e-mail I sent on May 1.\" → đã được yêu cầu trong email tôi gửi ngày 1/5.\n\nXét từng phương án:\n- (A) Nhân viên mới → không nhắc ✗\n- (B) Viết sổ tay nhân viên → không nhắc ✗\n- (C) Đã gửi email cho nhân viên vào 1/5 ✓\n- (D) Là quản lý của ông Tso → cô là nhân viên nhân sự, khác với \"your manager\" ✗\n\nGhi nhớ:\n- an e-mail I sent on May 1 = she sent an e-mail on May 1",
+      "glossary": [
+       {
+        "term": "human resources officer",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nhân viên nhân sự"
+       },
+       {
+        "term": "request",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "yêu cầu"
+       },
+       {
+        "term": "reach out",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "liên hệ"
+       }
+      ]
      }
     },
     {
@@ -6256,8 +6432,27 @@
      "answer": "A",
      "explanation": {
       "translation": "The word \"points\" in paragraph 2, line 2, is closest in meaning to\n(A) details\n(B) locations\n(C) opinions\n(D) stages",
-      "reasoning": "* Loại câu hỏi: Từ vựng trong ngữ cảnh\nNghĩa: Từ 'points' trong đoạn 2, dòng 2, gần nghĩa nhất với từ nào?\n- Dẫn chứng trong bài: \"points\" (các điểm chính) gần nghĩa với \"details\" (chi tiết).\nĐoạn văn: Web page - About Our Magazine (CVT Direct)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ đồng nghĩa\nCâu hỏi: Từ \"points\" ở đoạn 2, dòng 2 gần nghĩa nhất với\nCăn cứ: \"A chart summarizing the key points in the handbook\" → Bảng tóm tắt các điểm chính trong sổ tay.\n\nXét từng phương án:\n- (A) details: chi tiết, nội dung ✓\n- (B) locations: địa điểm ✗\n- (C) opinions: ý kiến ✗\n- (D) stages: giai đoạn ✗\n\nGhi nhớ:\n- key points = key details: các nội dung chính",
+      "glossary": [
+       {
+        "term": "summarize",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tóm tắt"
+       },
+       {
+        "term": "key point",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "điểm chính"
+       },
+       {
+        "term": "chart",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "biểu đồ, bảng"
+       }
+      ]
      }
     }
    ]
@@ -6289,8 +6484,33 @@
      "answer": "B",
      "explanation": {
       "translation": "Executives in what industry would most likely read CVT Direct magazine?\n(A) Automotive repair\n(B) Commercial trucking\n(C) Mechanical engineering\n(D) Warehouse construction",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Các giám đốc điều hành trong ngành nào có khả năng sẽ đọc tạp chí CVT Direct nhất?\n- Dẫn chứng trong bài: Đối tượng là các quản lý đại lý sở hữu đội xe \"vận chuyển hàng hóa\" -> Commercial trucking.",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (đối tượng độc giả)\nCâu hỏi: Lãnh đạo trong ngành nào nhiều khả năng đọc tạp chí CVT Direct?\nCăn cứ: \"published by Lorne Transportation, the largest freight vehicle corporation... sent free... to managers of dealerships with fleets of 25 or more vehicles for transporting goods\" → Tạp chí của tập đoàn xe chở hàng lớn nhất nước, gửi cho quản lý các công ty có đội từ 25 xe vận chuyển hàng hóa.\n\nXét từng phương án:\n- (A) Sửa chữa ô tô → không nhắc ✗\n- (B) Vận tải xe tải thương mại ✓\n- (C) Kỹ thuật cơ khí → không nhắc ✗\n- (D) Xây dựng kho bãi → không nhắc ✗\n\nGhi nhớ:\n- freight vehicle / fleets for transporting goods = commercial trucking",
+      "glossary": [
+       {
+        "term": "trade magazine",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tạp chí chuyên ngành"
+       },
+       {
+        "term": "freight",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hàng hóa (vận chuyển)"
+       },
+       {
+        "term": "fleet",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đội xe"
+       },
+       {
+        "term": "commercial",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "thương mại"
+       }
+      ]
      }
     },
     {
@@ -6308,8 +6528,33 @@
      "answer": "B",
      "explanation": {
       "translation": "What is one topic the Web page addresses?\n(A) Recent changes to a distribution strategy\n(B) How subscriber information is used\n(C) Requirements for ordering products\n(D) Why demand for a publication has increased",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Một chủ đề mà trang web đề cập đến là gì?\n- Dẫn chứng trong bài: Trang web giải thích: \"Thông tin cá nhân... của bạn có thể được sử dụng để cung cấp cho bạn thêm thông tin...\".\nĐoạn văn: Flyer - Gernack Home",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (chủ đề được đề cập)\nCâu hỏi: Trang web đề cập chủ đề nào?\nCăn cứ: \"Your personally identifiable information may be used to provide you with additional information about Lorne's products and services.\" → Thông tin cá nhân có thể được dùng để gửi bạn thêm thông tin về sản phẩm, dịch vụ của Lorne.\n\nXét từng phương án:\n- (A) Thay đổi chiến lược phân phối → không nhắc ✗\n- (B) Cách sử dụng thông tin người đăng ký ✓\n- (C) Yêu cầu đặt mua sản phẩm → chỉ có cách đăng ký nhận tạp chí ✗\n- (D) Vì sao nhu cầu ấn phẩm tăng → không nhắc ✗\n\nGhi nhớ:\n- personally identifiable information may be used to... = how subscriber information is used",
+      "glossary": [
+       {
+        "term": "personally identifiable information",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thông tin nhận dạng cá nhân"
+       },
+       {
+        "term": "confidentially",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "một cách bảo mật"
+       },
+       {
+        "term": "in accordance with",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "theo, phù hợp với"
+       },
+       {
+        "term": "privacy statement",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tuyên bố quyền riêng tư"
+       }
+      ]
      }
     }
    ]
@@ -6341,8 +6586,33 @@
      "answer": "C",
      "explanation": {
       "translation": "What is NOT indicated as a service provided by Gernack Home?\n(A) Kitchen renovation\n(B) Home-office creation\n(C) Patio installation\n(D) Home-addition building",
-      "reasoning": "* Loại câu hỏi: Chi tiết (Phủ định)\nNghĩa: Điều gì KHÔNG được chỉ ra là một dịch vụ do Gernack Home cung cấp?\n- Dẫn chứng trong bài: Bài viết nhắc đến cải tạo bếp, văn phòng, thêm phòng mở rộng. Không nhắc đến Patio (sân hiên).",
-      "glossary": []
+      "reasoning": "* Dạng câu: NOT question\nCâu hỏi: Dịch vụ nào KHÔNG được nêu là của Gernack Home?\nCăn cứ: \"Our specialties are renovating kitchens and bathrooms, converting basements and garages into recreation rooms or home offices, and building home additions.\" → Chuyên cải tạo bếp, phòng tắm; biến tầng hầm, gara thành phòng giải trí hoặc văn phòng tại nhà; xây phần nhà nới rộng.\n\nXét từng phương án:\n- (A) Cải tạo bếp → có ✗\n- (B) Làm văn phòng tại nhà → có ✗\n- (C) Lắp đặt hiên (patio) → không nhắc ✓\n- (D) Xây phần nhà nới rộng → có ✗\n\nGhi nhớ:\n- home addition: phần nhà xây thêm",
+      "glossary": [
+       {
+        "term": "remodeling",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự sửa sang, cải tạo"
+       },
+       {
+        "term": "convert",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "chuyển đổi"
+       },
+       {
+        "term": "home addition",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phần nhà xây thêm"
+       },
+       {
+        "term": "patio",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hiên, sân lát"
+       }
+      ]
      }
     },
     {
@@ -6360,8 +6630,27 @@
      "answer": "B",
      "explanation": {
       "translation": "The word \"assure\" in paragraph 2, line 1, is closest in meaning to\n(A) advise\n(B) promise\n(C) comfort\n(D) support",
-      "reasoning": "* Loại câu hỏi: Từ vựng trong ngữ cảnh\nNghĩa: Từ 'assure' trong đoạn 2, dòng 1, gần nghĩa nhất với từ nào?\n- Dẫn chứng trong bài: \"assure\" (cam đoan, đảm bảo) gần nghĩa với \"promise\" (hứa hẹn).",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ đồng nghĩa\nCâu hỏi: Từ \"assure\" ở đoạn 2, dòng 1 gần nghĩa nhất với\nCăn cứ: \"We can assure you that Gernack Home installs only products of the highest quality.\" → Chúng tôi cam đoan chỉ lắp sản phẩm chất lượng cao nhất.\n\nXét từng phương án:\n- (A) advise: khuyên ✗\n- (B) promise: hứa, cam đoan ✓\n- (C) comfort: an ủi ✗\n- (D) support: hỗ trợ ✗\n\nGhi nhớ:\n- assure sb that... = promise sb that...: cam đoan với ai rằng",
+      "glossary": [
+       {
+        "term": "assure",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "cam đoan"
+       },
+       {
+        "term": "install",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "lắp đặt"
+       },
+       {
+        "term": "expert",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "lành nghề"
+       }
+      ]
      }
     },
     {
@@ -6379,8 +6668,33 @@
      "answer": "B",
      "explanation": {
       "translation": "What is a new offering provided by Gernack Home?\n(A) An online showroom\n(B) A visualization tool\n(C) A photo-sharing page\n(D) A mobile app for scheduling visits",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Một dịch vụ mới do Gernack Home cung cấp là gì?\n- Dẫn chứng trong bài: \"virtual home renovation assistant... build a virtual room\" tương ứng với A visualization tool (công cụ hình dung).\nĐoạn văn: E-mail to Lauri Woods from Customer Service",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (cái mới)\nCâu hỏi: Dịch vụ mới của Gernack Home là gì?\nCăn cứ: \"take advantage of our latest feature: a virtual home renovation assistant... help you build a virtual room so that you can take a first look at the renovation\" → Tính năng mới nhất: trợ lý cải tạo nhà ảo, giúp dựng phòng ảo để xem trước.\n\nXét từng phương án:\n- (A) Phòng trưng bày trực tuyến → đã có sẵn, không phải tính năng mới nhất ✗\n- (B) Công cụ hình dung (trực quan hóa) ✓\n- (C) Trang chia sẻ ảnh → không nhắc ✗\n- (D) Ứng dụng di động đặt lịch → đặt lịch qua điện thoại ✗\n\nGhi nhớ:\n- latest feature = new offering\n- build a virtual room / take a first look = visualization tool",
+      "glossary": [
+       {
+        "term": "virtual",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "ảo"
+       },
+       {
+        "term": "visualization",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự hình dung, trực quan hóa"
+       },
+       {
+        "term": "feature",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tính năng"
+       },
+       {
+        "term": "consultation",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "buổi tư vấn"
+       }
+      ]
      }
     }
    ]
@@ -6412,8 +6726,33 @@
      "answer": "D",
      "explanation": {
       "translation": "What is one purpose of the e-mail?\n(A) To announce that items have been restocked\n(B) To process a returned item\n(C) To announce a new line of business wear\n(D) To share personalized clothing recommendations",
-      "reasoning": "* Loại câu hỏi: Mục đích\nNghĩa: Một mục đích của email là gì?\n- Dẫn chứng trong bài: \"Chúng tôi muốn nhân cơ hội này để gợi ý một số món đồ khác mà có thể bà sẽ thích\" -> chia sẻ gợi ý cá nhân hóa.",
-      "glossary": []
+      "reasoning": "* Dạng câu: Mục đích văn bản\nCâu hỏi: Một mục đích của email là gì?\nCăn cứ: \"We wanted to take the opportunity to suggest some other items you might like... see a list of suggestions curated especially for you.\" → Chúng tôi muốn gợi ý vài món khác bà có thể thích; danh sách gợi ý chọn riêng cho bà.\n\nXét từng phương án:\n- (A) Báo hàng đã nhập lại → không nhắc ✗\n- (B) Xử lý hàng trả lại → không nhắc ✗\n- (C) Giới thiệu dòng đồ công sở mới → không nhắc ✗\n- (D) Chia sẻ gợi ý trang phục dành riêng cho khách ✓\n\nGhi nhớ:\n- suggestions curated especially for you = personalized recommendations",
+      "glossary": [
+       {
+        "term": "curated",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "được tuyển chọn"
+       },
+       {
+        "term": "personalized",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "được cá nhân hóa"
+       },
+       {
+        "term": "recommendation",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lời gợi ý"
+       },
+       {
+        "term": "restock",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "nhập thêm hàng"
+       }
+      ]
      }
     },
     {
@@ -6431,14 +6770,33 @@
      "answer": "B",
      "explanation": {
       "translation": "What is indicated about Ms. Woods?\n(A) She is applying for a job at Honey Canyon Apparel.\n(B) She has shopped at Honey Canyon Apparel before.\n(C) She prefers to wear casual clothing.\n(D) She works as a fashion designer.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì được chỉ ra về cô Woods?\n- Dẫn chứng trong bài: \"để cảm ơn bà đã là khách hàng thân thiết... trong nhiều năm qua\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is indicated)\nCâu hỏi: Điều gì được nêu về bà Woods?\nCăn cứ: \"to thank you for being a Honey Canyon customer for so many years\" → cảm ơn bà đã là khách hàng của Honey Canyon nhiều năm.\n\nXét từng phương án:\n- (A) Đang xin việc tại Honey Canyon → không nhắc ✗\n- (B) Đã từng mua sắm tại Honey Canyon ✓\n- (C) Thích đồ thường ngày → không nhắc ✗\n- (D) Là nhà thiết kế thời trang → không nhắc ✗\n\nGhi nhớ:\n- customer for so many years = has shopped there before",
+      "glossary": [
+       {
+        "term": "apparel",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "quần áo"
+       },
+       {
+        "term": "loyal customer",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "khách hàng thân thiết"
+       },
+       {
+        "term": "casual",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "thường ngày"
+       }
+      ]
      }
     },
     {
      "number": 163,
      "part": 7,
-     "prompt": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?",
+     "prompt": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n“This will be automatically applied to your shopping cart when you check out.”",
      "options": {
       "A": "[1]",
       "B": "[2]",
@@ -6450,8 +6808,33 @@
      "answer": "D",
      "explanation": {
       "translation": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"This will be automatically applied to your shopping cart when you check out.\"\n(A) [1]\n(B) [2]\n(C) [3]\n(D) [4]",
-      "reasoning": "* Loại câu hỏi: Điền câu\nNghĩa: Câu 'Điều này sẽ được tự động áp dụng vào giỏ hàng của bạn khi bạn thanh toán' phù hợp nhất ở vị trí nào được đánh dấu [1], [2], [3], và [4]?\n- Dẫn chứng trong bài: Câu báo việc tự động áp dụng khi thanh toán phải nằm ngay sau [4], tức là sau khi thông báo mã giảm giá 20%.\nĐoạn văn: Advertisement - Nibora XC-35 Sport Utility Vehicle (SUV)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nCâu hỏi: Câu \"This will be automatically applied to your shopping cart when you check out.\" (Mục này sẽ tự áp dụng vào giỏ hàng khi bạn thanh toán) nằm ở vị trí nào?\nCăn cứ: Trước [4]: \"we are also offering you a 20 percent discount on your next order.\" Sau [4]: \"Simply place an order within one month to receive the discount.\"\n→ \"This\" = mức giảm 20%; được áp tự động nên chỉ cần đặt hàng trong 1 tháng.\n\nXét từng phương án:\n- (A) [1] → chưa nhắc đến giảm giá ✗\n- (B) [2] → đang nói về gợi ý sản phẩm ✗\n- (C) [3] → đang nói về danh sách gợi ý ✗\n- (D) [4] ✓\n\nGhi nhớ:\n- \"This... applied to your shopping cart\" phải đi sau một khoản giảm giá",
+      "glossary": [
+       {
+        "term": "apply",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "áp dụng"
+       },
+       {
+        "term": "shopping cart",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "giỏ hàng"
+       },
+       {
+        "term": "check out",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "thanh toán"
+       },
+       {
+        "term": "discount",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự giảm giá"
+       }
+      ]
      }
     }
    ]
@@ -6483,8 +6866,33 @@
      "answer": "D",
      "explanation": {
       "translation": "What is suggested about the XC-35?\n(A) It is Nibora's best-selling vehicle.\n(B) It is good for parking in small spaces.\n(C) It has received more positive reviews than other SUVs have received.\n(D) It is good for driving on many types of surfaces.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì được gợi ý về chiếc XC-35?\n- Dẫn chứng trong bài: \"mang đến trải nghiệm lái êm ái ngay cả trên địa hình gồ ghề nhất\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (What is suggested)\nCâu hỏi: Điều gì được gợi ý về xe XC-35?\nCăn cứ: \"Wherever you want to go, from the beach to the backwoods... offers a smooth ride even on the roughest terrain\" → Đi được từ bãi biển đến rừng sâu, êm ngay cả trên địa hình gồ ghề nhất.\n\nXét từng phương án:\n- (A) Xe bán chạy nhất của Nibora → không nhắc ✗\n- (B) Dễ đỗ chỗ hẹp → không nhắc ✗\n- (C) Được đánh giá tốt hơn SUV khác → không nhắc ✗\n- (D) Chạy tốt trên nhiều loại mặt đường ✓\n\nGhi nhớ:\n- from the beach to the backwoods / the roughest terrain = many types of surfaces",
+      "glossary": [
+       {
+        "term": "backwoods",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "vùng rừng sâu"
+       },
+       {
+        "term": "terrain",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "địa hình"
+       },
+       {
+        "term": "clearance",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "khoảng sáng gầm xe"
+       },
+       {
+        "term": "stabilization",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự ổn định"
+       }
+      ]
      }
     },
     {
@@ -6502,8 +6910,33 @@
      "answer": "B",
      "explanation": {
       "translation": "What feature comes with all XC-35 SUVs?\n(A) A hybrid engine\n(B) All-wheel drive\n(C) A sunroof\n(D) Cruise control",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Tính năng nào đi kèm với tất cả các xe SUV XC-35?\n- Dẫn chứng trong bài: \"Tất cả các xe đều được trang bị tiêu chuẩn hệ dẫn động bốn bánh (all-wheel drive)\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết\nCâu hỏi: Tính năng nào có sẵn trên mọi xe XC-35?\nCăn cứ: \"All vehicles come standard with all-wheel drive and a navigation system with phone pairing.\" → Mọi xe đều trang bị tiêu chuẩn dẫn động bốn bánh và hệ thống định vị.\n\nXét từng phương án:\n- (A) Động cơ hybrid → chỉ là một lựa chọn (xăng hoặc hybrid) ✗\n- (B) Dẫn động bốn bánh ✓\n- (C) Cửa sổ trời → là tùy chọn thêm ✗\n- (D) Kiểm soát hành trình → là tùy chọn thêm ✗\n\nGhi nhớ:\n- come standard with = có sẵn theo tiêu chuẩn (≠ option: tùy chọn)",
+      "glossary": [
+       {
+        "term": "all-wheel drive",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "dẫn động bốn bánh"
+       },
+       {
+        "term": "come standard with",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "được trang bị tiêu chuẩn"
+       },
+       {
+        "term": "transmission",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hộp số"
+       },
+       {
+        "term": "cruise control",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "kiểm soát hành trình"
+       }
+      ]
      }
     },
     {
@@ -6521,8 +6954,33 @@
      "answer": "A",
      "explanation": {
       "translation": "What is mentioned in the advertisement about the options for the XC35?\n(A) They can be discounted if bought as a package.\n(B) They are unavailable in some dealerships.\n(C) Some will be discontinued soon.\n(D) Some are available only if bought in a package.",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Điều gì được đề cập trong quảng cáo về các tùy chọn cho xe XC-35?\n- Dẫn chứng trong bài: \"ghé thăm đại lý... để xem các gói giá trị (value packages)\" -> giảm giá nếu mua theo gói.",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is mentioned)\nCâu hỏi: Quảng cáo nói gì về các tùy chọn của XC-35?\nCăn cứ: \"To save on the options you love, visit your nearby Nibora dealer to see what kinds of value packages they offer.\" → Để tiết kiệm khi mua tùy chọn, hãy đến đại lý xem các gói ưu đãi.\n\nXét từng phương án:\n- (A) Có thể được giảm giá nếu mua theo gói ✓\n- (B) Một số đại lý không có → không nhắc ✗\n- (C) Một số sẽ ngừng → không nhắc ✗\n- (D) Một số chỉ có khi mua theo gói → bài chỉ nói gói giúp tiết kiệm ✗\n\nGhi nhớ:\n- save on the options + value packages = discounted if bought as a package",
+      "glossary": [
+       {
+        "term": "option",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tùy chọn"
+       },
+       {
+        "term": "value package",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "gói ưu đãi"
+       },
+       {
+        "term": "dealer",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đại lý"
+       },
+       {
+        "term": "discontinue",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "ngừng sản xuất"
+       }
+      ]
      }
     },
     {
@@ -6540,8 +6998,33 @@
      "answer": "B",
      "explanation": {
       "translation": "According to the advertisement, how can customers choose the look of their XC-35?\n(A) By making a telephone call\n(B) By visiting a Web site\n(C) By sending an e-mail\n(D) By reviewing automobile magazines",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Theo quảng cáo, làm thế nào khách hàng có thể chọn ngoại hình cho chiếc XC-35 của họ?\n- Dẫn chứng trong bài: \"truy cập www.nibora.com/build để tùy chỉnh ngoại hình\".\nĐoạn văn: Advertisement - Koloa Music Education Collective",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (cách thức)\nCâu hỏi: Khách có thể chọn diện mạo cho xe XC-35 bằng cách nào?\nCăn cứ: \"go to www.nibora.com/build and customize the look of your new Nibora XC-35 by choosing exterior color, upholstery style, and graphic decals.\" → Vào trang web để tùy chỉnh màu sơn, kiểu bọc ghế, đề can.\n\nXét từng phương án:\n- (A) Gọi điện → không nhắc ✗\n- (B) Truy cập một trang web ✓\n- (C) Gửi email → không nhắc ✗\n- (D) Xem tạp chí ô tô → không nhắc ✗\n\nGhi nhớ:\n- customize the look = choose the look",
+      "glossary": [
+       {
+        "term": "customize",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tùy chỉnh"
+       },
+       {
+        "term": "exterior",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "bên ngoài"
+       },
+       {
+        "term": "upholstery",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lớp bọc ghế"
+       },
+       {
+        "term": "decal",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đề can"
+       }
+      ]
      }
     }
    ]
@@ -6573,8 +7056,33 @@
      "answer": "C",
      "explanation": {
       "translation": "Who most likely is the intended audience of the advertisement?\n(A) Coordinators of after-school music programs\n(B) Professional musicians\n(C) Individuals with no music experience\n(D) Music store owners",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Ai có khả năng nhất là đối tượng mục tiêu của quảng cáo?\n- Dẫn chứng trong bài: Dành cho người lớn học guitar/violin cơ bản (không có kinh nghiệm) -> \"người mới bắt đầu\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (đối tượng của quảng cáo)\nCâu hỏi: Quảng cáo nhiều khả năng nhắm đến ai?\nCăn cứ: \"It's never too late to learn to play an instrument... private music education program for adults... we will offer guitar and violin instruction for beginners.\" → Không bao giờ là quá muộn để học nhạc cụ; chương trình cho người lớn, dạy guitar và violin cho người mới bắt đầu.\n\nXét từng phương án:\n- (A) Điều phối viên chương trình âm nhạc sau giờ học → không nhắc ✗\n- (B) Nhạc sĩ chuyên nghiệp → lớp cho người mới bắt đầu ✗\n- (C) Người chưa có kinh nghiệm âm nhạc ✓\n- (D) Chủ cửa hàng nhạc cụ → chỉ được giới thiệu để học viên mua nhạc cụ ✗\n\nGhi nhớ:\n- for beginners = individuals with no music experience",
+      "glossary": [
+       {
+        "term": "instrument",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nhạc cụ"
+       },
+       {
+        "term": "beginner",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "người mới bắt đầu"
+       },
+       {
+        "term": "intended audience",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đối tượng nhắm đến"
+       },
+       {
+        "term": "instruction",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự hướng dẫn, giảng dạy"
+       }
+      ]
      }
     },
     {
@@ -6592,8 +7100,27 @@
      "answer": "B",
      "explanation": {
       "translation": "What is indicated about Koloa Music Education Collective?\n(A) It offers group lessons for adults.\n(B) It employs musicians who have university degrees.\n(C) It operates a recording studio.\n(D) It provides a complimentary musical instrument.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì được chỉ ra về Koloa Music Education Collective?\n- Dẫn chứng trong bài: \"Tất cả các giảng viên của chúng tôi đều sở hữu ít nhất bằng cử nhân âm nhạc\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is indicated)\nCâu hỏi: Điều gì được nêu về Koloa Music Education Collective?\nCăn cứ: \"All our instructors hold at least a bachelor's degree in music\" → Mọi giảng viên đều có ít nhất bằng cử nhân âm nhạc.\n\nXét từng phương án:\n- (A) Lớp học nhóm cho người lớn → chương trình là học riêng (private) ✗\n- (B) Tuyển nhạc sĩ có bằng đại học ✓\n- (C) Có phòng thu âm → không nhắc ✗\n- (D) Tặng nhạc cụ → học viên phải tự mang nhạc cụ ✗\n\nGhi nhớ:\n- bachelor's degree = university degree",
+      "glossary": [
+       {
+        "term": "bachelor's degree",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "bằng cử nhân"
+       },
+       {
+        "term": "performance experience",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "kinh nghiệm biểu diễn"
+       },
+       {
+        "term": "complimentary",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "miễn phí"
+       }
+      ]
      }
     },
     {
@@ -6611,14 +7138,33 @@
      "answer": "D",
      "explanation": {
       "translation": "Who from Koloa Music Education Collective will first contact an interested customer?\n(A) A manager\n(B) A sales associate\n(C) An office administrator\n(D) An instructor",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Ai từ Koloa Music Education Collective sẽ liên hệ đầu tiên với khách hàng quan tâm?\n- Dẫn chứng trong bài: Cuối bài: \"Giảng viên sẽ liên hệ với bạn trong vòng 48 giờ.\"",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết\nCâu hỏi: Ai ở Koloa sẽ liên hệ trước tiên với khách quan tâm?\nCăn cứ: \"please fill out our online information form... An instructor will contact you within 48 hours.\" → Điền mẫu đơn trực tuyến; giảng viên sẽ liên hệ trong 48 giờ.\n\nXét từng phương án:\n- (A) Quản lý → không nhắc ✗\n- (B) Nhân viên bán hàng → không nhắc ✗\n- (C) Nhân viên hành chính → không nhắc ✗\n- (D) Giảng viên ✓\n\nGhi nhớ:\n- An instructor will contact you → người liên hệ đầu tiên",
+      "glossary": [
+       {
+        "term": "fill out",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "điền (đơn)"
+       },
+       {
+        "term": "match",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "ghép, kết nối"
+       },
+       {
+        "term": "contact",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "liên hệ"
+       }
+      ]
      }
     },
     {
      "number": 171,
      "part": 7,
-     "prompt": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?",
+     "prompt": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n“Alternatively, we can provide online lessons to accommodate your schedule.”",
      "options": {
       "A": "[1]",
       "B": "[2]",
@@ -6630,8 +7176,33 @@
      "answer": "B",
      "explanation": {
       "translation": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Alternatively, we can provide online lessons to accommodate your schedule.\"\n(A) [1]\n(B) [2]\n(C) [3]\n(D) [4]",
-      "reasoning": "* Loại câu hỏi: Điền câu\nNghĩa: Câu 'Ngoài ra, chúng tôi có thể cung cấp các bài học trực tuyến để phù hợp với lịch trình của bạn' phù hợp nhất ở vị trí nào được đánh dấu [1], [2], [3], và [4]?\n- Dẫn chứng trong bài: \"Ngoài ra, chúng tôi có thể cung cấp các bài học trực tuyến...\" nằm hợp lý tại [2] ngay sau khi giới thiệu học tại văn phòng/tại nhà.\nĐoạn văn: Online chat discussion (Lynette Walter, Tripp Hines, April Au)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nCâu hỏi: Câu \"Alternatively, we can provide online lessons to accommodate your schedule.\" (Hoặc chúng tôi có thể dạy trực tuyến cho phù hợp lịch của bạn) nằm ở vị trí nào?\nCăn cứ: Trước [2]: \"Instruction is available in several formats. We can schedule in-person instruction at our office or your residence.\" → Có nhiều hình thức; có thể dạy trực tiếp tại văn phòng hoặc tại nhà.\n→ \"Alternatively\" (hoặc là) đưa ra hình thức thứ hai: học online.\n\nXét từng phương án:\n- (A) [1] → chưa nói về hình thức học ✗\n- (B) [2] ✓\n- (C) [3] → đang nói về nhạc cụ ✗\n- (D) [4] → đang nói về chọn giảng viên ✗\n\nGhi nhớ:\n- Alternatively = hoặc là (đưa ra phương án khác) → đi sau phương án thứ nhất (in-person)",
+      "glossary": [
+       {
+        "term": "alternatively",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "hoặc là, theo cách khác"
+       },
+       {
+        "term": "accommodate",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "đáp ứng, phù hợp với"
+       },
+       {
+        "term": "in-person",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "trực tiếp"
+       },
+       {
+        "term": "residence",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nơi ở"
+       }
+      ]
      }
     }
    ]
@@ -6663,8 +7234,33 @@
      "answer": "C",
      "explanation": {
       "translation": "Why does Ms. Walter want to have lunch with Mr. Hines and Ms. Au?\n(A) To share her experiences on a recent trip\n(B) To debate pricing for a line of footwear\n(C) To discuss a marketing campaign for a product\n(D) To plan a summer retreat for the sales team",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Tại sao cô Walter lại muốn ăn trưa với ông Hines và cô Au?\n- Dẫn chứng trong bài: \"đảm bảo rằng tất cả chúng ta đều đang thống nhất về chiến dịch marketing mới.\"",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (lý do)\nCâu hỏi: Vì sao cô Walter muốn ăn trưa với ông Hines và cô Au?\nCăn cứ: \"I just want to make sure that we're on the same page about the new marketing campaign.\" / \"The one for the line of summer shoes?\" – \"Yes.\" → Muốn thống nhất về chiến dịch tiếp thị mới cho dòng giày mùa hè.\n\nXét từng phương án:\n- (A) Kể chuyện chuyến đi gần đây → cô muốn cập nhật những gì đã lỡ khi đi Boston ✗\n- (B) Tranh luận giá giày → không nhắc ✗\n- (C) Thảo luận chiến dịch tiếp thị cho một sản phẩm ✓\n- (D) Lên kế hoạch nghỉ hè cho đội → không nhắc ✗\n\nGhi nhớ:\n- be on the same page: thống nhất, cùng hiểu",
+      "glossary": [
+       {
+        "term": "on the same page",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "có cùng hiểu biết"
+       },
+       {
+        "term": "marketing campaign",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chiến dịch tiếp thị"
+       },
+       {
+        "term": "catch up on",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "cập nhật (điều đã lỡ)"
+       },
+       {
+        "term": "footwear",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "giày dép"
+       }
+      ]
      }
     },
     {
@@ -6682,8 +7278,27 @@
      "answer": "A",
      "explanation": {
       "translation": "Who is expected to attend the meeting at 3:00 P.M.?\n(A) Graphic designers\n(B) Copy editors\n(C) Only sales managers\n(D) Only staff from the Boston office",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Ai dự kiến sẽ tham dự cuộc họp lúc 3:00 chiều?\n- Dẫn chứng trong bài: \"Cuộc họp này chỉ dành cho những người tham gia vào phần đồ họa (graphics) thôi.\"",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết\nCâu hỏi: Ai dự kiến tham gia cuộc họp lúc 3 giờ chiều?\nCăn cứ: \"It starts at 3:00 in the boardroom... It's only for people involved in the graphics.\" → Họp lúc 3 giờ, chỉ dành cho người làm phần đồ họa.\n\nXét từng phương án:\n- (A) Nhà thiết kế đồ họa ✓\n- (B) Biên tập viên nội dung → cô Au (phụ trách phần chữ) không cần dự ✗\n- (C) Chỉ quản lý bán hàng → không nhắc ✗\n- (D) Chỉ nhân viên văn phòng Boston → không nhắc ✗\n\nGhi nhớ:\n- people involved in the graphics = graphic designers",
+      "glossary": [
+       {
+        "term": "boardroom",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phòng họp"
+       },
+       {
+        "term": "involved in",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "tham gia vào"
+       },
+       {
+        "term": "graphics",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phần đồ họa"
+       }
+      ]
      }
     },
     {
@@ -6701,8 +7316,27 @@
      "answer": "C",
      "explanation": {
       "translation": "At 4:52 P.M., what does Ms. Au most likely mean when she writes, \"What a relief\"?\n(A) She is pleased that Ms. Walter agrees with her.\n(B) She is grateful to be invited to an event.\n(C) She is happy her calendar is correct.\n(D) She is happy to meet with her friends.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Vào lúc 4:52 chiều, cô Au có khả năng ngụ ý gì nhất khi viết 'Thật là nhẹ nhõm'?\n- Dẫn chứng trong bài: Cô ấy nhẹ nhõm vì không tìm thấy lịch họp trên calendar của mình và quả thật cô không cần tham dự -> lịch đúng.",
-      "glossary": []
+      "reasoning": "* Dạng câu: Ý định người viết (câu trích dẫn)\nCâu hỏi: Lúc 4:52, cô Au có ý gì khi viết \"What a relief\"?\nCăn cứ: Cô Au: \"I checked my calendar, and I could not find that meeting.\" Ông Hines: \"You don't need to be there.\" → Cô không thấy cuộc họp trong lịch; hóa ra cô không cần dự.\n→ Cô nhẹ nhõm vì lịch của mình không sai.\n\nXét từng phương án:\n- (A) Vui vì cô Walter đồng ý với mình → không liên quan ✗\n- (B) Biết ơn vì được mời → ngược lại, cô không cần dự ✗\n- (C) Vui vì lịch của mình đúng ✓\n- (D) Vui khi gặp bạn bè → không liên quan ✗\n\nGhi nhớ:\n- What a relief!: thật nhẹ nhõm",
+      "glossary": [
+       {
+        "term": "relief",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự nhẹ nhõm"
+       },
+       {
+        "term": "calendar",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lịch làm việc"
+       },
+       {
+        "term": "update",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thông tin cập nhật"
+       }
+      ]
      }
     },
     {
@@ -6720,8 +7354,21 @@
      "answer": "B",
      "explanation": {
       "translation": "Where will Ms. Au, Mr. Hines, and Ms. Walter meet tomorrow?\n(A) In the boardroom\n(B) In the lobby\n(C) In Ms. Walter's office\n(D) In the break room",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Cô Au, ông Hines, và cô Walter sẽ gặp nhau ở đâu vào ngày mai?\n- Dẫn chứng trong bài: \"Hẹn gặp cả hai vào 1:30 chiều mai tại sảnh đợi (lobby).\"\nĐoạn văn: Invoice and e-mail (Greatford Curtains & Nicolla Grant)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (địa điểm)\nCâu hỏi: Ba người sẽ gặp nhau ở đâu vào ngày mai?\nCăn cứ: \"I'll see you both tomorrow at 1:30 in the lobby.\" → Hẹn gặp hai người lúc 1:30 ngày mai ở sảnh.\n\nXét từng phương án:\n- (A) Phòng họp lớn → nơi họp bán hàng lúc 3 giờ ✗\n- (B) Sảnh ✓\n- (C) Văn phòng cô Walter → không nhắc ✗\n- (D) Phòng nghỉ → không nhắc ✗\n\nGhi nhớ:\n- Câu hỏi địa điểm: phân biệt nơi gặp (lobby) và nơi họp (boardroom).",
+      "glossary": [
+       {
+        "term": "lobby",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sảnh"
+       },
+       {
+        "term": "break room",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phòng nghỉ"
+       }
+      ]
      }
     }
    ]
@@ -6757,8 +7404,27 @@
      "answer": "A",
      "explanation": {
       "translation": "What is indicated about Greatford Curtains?\n(A) It is a family-owned business.\n(B) It is having a clearance sale.\n(C) It is located at 17 Durst Place.\n(D) It offers free shipping.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì được chỉ ra về Greatford Curtains?\n- Dẫn chứng trong bài: \"ủng hộ doanh nghiệp nhỏ của gia đình chúng tôi.\"",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is indicated)\nCâu hỏi: Điều gì được nêu về Greatford Curtains?\nCăn cứ: \"Thank you for your order and for supporting our family's small business.\" → Cảm ơn bạn đã ủng hộ doanh nghiệp nhỏ của gia đình chúng tôi.\n\nXét từng phương án:\n- (A) Là doanh nghiệp gia đình ✓\n- (B) Đang xả hàng → chỉ có mã giảm 10% ✗\n- (C) Ở số 17 Durst Place → đó là địa chỉ khách hàng ✗\n- (D) Miễn phí vận chuyển → phí ship £4.25 ✗\n\nGhi nhớ:\n- our family's small business = a family-owned business",
+      "glossary": [
+       {
+        "term": "family-owned",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "do gia đình sở hữu"
+       },
+       {
+        "term": "clearance sale",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đợt xả hàng"
+       },
+       {
+        "term": "appreciation",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự cảm kích"
+       }
+      ]
      }
     },
     {
@@ -6776,8 +7442,33 @@
      "answer": "C",
      "explanation": {
       "translation": "What does Ms. Grant request?\n(A) A refund of an overpayment\n(B) An exchange of an item that is too small\n(C) A price for a customized product\n(D) Express shipping on an order",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Cô Grant yêu cầu điều gì?\n- Dẫn chứng trong bài: \"Tôi muốn nhận báo giá cho rèm cửa may theo yêu cầu (custom curtains)...\"",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (yêu cầu)\nCâu hỏi: Bà Grant yêu cầu gì?\nCăn cứ: \"I would like to get a quote for custom curtains for my dining room... Please let me know how much that will cost\" → Tôi muốn báo giá rèm đặt may theo yêu cầu cho phòng ăn.\n\nXét từng phương án:\n- (A) Hoàn tiền trả thừa → không nhắc ✗\n- (B) Đổi hàng quá nhỏ → không nhắc ✗\n- (C) Báo giá sản phẩm đặt làm riêng ✓\n- (D) Giao hàng nhanh → không nhắc ✗\n\nGhi nhớ:\n- get a quote for custom curtains = a price for a customized product",
+      "glossary": [
+       {
+        "term": "quote",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "bảng báo giá"
+       },
+       {
+        "term": "custom",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "làm theo yêu cầu"
+       },
+       {
+        "term": "panel",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tấm (rèm)"
+       },
+       {
+        "term": "box pleat",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "kiểu xếp ly hộp"
+       }
+      ]
      }
     },
     {
@@ -6795,8 +7486,27 @@
      "answer": "A",
      "explanation": {
       "translation": "What is most likely true about the Cambridge fabric sample listed on the invoice?\n(A) It is blue.\n(B) It cost £43.50.\n(C) It will be used in a custom order.\n(D) It will be used in Ms. Grant's dining room.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì có khả năng đúng nhất về mẫu vải Cambridge được liệt kê trên hóa đơn?\n- Dẫn chứng trong bài: Khách chê tất cả các mẫu đã nhận (trong đó có Cambridge) có màu xanh dương không hợp, xin đổi qua mẫu xanh lá.",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản (suy luận)\nCâu hỏi: Điều gì nhiều khả năng đúng về mẫu vải Cambridge trên hóa đơn?\nCăn cứ:\n- Hóa đơn: mẫu vải đã gửi gồm Cambridge, Manchester, Oxford, Windsor.\n- Email: \"the shades of blue in all the samples I received do not work well in that space.\" → Các tông xanh dương của tất cả mẫu tôi nhận không hợp với phòng khách.\n→ Mẫu Cambridge có màu xanh dương.\n\nXét từng phương án:\n- (A) Có màu xanh dương ✓\n- (B) Giá £43.50 → đó là tổng hóa đơn; mỗi mẫu £8 ✗\n- (C) Dùng cho đơn đặt may → bà chọn vải Manchester ✗\n- (D) Dùng cho phòng ăn → phòng ăn dùng vải Manchester ✗\n\nGhi nhớ:\n- all the samples I received + shades of blue → mọi mẫu đã nhận đều màu xanh dương",
+      "glossary": [
+       {
+        "term": "fabric sample",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "mẫu vải"
+       },
+       {
+        "term": "shade",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sắc độ màu"
+       },
+       {
+        "term": "invoice",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hóa đơn"
+       }
+      ]
      }
     },
     {
@@ -6814,8 +7524,27 @@
      "answer": "D",
      "explanation": {
       "translation": "What is suggested about order number 19842?\n(A) It arrived later than expected.\n(B) It was missing several items.\n(C) It included a sample of Norwich fabric.\n(D) It was placed online.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì được gợi ý về đơn hàng số 19842?\n- Dẫn chứng trong bài: \"thẻ tín dụng mà tôi đã lưu trong hồ sơ trực tuyến của mình trong đơn hàng cuối cùng... ngày 23 tháng 7\" (đơn #19842 là đơn 23/7).",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận\nCâu hỏi: Điều gì được gợi ý về đơn hàng số 19842?\nCăn cứ: \"charge the credit card I saved to my online profile during my last order on 23 July.\" → Trừ tiền thẻ tín dụng tôi đã lưu vào hồ sơ trực tuyến trong lần đặt hàng 23/7.\nHóa đơn: đơn số 19842, ngày 23/7.\n→ Đơn này được đặt trực tuyến.\n\nXét từng phương án:\n- (A) Đến muộn → không nhắc ✗\n- (B) Thiếu hàng → không nhắc ✗\n- (C) Có mẫu vải Norwich → bà đang xin thêm mẫu Norwich ✗\n- (D) Được đặt trực tuyến ✓\n\nGhi nhớ:\n- saved to my online profile during my last order (23 July) = order 19842 placed online",
+      "glossary": [
+       {
+        "term": "online profile",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hồ sơ trực tuyến"
+       },
+       {
+        "term": "charge",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "trừ tiền, tính phí"
+       },
+       {
+        "term": "place an order",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "đặt hàng"
+       }
+      ]
      }
     },
     {
@@ -6833,8 +7562,27 @@
      "answer": "B",
      "explanation": {
       "translation": "In the e-mail, the word \"last\" in paragraph 2, line 4, is closest in meaning to\n(A) final\n(B) previous\n(C) remaining\n(D) separate",
-      "reasoning": "* Loại câu hỏi: Từ vựng trong ngữ cảnh\nNghĩa: Trong email, từ 'last' ở đoạn 2, dòng 4, gần nghĩa nhất với từ nào?\n- Dẫn chứng trong bài: \"last order\" ở ngữ cảnh này là đơn hàng trước đó (previous order).\nĐoạn văn: Announcement and e-mail (Portland Friends of the Wild)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ đồng nghĩa\nCâu hỏi: Trong email, từ \"last\" ở đoạn 2, dòng 4 gần nghĩa nhất với\nCăn cứ: \"the credit card I saved... during my last order on 23 July\" → trong đơn hàng lần trước, ngày 23/7.\n\nXét từng phương án:\n- (A) final: cuối cùng → bà vẫn tiếp tục đặt hàng ✗\n- (B) previous: trước đó ✓\n- (C) remaining: còn lại ✗\n- (D) separate: riêng biệt ✗\n\nGhi nhớ:\n- my last order = my previous order: đơn hàng lần trước",
+      "glossary": [
+       {
+        "term": "previous",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "trước đó"
+       },
+       {
+        "term": "final",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "cuối cùng"
+       },
+       {
+        "term": "remaining",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "còn lại"
+       }
+      ]
      }
     }
    ]
@@ -6870,8 +7618,33 @@
      "answer": "D",
      "explanation": {
       "translation": "What is indicated about Portland Friends of the Wild?\n(A) It has an office on Hope Street.\n(B) It was founded by Mr. Silverman.\n(C) It holds a fund-raising event every two years.\n(D) It focuses on protecting the environment.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì được chỉ ra về Portland Friends of the Wild?\n- Dẫn chứng trong bài: \"...tổ chức phi lợi nhuận về môi trường, hoạt động bảo tồn các công viên và không gian xanh\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is indicated)\nCâu hỏi: Điều gì được nêu về Portland Friends of the Wild?\nCăn cứ: \"a nonprofit environmental organization working to preserve our city's parks and green spaces since 1981.\" → Tổ chức môi trường phi lợi nhuận bảo vệ công viên, không gian xanh từ năm 1981.\n\nXét từng phương án:\n- (A) Có văn phòng trên đường Hope → đó là địa chỉ hội trường tổ chức sự kiện ✗\n- (B) Do ông Silverman sáng lập → ông là DJ ✗\n- (C) Gây quỹ hai năm một lần → đây là sự kiện thường niên lần thứ 14 ✗\n- (D) Tập trung bảo vệ môi trường ✓\n\nGhi nhớ:\n- preserve parks and green spaces = protecting the environment",
+      "glossary": [
+       {
+        "term": "nonprofit",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "phi lợi nhuận"
+       },
+       {
+        "term": "preserve",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "bảo tồn"
+       },
+       {
+        "term": "fund-raiser",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự kiện gây quỹ"
+       },
+       {
+        "term": "annual",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "thường niên"
+       }
+      ]
      }
     },
     {
@@ -6889,8 +7662,27 @@
      "answer": "B",
      "explanation": {
       "translation": "Where will Portland Friends of the Wild's event be held?\n(A) In a park\n(B) In a banquet hall\n(C) In an artist's studio\n(D) In Ms. Nguyen's home",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Sự kiện của Portland Friends of the Wild sẽ được tổ chức ở đâu?\n- Dẫn chứng trong bài: Diễn ra tại \"Golden Owl Hall\" (Hall = sảnh tiệc/banquet hall).",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (địa điểm)\nCâu hỏi: Sự kiện được tổ chức ở đâu?\nCăn cứ: \"At Golden Owl Hall, 926 Hope Street\" → Tại hội trường Golden Owl.\n\nXét từng phương án:\n- (A) Trong công viên → tổ chức bảo vệ công viên, nhưng sự kiện ở hội trường ✗\n- (B) Trong một hội trường tiệc ✓\n- (C) Xưởng của nghệ sĩ → không nhắc ✗\n- (D) Nhà cô Nguyen → không nhắc ✗\n\nGhi nhớ:\n- Hall = banquet hall (sự kiện có ăn tối, đấu giá, khiêu vũ)",
+      "glossary": [
+       {
+        "term": "banquet hall",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sảnh tiệc"
+       },
+       {
+        "term": "auction",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "cuộc đấu giá"
+       },
+       {
+        "term": "vegetarian",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "chay"
+       }
+      ]
      }
     },
     {
@@ -6908,8 +7700,33 @@
      "answer": "C",
      "explanation": {
       "translation": "What is one purpose of the e-mail?\n(A) To request a payment\n(B) To confirm a purchase\n(C) To request a contribution\n(D) To confirm the receipt of tickets",
-      "reasoning": "* Loại câu hỏi: Mục đích\nNghĩa: Một mục đích của email là gì?\n- Dẫn chứng trong bài: Mục đích chính là hỏi: \"bà có sẵn lòng quyên góp thêm một tác phẩm điêu khắc cho buổi gây quỹ năm nay không?\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Mục đích văn bản\nCâu hỏi: Một mục đích của email là gì?\nCăn cứ: \"would you be open to donating another piece of sculpture to this year's fund-raiser\" → Bà có sẵn lòng tặng thêm một tác phẩm điêu khắc cho buổi gây quỹ năm nay không?\n\nXét từng phương án:\n- (A) Yêu cầu thanh toán → không có ✗\n- (B) Xác nhận mua hàng → không có ✗\n- (C) Đề nghị đóng góp ✓\n- (D) Xác nhận đã nhận vé → vé chỉ là quà cảm ơn nếu bà đồng ý ✗\n\nGhi nhớ:\n- donate a sculpture = a contribution",
+      "glossary": [
+       {
+        "term": "donate",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "quyên tặng"
+       },
+       {
+        "term": "contribution",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự đóng góp"
+       },
+       {
+        "term": "sculpture",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tác phẩm điêu khắc"
+       },
+       {
+        "term": "token of appreciation",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "món quà tri ân"
+       }
+      ]
      }
     },
     {
@@ -6927,8 +7744,27 @@
      "answer": "D",
      "explanation": {
       "translation": "What can be concluded about Green Earth Provisions?\n(A) It has been in business since 1981.\n(B) It will prepare a chicken dish for the fund-raiser.\n(C) It has several locations in downtown Portland.\n(D) It will provide the food for the fund-raiser for the first time.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Có thể kết luận điều gì về Green Earth Provisions?\n- Dẫn chứng trong bài: \"Năm nay chúng tôi hợp tác với một công ty cung cấp dịch vụ ăn uống mới\" -> Green Earth Provisions cung cấp lần đầu tiên.",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản (suy luận)\nCâu hỏi: Có thể kết luận gì về Green Earth Provisions?\nCăn cứ:\n- Thông báo: \"a three-course vegetarian dinner prepared by Green Earth Provisions\" → bữa tối chay do Green Earth Provisions chuẩn bị.\n- Email: \"We are working with a new catering company this year\" → Năm nay chúng tôi làm việc với công ty cung cấp thức ăn mới.\n→ Đây là lần đầu Green Earth Provisions phục vụ sự kiện này.\n\nXét từng phương án:\n- (A) Hoạt động từ 1981 → đó là năm thành lập của tổ chức ✗\n- (B) Nấu món gà → bữa tối là đồ chay ✗\n- (C) Có nhiều chi nhánh ở trung tâm → không nhắc ✗\n- (D) Lần đầu cung cấp thức ăn cho buổi gây quỹ ✓\n\nGhi nhớ:\n- a new catering company this year = for the first time",
+      "glossary": [
+       {
+        "term": "catering company",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "công ty cung cấp tiệc"
+       },
+       {
+        "term": "three-course",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "ba món"
+       },
+       {
+        "term": "provisions",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thực phẩm"
+       }
+      ]
      }
     },
     {
@@ -6946,8 +7782,27 @@
      "answer": "A",
      "explanation": {
       "translation": "What is true about Mr. Cleary?\n(A) He previously worked in the position Ms. Nguyen now holds.\n(B) He has been offered free tickets to the fund-raiser.\n(C) He owns one of Ms. Atkins' sculptures.\n(D) He is an accomplished sculptor.",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Điều gì đúng về ông Cleary?\n- Dẫn chứng trong bài: Stefano Cleary \"từng là trưởng ban gây quỹ\", nay chức vụ này Minna Nguyen (người gửi mail) đảm nhiệm.\nĐoạn văn: Web page and e-mails (Delta City Art Museum)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is true)\nCâu hỏi: Điều gì đúng về ông Cleary?\nCăn cứ: \"I am the new head of fund-raising operations... Stefano Cleary, who was the head of fund-raising operations when you donated...\" → Tôi là trưởng bộ phận gây quỹ mới; Stefano Cleary là trưởng bộ phận gây quỹ khi bà tặng tác phẩm năm ngoái.\n\nXét từng phương án:\n- (A) Từng giữ vị trí mà cô Nguyen đang giữ ✓\n- (B) Được tặng vé miễn phí → vé là đề nghị cho bà Atkins ✗\n- (C) Sở hữu tác phẩm của bà Atkins → tác phẩm được tặng cho buổi đấu giá ✗\n- (D) Là nhà điêu khắc → bà Atkins mới là nhà điêu khắc ✗\n\nGhi nhớ:\n- was the head of... (Cleary) / the new head of... (Nguyen) → cùng vị trí",
+      "glossary": [
+       {
+        "term": "head",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "người đứng đầu"
+       },
+       {
+        "term": "speak highly of",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "khen ngợi"
+       },
+       {
+        "term": "accomplished",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "tài năng"
+       }
+      ]
      }
     }
    ]
@@ -6987,8 +7842,33 @@
      "answer": "C",
      "explanation": {
       "translation": "What is indicated on the Web page about the Artists of Delta City exhibit?\n(A) It includes pottery by Native American artists.\n(B) It will be closed from May through August.\n(C) The works of art on display are regularly changed.\n(D) The paintings on view were created in the nineteenth century.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì được chỉ ra trên trang web về triển lãm Artists of Delta City?\n- Dẫn chứng trong bài: Các tác phẩm được trưng bày \"theo hình thức luân phiên (rotating basis) và chỉ được xem trong thời gian giới hạn.\"",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is indicated)\nCâu hỏi: Trang web nói gì về triển lãm Artists of Delta City?\nCăn cứ: \"individual pieces are displayed on a rotating basis and are on view for a limited time only.\" → Các tác phẩm được trưng bày luân phiên, chỉ xem được trong thời gian giới hạn.\n\nXét từng phương án:\n- (A) Có đồ gốm của nghệ nhân bản địa → đó là triển lãm Native American Pottery ✗\n- (B) Đóng cửa tháng 5–8 → đây là triển lãm thường trực ✗\n- (C) Tác phẩm trưng bày được thay đổi thường xuyên ✓\n- (D) Tranh vẽ từ thế kỷ 19 → đó là triển lãm Impressionists; đây là tác phẩm đương đại ✗\n\nGhi nhớ:\n- on a rotating basis = regularly changed",
+      "glossary": [
+       {
+        "term": "permanent exhibit",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "triển lãm thường trực"
+       },
+       {
+        "term": "on a rotating basis",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "luân phiên"
+       },
+       {
+        "term": "contemporary",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "đương đại"
+       },
+       {
+        "term": "medium",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chất liệu (số nhiều: media)"
+       }
+      ]
      }
     },
     {
@@ -7006,8 +7886,27 @@
      "answer": "C",
      "explanation": {
       "translation": "Where will Ms. Desnoyers' class most likely spend their time sketching?\n(A) In the Main Gallery\n(B) In the Shawe Memorial Gallery\n(C) In the Techtmann Gallery\n(D) In the Zhang Atrium",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Lớp học của cô Desnoyers có khả năng sẽ dành thời gian phác họa ở đâu nhất?\n- Dẫn chứng trong bài: Lớp Art 103 vẽ tượng hình người. Triển lãm tượng hình người nằm ở \"Phòng trưng bày Techtmann\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản\nCâu hỏi: Lớp của cô Desnoyers nhiều khả năng sẽ vẽ phác thảo ở đâu?\nCăn cứ:\n- Email: \"Since Art 103 focuses on studying and drawing the human form, the statues will be getting most of our attention.\" → Lớp tập trung vẽ cơ thể người, nên các bức tượng sẽ là trọng tâm.\n- Trang web: \"Classical Greece and Beyond... Techtmann Gallery. This exhibit features statues of human subjects\" → Phòng Techtmann trưng bày tượng người.\n\nXét từng phương án:\n- (A) Phòng chính → tranh trường phái Ấn tượng ✗\n- (B) Phòng Shawe Memorial → đồ gốm ✗\n- (C) Phòng Techtmann ✓\n- (D) Zhang Atrium → tác phẩm đương đại của nghệ sĩ địa phương ✗\n\nGhi nhớ:\n- human form + statues → Techtmann Gallery",
+      "glossary": [
+       {
+        "term": "sketch",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "vẽ phác thảo"
+       },
+       {
+        "term": "statue",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "bức tượng"
+       },
+       {
+        "term": "human form",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hình thể con người"
+       }
+      ]
      }
     },
     {
@@ -7025,8 +7924,27 @@
      "answer": "A",
      "explanation": {
       "translation": "According to Ms. Grady, what did Ms. Desnoyers' colleague correctly state?\n(A) That the museum gives class tours\n(B) That the museum provides drawing lessons\n(C) That the museum offers group discounts\n(D) That the museum allows private events",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Theo cô Grady, đồng nghiệp của cô Desnoyers đã nói đúng điều gì?\n- Dẫn chứng trong bài: Đồng nghiệp bảo \"bảo tàng cung cấp tour hướng dẫn...\" và Grady phản hồi \"Đồng nghiệp của bà đã đúng... bảo tàng thực sự có cung cấp dịch vụ đó.\"",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản\nCâu hỏi: Theo cô Grady, đồng nghiệp của cô Desnoyers đã nói đúng điều gì?\nCăn cứ:\n- Email 1: \"One of my colleagues told me that the Delta City Art Museum provides tours for local art students.\" → Đồng nghiệp nói bảo tàng có tour cho sinh viên mỹ thuật.\n- Email 2: \"Your colleague was correct: the museum does indeed provide that service.\" → Đồng nghiệp của bà nói đúng.\n\nXét từng phương án:\n- (A) Bảo tàng tổ chức tour cho lớp học ✓\n- (B) Dạy vẽ → không nhắc ✗\n- (C) Giảm giá cho nhóm → không nhắc ✗\n- (D) Cho tổ chức sự kiện riêng → không nhắc ✗\n\nGhi nhớ:\n- tours for local art students = class tours",
+      "glossary": [
+       {
+        "term": "colleague",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đồng nghiệp"
+       },
+       {
+        "term": "indeed",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "thật vậy"
+       },
+       {
+        "term": "tour",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chuyến tham quan"
+       }
+      ]
      }
     },
     {
@@ -7044,8 +7962,27 @@
      "answer": "D",
      "explanation": {
       "translation": "What will Ms. Desnoyers most likely do as a result of the second e-mail?\n(A) She will forward the e-mail.\n(B) She will visit a museum office.\n(C) She will consult a Web site.\n(D) She will expect a telephone call.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Cô Desnoyers có khả năng sẽ làm gì nhất do kết quả của email thứ hai?\n- Dẫn chứng trong bài: Grady viết: \"Một nhân viên sẽ liên hệ với bà qua điện thoại để cung cấp thêm chi tiết.\"",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (hành động tiếp theo)\nCâu hỏi: Sau email thứ hai, cô Desnoyers nhiều khả năng sẽ làm gì?\nCăn cứ: \"I have forwarded your message to our office of public programs. A staff member will contact you by phone with more details.\" → Một nhân viên sẽ gọi điện cho bà để báo chi tiết.\n\nXét từng phương án:\n- (A) Chuyển tiếp email → bà Grady đã chuyển tiếp rồi ✗\n- (B) Đến văn phòng bảo tàng → không nhắc ✗\n- (C) Xem trang web → không nhắc ✗\n- (D) Chờ một cuộc điện thoại ✓\n\nGhi nhớ:\n- contact you by phone = expect a telephone call",
+      "glossary": [
+       {
+        "term": "forward",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "chuyển tiếp"
+       },
+       {
+        "term": "public program",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chương trình công chúng"
+       },
+       {
+        "term": "by phone",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "qua điện thoại"
+       }
+      ]
      }
     },
     {
@@ -7063,8 +8000,33 @@
      "answer": "D",
      "explanation": {
       "translation": "What activity does Ms. Grady indicate is forbidden in the museum galleries?\n(A) Taking photographs\n(B) Recording videos\n(C) Drawing with charcoal\n(D) Painting with watercolors",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Hoạt động nào mà cô Grady chỉ ra là bị cấm trong các phòng trưng bày của bảo tàng?\n- Dẫn chứng trong bài: \"việc sử dụng các loại sơn, bao gồm cả màu nước, bị cấm trong tất cả các phòng trưng bày.\"\nĐoạn văn: Article, letter, and invoice (Green Globe & Macker Drugstores)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (quy định)\nCâu hỏi: Theo cô Grady, hoạt động nào bị cấm trong phòng trưng bày?\nCăn cứ: \"the use of paints, including watercolors, is prohibited in all museum galleries. Pencils and charcoal are permitted... We also allow photography and video recording\" → Cấm dùng sơn, kể cả màu nước; cho phép bút chì, than, chụp ảnh, quay phim.\n\nXét từng phương án:\n- (A) Chụp ảnh → được phép ✗\n- (B) Quay video → được phép ✗\n- (C) Vẽ bằng than → được phép ✗\n- (D) Vẽ bằng màu nước ✓\n\nGhi nhớ:\n- prohibited = forbidden; permitted = allowed",
+      "glossary": [
+       {
+        "term": "prohibit",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "cấm"
+       },
+       {
+        "term": "watercolor",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "màu nước"
+       },
+       {
+        "term": "charcoal",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "than (vẽ)"
+       },
+       {
+        "term": "smudge",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "vết nhòe"
+       }
+      ]
      }
     }
    ]
@@ -7104,8 +8066,33 @@
      "answer": "A",
      "explanation": {
       "translation": "What does the article state about collapsible toothpaste tubes?\n(A) They are difficult to recycle.\n(B) They are not very popular.\n(C) They were invented in the United States.\n(D) They were not included in a survey.",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Bài báo nói gì về các tuýp kem đánh răng dạng gấp lại?\n- Dẫn chứng trong bài: Tuýp kem đánh răng gấp lại \"gần như không thể tái chế được\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết\nCâu hỏi: Bài báo nói gì về tuýp kem đánh răng có thể bóp dẹt?\nCăn cứ: \"because they are composed of multiple layers, it is nearly impossible to recycle them.\" → Vì gồm nhiều lớp nên gần như không thể tái chế.\n\nXét từng phương án:\n- (A) Khó tái chế ✓\n- (B) Không phổ biến → vẫn dẫn đầu thị trường ✗\n- (C) Phát minh ở Mỹ → không nhắc ✗\n- (D) Không có trong khảo sát → không nhắc ✗\n\nGhi nhớ:\n- nearly impossible to recycle = difficult to recycle",
+      "glossary": [
+       {
+        "term": "collapsible",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "có thể bóp dẹt, gấp lại"
+       },
+       {
+        "term": "compose",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "cấu tạo"
+       },
+       {
+        "term": "recycle",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tái chế"
+       },
+       {
+        "term": "market share",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thị phần"
+       }
+      ]
      }
     },
     {
@@ -7123,8 +8110,27 @@
      "answer": "C",
      "explanation": {
       "translation": "Why did Ms. Brown most likely send the letter?\n(A) To request a meeting\n(B) To recommend a job candidate\n(C) To follow up on a sales presentation\n(D) To place an order for a product",
-      "reasoning": "* Loại câu hỏi: Mục đích\nNghĩa: Tại sao cô Brown có khả năng đã gửi bức thư này?\n- Dẫn chứng trong bài: Thư follow-up sau cuộc họp: \"Như tôi đã giải thích trong cuộc họp... Tôi hy vọng rằng người mua sắm sẽ sớm có thể mua sản phẩm...\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Mục đích văn bản\nCâu hỏi: Vì sao bà Brown nhiều khả năng gửi lá thư?\nCăn cứ: \"Thank you for allowing me to speak with you and your team about Green Globe All-Natural Toothpaste. As I explained during our meeting...\" → Cảm ơn đã cho tôi trình bày về sản phẩm; như tôi đã giải thích trong buổi gặp...\n→ Thư gửi sau buổi giới thiệu sản phẩm để tiếp nối.\n\nXét từng phương án:\n- (A) Xin một cuộc hẹn → buổi gặp đã diễn ra ✗\n- (B) Giới thiệu ứng viên → không có ✗\n- (C) Tiếp nối sau một buổi thuyết trình bán hàng ✓\n- (D) Đặt mua sản phẩm → bà là người bán ✗\n\nGhi nhớ:\n- follow up on: tiếp nối, theo dõi tiếp sau",
+      "glossary": [
+       {
+        "term": "follow up on",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "tiếp nối"
+       },
+       {
+        "term": "sales presentation",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "buổi thuyết trình bán hàng"
+       },
+       {
+        "term": "alternative",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lựa chọn thay thế"
+       }
+      ]
      }
     },
     {
@@ -7142,8 +8148,27 @@
      "answer": "D",
      "explanation": {
       "translation": "What is indicated about products sold in the type of packaging used by Green Globe?\n(A) They are recommended by the National Dentifrice Council.\n(B) They can be purchased only at Macker Drugstores.\n(C) Their manufacturing cost is higher than average.\n(D) Their share of the market is rising.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì được chỉ ra về các sản phẩm được bán trong loại bao bì do Green Globe sử dụng?\n- Dẫn chứng trong bài: Bài báo nói bao bì tái chế (hộp thủy tinh như của Green Globe) \"đang bắt đầu lấy một phần nhỏ thị phần\" (share of the market is rising).",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản\nCâu hỏi: Sản phẩm dùng loại bao bì như của Green Globe có đặc điểm gì?\nCăn cứ:\n- Thư: \"Our toothpaste is packaged in 100-milliliter glass jars.\" → Green Globe dùng lọ thủy tinh.\n- Bài báo: tuýp kem \"are beginning to lose a small part of their market share to recyclable forms of packaging, including jars\" → Tuýp đang mất thị phần vào bao bì tái chế được, gồm lọ.\n→ Thị phần của sản phẩm đóng lọ đang tăng.\n\nXét từng phương án:\n- (A) Được Hội đồng khuyên dùng → hội đồng chỉ làm khảo sát ✗\n- (B) Chỉ bán ở Macker Drugstores → đã bán khắp Mỹ và Canada ✗\n- (C) Chi phí sản xuất cao hơn → không nhắc ✗\n- (D) Thị phần đang tăng ✓\n\nGhi nhớ:\n- tubes lose market share to jars → jars' share is rising",
+      "glossary": [
+       {
+        "term": "packaging",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "bao bì"
+       },
+       {
+        "term": "jar",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lọ, hũ"
+       },
+       {
+        "term": "dispenser",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "bình (vòi) bơm"
+       }
+      ]
      }
     },
     {
@@ -7161,8 +8186,27 @@
      "answer": "C",
      "explanation": {
       "translation": "What does Ms. Brown indicate about Green Globe toothpaste?\n(A) It was originally packaged in tubes.\n(B) It was created by a dentist.\n(C) It is available in two countries.\n(D) It comes in multiple flavors.",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Cô Brown chỉ ra điều gì về kem đánh răng Green Globe?\n- Dẫn chứng trong bài: \"Hiện tại sản phẩm đang được bán tại các cửa hàng trên khắp Hoa Kỳ và Canada.\"",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết\nCâu hỏi: Bà Brown cho biết gì về kem đánh răng Green Globe?\nCăn cứ: \"It is currently sold in stores throughout the United States and Canada.\" → Hiện bán ở các cửa hàng khắp Mỹ và Canada.\n\nXét từng phương án:\n- (A) Ban đầu đóng tuýp → được tạo ra để thay thế bao bì không tái chế ✗\n- (B) Do nha sĩ tạo ra → không nhắc ✗\n- (C) Có bán ở hai quốc gia ✓\n- (D) Có nhiều hương vị → không nhắc ✗\n\nGhi nhớ:\n- the United States and Canada = two countries",
+      "glossary": [
+       {
+        "term": "currently",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "hiện tại"
+       },
+       {
+        "term": "available",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "có bán"
+       },
+       {
+        "term": "flavor",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hương vị"
+       }
+      ]
      }
     },
     {
@@ -7180,8 +8224,27 @@
      "answer": "B",
      "explanation": {
       "translation": "What is most likely true about the order placed by Macker Drugstores?\n(A) The same order will be delivered every month.\n(B) The merchandise will be used in a market test.\n(C) The price was discounted significantly.\n(D) The shipping fee was refunded by Green Globe.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì có khả năng đúng nhất về đơn hàng do Macker Drugstores đặt?\n- Dẫn chứng trong bài: \"ông muốn mua hai thùng ban đầu để thử nghiệm bán hàng tại một cửa hàng duy nhất.\"\nĐoạn văn: E-mail, schedule, and review (Sleepy Time Hotel & Jongwoo Cho)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản (suy luận)\nCâu hỏi: Điều gì nhiều khả năng đúng về đơn hàng của Macker Drugstores?\nCăn cứ:\n- Thư: \"you would like to purchase two cases initially to test sales in a single store.\" → Ông muốn mua trước 2 thùng để thử doanh số ở một cửa hàng.\n- Hóa đơn: 2 cases, Discount: $0.00.\n\nXét từng phương án:\n- (A) Giao hằng tháng → không nhắc ✗\n- (B) Hàng dùng để thử nghiệm thị trường ✓\n- (C) Giá được giảm mạnh → giảm giá $0; chỉ giảm cho đơn trên 10 thùng ✗\n- (D) Được hoàn phí ship → vẫn tính phí ship $26 ✗\n\nGhi nhớ:\n- test sales in a single store = a market test",
+      "glossary": [
+       {
+        "term": "case",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thùng (hàng)"
+       },
+       {
+        "term": "initially",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "ban đầu"
+       },
+       {
+        "term": "merchandise",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hàng hóa"
+       }
+      ]
      }
     }
    ]
@@ -7221,8 +8284,33 @@
      "answer": "B",
      "explanation": {
       "translation": "What is the purpose of the e-mail?\n(A) To cancel a hotel reservation\n(B) To obtain clear directions to a hotel\n(C) To request instructions for downloading an app\n(D) To learn more about a hotel's social media account",
-      "reasoning": "* Loại câu hỏi: Mục đích\nNghĩa: Mục đích của email là gì?\n- Dẫn chứng trong bài: Email báo \"không thể tìm ra cách di chuyển đến khách sạn\" và yêu cầu \"làm rõ cách tốt nhất để đến khách sạn\".",
-      "glossary": []
+      "reasoning": "* Dạng câu: Mục đích văn bản\nCâu hỏi: Mục đích của email là gì?\nCăn cứ: \"I cannot figure out how to get to the hotel... Could you please clarify how best to get to the hotel?\" → Tôi không biết cách đến khách sạn; xin chỉ rõ cách tốt nhất để đến.\n\nXét từng phương án:\n- (A) Hủy đặt phòng → ông vẫn mong chờ kỳ nghỉ ✗\n- (B) Xin chỉ đường rõ ràng đến khách sạn ✓\n- (C) Xin hướng dẫn tải ứng dụng → ông đã tải app rồi ✗\n- (D) Tìm hiểu mạng xã hội của khách sạn → không nhắc ✗\n\nGhi nhớ:\n- clarify how best to get to = obtain clear directions",
+      "glossary": [
+       {
+        "term": "figure out",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "tìm ra, hiểu ra"
+       },
+       {
+        "term": "clarify",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "làm rõ"
+       },
+       {
+        "term": "disembark",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "xuống (tàu, xe)"
+       },
+       {
+        "term": "directions",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chỉ dẫn đường đi"
+       }
+      ]
      }
     },
     {
@@ -7240,8 +8328,27 @@
      "answer": "A",
      "explanation": {
       "translation": "What does the e-mail suggest about the Sleepy Time Hotel?\n(A) It is near a body of water.\n(B) It used to have a restaurant.\n(C) It is part of a large hotel chain.\n(D) It mainly serves business travelers.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Email gợi ý điều gì về Khách sạn Sleepy Time?\n- Dẫn chứng trong bài: Tác giả nói: \"mong chờ được nghỉ ngơi vài đêm ngay cạnh bãi biển.\" (near a body of water).",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận\nCâu hỏi: Email gợi ý gì về khách sạn Sleepy Time?\nCăn cứ: \"I am looking forward to spending a couple of nights right by the beach.\" → Tôi mong chờ được ở vài đêm ngay cạnh bãi biển.\n\nXét từng phương án:\n- (A) Gần một vùng nước ✓\n- (B) Từng có nhà hàng → không nhắc ✗\n- (C) Thuộc chuỗi khách sạn lớn → bài đánh giá gọi là khách sạn nhỏ ✗\n- (D) Chủ yếu phục vụ khách công tác → không nhắc ✗\n\nGhi nhớ:\n- right by the beach → near a body of water",
+      "glossary": [
+       {
+        "term": "body of water",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "vùng nước (biển, hồ, sông)"
+       },
+       {
+        "term": "right by",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "ngay cạnh"
+       },
+       {
+        "term": "look forward to",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "mong chờ"
+       }
+      ]
      }
     },
     {
@@ -7259,8 +8366,27 @@
      "answer": "C",
      "explanation": {
       "translation": "What is most likely true about the Dalton light-rail station?\n(A) It has a large parking area.\n(B) It is connected to a conference center.\n(C) It is across the street from the Sleepy Time Hotel.\n(D) It is being renovated.",
-      "reasoning": "* Loại câu hỏi: Suy luận\nNghĩa: Điều gì có khả năng đúng nhất về ga đường sắt nhẹ Dalton?\n- Dẫn chứng trong bài: Trong review có nói: \"tôi lên một chuyến tàu đường sắt nhẹ và đi đến ga nằm ngay đối diện với khách sạn.\" (ám chỉ Ga Dalton).",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản (suy luận)\nCâu hỏi: Điều gì nhiều khả năng đúng về ga tàu điện Dalton?\nCăn cứ:\n- Email: ga Dalton là \"the station where hotel guests should disembark\" → ga khách nên xuống.\n- Đánh giá: \"rode it to the station directly across the street from the hotel.\" → đi đến ga ngay bên kia đường đối diện khách sạn.\n\nXét từng phương án:\n- (A) Có bãi đỗ xe lớn → không nhắc ✗\n- (B) Nối với trung tâm hội nghị → hội nghị ở Johnstown ✗\n- (C) Nằm đối diện khách sạn Sleepy Time ✓\n- (D) Đang được cải tạo → hệ thống còn khá mới ✗\n\nGhi nhớ:\n- the station where guests should disembark = station across the street from the hotel",
+      "glossary": [
+       {
+        "term": "light-rail",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tàu điện nhẹ"
+       },
+       {
+        "term": "directly across",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "ngay đối diện"
+       },
+       {
+        "term": "relatively",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "tương đối"
+       }
+      ]
      }
     },
     {
@@ -7278,8 +8404,27 @@
      "answer": "C",
      "explanation": {
       "translation": "At what time did Mr. Cho's train most likely arrive in Charlesville?\n(A) At 11:41 A.M.\n(B) At 2:36 P.M.\n(C) At 5:41 P.M.\n(D) At 8:36 P.M.",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Chuyến tàu của ông Cho có khả năng đến Charlesville lúc mấy giờ?\n- Dẫn chứng trong bài: Đi chuyến 4:05 P.M. từ Johnstown. Nhìn vào lịch trình, chuyến 4:05 P.M. sẽ đến Charlesville lúc 5:41 P.M.",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản (lịch trình)\nCâu hỏi: Tàu của ông Cho nhiều khả năng đến Charlesville lúc mấy giờ?\nCăn cứ:\n- Đánh giá: \"I took the 4:05 P.M. train out of Johnstown.\" → Tôi đi chuyến 4:05 chiều từ Johnstown.\n- Lịch tàu: 4:05 P.M. khởi hành → đến Charlesville 5:41 P.M.\n\nXét từng phương án:\n- (A) 11:41 sáng → chuyến 10:05 ✗\n- (B) 2:36 chiều → chuyến 1:00 ✗\n- (C) 5:41 chiều ✓\n- (D) 8:36 tối → chuyến 7:00 ✗\n\nGhi nhớ:\n- Tra giờ đi trong bài đánh giá → giờ đến trên lịch tàu",
+      "glossary": [
+       {
+        "term": "depart",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "khởi hành"
+       },
+       {
+        "term": "arrive",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "đến nơi"
+       },
+       {
+        "term": "schedule",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lịch trình"
+       }
+      ]
      }
     },
     {
@@ -7297,8 +8442,33 @@
      "answer": "D",
      "explanation": {
       "translation": "What does Mr. Cho mention in the review?\n(A) He ate at a restaurant in Charlesville.\n(B) He travels to Johnstown regularly.\n(C) He visited a grocery store on August 26.\n(D) He recently completed a business trip.",
-      "reasoning": "* Loại câu hỏi: Chi tiết\nNghĩa: Ông Cho đề cập điều gì trong bài đánh giá?\n- Dẫn chứng trong bài: \"nơi tôi vừa kết thúc một hội nghị chuyên môn kéo dài ba ngày\" -> Ông ấy vừa đi công tác về.",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is mentioned)\nCâu hỏi: Trong bài đánh giá, ông Cho nhắc đến điều gì?\nCăn cứ: \"from Johnstown, where I had just finished an exhilarating three-day professional conference... I felt so relaxed when I finally returned to my office\" → Vừa dự xong hội nghị nghề nghiệp 3 ngày ở Johnstown; sau đó trở lại văn phòng.\n\nXét từng phương án:\n- (A) Ăn ở nhà hàng tại Charlesville → không có nhà hàng gần khách sạn, ông mua đồ ở tiệm tạp hóa ✗\n- (B) Thường xuyên đến Johnstown → ông không quen khu vực này ✗\n- (C) Đến tiệm tạp hóa ngày 26/8 → 26/8 là ngày đăng bài ✗\n- (D) Vừa kết thúc một chuyến công tác ✓\n\nGhi nhớ:\n- professional conference = business trip",
+      "glossary": [
+       {
+        "term": "exhilarating",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "đầy hứng khởi"
+       },
+       {
+        "term": "professional conference",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hội nghị chuyên môn"
+       },
+       {
+        "term": "business trip",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chuyến công tác"
+       },
+       {
+        "term": "grocery store",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tiệm tạp hóa"
+       }
+      ]
      }
     }
    ]

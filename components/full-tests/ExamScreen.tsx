@@ -1039,7 +1039,7 @@ function QuestionCard({
       </div>
 
       {showText && q.prompt && (
-        <p style={{ margin: "0 0 0.7rem", fontSize: `${0.92 * fontScale}rem`, lineHeight: 1.55 }}>{q.prompt}</p>
+        <p style={{ margin: "0 0 0.7rem", fontSize: `${0.92 * fontScale}rem`, lineHeight: 1.55, whiteSpace: "pre-line" }}>{q.prompt}</p>
       )}
 
       {/* Part 1/2 không hiện chữ, nhưng vẫn xếp dọc từng dòng như các part khác */}

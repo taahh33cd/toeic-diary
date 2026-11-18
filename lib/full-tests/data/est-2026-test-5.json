@@ -5585,8 +5585,33 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nThông tin nhằm thu hút những người muốn quảng bá doanh nghiệp của họ (Advertise Here).C: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Mục đích văn bản\nCâu hỏi: Mục đích chính của thông tin này là gì?\nCăn cứ: \"Your Business Gets Noticed When You Advertise Here!... Use the Clearpoint Times to spread the word about your business.\" → Doanh nghiệp của bạn sẽ được chú ý khi quảng cáo ở đây; hãy dùng báo để quảng bá doanh nghiệp.\n\nXét từng phương án:\n- (A) Thông báo khai trương doanh nghiệp mới → không có ✗\n- (B) Quảng cáo kho cho thuê → \"advertising space\" là chỗ đăng quảng cáo, không phải kho ✗\n- (C) Thu hút người muốn quảng bá doanh nghiệp ✓\n- (D) Khuyến khích mua báo dài hạn → không nhắc ✗\n\nGhi nhớ:\n- advertising space: chỗ đăng quảng cáo (bẫy: space ≠ storage space)",
+      "glossary": [
+       {
+        "term": "advertise",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "quảng cáo"
+       },
+       {
+        "term": "advertising space",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chỗ đăng quảng cáo"
+       },
+       {
+        "term": "spread the word",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "lan truyền thông tin"
+       },
+       {
+        "term": "rate",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "giá (dịch vụ)"
+       }
+      ]
      }
     },
     {
@@ -5604,8 +5629,27 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nLà một ấn phẩm địa phương phát hành hàng tuần (\"reaches your neighbors each week\").reaches your neighbors each week: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (What is suggested)\nCâu hỏi: Điều gì được gợi ý về Clearpoint Times?\nCăn cứ: \"The Clearpoint Times reaches thousands of your neighbors each week.\" → Tờ báo đến tay hàng ngàn hàng xóm của bạn mỗi tuần.\n\nXét từng phương án:\n- (A) Đang được rao bán → không nhắc ✗\n- (B) Tạp chí bất động sản → không nhắc ✗\n- (C) Ấn phẩm địa phương phát hành hằng tuần ✓\n- (D) Báo quốc gia ra hằng ngày → \"your neighbors\" (địa phương), \"each week\" (hằng tuần) ✗\n\nGhi nhớ:\n- your neighbors → local; each week → weekly",
+      "glossary": [
+       {
+        "term": "reach",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tiếp cận"
+       },
+       {
+        "term": "publication",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "ấn phẩm"
+       },
+       {
+        "term": "weekly",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "hằng tuần"
+       }
+      ]
      }
     }
    ]
@@ -5637,8 +5681,33 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nXin một cuộc họp (\"schedule a time to revisit your property and discuss...\").A: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Mục đích văn bản\nCâu hỏi: Mục đích của email là gì?\nCăn cứ: \"I would like to schedule a time to revisit your property and discuss your landscaping project in more detail.\" → Tôi muốn hẹn thời gian quay lại nhà anh chị để bàn kỹ hơn về dự án cảnh quan.\n\nXét từng phương án:\n- (A) Đề nghị một buổi gặp ✓\n- (B) Xác nhận thay đổi giá → chỉ nói sẽ báo giá chính xác hơn sau ✗\n- (C) Xin lỗi vì chậm lịch → không có ✗\n- (D) Tìm thêm nhân sự → không có ✗\n\nGhi nhớ:\n- schedule a time to revisit and discuss = request a meeting",
+      "glossary": [
+       {
+        "term": "check in",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "hỏi thăm, liên lạc"
+       },
+       {
+        "term": "revisit",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "quay lại"
+       },
+       {
+        "term": "landscaping",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thiết kế cảnh quan"
+       },
+       {
+        "term": "estimate",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "bản ước tính"
+       }
+      ]
      }
     },
     {
@@ -5656,8 +5725,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nCung cấp ý tưởng cảnh quan (\"brainstorm some of your design expectations...\").D: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (yêu cầu)\nCâu hỏi: Ông Paltz đề nghị vợ chồng Witt làm gì?\nCăn cứ: \"it would be helpful if the two of you could brainstorm some of your design expectations and overall vision for the project.\" → Sẽ rất có ích nếu hai bạn cùng nghĩ ra mong muốn thiết kế và hình dung tổng thể cho dự án.\n\nXét từng phương án:\n- (A) Thanh toán → không có ✗\n- (B) Dời lịch dự án → không có ✗\n- (C) Không đỗ xe gần công trình → không có ✗\n- (D) Đưa ông ý tưởng về cảnh quan ✓\n\nGhi nhớ:\n- brainstorm design expectations and vision = provide landscaping ideas",
+      "glossary": [
+       {
+        "term": "brainstorm",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "động não, nghĩ ý tưởng"
+       },
+       {
+        "term": "expectation",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "mong đợi"
+       },
+       {
+        "term": "vision",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hình dung, tầm nhìn"
+       }
+      ]
      }
     }
    ]
@@ -5689,8 +5777,33 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nHướng tới người thích hoạt động ngoài trời (Windsurfing, paddleboarding, hiking...).B: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (đối tượng của quảng cáo)\nCâu hỏi: Quảng cáo nhiều khả năng nhắm đến ai?\nCăn cứ: \"Windsurfing, paddleboarding, and several hiking and biking trails are all a short walk from our front door... arrange a kayaking excursion or a fishing trip\" → Lướt ván, chèo ván đứng, đường đi bộ và đạp xe ngay gần; nhân viên sắp xếp chèo thuyền kayak, đi câu.\n\nXét từng phương án:\n- (A) Người muốn tham quan Jeel City → khách sạn giúp \"thoát khỏi thành phố\" ✗\n- (B) Người thích hoạt động ngoài trời ✓\n- (C) Người tổ chức hội nghị → không nhắc ✗\n- (D) Người trong ngành khách sạn → không nhắc ✗\n\nGhi nhớ:\n- windsurfing, hiking, kayaking, fishing = outdoor activities",
+      "glossary": [
+       {
+        "term": "sanctuary",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nơi yên bình"
+       },
+       {
+        "term": "hectic",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "bận rộn, hối hả"
+       },
+       {
+        "term": "excursion",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chuyến tham quan ngắn"
+       },
+       {
+        "term": "amenity",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tiện nghi"
+       }
+      ]
      }
     },
     {
@@ -5708,8 +5821,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nKhách có thể tự chuẩn bị đồ ăn trong phòng (\"suite with kitchen\").suite with kitchen: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận\nCâu hỏi: Điều gì được gợi ý về một số phòng ở khách sạn Cavalina?\nCăn cứ: \"Room Types: single room, two-room suite with balcony, two-room suite with kitchen\" → Có loại phòng suite hai phòng có bếp.\n\nXét từng phương án:\n- (A) Có nội thất cổ → không nhắc ✗\n- (B) Mới được nâng cấp → không nhắc ✗\n- (C) Xem phòng trực tuyến → không nhắc ✗\n- (D) Khách có thể nấu ăn trong phòng ✓\n\nGhi nhớ:\n- suite with kitchen → guests can prepare food",
+      "glossary": [
+       {
+        "term": "suite",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phòng (dãy) suite"
+       },
+       {
+        "term": "balcony",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "ban công"
+       },
+       {
+        "term": "prepare food",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "nấu ăn"
+       }
+      ]
      }
     }
    ]
@@ -5741,8 +5873,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nÔng nghĩ bà Rosetti là một ứng viên phù hợp cho công việc.D: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Ý định người viết (câu trích dẫn)\nCâu hỏi: Lúc 9:50, ông Cho có ý gì khi viết \"I know you'd be a great fit\"?\nCăn cứ: \"There's an open position there, and I mentioned you. She says you should definitely apply.\" → Ở đó có vị trí đang tuyển, tôi đã nhắc tên bạn.\nNgay sau đó: \"You check all the boxes.\" → Bạn đáp ứng mọi tiêu chí.\n\nXét từng phương án:\n- (A) Ông muốn tuyển cô Rosetti → ông không phải người tuyển ✗\n- (B) Ông làm lâu năm ở Yadav → ông chỉ là bạn của giám đốc ✗\n- (C) Yadav cần giám đốc mới → không nhắc ✗\n- (D) Ông nghĩ cô Rosetti là ứng viên phù hợp cho công việc ✓\n\nGhi nhớ:\n- be a great fit / check all the boxes: rất phù hợp",
+      "glossary": [
+       {
+        "term": "great fit",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "rất phù hợp"
+       },
+       {
+        "term": "check all the boxes",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "đáp ứng mọi tiêu chí"
+       },
+       {
+        "term": "pass along",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "chuyển lời, giới thiệu"
+       }
+      ]
      }
     },
     {
@@ -5760,8 +5911,27 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nÔng đã quen biết bà Mayer từ lâu (\"Elise and I have been friends for years\").Elise and I have been friends for years: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is indicated)\nCâu hỏi: Điều gì được nêu về ông Cho?\nCăn cứ: \"Elise and I have been friends for years.\" → Elise và tôi là bạn nhiều năm rồi.\n\nXét từng phương án:\n- (A) Quen bà Mayer từ lâu ✓\n- (B) Làm cùng công ty với bà Mayer → không nhắc ✗\n- (C) Giúp viết thư xin việc → ông khuyên không cần thư ✗\n- (D) Là giám đốc công ty marketing → bà Mayer mới là giám đốc ✗\n\nGhi nhớ:\n- friends for years = known for a long time",
+      "glossary": [
+       {
+        "term": "cover letter",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thư xin việc"
+       },
+       {
+        "term": "bother",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "bận tâm, mất công"
+       },
+       {
+        "term": "up to date",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "cập nhật"
+       }
+      ]
      }
     }
    ]
@@ -5793,8 +5963,27 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nNhà sản xuất đồ uống (\"soft drink\", \"beverage\").soft drink: (xem giải thích)beverage: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (loại hình doanh nghiệp)\nCâu hỏi: Covered Bridge Industries nhiều khả năng là loại công ty nào?\nCăn cứ: \"Covered Bridge Industries has delayed the launch of its new Balmy Breeze soft drink.\" → Công ty hoãn ra mắt nước ngọt Balmy Breeze.\n\nXét từng phương án:\n- (A) Sản xuất kem → không nhắc ✗\n- (B) Công ty quảng cáo → không nhắc ✗\n- (C) Nhà sản xuất đồ uống ✓\n- (D) Làm quạt điện → \"Balmy Breeze\" chỉ là tên đồ uống ✗\n\nGhi nhớ:\n- soft drink = beverage",
+      "glossary": [
+       {
+        "term": "soft drink",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nước ngọt"
+       },
+       {
+        "term": "beverage",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đồ uống"
+       },
+       {
+        "term": "launch",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự ra mắt"
+       }
+      ]
      }
     },
     {
@@ -5812,8 +6001,33 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nMột nguyên liệu thiết yếu không có sẵn (\"shortage of mango extract\").shortage of mango extract: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (nguyên nhân)\nCâu hỏi: Vì sao công ty không làm theo kế hoạch ban đầu?\nCăn cứ: \"the delay was caused by a shortage of one of the drink's main components, mango extract\" → Việc trì hoãn do thiếu một thành phần chính là chiết xuất xoài.\n\nXét từng phương án:\n- (A) Chờ thị trường thuận lợi hơn → ngược lại, doanh số có thể yếu hơn ✗\n- (B) Kiểm định chất lượng phát hiện lỗi → kiểm định chỉ bị hoãn ✗\n- (C) Chiến dịch quảng cáo chưa xong → không nhắc ✗\n- (D) Một nguyên liệu thiết yếu không có sẵn ✓\n\nGhi nhớ:\n- a shortage of one of the main components = an essential ingredient was unavailable",
+      "glossary": [
+       {
+        "term": "shortage",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự thiếu hụt"
+       },
+       {
+        "term": "component",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thành phần"
+       },
+       {
+        "term": "extract",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chiết xuất"
+       },
+       {
+        "term": "postponement",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự trì hoãn"
+       }
+      ]
      }
     },
     {
@@ -5831,8 +6045,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nTháng 12 (\"complete quality testing by November so that it can launch the product the following month\").complete quality testing by November so that it can launch the product the following month: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (thời gian)\nCâu hỏi: Công ty nhiều khả năng ra mắt sản phẩm mới vào tháng nào?\nCăn cứ: \"Covered Bridge now hopes to complete all quality testing by November so that it can launch the product the following month.\" → Hy vọng xong kiểm định trước tháng 11 để ra mắt vào tháng kế tiếp.\n→ Tháng 12 (cũng hợp với ý quảng bá cho dịp lễ mùa đông).\n\nXét từng phương án:\n- (A) Tháng 6 → kế hoạch ban đầu ✗\n- (B) Tháng 8 → lúc kiểm định bị dời đến ✗\n- (C) Tháng 11 → hạn xong kiểm định ✗\n- (D) Tháng 12 ✓\n\nGhi nhớ:\n- the following month (sau tháng 11) = December",
+      "glossary": [
+       {
+        "term": "quality testing",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "kiểm định chất lượng"
+       },
+       {
+        "term": "the following month",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "tháng tiếp theo"
+       },
+       {
+        "term": "promote",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "quảng bá"
+       }
+      ]
      }
     }
    ]
@@ -5864,8 +6097,33 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nGặp trục trặc quá thường xuyên (\"a more reliable program that is less likely to crash\").a more reliable program that is less likely to crash: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (nguyên nhân)\nCâu hỏi: Vì sao không còn dùng ứng dụng Zipvid?\nCăn cứ: \"We will instead be using Curtain Call, which we trust will prove to be a more reliable program that is less likely to crash.\" → Thay vào đó sẽ dùng Curtain Call, đáng tin cậy hơn và ít bị treo hơn.\n→ Ngụ ý Zipvid hay bị treo.\n\nXét từng phương án:\n- (A) Đắt hơn phần mềm khác → không nhắc ✗\n- (B) Ít người dùng → không nhắc ✗\n- (C) Trục trặc quá thường xuyên ✓\n- (D) Không tương thích máy mới → không nhắc ✗\n\nGhi nhớ:\n- less likely to crash (phần mềm mới) → phần mềm cũ hay crash = malfunctioned frequently",
+      "glossary": [
+       {
+        "term": "reliable",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "đáng tin cậy"
+       },
+       {
+        "term": "crash",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "bị treo, sập"
+       },
+       {
+        "term": "malfunction",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "trục trặc"
+       },
+       {
+        "term": "effective",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "có hiệu lực (effective July 20)"
+       }
+      ]
      }
     },
     {
@@ -5883,14 +6141,33 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nChuyển đổi video (\"convert their videos... contact Manuel Costa\").A: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết\nCâu hỏi: Theo bản ghi nhớ, ông Costa có thể giúp nhân viên làm gì?\nCăn cứ: \"Employees who need to convert their videos... should install the converter utility... For assistance with this process, please contact Manuel Costa\" → Cần hỗ trợ chuyển định dạng video thì liên hệ ông Costa.\n\nXét từng phương án:\n- (A) Chuyển đổi video ✓\n- (B) Khôi phục dữ liệu mất → không nhắc ✗\n- (C) Đặt mua phần mềm → không nhắc ✗\n- (D) Điền biểu mẫu → không nhắc ✗\n\nGhi nhớ:\n- this process = converting videos",
+      "glossary": [
+       {
+        "term": "convert",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "chuyển đổi"
+       },
+       {
+        "term": "compatible",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "tương thích"
+       },
+       {
+        "term": "utility",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tiện ích (phần mềm)"
+       }
+      ]
      }
     },
     {
      "number": 160,
      "part": 7,
-     "prompt": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?",
+     "prompt": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n“It has already been installed on all work computers, so you can begin using it immediately.”",
      "options": {
       "A": "[1]",
       "B": "[2]",
@@ -5902,8 +6179,27 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nHợp lý nhất ở vị trí [2] sau khi giới thiệu phần mềm mới Curtain Call.B: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nCâu hỏi: Câu \"It has already been installed on all work computers, so you can begin using it immediately.\" (Nó đã được cài sẵn trên mọi máy tính làm việc, nên bạn có thể dùng ngay) nằm ở vị trí nào?\nCăn cứ: Trước [2]: \"We will instead be using Curtain Call, which we trust will prove to be a more reliable program\" → \"It\" = Curtain Call, phần mềm mới.\n\nXét từng phương án:\n- (A) [1] → chưa nhắc Curtain Call; \"It\" sẽ chỉ Zipvid (sắp bị bỏ) ✗\n- (B) [2] ✓\n- (C) [3] → đang nói về tiện ích chuyển đổi trong thư viện phần mềm (phải tự cài) ✗\n- (D) [4] → sau thông tin liên hệ hỗ trợ ✗\n\nGhi nhớ:\n- \"It\" phải chỉ Curtain Call → đặt ngay sau câu giới thiệu Curtain Call",
+      "glossary": [
+       {
+        "term": "install",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "cài đặt"
+       },
+       {
+        "term": "immediately",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "ngay lập tức"
+       },
+       {
+        "term": "work computer",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "máy tính làm việc"
+       }
+      ]
      }
     }
    ]
@@ -5935,8 +6231,33 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nHiệu sách (\"love books and reading\", \"events with authors\").love books and reading: (xem giải thích)events with authors: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (loại hình doanh nghiệp)\nCâu hỏi: Bà Ohtani và bà Rivera nhiều khả năng điều hành loại hình kinh doanh nào?\nCăn cứ: \"special events with authors\" / \"People here love books and reading, and they visit us regularly.\" → sự kiện với tác giả; người dân ở đây yêu sách và đến cửa hàng thường xuyên. Tên cửa hàng: A Thousand Stories.\n\nXét từng phương án:\n- (A) Văn phòng bất động sản → không nhắc ✗\n- (B) Dịch vụ tổ chức sự kiện → sự kiện chỉ là một phần ✗\n- (C) Hiệu sách ✓\n- (D) Công ty truyền thông → họ chỉ hoạt động tích cực trên mạng xã hội ✗\n\nGhi nhớ:\n- authors + love books and reading → bookshop",
+      "glossary": [
+       {
+        "term": "flourish",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "phát đạt"
+       },
+       {
+        "term": "trial and error",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "thử và sai"
+       },
+       {
+        "term": "public-facing",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "tiếp xúc với khách hàng"
+       },
+       {
+        "term": "asset",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tài sản, lợi thế"
+       }
+      ]
      }
     },
     {
@@ -5954,8 +6275,33 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nCả hai đều gặp khó khăn khi mới mở cửa (\"trial and error at the outset\", \"first year was tough\").trial and error at the outset: (xem giải thích)first year was tough: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (điểm chung)\nCâu hỏi: Điểm giống nhau giữa A Thousand Stories và Rosier's Garden Center là gì?\nCăn cứ:\n- A Thousand Stories: \"There was a lot of trial and error at the outset\" → Lúc đầu thử sai rất nhiều.\n- Rosier's: \"his first year with the garden center was tough... It took a long time to turn a profit.\" → Năm đầu rất khó khăn.\n\nXét từng phương án:\n- (A) Đều do đồng chủ sở hữu điều hành → Rosier's chỉ có một chủ ✗\n- (B) Phục vụ khách toàn thế giới → chỉ mới định mở rộng ra ngoài Greenwood ✗\n- (C) Chủ yếu quảng cáo trực tuyến → chỉ nhà sách nhắc mạng xã hội ✗\n- (D) Đều gặp khó khăn lúc mới mở ✓\n\nGhi nhớ:\n- trial and error at the outset / first year was tough = struggled when they first opened",
+      "glossary": [
+       {
+        "term": "at the outset",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "lúc ban đầu"
+       },
+       {
+        "term": "tough",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "khó khăn"
+       },
+       {
+        "term": "persevere",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "kiên trì"
+       },
+       {
+        "term": "struggle",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "vật lộn, gặp khó khăn"
+       }
+      ]
      }
     },
     {
@@ -5973,8 +6319,27 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\n\"turn a profit\" = \"gain\" (đạt được lợi nhuận).turn a profit: gain\" (đạt được lợi nhuận)gain: đạt được lợi nhuận",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ đồng nghĩa\nCâu hỏi: Từ \"turn\" ở đoạn 5, dòng 4 gần nghĩa nhất với\nCăn cứ: \"It took a long time to turn a profit.\" → Mất rất lâu mới có lãi.\n\nXét từng phương án:\n- (A) join: tham gia ✗\n- (B) gain: thu được ✓\n- (C) change: thay đổi ✗\n- (D) reverse: đảo ngược ✗\n\nGhi nhớ:\n- turn a profit = make / gain a profit: có lãi",
+      "glossary": [
+       {
+        "term": "turn a profit",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "có lãi"
+       },
+       {
+        "term": "gain",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "thu được"
+       },
+       {
+        "term": "former",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "trước đây"
+       }
+      ]
      }
     },
     {
@@ -5992,8 +6357,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nMở thêm một trung tâm làm vườn khác (\"exploring opening another store\").exploring opening another store: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận (dự định)\nCâu hỏi: Theo bài báo, ông Rosier nhiều khả năng sắp làm gì?\nCăn cứ: \"he is exploring opening another store... I'm currently looking at Morganville to see if that would be the best location for a second store.\" → Ông đang tìm hiểu việc mở cửa hàng thứ hai, có thể ở Morganville.\n\nXét từng phương án:\n- (A) Viết sách về trải nghiệm → không nhắc ✗\n- (B) Chuyển nhà đến Morganville → Morganville là nơi đặt cửa hàng thứ hai ✗\n- (C) Quay lại nghề cũ → ông từng nghĩ vậy nhưng đã kiên trì ✗\n- (D) Mở thêm một trung tâm cây cảnh ✓\n\nGhi nhớ:\n- a second store = another garden center",
+      "glossary": [
+       {
+        "term": "explore",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tìm hiểu"
+       },
+       {
+        "term": "location",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "địa điểm"
+       },
+       {
+        "term": "native plant",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "cây bản địa"
+       }
+      ]
      }
     }
    ]
@@ -6025,8 +6409,33 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nCung cấp hướng dẫn an toàn cho công việc cụ thể.D: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết\nCâu hỏi: Thông báo nhắc đến trách nhiệm nào của người giám sát?\nCăn cứ: \"Certain jobs require employees to follow the additional safety guidelines provided by their supervisors.\" → Một số công việc yêu cầu tuân theo hướng dẫn an toàn bổ sung do người giám sát đưa ra.\n\nXét từng phương án:\n- (A) Phát sổ tay nhân viên → không nhắc ✗\n- (B) Giám sát điều phối viên an toàn → không nhắc ✗\n- (C) Cập nhật nội quy an toàn được dán → không nhắc ✗\n- (D) Đưa hướng dẫn an toàn cho từng công việc cụ thể ✓\n\nGhi nhớ:\n- certain jobs = specific jobs",
+      "glossary": [
+       {
+        "term": "guideline",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hướng dẫn"
+       },
+       {
+        "term": "supervisor",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "người giám sát"
+       },
+       {
+        "term": "breach",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự vi phạm"
+       },
+       {
+        "term": "protocol",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "quy trình, quy định"
+       }
+      ]
      }
     },
     {
@@ -6044,8 +6453,27 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\n\"measures\" (biện pháp) = procedures (quy trình).measures\" (biện pháp): procedures (quy trình)measures: biện pháp",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ đồng nghĩa\nCâu hỏi: Từ \"measures\" ở đoạn 1, dòng 6 gần nghĩa nhất với\nCăn cứ: \"any employee who... would like to propose additional measures should contact the safety coordinator\" → nhân viên muốn đề xuất thêm biện pháp an toàn hãy liên hệ điều phối viên.\n\nXét từng phương án:\n- (A) amounts: số lượng ✗\n- (B) procedures: quy trình, biện pháp ✓\n- (C) dimensions: kích thước ✗\n- (D) penalties: hình phạt ✗\n\nGhi nhớ:\n- safety measures = safety procedures: biện pháp an toàn",
+      "glossary": [
+       {
+        "term": "measure",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "biện pháp"
+       },
+       {
+        "term": "procedure",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "quy trình"
+       },
+       {
+        "term": "propose",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "đề xuất"
+       }
+      ]
      }
     },
     {
@@ -6063,8 +6491,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nYêu cầu lịch đào tạo (\"For more information about when trainings are held...\").D: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (lý do liên hệ)\nCâu hỏi: Theo thông báo, vì sao nhân viên nên liên hệ bà Schneider?\nCăn cứ: \"Free first aid training and certification are available twice yearly... For more information about when trainings are held, please contact Lynn Schneider\" → Muốn biết thời gian tổ chức các khóa sơ cứu, liên hệ Lynn Schneider.\n\nXét từng phương án:\n- (A) Ứng tuyển vị trí mới → không nhắc ✗\n- (B) Cập nhật thông tin liên lạc → không nhắc ✗\n- (C) Đề xuất thêm quy định an toàn → liên hệ điều phối viên an toàn ✗\n- (D) Biết lịch đào tạo ✓\n\nGhi nhớ:\n- when trainings are held = a training schedule",
+      "glossary": [
+       {
+        "term": "first aid",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sơ cứu"
+       },
+       {
+        "term": "certification",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chứng nhận"
+       },
+       {
+        "term": "twice yearly",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "hai lần một năm"
+       }
+      ]
      }
     }
    ]
@@ -6096,8 +6543,27 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nNơi đây đủ lạnh để có tuyết rơi (\"organization of all snow-removal operations\").organization of all snow-removal operations: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận\nCâu hỏi: Điều gì được gợi ý về hạt Dora?\nCăn cứ: \"Key responsibilities include the organization of all snow-removal operations\" → Nhiệm vụ chính gồm tổ chức mọi hoạt động dọn tuyết.\n→ Ở đây có tuyết rơi.\n\nXét từng phương án:\n- (A) Đủ lạnh để có tuyết ✓\n- (B) Dân số đông → không nhắc ✗\n- (C) Mua thiết bị từ nhà cung cấp địa phương → không nhắc ✗\n- (D) Có nhiều đường cao tốc 4 làn → không nhắc ✗\n\nGhi nhớ:\n- snow-removal operations → it snows there",
+      "glossary": [
+       {
+        "term": "snow removal",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "dọn tuyết"
+       },
+       {
+        "term": "oversee",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "giám sát"
+       },
+       {
+        "term": "objective",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "mục tiêu"
+       }
+      ]
      }
     },
     {
@@ -6115,8 +6581,27 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nThông báo vấn đề cho giám đốc bộ phận (\"informs the division director of major personnel problems\").informs the division director of major personnel problems: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết\nCâu hỏi: Nếu có vấn đề nghiêm trọng với một nhân viên, người giám sát đường bộ nên làm gì?\nCăn cứ: \"The supervisor informs the division director of major personnel problems; the director will recommend an appropriate course of action\" → Người giám sát báo cho giám đốc bộ phận về các vấn đề nhân sự lớn; giám đốc sẽ đề xuất cách xử lý.\n\nXét từng phương án:\n- (A) Đề xuất người thay thế → không nhắc ✗\n- (B) Hạn chế hoạt động của nhân viên → không nhắc ✗\n- (C) Báo vấn đề cho giám đốc bộ phận ✓\n- (D) Chỉ định người liên lạc → chính người giám sát là cầu nối ✗\n\nGhi nhớ:\n- informs the division director of major personnel problems = notify the division director",
+      "glossary": [
+       {
+        "term": "personnel",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nhân sự"
+       },
+       {
+        "term": "course of action",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "hướng xử lý"
+       },
+       {
+        "term": "liaison",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "người liên lạc, cầu nối"
+       }
+      ]
      }
     },
     {
@@ -6134,14 +6619,39 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nThương lượng mức lương không được đề cập.D: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: NOT question\nCâu hỏi: Điều gì KHÔNG phải trách nhiệm của người giám sát đường bộ?\nCăn cứ:\n- \"possess an appropriate level of skill in operating the relevant equipment\" → vận hành thiết bị: có.\n- \"conduct evaluations and yearly performance reviews\" → đánh giá hằng năm: có.\n- \"keep track of the budget each month\" → quản lý ngân sách hằng tháng: có.\n\nXét từng phương án:\n- (A) Vận hành thiết bị xây dựng → có ✗\n- (B) Đánh giá hiệu suất hằng năm → có ✗\n- (C) Quản lý ngân sách hằng tháng → có ✗\n- (D) Thương lượng lương nhân viên → không nhắc ✓\n\nGhi nhớ:\n- Câu NOT: dò từng phương án trong bài.",
+      "glossary": [
+       {
+        "term": "performance review",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đánh giá hiệu suất"
+       },
+       {
+        "term": "subordinate",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "cấp dưới"
+       },
+       {
+        "term": "expenditure",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chi tiêu"
+       },
+       {
+        "term": "negotiate",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "thương lượng"
+       }
+      ]
      }
     },
     {
      "number": 171,
      "part": 7,
-     "prompt": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?",
+     "prompt": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?\n“The position features several duties related to staff management.”",
      "options": {
       "A": "[1]",
       "B": "[2]",
@@ -6153,8 +6663,27 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nHợp lý ở vị trí [2] trước đoạn nói về tuyển dụng và đào tạo nhân sự.B: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Điền câu vào đoạn văn\nCâu hỏi: Câu \"The position features several duties related to staff management.\" (Vị trí này có một số nhiệm vụ liên quan đến quản lý nhân sự) nằm ở vị trí nào?\nCăn cứ: Sau [2]: \"The supervisor assists in the hiring and training of subordinates... conduct evaluations and yearly performance reviews of crew members.\" → Hỗ trợ tuyển dụng, đào tạo, đánh giá nhân viên.\n→ Câu chèn là câu chủ đề mở đầu đoạn 2 về quản lý nhân sự.\n\nXét từng phương án:\n- (A) [1] → đoạn 1 nói về công việc thi công ✗\n- (B) [2] ✓\n- (C) [3] → giữa đoạn, sau các chi tiết nhân sự ✗\n- (D) [4] → đoạn về ngân sách ✗\n\nGhi nhớ:\n- câu tổng quát (several duties related to staff management) đứng đầu đoạn, trước các chi tiết",
+      "glossary": [
+       {
+        "term": "staff management",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "quản lý nhân sự"
+       },
+       {
+        "term": "duty",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nhiệm vụ"
+       },
+       {
+        "term": "crew member",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thành viên tổ đội"
+       }
+      ]
      }
     }
    ]
@@ -6186,8 +6715,33 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nĐiều phối lịch làm việc giữa thợ ống dẫn và thợ sửa móng nhà.D: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Mục đích cuộc trò chuyện\nCâu hỏi: Mục đích của cuộc trò chuyện là gì?\nCăn cứ: \"can you be at the Browns' house at 7:00 A.M. tomorrow to remove the furnace ductwork?\" / \"My crew will be there to start work shortly after 8\" / \"when would you like me to come back to reinstall the ductwork?\" → Sắp xếp giờ đến, giờ bắt đầu và ngày quay lại của từng bên.\n\nXét từng phương án:\n- (A) Báo chủ nhà về dự án → chủ nhà đang đi nghỉ, không có trong cuộc trò chuyện ✗\n- (B) Giải thích vì sao sửa chữa không xong đúng hạn → không có ✗\n- (C) Bàn thời gian một sự kiện công cộng → không có ✗\n- (D) Phối hợp lịch làm việc ✓\n\nGhi nhớ:\n- sắp xếp ai đến lúc nào = coordinate a work schedule",
+      "glossary": [
+       {
+        "term": "furnace",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lò sưởi"
+       },
+       {
+        "term": "ductwork",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hệ thống ống dẫn khí"
+       },
+       {
+        "term": "crawl space",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "khoảng trống dưới sàn nhà"
+       },
+       {
+        "term": "coordinate",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "phối hợp"
+       }
+      ]
      }
     },
     {
@@ -6205,8 +6759,27 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nLà nhà riêng (\"Browns' house\").A: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận\nCâu hỏi: Có thể kết luận gì về 210 Leon Drive?\nCăn cứ: \"can you be at the Browns' house at 7:00 A.M.?... That's 210 Leon Drive, right?\" – \"That's right.\" / \"the crawl space under the house\" → Đó là nhà của gia đình Brown.\n\nXét từng phương án:\n- (A) Là nhà riêng ✓\n- (B) Tòa văn phòng → không phải ✗\n- (C) Khu chung cư → căn hộ là của ông Amadi ✗\n- (D) Nhà kho công nghiệp → không phải ✗\n\nGhi nhớ:\n- the Browns' house = a private home",
+      "glossary": [
+       {
+        "term": "foundation",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nền móng"
+       },
+       {
+        "term": "private home",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nhà riêng"
+       },
+       {
+        "term": "apartment complex",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "khu chung cư"
+       }
+      ]
      }
     },
     {
@@ -6224,8 +6797,27 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nHọ thường hoàn thành công việc dưới 3 ngày (công việc này lớn bất thường mới mất 3-4 ngày).C: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận\nCâu hỏi: Điều gì được gợi ý về đội của ông Gruyter?\nCăn cứ: \"Our work patching and waterproofing the foundation will likely take three or four days. It's an unusually large job.\" → Việc vá và chống thấm móng có thể mất 3–4 ngày; đây là việc lớn bất thường.\n→ Bình thường họ làm xong trong ít hơn 3 ngày.\n\nXét từng phương án:\n- (A) Đã thêm cô Kaluza vào nhóm → cô làm việc riêng về ống dẫn ✗\n- (B) Đang sửa văn phòng ông Gollancz → đang sửa nhà gia đình Brown ✗\n- (C) Thường hoàn thành công việc dưới 3 ngày ✓\n- (D) Đã bắt đầu ở căn hộ ông Amadi → đó là lịch của cô Kaluza ✗\n\nGhi nhớ:\n- unusually large job (3–4 days) → usually fewer than three days",
+      "glossary": [
+       {
+        "term": "patch",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "vá"
+       },
+       {
+        "term": "waterproof",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "chống thấm"
+       },
+       {
+        "term": "unusually",
+        "pos": "adv",
+        "ipa": "",
+        "meaning": "bất thường"
+       }
+      ]
      }
     },
     {
@@ -6243,8 +6835,27 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nCô ấy đồng ý sẽ có mặt sớm vào sáng thứ Hai.B: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Ý định người viết (câu trích dẫn)\nCâu hỏi: Lúc 3:25, cô Kaluza có ý gì khi viết \"You got it\"?\nCăn cứ: Cô hỏi: \"can the Browns' ductwork wait until Monday?\" Ông Gollancz: \"Sure. Early on Monday would work.\" → Sáng sớm thứ Hai được.\nCô đáp \"You got it, Marcus.\" → Được, tôi sẽ làm vậy.\n\nXét từng phương án:\n- (A) Muốn chắc ông hiểu ý cô → \"You got it\" ở đây là đồng ý ✗\n- (B) Cô sẽ có mặt ở 210 Leon Drive sáng sớm thứ Hai ✓\n- (C) Gửi hóa đơn cho ông Gruyter → không có ✗\n- (D) Mong ông liên hệ gia đình Brown → không có ✗\n\nGhi nhớ:\n- You got it!: Được thôi, cứ thế nhé (đồng ý làm theo)",
+      "glossary": [
+       {
+        "term": "reinstall",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "lắp lại"
+       },
+       {
+        "term": "you got it",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "được thôi, nhất trí"
+       },
+       {
+        "term": "early on",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "sớm vào (buổi/ngày)"
+       }
+      ]
      }
     }
    ]
@@ -6280,8 +6891,27 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nMột số mặt hàng không thể giao (chỉ nhận tại cửa hàng \"In-store pickup only\").In-store pickup only: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is indicated)\nCâu hỏi: Trang web cho biết điều gì?\nCăn cứ: Easy Star và Big Mix: \"In-store pickup only\" → Chỉ nhận tại cửa hàng (không giao hàng).\n\nXét từng phương án:\n- (A) Big Mix đang hết hàng → mẫu hết hàng là Max for Pros ✗\n- (B) Mr. Buddy bán chạy nhất → không nhắc ✗\n- (C) Một số mặt hàng không thể giao tận nơi ✓\n- (D) Mọi máy đều giảm giá → không nhắc ✗\n\nGhi nhớ:\n- in-store pickup only = cannot be delivered",
+      "glossary": [
+       {
+        "term": "cement mixer",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "máy trộn xi măng"
+       },
+       {
+        "term": "in-store pickup",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nhận hàng tại cửa hàng"
+       },
+       {
+        "term": "out of stock",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "hết hàng"
+       }
+      ]
      }
     },
     {
@@ -6299,8 +6929,27 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nConcretizer (dung tích 4 feet khối).B: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản\nCâu hỏi: Ông Weaver đã đặt mẫu máy nào?\nCăn cứ:\n- Email: \"my 4-cubic-foot cement mixer\" → máy trộn 4 feet khối.\n- Trang web: \"PIT-RX | Concretizer | 4 cubic feet, 3 hp\" → mẫu duy nhất 4 feet khối.\n\nXét từng phương án:\n- (A) Easy Star → 2 feet khối ✗\n- (B) Concretizer ✓\n- (C) Big Mix → 5 feet khối ✗\n- (D) Max for Pros → 6 feet khối ✗\n\nGhi nhớ:\n- tra dung tích trong email → tên mẫu trên bảng",
+      "glossary": [
+       {
+        "term": "cubic foot",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "feet khối"
+       },
+       {
+        "term": "confirmation",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự xác nhận"
+       },
+       {
+        "term": "dependent on",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "phụ thuộc vào"
+       }
+      ]
      }
     },
     {
@@ -6318,8 +6967,27 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\ncomplete (hoàn chỉnh/toàn bộ).C: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Từ đồng nghĩa\nCâu hỏi: Trong email, từ \"full\" ở đoạn 1, dòng 7 gần nghĩa nhất với\nCăn cứ: \"I ask that you cancel my order and provide me with a full refund.\" → Tôi yêu cầu hủy đơn và hoàn tiền đầy đủ.\n\nXét từng phương án:\n- (A) supplied: được cung cấp ✗\n- (B) occupied: có người ở, bận ✗\n- (C) complete: đầy đủ, toàn bộ ✓\n- (D) abundant: dồi dào ✗\n\nGhi nhớ:\n- full refund = complete refund: hoàn tiền toàn bộ",
+      "glossary": [
+       {
+        "term": "refund",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "khoản hoàn tiền"
+       },
+       {
+        "term": "complete",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "đầy đủ, toàn bộ"
+       },
+       {
+        "term": "cancel",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "hủy"
+       }
+      ]
      }
     },
     {
@@ -6337,8 +7005,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nCó nhiều chi nhánh (nhắc đến cửa hàng New Gralen và Paloner).D: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Suy luận\nCâu hỏi: Điều gì được gợi ý về JJ's Home and Garden Suppliers?\nCăn cứ: \"I can still pick it up at either the New Gralen or the Paloner store\" → Tôi có thể đến lấy ở cửa hàng New Gralen hoặc Paloner.\n\nXét từng phương án:\n- (A) Chuyên thiết bị xây dựng lớn → tên cho thấy bán đồ nhà cửa, sân vườn ✗\n- (B) Bán chủ yếu online → không nhắc ✗\n- (C) Giao hàng miễn phí mọi sản phẩm → một số chỉ nhận tại cửa hàng ✗\n- (D) Có cửa hàng ở nhiều nơi ✓\n\nGhi nhớ:\n- the New Gralen or the Paloner store = more than one location",
+      "glossary": [
+       {
+        "term": "pick up",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "lấy, nhận"
+       },
+       {
+        "term": "location",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chi nhánh"
+       },
+       {
+        "term": "specialize in",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "chuyên về"
+       }
+      ]
      }
     },
     {
@@ -6356,8 +7043,27 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\n359 đô la (bằng giá tại JJ's Home and Garden).B: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản\nCâu hỏi: Máy CVY-XU giá bao nhiêu ở Alliance Hardware Store?\nCăn cứ:\n- Email: \"I will instead buy a Mr. Buddy from Alliance Hardware Store... (and at your same price).\" → Mua Mr. Buddy ở Alliance với giá bằng giá của JJ's.\n- Trang web: \"CVY-XU | Mr. Buddy | ... | $359\".\n\nXét từng phương án:\n- (A) $189 → Easy Star ✗\n- (B) $359 ✓\n- (C) $499 → Concretizer ✗\n- (D) $629 → Big Mix ✗\n\nGhi nhớ:\n- at your same price → tra giá trên trang web của JJ's",
+      "glossary": [
+       {
+        "term": "hardware store",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "cửa hàng đồ kim khí"
+       },
+       {
+        "term": "in stock",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "còn hàng"
+       },
+       {
+        "term": "price",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "giá"
+       }
+      ]
      }
     }
    ]
@@ -6393,8 +7099,27 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nKhác nhau theo từng quốc gia (\"Guidelines vary from country to country\").Guidelines vary from country to country: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết\nCâu hỏi: Trang web nói gì về các hướng dẫn trong thương mại quốc tế?\nCăn cứ: \"Guidelines vary from country to country, and special licenses and permits may be needed.\" → Quy định khác nhau giữa các nước.\n\nXét từng phương án:\n- (A) Khác nhau ở mỗi quốc gia ✓\n- (B) Phục vụ nhiều mục đích → không nhắc ✗\n- (C) Được cập nhật thường xuyên → không nhắc ✗\n- (D) Chặt chẽ hơn trước → không nhắc ✗\n\nGhi nhớ:\n- vary from country to country = different for each country",
+      "glossary": [
+       {
+        "term": "vary",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "thay đổi, khác nhau"
+       },
+       {
+        "term": "license",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "giấy phép"
+       },
+       {
+        "term": "documentation",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "giấy tờ"
+       }
+      ]
      }
     },
     {
@@ -6412,8 +7137,33 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nĐược quyết định trong buổi gặp đầu (\"negotiated during the introductory session\").negotiated during the introductory session: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết\nCâu hỏi: Trang web nói gì về phí duy trì hằng tháng?\nCăn cứ: \"you would pay a monthly retainer at a cost to be negotiated during the introductory session.\" → Bạn trả phí duy trì hằng tháng với mức thỏa thuận trong buổi giới thiệu đầu tiên.\n\nXét từng phương án:\n- (A) Không thể thương lượng → được thương lượng ✗\n- (B) $329/tháng → $329/giờ cho buổi giới thiệu ✗\n- (C) Được ấn định trong buổi gặp đầu tiên ✓\n- (D) Có thể được miễn → không nhắc ✗\n\nGhi nhớ:\n- negotiated during the introductory session = set during an initial meeting",
+      "glossary": [
+       {
+        "term": "retainer",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "phí duy trì (trả định kỳ)"
+       },
+       {
+        "term": "introductory session",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "buổi giới thiệu"
+       },
+       {
+        "term": "subsequent",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "tiếp theo"
+       },
+       {
+        "term": "negotiate",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "thương lượng"
+       }
+      ]
      }
     },
     {
@@ -6431,8 +7181,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nKhông chắc bảng câu hỏi đã được nhận (\"not sure that my form went through\").not sure that my form went through: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (lý do)\nCâu hỏi: Vì sao ông Yadav cung cấp thông tin công ty trong email?\nCăn cứ: \"I filled out the questionnaire on your Web page, but I am not sure that my form went through. I never got a confirmation e-mail. As I mentioned in the form...\" → Tôi đã điền bảng câu hỏi nhưng không chắc đã gửi được, chưa nhận email xác nhận.\n\nXét từng phương án:\n- (A) Trả lời yêu cầu của đồng nghiệp tương lai → không có ✗\n- (B) Quên điền vào biểu mẫu → ông đã điền (\"As I mentioned in the form\") ✗\n- (C) Làm theo quy trình có sẵn → không có ✗\n- (D) Không chắc bảng câu hỏi đã được nhận ✓\n\nGhi nhớ:\n- not sure my form went through = unsure whether received",
+      "glossary": [
+       {
+        "term": "questionnaire",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "bảng câu hỏi"
+       },
+       {
+        "term": "go through",
+        "pos": "phrasal verb",
+        "ipa": "",
+        "meaning": "được gửi thành công"
+       },
+       {
+        "term": "follow-up",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự liên hệ tiếp theo"
+       }
+      ]
      }
     },
     {
@@ -6450,8 +7219,27 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nÔng Woodrow (chuyên mảng thiết bị gia dụng).B: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản\nCâu hỏi: Ông Yadav nhiều khả năng sẽ làm việc với ai?\nCăn cứ:\n- Email: \"we are a five-year-old company specializing in high-end washers and dryers\" → công ty chuyên máy giặt, máy sấy cao cấp.\n- Trang web: \"Jonah Woodrow: household appliances\" → phụ trách đồ gia dụng.\n\nXét từng phương án:\n- (A) Bà Giordano → nông sản ✗\n- (B) Ông Woodrow ✓\n- (C) Bà Wong → đá quý ✗\n- (D) Ông Fadel → phụ tùng ô tô ✗\n\nGhi nhớ:\n- washers and dryers = household appliances",
+      "glossary": [
+       {
+        "term": "household appliance",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đồ gia dụng"
+       },
+       {
+        "term": "high-end",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "cao cấp"
+       },
+       {
+        "term": "precious stone",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đá quý"
+       }
+      ]
      }
     },
     {
@@ -6469,8 +7257,33 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nCó kế hoạch mở rộng hoạt động (\"want to venture into international trade\").want to venture into international trade: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is mentioned)\nCâu hỏi: Email nói gì về Isvarani Ltd.?\nCăn cứ: \"However, we want to venture into international trade, particularly throughout Europe, and we would like ongoing support\" → Chúng tôi muốn tiến vào thương mại quốc tế, đặc biệt là khắp châu Âu.\n\nXét từng phương án:\n- (A) Muốn giữ bí mật nhà cung cấp → không nhắc ✗\n- (B) Vô tình vi phạm chính sách quốc tế → không nhắc ✗\n- (C) Có kế hoạch mở rộng hoạt động ✓\n- (D) Cần thêm thông tin về vận chuyển nội địa → họ đã nắm rõ ✗\n\nGhi nhớ:\n- venture into international trade = expand its operations",
+      "glossary": [
+       {
+        "term": "venture into",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "mạo hiểm tiến vào"
+       },
+       {
+        "term": "domestic",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "nội địa"
+       },
+       {
+        "term": "endeavor",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nỗ lực"
+       },
+       {
+        "term": "ongoing",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "liên tục"
+       }
+      ]
      }
     }
    ]
@@ -6510,8 +7323,33 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nMiễn phí (\"provided at no expense\").provided at no expense: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is mentioned)\nCâu hỏi: Điều gì được nhắc về các chương trình giáo dục tài chính của Sonfaya Mutual?\nCăn cứ: \"...and financial education programmes... Except for the assistance with tax paperwork, these offerings are provided at no expense to BASA holders.\" → Trừ phần hỗ trợ giấy tờ thuế, các dịch vụ này miễn phí cho chủ tài khoản BASA.\n\nXét từng phương án:\n- (A) Được cung cấp miễn phí ✓\n- (B) Tổ chức mỗi tháng một lần → không nhắc ✗\n- (C) Do quản lý tài khoản dẫn dắt → quản lý tài khoản dành cho tư vấn riêng ✗\n- (D) Phối hợp với AFR → AFR chỉ là tạp chí đưa tin ✗\n\nGhi nhớ:\n- at no expense = for free",
+      "glossary": [
+       {
+        "term": "privilege",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "đặc quyền"
+       },
+       {
+        "term": "certified",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "có chứng chỉ"
+       },
+       {
+        "term": "at no expense",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "miễn phí"
+       },
+       {
+        "term": "yield",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lợi suất"
+       }
+      ]
      }
     },
     {
@@ -6529,8 +7367,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nLà công ty quốc tế (có văn phòng ở nhiều quốc gia).D: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (What is indicated)\nCâu hỏi: Bài báo nói gì về Sonfaya Mutual?\nCăn cứ: \"Sonfaya Mutual is headquartered in Kigali, Rwanda, with offices in the countries of Tanzania, Uganda, and Zambia.\" → Trụ sở ở Rwanda, có văn phòng ở Tanzania, Uganda, Zambia.\n\nXét từng phương án:\n- (A) Tăng mức tiền mở BASA → không nhắc ✗\n- (B) Sẽ tiếp tục thêm quyền lợi → không nhắc ✗\n- (C) Vừa cập nhật trang web → không nhắc ✗\n- (D) Là một công ty quốc tế ✓\n\nGhi nhớ:\n- offices in several countries = international company",
+      "glossary": [
+       {
+        "term": "headquartered",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "đặt trụ sở"
+       },
+       {
+        "term": "international",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "quốc tế"
+       },
+       {
+        "term": "deposit",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "khoản tiền gửi"
+       }
+      ]
      }
     },
     {
@@ -6548,8 +7405,33 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nTìm hiểu lịch sử của Sonfaya Mutual (\"origins, growth, and milestones\").C: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản\nCâu hỏi: Vì sao bà Chabinga tìm một số báo AFR cũ?\nCăn cứ:\n- Bài báo: \"An in-depth article about Sonfaya Mutual's origins, growth, and milestones was published in AFR's January issue.\" → Số tháng 1 có bài chuyên sâu về nguồn gốc, quá trình phát triển của Sonfaya.\n- Email: \"looking for the previous AFR issue referenced in the article\" → đang tìm số báo trước được nhắc trong bài.\n\nXét từng phương án:\n- (A) Tìm hiểu đối thủ của Sonfaya → không phải ✗\n- (B) Hiểu thêm về xu hướng hiện nay → không phải ✗\n- (C) Tìm hiểu lịch sử của Sonfaya Mutual ✓\n- (D) Tìm hiểu thêm về BASA → bà đã đọc bài về BASA rồi ✗\n\nGhi nhớ:\n- origins, growth, and milestones = history",
+      "glossary": [
+       {
+        "term": "origin",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nguồn gốc"
+       },
+       {
+        "term": "milestone",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "cột mốc"
+       },
+       {
+        "term": "back issue",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "số báo cũ"
+       },
+       {
+        "term": "archive",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "kho lưu trữ"
+       }
+      ]
      }
     },
     {
@@ -6567,8 +7449,27 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nĐược miễn phí BASA 6 tháng đầu tiên.A: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản (suy luận)\nCâu hỏi: Điều gì được gợi ý về bà Nirere?\nCăn cứ:\n- Thư (23/11): \"pleased that you strengthened your relationship with us by opening a business advantage savings account (BASA)\" → bà vừa mở tài khoản BASA.\n- Bài báo: \"For new BASA holders, the monthly cost is waived for the first six months.\" → Chủ BASA mới được miễn phí hằng tháng trong 6 tháng đầu.\n\nXét từng phương án:\n- (A) Không phải trả phí BASA hằng tháng trong 6 tháng ✓\n- (B) Nhận thẻ ghi nợ trễ → không nhắc ✗\n- (C) Là khách hàng mới → đã có tài khoản thanh toán 15 năm ✗\n- (D) Vừa gặp ông Akamanzi → không nhắc ✗\n\nGhi nhớ:\n- new BASA holder + monthly cost waived for six months",
+      "glossary": [
+       {
+        "term": "waive",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "miễn (phí)"
+       },
+       {
+        "term": "checking account",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tài khoản thanh toán"
+       },
+       {
+        "term": "debit card",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thẻ ghi nợ"
+       }
+      ]
      }
     },
     {
@@ -6586,8 +7487,33 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nMô tả các tùy chọn và cách quản lý quỹ (chuyển tiền, rút tiền, giao dịch chứng khoán).B: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Mục đích văn bản\nCâu hỏi: Một mục đích của lá thư là gì?\nCăn cứ: Thư nêu các cách quản lý tiền: chuyển tiền trực tuyến giữa hai tài khoản, rút tiền BASA bằng thẻ ghi nợ ở ATM, nền tảng giao dịch cổ phiếu trực tuyến miễn phí.\n\nXét từng phương án:\n- (A) Giải thích lợi ích của đầu tư → chỉ giới thiệu nền tảng ✗\n- (B) Mô tả các lựa chọn để quản lý tiền ✓\n- (C) Giải thích cách giao dịch cổ phiếu → chỉ nói liên hệ để biết chi tiết ✗\n- (D) Cung cấp thông tin liên hệ một phòng ban → chỉ nhắc tên phòng ✗\n\nGhi nhớ:\n- transfer money / withdraw funds / stock-trading = options for managing funds",
+      "glossary": [
+       {
+        "term": "transfer",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "chuyển tiền"
+       },
+       {
+        "term": "withdraw",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "rút tiền"
+       },
+       {
+        "term": "fund",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "tiền, quỹ"
+       },
+       {
+        "term": "stock-trading platform",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nền tảng giao dịch cổ phiếu"
+       }
+      ]
      }
     }
    ]
@@ -6627,8 +7553,27 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nKhông phục vụ bữa sáng trước 7h sáng.A: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản (suy luận)\nCâu hỏi: Có thể kết luận gì về Valley Road Bed and Breakfast?\nCăn cứ:\n- Email: \"I need to leave before 7 A.M.... Will breakfast be available before then? If not, what restaurants near the conference would you recommend...\" → Bà hỏi có bữa sáng trước 7 giờ không; nếu không thì nhà hàng nào gần hội nghị.\n- Phiếu chi phí: bữa sáng ngày 11/4 ở Eileen's Diner (hóa đơn lúc 6:46 sáng).\n→ Nhà nghỉ không phục vụ bữa sáng trước 7 giờ.\n\nXét từng phương án:\n- (A) Không phục vụ bữa sáng trước 7 giờ ✓\n- (B) Có xe đưa đón sân bay → bà đi taxi ✗\n- (C) Nằm cạnh Ivor Hotel → phải đi taxi ✗\n- (D) Không nhận đặt phòng tháng 4 → không nhắc ✗\n\nGhi nhớ:\n- ăn sáng ở nơi khác lúc 6:46 → B&B không có bữa sáng sớm",
+      "glossary": [
+       {
+        "term": "bed and breakfast",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "nhà nghỉ có kèm bữa sáng"
+       },
+       {
+        "term": "inquire",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "hỏi"
+       },
+       {
+        "term": "recommend",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "giới thiệu"
+       }
+      ]
      }
     },
     {
@@ -6646,8 +7591,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nNộp hóa đơn trong vòng 30 ngày (\"upload their receipts within 30 days\").D: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (yêu cầu)\nCâu hỏi: Theo biểu mẫu, nhân viên phải làm gì?\nCăn cứ: \"must fill out a Travel Expense Reimbursement Form and upload their receipts within 30 days of travel in TravelNow\" → Phải điền mẫu hoàn phí và tải hóa đơn lên trong vòng 30 ngày.\n\nXét từng phương án:\n- (A) Xin phép phòng tài chính trước khi đi → không nhắc ✗\n- (B) Trình bày tại hội nghị → không nhắc ✗\n- (C) Gửi báo cáo chi phí qua email → nộp qua hệ thống TravelNow ✗\n- (D) Nộp hóa đơn trong vòng 30 ngày ✓\n\nGhi nhớ:\n- upload receipts = submit receipts",
+      "glossary": [
+       {
+        "term": "reimbursement",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự hoàn trả"
+       },
+       {
+        "term": "receipt",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hóa đơn"
+       },
+       {
+        "term": "upload",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "tải lên"
+       }
+      ]
      }
     },
     {
@@ -6665,8 +7629,27 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nTổ chức tại Santa Clara (địa chỉ của Ivor Hotel & Conference Center).C: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 3 văn bản (suy luận)\nCâu hỏi: Điều gì nhiều khả năng đúng về hội nghị Digital Graphic Designers?\nCăn cứ:\n- Email: hội nghị ở Ivor Hotel and Conference Center.\n- Hóa đơn: \"Eileen's Diner, Located in the Ivor Hotel and Conference Center... Santa Clara, CA\" → Ivor Hotel ở Santa Clara.\n\nXét từng phương án:\n- (A) Kéo dài 3 ngày → phiếu chỉ có phí hội nghị ngày 11/4 ✗\n- (B) Bắt đầu ngày 28/4 → ngày điền phiếu ✗\n- (C) Tổ chức ở Santa Clara ✓\n- (D) Cung cấp bữa ăn → bà tự trả tiền ăn ✗\n\nGhi nhớ:\n- conference at the Ivor Hotel + diner address in Santa Clara",
+      "glossary": [
+       {
+        "term": "conference",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "hội nghị"
+       },
+       {
+        "term": "registration",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "sự đăng ký"
+       },
+       {
+        "term": "participant",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "người tham gia"
+       }
+      ]
      }
     },
     {
@@ -6684,8 +7667,27 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nLà quản lý bộ phận (người ký duyệt đơn).C: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết (suy luận)\nCâu hỏi: Dựa vào biểu mẫu, điều gì đúng về bà Park?\nCăn cứ: \"All forms must be approved and signed by the employee's department manager.\" + \"Approved by: Eun Park / Signature: Eun Park\" → Mẫu phải do trưởng phòng duyệt và ký; người duyệt là Eun Park.\n\nXét từng phương án:\n- (A) Chuyên viên phân tích tài chính → không nhắc ✗\n- (B) Tổ chức hội nghị → không nhắc ✗\n- (C) Là trưởng phòng ✓\n- (D) Chủ nhà nghỉ B&B → không nhắc ✗\n\nGhi nhớ:\n- approved and signed by the department manager → Eun Park = department manager",
+      "glossary": [
+       {
+        "term": "approve",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "phê duyệt"
+       },
+       {
+        "term": "signature",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "chữ ký"
+       },
+       {
+        "term": "department manager",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "trưởng phòng"
+       }
+      ]
      }
     },
     {
@@ -6703,8 +7705,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nHoạt động hơn 20 năm (\"operated for over two decades\").operated for over two decades: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết\nCâu hỏi: Hóa đơn cho biết gì về Eileen's Diner?\nCăn cứ: \"Family-owned and operated for over two decades!\" → Do gia đình sở hữu và điều hành hơn hai thập kỷ.\n\nXét từng phương án:\n- (A) Mở 24/24 → không nhắc ✗\n- (B) Có món sáng đặc biệt hằng ngày → không nhắc ✗\n- (C) Có chi nhánh khắp nước → chỉ một địa chỉ trong khách sạn ✗\n- (D) Đã hoạt động hơn 20 năm ✓\n\nGhi nhớ:\n- over two decades = more than twenty years",
+      "glossary": [
+       {
+        "term": "decade",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thập kỷ"
+       },
+       {
+        "term": "operate",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "điều hành"
+       },
+       {
+        "term": "diner",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "quán ăn bình dân"
+       }
+      ]
      }
     }
    ]
@@ -6744,8 +7765,33 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nYêu cầu cử thợ đến sửa chữa máy móc.B: (từ khóa/cấu trúc liên quan)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Mục đích văn bản\nCâu hỏi: Mục đích của email đầu tiên là gì?\nCăn cứ: \"The Quinar 5000 in Building F is not working properly... Please send a technician to check it as soon as possible\" → Máy Quinar 5000 không chạy bình thường; vui lòng cử kỹ thuật viên kiểm tra sớm.\n\nXét từng phương án:\n- (A) Xác nhận đơn đặt thiết bị → không có ✗\n- (B) Đề nghị sửa máy ✓\n- (C) Báo cáo kiểm tra hằng tháng → chỉ nhắc máy đã đạt ở lần kiểm tra trước ✗\n- (D) Khuyến khích tăng sản lượng → không có ✗\n\nGhi nhớ:\n- send a technician to check it = request machinery repair",
+      "glossary": [
+       {
+        "term": "technician",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "kỹ thuật viên"
+       },
+       {
+        "term": "steady",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "ổn định"
+       },
+       {
+        "term": "downtime",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "thời gian ngừng máy"
+       },
+       {
+        "term": "adapt",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "điều chỉnh"
+       }
+      ]
      }
     },
     {
@@ -6763,8 +7809,27 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nThuê công ty bên ngoài (\"authorized Konner Services\").authorized Konner Services: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (giải pháp)\nCâu hỏi: Ông Nahm quyết định làm gì để giải quyết vấn đề ở tòa F?\nCăn cứ: \"I have authorized Konner Services to send one of their technicians to inspect the machine and make any necessary repairs.\" → Tôi đã cho phép Konner Services cử kỹ thuật viên đến kiểm tra và sửa máy.\n\nXét từng phương án:\n- (A) Tuyển thêm nhân công → kỹ thuật viên mới vào tuần sau, không phải cách giải quyết lần này ✗\n- (B) Thuê một công ty bên ngoài ✓\n- (C) Thuê tòa nhà mới → không có ✗\n- (D) Mua máy mới → không có ✗\n\nGhi nhớ:\n- authorized Konner Services = hire an outside company",
+      "glossary": [
+       {
+        "term": "authorize",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "cho phép, ủy quyền"
+       },
+       {
+        "term": "beyond capacity",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "quá tải"
+       },
+       {
+        "term": "internal",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "nội bộ"
+       }
+      ]
      }
     },
     {
@@ -6782,8 +7847,33 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nQuản lý dây chuyền (\"line manager\").line manager: (xem giải thích)",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản (suy luận)\nCâu hỏi: Ông Nadiner nhiều khả năng là ai?\nCăn cứ:\n- Email 2: \"I took the liberty of copying Alex Nadiner, who may need to assign some line workers to put in overtime\" → ông Nadiner có thể phải phân công công nhân dây chuyền tăng ca.\n- Báo cáo: \"The line manager has been advised of this situation so that personnel can be reassigned\" → người phân công nhân sự là quản lý dây chuyền.\n\nXét từng phương án:\n- (A) Giám đốc bảo trì → đó là ông Nahm ✗\n- (B) Kỹ thuật viên trưởng → không nhắc ✗\n- (C) Công nhân dây chuyền → ông phân công công nhân ✗\n- (D) Quản lý dây chuyền ✓\n\nGhi nhớ:\n- assign line workers to overtime → line manager",
+      "glossary": [
+       {
+        "term": "take the liberty of",
+        "pos": "phrase",
+        "ipa": "",
+        "meaning": "mạn phép"
+       },
+       {
+        "term": "assign",
+        "pos": "v",
+        "ipa": "",
+        "meaning": "phân công"
+       },
+       {
+        "term": "overtime",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "giờ làm thêm"
+       },
+       {
+        "term": "line manager",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "quản lý dây chuyền"
+       }
+      ]
      }
     },
     {
@@ -6801,8 +7891,27 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nHaverford Industries.",
-      "glossary": []
+      "reasoning": "* Dạng câu: Liên kết 2 văn bản (suy luận)\nCâu hỏi: Bà Landon nhiều khả năng làm cho công ty nào?\nCăn cứ:\n- Email 1: bà Landon, quản lý sản xuất, báo máy Quinar 5000 ở \"Building F\".\n- Báo cáo: \"Location: Haverford Industries, 837 West Lorrie Street, Building F\" → máy đặt ở tòa F của Haverford Industries.\n\nXét từng phương án:\n- (A) Quinar Machines → Quinar là tên máy ✗\n- (B) Altran Motors → khách hàng nhận lô hàng ✗\n- (C) Konner Services → công ty sửa chữa bên ngoài ✗\n- (D) Haverford Industries ✓\n\nGhi nhớ:\n- Building F (email) ↔ Haverford Industries, Building F (report)",
+      "glossary": [
+       {
+        "term": "production manager",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "quản lý sản xuất"
+       },
+       {
+        "term": "shipment",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "lô hàng"
+       },
+       {
+        "term": "location",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "địa điểm"
+       }
+      ]
      }
     },
     {
@@ -6820,8 +7929,33 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "4.\nBài kiểm tra 477 (thay công tắc chính).",
-      "glossary": []
+      "reasoning": "* Dạng câu: Chi tiết (báo cáo)\nCâu hỏi: Dựa vào báo cáo, bài kiểm tra nào dẫn đến việc thay một bộ phận máy?\nCăn cứ: \"Test 477: Faulty Baum X33 main switch\" + \"The technician cleaned the machinery and replaced the malfunctioning switch.\" → Kỹ thuật viên đã thay công tắc bị hỏng (phát hiện ở test 477).\n\nXét từng phương án:\n- (A) 102 → đạt yêu cầu ✗\n- (B) 393 → chỉ cần vệ sinh ✗\n- (C) 477 ✓\n- (D) 488 → dây curoa, ống mòn: nên thay sớm nhưng chưa thay ✗\n\nGhi nhớ:\n- replaced the malfunctioning switch ↔ Test 477: faulty switch",
+      "glossary": [
+       {
+        "term": "faulty",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "bị lỗi"
+       },
+       {
+        "term": "switch",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "công tắc"
+       },
+       {
+        "term": "worn",
+        "pos": "adj",
+        "ipa": "",
+        "meaning": "bị mòn"
+       },
+       {
+        "term": "hose",
+        "pos": "n",
+        "ipa": "",
+        "meaning": "ống dẫn"
+       }
+      ]
      }
     }
    ]
