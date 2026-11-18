@@ -7016,14 +7016,14 @@
       "A": "It took the longest time to develop.",
       "B": "It comes with an additional tool.",
       "C": "It includes expandable memory.",
-      "D": "It has a screen on the front and the back."
+      "D": "It includes an electronic stylus."
      },
      "showText": true,
      "broken": false,
-     "answer": "B",
+     "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "* Dạng câu: Chi tiết (điểm khác biệt)\nCâu hỏi: Mẫu Cirro khác các mẫu mới khác ở điểm nào?\nCăn cứ: \"The Cirro model also includes an electronic stylus for writing or drawing on the screen.\" → Cirro còn kèm bút cảm ứng để viết, vẽ trên màn hình.\n\nXét từng phương án:\n- (A) Phát triển lâu nhất → không nhắc ✗\n- (B) Kèm thêm một dụng cụ ✓\n- (C) Có bộ nhớ mở rộng → chỉ nói Cirro lưu trữ lớn nhất ✗\n- (D) Có màn hình hai mặt → không nhắc ✗\n\nGhi nhớ:\n- electronic stylus = an additional tool\n- Lưu ý: bản PDF in phương án khác đề trên web; ý đúng (bút cảm ứng) ứng với đáp án B trên web.",
+      "reasoning": "* Dạng câu: Chi tiết (điểm khác biệt)\nCâu hỏi: Mẫu Cirro khác các mẫu mới khác ở điểm nào?\nCăn cứ: \"The Cirro model also includes an electronic stylus for writing or drawing on the screen.\" → Cirro còn kèm bút cảm ứng để viết, vẽ trên màn hình.\n\nXét từng phương án:\n- (A) Phát triển lâu nhất → không nhắc ✗\n- (B) Kèm thêm một dụng cụ → cách nói chung chung về cùng ý, PDF chọn phương án nêu cụ thể ✗\n- (C) Có bộ nhớ mở rộng → chỉ nói Cirro lưu trữ lớn nhất ✗\n- (D) Có kèm bút cảm ứng điện tử ✓\n\nGhi nhớ:\n- electronic stylus: bút cảm ứng điện tử\n- Đáp án và phương án D theo file PDF giải chi tiết.",
       "glossary": [
        {
         "term": "stylus",
@@ -7582,10 +7582,10 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "A",
+     "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "* Dạng câu: Mục đích văn bản\nCâu hỏi: Mục đích của email là gì?\nCăn cứ: \"I am writing to gauge your interest in becoming a part of a search committee for the newly vacated Senior Director of Graphic Design position... we will compensate you at the standard rate for external consultants.\" → Hỏi ông có muốn tham gia hội đồng tuyển chọn không; được trả phí theo mức tư vấn viên bên ngoài.\n\nXét từng phương án:\n- (A) Đưa ra một cơ hội làm tư vấn ✓\n- (B) Xếp lịch họp phòng ban → không có ✗\n- (C) Thông báo vị trí sắp tuyển → vị trí chỉ là bối cảnh; email mời ông vào hội đồng ✗\n- (D) Chào mừng nhân viên mới → không có ✗\n\nGhi nhớ:\n- join a search committee + paid as an external consultant = consulting opportunity\n- Lưu ý: bản PDF tô đáp án C, nhưng mục đích chính của email là mời ông làm tư vấn cho hội đồng tuyển chọn; giữ đáp án A.",
+      "reasoning": "* Dạng câu: Mục đích văn bản\nCâu hỏi: Mục đích của email là gì?\nCăn cứ: \"I am writing to gauge your interest in becoming a part of a search committee for the newly vacated Senior Director of Graphic Design position\" → Tôi viết thư để hỏi ông có muốn tham gia hội đồng tuyển chọn cho vị trí Giám đốc Cao cấp Thiết kế Đồ họa vừa bị bỏ trống.\n\"Jake Harris left our company last month... leaving us without anyone to head our Graphic Design department.\" → Vị trí đang trống, sắp tuyển người mới.\n\nXét từng phương án:\n- (A) Đưa ra một cơ hội làm tư vấn → ông được trả phí như tư vấn viên nếu tham gia hội đồng ✗\n- (B) Xếp lịch họp phòng ban → không có ✗\n- (C) Thông báo một vị trí sắp tuyển ✓\n- (D) Chào mừng nhân viên mới → không có ✗\n\nGhi nhớ:\n- newly vacated position: vị trí vừa bị bỏ trống\n- Lưu ý: đáp án lấy theo file PDF giải chi tiết (C). Email chủ yếu mời ông vào hội đồng tuyển chọn và trả phí như tư vấn viên, nên phương án A cũng sát nội dung.",
       "glossary": [
        {
         "term": "gauge",

@@ -7880,10 +7880,10 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "D",
+     "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "* Dạng câu: Chi tiết (lịch trình)\nCâu hỏi: Theo lịch, khi nào một công ty trình bày về sản phẩm của mình?\nCăn cứ: \"2:45 P.M. | 'New Platforms, New Products' | Product demonstrations by Bigham Industries\" → 2:45 chiều, Bigham Industries trình diễn sản phẩm.\n\nXét từng phương án:\n- (A) 9:45 → bài giảng của giáo sư ĐH Oxton ✗\n- (B) 10:30 → bài của người phụ trách bảo tàng, không phải công ty ✗\n- (C) 1:00 → bài của ĐH Solfis ✗\n- (D) 2:45 ✓\n\nGhi nhớ:\n- product demonstrations by + công ty = presentation about its merchandise\n- Lưu ý: bản PDF tô đáp án B nhưng 10:30 là bài của bảo tàng; đáp án đúng là D.",
+      "reasoning": "* Dạng câu: Chi tiết (lịch trình)\nCâu hỏi: Theo lịch, khi nào một công ty trình bày về sản phẩm của mình?\nCăn cứ: Lịch phòng 203:\n- \"10:30 A.M. | 'Quantum Optics' | Presentation by Oxton Science Museum curator Wallace McCabe\"\n- \"2:45 P.M. | 'New Platforms, New Products' | Product demonstrations by Bigham Industries\"\n\nXét từng phương án:\n- (A) 9:45 → bài giảng của giáo sư ĐH Oxton ✗\n- (B) 10:30 ✓\n- (C) 1:00 → bài của ĐH Solfis ✗\n- (D) 2:45 → buổi trình diễn sản phẩm của Bigham Industries ✗\n\nGhi nhớ:\n- presentation: bài trình bày; product demonstration: trình diễn sản phẩm\n- Lưu ý: đáp án lấy theo file PDF giải chi tiết (B). Theo lịch, mục có công ty trình diễn sản phẩm là lúc 2:45 (Bigham Industries).",
       "glossary": [
        {
         "term": "demonstration",
