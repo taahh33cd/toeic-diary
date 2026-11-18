@@ -7982,17 +7982,17 @@
      "part": 7,
      "prompt": "At 10:22 A.M., what does Ms. Barry most likely mean when she writes, \"There are several projects ahead of yours\"?",
      "options": {
-      "A": "Ms. Barry will move Mr. Kubelski's request to the end of the queue.",
-      "B": "Ms. Barry will not be able to send out the invitations for Mr. Kubelski.",
-      "C": "Mr. Kubelski's request will not be the first job Ms. Barry completes.",
+      "A": "Ms. Barry will need to ask for more time to do the request.",
+      "B": "The information Mr. Kubelski requested will not be obtained.",
+      "C": "Mr. Kubelski's request will be handled quickly.",
       "D": "Mr. Kubelski will need to assist with other projects first."
      },
      "showText": true,
      "broken": false,
-     "answer": "C",
+     "answer": "A",
      "explanation": {
       "translation": "At 10:22 A.M., what does Ms. Barry most likely mean when she writes, \"There are several projects ahead of yours\"? (A) Ms. Barry will move Mr. Kubelski's request to the end of the queue. (B) Ms. Barry will not be able to send out the invitations for Mr. Kubelski. (C) Mr. Kubelski's request will not be the first job Ms. Barry completes. (D) Mr. Kubelski will need to assist with other projects first.",
-      "reasoning": "* Dạng câu: Ý định người viết (câu trích dẫn)\nCâu hỏi: Lúc 10:22, bà Barry có ý gì khi viết \"There are several projects ahead of yours\"?\nCăn cứ: Ông Kubelski hỏi: \"Is it possible for you to get me that list right away?\" → Có thể gửi ngay danh sách không?\nBà Barry đáp có vài dự án xếp trước, rồi nói \"We will get to it as soon as we can.\" → Sẽ làm ngay khi có thể.\n→ Yêu cầu của ông không được làm đầu tiên, nhưng vẫn giữ chỗ trong hàng đợi (cô Choi vừa nói ông không muốn mất chỗ).\n\nXét từng phương án:\n- (A) Chuyển yêu cầu xuống cuối hàng đợi → trái với việc giữ chỗ ✗\n- (B) Không gửi thư mời giùm ông → ông tự gửi thư mời ✗\n- (C) Yêu cầu của ông sẽ không phải việc bà làm đầu tiên ✓\n- (D) Ông phải giúp các dự án khác trước → không có ✗\n\nGhi nhớ:\n- several projects ahead of yours → yours is not first in line\n- Lưu ý: bản PDF in phương án khác với đề trên web; đáp án trên web là C, đúng với các phương án đang hiển thị.",
+      "reasoning": "* Dạng câu: Ý định người viết (câu trích dẫn)\nCâu hỏi: Lúc 10:22, bà Barry có ý gì khi viết \"There are several projects ahead of yours\"?\nCăn cứ: Ông Kubelski hỏi: \"Is it possible for you to get me that list right away?\" → Có thể gửi ngay danh sách không?\nBà Barry đáp có vài dự án xếp trước dự án của ông, rồi nói \"We will get to it as soon as we can.\" → Chúng tôi sẽ làm ngay khi có thể.\n→ Không làm ngay được; cần thêm thời gian mới xử lý yêu cầu của ông.\n\nXét từng phương án:\n- (A) Bà Barry cần thêm thời gian để làm yêu cầu ✓\n- (B) Thông tin ông yêu cầu sẽ không lấy được → bà vẫn sẽ làm ✗\n- (C) Yêu cầu của ông sẽ được xử lý nhanh → ngược ý, còn nhiều dự án xếp trước ✗\n- (D) Ông phải giúp các dự án khác trước → không có ✗\n\nGhi nhớ:\n- several projects ahead of yours = yours is not first in line → need more time\n- Đáp án và phương án theo file PDF giải chi tiết.",
       "glossary": [
        {
         "term": "ahead of",

@@ -8836,10 +8836,10 @@
      },
      "showText": true,
      "broken": false,
-     "answer": "A",
+     "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "* Dạng câu: Chủ đề văn bản\nCâu hỏi: Bài blog đưa tin về chủ đề gì?\nCăn cứ: \"I have concentrated on the revitalization of the Brentler Heights waterfront district... the most impressive result of this program is the renovation of a former industrial building\" → Tôi tập trung vào việc hồi sinh khu bến cảng Brentler Heights; kết quả ấn tượng nhất là cải tạo một tòa nhà công nghiệp cũ.\n\nXét từng phương án:\n- (A) Sự chuyển mình của một khu vực trong thành phố ✓\n- (B) Ấn phẩm mới của một kiến trúc sư → ông Greeley là nhà phát triển, không ra sách ✗\n- (C) Lớp nghệ thuật ở phòng tranh → không nhắc ✗\n- (D) Tài trợ cho nghệ sĩ → không nhắc ✗\n\nGhi nhớ:\n- revitalization of the waterfront district = transformation of a city district\n- Lưu ý: bản PDF tô đáp án B nhưng phần giải thích của chính PDF lại chỉ đến A; đáp án đúng là A.",
+      "reasoning": "* Dạng câu: Chủ đề văn bản\nCâu hỏi: Bài blog đưa tin về chủ đề gì?\nCăn cứ: \"I have concentrated on the revitalization of the Brentler Heights waterfront district by developer and former architect David Greeley.\" → Tôi tập trung vào việc hồi sinh khu bến cảng Brentler Heights do nhà phát triển, cựu kiến trúc sư David Greeley thực hiện.\n\nXét từng phương án:\n- (A) Sự chuyển mình của một khu vực trong thành phố → khớp với câu mở đầu về việc hồi sinh khu bến cảng ✗\n- (B) Ấn phẩm mới của một kiến trúc sư địa phương ✓\n- (C) Lớp nghệ thuật ở phòng tranh → không nhắc ✗\n- (D) Tài trợ cho nghệ sĩ → không nhắc ✗\n\nGhi nhớ:\n- revitalization: sự hồi sinh; former architect: cựu kiến trúc sư\n- Lưu ý: đáp án lấy theo file PDF giải chi tiết (B). Phần dịch tô màu của chính PDF lại dẫn đến câu nói về việc hồi sinh khu bến cảng, tức nội dung của phương án A.",
       "glossary": [
        {
         "term": "revitalization",
