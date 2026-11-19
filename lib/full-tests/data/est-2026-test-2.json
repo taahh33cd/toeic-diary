@@ -2423,7 +2423,7 @@
    "questionEnd": 64,
    "audio": "q62-64.mp3",
    "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/62-64.png",
-   "transcript": "M: I really need this coffee break. My morning meeting with my client was really challenging.\nW: What were you discussing?\nM: The project schedule. They asked us to provide the prototype design to them three weeks earlier than originally planned.\nW: Well. Then today's cup is my treat. Which one would you like?\nM: That's so nice of you! I'll go with the White Cloud Coffee. I like a little milk in mine.\nW: Good choice. So, I have some news to share with you. Did you hear about David?\nM: No, what's going on?\nW: Apparently, he's planning to retire next month.\n62. What did the man's client request?\n63. Look at the graphic. How much does the man's coffee cost?\n64. What does the woman say about David?",
+   "transcript": "M: I really need this coffee break. My morning meeting with my client was really challenging.\nW: What were you discussing?\nM: The project schedule. They asked us to provide the prototype design to them three weeks earlier than originally planned.\nW: Well. Then today's cup is my treat. Which one would you like?\nM: That's so nice of you! I'll go with the White Cloud Coffee. I like a little milk in mine.\nW: Good choice. So, I have some news to share with you. Did you hear about David?\nM: No, what's going on?\nW: Apparently, he's planning to retire next month.",
    "keywords": [
     {
      "term": "challenging",
@@ -2522,7 +2522,7 @@
    "questionEnd": 67,
    "audio": "q65-67.mp3",
    "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/65-67.png",
-   "transcript": "M: This is Bradley from Windows Galore. How can I help you?\nW: Hello! I'd like to have screens added to my windows at home. I was wondering if you would be available to stop by and take a look. I live at 42 West Third Street, by the way.\nM: OK—that's not far. Let me see. I could come any morning this week.\nW: How about in the afternoon?\nM: Hmm. I could reschedule my Tuesday afternoon appointment. I'll check and get back to you—I have your number now. And your name is?\nW: Hoffman—Claudia Hoffman. Thank you. Talk to you soon.\n65. What does the man most likely do?\n66. What does the woman provide?\n67. Look at the graphic. Which appointment will the man try to reschedule?",
+   "transcript": "M: This is Bradley from Windows Galore. How can I help you?\nW: Hello! I'd like to have screens added to my windows at home. I was wondering if you would be available to stop by and take a look. I live at 42 West Third Street, by the way.\nM: OK—that's not far. Let me see. I could come any morning this week.\nW: How about in the afternoon?\nM: Hmm. I could reschedule my Tuesday afternoon appointment. I'll check and get back to you—I have your number now. And your name is?\nW: Hoffman—Claudia Hoffman. Thank you. Talk to you soon.",
    "keywords": [
     {
      "term": "screen",
@@ -2621,7 +2621,7 @@
    "questionEnd": 70,
    "audio": "q68-70.mp3",
    "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/68-70.png",
-   "transcript": "M: Ms. Kwon, thank you for sending me to the upcoming robotics conference. I didn't expect an opportunity like this so soon after being hired here.\nW: It's important for you to be familiar with current robot designs. There are always new trends and technologies coming out, and I want you to stay ahead of developments in our industry.\nM: I agree. Plus, it'll give me the chance to introduce myself to potential clients.\nW: Oh, about that: here's a handout I provide to all new hires. It includes some helpful tips—especially this one. Do you have your business cards yet?\nM: Hmm. I haven't received them, but I'll call the printer today for an update.\n68. What industry do the speakers most likely work in?\n69. Why does the woman want the man to attend a conference?\n70. Look at the graphic. Which tip does the woman point out?",
+   "transcript": "M: Ms. Kwon, thank you for sending me to the upcoming robotics conference. I didn't expect an opportunity like this so soon after being hired here.\nW: It's important for you to be familiar with current robot designs. There are always new trends and technologies coming out, and I want you to stay ahead of developments in our industry.\nM: I agree. Plus, it'll give me the chance to introduce myself to potential clients.\nW: Oh, about that: here's a handout I provide to all new hires. It includes some helpful tips—especially this one. Do you have your business cards yet?\nM: Hmm. I haven't received them, but I'll call the printer today for an update.",
    "keywords": [
     {
      "term": "upcoming",
@@ -2720,7 +2720,7 @@
    "questionEnd": 73,
    "audio": "q71-73.mp3",
    "image": null,
-   "transcript": "M-Cn: Crew, please stop working on that truck repair for a second. Many of you complained about how slow and hard it is to use the car lift, so I purchased a new one and it was delivered this morning! It can lift much heavier vehicles, and it's faster. The only problem is we're missing the bottles of hydraulic fluid that were supposed to be included in the shipment. So, we're stuck using the old car lift for a few more days. Oh, and one more thing—when talking to customers, please remember to mention that we're now offering a discount on oil changes if they schedule a vehicle inspection with us.\n71. Where do the listeners most likely work?\n72. What problem does the speaker mention?\n73. What should the listeners remind customers about?",
+   "transcript": "M-Cn: Crew, please stop working on that truck repair for a second. Many of you complained about how slow and hard it is to use the car lift, so I purchased a new one and it was delivered this morning! It can lift much heavier vehicles, and it's faster. The only problem is we're missing the bottles of hydraulic fluid that were supposed to be included in the shipment. So, we're stuck using the old car lift for a few more days. Oh, and one more thing—when talking to customers, please remember to mention that we're now offering a discount on oil changes if they schedule a vehicle inspection with us.",
    "keywords": [
     {
      "term": "complain",
@@ -2862,7 +2862,7 @@
    "questionEnd": 76,
    "audio": "q74-76.mp3",
    "image": null,
-   "transcript": "W-Br: As you know, we've had an extremely successful fourth quarter selling desks and chairs to our corporate clients on the West Coast. In fact, we've done so well that we're planning to give ten percent of this month's profits to a local charity in December. They have a great reputation for teaching computer skills to children for free. If you'd like to see a video clip of our CEO talking about this initiative, just visit our social media site.\n74. What does the company sell?\n75. What does the speaker say will happen in December?\n76. According to the speaker, what can the listeners find on a social media site?",
+   "transcript": "W-Br: As you know, we've had an extremely successful fourth quarter selling desks and chairs to our corporate clients on the West Coast. In fact, we've done so well that we're planning to give ten percent of this month's profits to a local charity in December. They have a great reputation for teaching computer skills to children for free. If you'd like to see a video clip of our CEO talking about this initiative, just visit our social media site.",
    "keywords": [
     {
      "term": "extremely",
@@ -3004,7 +3004,7 @@
    "questionEnd": 79,
    "audio": "q77-79.mp3",
    "image": null,
-   "transcript": "M-Au: Welcome to Impact Unlocked, the podcast for businesses wanting to streamline their operations with new technology. In today's episode, I'll talk about how to raise money by leveraging social media applications to get donations. I could focus on specific applications, but these things are constantly changing. Instead, I'll speak generally about how these types of applications can help you connect with potential donors. Some organizations keep using the same familiar fund-raising strategies. I see this often. But it's important to also incorporate the latest approaches.\n\n77. What is the episode mainly about?\n78. What does the speaker mean when he says, \"these things are constantly changing\"?\n79. What does the speaker say is important for organizations to do?",
+   "transcript": "M-Au: Welcome to Impact Unlocked, the podcast for businesses wanting to streamline their operations with new technology. In today's episode, I'll talk about how to raise money by leveraging social media applications to get donations. I could focus on specific applications, but these things are constantly changing. Instead, I'll speak generally about how these types of applications can help you connect with potential donors. Some organizations keep using the same familiar fund-raising strategies. I see this often. But it's important to also incorporate the latest approaches.",
    "keywords": [
     {
      "term": "streamline",
@@ -3158,7 +3158,7 @@
    "questionEnd": 82,
    "audio": "q80-82.mp3",
    "image": null,
-   "transcript": "W-Am: As the company president, I'm excited to share that we've sold a record number of home appliances for two years in a row, and I'd like to reward your hard work. First, everyone will be eligible for a one-time monetary bonus. Your supervisor will speak with you about how it'll be calculated and when you'll receive it. Also, I'd like to offer more flexibility in your schedule, so all employees will be permitted to work remotely twice a week. You'll just need to note those days on your calendar, so everyone knows where you are.\n80. What does the speaker say the company sells?\n81. What will the listeners discuss with their supervisors?\n82. How will the company offer more flexibility?",
+   "transcript": "W-Am: As the company president, I'm excited to share that we've sold a record number of home appliances for two years in a row, and I'd like to reward your hard work. First, everyone will be eligible for a one-time monetary bonus. Your supervisor will speak with you about how it'll be calculated and when you'll receive it. Also, I'd like to offer more flexibility in your schedule, so all employees will be permitted to work remotely twice a week. You'll just need to note those days on your calendar, so everyone knows where you are.",
    "keywords": [
     {
      "term": "appliance",
@@ -3300,7 +3300,7 @@
    "questionEnd": 85,
    "audio": "q83-85.mp3",
    "image": null,
-   "transcript": "M-Cn: I called this meeting today because I wanted to talk about changes to how our company hires new employees. It came to my attention that some people were confused when reading about these new hiring policies in the latest company newsletter. I posted a link in the meeting invitation to this information, and I asked you to bring your laptops so that you can follow along on your own screen. After we review the policies, you can see Sumit in the back of the room if you'd like a printed copy. He has several of them.\n83. What is the purpose of the meeting?\n84. What did the speaker ask the listeners to bring to the meeting?\n85. Why might some of the listeners look for Sumit?",
+   "transcript": "M-Cn: I called this meeting today because I wanted to talk about changes to how our company hires new employees. It came to my attention that some people were confused when reading about these new hiring policies in the latest company newsletter. I posted a link in the meeting invitation to this information, and I asked you to bring your laptops so that you can follow along on your own screen. After we review the policies, you can see Sumit in the back of the room if you'd like a printed copy. He has several of them.",
    "keywords": [
     {
      "term": "hire",
@@ -3442,7 +3442,7 @@
    "questionEnd": 88,
    "audio": "q86-88.mp3",
    "image": null,
-   "transcript": "M-Au: As head of the product design team, I have the sales results from the last quarter, and they're disappointing. It's clear that consumers are no longer interested in the types of toys and games we've been producing. My guess is that people are getting tired of noisy, blinking electronics. We have a lot of work to do. There's a new trend toward outdoor toys and games, where people can be physically active. I've already come up with some prototypes of new games. I brought a few of them, and now I'll show you how they work.\n86. What did the speaker recently receive?\n87. What does the speaker mean when he says, \"We have a lot of work to do\"?\n88. What will the speaker do next?",
+   "transcript": "M-Au: As head of the product design team, I have the sales results from the last quarter, and they're disappointing. It's clear that consumers are no longer interested in the types of toys and games we've been producing. My guess is that people are getting tired of noisy, blinking electronics. We have a lot of work to do. There's a new trend toward outdoor toys and games, where people can be physically active. I've already come up with some prototypes of new games. I brought a few of them, and now I'll show you how they work.",
    "keywords": [
     {
      "term": "disappointing",
@@ -3541,7 +3541,7 @@
    "questionEnd": 91,
    "audio": "q89-91.mp3",
    "image": null,
-   "transcript": "M-Cn: Hello. You've reached Ji-Soo Yoon at the visitor center of the Pine Valley Nature Preserve. I am currently out of the office. Please be aware that visitor access to the park will be limited during the month of March while our facilities are undergoing renovations. If you are calling for information about helping to maintain our hiking trails, please refer to the volunteer page on our Web site. We welcome the assistance of motivated individuals. For all other inquiries, please leave a message after the tone.\n89. Where does the speaker work?\n90. What will happen in March?\n91. What does the speaker say can be found online?",
+   "transcript": "M-Cn: Hello. You've reached Ji-Soo Yoon at the visitor center of the Pine Valley Nature Preserve. I am currently out of the office. Please be aware that visitor access to the park will be limited during the month of March while our facilities are undergoing renovations. If you are calling for information about helping to maintain our hiking trails, please refer to the volunteer page on our Web site. We welcome the assistance of motivated individuals. For all other inquiries, please leave a message after the tone.",
    "keywords": [
     {
      "term": "preserve",
@@ -3646,7 +3646,7 @@
    "questionEnd": 94,
    "audio": "q92-94.mp3",
    "image": null,
-   "transcript": "W-Am: Today, I'll be interviewing the owners of Salazar Olive Oil, one of the best in California for the past two decades. Now—if you're hearing about this olive oil for the first time, you're not alone. The Salazar family has kept the operation small. I'm interested in discussing their business philosophy as well as their new project: an olive oil tasting class on their farm. You'll find out how to register during the interview so you can sign up!\n92. Who are today's guests on the podcast?\n93. Why does the speaker say, \"The Salazar family has kept the operation small\"?\n94. What will the listeners be able to do after the podcast?",
+   "transcript": "W-Am: Today, I'll be interviewing the owners of Salazar Olive Oil, one of the best in California for the past two decades. Now—if you're hearing about this olive oil for the first time, you're not alone. The Salazar family has kept the operation small. I'm interested in discussing their business philosophy as well as their new project: an olive oil tasting class on their farm. You'll find out how to register during the interview so you can sign up!",
    "keywords": [
     {
      "term": "decade",
@@ -3745,7 +3745,7 @@
    "questionEnd": 97,
    "audio": "q95-97.mp3",
    "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/95-97.png",
-   "transcript": "W-Br: Welcome to the Abingdon Transit Station. Please be advised that the Circle Route bus is not currently stopping at the station entrance because of some street resurfacing work. A temporary bus stop has been set up around the corner in front of the post office. Signs are posted directing you to the new stop. Bus timetables will be affected by the change in the route. Use the Abingdon Transit mobile phone app to view live updates for when the next bus is due.\n95. According to the speaker, why was a transit route changed?\n96. Look at the graphic. Where will the listeners find a new bus stop?\n97. Why should the listeners check a mobile phone application?",
+   "transcript": "W-Br: Welcome to the Abingdon Transit Station. Please be advised that the Circle Route bus is not currently stopping at the station entrance because of some street resurfacing work. A temporary bus stop has been set up around the corner in front of the post office. Signs are posted directing you to the new stop. Bus timetables will be affected by the change in the route. Use the Abingdon Transit mobile phone app to view live updates for when the next bus is due.",
    "keywords": [
     {
      "term": "transit",
@@ -3844,7 +3844,7 @@
    "questionEnd": 100,
    "audio": "q98-100.mp3",
    "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/98-100.png",
-   "transcript": "M-Cn: Hello, everyone! We're happy to announce that the February continuing education workshops here at the community center were very successful. Thank you for working so hard to make sure they ran smoothly. Every workshop was completely full. In fact, we had to create a waiting list for the Monday night workshop. Beginning in March, we'll offer that same workshop on Fridays. Now, many participants complained about the lack of vending machines in the building. Bianca will be contacting vending services next week to ask about pricing.\n98. Where does the speaker work?\n99. Look at the graphic. Which workshop will be offered on Fridays starting in March?\n100. What will Bianca do next week?",
+   "transcript": "M-Cn: Hello, everyone! We're happy to announce that the February continuing education workshops here at the community center were very successful. Thank you for working so hard to make sure they ran smoothly. Every workshop was completely full. In fact, we had to create a waiting list for the Monday night workshop. Beginning in March, we'll offer that same workshop on Fridays. Now, many participants complained about the lack of vending machines in the building. Bianca will be contacting vending services next week to ask about pricing.",
    "keywords": [
     {
      "term": "continuing education",
