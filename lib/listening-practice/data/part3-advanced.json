@@ -1,0 +1,512 @@
+{
+  "examSlug": "part3-practice",
+  "examTitle": "Luyện nghe Part 3",
+  "testNumber": 2,
+  "slug": "part3-advanced",
+  "title": "Luyện tập nâng cao",
+  "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part3/part3-advanced",
+  "locked": false,
+  "lockReason": null,
+  "stats": {
+    "questions": 15,
+    "answered": 15,
+    "missingAnswers": [],
+    "brokenQuestions": []
+  },
+  "groups": [
+    {
+      "part": 3,
+      "questionStart": 1,
+      "questionEnd": 3,
+      "audio": "11.mp3",
+      "image": "/listening-practice/part3/advanced-1.png",
+      "imageWidth": 450,
+      "transcript": "M-Au: Anita, take a look at this travel Web site. Our hotel received some bad reviews - here's one of them.\nW-Br: Wow, there are definitely areas we need to work on. With a review like that, I'm worried we won't attract as many customers.\nM-Au: Well, at least we're renovating the rooms soon, so their appearance will improve.\nW-Br: True. But let's discuss the other low rating at our next staff meeting.\nM-Au: You know, maybe we should bring in a consultant to give us advice on how to deal with this. We certainly don't want any more bad reviews.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/21f875d5-97b4-43c5-b111-9adab3056540",
+      "questions": [
+        {
+          "number": 1,
+          "part": 3,
+          "prompt": "What does the woman say she is worried about?",
+          "options": {
+            "A": "Exceeding a budget",
+            "B": "Hosting a conference",
+            "C": "Losing customers",
+            "D": "Passing an inspection"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nói: \"I'm worried we won't attract as many customers\" (tôi lo là mình sẽ không thu hút được nhiều khách như trước) ⇒ lo mất khách hàng (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 2,
+          "part": 3,
+          "prompt": "Look at the graphic. Which category will be discussed in the next staff meeting?",
+          "options": {
+            "A": "Location",
+            "B": "Hotel facilities",
+            "C": "Guest services",
+            "D": "Room appearance"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Bảng review có hai mục chỉ 2 sao: Guest services và Room appearance. Người đàn ông nói phòng sắp được sửa nên \"their appearance will improve\", người phụ nữ đáp \"let's discuss the other low rating at our next staff meeting\" ⇒ mục thấp điểm còn lại là Guest services (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 3,
+          "part": 3,
+          "prompt": "What does the man suggest doing?",
+          "options": {
+            "A": "Buying new equipment",
+            "B": "Changing a reservation",
+            "C": "Providing a discount",
+            "D": "Hiring a consultant"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đề xuất: \"maybe we should bring in a consultant to give us advice\" (có lẽ nên mời một chuyên gia tư vấn) ⇒ thuê tư vấn (D).",
+            "glossary": [
+              {
+                "term": "review",
+                "pos": "noun",
+                "ipa": "rɪˈvjuː",
+                "meaning": "bài đánh giá"
+              },
+              {
+                "term": "attract",
+                "pos": "verb",
+                "ipa": "əˈtrækt",
+                "meaning": "thu hút"
+              },
+              {
+                "term": "renovate",
+                "pos": "verb",
+                "ipa": "ˈrenəveɪt",
+                "meaning": "cải tạo, sửa sang"
+              },
+              {
+                "term": "rating",
+                "pos": "noun",
+                "ipa": "ˈreɪtɪŋ",
+                "meaning": "điểm đánh giá, xếp hạng"
+              },
+              {
+                "term": "consultant",
+                "pos": "noun",
+                "ipa": "kənˈsʌltənt",
+                "meaning": "chuyên gia tư vấn"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 4,
+      "questionEnd": 6,
+      "audio": "12.mp3",
+      "image": "/listening-practice/part3/advanced-2.png",
+      "imageWidth": 592,
+      "transcript": "M-Au: Jin-Hee, the company's closing the parking area in front of our research lab for construction next month. Can you send an e-mail to tell the rest of the team?\nW-Br: Yeah, sure. Did they decide where everyone should park in the meantime?\nM-Au: We're supposed to use the west parking area till the construction's finished.\nW-Br: That's quite a long walk from our lab. When the weather's bad, the roads around here can get really icy.\nM-Au: Don't worry. The company's providing shuttles from the parking area to our lab. Could you add that to the e-mail as well?",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/afeca290-4d87-44d6-9aac-6c2e622171b5",
+      "questions": [
+        {
+          "number": 4,
+          "part": 3,
+          "prompt": "Look at the graphic. Which parking area will be closed?",
+          "options": {
+            "A": "North",
+            "B": "East",
+            "C": "South",
+            "D": "West"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói: \"the company's closing the parking area in front of our research lab\". Trên bản đồ, bãi đỗ xe ngay trước Research Lab là East Parking (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 5,
+          "part": 3,
+          "prompt": "What is the woman concerned about?",
+          "options": {
+            "A": "Building security access",
+            "B": "Parking fees",
+            "C": "Road conditions",
+            "D": "Heavy traffic"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nói đường đi bộ xa và \"When the weather's bad, the roads around here can get really icy\" (thời tiết xấu thì đường quanh đây đóng băng) ⇒ cô lo về tình trạng đường sá (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 6,
+          "part": 3,
+          "prompt": "What does the man say the company will do?",
+          "options": {
+            "A": "Reimburse employees",
+            "B": "Offer a shuttle service",
+            "C": "Provide maps",
+            "D": "Distribute electronic badges"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói: \"The company's providing shuttles from the parking area to our lab\" (công ty sẽ có xe đưa đón từ bãi xe tới phòng thí nghiệm) ⇒ dịch vụ xe đưa đón (B).",
+            "glossary": [
+              {
+                "term": "construction",
+                "pos": "noun",
+                "ipa": "kənˈstrʌkʃn",
+                "meaning": "việc thi công, xây dựng"
+              },
+              {
+                "term": "in the meantime",
+                "pos": "phrase",
+                "ipa": "ɪn ðə ˈmiːntaɪm",
+                "meaning": "trong lúc chờ đợi"
+              },
+              {
+                "term": "icy",
+                "pos": "adjective",
+                "ipa": "ˈaɪsi",
+                "meaning": "đóng băng, trơn trượt"
+              },
+              {
+                "term": "shuttle",
+                "pos": "noun",
+                "ipa": "ˈʃʌtl",
+                "meaning": "xe đưa đón"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 7,
+      "questionEnd": 9,
+      "audio": "13.mp3",
+      "image": "/listening-practice/part3/advanced-3.png",
+      "imageWidth": 447,
+      "transcript": "W-Am: Next, let's discuss our spring hiring plan. In the past we've been successful by recruiting at university career fairs. But, I'd like to do something different this time.\nM-Au: Really? Why's that?\nW-Am: Well, our employees spend so much time traveling to different universities that they fall behind on other important projects.\nM-Au: Good point. We could put more of our resources into our second most effective recruiting method. Actually, more than a quarter of our employees were recruited that way.\nW-Am: That's exactly what I was thinking. Would you set up a meeting with Yukiko in public relations and explore possibilities for expanding last year's campaign?",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/6ff4ad3e-62a9-48ce-81f7-e02edd6a3375",
+      "questions": [
+        {
+          "number": 7,
+          "part": 3,
+          "prompt": "What does the woman want to do?",
+          "options": {
+            "A": "Make travel arrangements",
+            "B": "Revise a budget",
+            "C": "Change recruiting tactics",
+            "D": "Give a lecture"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nói trước giờ tuyển ở hội chợ việc làm đại học, \"But I'd like to do something different this time\" (lần này tôi muốn làm khác đi) ⇒ đổi cách tuyển dụng (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 8,
+          "part": 3,
+          "prompt": "Look at the graphic. Which method does the man suggest using?",
+          "options": {
+            "A": "University career fairs",
+            "B": "Advertising",
+            "C": "Employee referrals",
+            "D": "Company Web site"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đề xuất \"our second most effective recruiting method... more than a quarter of our employees were recruited that way\". Trên biểu đồ, cao thứ hai sau Career Fairs (40%) là Advertising 27% — đúng là hơn 1/4 (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 9,
+          "part": 3,
+          "prompt": "What does the woman suggest the man do?",
+          "options": {
+            "A": "Design a questionnaire",
+            "B": "Renew a contract",
+            "C": "Work with a colleague",
+            "D": "Interview a job candidate"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nhờ: \"Would you set up a meeting with Yukiko in public relations...?\" (anh sắp xếp họp với Yukiko bên PR được không?) ⇒ làm việc với một đồng nghiệp (C).",
+            "glossary": [
+              {
+                "term": "recruit",
+                "pos": "verb",
+                "ipa": "rɪˈkruːt",
+                "meaning": "tuyển dụng"
+              },
+              {
+                "term": "career fair",
+                "pos": "noun phrase",
+                "ipa": "kəˈrɪə(r) feə(r)",
+                "meaning": "hội chợ việc làm"
+              },
+              {
+                "term": "fall behind on",
+                "pos": "phrasal verb",
+                "ipa": "fɔːl bɪˈhaɪnd ɒn",
+                "meaning": "bị chậm, tụt lại (công việc)"
+              },
+              {
+                "term": "resources",
+                "pos": "noun",
+                "ipa": "rɪˈzɔːsɪz",
+                "meaning": "nguồn lực"
+              },
+              {
+                "term": "public relations",
+                "pos": "noun phrase",
+                "ipa": "ˌpʌblɪk rɪˈleɪʃnz",
+                "meaning": "bộ phận quan hệ công chúng (PR)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 10,
+      "questionEnd": 12,
+      "audio": "14.mp3",
+      "image": "/listening-practice/part3/advanced-4.png",
+      "imageWidth": 574,
+      "transcript": "M-Cn: Good afternoon, Ms. Dembo. I have some concerns. Can I show you the report on our pasta production this week?\nW-Am: Sure. What's the problem exactly?\nM-Cn: Well, according to page two of the report, the pasta-cutting machine in our production line was working at less than 50 percent capacity yesterday. We were not getting as much output as we usually do.\nW-Am: I see. Let's shut down that machine right away. And I'll have a technician look at the motor and blade immediately. We have to fill a large order of pasta this week - that machine must be working well so that we can produce the order on time.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/32c0e4ef-630d-4862-8f2c-6c34e878de22",
+      "questions": [
+        {
+          "number": 10,
+          "part": 3,
+          "prompt": "What industry do the speakers work in?",
+          "options": {
+            "A": "Car repair",
+            "B": "Appliance sales",
+            "C": "Food manufacturing",
+            "D": "Packaging design"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói về \"the report on our pasta production\" và \"our production line\" (dây chuyền sản xuất mì) ⇒ ngành sản xuất thực phẩm (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 11,
+          "part": 3,
+          "prompt": "Look at the graphic. Which machine is being discussed?",
+          "options": {
+            "A": "Machine 1",
+            "B": "Machine 2",
+            "C": "Machine 3",
+            "D": "Machine 4"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói chiếc máy cắt mì \"was working at less than 50 percent capacity yesterday\". Trên biểu đồ chỉ Machine 1 (~30%) thấp hơn 50%, các máy khác đều trên 70% ⇒ Machine 1 (A).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 12,
+          "part": 3,
+          "prompt": "What does the woman say she will do next?",
+          "options": {
+            "A": "Taste some samples",
+            "B": "Request some maintenance",
+            "C": "Print another report",
+            "D": "Check some specifications"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nói: \"I'll have a technician look at the motor and blade immediately\" (tôi sẽ cho kỹ thuật viên kiểm tra động cơ và lưỡi dao ngay) ⇒ yêu cầu bảo trì (B).",
+            "glossary": [
+              {
+                "term": "production line",
+                "pos": "noun phrase",
+                "ipa": "prəˈdʌkʃn laɪn",
+                "meaning": "dây chuyền sản xuất"
+              },
+              {
+                "term": "capacity",
+                "pos": "noun",
+                "ipa": "kəˈpæsəti",
+                "meaning": "công suất"
+              },
+              {
+                "term": "output",
+                "pos": "noun",
+                "ipa": "ˈaʊtpʊt",
+                "meaning": "sản lượng"
+              },
+              {
+                "term": "shut down",
+                "pos": "phrasal verb",
+                "ipa": "ʃʌt daʊn",
+                "meaning": "tắt, ngừng hoạt động"
+              },
+              {
+                "term": "technician",
+                "pos": "noun",
+                "ipa": "tekˈnɪʃn",
+                "meaning": "kỹ thuật viên"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 13,
+      "questionEnd": 15,
+      "audio": "15.mp3",
+      "image": "/listening-practice/part3/advanced-5.png",
+      "imageWidth": 552,
+      "transcript": "W-Am: Welcome to Woodford Electronics! How may I help you?\nM-Au: Well, I purchased this digital camera yesterday from your store - but when I try to preview the photos I've taken, an error code displays on the screen.\nW-Am: Really? Let me take a look. I have a chart here of all the codes, perhaps it'll tell us what's going on... ah, I see. According to the chart, the camera doesn't have enough battery power to preview the photos.\nM-Au: Oh. Do I need to buy a new battery?\nW-Am: Well, let me give you a new one for free, since you just bought the camera from us yesterday.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/fb5c8204-f901-4e8f-b186-e1df0d81fa42",
+      "questions": [
+        {
+          "number": 13,
+          "part": 3,
+          "prompt": "Who most likely is the woman?",
+          "options": {
+            "A": "A workshop instructor",
+            "B": "A store clerk",
+            "C": "An electrician",
+            "D": "A product designer"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Cô ấy chào khách \"Welcome to Woodford Electronics! How may I help you?\" và nói khách \"just bought the camera from us\" ⇒ cô là nhân viên cửa hàng (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 14,
+          "part": 3,
+          "prompt": "Look at the graphic. Which error code is the camera displaying?",
+          "options": {
+            "A": "E-1",
+            "B": "E-2",
+            "C": "E-3",
+            "D": "E-4"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ tra bảng mã lỗi: \"the camera doesn't have enough battery power\" (máy không đủ pin). Trong bảng, Low battery ứng với mã E-3 (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 15,
+          "part": 3,
+          "prompt": "What will the woman most likely do next?",
+          "options": {
+            "A": "Replace an item",
+            "B": "Take a photograph",
+            "C": "Read a manual",
+            "D": "Show some slides"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nói: \"let me give you a new one for free\" (để tôi đổi cho anh một cục pin mới miễn phí) ⇒ thay một món đồ (A).",
+            "glossary": [
+              {
+                "term": "preview",
+                "pos": "verb",
+                "ipa": "ˈpriːvjuː",
+                "meaning": "xem trước"
+              },
+              {
+                "term": "error code",
+                "pos": "noun phrase",
+                "ipa": "ˈerə(r) kəʊd",
+                "meaning": "mã lỗi"
+              },
+              {
+                "term": "battery power",
+                "pos": "noun phrase",
+                "ipa": "ˈbætri ˈpaʊə(r)",
+                "meaning": "dung lượng pin"
+              },
+              {
+                "term": "for free",
+                "pos": "phrase",
+                "ipa": "fə(r) friː",
+                "meaning": "miễn phí"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

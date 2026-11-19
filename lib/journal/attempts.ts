@@ -8,8 +8,9 @@
  */
 
 import { prisma } from "@/lib/db/prisma";
-import { countByPart, getPracticeEntry, listPracticeTests, loadPracticeTest } from "@/lib/listening-practice";
-import { parsePracticeAttemptSlug, toFullTest } from "@/lib/listening-practice/adapt";
+import { countByPart, listPracticeTests, loadPracticeFullTest, practiceTestTitle } from "@/lib/listening-practice";
+import { parsePracticeAttemptSlug } from "@/lib/listening-practice/adapt";
+import { PART3_SETS } from "@/lib/listening-practice/part3";
 import { getCatalogEntry, getExamSet, listTests, loadTest } from "@/lib/full-tests";
 import type { FullTest, PartNumber } from "@/lib/full-tests/types";
 import type { RunConfig } from "@/components/full-tests/SetupPanel";
@@ -149,7 +150,7 @@ export async function loadAttemptHistory(userId: string): Promise<AttemptItem[]>
 
   for (const a of parts) {
     const parsed = parsePracticeAttemptSlug(a.testSlug);
-    const entry = parsed ? getPracticeEntry(parsed.testNumber) : undefined;
+    const title = parsed ? practiceTestTitle(parsed.testNumber, parsed.part) : undefined;
     const skillLabel = a.skill === "reading" ? "Reading" : "Listening";
     items.push({
       id: a.id,
@@ -157,7 +158,7 @@ export async function loadAttemptHistory(userId: string): Promise<AttemptItem[]>
       status: a.status === "in_progress" ? "in_progress" : "done",
       groupKey: `${a.skill}-${a.part}`,
       groupLabel: `${skillLabel} · Part ${a.part}`,
-      testTitle: entry?.title ?? a.testSlug,
+      testTitle: title ?? a.testSlug,
       testHref: parsed ? `/skills/${a.skill}/part${a.part}/${parsed.testNumber}` : `/skills/${a.skill}`,
       modeLabel: modeLabel(a.config),
       correct: a.correct,
@@ -397,10 +398,10 @@ async function loadDetail(id: string, userId: string | null): Promise<AttemptDet
   if (part) {
     const parsed = parsePracticeAttemptSlug(part.testSlug);
     if (!parsed) return null;
-    const practice = await loadPracticeTest(`test-${parsed.testNumber}`);
-    if (!practice) return null;
+    const test = await loadPracticeFullTest(parsed.testNumber, parsed.part);
+    if (!test) return null;
 
-    const entry = getPracticeEntry(parsed.testNumber);
+    const title = practiceTestTitle(parsed.testNumber, parsed.part);
     const skillLabel = part.skill === "reading" ? "Reading" : "Listening";
     const item: AttemptItem = {
       id: part.id,
@@ -408,7 +409,7 @@ async function loadDetail(id: string, userId: string | null): Promise<AttemptDet
       status: part.status === "in_progress" ? "in_progress" : "done",
       groupKey: `${part.skill}-${part.part}`,
       groupLabel: `${skillLabel} · Part ${part.part}`,
-      testTitle: entry?.title ?? part.testSlug,
+      testTitle: title ?? part.testSlug,
       testHref: `/skills/${part.skill}/part${part.part}/${parsed.testNumber}`,
       modeLabel: modeLabel(part.config),
       correct: part.correct,
@@ -423,7 +424,7 @@ async function loadDetail(id: string, userId: string | null): Promise<AttemptDet
     return {
       userId: part.userId,
       item,
-      test: toFullTest(practice, parsed.part),
+      test,
       config: toRunConfig(part.config, [part.part as PartNumber]),
       answers: toAnswerMap(part.answers),
       marked: toMarked(part.marked),
@@ -544,10 +545,10 @@ export function describeAttemptGroups(groupKeys: string[]): AttemptGroupMeta[] {
     if (part) {
       const [, skill, nStr] = part;
       const n = Number(nStr);
-      // Chỉ Part 1-2 có đề trong catalog luyện nghe; part khác đếm 0.
+      // Part 1-2 đếm theo catalog CA, Part 3 theo số bộ riêng; part khác đếm 0.
       const totalTests = n === 1 || n === 2
         ? listPracticeTests().filter((t) => countByPart(t, n) > 0).length
-        : 0;
+        : n === 3 && skill === "listening" ? PART3_SETS.length : 0;
       return { groupKey, href: `/skills/${skill}/part${n}`, totalTests };
     }
     const full = /^full-(.+)$/.exec(groupKey);

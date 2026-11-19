@@ -8,6 +8,7 @@ import { WritingSentenceClient } from "@/components/skills/WritingSentenceClient
 import { McqExamClient } from "@/components/skills/exam/McqExamClient";
 import { PracticeTestList } from "@/components/skills/listening/PracticeTestList";
 import { FREE_PRACTICE_TESTS, listPracticeTests } from "@/lib/listening-practice";
+import { PART3_SETS } from "@/lib/listening-practice/part3";
 import { WRITING_Q1_5, Q15_PART_KEY } from "@/lib/skills/writing-q1-5";
 import { Q67_PART_KEY } from "@/lib/skills/writing-q6-7";
 import { WritingEmailClient } from "@/components/skills/WritingEmailClient";
@@ -82,8 +83,8 @@ export default async function SkillUnitPage({ params }: Props) {
   const found = getUnit(skill, unit);
   if (!found) notFound();
 
-  // Listening Part 1 / Part 2 đã có bộ đề thật → danh sách test
-  if (skill === "listening" && (unit === "part1" || unit === "part2")) {
+  // Listening Part 1 / 2 / 3 đã có bộ đề thật → danh sách test
+  if (skill === "listening" && (unit === "part1" || unit === "part2" || unit === "part3")) {
     const supabase = await createClient();
     const { data: { user } } = await supabase.auth.getUser();
     const profile = user
@@ -95,18 +96,64 @@ export default async function SkillUnitPage({ params }: Props) {
           .catch(() => null)
       : null;
 
-    const part = unit === "part1" ? 1 : 2;
+    const part = unit === "part1" ? 1 : unit === "part2" ? 2 : 3;
     // Điểm lần gần nhất của chính học viên, hiện ngay trên thẻ đề.
     const stats = user
       ? await loadPartTestStats(user.id, skill, part).catch(() => undefined)
       : undefined;
 
+    const modes = (
+      <>
+        Mỗi bộ chọn được hai chế độ: <strong>Thi thử</strong> (audio chạy liền một mạch, không tua) hoặc{" "}
+        <strong>Luyện tập</strong> (nghe lại, đổi tốc độ, không bấm giờ).
+      </>
+    );
+
+    if (part === 3) {
+      return (
+        <PracticeTestList
+          skill={found.skill}
+          unit={found.unit}
+          tests={PART3_SETS.map((s) => ({
+            slug: s.slug,
+            testNumber: s.testNumber,
+            title: s.title,
+            detail: `${s.conversations} hội thoại · ${s.questions} câu`,
+          }))}
+          intro={
+            <>
+              {PART3_SETS.length} bộ đề · mỗi hội thoại 1–3 câu hỏi, có câu kèm biểu đồ. {modes}{" "}
+              Sau khi nộp bài có transcript, giải thích tiếng Việt và lối sang bài chép chính tả của từng hội thoại.
+            </>
+          }
+          freeNote={`Bộ ${PART3_SETS.filter((s) => s.free).map((s) => `"${s.title}"`).join(", ")} mở cho mọi tài khoản. Bộ còn lại cần đăng ký khoá học.`}
+          unlocked={isUsageExempt(profile)}
+          freeTests={PART3_SETS.filter((s) => s.free).map((s) => s.testNumber)}
+          stats={stats}
+        />
+      );
+    }
+
     return (
       <PracticeTestList
         skill={found.skill}
         unit={found.unit}
-        part={part}
-        tests={listPracticeTests()}
+        tests={listPracticeTests().map((t) => {
+          // Part 1 luôn là câu 1..part1, phần còn lại là Part 2
+          const missing = t.missingAudio.filter((n) => (part === 1 ? n <= t.part1 : n > t.part1)).length;
+          return {
+            slug: t.slug,
+            testNumber: t.testNumber,
+            title: t.title,
+            detail: `${part === 1 ? t.part1 : t.part2} câu${missing > 0 ? ` · ${missing} câu thiếu audio` : ""}`,
+          };
+        })}
+        intro={
+          <>
+            {listPracticeTests().length} bộ đề · mỗi bộ {part === 1 ? "6" : "25"} câu. {modes}{" "}Script &amp; đáp án hiện sau khi nộp bài.
+          </>
+        }
+        freeNote={`Đề ${FREE_PRACTICE_TESTS.join(" và ")} mở cho mọi tài khoản. Các đề còn lại cần đăng ký khoá học.`}
         unlocked={isUsageExempt(profile)}
         freeTests={FREE_PRACTICE_TESTS}
         stats={stats}

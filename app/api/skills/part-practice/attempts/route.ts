@@ -1,7 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { NextResponse } from "next/server";
-import { getPracticeEntry } from "@/lib/listening-practice";
+import { practiceTestExists } from "@/lib/listening-practice";
 import { parsePracticeAttemptSlug } from "@/lib/listening-practice/adapt";
 
 /** Bắt đầu một lượt luyện part mới, hoặc trả lại lượt đang làm dở của chính bộ đó. */
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
   }
 
   const parsed = parsePracticeAttemptSlug(body.testSlug);
-  if (!parsed || !getPracticeEntry(parsed.testNumber) || parsed.part !== body.part) {
+  if (!parsed || !practiceTestExists(parsed.testNumber, parsed.part) || parsed.part !== body.part) {
     return NextResponse.json({ error: "Unknown test" }, { status: 404 });
   }
 

@@ -45,8 +45,12 @@ export interface FullTestGroup {
   /** Tên file mp3, ghép với audioBase; chỉ có ở Part 1-4 */
   audio?: string;
   image?: string | null;
+  /** Bề ngang gốc (px) của ảnh nhỏ — UI không phóng to quá cỡ này cho khỏi vỡ */
+  imageWidth?: number;
   transcript?: string | null;
   keywords?: GlossaryTerm[];
+  /** Bài chép chính tả cùng audio (/practice/...) — màn xem lại hiện lối sang */
+  dictationHref?: string;
   /** Part 6/7 */
   intro?: string;
   passages?: Passage[];

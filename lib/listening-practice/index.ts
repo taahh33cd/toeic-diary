@@ -1,7 +1,10 @@
 // Chỉ dùng ở server: file này nạp JSON đề luyện nghe.
 // Component client import kiểu từ ./types.
 import catalogJson from "./data/catalog.json";
-import type { ListeningPart, PracticeCatalog, PracticeCatalogEntry, PracticeTest } from "./types";
+import type { FullTest } from "@/lib/full-tests/types";
+import type { ListeningPart, PracticeCatalog, PracticeCatalogEntry, PracticePart, PracticeTest } from "./types";
+import { toFullTest } from "./adapt";
+import { getPart3Set, loadPart3Test } from "./part3";
 
 export * from "./types";
 
@@ -59,4 +62,25 @@ export async function loadPracticePart(
   const test = await loadPracticeTest(`test-${testNumber}`);
   if (!test) return null;
   return { test, questions: test.questions.filter((q) => q.part === part) };
+}
+
+// ── Gộp mọi part về một cửa: route lượt làm, sổ học tập và trang đề gọi qua đây ──
+
+export function practiceTestTitle(testNumber: number, part: PracticePart): string | undefined {
+  return part === 3 ? getPart3Set(testNumber)?.title : getPracticeEntry(testNumber)?.title;
+}
+
+export function practiceTestExists(testNumber: number, part: PracticePart): boolean {
+  return practiceTestTitle(testNumber, part) !== undefined;
+}
+
+export function isPracticeFree(testNumber: number, part: PracticePart): boolean {
+  return part === 3 ? Boolean(getPart3Set(testNumber)?.free) : isPracticeTestFree(testNumber);
+}
+
+/** Đề ở shape FullTest để chạy bằng bộ máy làm bài/chấm điểm chung */
+export async function loadPracticeFullTest(testNumber: number, part: PracticePart): Promise<FullTest | null> {
+  if (part === 3) return loadPart3Test(testNumber);
+  const test = await loadPracticeTest(`test-${testNumber}`);
+  return test ? toFullTest(test, part) : null;
 }

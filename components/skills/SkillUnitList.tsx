@@ -6,6 +6,7 @@ import { FAMILY } from "@/lib/skills/exam-theme";
 const READY: Record<string, string> = {
   "listening/part1": "9 đề",
   "listening/part2": "9 đề",
+  "listening/part3": "2 bộ",
   "reading/part5": "Đề mẫu",
   "speaking/q1-2": "2 đề",
   "speaking/q3-4": "25 đề",

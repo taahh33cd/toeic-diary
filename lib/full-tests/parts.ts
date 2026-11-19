@@ -33,6 +33,26 @@ export const PARTS: PartMeta[] = [
 
 export const ALL_PARTS: PartNumber[] = [1, 2, 3, 4, 5, 6, 7];
 
+/**
+ * PARTS đã chọn, với first/last lấy theo số câu thật trong đề. Bộ luyện lẻ có thể
+ * đánh số riêng (Part 3 luyện tập là câu 1–23) thay vì dải chuẩn 32–70.
+ */
+export function partsWithRange(
+  parts: Iterable<PartNumber>,
+  groups: { part: PartNumber; questionStart: number; questionEnd: number }[],
+): PartMeta[] {
+  const chosen = new Set(parts);
+  return PARTS.filter((p) => chosen.has(p.part)).map((p) => {
+    const gs = groups.filter((g) => g.part === p.part);
+    if (gs.length === 0) return p;
+    return {
+      ...p,
+      first: Math.min(...gs.map((g) => g.questionStart)),
+      last: Math.max(...gs.map((g) => g.questionEnd)),
+    };
+  });
+}
+
 export function partMeta(part: PartNumber): PartMeta {
   const m = PARTS.find((p) => p.part === part);
   if (!m) throw new Error(`part không hợp lệ: ${part}`);
