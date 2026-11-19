@@ -1,0 +1,1031 @@
+{
+  "examSlug": "part3-practice",
+  "examTitle": "Luyện nghe Part 3",
+  "testNumber": 4,
+  "slug": "part3-basic-3",
+  "title": "Luyện tập cơ bản · Test 3",
+  "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-2",
+  "locked": false,
+  "lockReason": null,
+  "stats": {
+    "questions": 30,
+    "answered": 30,
+    "missingAnswers": [],
+    "brokenQuestions": []
+  },
+  "groups": [
+    {
+      "part": 3,
+      "questionStart": 1,
+      "questionEnd": 3,
+      "audio": "q32-34.mp3",
+      "image": null,
+      "transcript": "W: How were your deliveries?\nM: Not bad, except at that new residential building on South Street. I had to call them on my phone to come pick up their food. At first, I tried to call on the building intercom, but it’s still broken.\nW: You’re not the first to say that. Last week, a customer called to complain that their food was cold by the time they found it.\nM: Maybe we just can’t make deliveries there until the landlord fixes the intercom system.\nW: I’m going to update the instructions on our mobile app telling customers to meet us at the building’s front door. Let’s see if that helps.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/70240dea-3c89-472b-991a-7d7c70603e60",
+      "questions": [
+        {
+          "number": 1,
+          "part": 3,
+          "prompt": "What kind of work does the man do?",
+          "options": {
+            "A": "He is a tour guide.",
+            "B": "He is a landlord.",
+            "C": "He repairs appliances.",
+            "D": "He delivers food."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ mở đầu cuộc hội thoại bằng câu hỏi \"How were your deliveries?\" (Việc giao hàng của bạn thế nào?). Sau đó, người đàn ông nhắc đến việc khách xuống lấy \"đồ ăn\" (food). Điều này cho thấy công việc của anh ấy là nhân viên giao đồ ăn.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 2,
+          "part": 3,
+          "prompt": "What has caused problems for the speakers' business?",
+          "options": {
+            "A": "Road construction",
+            "B": "Cold weather",
+            "C": "An expired permit",
+            "D": "A broken intercom"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười đàn ông phàn nàn rằng \"I tried to call on the building intercom, but it's still broken\" (Tôi đã thử gọi qua hệ thống liên lạc của tòa nhà nhưng nó bị hỏng). Điều này khiến việc giao đồ ăn gặp khó khăn.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 3,
+          "part": 3,
+          "prompt": "What will the woman update on a mobile application?",
+          "options": {
+            "A": "Instructions",
+            "B": "Prices",
+            "C": "Photographs",
+            "D": "Hours of operation"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nỞ cuối đoạn hội thoại, người phụ nữ nói \"I'm going to update the instructions on our mobile app...\" (Tôi sẽ cập nhật các hướng dẫn trên ứng dụng di động...).",
+            "glossary": [
+              {
+                "term": "delivery",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "sự giao hàng"
+              },
+              {
+                "term": "building",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "tòa nhà dân cư"
+              },
+              {
+                "term": "intercom",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "hệ thống liên lạc nội bộ"
+              },
+              {
+                "term": "complain",
+                "pos": "v",
+                "ipa": "",
+                "meaning": "phàn nàn"
+              },
+              {
+                "term": "landlord",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "chủ nhà"
+              },
+              {
+                "term": "instruction",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "sự hướng dẫn"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 4,
+      "questionEnd": 6,
+      "audio": "q35-37.mp3",
+      "image": null,
+      "transcript": "W: We’re getting close to the time of year when we need to begin planning our Theater in the Park series for the summer. We have lots of decisions to make about shows, dates, and performers.\nM: You’re right. I’ll set up a meeting for this month. You know, I had an idea. Why don’t we invite community residents to volunteer to help with building sets, painting, and setting up the stage?\nW: We could, but I don’t know if we’ll be able to use volunteers this year. We’ll need approval to start that kind of program. It’ll take time. Let’s check into that for next year.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/9bf1a2c5-b17f-4683-b7c2-f6ae5c5d196c",
+      "questions": [
+        {
+          "number": 4,
+          "part": 3,
+          "prompt": "What industry do the speakers most likely work in?",
+          "options": {
+            "A": "Fitness",
+            "B": "Entertainment",
+            "C": "Landscaping",
+            "D": "Travel"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ nhắc đến việc lên kế hoạch cho \"Theater in the Park\" (Nhà hát trong Công viên), thảo luận về \"shows\" (vở diễn) và \"performers\" (người biểu diễn). Điều này chỉ ra họ làm việc trong ngành giải trí nghệ thuật.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 5,
+          "part": 3,
+          "prompt": "What does the man suggest?",
+          "options": {
+            "A": "Providing online access to videos",
+            "B": "Creating volunteer opportunities",
+            "C": "Offering free transportation",
+            "D": "Adding additional time slots"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười đàn ông đề xuất \"Why don't we invite community residents to volunteer to help...\" (Tại sao chúng ta không mời cư dân làm tình nguyện viên giúp đỡ...).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 6,
+          "part": 3,
+          "prompt": "Why do the speakers need to wait?",
+          "options": {
+            "A": "Promotional items have not been ordered.",
+            "B": "A facility is not available.",
+            "C": "A budget is too small.",
+            "D": "A program has not been approved."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ giải thích lý do không thể dùng tình nguyện viên ngay năm nay là vì: \"We'll need approval to start that kind of program. It'll take time.\" (Chúng ta cần được phê duyệt để bắt đầu chương trình đó. Sẽ mất thời gian).",
+            "glossary": [
+              {
+                "term": "performer",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "người biểu diễn"
+              },
+              {
+                "term": "volunteer",
+                "pos": "v, n",
+                "ipa": "",
+                "meaning": "tình nguyện, tình nguyện viên"
+              },
+              {
+                "term": "resident",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "cư dân"
+              },
+              {
+                "term": "up",
+                "pos": "v",
+                "ipa": "",
+                "meaning": "thiết lập, dựng (sân khấu)"
+              },
+              {
+                "term": "approval",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "sự phê duyệt, chấp thuận"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 7,
+      "questionEnd": 9,
+      "audio": "q38-40.mp3",
+      "image": null,
+      "transcript": "M: Back to our podcast with special guest Kimberly Stuart, who’s currently advising our city on business development projects. Before the break, we promised to address the decline of shopping downtown.\nW: Yes—and it’s been the worst at the kind of stores that sell unique items like antiques and jewelry. These items have always been purchased at brick-and-mortar stores but are now being purchased mostly online.\nM: So, do those stores have a future?\nW: I think they do, especially if we make a point of organizing live community activities downtown, such as concerts or festivals. When people walk around town, they are likely to browse at stores—and make purchases.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/4a8f7acc-4af4-4bcb-9206-d609df89d160",
+      "questions": [
+        {
+          "number": 7,
+          "part": 3,
+          "prompt": "Who is the woman?",
+          "options": {
+            "A": "A store owner",
+            "B": "A television celebrity",
+            "C": "A business consultant",
+            "D": "An event sponsor"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười đàn ông giới thiệu người phụ nữ là \"Kimberly Stuart, who's currently advising our city on business development projects\" (người đang cố vấn cho thành phố về các dự án phát triển kinh doanh).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 8,
+          "part": 3,
+          "prompt": "What does the woman say about online shopping?",
+          "options": {
+            "A": "It is cheaper than buying in person.",
+            "B": "It makes shopping a social experience.",
+            "C": "It is reducing traffic problems in the city.",
+            "D": "It is affecting specialty shops."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ cho biết tình trạng mua sắm suy giảm tồi tệ nhất ở các cửa hàng bán đồ độc đáo (đồ cổ, trang sức), lý do là vì những món đồ này hiện \"are now being purchased mostly online\" (chủ yếu được mua trực tuyến).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 9,
+          "part": 3,
+          "prompt": "What does the woman suggest doing?",
+          "options": {
+            "A": "Offering clearance sales",
+            "B": "Holding live events",
+            "C": "Meeting with store owners",
+            "D": "Retraining store staff"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nĐể cứu vãn tình hình, người phụ nữ gợi ý: \"organizing live community activities downtown, such as concerts or festivals\" (tổ chức các hoạt động cộng đồng trực tiếp ở trung tâm như hòa nhạc, lễ hội).",
+            "glossary": [
+              {
+                "term": "advise",
+                "pos": "v",
+                "ipa": "",
+                "meaning": "cố vấn, khuyên bảo"
+              },
+              {
+                "term": "decline",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "sự suy giảm"
+              },
+              {
+                "term": "antique",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "đồ cổ"
+              },
+              {
+                "term": "brick-and-mortar",
+                "pos": "adj",
+                "ipa": "",
+                "meaning": "(cửa hàng) truyền thống, có mặt bằng thực tế"
+              },
+              {
+                "term": "browse",
+                "pos": "v",
+                "ipa": "",
+                "meaning": "dạo xem, xem qua"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 10,
+      "questionEnd": 12,
+      "audio": "q41-43.mp3",
+      "image": null,
+      "transcript": "M: Our company has seen a huge spike in sales ever since it launched the rebate program for customers. With the rebate, customers get money back. And they’re telling their friends, increasing our sales.\nW: Yes. The rebate’s been great for our company because now more homeowners have an incentive to install solar panels on their properties, since they’re rewarded for the electricity their solar panels produce. But our technicians can’t keep up with the high demand.\nM: You’re right. I’m planning to hire more technicians. I’ve already received some résumés from potential candidates.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/6e306a99-6371-4f71-bb44-2d9ceb7cb11e",
+      "questions": [
+        {
+          "number": 10,
+          "part": 3,
+          "prompt": "Why have a company's sales increased?",
+          "options": {
+            "A": "A rebate program was started.",
+            "B": "A competitor went out of business.",
+            "C": "A celebrity endorsed the company.",
+            "D": "A product won an award."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười đàn ông nói rằng doanh số tăng vọt \"ever since it launched the rebate program for customers\" (kể từ khi ra mắt chương trình hoàn tiền cho khách).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 11,
+          "part": 3,
+          "prompt": "What industry do the speakers most likely work in?",
+          "options": {
+            "A": "Banking",
+            "B": "Telecommunications",
+            "C": "Solar energy",
+            "D": "Music"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ đề cập đến việc khách hàng \"install solar panels on their properties\" (lắp đặt các tấm pin năng lượng mặt trời). Điều này cho thấy họ bán thiết bị năng lượng mặt trời.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 12,
+          "part": 3,
+          "prompt": "What does the man say he is planning to do?",
+          "options": {
+            "A": "Hire new employees",
+            "B": "Provide additional training",
+            "C": "Upgrade some equipment",
+            "D": "Open another location"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nỞ cuối hội thoại, người đàn ông xác nhận: \"I'm planning to hire more technicians\" (Tôi đang lên kế hoạch thuê thêm kỹ thuật viên).",
+            "glossary": [
+              {
+                "term": "spike",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "sự tăng vọt"
+              },
+              {
+                "term": "rebate",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "tiền được hoàn lại, sự giảm giá"
+              },
+              {
+                "term": "incentive",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "sự khích lệ, động lực"
+              },
+              {
+                "term": "panel",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "tấm pin năng lượng mặt trời"
+              },
+              {
+                "term": "technician",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "kỹ thuật viên"
+              },
+              {
+                "term": "candidate",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "ứng viên"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 13,
+      "questionEnd": 15,
+      "audio": "q44-46.mp3",
+      "image": null,
+      "transcript": "M: Fernanda, I was just looking at the company calendar, and I noticed that the national electronics trade show is coming up soon.\nW: Oh, that’s right! It’ll be a great opportunity for us to showcase the product that we’ve been developing—our new robotic vacuum cleaner.\nM: We’ll need to decide who we want to send to represent our company at the trade show.\nW: Well, I know just the right person—Kavi. Kavi does a good job of clearly explaining highly technical concepts in a way that everyone can understand.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/b1f9d68a-9030-48a6-b455-9dbc160be355",
+      "questions": [
+        {
+          "number": 13,
+          "part": 3,
+          "prompt": "What upcoming event are the speakers discussing?",
+          "options": {
+            "A": "A trade show",
+            "B": "A client meeting",
+            "C": "An awards ceremony",
+            "D": "A press conference"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười đàn ông mở lời bằng việc thông báo \"the national electronics trade show is coming up soon\" (triển lãm thương mại sắp diễn ra).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 14,
+          "part": 3,
+          "prompt": "What product has the speakers' company recently developed?",
+          "options": {
+            "A": "A video game",
+            "B": "A mobile phone",
+            "C": "A lawn mower",
+            "D": "A vacuum cleaner"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ cho biết họ sẽ trưng bày sản phẩm đang phát triển là \"our new robotic vacuum cleaner\" (robot hút bụi mới).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 15,
+          "part": 3,
+          "prompt": "Why does the woman recommend Kavi?",
+          "options": {
+            "A": "He is a good communicator.",
+            "B": "He enjoys traveling.",
+            "C": "He leads a product development team.",
+            "D": "He lives near the event venue."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ tiến cử Kavi vì anh ấy có khả năng \"clearly explaining highly technical concepts...\" (giải thích rõ ràng các khái niệm kỹ thuật cao...), đồng nghĩa với việc anh ấy là người truyền đạt/giao tiếp tốt.",
+            "glossary": [
+              {
+                "term": "show",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "triển lãm thương mại"
+              },
+              {
+                "term": "showcase",
+                "pos": "v",
+                "ipa": "",
+                "meaning": "trưng bày, giới thiệu"
+              },
+              {
+                "term": "represent",
+                "pos": "v",
+                "ipa": "",
+                "meaning": "đại diện"
+              },
+              {
+                "term": "concept",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "khái niệm"
+              },
+              {
+                "term": "cleaner",
+                "pos": "n",
+                "ipa": "",
+                "meaning": "máy hút bụi"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 16,
+      "questionEnd": 18,
+      "audio": "q47-49.mp3",
+      "image": null,
+      "transcript": "M: Dr. Fuentes, sorry to interrupt. Do you have a minute?\nW: Yes. My nine o’clock dental cleaning patient just canceled.\nM: I know you’re looking for a new receptionist. I’d like to recommend someone for the position.\nW: Oh. Who do you have in mind?\nM: Well, a former colleague of mine has just moved back to town. Her name’s Kelly Graham, and she has several years of experience.\nW: OK. Could you tell Kelly to send me her résumé? I’d be happy to look it over.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/f0760876-8d78-41eb-8aa4-386fee55ec26",
+      "questions": [
+        {
+          "number": 16,
+          "part": 3,
+          "prompt": "Where do the speakers most likely work?",
+          "options": {
+            "A": "At a publishing house",
+            "B": "At a dental clinic",
+            "C": "At a financial firm",
+            "D": "At a real estate agency"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười đàn ông gọi người phụ nữ là \"Dr. Fuentes\" (Bác sĩ Fuentes), và người phụ nữ nhắc đến \"dental cleaning patient\" (bệnh nhân cạo vôi răng/làm sạch răng).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 17,
+          "part": 3,
+          "prompt": "What does the man tell the woman about?",
+          "options": {
+            "A": "A new product",
+            "B": "A schedule change",
+            "C": "A policy update",
+            "D": "A job candidate"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười đàn ông muốn tiến cử người cho vị trí lễ tân: \"I'd like to recommend someone for the position\" (Tôi muốn tiến cử một người cho vị trí này).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 18,
+          "part": 3,
+          "prompt": "Why will the man most likely contact Kelly Graham?",
+          "options": {
+            "A": "To plan an office celebration",
+            "B": "To arrange a training session",
+            "C": "To request a document",
+            "D": "To order some supplies"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ nhờ người đàn ông bảo Kelly gửi sơ yếu lý lịch (\"send me her résumé\"). Resume (CV) là một loại tài liệu (document).\nĐOẠN HỘI THOẠI 7 (",
+            "glossary": [
+              {
+                "term": "interrupt",
+                "pos": "v",
+                "ipa": "ˌɪntəˈrʌpt",
+                "meaning": "làm gián đoạn, ngắt lời"
+              },
+              {
+                "term": "receptionist",
+                "pos": "n",
+                "ipa": "rɪˈsepʃənɪst",
+                "meaning": "nhân viên lễ tân"
+              },
+              {
+                "term": "recommend",
+                "pos": "v",
+                "ipa": "ˌrekəˈmend",
+                "meaning": "giới thiệu, tiến cử"
+              },
+              {
+                "term": "colleague",
+                "pos": "n",
+                "ipa": "ˈkɑːliːɡ",
+                "meaning": "đồng nghiệp"
+              },
+              {
+                "term": "experience",
+                "pos": "n",
+                "ipa": "ɪkˈspɪriəns",
+                "meaning": "kinh nghiệm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 19,
+      "questionEnd": 21,
+      "audio": "q50-52.mp3",
+      "image": null,
+      "transcript": "M1: Ms. Gao? I’m Hector, and this is my colleague Sergey. Thanks for meeting with us.\nW: It’s a pleasure to meet you both. How can I help you?\nM2: We’re making some training videos for our client, FiveStar Industries.\nM1: We found your advertisement in a trade publication. We need someone to choose appropriate filming sites at FiveStar’s factories, and it said you have lots of experience scouting for industrial locations.\nW: Sure. I’d want to start by touring their factories. Can you schedule a time for me to do that next week?\nM2: Yes, I’ll call them today to arrange it.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/375b4d6a-6fab-4cac-92bf-3d24ba5cc527",
+      "questions": [
+        {
+          "number": 19,
+          "part": 3,
+          "prompt": "What industry do the men work in?",
+          "options": {
+            "A": "Travel",
+            "B": "Manufacturing",
+            "C": "Video production",
+            "D": "Construction"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười đàn ông nói: \"We're making some training videos for our client\" (Chúng tôi đang làm vài video đào tạo cho khách hàng).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 20,
+          "part": 3,
+          "prompt": "How did the men learn about the woman?",
+          "options": {
+            "A": "From her Web site",
+            "B": "From a trade publication",
+            "C": "From a colleague",
+            "D": "From a recruitment agency"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười đàn ông đề cập: \"We found your advertisement in a trade publication\" (Chúng tôi đã thấy quảng cáo của bạn trên một ấn phẩm thương mại).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 21,
+          "part": 3,
+          "prompt": "What does the woman want to do next week?",
+          "options": {
+            "A": "Attend an orientation session",
+            "B": "Visit some facilities",
+            "C": "Interview some applicants",
+            "D": "Finalize a contract"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ nói: \"I'd want to start by touring their factories... next week\" (Tôi muốn bắt đầu bằng việc đi tham quan các nhà máy của họ vào tuần tới).\nĐOẠN HỘI THOẠI 8 (",
+            "glossary": [
+              {
+                "term": "colleague",
+                "pos": "n",
+                "ipa": "ˈkɑːliːɡ",
+                "meaning": "đồng nghiệp"
+              },
+              {
+                "term": "client",
+                "pos": "n",
+                "ipa": "ˈklaɪənt",
+                "meaning": "khách hàng"
+              },
+              {
+                "term": "appropriate",
+                "pos": "adj",
+                "ipa": "əˈproʊpriət",
+                "meaning": "thích hợp, phù hợp"
+              },
+              {
+                "term": "scout",
+                "pos": "v",
+                "ipa": "skaʊt",
+                "meaning": "trinh sát, tìm kiếm (địa điểm)"
+              },
+              {
+                "term": "arrange",
+                "pos": "v",
+                "ipa": "əˈreɪndʒ",
+                "meaning": "sắp xếp"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 22,
+      "questionEnd": 24,
+      "audio": "q53-55.mp3",
+      "image": null,
+      "transcript": "M: Our engineering firm has been asked to cut the corporate travel budget by twenty percent, but it won’t be easy. The engineering consultants have to travel to meet with clients.\nW: Right, and they often travel on short notice. Flight arrangements made at the last minute are expensive, especially for nonstop flights. It would be cheaper if they took connecting flights.\nM: Yes, but that can take a lot of time.\nW: True. Maybe we can make up for the cost of the flights by economizing on hotels. Let’s look into that.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/44ae66fa-819e-4a4c-9d21-77d6fab11ed2",
+      "questions": [
+        {
+          "number": 22,
+          "part": 3,
+          "prompt": "What type of business do the speakers work for?",
+          "options": {
+            "A": "A law firm",
+            "B": "An advertising agency",
+            "C": "An engineering firm",
+            "D": "An event-planning company"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười đàn ông bắt đầu câu chuyện bằng từ \"Our engineering firm...\" (Công ty kỹ thuật của chúng ta...).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 23,
+          "part": 3,
+          "prompt": "Why does the man say, \"that can take a lot of time\"?",
+          "options": {
+            "A": "To reject a suggestion",
+            "B": "To express sympathy",
+            "C": "To request additional pay",
+            "D": "To offer assistance"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ đề nghị đi các chuyến bay nối chuyến (connecting flights) để tiết kiệm tiền. Người đàn ông đáp lại \"Yes, but that can take a lot of time\" để ngụ ý rằng giải pháp này không khả thi vì tốn quá nhiều thời gian.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 24,
+          "part": 3,
+          "prompt": "What does the woman suggest?",
+          "options": {
+            "A": "Contacting some former clients",
+            "B": "Making reservations early",
+            "C": "Staying at affordable hotels",
+            "D": "Consulting with an expert"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ gợi ý: \"economizing on hotels\" (tiết kiệm chi phí cho các khách sạn). Điều này đồng nghĩa với việc tìm các khách sạn giá rẻ hơn.\nĐOẠN HỘI THOẠI 9 (",
+            "glossary": [
+              {
+                "term": "corporate",
+                "pos": "adj",
+                "ipa": "ˈkɔːrpərət",
+                "meaning": "thuộc về doanh nghiệp, công ty"
+              },
+              {
+                "term": "budget",
+                "pos": "n",
+                "ipa": "ˈbʌdʒɪt",
+                "meaning": "ngân sách"
+              },
+              {
+                "term": "consultant",
+                "pos": "n",
+                "ipa": "kənˈsʌltənt",
+                "meaning": "cố vấn, chuyên viên tư vấn"
+              },
+              {
+                "term": "short notice",
+                "pos": "n",
+                "ipa": "ʃɔːrt ˈnoʊtɪs",
+                "meaning": "thông báo gấp gáp"
+              },
+              {
+                "term": "economize",
+                "pos": "v",
+                "ipa": "ɪˈkɑːnəmaɪz",
+                "meaning": "tiết kiệm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 25,
+      "questionEnd": 27,
+      "audio": "q56-58.mp3",
+      "image": null,
+      "transcript": "M1: Thanks for meeting with us, Ms. Azuma. This is Scott Ajibade, one of our senior project managers.\nM2: I admire your work, Ms. Azuma.\nW: Thank you. I was surprised by your invitation. I typically design jewelry, but your company’s known for making computers and mobile phones.\nM1: Scott’s team is currently working on a smartwatch. But there’s a lot of competition, as you know.\nM2: We’re hoping you can create a fresh design that will help our product stand out.\nW: Do you already have an idea of what the watch should look like, or are we starting from scratch?\nM2: I have some preliminary sketches we can look at, but none of them seem quite right.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/a598eaf9-0a9e-48b1-ad11-6dd7ac512361",
+      "questions": [
+        {
+          "number": 25,
+          "part": 3,
+          "prompt": "What industry do the men most likely work in?",
+          "options": {
+            "A": "Fashion",
+            "B": "Cosmetics",
+            "C": "Advertising",
+            "D": "Technology"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ nhận xét rằng công ty của hai người đàn ông nổi tiếng với việc \"making computers and mobile phones\" (sản xuất máy tính và điện thoại di động) và họ đang làm một chiếc đồng hồ thông minh (smartwatch).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 26,
+          "part": 3,
+          "prompt": "Why did the men request a meeting?",
+          "options": {
+            "A": "To negotiate a merger",
+            "B": "To ask for funding",
+            "C": "To discuss a product design",
+            "D": "To suggest a marketing strategy"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nHai người đàn ông muốn người phụ nữ \"create a fresh design that will help our product stand out\" (tạo ra một thiết kế mới mẻ giúp sản phẩm nổi bật).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 27,
+          "part": 3,
+          "prompt": "What will the speakers most likely do next?",
+          "options": {
+            "A": "Set a release date",
+            "B": "Sign a contract",
+            "C": "Collect customer feedback",
+            "D": "Review some drawings"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nỞ cuối đoạn, người đàn ông nói \"I have some preliminary sketches we can look at\" (Tôi có vài bản phác thảo sơ bộ mà chúng ta có thể xem qua).\nĐOẠN HỘI THOẠI 10 (",
+            "glossary": [
+              {
+                "term": "senior",
+                "pos": "adj",
+                "ipa": "ˈsiːniər",
+                "meaning": "cao cấp"
+              },
+              {
+                "term": "admire",
+                "pos": "v",
+                "ipa": "ədˈmaɪər",
+                "meaning": "ngưỡng mộ"
+              },
+              {
+                "term": "competition",
+                "pos": "n",
+                "ipa": "ˌkɑːmpəˈtɪʃn",
+                "meaning": "sự cạnh tranh"
+              },
+              {
+                "term": "stand out",
+                "pos": "v",
+                "ipa": "stænd aʊt",
+                "meaning": "nổi bật"
+              },
+              {
+                "term": "preliminary",
+                "pos": "adj",
+                "ipa": "prɪˈlɪmɪneri",
+                "meaning": "sơ bộ, bước đầu"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 28,
+      "questionEnd": 30,
+      "audio": "q59-61.mp3",
+      "image": null,
+      "transcript": "W: Hi. I’d like to purchase some new carpeting. It’s for the waiting room at my hair salon.\nM: We have many different styles. Are you looking for something different?\nW: Well, we get a lot of customers walking through, and our current carpeting is a light color.\nM: No matter what color you get, all our carpets are durable and can take high amounts of foot traffic. For businesses like yours, I recommend placing a protective mat near the door.\nW: That’s a good idea.\nM: Also, I offer free cleaning services for a year for all purchases.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/47bb1bd0-29b1-41c0-9a41-dd985bbce01f",
+      "questions": [
+        {
+          "number": 28,
+          "part": 3,
+          "prompt": "What type of business does the woman work in?",
+          "options": {
+            "A": "A hair salon",
+            "B": "A real estate agency",
+            "C": "An interior design firm",
+            "D": "A car rental company"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười phụ nữ nói rằng cô ấy muốn mua thảm mới \"for the waiting room at my hair salon\" (cho phòng chờ tại tiệm làm tóc của tôi).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 29,
+          "part": 3,
+          "prompt": "Why does the woman say, \"our current carpeting is a light color\"?",
+          "options": {
+            "A": "To suggest an expense was not justified",
+            "B": "To express surprise about a decision",
+            "C": "To describe a problem with an order",
+            "D": "To indicate the need to make a change"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nViệc có quá nhiều khách hàng đi qua lại (\"a lot of customers walking through\") khiến một tấm thảm màu sáng dễ bị bẩn. Bằng cách nói câu này, cô ấy muốn giải thích lý do tại sao cô ấy cần đổi sang một loại thảm khác.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 30,
+          "part": 3,
+          "prompt": "What does the man's business offer?",
+          "options": {
+            "A": "A bulk discount",
+            "B": "Same-day delivery",
+            "C": "Free cleaning services",
+            "D": "Monthly inspections"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "-\nNgười đàn ông khẳng định: \"I offer free cleaning services for a year for all purchases\" (Tôi cung cấp dịch vụ làm sạch miễn phí trong một năm cho mọi giao dịch mua hàng).\nĐOẠN HỘI THOẠI 11 (",
+            "glossary": [
+              {
+                "term": "purchase",
+                "pos": "v/n",
+                "ipa": "ˈpɜːrtʃəs",
+                "meaning": "mua, việc mua sắm"
+              },
+              {
+                "term": "durable",
+                "pos": "adj",
+                "ipa": "ˈdʊrəbl",
+                "meaning": "bền"
+              },
+              {
+                "term": "foot traffic",
+                "pos": "n",
+                "ipa": "fʊt ˈtræfɪk",
+                "meaning": "lượng người đi bộ (qua lại)"
+              },
+              {
+                "term": "protective",
+                "pos": "adj",
+                "ipa": "prəˈtektɪv",
+                "meaning": "mang tính bảo vệ"
+              },
+              {
+                "term": "mat",
+                "pos": "n",
+                "ipa": "mæt",
+                "meaning": "tấm thảm"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

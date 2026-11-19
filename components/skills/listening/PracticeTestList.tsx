@@ -6,7 +6,7 @@ import type { TestStat } from "@/lib/journal/attempts";
 export function PracticeTestList({
   skill,
   unit,
-  tests,
+  sections,
   intro,
   freeNote,
   unlocked,
@@ -15,7 +15,8 @@ export function PracticeTestList({
 }: {
   skill: Skill;
   unit: SkillUnit;
-  tests: PracticeListItem[];
+  /** Các mục đề (vd "Luyện tập cơ bản", "Luyện tập nâng cao"); một mục không tên = một lưới phẳng */
+  sections: { title?: string; tests: PracticeListItem[] }[];
   /** Đoạn giới thiệu số đề/chế độ làm bài phía trên lưới đề */
   intro: React.ReactNode;
   /** Dòng báo đề nào mở miễn phí — chỉ hiện khi chưa mở khoá */
@@ -74,8 +75,16 @@ export function PracticeTestList({
         </p>
       )}
 
+      {sections.map((sec, si) => (
+      <section key={sec.title ?? si} style={{ marginBottom: "1.6rem" }}>
+      {sec.title && (
+        <h2 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.7rem" }}>
+          {sec.title}{" "}
+          <span style={{ fontSize: "0.78rem", fontWeight: 500, color: "var(--text-muted)" }}>· {sec.tests.length} test</span>
+        </h2>
+      )}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "0.7rem" }}>
-        {tests.map((t) => {
+        {sec.tests.map((t) => {
           const locked = !unlocked && !freeTests.includes(t.testNumber);
           const box: React.CSSProperties = {
             display: "block",
@@ -128,6 +137,8 @@ export function PracticeTestList({
           );
         })}
       </div>
+      </section>
+      ))}
     </div>
   );
 }

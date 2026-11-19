@@ -3,7 +3,8 @@
     "Vá thủ công cho những câu mà file nguồn không có nội dung dùng được.",
     "build_est2026.py áp file này SAU khi parse, nên chạy lại parser không mất.",
     "Khoá ngoài là testSlug, khoá trong là số câu.",
-    "Trường nào có ở đây thì ghi đè trường tương ứng trong câu đã parse."
+    "Trường nào có ở đây thì ghi đè trường tương ứng trong câu đã parse.",
+    "_group_overrides: vá cấp nhóm (transcript, keywords), khoá testSlug > dải câu \"32-34\"."
   ],
 
   "est-2026-test-1": {
@@ -28,6 +29,182 @@
             "meaning": "khẩn khoản, thu thập (ý kiến/phản hồi)"
           }
         ]
+      }
+    }
+  },
+
+  "_group_overrides": {
+    "est-2026-test-1": {
+      "32-34": {
+        "transcript": "W: Hey, Oliver. Did you see the focus group results for our new spicy cheddar cheese? Everyone really liked it.\nM: Yes. It should be a great addition to our company’s line of cheeses.\nW: Several people mentioned that they’d like to use it in recipes—to add to sauces, for example.\nM: So maybe we should consider selling a shredded version that would melt easily when cooked.\nW: I’m sure we could do that. I’ll get in touch with the production manager with that request."
+      },
+      "35-37": {
+        "transcript": "M: Hi. I’m calling to book three tickets for this Thursday’s tennis match. Are there any seats left?\nW: Just a few! Tickets for Thursday’s match have been selling quickly.\nM: I’m not surprised! After all, Ife Rotimi won the regional championship tournament last month. Everyone wants to see her play after her incredible performance. What seats are available?\nW: Well, there’s only one group of three seats together. Advance payment is required to hold them."
+      },
+      "38-40": {
+        "transcript": "W: Thanks for agreeing to help me organize the library’s annual fund-raising dinner, Klaus. We hope the event brings in enough money to expand our children’s book section.\nM: What task would you like me to start with?\nW: Well, I could use some help sending out the invitations.\nM: OK, I can take care of that. Is there a list of attendees available?\nW: It’s in my computer files. I’ll e-mail it to you."
+      },
+      "41-43": {
+        "transcript": "W: Hey, Brian and Matteo. I found some great pens to give away at the community festival to promote our business.\nM1: Great. Can we put our cleaning service logo on them?\nW: Yes, for no extra charge. And they’re biodegradable. They’re made from paper.\nM2: So when we hand them out, we can mention that.\nM1: As well as talk about the organic cleaning supplies our company uses.\nW: OK. I’ll go ahead and order several cases."
+      },
+      "44-46": {
+        "transcript": "W: Jamestown Recycling Facility. How can I help you?\nM: Hi. I’m preparing to move soon, and I have some electronics, such as televisions and computers, that I’d like to get rid of before I put my house on the market. My friend mentioned you might take them.\nW: Yes, that’s right. We’ll take all electronics.\nM: Great. I just have one question. Do you provide a pickup service?\nW: No, unfortunately you’ll have to bring everything here yourself. However, on our Web site we list a number of companies that can remove and dispose of the items for you."
+      },
+      "47-49": {
+        "transcript": "M: Zaina! What a surprise! I haven’t seen you since we took that class for business owners together last year. How are you?\nW: Great, thanks. I was just in the neighborhood and thought I’d stop in for a cookie or a piece of cake. You have so many delicious baked goods here.\nM: Thank you! It’s been a good year for business. I’m even considering opening a second location.\nW: Really? Well, I noticed that Sunnyvale Restaurant went out of business, and the building’s up for lease. It’s very close to the local university. You’d probably get a lot of walk-in customers."
+      },
+      "50-52": {
+        "transcript": "W: Hi, Koji. I think our new video game is nearly ready to be released. Are you aware of any improvements that need to be made before then?\nM: Actually, I just finished testing the game this morning. I found a problem in the third stage of the game. There were a few times when my character couldn’t move.\nW: Oh, that’s strange!\nM: I double-checked the problem using a different controller. The same issue came up.\nW: Oh. I think Pauline had a similar problem with a game she tested. Maybe you should ask her about it."
+      },
+      "53-55": {
+        "transcript": "M: You’ve reached the maintenance office at Hillview Apartment Complex.\nW: Hi. This is Palavi Sen from unit 35B. I’m calling because the new thermostat in my apartment isn’t working. It keeps shutting off and turning on randomly, so my apartment is getting cold.\nM: When did this issue start?\nW: A few hours ago. The thermostat was just installed yesterday.\nM: OK. I can come and take a look at it tomorrow morning.\nW: But it’s supposed to be below freezing tonight!"
+      },
+      "56-58": {
+        "transcript": "W: Good morning! Welcome to Jasper Bank.\nM1: Thanks for meeting with us to discuss a loan for our business.\nW: Why don’t you tell me more about your business? I understand it’s a repair shop?\nM2: Well, ten years ago, we opened as a snowmobile repair shop, but after a few years, we also started renting out snowmobiles and other sports equipment.\nM1: Yes, and because winter tourism has increased recently, we’d like to expand our space so that we can carry more inventory."
+      },
+      "59-61": {
+        "transcript": "M: Many of our factory workers have expressed interest in upgrading their skills. I’d like to implement a peer-training program, where learners shadow more-experienced employees and observe how they do their jobs.\nW: I’m afraid that might become a burden for our long-time employees. They’ll have to slow down their work to explain what they’re doing.\nM: What if we videotaped experienced employees doing specific tasks? High-quality video can be recorded and edited with a smartphone.\nW: I like that idea. It would allow us to capture our workers’ expertise without slowing down the production line."
+      }
+    },
+    "est-2026-test-2": {
+      "32-34": {
+        "transcript": "W: How were your deliveries?\nM: Not bad, except at that new residential building on South Street. I had to call them on my phone to come pick up their food. At first, I tried to call on the building intercom, but it’s still broken.\nW: You’re not the first to say that. Last week, a customer called to complain that their food was cold by the time they found it.\nM: Maybe we just can’t make deliveries there until the landlord fixes the intercom system.\nW: I’m going to update the instructions on our mobile app telling customers to meet us at the building’s front door. Let’s see if that helps."
+      },
+      "35-37": {
+        "transcript": "W: We’re getting close to the time of year when we need to begin planning our Theater in the Park series for the summer. We have lots of decisions to make about shows, dates, and performers.\nM: You’re right. I’ll set up a meeting for this month. You know, I had an idea. Why don’t we invite community residents to volunteer to help with building sets, painting, and setting up the stage?\nW: We could, but I don’t know if we’ll be able to use volunteers this year. We’ll need approval to start that kind of program. It’ll take time. Let’s check into that for next year."
+      },
+      "38-40": {
+        "transcript": "M: Back to our podcast with special guest Kimberly Stuart, who’s currently advising our city on business development projects. Before the break, we promised to address the decline of shopping downtown.\nW: Yes—and it’s been the worst at the kind of stores that sell unique items like antiques and jewelry. These items have always been purchased at brick-and-mortar stores but are now being purchased mostly online.\nM: So, do those stores have a future?\nW: I think they do, especially if we make a point of organizing live community activities downtown, such as concerts or festivals. When people walk around town, they are likely to browse at stores—and make purchases."
+      },
+      "41-43": {
+        "transcript": "M: Our company has seen a huge spike in sales ever since it launched the rebate program for customers. With the rebate, customers get money back. And they’re telling their friends, increasing our sales.\nW: Yes. The rebate’s been great for our company because now more homeowners have an incentive to install solar panels on their properties, since they’re rewarded for the electricity their solar panels produce. But our technicians can’t keep up with the high demand.\nM: You’re right. I’m planning to hire more technicians. I’ve already received some résumés from potential candidates."
+      },
+      "44-46": {
+        "transcript": "M: Fernanda, I was just looking at the company calendar, and I noticed that the national electronics trade show is coming up soon.\nW: Oh, that’s right! It’ll be a great opportunity for us to showcase the product that we’ve been developing—our new robotic vacuum cleaner.\nM: We’ll need to decide who we want to send to represent our company at the trade show.\nW: Well, I know just the right person—Kavi. Kavi does a good job of clearly explaining highly technical concepts in a way that everyone can understand."
+      },
+      "47-49": {
+        "transcript": "M: Dr. Fuentes, sorry to interrupt. Do you have a minute?\nW: Yes. My nine o’clock dental cleaning patient just canceled.\nM: I know you’re looking for a new receptionist. I’d like to recommend someone for the position.\nW: Oh. Who do you have in mind?\nM: Well, a former colleague of mine has just moved back to town. Her name’s Kelly Graham, and she has several years of experience.\nW: OK. Could you tell Kelly to send me her résumé? I’d be happy to look it over."
+      },
+      "50-52": {
+        "transcript": "M1: Ms. Gao? I’m Hector, and this is my colleague Sergey. Thanks for meeting with us.\nW: It’s a pleasure to meet you both. How can I help you?\nM2: We’re making some training videos for our client, FiveStar Industries.\nM1: We found your advertisement in a trade publication. We need someone to choose appropriate filming sites at FiveStar’s factories, and it said you have lots of experience scouting for industrial locations.\nW: Sure. I’d want to start by touring their factories. Can you schedule a time for me to do that next week?\nM2: Yes, I’ll call them today to arrange it."
+      },
+      "53-55": {
+        "transcript": "M: Our engineering firm has been asked to cut the corporate travel budget by twenty percent, but it won’t be easy. The engineering consultants have to travel to meet with clients.\nW: Right, and they often travel on short notice. Flight arrangements made at the last minute are expensive, especially for nonstop flights. It would be cheaper if they took connecting flights.\nM: Yes, but that can take a lot of time.\nW: True. Maybe we can make up for the cost of the flights by economizing on hotels. Let’s look into that."
+      },
+      "56-58": {
+        "transcript": "M1: Thanks for meeting with us, Ms. Azuma. This is Scott Ajibade, one of our senior project managers.\nM2: I admire your work, Ms. Azuma.\nW: Thank you. I was surprised by your invitation. I typically design jewelry, but your company’s known for making computers and mobile phones.\nM1: Scott’s team is currently working on a smartwatch. But there’s a lot of competition, as you know.\nM2: We’re hoping you can create a fresh design that will help our product stand out.\nW: Do you already have an idea of what the watch should look like, or are we starting from scratch?\nM2: I have some preliminary sketches we can look at, but none of them seem quite right."
+      },
+      "59-61": {
+        "transcript": "W: Hi. I’d like to purchase some new carpeting. It’s for the waiting room at my hair salon.\nM: We have many different styles. Are you looking for something different?\nW: Well, we get a lot of customers walking through, and our current carpeting is a light color.\nM: No matter what color you get, all our carpets are durable and can take high amounts of foot traffic. For businesses like yours, I recommend placing a protective mat near the door.\nW: That’s a good idea.\nM: Also, I offer free cleaning services for a year for all purchases."
+      }
+    },
+    "est-2026-test-3": {
+      "32-34": {
+        "transcript": "M: Hi, Chef Ayaka. I was looking over this week’s sales, and I noticed that a lot of people ordered the beef stew special.\nW: Yeah. It’s been very popular with patrons. In fact, I want to add it to the regular menu.\nM: Good idea. Beef prices change frequently, though, so we might need to consider that when we set the price for the dish if we’re going to offer it daily.\nW: OK. I’ll call our supplier too. We need to make sure they can get us enough beef each week."
+      },
+      "35-37": {
+        "transcript": "M1: Excuse me, does train 1401 stop at the Lexington Street station?\nW: Yes. It’s a twenty-minute ride.\nM2: Oh good, that gives us plenty of time to get to the party.\nW: The train leaves from platform twelve in three minutes.\nM2: Let’s head over there now, Sergey. I’m really looking forward to our company gala event tonight.\nM1: Me too. Hey did you happen to bring an umbrella? I forgot mine. It might rain on our walk from the station.\nM2: I did! We can share it."
+      },
+      "38-40": {
+        "transcript": "W: I talked to Mr. Hoffman this morning, and he said he’s decided to start a delivery service for our customers who have a difficult time picking up their prescriptions.\nM: That’s a good idea. I know a lot of people find it inconvenient to come in person to get their medications. But many of our customers buy other things while they’re here.\nW: Oh, they’ll be able to make other purchases too, to be delivered with their medicine. In fact, I’m supposed to draft a job posting for delivery drivers. Could you help me do that?"
+      },
+      "41-43": {
+        "transcript": "W: Marcel, I don’t know if you reviewed the latest report. Unfortunately, our sales are continuing to drop.\nM: Yes, competition is at an all-time high. More and more companies are selling clothing and gear for outdoor recreation.\nW: We need better ways to make our brand stand out.\nM: Well, we could probably benefit from having more direct input from athletes who use our gear. I was thinking maybe we could hire a professional rock climber to consult with our designers.\nW: That’s an interesting idea. Is there anyone you have in mind?\nM: I’ll e-mail you a list this afternoon."
+      },
+      "44-46": {
+        "transcript": "W: Hello. I was featured in an article in your newspaper about five years ago. And now when I click on the link, nothing happens.\nM: Oh, the public links expire after three years, but I can search for your article in our database. I just need keywords from the article to use in the search.\nW: It was about my internship at a dental office.\nM: OK. Let me check our archives.\nW: Thanks. I was still in college when the article came out, but now I’m starting my own practice. And I’d like to hang the article on the wall.\nM: Oh! Congratulations."
+      },
+      "47-49": {
+        "transcript": "W: Welcome to Scott’s Supplies! Just so you know, all our power tools and ladders are twenty percent off today. Is there something I can help you with?\nM: Yes. I came in last week to get some lumber for a home project I was working on, but the boards I purchased are the wrong width. I was wondering if I could get a refund.\nW: Sure. Do you have the receipt?\nM: No, unfortunately. I must’ve lost it.\nW: Hmm, OK. Let me find the manager.",
+        "keywords": []
+      },
+      "50-52": {
+        "transcript": "W: Welcome back! How were your lunch deliveries?\nM: All right, except one bag broke and the food container fell out right as I was walking up to a customer’s door. The container was still sealed, and the customer accepted it, so it turned out OK in the end.\nW: Well, I’m glad everything worked out. By the way, take a look at my screen! I got the new delivery software installed and running while you were gone.\nM: This looks great! I like how different areas can be grouped together so drivers can deliver more efficiently.\nW: Me too. And since we’ve recently had such a significant increase in customers, this will be really useful.",
+        "keywords": []
+      },
+      "53-55": {
+        "transcript": "M: Hi, Jin-Ah. I've got good news. We signed a contract to create an ad campaign for a new client.\nW: That's great! Who is it?\nM: It's HMD Incorporated, an organic snack company. They just developed a new line of snacks made entirely from vegetables. They want to market the snacks to sports teams as well as individuals.\nW: Well, that sounds exciting but hard to understand. I guess we'll need to learn more about the products first.\nM: Exactly. We'll have the client come in to give us nutritional information, and provide us with some samples. I'll schedule a meeting with them soon."
+      },
+      "56-58": {
+        "transcript": "W1: Oliver, have you finished the maintenance check on the small airplane that came in this morning? The owner’s hoping to fly it this weekend.\nM: I finished checking it earlier this morning. It needs a new fuel injection pump, so I’ve asked Camille to order one. Oh, here she comes. Camille, will the new pump arrive today?\nW2: Unfortunately, no. The manufacturer said there’ll be a delay, and it won’t arrive until Monday.\nW1: I better let the customer know. She was planning to fly the plane to Toronto this weekend for a friend’s wedding. She’ll need to find another way to get there."
+      },
+      "59-61": {
+        "transcript": "M: Hello, you’ve reached the customer service line for Quality Internet Service. How can I help you?\nW: I’m Mona Shannak, and my account number’s PK62H5. I’d like to close my account on June thirtieth.\nM: Oh, have you been experiencing issues with the service?\nW: Actually, my company has asked me to relocate to Spain.\nM: That’s exciting! I’ll take care of your request for you then.\nW: Thank you — I appreciate that.\nM: When I’m done updating your records, would you be willing to stay on the phone line to take a survey about your experience as a customer?\nW: Certainly."
+      }
+    },
+    "est-2026-test-4": {
+      "32-34": {
+        "transcript": "W: Good morning. Thanks for coming to tour this apartment building.\nM: I’m glad I could visit in person. I’ve always wanted to live in this neighborhood — it’s so beautiful. This building is brand-new, isn’t it?\nW: Yes. In fact, you’d be among the very first tenants if you decide to move here. Before you look at some apartments, would you please sign your name here in our guest book?\nM: Oh, of course."
+      },
+      "35-37": {
+        "transcript": "W: Chen, I hope all is going well on your first day. I saw you have some scheduled seafood deliveries across the bay in the Morgan District. Why haven’t you left yet?\nM: I wasn’t going to head over to that particular area for another hour. Do the restaurants in the Morgan District want their deliveries earlier than scheduled?\nW: No, but I’m concerned about Bay Bridge traffic. It’s routinely congested with vehicles. So you should always add at least an extra hour to your trip out there.\nM: Thanks for the tip. I’ll also check traffic webcams on the highway agency’s Web site."
+      },
+      "38-40": {
+        "transcript": "M: This morning I got an e-mail from Pelicon, a local producer of beauty products. They’re interested in purchasing lanolin from us to use in their new line of all-natural makeup.\nW: I’m not sure about that. We’re a fairly small farm, and we already sell lanolin to another local business. I’m worried that we don’t produce enough lanolin to meet the demand of another client. I don’t want to expand and take on more wool production.\nM: But our contract with the business we currently supply lanolin to has almost expired—there’s no guarantee it will be renewed. I think you should at least read Pelicon’s proposal.\nW: Sure. Can you forward me the e-mail?"
+      },
+      "41-43": {
+        "transcript": "M: Nisreen? This is Lewis. I heard you’re going to be working for our company overseas, in the New Zealand office. What a great opportunity!\nW: Yes, thank you. I start next month, and I’m really excited.\nM: I’m calling to touch base with you about some of our vendor contracts. It’s time to renew the contracts, and I wanted to ask you to take care of that before you left.\nW: No problem. I know where those files are located on our shared computer drive. I’ll just need the password to access them."
+      },
+      "44-46": {
+        "transcript": "W: Hi. This is Giovanni Marino’s agent. I’m calling to reschedule his planned appearance on the Sunday Morning Show.\nM: Right. We have him booked to appear on the show in July to promote his new movie.\nW: Unfortunately, the movie he’s acting in is behind schedule, and he’ll now be on location through the end of August.\nM: Hmm, I see. Let me look at our guest calendar. I have a slot I’m looking to fill on September fourteenth—would that work?\nW: Yes, that would be great, thanks.\nM: All right. I’ll update the contract with the new date and e-mail it to you."
+      },
+      "47-49": {
+        "transcript": "M1: Hello, Usha. Hi, Pablo.\nW: Hey, Konstantin. We’re talking about our thoughts on the new company policy for remote workers. On the days I have to come to the office, I always worry about finding an appropriate workstation.\nM2: Yeah, I don’t like the unpredictability either. Why can’t we just sign up for our workstation sometime in advance? What do you think about it?\nM1: These are good points. Let’s all go to the director to discuss this with her.\nM2: I believe she’s in her office, so now’s a good time.\nW: I can’t go now. I have a report to finalize by noon."
+      },
+      "50-52": {
+        "transcript": "W: OK, Mr. Jebreen. Here's your new library card. Remember that you can borrow books, CDs, and DVDs from our collection with it.\nM: Thank you. I read somewhere that people can also borrow digital items.\nW: Yes! We offer the Cloud-Camel application. All you have to do is download the app and use the information on your card to set up an account.\nM: That's great. I go on a business trip every month, so having easy access to online content will be convenient."
+      },
+      "53-55": {
+        "transcript": "W: Have you reviewed the data from the workplace survey? You really should. It looks like most staff feel positive about the direction that the company is going in. But almost 40 percent feel like their individual contributions aren’t being recognized.\nM: Well, the company’s certainly had other priorities. I wonder how the management team’s going to respond.\nW: I’ve suggested many times that they give out awards every quarter for exceptional performance. Maybe now they’ll finally start doing it."
+      },
+      "56-58": {
+        "transcript": "W: Hi, Ajola. As I mentioned on the phone, my colleague and I recently started a clothing company and are hoping your branding firm can help us promote our line of athletic apparel. You think we should focus on advertising on social media, right?\nM: Right. Contrary to popular belief, television is definitely not the entire advertising landscape. Advertising on the Internet is also a great way for a company to increase its visibility.\nW: I heard you recommended working with an online influencer.\nW: Yes—Saskia Hoffman. Saskia’s very knowledgeable about exercise, and lots of people use her online exercise routines. Her viewers will pay attention to what she recommends and wears."
+      },
+      "59-61": {
+        "transcript": "W: Hi, Shin. I wanted to ask you about the order we got from the department store chain. You know, the one that placed an order for 5,000 jigsaw puzzles?\nM: Yes. They want the order in a week so they can stock them before the holiday.\nW: A week is not a long time.\nM: We’ve had short timelines before. Anyway, our illustrators sent some new puzzle illustrations, right? I heard they’re making a special edition.\nW: Yes, and I’m so excited. I’ve got the sketches right here. Let me show you."
+      }
+    },
+    "est-2026-test-5": {
+      "32-34": {
+        "transcript": "W: Hello, Tariq. Could you do me a favor?\nM: Sure—what is it?\nW: I’m meeting with the Gerhard Group at ten A.M. for the product pitch, and I need copies of your market analysis report made for each representative.\nM: Aren’t you at the office right now?\nW: Actually, I came in early today, but I couldn’t get the copy machine to work.\nM: Seriously? We bought it last month!\nW: I’m afraid so.\nM: I just got off the train. I’ll stop at Business Express on McAllister Street and take care of it on my way to the office."
+      },
+      "35-37": {
+        "transcript": "W: Delton Van Lines. How can I help you?\nM: Hello. I’m the office manager at Woodsom Insurance Company. We are relocating to a new office in June and would like to book your services.\nW: Certainly! But before we reserve a date for the move, we’ll need to come to your current location and estimate the cost of moving your furniture and equipment.\nM: We have a staff meeting tomorrow morning, so no one’s available to show you around then. But tomorrow afternoon works.\nW: Perfect! Our representative can be there at two. I’ll just need to know where you’re located."
+      },
+      "38-40": {
+        "transcript": "M: Doctor MacMillan, I’m calling from the human resources department. I’m in charge of your onboarding, and I wanted to confirm your start date. It’s the first of April, right?\nW: Right. That’s when I’ll be joining the scientific research team. And as you probably know, I’m still finishing up a research paper with my current institution.\nM: Yes, the director did tell me that. Your contract includes time for you to finish up your previous commitments. I can send it to you this afternoon."
+      },
+      "41-43": {
+        "transcript": "W: We’ve been getting a lot of online orders for our chocolate candies lately. I’m glad to see the increase in orders, but I’m worried about meeting the demands. Are we going to be able to fill and ship all these orders?\nM: I think we should hire a few more people to work in the mornings. They could help with packaging and shipping. What do you think, Rebecca?\nW: I agree. I also think that we should ask if our delivery service can pick up our packages twice a day instead of just once a day—maybe every morning and afternoon. I’ll call them today."
+      },
+      "44-46": {
+        "transcript": "W: I spoke to the Mancini brothers. They just shipped our leather order—the hazelnut color. But it’ll take a while to arrive. We don’t have enough in stock to complete the ten sofa orders that we’ve received the past few days.\nM: What about the local leather supplier that brought us some samples last week? We could ask them whether they have enough for ten sofas.\nW: To be honest, I wasn’t very impressed with the quality of their leather. I’d rather wait. I’ll reach out to the customers about the delay."
+      },
+      "47-49": {
+        "transcript": "W: Thanks for coming in, Marcos. I just got the results from the consulting firm we hired. They have some ideas about how we can increase sales of our denim blue jeans.\nM: I hope so. What does our target audience want?\nW: Well, they think it’s time we updated our brand with new styles or colors.\nM: You know, it takes a lot of effort to develop and launch new styles.\nW: Yes. But if we don’t do it, another company will.\nM: You’re right. I’ll ask Junko to come up with some new designs for us to consider."
+      },
+      "50-52": {
+        "transcript": "M: Hi, Gabriela. Thanks for agreeing to give me the highlights of the budget discussion from the monthly meeting. I’m back from vacation and still catching up.\nW: Sure. Here’s a copy of the report. Everyone on our organization’s board at Tennis United agreed to the fee increase for the tennis camp for young players.\nM: Good. And why do we have T-shirts listed as an expense item?\nW: Although the next tournament’s in the fall, the T-shirts were ordered very early. That way we received half off the price, since the supplier wanted to get rid of his summer inventory."
+      },
+      "53-55": {
+        "transcript": "W: The first item on today’s meeting agenda is our bid to renovate the Morrisville Bridge. Do we have an update on that yet?\nM: Yes—unfortunately we didn’t get the contract.\nM: Yes, the only explanation given was that another construction company submitted a proposal with a shorter timeline.\nW: So, what do we know about this competitor? Have they worked on other local projects?\nM: The only thing I heard was their name—CDQ Construction Company.\nW: Well, I’d like to know more about them. Can you two do some research before our next meeting?"
+      },
+      "56-58": {
+        "transcript": "W: Did you see that the results of last month’s employee survey have been compiled? All the staff feedback is available.\nM: Yes, and I just finished reviewing the comments.\nW: You know, I noticed one recurring complaint. The size of the break room is too small. Perhaps we could enlarge the break room by having the wall taken down between it and the meeting room next door.\nM: Well, we do have money available in the budget.\nW: Then could you reach out to your contact at the construction company?\nM: I can’t do it this afternoon, since I need to see a dentist, but I will definitely make the call."
+      },
+      "59-61": {
+        "transcript": "W: Thanks for calling Hang’s Metal Recycling Company. How can I help you?\nM: Hi. I’m with Shannak Construction Company. We’ve got a lot of brass metal scrap from a recent remodeling job. Are you currently buying metal scrap?\nW: Yes, we are. We currently pay two dollars a pound.\nM: Oh, there’s another recycling center that pays two dollars and twenty-five cents a pound. Would you be willing to match their price?\nW: Yes, we have a price-match guarantee.\nM: Great. I’ll bring the metal to you this afternoon, then."
+      }
+    }
+  },
+  "est-2026-test-3": {
+    "36": {
+      "_why": "Phương án cũ (fund-raiser…) không khớp transcript ('company gala'); lấy theo bộ đề Drive 2026-11-19.",
+      "options": {
+        "A": "A company gala",
+        "B": "An opera",
+        "C": "A sports match",
+        "D": "A lecture"
       }
     }
   }

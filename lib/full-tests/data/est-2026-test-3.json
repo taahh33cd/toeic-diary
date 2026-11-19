@@ -1525,7 +1525,7 @@
    "questionEnd": 34,
    "audio": "q32-34.mp3",
    "image": null,
-   "transcript": "M: Hi, Chef Ayaka. I was looking over this week's sales, and I noticed that a lot of people ordered the beef stew special.\nW: Yeah. It's been very popular with patrons. In fact, I want to add it to the regular menu.\nM: Good idea. Beef prices change frequently, though, so we might need to consider that when we set the price for the dish if we're going to offer it daily.\nW: OK. I'll call our supplier too. We need to make sure they can get us enough beef each week.\n32. Where do the speakers most likely work?\n33. What does the man suggest considering?\n34. What does the woman say she will do?",
+   "transcript": "M: Hi, Chef Ayaka. I was looking over this week’s sales, and I noticed that a lot of people ordered the beef stew special.\nW: Yeah. It’s been very popular with patrons. In fact, I want to add it to the regular menu.\nM: Good idea. Beef prices change frequently, though, so we might need to consider that when we set the price for the dish if we’re going to offer it daily.\nW: OK. I’ll call our supplier too. We need to make sure they can get us enough beef each week.",
    "keywords": [
     {
      "term": "sales",
@@ -1636,7 +1636,7 @@
    "questionEnd": 37,
    "audio": "q35-37.mp3",
    "image": null,
-   "transcript": "M1: Excuse me, does train 1401 stop at the Lexington Street station?\nW: Yes. It's a twenty-minute ride.\nM2: Oh good, that gives us plenty of time to get to the party.\nW: The train leaves from platform twelve in three minutes.\nM2: Let's head over there now, Sergey. I'm really looking forward to our company gala event tonight.\nM1: Me too. Hey, did you happen to bring an umbrella? I forgot mine. It might rain on our walk from the station.\nM2: I did! We can share it.\n35. Where is the conversation most likely taking place?\n36. What type of event will the men attend this evening?\n37. What did Sergey forget to bring?",
+   "transcript": "M1: Excuse me, does train 1401 stop at the Lexington Street station?\nW: Yes. It’s a twenty-minute ride.\nM2: Oh good, that gives us plenty of time to get to the party.\nW: The train leaves from platform twelve in three minutes.\nM2: Let’s head over there now, Sergey. I’m really looking forward to our company gala event tonight.\nM1: Me too. Hey did you happen to bring an umbrella? I forgot mine. It might rain on our walk from the station.\nM2: I did! We can share it.",
    "keywords": [
     {
      "term": "ride",
@@ -1706,10 +1706,10 @@
      "part": 3,
      "prompt": "What type of event will the men attend this evening?",
      "options": {
-      "A": "A fund-raiser",
-      "B": "An orientation session",
-      "C": "A sports game",
-      "D": "A retirement party"
+      "A": "A company gala",
+      "B": "An opera",
+      "C": "A sports match",
+      "D": "A lecture"
      },
      "showText": true,
      "broken": false,
@@ -1747,7 +1747,7 @@
    "questionEnd": 40,
    "audio": "q38-40.mp3",
    "image": null,
-   "transcript": "W: I talked to Mr. Hoffman this morning, and he said he's decided to start a delivery service for our customers who have a difficult time picking up their prescriptions.\nM: That's a good idea. I know a lot of people find it inconvenient to come in person to get their medications. But many of our customers buy other things while they're here.\nW: Oh, they'll be able to make other purchases too, to be delivered with their medicine. In fact, I'm supposed to draft a job posting for delivery drivers. Could you help me do that?\n38. What has Mr. Hoffman decided to do?\n39. What business do the speakers most likely work for?\n40. What does the woman ask the man to help her do?",
+   "transcript": "W: I talked to Mr. Hoffman this morning, and he said he’s decided to start a delivery service for our customers who have a difficult time picking up their prescriptions.\nM: That’s a good idea. I know a lot of people find it inconvenient to come in person to get their medications. But many of our customers buy other things while they’re here.\nW: Oh, they’ll be able to make other purchases too, to be delivered with their medicine. In fact, I’m supposed to draft a job posting for delivery drivers. Could you help me do that?",
    "keywords": [
     {
      "term": "delivery service",
@@ -1870,7 +1870,7 @@
    "questionEnd": 43,
    "audio": "q41-43.mp3",
    "image": null,
-   "transcript": "W: Marcel, I don't know if you reviewed the latest report. Unfortunately, our sales are continuing to drop.\nM: Yes, competition is at an all-time high. More and more companies are selling clothing and gear for outdoor recreation.\nW: We need better ways to make our brand stand out.\nM: Well, we could probably benefit from having more direct input from athletes who use our gear. I was thinking maybe we could hire a professional rock climber to consult with our designers.\nW: That's an interesting idea. Is there anyone you have in mind?\nM: I'll e-mail you a list this afternoon.\n41. What problem does the woman mention?\n42. Where do the speakers most likely work?\n43. What does the man say he will do this afternoon?",
+   "transcript": "W: Marcel, I don’t know if you reviewed the latest report. Unfortunately, our sales are continuing to drop.\nM: Yes, competition is at an all-time high. More and more companies are selling clothing and gear for outdoor recreation.\nW: We need better ways to make our brand stand out.\nM: Well, we could probably benefit from having more direct input from athletes who use our gear. I was thinking maybe we could hire a professional rock climber to consult with our designers.\nW: That’s an interesting idea. Is there anyone you have in mind?\nM: I’ll e-mail you a list this afternoon.",
    "keywords": [
     {
      "term": "drop",
@@ -1987,7 +1987,7 @@
    "questionEnd": 46,
    "audio": "q44-46.mp3",
    "image": null,
-   "transcript": "W: Hello. I was featured in an article in your newspaper about five years ago. And now when I click on the link, nothing happens.\nM: Oh, the public links expire after three years, but I can search for your article in our database. I just need keywords from the article to use in the search.\nW: It was about my internship at a dental office.\nM: OK. Let me check our archives.\nW: Thanks. I was still in college when the article came out, but now I'm starting my own practice. And I'd like to hang the article on the wall.\nM: Oh! Congratulations.\n44. Why is the woman calling?\n45. What does the man offer to do?\n46. Why does the man congratulate the woman?",
+   "transcript": "W: Hello. I was featured in an article in your newspaper about five years ago. And now when I click on the link, nothing happens.\nM: Oh, the public links expire after three years, but I can search for your article in our database. I just need keywords from the article to use in the search.\nW: It was about my internship at a dental office.\nM: OK. Let me check our archives.\nW: Thanks. I was still in college when the article came out, but now I’m starting my own practice. And I’d like to hang the article on the wall.\nM: Oh! Congratulations.",
    "keywords": [
     {
      "term": "feature",
@@ -2098,69 +2098,8 @@
    "questionEnd": 49,
    "audio": "q47-49.mp3",
    "image": null,
-   "transcript": "M1: I think we should go ahead with the plan to renovate the employee lounge.\nW: It would be a nice improvement. The current space is outdated.\nM1: The budget is tight this quarter, though. We might have to postpone it.\nW: Let's see if we can find ways to cut costs.\nM1: Good point. I'll look into cheaper materials.\n47. Where does the conversation most likely take place?\n48. What do the speakers agree needs improvement?\n49. What does the man say he will do?",
-   "keywords": [
-    {
-     "term": "go ahead",
-     "ipa": "/ɡoʊ əˈhed/",
-     "pos": "v",
-     "meaning": "tiến hành, tiếp tục"
-    },
-    {
-     "term": "renovate",
-     "ipa": "/ˈrenəveɪt/",
-     "pos": "v",
-     "meaning": "cải tạo, nâng cấp"
-    },
-    {
-     "term": "employee lounge",
-     "ipa": "/ɪmˈplɔɪiː laʊndʒ/",
-     "pos": "n",
-     "meaning": "phòng nghỉ nhân viên"
-    },
-    {
-     "term": "improvement",
-     "ipa": "/ɪmˈpruːvmənt/",
-     "pos": "n",
-     "meaning": "sự cải thiện"
-    },
-    {
-     "term": "outdated",
-     "ipa": "/ˌaʊtˈdeɪtɪd/",
-     "pos": "adj",
-     "meaning": "lỗi thời"
-    },
-    {
-     "term": "budget",
-     "ipa": "/ˈbʌdʒɪt/",
-     "pos": "n",
-     "meaning": "ngân sách"
-    },
-    {
-     "term": "tight",
-     "ipa": "/taɪt/",
-     "pos": "adj",
-     "meaning": "eo hẹp, chặt chẽ"
-    },
-    {
-     "term": "postpone",
-     "ipa": "/poʊstˈpoʊn/",
-     "pos": "v",
-     "meaning": "hoãn lại"
-    },
-    {
-     "term": "cut costs",
-     "ipa": "/kʌt kɔːsts/",
-     "pos": "v",
-     "meaning": "cắt giảm chi phí"
-    },
-    {
-     "term": "look into",
-     "ipa": "/lʊk ˈɪntuː/",
-     "pos": "v",
-     "meaning": "xem xét, nghiên cứu"
-    }
-   ],
+   "transcript": "W: Welcome to Scott’s Supplies! Just so you know, all our power tools and ladders are twenty percent off today. Is there something I can help you with?\nM: Yes. I came in last week to get some lumber for a home project I was working on, but the boards I purchased are the wrong width. I was wondering if I could get a refund.\nW: Sure. Do you have the receipt?\nM: No, unfortunately. I must’ve lost it.\nW: Hmm, OK. Let me find the manager.",
+   "keywords": [],
    "questions": [
     {
      "number": 47,
@@ -2227,45 +2166,8 @@
    "questionEnd": 52,
    "audio": "q50-52.mp3",
    "image": null,
-   "transcript": "W: The new software update is ready for testing. Who should we assign to it?\nM: I suggest Lisa. She's great with technical stuff.\nW: OK. I'll set up a meeting with her tomorrow.\n50. What are the speakers discussing?\n51. Who do they decide to assign the task to?\n52. What does the woman say she will do?",
-   "keywords": [
-    {
-     "term": "software update",
-     "ipa": "/ˈsɔːftwer ˈʌpdeɪt/",
-     "pos": "n",
-     "meaning": "bản cập nhật phần mềm"
-    },
-    {
-     "term": "test",
-     "ipa": "/test/",
-     "pos": "v",
-     "meaning": "kiểm tra, thử nghiệm"
-    },
-    {
-     "term": "assign",
-     "ipa": "/əˈsaɪn/",
-     "pos": "v",
-     "meaning": "phân công, giao việc"
-    },
-    {
-     "term": "technical stuff",
-     "ipa": "/ˈteknɪkl stʌf/",
-     "pos": "n",
-     "meaning": "các vấn đề kỹ thuật"
-    },
-    {
-     "term": "set up",
-     "ipa": "/set ʌp/",
-     "pos": "v",
-     "meaning": "thiết lập, sắp xếp"
-    },
-    {
-     "term": "task",
-     "ipa": "/tæsk/",
-     "pos": "n",
-     "meaning": "nhiệm vụ"
-    }
-   ],
+   "transcript": "W: Welcome back! How were your lunch deliveries?\nM: All right, except one bag broke and the food container fell out right as I was walking up to a customer’s door. The container was still sealed, and the customer accepted it, so it turned out OK in the end.\nW: Well, I’m glad everything worked out. By the way, take a look at my screen! I got the new delivery software installed and running while you were gone.\nM: This looks great! I like how different areas can be grouped together so drivers can deliver more efficiently.\nW: Me too. And since we’ve recently had such a significant increase in customers, this will be really useful.",
+   "keywords": [],
    "questions": [
     {
      "number": 50,
@@ -2332,7 +2234,7 @@
    "questionEnd": 55,
    "audio": "q53-55.mp3",
    "image": null,
-   "transcript": "M: Hi, Jin-Ah. I've got good news. We signed a contract to create an ad campaign for a new client.\nW: That's great! Who is it?\nM: It's HMD Incorporated, an organic snack company. They just developed a new line of snacks made entirely from vegetables. They want to market the snacks to sports teams as well as individuals.\nW: Well, that sounds exciting but hard to understand. I guess we'll need to learn more about the products first.\nM: Exactly. We'll have the client come in to give us nutritional information, and provide us with some samples. I'll schedule a meeting with them soon.\n53. What type of company do the speakers work for?\n54. What has HMD Incorporated recently done?\n55. What does the man say he will do?",
+   "transcript": "M: Hi, Jin-Ah. I've got good news. We signed a contract to create an ad campaign for a new client.\nW: That's great! Who is it?\nM: It's HMD Incorporated, an organic snack company. They just developed a new line of snacks made entirely from vegetables. They want to market the snacks to sports teams as well as individuals.\nW: Well, that sounds exciting but hard to understand. I guess we'll need to learn more about the products first.\nM: Exactly. We'll have the client come in to give us nutritional information, and provide us with some samples. I'll schedule a meeting with them soon.",
    "keywords": [
     {
      "term": "sign",
@@ -2455,7 +2357,7 @@
    "questionEnd": 58,
    "audio": "q56-58.mp3",
    "image": null,
-   "transcript": "W1: Oliver, have you finished the maintenance check on the small airplane that came in this morning? The owner's hoping to fly it this weekend.\nM: I finished checking it earlier this morning. It needs a new fuel injection pump, so I've asked Camille to order one. Oh, here she comes. Camille, will the new pump arrive today?\nW2: Unfortunately, no. The manufacturer said there'll be a delay, and it won't arrive until Monday.\nW1: I better let the customer know. She was planning to fly the plane to Toronto this weekend for a friend's wedding. She'll need to find another way to get there.\n56. What did the man perform a maintenance check on?\n57. What news does Camille share?\n58. Why is the customer traveling to Toronto?",
+   "transcript": "W1: Oliver, have you finished the maintenance check on the small airplane that came in this morning? The owner’s hoping to fly it this weekend.\nM: I finished checking it earlier this morning. It needs a new fuel injection pump, so I’ve asked Camille to order one. Oh, here she comes. Camille, will the new pump arrive today?\nW2: Unfortunately, no. The manufacturer said there’ll be a delay, and it won’t arrive until Monday.\nW1: I better let the customer know. She was planning to fly the plane to Toronto this weekend for a friend’s wedding. She’ll need to find another way to get there.",
    "keywords": [
     {
      "term": "maintenance check",
@@ -2572,7 +2474,7 @@
    "questionEnd": 61,
    "audio": "q59-61.mp3",
    "image": null,
-   "transcript": "M: Hello, you've reached the customer service line for Quality Internet Service. How can I help you?\nW: I'm Mona Shannak, and my account number's PK62H5. I'd like to close my account on June thirtieth.\nM: Oh, have you been experiencing issues with the service?\nW: Actually, my company has asked me to relocate to Spain.\nM: That's exciting! I'll take care of your request for you then.\nW: Thank you-I appreciate that.\nM: When I'm done updating your records, would you be willing to stay on the phone line to take a survey about your experience as a customer?\nW: Certainly.\n59. What type of business does the man work for?\n60. What does the woman imply when she says, \"my company has asked me to relocate to Spain\"?\n61. What does the man ask the woman to do?",
+   "transcript": "M: Hello, you’ve reached the customer service line for Quality Internet Service. How can I help you?\nW: I’m Mona Shannak, and my account number’s PK62H5. I’d like to close my account on June thirtieth.\nM: Oh, have you been experiencing issues with the service?\nW: Actually, my company has asked me to relocate to Spain.\nM: That’s exciting! I’ll take care of your request for you then.\nW: Thank you — I appreciate that.\nM: When I’m done updating your records, would you be willing to stay on the phone line to take a survey about your experience as a customer?\nW: Certainly.",
    "keywords": [
     {
      "term": "customer service line",

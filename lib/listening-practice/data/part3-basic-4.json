@@ -1,0 +1,1101 @@
+{
+  "examSlug": "part3-practice",
+  "examTitle": "Luyện nghe Part 3",
+  "testNumber": 5,
+  "slug": "part3-basic-4",
+  "title": "Luyện tập cơ bản · Test 4",
+  "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3",
+  "locked": false,
+  "lockReason": null,
+  "stats": {
+    "questions": 30,
+    "answered": 30,
+    "missingAnswers": [],
+    "brokenQuestions": []
+  },
+  "groups": [
+    {
+      "part": 3,
+      "questionStart": 1,
+      "questionEnd": 3,
+      "audio": "q32-34.mp3",
+      "image": null,
+      "transcript": "M: Hi, Chef Ayaka. I was looking over this week’s sales, and I noticed that a lot of people ordered the beef stew special.\nW: Yeah. It’s been very popular with patrons. In fact, I want to add it to the regular menu.\nM: Good idea. Beef prices change frequently, though, so we might need to consider that when we set the price for the dish if we’re going to offer it daily.\nW: OK. I’ll call our supplier too. We need to make sure they can get us enough beef each week.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/0b98cc2a-397c-479a-9018-3f5b67259c0e",
+      "questions": [
+        {
+          "number": 1,
+          "part": 3,
+          "prompt": "Where do the speakers most likely work?",
+          "options": {
+            "A": "At a shipping company",
+            "B": "At a restaurant",
+            "C": "At a gift shop",
+            "D": "At a farm"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông gọi người phụ nữ là \"Chef\" (Đầu bếp) và họ nhắc đến \"menu\" (thực đơn), \"patrons\" (khách hàng ăn uống). Do đó, họ làm việc tại một nhà hàng.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 2,
+          "part": 3,
+          "prompt": "What does the man suggest considering?",
+          "options": {
+            "A": "An advertising strategy",
+            "B": "An online menu",
+            "C": "The price of an item",
+            "D": "The results of a survey"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói: \"we might need to consider that when we set the price for the dish\" (chúng ta có thể cần phải xem xét điều đó khi định giá cho món ăn).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 3,
+          "part": 3,
+          "prompt": "What does the woman say she will do?",
+          "options": {
+            "A": "Pay a deposit",
+            "B": "Contact a supplier",
+            "C": "Reschedule a delivery",
+            "D": "Arrange some merchandise"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ quyết định: \"I'll call our supplier too\" (Tôi cũng sẽ gọi cho nhà cung cấp của chúng ta).\nĐOẠN HỘI THOẠI 2 (",
+            "glossary": [
+              {
+                "term": "sales",
+                "pos": "n",
+                "ipa": "seɪlz",
+                "meaning": "doanh số"
+              },
+              {
+                "term": "order",
+                "pos": "v",
+                "ipa": "ˈɔːrdər",
+                "meaning": "đặt hàng"
+              },
+              {
+                "term": "beef stew",
+                "pos": "n",
+                "ipa": "biːf stuː",
+                "meaning": "món bò hầm"
+              },
+              {
+                "term": "popular",
+                "pos": "adj",
+                "ipa": "ˈpɑːpjələr",
+                "meaning": "phổ biến, được yêu thích"
+              },
+              {
+                "term": "patron",
+                "pos": "n",
+                "ipa": "ˈpeɪtrən",
+                "meaning": "khách hàng quen"
+              },
+              {
+                "term": "frequently",
+                "pos": "adv",
+                "ipa": "ˈfriːkwəntli",
+                "meaning": "thường xuyên"
+              },
+              {
+                "term": "supplier",
+                "pos": "n",
+                "ipa": "səˈplaɪər",
+                "meaning": "nhà cung cấp"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 4,
+      "questionEnd": 6,
+      "audio": "q35-37.mp3",
+      "image": null,
+      "transcript": "M1: Excuse me, does train 1401 stop at the Lexington Street station?\nW: Yes. It’s a twenty-minute ride.\nM2: Oh good, that gives us plenty of time to get to the party.\nW: The train leaves from platform twelve in three minutes.\nM2: Let’s head over there now, Sergey. I’m really looking forward to our company gala event tonight.\nM1: Me too. Hey did you happen to bring an umbrella? I forgot mine. It might rain on our walk from the station.\nM2: I did! We can share it.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/2fd903f3-c06d-44ce-aef4-13ee4a33df10",
+      "questions": [
+        {
+          "number": 4,
+          "part": 3,
+          "prompt": "Where is the conversation most likely taking place?",
+          "options": {
+            "A": "At a fitness center",
+            "B": "At a hotel",
+            "C": "At a train station",
+            "D": "At a corporate office"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Cuộc hội thoại hỏi về chuyến tàu (\"does train 1401 stop...\") và người phụ nữ đáp \"The train leaves from platform twelve\" (Tàu khởi hành từ sân ga số 12).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 5,
+          "part": 3,
+          "prompt": "What type of event will the men attend this evening?",
+          "options": {
+            "A": "A company gala",
+            "B": "An opera",
+            "C": "A sports match",
+            "D": "A lecture"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông thứ hai nói: \"I'm really looking forward to our company gala event tonight\" (Tôi thực sự mong đợi sự kiện dạ tiệc của công ty chúng ta tối nay).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 6,
+          "part": 3,
+          "prompt": "What did Sergey forget to bring?",
+          "options": {
+            "A": "Gloves",
+            "B": "Sunglasses",
+            "C": "A hat",
+            "D": "An umbrella"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Sergey (M1) hỏi: \"did you happen to bring an umbrella? I forgot mine.\" (Cậu có tình cờ mang theo ô không? Tôi quên ô của mình rồi).\nĐOẠN HỘI THOẠI 3 (",
+            "glossary": [
+              {
+                "term": "ride",
+                "pos": "n",
+                "ipa": "raɪd",
+                "meaning": "chuyến đi"
+              },
+              {
+                "term": "platform",
+                "pos": "n",
+                "ipa": "ˈplætfɔːrm",
+                "meaning": "sân ga"
+              },
+              {
+                "term": "head over",
+                "pos": "v",
+                "ipa": "hed ˈoʊvər",
+                "meaning": "đi đến"
+              },
+              {
+                "term": "look forward to",
+                "pos": "v",
+                "ipa": "lʊk ˈfɔːrwərd tə",
+                "meaning": "mong đợi"
+              },
+              {
+                "term": "gala event",
+                "pos": "n",
+                "ipa": "ˈɡeɪlə ɪˈvent",
+                "meaning": "sự kiện dạ tiệc"
+              },
+              {
+                "term": "umbrella",
+                "pos": "n",
+                "ipa": "ʌmˈbrelə",
+                "meaning": "cái ô"
+              },
+              {
+                "term": "share",
+                "pos": "v",
+                "ipa": "ʃer",
+                "meaning": "chia sẻ"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 7,
+      "questionEnd": 9,
+      "audio": "q38-40.mp3",
+      "image": null,
+      "transcript": "W: I talked to Mr. Hoffman this morning, and he said he’s decided to start a delivery service for our customers who have a difficult time picking up their prescriptions.\nM: That’s a good idea. I know a lot of people find it inconvenient to come in person to get their medications. But many of our customers buy other things while they’re here.\nW: Oh, they’ll be able to make other purchases too, to be delivered with their medicine. In fact, I’m supposed to draft a job posting for delivery drivers. Could you help me do that?",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/6d07bf39-2973-4f6e-ac0f-3eb46eede404",
+      "questions": [
+        {
+          "number": 7,
+          "part": 3,
+          "prompt": "What has Mr. Hoffman decided to do?",
+          "options": {
+            "A": "Extend store hours",
+            "B": "Start a delivery service",
+            "C": "Offer a rewards program",
+            "D": "Stop selling certain products"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ thông báo rằng \"he's decided to start a delivery service\" (ông ấy đã quyết định bắt đầu một dịch vụ giao hàng).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 8,
+          "part": 3,
+          "prompt": "What business do the speakers most likely work for?",
+          "options": {
+            "A": "A bakery",
+            "B": "A flower shop",
+            "C": "A grocery store",
+            "D": "A pharmacy"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Họ liên tục nhắc đến việc khách hàng đến lấy thuốc theo toa (\"prescriptions\") và lấy thuốc (\"medications\", \"medicine\"). Do đó, họ làm việc tại một hiệu thuốc.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 9,
+          "part": 3,
+          "prompt": "What does the woman ask the man to help her do?",
+          "options": {
+            "A": "Mail some packages",
+            "B": "Take inventory",
+            "C": "Create a job posting",
+            "D": "Help some customers"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Cô ấy nói: \"I'm supposed to draft a job posting... Could you help me do that?\" (Tôi có nhiệm vụ soạn thảo một bài đăng tuyển dụng... Anh có thể giúp tôi làm việc đó không?).\nĐOẠN HỘI THOẠI 4 (",
+            "glossary": [
+              {
+                "term": "delivery service",
+                "pos": "n",
+                "ipa": "dɪˈlɪvəri ˈsɜːrvɪs",
+                "meaning": "dịch vụ giao hàng"
+              },
+              {
+                "term": "pick up",
+                "pos": "v",
+                "ipa": "pɪk ʌp",
+                "meaning": "nhận lấy, đón"
+              },
+              {
+                "term": "prescription",
+                "pos": "n",
+                "ipa": "prɪˈskrɪpʃn",
+                "meaning": "đơn thuốc"
+              },
+              {
+                "term": "inconvenient",
+                "pos": "adj",
+                "ipa": "ˌɪnkənˈviːniənt",
+                "meaning": "bất tiện"
+              },
+              {
+                "term": "in person",
+                "pos": "phrase",
+                "ipa": "ɪn ˈpɜːrsn",
+                "meaning": "trực tiếp (có mặt)"
+              },
+              {
+                "term": "medication",
+                "pos": "n",
+                "ipa": "ˌmedɪˈkeɪʃn",
+                "meaning": "thuốc chữa bệnh"
+              },
+              {
+                "term": "purchase",
+                "pos": "n",
+                "ipa": "ˈpɜːrtʃəs",
+                "meaning": "món hàng mua sắm"
+              },
+              {
+                "term": "draft",
+                "pos": "v",
+                "ipa": "dræft",
+                "meaning": "phác thảo, soạn thảo"
+              },
+              {
+                "term": "job posting",
+                "pos": "n",
+                "ipa": "dʒɑːb ˈpoʊstɪŋ",
+                "meaning": "tin tuyển dụng"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 10,
+      "questionEnd": 12,
+      "audio": "q41-43.mp3",
+      "image": null,
+      "transcript": "W: Marcel, I don’t know if you reviewed the latest report. Unfortunately, our sales are continuing to drop.\nM: Yes, competition is at an all-time high. More and more companies are selling clothing and gear for outdoor recreation.\nW: We need better ways to make our brand stand out.\nM: Well, we could probably benefit from having more direct input from athletes who use our gear. I was thinking maybe we could hire a professional rock climber to consult with our designers.\nW: That’s an interesting idea. Is there anyone you have in mind?\nM: I’ll e-mail you a list this afternoon.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/098eab12-a290-4a91-a469-42e4229c428d",
+      "questions": [
+        {
+          "number": 10,
+          "part": 3,
+          "prompt": "What problem does the woman mention?",
+          "options": {
+            "A": "A product is faulty.",
+            "B": "A company's sales are decreasing.",
+            "C": "Some materials are damaged.",
+            "D": "A sales department is understaffed."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ cho biết: \"Unfortunately, our sales are continuing to drop\" (Thật không may, doanh số bán hàng của chúng ta vẫn tiếp tục giảm).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 11,
+          "part": 3,
+          "prompt": "Where do the speakers most likely work?",
+          "options": {
+            "A": "At a publishing firm",
+            "B": "At a sporting goods company",
+            "C": "At a travel agency",
+            "D": "At a state park"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Họ kinh doanh \"clothing and gear for outdoor recreation\" (quần áo và dụng cụ giải trí ngoài trời) và muốn mời \"professional rock climber\" (vận động viên leo núi chuyên nghiệp).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 12,
+          "part": 3,
+          "prompt": "What does the man say he will do this afternoon?",
+          "options": {
+            "A": "Sign a document",
+            "B": "Ship an order",
+            "C": "Review customer feedback",
+            "D": "Send a list"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông hứa: \"I'll e-mail you a list this afternoon\" (Tôi sẽ gửi e-mail cho cô một danh sách vào chiều nay).\nĐOẠN HỘI THOẠI 5 (",
+            "glossary": [
+              {
+                "term": "drop",
+                "pos": "v",
+                "ipa": "drɑːp",
+                "meaning": "giảm sút"
+              },
+              {
+                "term": "competition",
+                "pos": "n",
+                "ipa": "ˌkɑːmpəˈtɪʃn",
+                "meaning": "sự cạnh tranh"
+              },
+              {
+                "term": "gear",
+                "pos": "n",
+                "ipa": "ɡɪr",
+                "meaning": "trang thiết bị"
+              },
+              {
+                "term": "outdoor recreation",
+                "pos": "n",
+                "ipa": "ˈaʊtdɔːr ˌrekriˈeɪʃn",
+                "meaning": "hoạt động giải trí ngoài trời"
+              },
+              {
+                "term": "stand out",
+                "pos": "v",
+                "ipa": "stænd aʊt",
+                "meaning": "nổi bật"
+              },
+              {
+                "term": "benefit",
+                "pos": "v",
+                "ipa": "ˈbenɪfɪt",
+                "meaning": "hưởng lợi"
+              },
+              {
+                "term": "professional",
+                "pos": "adj",
+                "ipa": "prəˈfeʃənl",
+                "meaning": "chuyên nghiệp"
+              },
+              {
+                "term": "consult",
+                "pos": "v",
+                "ipa": "kənˈsʌlt",
+                "meaning": "tham khảo ý kiến, cố vấn"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 13,
+      "questionEnd": 15,
+      "audio": "q44-46.mp3",
+      "image": null,
+      "transcript": "W: Hello. I was featured in an article in your newspaper about five years ago. And now when I click on the link, nothing happens.\nM: Oh, the public links expire after three years, but I can search for your article in our database. I just need keywords from the article to use in the search.\nW: It was about my internship at a dental office.\nM: OK. Let me check our archives.\nW: Thanks. I was still in college when the article came out, but now I’m starting my own practice. And I’d like to hang the article on the wall.\nM: Oh! Congratulations.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/82400706-5bdf-440d-acde-810f2f343b6c",
+      "questions": [
+        {
+          "number": 13,
+          "part": 3,
+          "prompt": "Why is the woman calling?",
+          "options": {
+            "A": "To verify some facts",
+            "B": "To confirm a deadline",
+            "C": "To inquire about an article",
+            "D": "To apply for a position"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Cô ấy giải thích mục đích: \"I was featured in an article... now when I click on the link, nothing happens\" (Tôi đã xuất hiện trong một bài báo... bây giờ tôi nhấp vào liên kết thì không có gì hiện ra).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 14,
+          "part": 3,
+          "prompt": "What does the man offer to do?",
+          "options": {
+            "A": "Search a database",
+            "B": "Renew a subscription",
+            "C": "Consult with colleagues",
+            "D": "Send an updated schedule"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đề nghị: \"I can search for your article in our database\" (tôi có thể tìm bài báo của cô trong cơ sở dữ liệu của chúng tôi).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 15,
+          "part": 3,
+          "prompt": "Why does the man congratulate the woman?",
+          "options": {
+            "A": "She appeared on television.",
+            "B": "She was nominated for an award.",
+            "C": "She is publishing a book.",
+            "D": "She is starting her own business."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ cho biết: \"now I'm starting my own practice\" (bây giờ tôi đang mở phòng khám riêng). Việc tự mở phòng khám đồng nghĩa với việc cô ấy bắt đầu sự nghiệp kinh doanh của riêng mình.\nĐOẠN HỘI THOẠI 6 (",
+            "glossary": [
+              {
+                "term": "feature",
+                "pos": "v",
+                "ipa": "ˈfiːtʃər",
+                "meaning": "xuất hiện, đưa tin"
+              },
+              {
+                "term": "expire",
+                "pos": "v",
+                "ipa": "ɪkˈspaɪər",
+                "meaning": "hết hạn"
+              },
+              {
+                "term": "database",
+                "pos": "n",
+                "ipa": "ˈdeɪtəbeɪs",
+                "meaning": "cơ sở dữ liệu"
+              },
+              {
+                "term": "internship",
+                "pos": "n",
+                "ipa": "ˈɪntɜːrnʃɪp",
+                "meaning": "kỳ thực tập"
+              },
+              {
+                "term": "dental office",
+                "pos": "n",
+                "ipa": "ˈdentl ˈɔːfɪs",
+                "meaning": "phòng khám nha khoa"
+              },
+              {
+                "term": "archive",
+                "pos": "n",
+                "ipa": "ˈɑːrkaɪv",
+                "meaning": "kho lưu trữ"
+              },
+              {
+                "term": "practice",
+                "pos": "n",
+                "ipa": "ˈpræktɪs",
+                "meaning": "phòng khám (của y bác sĩ)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 16,
+      "questionEnd": 18,
+      "audio": "q47-49.mp3",
+      "image": null,
+      "transcript": "W: Welcome to Scott’s Supplies! Just so you know, all our power tools and ladders are twenty percent off today. Is there something I can help you with?\nM: Yes. I came in last week to get some lumber for a home project I was working on, but the boards I purchased are the wrong width. I was wondering if I could get a refund.\nW: Sure. Do you have the receipt?\nM: No, unfortunately. I must’ve lost it.\nW: Hmm, OK. Let me find the manager.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/491ee8b4-d826-4990-b5be-57e0216412cb",
+      "questions": [
+        {
+          "number": 16,
+          "part": 3,
+          "prompt": "Where does the conversation most likely take place?",
+          "options": {
+            "A": "At a furniture store",
+            "B": "At an electronics store",
+            "C": "At a sporting goods store",
+            "D": "At a building supply store"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nhắc đến cửa hàng tên \"Scott's Supplies\" và bán \"power tools and ladders\" (dụng cụ điện và thang). Người đàn ông cũng mua \"lumber\" (gỗ xẻ/vật liệu xây dựng). Điều này cho thấy đây là cửa hàng vật liệu xây dựng.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 17,
+          "part": 3,
+          "prompt": "Why does the man want a refund?",
+          "options": {
+            "A": "He found a less expensive option.",
+            "B": "He bought the wrong size.",
+            "C": "He does not like the color of an item.",
+            "D": "He noticed an item is damaged."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói: \"the boards I purchased are the wrong width\" (những tấm ván mà tôi đã mua lại có chiều rộng không đúng). \"Wrong width\" (chiều rộng không đúng) đồng nghĩa với việc mua sai kích cỡ (wrong size).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 18,
+          "part": 3,
+          "prompt": "What does the woman imply when she says, \"Let me find the manager\"?",
+          "options": {
+            "A": "She needs to attend to other customers.",
+            "B": "She does not have the authority to complete a request.",
+            "C": "A transaction was not processed correctly.",
+            "D": "A quality complaint needs to be documented."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Vì người khách hàng không có biên lai (\"No... I must've lost it\"), nhân viên thu ngân bình thường sẽ không được phép tự ý hoàn tiền. Cô ấy cần gọi quản lý để xin ý kiến vì cô ấy không đủ thẩm quyền xử lý trường hợp không có biên lai.\nĐOẠN HỘI THOẠI 7 (",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 19,
+      "questionEnd": 21,
+      "audio": "q50-52.mp3",
+      "image": null,
+      "transcript": "W: Welcome back! How were your lunch deliveries?\nM: All right, except one bag broke and the food container fell out right as I was walking up to a customer’s door. The container was still sealed, and the customer accepted it, so it turned out OK in the end.\nW: Well, I’m glad everything worked out. By the way, take a look at my screen! I got the new delivery software installed and running while you were gone.\nM: This looks great! I like how different areas can be grouped together so drivers can deliver more efficiently.\nW: Me too. And since we’ve recently had such a significant increase in customers, this will be really useful.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/bab535b4-0f4b-489f-ad2e-16245730baf4",
+      "questions": [
+        {
+          "number": 19,
+          "part": 3,
+          "prompt": "What most likely is the man's job?",
+          "options": {
+            "A": "Plumber",
+            "B": "Auto mechanic",
+            "C": "Food delivery person",
+            "D": "Computer technician"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ hỏi về \"lunch deliveries\" (các chuyến giao đồ ăn trưa) và người đàn ông kể lại chuyện \"food container fell out... walking up to a customer's door\" (hộp đồ ăn rơi ra... bước tới cửa khách hàng).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 20,
+          "part": 3,
+          "prompt": "What did the woman do while the man was gone?",
+          "options": {
+            "A": "She created an advertisement.",
+            "B": "She finalized a contract.",
+            "C": "She addressed a customer complaint.",
+            "D": "She had new software installed."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Cô ấy khoe: \"I got the new delivery software installed and running while you were gone\" (Tôi đã cài đặt xong và chạy phần mềm giao hàng mới trong lúc anh đi vắng).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 21,
+          "part": 3,
+          "prompt": "What does the woman say has recently changed?",
+          "options": {
+            "A": "Costs have been reduced.",
+            "B": "A competitor has opened a location nearby.",
+            "C": "The number of customers has increased.",
+            "D": "Safety regulations have been introduced."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Ở cuối đoạn hội thoại, cô ấy nhắc đến việc: \"we've recently had such a significant increase in customers\" (gần đây chúng ta có sự gia tăng lượng khách hàng đáng kể).\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 3 (Phần 2)\nĐOẠN HỘI THOẠI 8 (",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 22,
+      "questionEnd": 24,
+      "audio": "q53-55.mp3",
+      "image": null,
+      "transcript": "M: Hi, Jin-Ah. I've got good news. We signed a contract to create an ad campaign for a new client.\nW: That's great! Who is it?\nM: It's HMD Incorporated, an organic snack company. They just developed a new line of snacks made entirely from vegetables. They want to market the snacks to sports teams as well as individuals.\nW: Well, that sounds exciting but hard to understand. I guess we'll need to learn more about the products first.\nM: Exactly. We'll have the client come in to give us nutritional information, and provide us with some samples. I'll schedule a meeting with them soon.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/99efdc41-af99-45fb-9042-2f5b84425e46",
+      "questions": [
+        {
+          "number": 22,
+          "part": 3,
+          "prompt": "What type of company do the speakers work for?",
+          "options": {
+            "A": "An investment firm",
+            "B": "An advertising agency",
+            "C": "A staffing service",
+            "D": "A construction company"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói: \"We signed a contract to create an ad campaign\" (Chúng ta đã ký hợp đồng tạo một chiến dịch quảng cáo). \"Ad campaign\" (chiến dịch quảng cáo) cho thấy họ làm việc tại một công ty quảng cáo.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 23,
+          "part": 3,
+          "prompt": "What has HMD Incorporated recently done?",
+          "options": {
+            "A": "It has built a new headquarters.",
+            "B": "It has donated to a charity.",
+            "C": "It has developed a new line of products.",
+            "D": "It has won an industry award."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Bài nghe chỉ ra rằng HMD Incorporated \"just developed a new line of snacks\" (vừa phát triển một dòng đồ ăn nhẹ mới). Đồ ăn nhẹ (snacks) là một dạng sản phẩm (products).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 24,
+          "part": 3,
+          "prompt": "What does the man say he will do?",
+          "options": {
+            "A": "Update his team's goals",
+            "B": "Conduct some research",
+            "C": "Apply for a permit",
+            "D": "Arrange for a meeting"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Ở cuối đoạn, người đàn ông nói: \"I'll schedule a meeting with them soon\" (Tôi sẽ sớm sắp xếp một cuộc họp với họ). \"Schedule\" (lên lịch) đồng nghĩa với \"arrange\" (sắp xếp).\nĐOẠN HỘI THOẠI 9 (",
+            "glossary": [
+              {
+                "term": "sign",
+                "pos": "v",
+                "ipa": "saɪn",
+                "meaning": "ký kết"
+              },
+              {
+                "term": "contract",
+                "pos": "n",
+                "ipa": "ˈkɑːntrækt",
+                "meaning": "hợp đồng"
+              },
+              {
+                "term": "ad campaign",
+                "pos": "n",
+                "ipa": "æd kæmˈpeɪn",
+                "meaning": "chiến dịch quảng cáo"
+              },
+              {
+                "term": "organic",
+                "pos": "adj",
+                "ipa": "ɔːrˈɡænɪk",
+                "meaning": "hữu cơ"
+              },
+              {
+                "term": "snack",
+                "pos": "n",
+                "ipa": "snæk",
+                "meaning": "đồ ăn nhẹ"
+              },
+              {
+                "term": "market",
+                "pos": "v",
+                "ipa": "ˈmɑːrkɪt",
+                "meaning": "tiếp thị, quảng cáo"
+              },
+              {
+                "term": "individual",
+                "pos": "n",
+                "ipa": "ˌɪndɪˈvɪdʒuəl",
+                "meaning": "cá nhân"
+              },
+              {
+                "term": "nutritional information",
+                "pos": "n",
+                "ipa": "nuˈtrɪʃənl ˌɪnfərˈmeɪʃn",
+                "meaning": "thông tin dinh dưỡng"
+              },
+              {
+                "term": "sample",
+                "pos": "n",
+                "ipa": "ˈsæmpl",
+                "meaning": "mẫu thử"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 25,
+      "questionEnd": 27,
+      "audio": "q56-58.mp3",
+      "image": null,
+      "transcript": "W1: Oliver, have you finished the maintenance check on the small airplane that came in this morning? The owner’s hoping to fly it this weekend.\nM: I finished checking it earlier this morning. It needs a new fuel injection pump, so I’ve asked Camille to order one. Oh, here she comes. Camille, will the new pump arrive today?\nW2: Unfortunately, no. The manufacturer said there’ll be a delay, and it won’t arrive until Monday.\nW1: I better let the customer know. She was planning to fly the plane to Toronto this weekend for a friend’s wedding. She’ll need to find another way to get there.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/1b41ba14-2548-45b0-a389-099ba8499a86",
+      "questions": [
+        {
+          "number": 25,
+          "part": 3,
+          "prompt": "What did the man perform a maintenance check on?",
+          "options": {
+            "A": "A motorcycle",
+            "B": "A car",
+            "C": "A bus",
+            "D": "An airplane"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ hỏi: \"have you finished the maintenance check on the small airplane...?\" (anh đã hoàn thành việc kiểm tra bảo trì chiếc máy bay nhỏ chưa?).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 26,
+          "part": 3,
+          "prompt": "What news does Camille share?",
+          "options": {
+            "A": "A delivery will be delayed.",
+            "B": "An expense will increase.",
+            "C": "A staff member is unavailable.",
+            "D": "A rainstorm is predicted."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Camille thông báo: \"The manufacturer said there'll be a delay...\" (Nhà sản xuất cho biết sẽ có sự chậm trễ), nghĩa là bộ phận thay thế được đặt mua sẽ không được giao đúng hạn.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 27,
+          "part": 3,
+          "prompt": "Why is the customer traveling to Toronto?",
+          "options": {
+            "A": "To participate in a competition",
+            "B": "To present at a conference",
+            "C": "To attend a wedding",
+            "D": "To sign a contract"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Khách hàng cần đến Toronto \"for a friend's wedding\" (để dự đám cưới của một người bạn).\nĐOẠN HỘI THOẠI 10 (",
+            "glossary": [
+              {
+                "term": "maintenance check",
+                "pos": "n",
+                "ipa": "ˈmeɪntənəns tʃek",
+                "meaning": "kiểm tra bảo dưỡng"
+              },
+              {
+                "term": "fly",
+                "pos": "v",
+                "ipa": "flaɪ",
+                "meaning": "bay, lái máy bay"
+              },
+              {
+                "term": "fuel injection pump",
+                "pos": "n",
+                "ipa": "ˈfjuːəl ɪnˈdʒekʃn pʌmp",
+                "meaning": "bơm phun nhiên liệu"
+              },
+              {
+                "term": "arrive",
+                "pos": "v",
+                "ipa": "əˈraɪv",
+                "meaning": "đến nơi"
+              },
+              {
+                "term": "manufacturer",
+                "pos": "n",
+                "ipa": "ˌmænjuˈfæktʃərər",
+                "meaning": "nhà sản xuất"
+              },
+              {
+                "term": "delay",
+                "pos": "n",
+                "ipa": "dɪˈleɪ",
+                "meaning": "sự chậm trễ"
+              },
+              {
+                "term": "let someone know",
+                "pos": "v",
+                "ipa": "let ˈsʌmwʌn noʊ",
+                "meaning": "báo cho ai biết"
+              },
+              {
+                "term": "wedding",
+                "pos": "n",
+                "ipa": "ˈwedɪŋ",
+                "meaning": "đám cưới"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 28,
+      "questionEnd": 30,
+      "audio": "q59-61.mp3",
+      "image": null,
+      "transcript": "M: Hello, you’ve reached the customer service line for Quality Internet Service. How can I help you?\nW: I’m Mona Shannak, and my account number’s PK62H5. I’d like to close my account on June thirtieth.\nM: Oh, have you been experiencing issues with the service?\nW: Actually, my company has asked me to relocate to Spain.\nM: That’s exciting! I’ll take care of your request for you then.\nW: Thank you — I appreciate that.\nM: When I’m done updating your records, would you be willing to stay on the phone line to take a survey about your experience as a customer?\nW: Certainly.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/27d690d7-5ba2-4ece-ab54-a0687824a084",
+      "questions": [
+        {
+          "number": 28,
+          "part": 3,
+          "prompt": "What type of business does the man work for?",
+          "options": {
+            "A": "An electric company",
+            "B": "An Internet provider",
+            "C": "A landscaping service",
+            "D": "A water supplier"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói rõ anh làm việc cho \"Quality Internet Service\".",
+            "glossary": []
+          }
+        },
+        {
+          "number": 29,
+          "part": 3,
+          "prompt": "What does the woman imply when she says, \"my company has asked me to relocate to Spain\"?",
+          "options": {
+            "A": "She enjoys traveling for business.",
+            "B": "She was surprised by a job transfer.",
+            "C": "She has no complaints about a service.",
+            "D": "She would like paperwork sent to a different address."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Khi nhân viên hỗ trợ lo lắng hỏi xem cô ấy có gặp vấn đề gì với dịch vụ không (khiến cô ấy phải đóng tài khoản), cô ấy giải thích lý do chuyển nhà là vì công việc. Việc này ngụ ý rằng dịch vụ vẫn tốt, cô hủy dịch vụ chỉ vì lý do cá nhân.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 30,
+          "part": 3,
+          "prompt": "What does the woman agree to do?",
+          "options": {
+            "A": "Pay a bill",
+            "B": "Read a policy",
+            "C": "Return a call",
+            "D": "Complete a survey"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông hỏi cô ấy có sẵn lòng \"take a survey\" không, và cô ấy đồng ý (\"Certainly\").\nĐOẠN HỘI THOẠI 11 (",
+            "glossary": [
+              {
+                "term": "customer service line",
+                "pos": "n",
+                "ipa": "ˈkʌstəmər ˈsɜːrvɪs laɪn",
+                "meaning": "đường dây dịch vụ khách hàng"
+              },
+              {
+                "term": "account number",
+                "pos": "n",
+                "ipa": "əˈkaʊnt ˈnʌmbər",
+                "meaning": "số tài khoản"
+              },
+              {
+                "term": "close an account",
+                "pos": "v",
+                "ipa": "kloʊz ən əˈkaʊnt",
+                "meaning": "đóng tài khoản"
+              },
+              {
+                "term": "experience issues",
+                "pos": "v",
+                "ipa": "ɪkˈspɪriəns ˈɪʃuːz",
+                "meaning": "gặp sự cố"
+              },
+              {
+                "term": "relocate",
+                "pos": "v",
+                "ipa": "ˌriːˈloʊkeɪt",
+                "meaning": "chuyển chỗ ở/làm việc"
+              },
+              {
+                "term": "request",
+                "pos": "n",
+                "ipa": "rɪˈkwest",
+                "meaning": "yêu cầu"
+              },
+              {
+                "term": "stay on the phone line",
+                "pos": "v",
+                "ipa": "steɪ ɑːn ðə foʊn laɪn",
+                "meaning": "giữ máy"
+              },
+              {
+                "term": "survey",
+                "pos": "n",
+                "ipa": "ˈsɜːrveɪ",
+                "meaning": "cuộc khảo sát"
+              },
+              {
+                "term": "experience",
+                "pos": "n",
+                "ipa": "ɪkˈspɪriəns",
+                "meaning": "trải nghiệm"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

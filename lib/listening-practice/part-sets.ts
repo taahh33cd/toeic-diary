@@ -1,17 +1,27 @@
-// Bộ luyện Part 3 (hội thoại) và Part 4 (bài nói) — mỗi part 2 bộ "cơ bản"/"nâng cao",
-// cùng audio với series dictation "part3-practice" / "part4-practice" (/practice/part-N).
-// Data đã ở sẵn shape FullTest nên không cần adapter như bộ CA Part 1/2.
+// Bộ luyện Part 3 (hội thoại) và Part 4 (bài nói), xếp trong 2 thư mục "Luyện tập cơ bản" /
+// "Luyện tập nâng cao", mỗi thư mục gồm các Test 1, 2, … Data đã ở sẵn shape FullTest.
 //
-// Nguồn: "TOEIC PART N.docx" (đề + ảnh biểu đồ) + "TOEIC PART N - ĐÁP ÁN.docx";
-// transcript lấy từ bảng lessons của series dictation. Ảnh ở public/listening-practice/partN.
+// Nguồn:
+//   - Cơ bản/Nâng cao Test 1: "TOEIC PART N.docx" + đáp án; audio của series dictation
+//     "partN-practice" (/practice/part-N); ảnh ở public/listening-practice/partN.
+//   - Part 3 Cơ bản Test 2–6: câu 32–61 của EST 2026 Test 1–5 (lib/full-tests), transcript
+//     theo bộ đề Drive 2026-11-19; audio + giải thích dùng chung với full test.
+//
+// testNumber chỉ là khoá trong URL/lượt làm (không đổi khi đổi tên hiển thị) — giữ nguyên số
+// đã cấp để không mất lịch sử làm bài.
 import type { FullTest } from "@/lib/full-tests/types";
 
 export type SetPart = 3 | 4;
+export type SetLevel = "basic" | "advanced";
 
 export interface PartSet {
   part: SetPart;
+  level: SetLevel;
   slug: string;
   testNumber: number;
+  /** Nhãn trên thẻ trong thư mục, vd "Test 2" */
+  label: string;
+  /** Tên đầy đủ (sổ học tập, tiêu đề màn làm bài) */
   title: string;
   /** Số hội thoại (Part 3) / bài nói (Part 4) */
   items: number;
@@ -20,14 +30,32 @@ export interface PartSet {
   free: boolean;
 }
 
+export const SET_LEVELS: { level: SetLevel; title: string }[] = [
+  { level: "basic", title: "Luyện tập cơ bản" },
+  { level: "advanced", title: "Luyện tập nâng cao" },
+];
+
+function set(
+  part: SetPart, level: SetLevel, index: number, slug: string, testNumber: number,
+  items: number, questions: number, free: boolean,
+): PartSet {
+  const folder = SET_LEVELS.find((l) => l.level === level)!.title;
+  return { part, level, slug, testNumber, label: `Test ${index}`, title: `${folder} · Test ${index}`, items, questions, free };
+}
+
 export const PART_SETS: Record<SetPart, PartSet[]> = {
   3: [
-    { part: 3, slug: "part3-basic", testNumber: 1, title: "Luyện tập cơ bản", items: 10, questions: 23, free: true },
-    { part: 3, slug: "part3-advanced", testNumber: 2, title: "Luyện tập nâng cao", items: 5, questions: 15, free: false },
+    set(3, "basic", 1, "part3-basic", 1, 10, 23, true),
+    set(3, "basic", 2, "part3-basic-2", 3, 10, 30, true),
+    set(3, "basic", 3, "part3-basic-3", 4, 10, 30, false),
+    set(3, "basic", 4, "part3-basic-4", 5, 10, 30, false),
+    set(3, "basic", 5, "part3-basic-5", 6, 10, 30, false),
+    set(3, "basic", 6, "part3-basic-6", 7, 10, 30, false),
+    set(3, "advanced", 1, "part3-advanced", 2, 5, 15, false),
   ],
   4: [
-    { part: 4, slug: "part4-basic", testNumber: 1, title: "Luyện tập cơ bản", items: 10, questions: 21, free: true },
-    { part: 4, slug: "part4-advanced", testNumber: 2, title: "Luyện tập nâng cao", items: 10, questions: 30, free: false },
+    set(4, "basic", 1, "part4-basic", 1, 10, 21, true),
+    set(4, "advanced", 1, "part4-advanced", 2, 10, 30, false),
   ],
 };
 
@@ -49,13 +77,20 @@ export function getPartSetBySlug(slug: string): PartSet | undefined {
 // Map tường minh thay vì import động theo biến: Turbopack cần đường dẫn tĩnh.
 const LOADERS: Record<string, () => Promise<{ default: unknown }>> = {
   "part3-basic": () => import("./data/part3-basic.json"),
+  "part3-basic-2": () => import("./data/part3-basic-2.json"),
+  "part3-basic-3": () => import("./data/part3-basic-3.json"),
+  "part3-basic-4": () => import("./data/part3-basic-4.json"),
+  "part3-basic-5": () => import("./data/part3-basic-5.json"),
+  "part3-basic-6": () => import("./data/part3-basic-6.json"),
   "part3-advanced": () => import("./data/part3-advanced.json"),
   "part4-basic": () => import("./data/part4-basic.json"),
   "part4-advanced": () => import("./data/part4-advanced.json"),
 };
 
 export async function loadPartSetTest(part: SetPart, testNumber: number): Promise<FullTest | null> {
-  const set = getPartSet(part, testNumber);
-  if (!set) return null;
-  return (await LOADERS[set.slug]()).default as FullTest;
+  const s = getPartSet(part, testNumber);
+  if (!s) return null;
+  const test = (await LOADERS[s.slug]()).default as FullTest;
+  // Tên hiển thị lấy từ đây (data cũ còn ghi "Luyện tập cơ bản") ⇒ đổi tên không cần sửa JSON.
+  return { ...test, title: s.title };
 }

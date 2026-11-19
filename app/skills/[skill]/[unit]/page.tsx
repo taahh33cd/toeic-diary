@@ -8,7 +8,7 @@ import { WritingSentenceClient } from "@/components/skills/WritingSentenceClient
 import { McqExamClient } from "@/components/skills/exam/McqExamClient";
 import { PracticeTestList } from "@/components/skills/listening/PracticeTestList";
 import { FREE_PRACTICE_TESTS, listPracticeTests } from "@/lib/listening-practice";
-import { PART_SETS, SET_ITEM_NOUN, isSetPart } from "@/lib/listening-practice/part-sets";
+import { PART_SETS, SET_ITEM_NOUN, SET_LEVELS, isSetPart } from "@/lib/listening-practice/part-sets";
 import { WRITING_Q1_5, Q15_PART_KEY } from "@/lib/skills/writing-q1-5";
 import { Q67_PART_KEY } from "@/lib/skills/writing-q6-7";
 import { WritingEmailClient } from "@/components/skills/WritingEmailClient";
@@ -117,19 +117,22 @@ export default async function SkillUnitPage({ params }: Props) {
         <PracticeTestList
           skill={found.skill}
           unit={found.unit}
-          tests={sets.map((s) => ({
-            slug: s.slug,
-            testNumber: s.testNumber,
-            title: s.title,
-            detail: `${s.items} ${noun} · ${s.questions} câu`,
-          }))}
+          sections={SET_LEVELS.map(({ level, title }) => ({
+            title,
+            tests: sets.filter((s) => s.level === level).map((s) => ({
+              slug: s.slug,
+              testNumber: s.testNumber,
+              title: s.label,
+              detail: `${s.items} ${noun} · ${s.questions} câu`,
+            })),
+          })).filter((sec) => sec.tests.length > 0)}
           intro={
             <>
-              {sets.length} bộ đề · mỗi {noun} 1–3 câu hỏi, có câu kèm biểu đồ. {modes}{" "}
+              Đề chia hai mục <strong>Luyện tập cơ bản</strong> và <strong>Luyện tập nâng cao</strong>; mỗi {noun} 1–3 câu hỏi. {modes}{" "}
               Sau khi nộp bài có transcript, giải thích tiếng Việt và lối sang bài chép chính tả của từng {noun}.
             </>
           }
-          freeNote={`Bộ ${sets.filter((s) => s.free).map((s) => `"${s.title}"`).join(", ")} mở cho mọi tài khoản. Bộ còn lại cần đăng ký khoá học.`}
+          freeNote={`${sets.filter((s) => s.free).map((s) => s.title).join(", ")} mở cho mọi tài khoản. Các test còn lại cần đăng ký khoá học.`}
           unlocked={isUsageExempt(profile)}
           freeTests={sets.filter((s) => s.free).map((s) => s.testNumber)}
           stats={stats}
@@ -141,7 +144,7 @@ export default async function SkillUnitPage({ params }: Props) {
       <PracticeTestList
         skill={found.skill}
         unit={found.unit}
-        tests={listPracticeTests().map((t) => {
+        sections={[{ tests: listPracticeTests().map((t) => {
           // Part 1 luôn là câu 1..part1, phần còn lại là Part 2
           const missing = t.missingAudio.filter((n) => (part === 1 ? n <= t.part1 : n > t.part1)).length;
           return {
@@ -150,7 +153,7 @@ export default async function SkillUnitPage({ params }: Props) {
             title: t.title,
             detail: `${part === 1 ? t.part1 : t.part2} câu${missing > 0 ? ` · ${missing} câu thiếu audio` : ""}`,
           };
-        })}
+        }) }]}
         intro={
           <>
             {listPracticeTests().length} bộ đề · mỗi bộ {part === 1 ? "6" : "25"} câu. {modes}{" "}Script &amp; đáp án hiện sau khi nộp bài.
