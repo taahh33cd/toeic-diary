@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { PARTS, partMeta } from "@/lib/full-tests/parts";
+import { PARTS, partMeta, partsWithRange } from "@/lib/full-tests/parts";
 import { scoreAttempt } from "@/lib/full-tests/scoring";
 import type {
   FullTest, FullTestGroup, FullTestQuestion, GlossaryTerm, PartNumber,
@@ -133,7 +133,7 @@ export function ReviewPanel({
     const el = document.getElementById(`rpart-${part}`);
     if (el) return el.scrollIntoView({ behavior: "smooth", block: "start" });
     // Part đó không có câu nào khớp bộ lọc ⇒ mở "Tất cả" rồi nhảy tới câu đầu part
-    pendingJump.current = partMeta(part).first;
+    pendingJump.current = test.groups.find((g) => g.part === part)?.questionStart ?? partMeta(part).first;
     setFilter("all");
   }
 
@@ -362,7 +362,7 @@ function ReviewSidebar({
   onJumpQuestion: (q: number) => void;
 }) {
   const chosen = new Set(parts);
-  const inPlay = PARTS.filter((p) => chosen.has(p.part));
+  const inPlay = partsWithRange(chosen, test.groups);
 
   return (
     <aside style={{ flex: "0 0 250px", position: "sticky", top: "0.8rem", maxHeight: "calc(100vh - 1.6rem)", overflowY: "auto", background: P.panel, border: `1px solid ${P.border}`, borderRadius: 14, padding: "0.95rem" }}>
@@ -472,15 +472,27 @@ function ReviewGroup({
               : `Câu ${group.questionStart}`}
           </span>
         </span>
-        {hasMedia && (
-          <button
-            type="button"
-            onClick={() => setOpenMedia((v) => !v)}
-            style={{ background: "transparent", border: `1px solid ${P.border}`, borderRadius: 7, padding: "4px 11px", color: P.inkSoft, fontFamily: P.sans, fontSize: "0.78rem", fontWeight: 700, cursor: "pointer" }}
-          >
-            {openMedia ? "Ẩn" : meta.hasAudio ? "Nghe lại & transcript" : "Xem lại bài đọc"}
-          </button>
-        )}
+        <span style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+          {group.dictationHref && (
+            <a
+              href={group.dictationHref}
+              target="_blank"
+              rel="noopener"
+              style={{ border: `1px solid ${P.border}`, borderRadius: 7, padding: "4px 11px", color: P.primary, fontFamily: P.sans, fontSize: "0.78rem", fontWeight: 700, textDecoration: "none" }}
+            >
+              ✍️ Luyện chép chính tả
+            </a>
+          )}
+          {hasMedia && (
+            <button
+              type="button"
+              onClick={() => setOpenMedia((v) => !v)}
+              style={{ background: "transparent", border: `1px solid ${P.border}`, borderRadius: 7, padding: "4px 11px", color: P.inkSoft, fontFamily: P.sans, fontSize: "0.78rem", fontWeight: 700, cursor: "pointer" }}
+            >
+              {openMedia ? "Ẩn" : meta.hasAudio ? "Nghe lại & transcript" : "Xem lại bài đọc"}
+            </button>
+          )}
+        </span>
       </div>
 
       {openMedia && (

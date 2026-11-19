@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { PARTS, partMeta, suggestedMinutes } from "@/lib/full-tests/parts";
+import { partMeta, partsWithRange, suggestedMinutes } from "@/lib/full-tests/parts";
 import type { ExamProgress } from "@/components/shared/useAttempt";
 import type {
   FullTest, FullTestGroup, FullTestQuestion, PartNumber,
@@ -99,7 +99,7 @@ export function ExamScreen({
 
   const chosen = useMemo(() => new Set(config.parts), [config.parts]);
   const groups = useMemo(() => test.groups.filter((g) => chosen.has(g.part)), [test.groups, chosen]);
-  const partsInPlay = useMemo(() => PARTS.filter((p) => chosen.has(p.part)), [chosen]);
+  const partsInPlay = useMemo(() => partsWithRange(chosen, test.groups), [chosen, test.groups]);
   const listeningParts = useMemo(() => partsInPlay.filter((p) => p.section === "listening"), [partsInPlay]);
   const readingParts = useMemo(() => partsInPlay.filter((p) => p.section === "reading"), [partsInPlay]);
   // Thi thật: đủ Part 5-7 là 75 phút như đề thật; chọn bớt part thì bớt giờ tương ứng.
@@ -936,7 +936,7 @@ function MediaBlock({
           src={g.image}
           alt={`Hình ${rangeLabel(g)}`}
           onClick={() => onZoom(g.image!)}
-          style={{ width: "100%", height: "auto", display: "block", borderRadius: 8, border: `1px solid ${P.border}`, background: "#fff", cursor: "zoom-in", marginBottom: "0.8rem" }}
+          style={{ width: "100%", maxWidth: g.imageWidth, height: "auto", display: "block", borderRadius: 8, border: `1px solid ${P.border}`, background: "#fff", cursor: "zoom-in", marginBottom: "0.8rem" }}
         />
       )}
 

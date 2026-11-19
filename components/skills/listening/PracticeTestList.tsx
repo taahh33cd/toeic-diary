@@ -1,21 +1,25 @@
 import Link from "next/link";
 import type { Skill, SkillUnit } from "@/lib/skills/structure";
-import type { ListeningPart, PracticeCatalogEntry } from "@/lib/listening-practice/types";
+import type { PracticeListItem } from "@/lib/listening-practice/types";
 import type { TestStat } from "@/lib/journal/attempts";
 
 export function PracticeTestList({
   skill,
   unit,
-  part,
   tests,
+  intro,
+  freeNote,
   unlocked,
   freeTests,
   stats,
 }: {
   skill: Skill;
   unit: SkillUnit;
-  part: ListeningPart;
-  tests: PracticeCatalogEntry[];
+  tests: PracticeListItem[];
+  /** Đoạn giới thiệu số đề/chế độ làm bài phía trên lưới đề */
+  intro: React.ReactNode;
+  /** Dòng báo đề nào mở miễn phí — chỉ hiện khi chưa mở khoá */
+  freeNote: string;
   /** Đã đăng ký khoá (hoặc HV nội bộ/giáo viên) ⇒ mở hết đề */
   unlocked: boolean;
   /** Số đề mở cho mọi tài khoản */
@@ -61,21 +65,17 @@ export function PracticeTestList({
       <div style={{ height: 1, background: "var(--border)", marginBottom: "1.5rem" }} />
 
       <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6, margin: "0 0 1.1rem" }}>
-        {tests.length} bộ đề · mỗi bộ {part === 1 ? "6" : "25"} câu. Mỗi bộ chọn được hai chế độ:{" "}
-        <strong>Thi thử</strong> (audio chạy liền một mạch, không tua) hoặc <strong>Luyện tập</strong>{" "}
-        (nghe lại, đổi tốc độ, không bấm giờ). Script &amp; đáp án hiện sau khi nộp bài.
+        {intro}
       </p>
 
       {!unlocked && (
         <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", lineHeight: 1.6, margin: "0 0 1.1rem" }}>
-          🔓 Đề {freeTests.join(" và ")} mở cho mọi tài khoản. Các đề còn lại cần đăng ký khoá học.
+          🔓 {freeNote}
         </p>
       )}
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "0.7rem" }}>
         {tests.map((t) => {
-          // Part 1 luôn là câu 1..part1, phần còn lại là Part 2
-          const missing = t.missingAudio.filter((n) => (part === 1 ? n <= t.part1 : n > t.part1)).length;
           const locked = !unlocked && !freeTests.includes(t.testNumber);
           const box: React.CSSProperties = {
             display: "block",
@@ -93,8 +93,7 @@ export function PracticeTestList({
                 {t.title}{locked ? " 🔒" : ""}
               </span>
               <span style={{ display: "block", fontSize: "0.72rem", color: "var(--text-muted)", marginTop: 2 }}>
-                {locked ? "Cần đăng ký khoá" : `${part === 1 ? t.part1 : t.part2} câu`}
-                {!locked && missing > 0 ? ` · ${missing} câu thiếu audio` : ""}
+                {locked ? "Cần đăng ký khoá" : t.detail}
               </span>
 
               {/* Kết quả của chính học viên: lần gần nhất, số lần, bài còn dở */}

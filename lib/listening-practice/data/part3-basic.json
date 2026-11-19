@@ -1,0 +1,821 @@
+{
+  "examSlug": "part3-practice",
+  "examTitle": "Luyện nghe Part 3",
+  "testNumber": 1,
+  "slug": "part3-basic",
+  "title": "Luyện tập cơ bản",
+  "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part3/part3-basic",
+  "locked": false,
+  "lockReason": null,
+  "stats": {
+    "questions": 23,
+    "answered": 23,
+    "missingAnswers": [],
+    "brokenQuestions": []
+  },
+  "groups": [
+    {
+      "part": 3,
+      "questionStart": 1,
+      "questionEnd": 1,
+      "audio": "1.mp3",
+      "image": null,
+      "transcript": "W-Br: Antonio, were you at yesterday's all - staff meeting? It was during, um, I was on the phone with an important client and couldn't make it.\nM-Cn: Mhm. You got a copy of the meeting minutes?\nW-Br: Yeah, but the part about how to get reimbursed for travel expenses was really confusing. Do you know if there's more documentation on that?\nM-Cn: Oh, you printed out the minutes? If you look at them electronically, you'll see there's a, there's a link to our internal Web site where you can find more details on reimbursement procedures.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/15f313c4-19f6-4725-8130-b1ecdbc007d4",
+      "questions": [
+        {
+          "number": 1,
+          "part": 3,
+          "prompt": "What is the woman confused about?",
+          "options": {
+            "A": "The details of an assignment",
+            "B": "A reimbursement process",
+            "C": "The terms of a contract",
+            "D": "A travel itinerary"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nói: \"the part about how to get reimbursed for travel expenses was really confusing\" (phần hướng dẫn cách được hoàn tiền chi phí đi lại thật sự khó hiểu). \"get reimbursed\" = được hoàn tiền ⇒ quy trình hoàn tiền (B).",
+            "glossary": [
+              {
+                "term": "meeting minutes",
+                "pos": "noun phrase",
+                "ipa": "ˈmiːtɪŋ ˈmɪnɪts",
+                "meaning": "biên bản cuộc họp"
+              },
+              {
+                "term": "get reimbursed",
+                "pos": "verb phrase",
+                "ipa": "ɡet ˌriːɪmˈbɜːst",
+                "meaning": "được hoàn tiền"
+              },
+              {
+                "term": "travel expenses",
+                "pos": "noun phrase",
+                "ipa": "ˈtrævl ɪkˈspensɪz",
+                "meaning": "chi phí đi lại, công tác"
+              },
+              {
+                "term": "documentation",
+                "pos": "noun",
+                "ipa": "ˌdɒkjumenˈteɪʃn",
+                "meaning": "tài liệu hướng dẫn"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 2,
+      "questionEnd": 3,
+      "audio": "2.mp3",
+      "image": null,
+      "transcript": "W-Am: Hi, Haruto, have you picked the caterer for the shareholders' meeting? We want everything to go smoothly.\nM-Cn: I haven't decided yet, but I've got quotes from a few local caterers. Our budget's pretty tight so I'm leaning toward Star Restaurant. They have the least expensive lunch service.\nW-Am: You know... I've had problems with Star Restaurant. I hired them to cater a meal for a management meeting last month, and they delivered the food an hour late. I just don't want a delay like that to happen during this meeting. You can spend a little more money if you need to.\nM-Cn: Oh, I'm so glad you told me. Then let's go with Golden Eagle.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/d138a2d3-3594-4d4e-97e2-b49b656cc5eb",
+      "questions": [
+        {
+          "number": 2,
+          "part": 3,
+          "prompt": "What type of event are the speakers discussing?",
+          "options": {
+            "A": "A shareholders' meeting",
+            "B": "A press conference",
+            "C": "A job fair",
+            "D": "A product demonstration"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Ngay câu đầu người phụ nữ hỏi: \"have you picked the caterer for the shareholders' meeting?\" (anh đã chọn bên cung cấp đồ ăn cho cuộc họp cổ đông chưa?) ⇒ sự kiện là cuộc họp cổ đông (A).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 3,
+          "part": 3,
+          "prompt": "What problem did the woman experience with one of the restaurants?",
+          "options": {
+            "A": "An unhelpful staff member",
+            "B": "A poorly cooked meal",
+            "C": "A billing error",
+            "D": "A delivery delay"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ kể về Star Restaurant: \"they delivered the food an hour late. I just don't want a delay like that\" (họ giao đồ ăn trễ một tiếng; tôi không muốn chậm trễ như vậy) ⇒ giao hàng trễ (D). Bẫy: đáp án B, C nghe có vẻ liên quan nhà hàng nhưng không được nhắc tới.",
+            "glossary": [
+              {
+                "term": "caterer",
+                "pos": "noun",
+                "ipa": "ˈkeɪtərə(r)",
+                "meaning": "bên cung cấp đồ ăn cho sự kiện"
+              },
+              {
+                "term": "shareholder",
+                "pos": "noun",
+                "ipa": "ˈʃeəhəʊldə(r)",
+                "meaning": "cổ đông"
+              },
+              {
+                "term": "quote",
+                "pos": "noun",
+                "ipa": "kwəʊt",
+                "meaning": "bảng báo giá"
+              },
+              {
+                "term": "lean toward",
+                "pos": "phrasal verb",
+                "ipa": "liːn təˈwɔːd",
+                "meaning": "nghiêng về (lựa chọn nào đó)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 4,
+      "questionEnd": 4,
+      "audio": "3.mp3",
+      "image": null,
+      "transcript": "W-Au: Hi Richard, I just saw the catering order for Satoshi Kato's retirement party next week.\nM-Au: Yeah, the restaurant said they'd deliver the food around 11:45. That should give us plenty of time to set up for lunch.\nW-Au: That's great, but um, have you ever met Mr. Kato?\nM-Au: Oh, right! Of course. How could I forget that Mr. Kato doesn't eat meat? I'll call the restaurant later today to change the order, but I really have to finish this seating chart first.\nW-Au: I can call the restaurant for you, so you can finish up here.\nM-Au: That'd be great, thank you so much!",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/d85a2632-5f9d-4d37-b846-fef88bce2621",
+      "questions": [
+        {
+          "number": 4,
+          "part": 3,
+          "prompt": "According to the woman, what is taking place next week?",
+          "options": {
+            "A": "A career fair",
+            "B": "A retirement celebration",
+            "C": "A promotional event",
+            "D": "An anniversary party"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nói: \"the catering order for Satoshi Kato's retirement party next week\" (đơn đặt đồ ăn cho tiệc nghỉ hưu của Satoshi Kato tuần sau). \"retirement party\" được diễn đạt lại thành \"retirement celebration\" (B).",
+            "glossary": [
+              {
+                "term": "catering order",
+                "pos": "noun phrase",
+                "ipa": "ˈkeɪtərɪŋ ˈɔːdə(r)",
+                "meaning": "đơn đặt đồ ăn cho sự kiện"
+              },
+              {
+                "term": "retirement party",
+                "pos": "noun phrase",
+                "ipa": "rɪˈtaɪəmənt ˈpɑːti",
+                "meaning": "tiệc nghỉ hưu"
+              },
+              {
+                "term": "seating chart",
+                "pos": "noun phrase",
+                "ipa": "ˈsiːtɪŋ tʃɑːt",
+                "meaning": "sơ đồ chỗ ngồi"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 5,
+      "questionEnd": 6,
+      "audio": "4.mp3",
+      "image": null,
+      "transcript": "M-Cn: Hi, Nadia. Our department manager mentioned you're training our new hires.\nW-Am: Yeah, I still have a lot to do, and the training starts Monday. I've been so busy updating the training documents, I haven't had time to do anything else.\nM-Cn: Well ... I finished my project early. What do you need?\nW-Am: Thank you so much. Could you check with the Security Office about the badges for the new employees? I sent them a request last week, but I haven't heard back yet.\nM-Cn: No problem, I'll take care of that right away.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/751b00f7-810d-4807-b2d3-2614b51431ff",
+      "questions": [
+        {
+          "number": 5,
+          "part": 3,
+          "prompt": "What is the woman preparing for?",
+          "options": {
+            "A": "A training session",
+            "B": "A job interview",
+            "C": "A safety inspection",
+            "D": "A product review"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói cô ấy đang \"training our new hires\" (đào tạo nhân viên mới), và cô ấy xác nhận \"the training starts Monday\" ⇒ cô đang chuẩn bị cho buổi đào tạo (A).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 6,
+          "part": 3,
+          "prompt": "What will the man most likely do next?",
+          "options": {
+            "A": "Postpone a meeting",
+            "B": "Follow up on a request",
+            "C": "Check a piece of equipment",
+            "D": "Review a policy"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nhờ: \"Could you check with the Security Office about the badges... I sent them a request last week, but I haven't heard back yet.\" Người đàn ông đáp \"I'll take care of that right away\" ⇒ anh sẽ đi hỏi lại (theo dõi) một yêu cầu đã gửi (B).",
+            "glossary": [
+              {
+                "term": "new hire",
+                "pos": "noun",
+                "ipa": "njuː ˈhaɪə(r)",
+                "meaning": "nhân viên mới tuyển"
+              },
+              {
+                "term": "badge",
+                "pos": "noun",
+                "ipa": "bædʒ",
+                "meaning": "thẻ nhân viên, thẻ ra vào"
+              },
+              {
+                "term": "hear back",
+                "pos": "phrasal verb",
+                "ipa": "hɪə(r) bæk",
+                "meaning": "nhận được phản hồi"
+              },
+              {
+                "term": "take care of",
+                "pos": "phrase",
+                "ipa": "teɪk keə(r) əv",
+                "meaning": "lo liệu, xử lý"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 7,
+      "questionEnd": 9,
+      "audio": "5.mp3",
+      "image": null,
+      "transcript": "W-Br: Pablo, I heard about your promotion. That's great news! When do you start your new position?\nM-Cn: Thanks very much; I start on Monday. Things are a little busy at the moment, though, because my new office is on a different floor, and I have to move all my personal belongings there.\nW-Br: I just took inventory of the office supplies, so if you need anything to help you pack, let me know.\nM-Cn: That would actually be very helpful. I can't believe how many things I've accumulated over the years! Do you think I can get some cardboard boxes and tape?",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/0a97a026-eb02-4c7e-bf8b-37a26a19f0fc",
+      "questions": [
+        {
+          "number": 7,
+          "part": 3,
+          "prompt": "What will the man do on Monday?",
+          "options": {
+            "A": "Attend a seminar",
+            "B": "Graduate from school",
+            "C": "Start a new position",
+            "D": "Receive an award"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ hỏi \"When do you start your new position?\", người đàn ông trả lời \"I start on Monday\" ⇒ thứ Hai anh bắt đầu vị trí mới (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 8,
+          "part": 3,
+          "prompt": "Why does the man say he is busy?",
+          "options": {
+            "A": "He is moving into a different office.",
+            "B": "He is meeting with some clients.",
+            "C": "He has an upcoming business trip.",
+            "D": "He has a project deadline."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông giải thích: \"my new office is on a different floor, and I have to move all my personal belongings there\" (văn phòng mới ở tầng khác, phải chuyển hết đồ cá nhân) ⇒ anh đang chuyển sang văn phòng khác (A).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 9,
+          "part": 3,
+          "prompt": "What does the woman offer to do?",
+          "options": {
+            "A": "Review an expense report",
+            "B": "Arrange a company celebration",
+            "C": "Introduce the man to a colleague",
+            "D": "Provide the man with supplies"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nói: \"I just took inventory of the office supplies, so if you need anything to help you pack, let me know\" (tôi vừa kiểm kê văn phòng phẩm, cần gì để đóng gói cứ nói) ⇒ cô đề nghị cung cấp đồ dùng (D). Anh xin luôn \"cardboard boxes and tape\".",
+            "glossary": [
+              {
+                "term": "promotion",
+                "pos": "noun",
+                "ipa": "prəˈməʊʃn",
+                "meaning": "sự thăng chức"
+              },
+              {
+                "term": "personal belongings",
+                "pos": "noun phrase",
+                "ipa": "ˈpɜːsənl bɪˈlɒŋɪŋz",
+                "meaning": "đồ dùng cá nhân"
+              },
+              {
+                "term": "take inventory",
+                "pos": "verb phrase",
+                "ipa": "teɪk ˈɪnvəntri",
+                "meaning": "kiểm kê"
+              },
+              {
+                "term": "accumulate",
+                "pos": "verb",
+                "ipa": "əˈkjuːmjəleɪt",
+                "meaning": "tích lũy, gom góp dần"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 10,
+      "questionEnd": 11,
+      "audio": "6.mp3",
+      "image": null,
+      "transcript": "M-Cn: Excuse me, I'm looking for a video camera. I've never bought one before, and I'm wondering if you could make some suggestions.\nW-Am: Sure. It'll help though to know what your specific needs are and how much you'd like to spend.\nM-Cn: Well, I plan to use it most when I go on vacation. I have a couple of trips coming up, and I'd like to record my experiences. I've never operated video equipment though, so I'd like something that's basic.\nW-Am: In that case, I'd recommend the Sepler 83. I personally like this one the best because it's very easy to operate. Since this is your first video camera purchase, I'd probably get that one.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/413bca5f-fe01-4bd6-99e1-5c7efac241ea",
+      "questions": [
+        {
+          "number": 10,
+          "part": 3,
+          "prompt": "What does the man ask the woman to do?",
+          "options": {
+            "A": "Place an order",
+            "B": "Recommend a product",
+            "C": "Explain a feature",
+            "D": "Reduce a price"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói: \"I'm wondering if you could make some suggestions\" (không biết chị có thể gợi ý giúp không) — anh đang tìm mua máy quay ⇒ nhờ giới thiệu một sản phẩm (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 11,
+          "part": 3,
+          "prompt": "What does the man say he will do with a video camera?",
+          "options": {
+            "A": "Document his travels",
+            "B": "Use it for a class",
+            "C": "Record staff meetings",
+            "D": "Make a commercial"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói sẽ dùng máy quay chủ yếu \"when I go on vacation... I'd like to record my experiences\" (khi đi du lịch, muốn ghi lại trải nghiệm) ⇒ ghi lại các chuyến đi (A). \"record my experiences\" được diễn đạt lại thành \"document his travels\".",
+            "glossary": [
+              {
+                "term": "make suggestions",
+                "pos": "verb phrase",
+                "ipa": "meɪk səˈdʒestʃənz",
+                "meaning": "đưa ra gợi ý"
+              },
+              {
+                "term": "operate",
+                "pos": "verb",
+                "ipa": "ˈɒpəreɪt",
+                "meaning": "vận hành, sử dụng (máy móc)"
+              },
+              {
+                "term": "equipment",
+                "pos": "noun",
+                "ipa": "ɪˈkwɪpmənt",
+                "meaning": "thiết bị"
+              },
+              {
+                "term": "purchase",
+                "pos": "noun",
+                "ipa": "ˈpɜːtʃəs",
+                "meaning": "món hàng mua, việc mua"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 12,
+      "questionEnd": 14,
+      "audio": "7.mp3",
+      "image": null,
+      "transcript": "W-Am: Excuse me, sir, but I think you're in my seat, 14-A?\nM-Au: Let me take a look at my ticket... hmm, no, it seems I'm in the right place. My ticket says 14-A as well.\nW-Am: Well... this is train car five. Are you sure you're in the right car?\nM-Au: Oh, pardon me! I'm 14-A in car six. I've put my bags on the overhead rack, so just give me a moment to get my things together.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/eda3f7d0-b0d3-489f-8d50-58faf381360a",
+      "questions": [
+        {
+          "number": 12,
+          "part": 3,
+          "prompt": "What are the speakers discussing?",
+          "options": {
+            "A": "An arrival time",
+            "B": "A seat assignment",
+            "C": "A ticket price",
+            "D": "A travel policy"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ mở đầu: \"I think you're in my seat, 14-A?\" (hình như anh đang ngồi ghế của tôi) ⇒ họ đang nói về việc xếp chỗ ngồi (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 13,
+          "part": 3,
+          "prompt": "Where is the conversation taking place?",
+          "options": {
+            "A": "In a parking garage",
+            "B": "At a car rental agency",
+            "C": "On a train",
+            "D": "In a baggage claim area"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nói: \"this is train car five\" (đây là toa số năm), người đàn ông đáp \"I'm 14-A in car six\" ⇒ cuộc hội thoại diễn ra trên tàu hỏa (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 14,
+          "part": 3,
+          "prompt": "What does the man say he will do?",
+          "options": {
+            "A": "Show his identification card",
+            "B": "Gather his luggage",
+            "C": "Ask for a refund",
+            "D": "Speak with a supervisor"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói: \"I've put my bags on the overhead rack, so just give me a moment to get my things together\" (tôi để túi trên giá hành lý, cho tôi chút thời gian gom đồ) ⇒ anh sẽ gom hành lý (B).",
+            "glossary": [
+              {
+                "term": "train car",
+                "pos": "noun phrase",
+                "ipa": "treɪn kɑː(r)",
+                "meaning": "toa tàu"
+              },
+              {
+                "term": "overhead rack",
+                "pos": "noun phrase",
+                "ipa": "ˌəʊvəˈhed ræk",
+                "meaning": "giá để hành lý phía trên ghế"
+              },
+              {
+                "term": "pardon me",
+                "pos": "phrase",
+                "ipa": "ˈpɑːdn miː",
+                "meaning": "xin lỗi (lịch sự)"
+              },
+              {
+                "term": "get one's things together",
+                "pos": "phrase",
+                "ipa": "ɡet wʌnz θɪŋz təˈɡeðə(r)",
+                "meaning": "gom đồ đạc lại"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 15,
+      "questionEnd": 17,
+      "audio": "8.mp3",
+      "image": null,
+      "transcript": "W-Br: Hi, Mr. Lin, I'm calling from Central Dentistry. You have an appointment with Dr. Sumner on June eighth at two P.M. I was wondering if we'd be able to move your appointment to three o'clock.\nM-Cn: Well, I have a sales call scheduled that morning, but I think three o'clock would be all right.\nW-Br: Wonderful, we really appreciate it. Most of our staff will be attending a dental workshop earlier in the day, and they are concerned about getting back in time.\nM-Cn: No problem at all. I'll mark down that change in my calendar right now.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/8abb749b-612f-412c-9fa2-5f15e2b77e21",
+      "questions": [
+        {
+          "number": 15,
+          "part": 3,
+          "prompt": "What most likely is the woman's job?",
+          "options": {
+            "A": "Lab technician",
+            "B": "Receptionist",
+            "C": "Pharmacist",
+            "D": "Doctor"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Cô ấy \"calling from Central Dentistry\" và báo lịch hẹn của khách với \"Dr. Sumner\" ⇒ cô là người sắp xếp lịch hẹn của phòng khám, tức lễ tân (B). Không chọn D vì bác sĩ là người khác (Dr. Sumner).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 16,
+          "part": 3,
+          "prompt": "What does the woman want to change?",
+          "options": {
+            "A": "The quantity of items in an order",
+            "B": "The location of a seminar",
+            "C": "The time of an appointment",
+            "D": "A payment schedule"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ hỏi: \"if we'd be able to move your appointment to three o'clock\" (có thể dời lịch hẹn sang 3 giờ không) ⇒ đổi thời gian lịch hẹn (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 17,
+          "part": 3,
+          "prompt": "What will the man do next?",
+          "options": {
+            "A": "Update his calendar",
+            "B": "Submit his medical records",
+            "C": "Review an invoice",
+            "D": "Prepare an agenda"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói: \"I'll mark down that change in my calendar right now\" (tôi sẽ ghi thay đổi đó vào lịch ngay) ⇒ cập nhật lịch của mình (A).",
+            "glossary": [
+              {
+                "term": "appointment",
+                "pos": "noun",
+                "ipa": "əˈpɔɪntmənt",
+                "meaning": "lịch hẹn"
+              },
+              {
+                "term": "move (an appointment)",
+                "pos": "verb",
+                "ipa": "muːv",
+                "meaning": "dời (lịch hẹn)"
+              },
+              {
+                "term": "workshop",
+                "pos": "noun",
+                "ipa": "ˈwɜːkʃɒp",
+                "meaning": "hội thảo chuyên môn"
+              },
+              {
+                "term": "mark down",
+                "pos": "phrasal verb",
+                "ipa": "mɑːk daʊn",
+                "meaning": "ghi lại"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 18,
+      "questionEnd": 20,
+      "audio": "9.mp3",
+      "image": "/listening-practice/part3/basic-9.png",
+      "imageWidth": 406,
+      "transcript": "M-Cn: We're getting close to the airport, so we'd better stop to put gas in the car. The rental company will charge us an extra fee for fuel if they have to do it.\nW-Br: Good idea. We don't want to pay more than we have to.\nM-Cn: OK, should I take this exit then?\nW-Br: No, that's a rest area. Keep going, we want the next exit.\nM-Cn: Oh, good, and I hope they also sell food. Then we can pick up some snacks for the plane while we're there.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/76710c3f-9ee0-4f6a-93e3-75c931e96e2f",
+      "questions": [
+        {
+          "number": 18,
+          "part": 3,
+          "prompt": "What are the speakers concerned about?",
+          "options": {
+            "A": "Finding a parking space",
+            "B": "Missing a flight",
+            "C": "Paying an additional charge",
+            "D": "Avoiding heavy traffic"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói công ty cho thuê xe \"will charge us an extra fee for fuel if they have to do it\", người phụ nữ đồng ý \"We don't want to pay more than we have to\" ⇒ họ lo bị tính thêm phí (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 19,
+          "part": 3,
+          "prompt": "Look at the graphic. Which exit does the woman tell the man to take?",
+          "options": {
+            "A": "Exit 10",
+            "B": "Exit 11",
+            "C": "Exit 12",
+            "D": "Exit 13"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông hỏi có rẽ lối này không, người phụ nữ nói: \"No, that's a rest area. Keep going, we want the next exit.\" Trên sơ đồ, Rest Area là Exit 10, lối kế tiếp là Exit 11 — Fuel Station, đúng chỗ họ cần đổ xăng (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 20,
+          "part": 3,
+          "prompt": "What does the man say he hopes to do?",
+          "options": {
+            "A": "Buy some food",
+            "B": "Pick up a map",
+            "C": "Make a phone call",
+            "D": "Purchase souvenirs"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói: \"I hope they also sell food. Then we can pick up some snacks for the plane\" (hy vọng ở đó có bán đồ ăn để mua đồ ăn vặt lên máy bay) ⇒ mua đồ ăn (A).",
+            "glossary": [
+              {
+                "term": "rental company",
+                "pos": "noun phrase",
+                "ipa": "ˈrentl ˈkʌmpəni",
+                "meaning": "công ty cho thuê (xe)"
+              },
+              {
+                "term": "extra fee",
+                "pos": "noun phrase",
+                "ipa": "ˈekstrə fiː",
+                "meaning": "phụ phí"
+              },
+              {
+                "term": "rest area",
+                "pos": "noun phrase",
+                "ipa": "rest ˈeəriə",
+                "meaning": "trạm dừng nghỉ"
+              },
+              {
+                "term": "exit",
+                "pos": "noun",
+                "ipa": "ˈeksɪt",
+                "meaning": "lối ra (đường cao tốc)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 21,
+      "questionEnd": 23,
+      "audio": "10.mp3",
+      "image": null,
+      "transcript": "W-Br: Hello. I'm calling about my subscription to TV Trivia Magazine. I moved a few months ago, and I called to give you my new address at that time. But I've only received one issue since then. I'm wondering what the problem is. The name is Fernandez.\nM-Au: OK, let me check ... Oh yes, I see. Your subscription expired last month. Why don't you sign up for our online version of the magazine? We're running a promotional sale for 20 percent off digital subscriptions right now.\nW-Br: Actually, I prefer to read the paper version. Can you provide the same discount for that? If you can, I'll renew right away.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/6cda32b8-7eff-48e9-8337-71f26c71c51b",
+      "questions": [
+        {
+          "number": 21,
+          "part": 3,
+          "prompt": "What type of business is the woman calling?",
+          "options": {
+            "A": "A library",
+            "B": "A computer store",
+            "C": "A fitness center",
+            "D": "A magazine company"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ gọi về \"my subscription to TV Trivia Magazine\" (gói đặt mua tạp chí TV Trivia) và nhắc tới \"issue\" (số báo) ⇒ cô đang gọi cho công ty tạp chí (D).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 22,
+          "part": 3,
+          "prompt": "What does the man suggest?",
+          "options": {
+            "A": "Replacing a membership card",
+            "B": "Calling back later",
+            "C": "Purchasing an online subscription",
+            "D": "Updating contact information"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông gợi ý: \"Why don't you sign up for our online version of the magazine?\" (sao chị không đăng ký bản trực tuyến?) ⇒ mua gói đăng ký online (C). \"Why don't you...?\" là cấu trúc gợi ý rất hay gặp.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 23,
+          "part": 3,
+          "prompt": "What does the woman ask about?",
+          "options": {
+            "A": "A discount",
+            "B": "A refund policy",
+            "C": "Overnight delivery",
+            "D": "Hours of operation"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ hỏi: \"Can you provide the same discount for that?\" (có thể giảm giá tương tự cho bản giấy không?) ⇒ cô hỏi về giảm giá (A).",
+            "glossary": [
+              {
+                "term": "subscription",
+                "pos": "noun",
+                "ipa": "səbˈskrɪpʃn",
+                "meaning": "gói đặt mua dài hạn"
+              },
+              {
+                "term": "issue",
+                "pos": "noun",
+                "ipa": "ˈɪʃuː",
+                "meaning": "số (báo, tạp chí)"
+              },
+              {
+                "term": "expire",
+                "pos": "verb",
+                "ipa": "ɪkˈspaɪə(r)",
+                "meaning": "hết hạn"
+              },
+              {
+                "term": "renew",
+                "pos": "verb",
+                "ipa": "rɪˈnjuː",
+                "meaning": "gia hạn"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

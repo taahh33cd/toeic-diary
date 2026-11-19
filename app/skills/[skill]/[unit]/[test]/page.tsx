@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getMockUnit, getUnit } from "@/lib/skills/structure";
-import { getPracticeEntry, isPracticeTestFree, loadPracticeTest } from "@/lib/listening-practice";
-import { toFullTest } from "@/lib/listening-practice/adapt";
+import {
+  isPracticeFree, loadPracticeFullTest, practiceTestTitle, type PracticePart,
+} from "@/lib/listening-practice";
 import { PartPracticeRunner } from "@/components/skills/part-practice/PartPracticeRunner";
 import { ContentLockModal } from "@/components/shared/ContentLockModal";
 import { SpeakingExamClient } from "@/components/skills/exam/SpeakingExamClient";
@@ -31,12 +32,13 @@ function parse(skill: string, unit: string, test: string) {
   const found = getUnit(skill, unit);
   if (!found) return null;
 
-  if (skill === "listening" && (unit === "part1" || unit === "part2")) {
+  if (skill === "listening" && (unit === "part1" || unit === "part2" || unit === "part3")) {
     const testNumber = Number(test);
     if (!Number.isInteger(testNumber)) return null;
-    const entry = getPracticeEntry(testNumber);
-    if (!entry) return null;
-    return { kind: "listening" as const, ...found, entry, part: (unit === "part1" ? 1 : 2) as 1 | 2 };
+    const part = (unit === "part1" ? 1 : unit === "part2" ? 2 : 3) as PracticePart;
+    const title = practiceTestTitle(testNumber, part);
+    if (!title) return null;
+    return { kind: "listening" as const, ...found, testNumber, title, part };
   }
 
   if (skill === "speaking" && unit === "q3-4") {
@@ -80,7 +82,7 @@ export async function generateMetadata({ params }: Pick<Props, "params">): Promi
   const { skill, unit, test } = await params;
   const f = parse(skill, unit, test);
   if (!f) return { title: "Luyện đề TOEIC" };
-  const name = f.kind === "listening" ? f.entry.title : f.title;
+  const name = f.title;
   return { title: `${f.skill.label} · ${f.unit.label} · ${name} — Luyện đề TOEIC` };
 }
 
@@ -310,16 +312,13 @@ export default async function SkillTestPage({ params, searchParams }: Props) {
         .catch(() => null)
     : null;
 
-  // Đề 1-2 mở cho mọi người; còn lại cần đã đăng ký khoá (hoặc là HV nội bộ/giáo viên).
-  if (!isPracticeTestFree(f.entry.testNumber) && !isUsageExempt(profile)) {
+  // Đề miễn phí mở cho mọi người; còn lại cần đã đăng ký khoá (hoặc là HV nội bộ/giáo viên).
+  if (!isPracticeFree(f.testNumber, f.part) && !isUsageExempt(profile)) {
     return <ContentLockModal />;
   }
 
-  const practice = await loadPracticeTest(`test-${f.entry.testNumber}`);
-  if (!practice) notFound();
-
-  const fullTest = toFullTest(practice, f.part);
-  if (fullTest.groups.length === 0) notFound();
+  const fullTest = await loadPracticeFullTest(f.testNumber, f.part);
+  if (!fullTest || fullTest.groups.length === 0) notFound();
 
   // Sổ từ vựng ghi theo studentCode trên Firebase, nên chỉ HV nội bộ mới lưu được.
   const canSaveVocab = Boolean(profile?.studentCode)

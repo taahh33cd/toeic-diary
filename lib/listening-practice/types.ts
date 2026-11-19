@@ -3,6 +3,18 @@
 
 export type ListeningPart = 1 | 2;
 
+/** Part có bộ luyện riêng ở /skills/listening/partN (Part 3 nằm ở ./part3.ts) */
+export type PracticePart = 1 | 2 | 3;
+
+/** Một thẻ đề ở trang danh sách — dùng chung cho mọi part */
+export interface PracticeListItem {
+  slug: string;
+  testNumber: number;
+  title: string;
+  /** Dòng phụ dưới tên đề, vd "25 câu" */
+  detail: string;
+}
+
 export interface PracticeOption {
   id: string;
   text: string;

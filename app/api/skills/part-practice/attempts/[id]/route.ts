@@ -3,8 +3,8 @@ import { prisma } from "@/lib/db/prisma";
 import { syncRoadmapAfterAttempt } from "@/lib/roadmap/hook";
 import { NextResponse } from "next/server";
 import { scoreAttempt } from "@/lib/full-tests/scoring";
-import { loadPracticeTest } from "@/lib/listening-practice";
-import { parsePracticeAttemptSlug, toFullTest } from "@/lib/listening-practice/adapt";
+import { loadPracticeFullTest } from "@/lib/listening-practice";
+import { parsePracticeAttemptSlug } from "@/lib/listening-practice/adapt";
 
 type Ctx = { params: Promise<{ id: string }> };
 
@@ -75,11 +75,11 @@ export async function POST(req: Request, { params }: Ctx) {
   const parsed = parsePracticeAttemptSlug(attempt.testSlug);
   if (!parsed) return NextResponse.json({ error: "Unknown test" }, { status: 404 });
 
-  const practice = await loadPracticeTest(`test-${parsed.testNumber}`);
-  if (!practice) return NextResponse.json({ error: "Unknown test" }, { status: 404 });
+  const test = await loadPracticeFullTest(parsed.testNumber, parsed.part);
+  if (!test) return NextResponse.json({ error: "Unknown test" }, { status: 404 });
 
   const answers = sanitizeAnswers(body.answers);
-  const result = scoreAttempt(toFullTest(practice, parsed.part), answers, [parsed.part]);
+  const result = scoreAttempt(test, answers, [parsed.part]);
 
   const updated = await prisma.partPracticeAttempt.update({
     where: { id },
