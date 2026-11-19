@@ -1,0 +1,969 @@
+{
+  "examSlug": "part4-practice",
+  "examTitle": "Luyện nghe Part 4",
+  "testNumber": 2,
+  "slug": "part4-advanced",
+  "title": "Luyện tập nâng cao",
+  "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part4/part4-advanced",
+  "locked": false,
+  "lockReason": null,
+  "stats": {
+    "questions": 30,
+    "answered": 30,
+    "missingAnswers": [],
+    "brokenQuestions": []
+  },
+  "groups": [
+    {
+      "part": 4,
+      "questionStart": 1,
+      "questionEnd": 3,
+      "audio": "1.mp3",
+      "image": "/listening-practice/part4/advanced-1.png",
+      "transcript": "M-Cn: Hi. This is Vinod Singh. I was in your store on Monday looking at refrigerators for my apartment. One of your employees showed me what you have in stock. I've decided to go with the extra-large refrigerator—the one with the stainless-steel finish, because it'll match the other appliances in my apartment. Oh, also, is there an additional charge for delivering outside of the downtown area? Please call me at 555-0130 so we can finalize the details.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/057bc48b-e8d6-42e2-935e-00f9e6088e14",
+      "questions": [
+        {
+          "number": 1,
+          "part": 4,
+          "prompt": "What is the main purpose of the call?",
+          "options": {
+            "A": "To place an order",
+            "B": "To dispute a charge",
+            "C": "To arrange a meeting",
+            "D": "To check a store’s inventory"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người gọi đã chọn được tủ lạnh (\"I've decided to go with the extra-large refrigerator\") và nhờ gọi lại \"so we can finalize the details\" ⇒ gọi để đặt mua (A).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 2,
+          "part": 4,
+          "prompt": "Look at the graphic. Which model does the speaker prefer?",
+          "options": {
+            "A": "SG-200",
+            "B": "SG-250",
+            "C": "XG-300",
+            "D": "XG-350"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Anh chọn tủ \"extra-large... with the stainless-steel finish\". Trong bảng, model duy nhất có cả Extra Large và Stainless Steel là XG-350 (D). XG-300 to nhưng có máy làm đá, không có vỏ thép không gỉ.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 3,
+          "part": 4,
+          "prompt": "What does the speaker ask about?",
+          "options": {
+            "A": "A warranty",
+            "B": "A return process",
+            "C": "A delivery fee",
+            "D": "Product availability"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Anh hỏi: \"is there an additional charge for delivering outside of the downtown area?\" ⇒ hỏi về phí giao hàng (C).",
+            "glossary": [
+              {
+                "term": "in stock",
+                "pos": "phrase",
+                "ipa": "ɪn stɒk",
+                "meaning": "còn hàng"
+              },
+              {
+                "term": "stainless steel",
+                "pos": "noun phrase",
+                "ipa": "ˌsteɪnləs ˈstiːl",
+                "meaning": "thép không gỉ"
+              },
+              {
+                "term": "appliance",
+                "pos": "noun",
+                "ipa": "əˈplaɪəns",
+                "meaning": "thiết bị gia dụng"
+              },
+              {
+                "term": "finalize",
+                "pos": "verb",
+                "ipa": "ˈfaɪnəlaɪz",
+                "meaning": "chốt, hoàn tất"
+              }
+            ]
+          }
+        }
+      ],
+      "imageWidth": 760
+    },
+    {
+      "part": 4,
+      "questionStart": 4,
+      "questionEnd": 6,
+      "audio": "2.mp3",
+      "image": "/listening-practice/part4/advanced-2.png",
+      "transcript": "W-Am: Good afternoon, everyone. I'd like to go over the product tests for our laptop-computer backpack, because they will require some design changes. As you know, we hired a marketing firm to test the prototype you designed among consumers. Now, we received very positive feedback overall. Consumers liked the separate computer compartment. However, many people felt that the shoulder straps were uncomfortable when the bag was full. It's important that the backpack have comfortable shoulder straps, since its purpose is to carry heavy equipment. We need to revise the design as quickly as possible, since we're scheduled to have our official product release early next year.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/a0c48b72-8cd7-4f7f-a8fe-c5f855e00bae",
+      "questions": [
+        {
+          "number": 4,
+          "part": 4,
+          "prompt": "Who most likely are the listeners?",
+          "options": {
+            "A": "Marketing experts",
+            "B": "Product testers",
+            "C": "Product designers",
+            "D": "Audio engineers"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói nhắc tới \"the prototype you designed\" (mẫu thử các bạn thiết kế) và việc phải sửa thiết kế ⇒ người nghe là nhà thiết kế sản phẩm (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 5,
+          "part": 4,
+          "prompt": "Look at the graphic. What was the approval rating of the feature that will be improved?",
+          "options": {
+            "A": "40 percent",
+            "B": "50 percent",
+            "C": "60 percent",
+            "D": "80 percent"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Phần cần cải tiến là quai đeo: \"many people felt that the shoulder straps were uncomfortable\". Trên biểu đồ, Shoulder Straps được 50% (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 6,
+          "part": 4,
+          "prompt": "According to the speaker, why is a revision urgent?",
+          "options": {
+            "A": "A competitor is making a similar product.",
+            "B": "A product will be offered for sale soon.",
+            "C": "A product will be introduced at a trade show.",
+            "D": "The cost of a product’s materials will rise soon."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Phải sửa gấp \"since we're scheduled to have our official product release early next year\" ⇒ sản phẩm sắp được bán ra (B).",
+            "glossary": [
+              {
+                "term": "prototype",
+                "pos": "noun",
+                "ipa": "ˈprəʊtətaɪp",
+                "meaning": "mẫu thử"
+              },
+              {
+                "term": "compartment",
+                "pos": "noun",
+                "ipa": "kəmˈpɑːtmənt",
+                "meaning": "ngăn"
+              },
+              {
+                "term": "shoulder strap",
+                "pos": "noun phrase",
+                "ipa": "ˈʃəʊldə stræp",
+                "meaning": "quai đeo vai"
+              },
+              {
+                "term": "revise",
+                "pos": "verb",
+                "ipa": "rɪˈvaɪz",
+                "meaning": "chỉnh sửa"
+              }
+            ]
+          }
+        }
+      ],
+      "imageWidth": 760
+    },
+    {
+      "part": 4,
+      "questionStart": 7,
+      "questionEnd": 9,
+      "audio": "3.mp3",
+      "image": "/listening-practice/part4/advanced-3.png",
+      "transcript": "W-Br: Hi, everyone! I want to update you on sales of our lines of dishware after the introduction of our holiday-themed patterns. Our everyday dishware continues to perform as expected. Also, I am pleased to report that our New Year plates are a resounding success: total wholesale orders have outpaced those of our popular Dawn series of fine china. We spent a lot on the design for New Year, so our CEO will be happy to learn that the investment has paid off. Looks like we will need to rethink the Harvest Festival brand, though. Unless total sales reach those of our Café series by next year, we may even discontinue it.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/9200b0de-f6ff-47a7-9419-805c3796c2b0",
+      "questions": [
+        {
+          "number": 7,
+          "part": 4,
+          "prompt": "What product does the speaker’s company sell?",
+          "options": {
+            "A": "Bath towels",
+            "B": "Dishware",
+            "C": "Tablecloths",
+            "D": "Drinking glasses"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói báo cáo \"sales of our lines of dishware\" (các dòng bát đĩa) ⇒ công ty bán đồ dùng ăn uống (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 8,
+          "part": 4,
+          "prompt": "Why will the CEO be pleased?",
+          "options": {
+            "A": "The company bought a new warehouse.",
+            "B": "Customer reviews have been positive.",
+            "C": "Shipping costs have gone down.",
+            "D": "An investment was successful."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói: \"We spent a lot on the design for New Year, so our CEO will be happy to learn that the investment has paid off\" ⇒ khoản đầu tư đã thành công (D).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 9,
+          "part": 4,
+          "prompt": "Look at the graphic. What number of orders does the speaker say the Harvest Festival pattern must reach?",
+          "options": {
+            "A": "5,000",
+            "B": "2,000",
+            "C": "6,000",
+            "D": "200"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Harvest Festival phải đạt \"those of our Cafe series\". Theo bảng, Café có 2,000 bộ (B). Bẫy D: 200 là số hiện tại của Harvest Festival.",
+            "glossary": [
+              {
+                "term": "dishware",
+                "pos": "noun",
+                "ipa": "ˈdɪʃweə(r)",
+                "meaning": "bát đĩa"
+              },
+              {
+                "term": "wholesale",
+                "pos": "adjective",
+                "ipa": "ˈhəʊlseɪl",
+                "meaning": "bán buôn, bán sỉ"
+              },
+              {
+                "term": "outpace",
+                "pos": "verb",
+                "ipa": "ˌaʊtˈpeɪs",
+                "meaning": "vượt hơn"
+              },
+              {
+                "term": "discontinue",
+                "pos": "verb",
+                "ipa": "ˌdɪskənˈtɪnjuː",
+                "meaning": "ngừng sản xuất"
+              }
+            ]
+          }
+        }
+      ],
+      "imageWidth": 760
+    },
+    {
+      "part": 4,
+      "questionStart": 10,
+      "questionEnd": 12,
+      "audio": "4.mp3",
+      "image": "/listening-practice/part4/advanced-4.png",
+      "transcript": "M-Au: I'd like to welcome all of you to your first day of work at the Wildcats customer service office. Baseball season starts in exactly one month. We expect ticket sales to be very good because the Wildcats had such a great season last year. As you can see on the chart, we have four packages. Make sure you let our customers know about the new Sunday package. It includes tickets for every Sunday home game throughout the season. Our Friday night package, holiday package, and discount package were available last year and should remain popular.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/c01266b8-e028-4e5e-9ac3-370fb3bfdc7f",
+      "questions": [
+        {
+          "number": 10,
+          "part": 4,
+          "prompt": "Who most likely is the speaker?",
+          "options": {
+            "A": "A baseball player",
+            "B": "A travel agent",
+            "C": "A new job applicant",
+            "D": "A customer service trainer"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói chào nhân viên mới \"your first day of work at the Wildcats customer service office\" và hướng dẫn họ cần giới thiệu gì cho khách ⇒ người đào tạo nhân viên chăm sóc khách hàng (D).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 11,
+          "part": 4,
+          "prompt": "Why are ticket sales expected to be good?",
+          "options": {
+            "A": "The prices have been reduced.",
+            "B": "The team's previous season was successful.",
+            "C": "There is a new advertising campaign.",
+            "D": "The team has many new players."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Vé được kỳ vọng bán chạy \"because the Wildcats had such a great season last year\" ⇒ mùa giải trước thành công (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 12,
+          "part": 4,
+          "prompt": "Look at the graphic. How many games are included in the new ticket package that the speaker describes?",
+          "options": {
+            "A": "6",
+            "B": "16",
+            "C": "19",
+            "D": "36"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Gói mới là \"the new Sunday package\". Theo bảng, Sunday package gồm 16 trận (B).",
+            "glossary": [
+              {
+                "term": "package",
+                "pos": "noun",
+                "ipa": "ˈpækɪdʒ",
+                "meaning": "gói (vé, dịch vụ)"
+              },
+              {
+                "term": "home game",
+                "pos": "noun phrase",
+                "ipa": "həʊm ɡeɪm",
+                "meaning": "trận sân nhà"
+              },
+              {
+                "term": "ticket sales",
+                "pos": "noun phrase",
+                "ipa": "ˈtɪkɪt seɪlz",
+                "meaning": "doanh số bán vé"
+              },
+              {
+                "term": "remain",
+                "pos": "verb",
+                "ipa": "rɪˈmeɪn",
+                "meaning": "vẫn còn, duy trì"
+              }
+            ]
+          }
+        }
+      ],
+      "imageWidth": 760
+    },
+    {
+      "part": 4,
+      "questionStart": 13,
+      "questionEnd": 15,
+      "audio": "5.mp3",
+      "image": "/listening-practice/part4/advanced-5.png",
+      "transcript": "M-Au: Our workers haul soil, garden mulch, and plants every day to make our customers' yards look beautiful. They need strong handcarts to move these heavy items. The Classic Handcarts we have now are poor quality. They fall apart, and our workers constantly repair them. We need the strongest handcarts available. I recommend we purchase the 150-dollar model because it will not break easily. It's so durable that we'll save money in the end. If you agree, I'll order twenty of them.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/fd6a8a31-8750-411a-9850-1193032bd7f3",
+      "questions": [
+        {
+          "number": 13,
+          "part": 4,
+          "prompt": "Where does the speaker most likely work?",
+          "options": {
+            "A": "At a hardware store",
+            "B": "At a tool manufacturer",
+            "C": "At a landscaping service",
+            "D": "At a construction company"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Nhân viên của họ chở đất, phân phủ và cây \"to make our customers' yards look beautiful\" ⇒ dịch vụ làm vườn, cảnh quan (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 14,
+          "part": 4,
+          "prompt": "What is the speaker’s highest priority?",
+          "options": {
+            "A": "Buying a long-lasting product",
+            "B": "Spending as little money as possible",
+            "C": "Having the order delivered quickly",
+            "D": "Getting the largest product available"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói nhấn mạnh \"We need the strongest handcarts available... it will not break easily... It's so durable\" ⇒ ưu tiên hàng bền (A), không phải hàng rẻ nhất (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 15,
+          "part": 4,
+          "prompt": "Look at the graphic. Which handcart does the speaker want to buy?",
+          "options": {
+            "A": "Classic Handcart",
+            "B": "Superior Handcart",
+            "C": "Deluxe Handcart",
+            "D": "Super Duty Handcart"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Anh đề xuất \"the 150-dollar model\". Theo bảng, xe giá $150 là Super Duty Handcart (D).",
+            "glossary": [
+              {
+                "term": "haul",
+                "pos": "verb",
+                "ipa": "hɔːl",
+                "meaning": "chở, kéo"
+              },
+              {
+                "term": "handcart",
+                "pos": "noun",
+                "ipa": "ˈhændkɑːt",
+                "meaning": "xe đẩy tay"
+              },
+              {
+                "term": "fall apart",
+                "pos": "phrasal verb",
+                "ipa": "fɔːl əˈpɑːt",
+                "meaning": "hỏng, rời ra từng mảnh"
+              },
+              {
+                "term": "durable",
+                "pos": "adjective",
+                "ipa": "ˈdjʊərəbl",
+                "meaning": "bền"
+              }
+            ]
+          }
+        }
+      ],
+      "imageWidth": 760
+    },
+    {
+      "part": 4,
+      "questionStart": 16,
+      "questionEnd": 18,
+      "audio": "6.mp3",
+      "image": "/listening-practice/part4/advanced-6.png",
+      "transcript": "W-Br: Thank you all for being here. I'd like to go over our next training module. By now you should all be familiar with how to create a lead, contact your potential customers, and close on a deal. As a sales representative you're used to focusing on your own leads and clients, and that's terrific. However, there is strength in teamwork, and that's what we'll work on now. Let's get started. I'd like you to create three groups, and we're going to take on the roles of different characters in typical scenarios involving clients.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/2ffa4e6a-3439-4e4d-80e5-7ac6c97c1476",
+      "questions": [
+        {
+          "number": 16,
+          "part": 4,
+          "prompt": "Who is the training intended for?",
+          "options": {
+            "A": "Sales personnel",
+            "B": "Executive officers",
+            "C": "Human Resource employees",
+            "D": "Product developers"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói: \"As a sales representative you're used to focusing on your own leads and clients\" ⇒ khoá đào tạo dành cho nhân viên kinh doanh (A).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 17,
+          "part": 4,
+          "prompt": "Look at the graphic. How long will the training be?",
+          "options": {
+            "A": "25 minutes",
+            "B": "30 minutes",
+            "C": "20 minutes",
+            "D": "10 minutes"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Phần tiếp theo là làm việc nhóm: \"there is strength in teamwork, and that's what we'll work on now\". Trong bảng, module \"Work as a Team\" dài 20 phút (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 18,
+          "part": 4,
+          "prompt": "What does the speaker tell the listeners to do?",
+          "options": {
+            "A": "Turn off their phones",
+            "B": "Get some refreshments",
+            "C": "Ask questions often",
+            "D": "Role-play a situation"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói yêu cầu chia ba nhóm và \"take on the roles of different characters in typical scenarios involving clients\" ⇒ đóng vai một tình huống (D).",
+            "glossary": [
+              {
+                "term": "training module",
+                "pos": "noun phrase",
+                "ipa": "ˈtreɪnɪŋ ˈmɒdjuːl",
+                "meaning": "học phần đào tạo"
+              },
+              {
+                "term": "lead",
+                "pos": "noun",
+                "ipa": "liːd",
+                "meaning": "khách hàng tiềm năng"
+              },
+              {
+                "term": "close on a deal",
+                "pos": "phrase",
+                "ipa": "kləʊz ɒn ə diːl",
+                "meaning": "chốt hợp đồng"
+              },
+              {
+                "term": "scenario",
+                "pos": "noun",
+                "ipa": "səˈnɑːriəʊ",
+                "meaning": "tình huống"
+              }
+            ]
+          }
+        }
+      ],
+      "imageWidth": 760
+    },
+    {
+      "part": 4,
+      "questionStart": 19,
+      "questionEnd": 21,
+      "audio": "7.mp3",
+      "image": "/listening-practice/part4/advanced-7.png",
+      "transcript": "W-Br: Hello, Evelyn. It's Sophia, calling about my wedding arrangements. My wedding is five days away, and the forecast has changed dramatically. It was originally supposed to be sunny, but a huge storm is going to arrive on my wedding day. Could you work with the Newfield Hotel to move our five o'clock reception indoors? Please reserve the Gold Room, if it's still available. It has a wonderful dance floor and plenty of room for the band. Let me know which room you reserve so that I can let guests know about the change in plans.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/968f1030-2e58-4dc9-aeb1-f03dd32d35b7",
+      "questions": [
+        {
+          "number": 19,
+          "part": 4,
+          "prompt": "Who most likely is the listener?",
+          "options": {
+            "A": "A band leader",
+            "B": "A wedding planner",
+            "C": "A restaurant worker",
+            "D": "A professional printer"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Sophia gọi Evelyn \"about my wedding arrangements\" và nhờ cô làm việc với khách sạn, đặt phòng ⇒ Evelyn là người tổ chức đám cưới (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 20,
+          "part": 4,
+          "prompt": "What problem does the speaker mention?",
+          "options": {
+            "A": "A delayed flight",
+            "B": "An unavailable musician",
+            "C": "Additional guests",
+            "D": "A change in weather"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói: \"the forecast has changed dramatically... a huge storm is going to arrive on my wedding day\" ⇒ thời tiết thay đổi (D).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 21,
+          "part": 4,
+          "prompt": "Look at the graphic. What information will most likely be changed?",
+          "options": {
+            "A": "Newfield Hotel",
+            "B": "5:00",
+            "C": "Rose Garden",
+            "D": "Moderne Heart"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Cô muốn \"move our five o'clock reception indoors\" và đặt Gold Room. Trên thiệp, tiệc đang ở Rose Garden (ngoài trời) ⇒ địa điểm này sẽ đổi (C). Giờ 5:00, khách sạn và ban nhạc vẫn giữ nguyên.",
+            "glossary": [
+              {
+                "term": "arrangement",
+                "pos": "noun",
+                "ipa": "əˈreɪndʒmənt",
+                "meaning": "sự sắp xếp, chuẩn bị"
+              },
+              {
+                "term": "forecast",
+                "pos": "noun",
+                "ipa": "ˈfɔːkɑːst",
+                "meaning": "dự báo thời tiết"
+              },
+              {
+                "term": "reception",
+                "pos": "noun",
+                "ipa": "rɪˈsepʃn",
+                "meaning": "tiệc chiêu đãi"
+              },
+              {
+                "term": "indoors",
+                "pos": "adverb",
+                "ipa": "ˌɪnˈdɔːz",
+                "meaning": "trong nhà"
+              }
+            ]
+          }
+        }
+      ],
+      "imageWidth": 730
+    },
+    {
+      "part": 4,
+      "questionStart": 22,
+      "questionEnd": 24,
+      "audio": "8.mp3",
+      "image": "/listening-practice/part4/advanced-8.png",
+      "transcript": "M-Au: Welcome, everyone. I've invited Ms. Sayan Mitra from Solve Now Consulting. She specializes in solving process optimization issues. Our automobile production process is too slow. According to Solve Now's analysis, the delay is in the painting process. We're wasting too much time cleaning the spraying tool when changing to a different paint color between cars. They recommend using a more powerful cleaning solution on the spraying tool. Ms. Mitra has some slides that take us through the study and recommendations.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/eb932f88-5594-40fa-862c-f4b89bed7fff",
+      "questions": [
+        {
+          "number": 22,
+          "part": 4,
+          "prompt": "Who is Sayan Mitra?",
+          "options": {
+            "A": "A customer service representative",
+            "B": "An accountant",
+            "C": "A car dealer",
+            "D": "A consultant"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Sayan Mitra đến từ \"Solve Now Consulting\" và chuyên giải quyết vấn đề tối ưu quy trình ⇒ chuyên gia tư vấn (D).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 23,
+          "part": 4,
+          "prompt": "Look at the graphic. Which stage of car production is the speaker discussing?",
+          "options": {
+            "A": "Stage 1",
+            "B": "Stage 2",
+            "C": "Stage 3",
+            "D": "Stage 4"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói: \"the delay is in the painting process\". Trên sơ đồ, Painting là Stage 3 (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 24,
+          "part": 4,
+          "prompt": "What will the listeners most likely do next?",
+          "options": {
+            "A": "View a presentation",
+            "B": "Ask some questions",
+            "C": "Review some specifications",
+            "D": "Return to their desks"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói: \"Ms. Mitra has some slides that take us through the study and recommendations\" ⇒ tiếp theo mọi người xem bài trình bày (A).",
+            "glossary": [
+              {
+                "term": "optimization",
+                "pos": "noun",
+                "ipa": "ˌɒptɪmaɪˈzeɪʃn",
+                "meaning": "sự tối ưu hoá"
+              },
+              {
+                "term": "analysis",
+                "pos": "noun",
+                "ipa": "əˈnæləsɪs",
+                "meaning": "bản phân tích"
+              },
+              {
+                "term": "spraying tool",
+                "pos": "noun phrase",
+                "ipa": "ˈspreɪɪŋ tuːl",
+                "meaning": "dụng cụ phun"
+              },
+              {
+                "term": "recommendation",
+                "pos": "noun",
+                "ipa": "ˌrekəmenˈdeɪʃn",
+                "meaning": "khuyến nghị"
+              }
+            ]
+          }
+        }
+      ],
+      "imageWidth": 760
+    },
+    {
+      "part": 4,
+      "questionStart": 25,
+      "questionEnd": 27,
+      "audio": "9.mp3",
+      "image": "/listening-practice/part4/advanced-9.png",
+      "transcript": "M-Cn: Greetings, Carsin's cashiers! Let's take a look at the coupon we just mailed out to rewards members this week. Our local rival, Gilroy's, has been offering a similar discount to its customers, and business there has been booming. So it's time we try something similar—but, of course, even better! Our discount offer is ten percent, while theirs is only five percent. Please spend some time looking over the four rules of use at the bottom. We may need to revisit the one about using multiple discounts. Our customers do love manufacturer coupons! We will monitor customer complaints.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/8dde32b4-22a4-49b0-b609-d721f041ba23",
+      "questions": [
+        {
+          "number": 25,
+          "part": 4,
+          "prompt": "What is the purpose of the announcement?",
+          "options": {
+            "A": "To describe a new customer discount",
+            "B": "To introduce new employees to the team",
+            "C": "To announce the end of a rewards program",
+            "D": "To review customer-complaint policies"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói giới thiệu \"the coupon we just mailed out to rewards members\" với mức giảm 10% ⇒ giới thiệu ưu đãi mới cho khách (A).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 26,
+          "part": 4,
+          "prompt": "What does the speaker say about Gilroy’s?",
+          "options": {
+            "A": "It does not offer discounts.",
+            "B": "It operates outside the local area.",
+            "C": "It is a competitor.",
+            "D": "It has strict rules for employees."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói gọi Gilroy's là \"Our local rival\" (đối thủ cùng khu vực) ⇒ đối thủ cạnh tranh (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 27,
+          "part": 4,
+          "prompt": "Look at the graphic. Which rule might be changed?",
+          "options": {
+            "A": "Rule 1",
+            "B": "Rule 2",
+            "C": "Rule 3",
+            "D": "Rule 4"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói: \"We may need to revisit the one about using multiple discounts\". Trên phiếu, quy định 3 là \"May not be used with other discounts\" ⇒ Rule 3 (C).",
+            "glossary": [
+              {
+                "term": "coupon",
+                "pos": "noun",
+                "ipa": "ˈkuːpɒn",
+                "meaning": "phiếu giảm giá"
+              },
+              {
+                "term": "rival",
+                "pos": "noun",
+                "ipa": "ˈraɪvl",
+                "meaning": "đối thủ"
+              },
+              {
+                "term": "booming",
+                "pos": "adjective",
+                "ipa": "ˈbuːmɪŋ",
+                "meaning": "phát đạt"
+              },
+              {
+                "term": "revisit",
+                "pos": "verb",
+                "ipa": "ˌriːˈvɪzɪt",
+                "meaning": "xem xét lại"
+              }
+            ]
+          }
+        }
+      ],
+      "imageWidth": 748
+    },
+    {
+      "part": 4,
+      "questionStart": 28,
+      "questionEnd": 30,
+      "audio": "10.mp3",
+      "image": "/listening-practice/part4/advanced-10.png",
+      "transcript": "M-Au: Good morning. I hope you are settling in to your new offices here at Golden Glove Insurance Company. Let's plan something fun to get to know each other. On the wall, there's a list of team-building activities. After this meeting, put a check mark next to the activity you want to do together next Friday afternoon. It would be energizing and fun to use our volleyball court, but I shouldn't influence you! Please make your own choice, and we'll do the one with the most votes.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/8e3a257c-f36b-4d5c-a47e-a5db1b717ab9",
+      "questions": [
+        {
+          "number": 28,
+          "part": 4,
+          "prompt": "Who most likely is the speaker?",
+          "options": {
+            "A": "An office manager",
+            "B": "A sports coach",
+            "C": "An accountant",
+            "D": "A computer technician"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói chào mọi người ở văn phòng mới và tổ chức hoạt động gắn kết cho cả nhóm ⇒ nhiều khả năng là quản lý văn phòng (A).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 29,
+          "part": 4,
+          "prompt": "When will the group have a team-building activity?",
+          "options": {
+            "A": "This afternoon",
+            "B": "Tomorrow morning",
+            "C": "Next Friday",
+            "D": "Next Saturday"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Mọi người chọn \"the activity you want to do together next Friday afternoon\" ⇒ thứ Sáu tuần sau (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 30,
+          "part": 4,
+          "prompt": "Look at the graphic. Which activity does the speaker most likely prefer?",
+          "options": {
+            "A": "Activity 1",
+            "B": "Activity 2",
+            "C": "Activity 3",
+            "D": "Activity 4"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói buột miệng: \"It would be energizing and fun to use our volleyball court, but I shouldn't influence you!\" ⇒ anh thích bóng chuyền, tức Activity 2 (B).",
+            "glossary": [
+              {
+                "term": "settle in",
+                "pos": "phrasal verb",
+                "ipa": "ˈsetl ɪn",
+                "meaning": "ổn định, quen dần"
+              },
+              {
+                "term": "team-building",
+                "pos": "adjective",
+                "ipa": "ˈtiːm bɪldɪŋ",
+                "meaning": "gắn kết đội nhóm"
+              },
+              {
+                "term": "energizing",
+                "pos": "adjective",
+                "ipa": "ˈenədʒaɪzɪŋ",
+                "meaning": "tràn đầy năng lượng"
+              },
+              {
+                "term": "influence",
+                "pos": "verb",
+                "ipa": "ˈɪnfluəns",
+                "meaning": "tác động, ảnh hưởng"
+              }
+            ]
+          }
+        }
+      ],
+      "imageWidth": 748
+    }
+  ],
+  "warnings": []
+}

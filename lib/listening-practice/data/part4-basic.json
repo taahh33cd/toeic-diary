@@ -1,0 +1,788 @@
+{
+  "examSlug": "part4-practice",
+  "examTitle": "Luyện nghe Part 4",
+  "testNumber": 1,
+  "slug": "part4-basic",
+  "title": "Luyện tập cơ bản",
+  "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part4/part4-basic",
+  "locked": false,
+  "lockReason": null,
+  "stats": {
+    "questions": 21,
+    "answered": 21,
+    "missingAnswers": [],
+    "brokenQuestions": []
+  },
+  "groups": [
+    {
+      "part": 4,
+      "questionStart": 1,
+      "questionEnd": 1,
+      "audio": "1.mp3",
+      "image": null,
+      "transcript": "W-Am: You have reached customer service at Ocean Shipping — a leader in international shipping services. We're happy to announce that starting June first, we'll begin offering shipping services to Brazil. Note that if you are planning to ship a vehicle to any location overseas, you must provide proof of ownership. Your call may be recorded, and the recording could be used for quality control or training purposes. Thank you for calling Ocean Shipping.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/1e6fa1e8-60ce-4e1e-a25e-c0fbfd2831fe",
+      "questions": [
+        {
+          "number": 1,
+          "part": 4,
+          "prompt": "Where does the speaker most likely work?",
+          "options": {
+            "A": "Customer Service Department",
+            "B": "Shipping agency",
+            "C": "Car rental",
+            "D": "Landscaping company"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói giới thiệu: \"You have reached customer service at Ocean Shipping — a leader in international shipping services\" ⇒ đây là một công ty vận chuyển (B). Bẫy: A lặp lại cụm \"customer service\" nhưng câu hỏi hỏi loại hình nơi làm việc, không hỏi bộ phận.",
+            "glossary": [
+              {
+                "term": "shipping",
+                "pos": "noun",
+                "ipa": "ˈʃɪpɪŋ",
+                "meaning": "việc vận chuyển hàng"
+              },
+              {
+                "term": "overseas",
+                "pos": "adverb",
+                "ipa": "ˌəʊvəˈsiːz",
+                "meaning": "ở nước ngoài"
+              },
+              {
+                "term": "proof of ownership",
+                "pos": "noun phrase",
+                "ipa": "pruːf əv ˈəʊnəʃɪp",
+                "meaning": "giấy tờ chứng minh quyền sở hữu"
+              },
+              {
+                "term": "quality control",
+                "pos": "noun phrase",
+                "ipa": "ˈkwɒləti kənˈtrəʊl",
+                "meaning": "kiểm soát chất lượng"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "questionStart": 2,
+      "questionEnd": 2,
+      "audio": "2.mp3",
+      "image": null,
+      "transcript": "W-Am: Hi, Ms. Lee. I'm calling to give you some information about the staffing transition plan since today is Angelo's last day in the office. As you suggested, Mariko will be taking over his job responsibilities. I had asked Angelo to train her to create invoices, but there's a team meeting this afternoon. So I decided to meet with her tomorrow and review the invoice process with her myself. Let me know if you or the other department managers have any questions. Bye.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/65ada216-7257-4eda-9877-a02a2df6b5fb",
+      "questions": [
+        {
+          "number": 2,
+          "part": 4,
+          "prompt": "Why is the speaker calling?",
+          "options": {
+            "A": "To schedule a meeting",
+            "B": "To ask for an e-mail address",
+            "C": "To provide an invoice number",
+            "D": "To review employee training plans"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói gọi để báo về \"the staffing transition plan\" vì Angelo nghỉ, Mariko tiếp quản và chị sẽ tự hướng dẫn Mariko quy trình làm hoá đơn ⇒ mục đích là trao đổi kế hoạch đào tạo nhân viên (D).",
+            "glossary": [
+              {
+                "term": "transition",
+                "pos": "noun",
+                "ipa": "trænˈzɪʃn",
+                "meaning": "sự chuyển giao"
+              },
+              {
+                "term": "take over",
+                "pos": "phrasal verb",
+                "ipa": "teɪk ˈəʊvə(r)",
+                "meaning": "tiếp quản"
+              },
+              {
+                "term": "invoice",
+                "pos": "noun",
+                "ipa": "ˈɪnvɔɪs",
+                "meaning": "hoá đơn"
+              },
+              {
+                "term": "responsibility",
+                "pos": "noun",
+                "ipa": "rɪˌspɒnsəˈbɪləti",
+                "meaning": "trách nhiệm, nhiệm vụ"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "questionStart": 3,
+      "questionEnd": 3,
+      "audio": "3.mp3",
+      "image": null,
+      "transcript": "M-Au: Hi, Alan, it's Clarence. I'd like to talk to you about moving your work station to our new office space on the second floor. I know you're used to the space where you work now, but you are right next to the break room. It's much quieter on the second floor. Plus, the other software developers are already in the new space, and it'd be convenient to have our entire team close together. Please begin packing your belongings this week, and on Monday, I'll arrange for someone to come and set up your computer in the new location.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/0a043ff7-6e7e-4f0a-8a51-67bbc8591955",
+      "questions": [
+        {
+          "number": 3,
+          "part": 4,
+          "prompt": "What does the speaker want to talk about?",
+          "options": {
+            "A": "Working on a different project",
+            "B": "Modifying an agenda",
+            "C": "Moving to a new office space",
+            "D": "Arranging a client visit"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói vào thẳng việc: \"I'd like to talk to you about moving your work station to our new office space on the second floor\" ⇒ chuyển sang chỗ làm mới (C).",
+            "glossary": [
+              {
+                "term": "work station",
+                "pos": "noun phrase",
+                "ipa": "wɜːk ˈsteɪʃn",
+                "meaning": "chỗ làm việc"
+              },
+              {
+                "term": "be used to",
+                "pos": "phrase",
+                "ipa": "biː juːst tə",
+                "meaning": "quen với"
+              },
+              {
+                "term": "break room",
+                "pos": "noun phrase",
+                "ipa": "breɪk ruːm",
+                "meaning": "phòng nghỉ"
+              },
+              {
+                "term": "set up",
+                "pos": "phrasal verb",
+                "ipa": "set ʌp",
+                "meaning": "lắp đặt, cài đặt"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "questionStart": 4,
+      "questionEnd": 5,
+      "audio": "4.mp3",
+      "image": null,
+      "transcript": "W-Br: Good morning, everyone! We hope you've been enjoying the conference on educational technology this week. Tomorrow, in addition to our workshops and presentations, you'll have the option of leaving the convention center to go on one of the site visits we've arranged. There are two choices. You can tour either a local high school or the public library’s computer laboratory. These tours are free, and we expect them to be very popular. We have limited seats on the buses, so please make sure to sign up early at the desk by the entrance.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/b812303a-b598-4a0b-8d65-1efc63be7fa3",
+      "questions": [
+        {
+          "number": 4,
+          "part": 4,
+          "prompt": "According to the speaker, what can some listeners do tomorrow?",
+          "options": {
+            "A": "Go on a tour",
+            "B": "Attend an opening ceremony",
+            "C": "Participate in a focus group",
+            "D": "Win a prize"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói: \"you'll have the option of leaving the convention center to go on one of the site visits... You can tour either a local high school or the public library's computer laboratory\" ⇒ ngày mai có thể đi tham quan (A).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 5,
+          "part": 4,
+          "prompt": "What are the listeners instructed to do?",
+          "options": {
+            "A": "Use an alternate entrance",
+            "B": "Register in advance",
+            "C": "Complete a survey",
+            "D": "Meet at a designated location"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói dặn: \"please make sure to sign up early at the desk by the entrance\" (nhớ đăng ký sớm ở quầy cạnh lối vào) ⇒ đăng ký trước (B). \"sign up early\" = \"register in advance\".",
+            "glossary": [
+              {
+                "term": "site visit",
+                "pos": "noun phrase",
+                "ipa": "saɪt ˈvɪzɪt",
+                "meaning": "chuyến tham quan thực tế"
+              },
+              {
+                "term": "convention center",
+                "pos": "noun phrase",
+                "ipa": "kənˈvenʃn ˈsentə(r)",
+                "meaning": "trung tâm hội nghị"
+              },
+              {
+                "term": "limited",
+                "pos": "adjective",
+                "ipa": "ˈlɪmɪtɪd",
+                "meaning": "có hạn"
+              },
+              {
+                "term": "sign up",
+                "pos": "phrasal verb",
+                "ipa": "saɪn ʌp",
+                "meaning": "đăng ký"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "questionStart": 6,
+      "questionEnd": 7,
+      "audio": "5.mp3",
+      "image": null,
+      "transcript": "M-Cn: Before we open the café today, I want to tell you about some seasonal menu changes. I just got word from corporate headquarters that new coffee beverages will be on the menu starting next week. One of the new drinks is called Winter Delight. I’ve got some samples of it here for everyone to try. Now, a number of different syrup flavors, such as vanilla or hazelnut, can be added to this drink. So please be extra careful when you're preparing customers' orders. We want to make sure they get exactly what they want.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/a80505d3-414b-4a41-aeb1-a58af0c34603",
+      "questions": [
+        {
+          "number": 6,
+          "part": 4,
+          "prompt": "According to the speaker, what will happen next week?",
+          "options": {
+            "A": "Some new equipment will be installed.",
+            "B": "A corporate office will relocate.",
+            "C": "New menu items will be available.",
+            "D": "Seasonal employees will begin work."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói: \"new coffee beverages will be on the menu starting next week\" ⇒ tuần sau có món mới trong thực đơn (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 7,
+          "part": 4,
+          "prompt": "What does the speaker warn listeners about?",
+          "options": {
+            "A": "Preparing orders carefully",
+            "B": "Wearing proper attire",
+            "C": "Recording hours accurately",
+            "D": "Taking inventory daily"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói nhắc: \"please be extra careful when you're preparing customers' orders\" vì đồ uống có thể thêm nhiều loại siro ⇒ cẩn thận khi pha đồ cho khách (A).",
+            "glossary": [
+              {
+                "term": "seasonal",
+                "pos": "adjective",
+                "ipa": "ˈsiːzənl",
+                "meaning": "theo mùa"
+              },
+              {
+                "term": "headquarters",
+                "pos": "noun",
+                "ipa": "ˌhedˈkwɔːtəz",
+                "meaning": "trụ sở chính"
+              },
+              {
+                "term": "beverage",
+                "pos": "noun",
+                "ipa": "ˈbevərɪdʒ",
+                "meaning": "đồ uống"
+              },
+              {
+                "term": "sample",
+                "pos": "noun",
+                "ipa": "ˈsɑːmpl",
+                "meaning": "mẫu dùng thử"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "questionStart": 8,
+      "questionEnd": 9,
+      "audio": "6.mp3",
+      "image": null,
+      "transcript": "M-Cn: OK, the tour bus has stopped at this spot for a very special reason. The spectacular view from this side of the bridge is one of my favorites in the area. Across the river you can see the lovely town of Fremont. Today, it's a town known for its delicious local cuisine, but Fremont used to be an important port town where many products were traded. Merchants used to stop in Fremont to buy and sell their goods as they traveled along the river. Next, we will stop for lunch at the Fremont Inn before continuing up the river.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/ae68e5e9-c8eb-4ad8-8591-7990ae48a93c",
+      "questions": [
+        {
+          "number": 8,
+          "part": 4,
+          "prompt": "Why has the tour bus stopped?",
+          "options": {
+            "A": "To let the passengers out for shopping",
+            "B": "To purchase fuel",
+            "C": "To allow the guide to point out a view",
+            "D": "To pay a toll"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Hướng dẫn viên nói xe dừng \"for a very special reason. The spectacular view from this side of the bridge is one of my favorites\" ⇒ dừng để chỉ cho khách ngắm cảnh (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 9,
+          "part": 4,
+          "prompt": "What will the tour group do next?",
+          "options": {
+            "A": "Watch a documentary",
+            "B": "Take a group picture",
+            "C": "Board a boat",
+            "D": "Have lunch"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói: \"Next, we will stop for lunch at the Fremont Inn\" ⇒ tiếp theo đoàn đi ăn trưa (D).",
+            "glossary": [
+              {
+                "term": "spectacular",
+                "pos": "adjective",
+                "ipa": "spekˈtækjələ(r)",
+                "meaning": "ngoạn mục"
+              },
+              {
+                "term": "cuisine",
+                "pos": "noun",
+                "ipa": "kwɪˈziːn",
+                "meaning": "ẩm thực"
+              },
+              {
+                "term": "port town",
+                "pos": "noun phrase",
+                "ipa": "pɔːt taʊn",
+                "meaning": "thị trấn cảng"
+              },
+              {
+                "term": "merchant",
+                "pos": "noun",
+                "ipa": "ˈmɜːtʃənt",
+                "meaning": "thương nhân"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "questionStart": 10,
+      "questionEnd": 12,
+      "audio": "7.mp3",
+      "image": null,
+      "transcript": "M-Cn: Thank you for attending tonight’s Fredrickstown Business Seminar. I'm excited to introduce our first speaker, Ms. Janet Colthrup. She's the founder of Colthrup Accounting. Her company specializes in international tax preparation and does business in more than twenty countries. Today she'll share some of the strategies she used when she started her firm ten years ago, working from her home. As we've done in previous sessions, if you have questions for our speaker, please write them on the cards provided on your seat. Seminar volunteers will collect these questions throughout the session and then give them to the speaker directly. Without further delay, please help me welcome Janet Colthrup!",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/26e73d1f-db90-4bef-8bc9-e16cdc669741",
+      "questions": [
+        {
+          "number": 10,
+          "part": 4,
+          "prompt": "What industry does Janet Colthrup work in?",
+          "options": {
+            "A": "Event planning",
+            "B": "Accounting",
+            "C": "Tourism",
+            "D": "Interior design"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Janet Colthrup là \"the founder of Colthrup Accounting\" và công ty chuyên \"international tax preparation\" ⇒ ngành kế toán (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 11,
+          "part": 4,
+          "prompt": "What will Janet Colthrup discuss?",
+          "options": {
+            "A": "Tips for starting a business",
+            "B": "Strategies for international trade",
+            "C": "Modern home-decorating styles",
+            "D": "Effective speech-writing techniques"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Bà sẽ chia sẻ \"some of the strategies she used when she started her firm ten years ago\" ⇒ kinh nghiệm khởi nghiệp (A). Bẫy B: \"international\" có xuất hiện nhưng là thuế quốc tế, không phải chiến lược thương mại quốc tế.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 12,
+          "part": 4,
+          "prompt": "What does the speaker request that listeners do?",
+          "options": {
+            "A": "Take a handout before they leave",
+            "B": "Submit their questions in writing",
+            "C": "Move to the empty seats in the front",
+            "D": "Split into small discussion groups"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói yêu cầu: \"if you have questions for our speaker, please write them on the cards provided on your seat\" ⇒ viết câu hỏi ra giấy để nộp (B).",
+            "glossary": [
+              {
+                "term": "founder",
+                "pos": "noun",
+                "ipa": "ˈfaʊndə(r)",
+                "meaning": "người sáng lập"
+              },
+              {
+                "term": "specialize in",
+                "pos": "phrasal verb",
+                "ipa": "ˈspeʃəlaɪz ɪn",
+                "meaning": "chuyên về"
+              },
+              {
+                "term": "tax preparation",
+                "pos": "noun phrase",
+                "ipa": "tæks ˌprepəˈreɪʃn",
+                "meaning": "dịch vụ khai thuế"
+              },
+              {
+                "term": "volunteer",
+                "pos": "noun",
+                "ipa": "ˌvɒlənˈtɪə(r)",
+                "meaning": "tình nguyện viên"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "questionStart": 13,
+      "questionEnd": 15,
+      "audio": "8.mp3",
+      "image": null,
+      "transcript": "W-Am: You're listening to News Around Town from WXP Radio out of Riverdale. City officials have reported that last weekend’s fund-raising concert at Riverdale Outdoor Theater was a huge success. More than $15,000 was raised to fund the creation of a new city park downtown. Even though the original event was rescheduled due to rain, attendance was higher than expected. The city still needs to raise another $30,000 before construction can begin on the new park. For more information or to make a donation, please visit the Parks Department Web site.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/e1ef634f-6fab-4f96-b36b-bef95c3c1f80",
+      "questions": [
+        {
+          "number": 13,
+          "part": 4,
+          "prompt": "What event took place last weekend?",
+          "options": {
+            "A": "An art exhibit",
+            "B": "An opening ceremony",
+            "C": "An outdoor concert",
+            "D": "An awards dinner"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Bản tin nói về \"last weekend's fund-raising concert at Riverdale Outdoor Theater\" ⇒ một buổi hoà nhạc ngoài trời (C).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 14,
+          "part": 4,
+          "prompt": "Why is the city raising money?",
+          "options": {
+            "A": "To build a park",
+            "B": "To improve roads",
+            "C": "To open a museum",
+            "D": "To create a monument"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Tiền quyên góp được dùng \"to fund the creation of a new city park downtown\" ⇒ xây công viên (A).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 15,
+          "part": 4,
+          "prompt": "Why was the event rescheduled?",
+          "options": {
+            "A": "Ticket sales were low.",
+            "B": "A location was unavailable.",
+            "C": "A celebrity guest canceled.",
+            "D": "The weather was bad."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói: \"the original event was rescheduled due to rain\" (sự kiện bị dời vì mưa) ⇒ thời tiết xấu (D).",
+            "glossary": [
+              {
+                "term": "fund-raising",
+                "pos": "adjective",
+                "ipa": "ˈfʌnd reɪzɪŋ",
+                "meaning": "gây quỹ"
+              },
+              {
+                "term": "official",
+                "pos": "noun",
+                "ipa": "əˈfɪʃl",
+                "meaning": "quan chức"
+              },
+              {
+                "term": "reschedule",
+                "pos": "verb",
+                "ipa": "ˌriːˈʃedjuːl",
+                "meaning": "dời lịch"
+              },
+              {
+                "term": "donation",
+                "pos": "noun",
+                "ipa": "dəʊˈneɪʃn",
+                "meaning": "khoản quyên góp"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "questionStart": 16,
+      "questionEnd": 18,
+      "audio": "9.mp3",
+      "image": null,
+      "transcript": "M-Au: Today I want to focus our discussion on Castillo, a clothing brand we will start selling in our stores next month. As you know, our stores attract mainly younger shoppers. In thinking about fashion trends we want to feature, the marketing department has found that customers aged twelve to eighteen prefer styles that come in a lot of different colors. We chose Castillo as a new vendor for this very reason. Just look at the color selection in these samples! Now, the finances of carrying Castillo's line, Hae-Rim will go over the anticipated costs and profit estimates.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/0608ec43-7268-497a-9c8d-4e33fa38ea21",
+      "questions": [
+        {
+          "number": 16,
+          "part": 4,
+          "prompt": "What product does Castillo manufacture?",
+          "options": {
+            "A": "Jewelry",
+            "B": "Clothing",
+            "C": "Art supplies",
+            "D": "Backpacks"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói giới thiệu \"Castillo, a clothing brand we will start selling in our stores\" ⇒ Castillo làm quần áo (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 17,
+          "part": 4,
+          "prompt": "Why does the speaker say, \"Just look at the color selection in these samples\"?",
+          "options": {
+            "A": "To introduce a new manufacturing technique",
+            "B": "To assign a task",
+            "C": "To express disappointment",
+            "D": "To support a decision"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Ngay trước câu này, người nói giải thích khách 12–18 tuổi thích nhiều màu và \"We chose Castillo as a new vendor for this very reason\". Câu \"Just look at the color selection\" dùng để chứng minh lựa chọn đó là đúng ⇒ ủng hộ một quyết định (D).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 18,
+          "part": 4,
+          "prompt": "What will Hae-Rim do?",
+          "options": {
+            "A": "Present financial information",
+            "B": "Share competitor data",
+            "C": "Analyze survey results",
+            "D": "Introduce advertising layouts"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người nói: \"Hae-Rim will go over the anticipated costs and profit estimates\" (chi phí dự kiến và lợi nhuận ước tính) ⇒ trình bày thông tin tài chính (A).",
+            "glossary": [
+              {
+                "term": "vendor",
+                "pos": "noun",
+                "ipa": "ˈvendə(r)",
+                "meaning": "nhà cung cấp"
+              },
+              {
+                "term": "feature",
+                "pos": "verb",
+                "ipa": "ˈfiːtʃə(r)",
+                "meaning": "giới thiệu nổi bật"
+              },
+              {
+                "term": "anticipated",
+                "pos": "adjective",
+                "ipa": "ænˈtɪsɪpeɪtɪd",
+                "meaning": "dự kiến"
+              },
+              {
+                "term": "estimate",
+                "pos": "noun",
+                "ipa": "ˈestɪmət",
+                "meaning": "ước tính"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "questionStart": 19,
+      "questionEnd": 21,
+      "audio": "10.mp3",
+      "image": null,
+      "transcript": "W-Br: Good evening. I'm Michelle Yoon for Radio 101.6. In today's business news, we'll talk about innovation in the automobile industry. The Kendris Company, a local manufacturer of automotive parts, has just invented a new type of brakes for cars. These brakes are made from a special lightweight material that cools down more quickly after use, which means these brakes will last much longer than ordinary brakes. Kendris, which was founded just three years ago, will demonstrate their new brakes at the Annual Innovation Trade Show in August before offering them for sale the following month. From Radio 101.6, I'm Michelle Yoon.",
+      "keywords": [],
+      "dictationHref": "/practice/part-4/699167d5-8a99-4dd7-b86c-38478563eae0",
+      "questions": [
+        {
+          "number": 19,
+          "part": 4,
+          "prompt": "What type of business is Kendris?",
+          "options": {
+            "A": "A new car dealership",
+            "B": "An auto parts manufacturer",
+            "C": "An electronics importer",
+            "D": "A local marketing firm"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Kendris được giới thiệu là \"a local manufacturer of automotive parts\" ⇒ nhà sản xuất phụ tùng ô tô (B).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 20,
+          "part": 4,
+          "prompt": "According to the speaker, what is special about a new product?",
+          "options": {
+            "A": "It is the least expensive on the market.",
+            "B": "It is endorsed by a celebrity.",
+            "C": "It can be customized.",
+            "D": "It is made to last longer than others."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Phanh mới làm từ vật liệu tản nhiệt nhanh, \"which means these brakes will last much longer than ordinary brakes\" ⇒ bền hơn các loại khác (D).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 21,
+          "part": 4,
+          "prompt": "According to the speaker, what will take place in August?",
+          "options": {
+            "A": "An industry trade show",
+            "B": "A company merger",
+            "C": "A radio interview",
+            "D": "A sporting event"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Kendris \"will demonstrate their new brakes at the Annual Innovation Trade Show in August\" ⇒ tháng Tám có hội chợ thương mại của ngành (A).",
+            "glossary": [
+              {
+                "term": "innovation",
+                "pos": "noun",
+                "ipa": "ˌɪnəˈveɪʃn",
+                "meaning": "sự đổi mới"
+              },
+              {
+                "term": "automotive",
+                "pos": "adjective",
+                "ipa": "ˌɔːtəˈməʊtɪv",
+                "meaning": "thuộc ô tô"
+              },
+              {
+                "term": "lightweight",
+                "pos": "adjective",
+                "ipa": "ˈlaɪtweɪt",
+                "meaning": "nhẹ"
+              },
+              {
+                "term": "trade show",
+                "pos": "noun phrase",
+                "ipa": "treɪd ʃəʊ",
+                "meaning": "hội chợ thương mại"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

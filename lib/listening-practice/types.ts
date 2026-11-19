@@ -3,8 +3,8 @@
 
 export type ListeningPart = 1 | 2;
 
-/** Part có bộ luyện riêng ở /skills/listening/partN (Part 3 nằm ở ./part3.ts) */
-export type PracticePart = 1 | 2 | 3;
+/** Part có bộ luyện riêng ở /skills/listening/partN (Part 3/4 nằm ở ./part-sets.ts) */
+export type PracticePart = 1 | 2 | 3 | 4;
 
 /** Một thẻ đề ở trang danh sách — dùng chung cho mọi part */
 export interface PracticeListItem {

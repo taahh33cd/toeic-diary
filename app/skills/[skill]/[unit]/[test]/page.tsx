@@ -32,10 +32,11 @@ function parse(skill: string, unit: string, test: string) {
   const found = getUnit(skill, unit);
   if (!found) return null;
 
-  if (skill === "listening" && (unit === "part1" || unit === "part2" || unit === "part3")) {
+  const listeningPart = skill === "listening" ? /^part([1-4])$/.exec(unit) : null;
+  if (listeningPart) {
     const testNumber = Number(test);
     if (!Number.isInteger(testNumber)) return null;
-    const part = (unit === "part1" ? 1 : unit === "part2" ? 2 : 3) as PracticePart;
+    const part = Number(listeningPart[1]) as PracticePart;
     const title = practiceTestTitle(testNumber, part);
     if (!title) return null;
     return { kind: "listening" as const, ...found, testNumber, title, part };

@@ -5,7 +5,7 @@
 // Chỉ import type từ lib/full-tests — index.ts bên đó nạp 20 file JSON đề.
 import type { FullTest, FullTestGroup, PartNumber } from "@/lib/full-tests/types";
 import type { ListeningPart, PracticePart, PracticeQuestion, PracticeTest } from "./types";
-import { getPart3SetBySlug } from "./part3";
+import { getPartSetBySlug } from "./part-sets";
 
 /** Khoá lượt làm: kèm nguồn ("ca") để sau này thêm bộ đề khác không đụng nhau. */
 export function practiceAttemptSlug(testNumber: number, part: ListeningPart): string {
@@ -14,15 +14,15 @@ export function practiceAttemptSlug(testNumber: number, part: ListeningPart): st
 
 /**
  * Đọc ngược khoá lượt làm. Trả null nếu không đúng định dạng — route handler dùng để chặn slug bịa.
- * Part 3 dùng luôn slug của bộ ("part3-basic"), testNumber là số thứ tự bộ.
+ * Part 3/4 dùng luôn slug của bộ ("part3-basic", "part4-advanced"…), testNumber là số thứ tự bộ.
  */
 export function parsePracticeAttemptSlug(
   slug: string,
 ): { testNumber: number; part: PracticePart } | null {
   const m = /^ca-test-(\d+)-part([12])$/.exec(slug);
   if (m) return { testNumber: Number(m[1]), part: Number(m[2]) as ListeningPart };
-  const p3 = getPart3SetBySlug(slug);
-  return p3 ? { testNumber: p3.testNumber, part: 3 } : null;
+  const set = getPartSetBySlug(slug);
+  return set ? { testNumber: set.testNumber, part: set.part } : null;
 }
 
 /** Audio trong data là URL tuyệt đối, còn ExamScreen ghép `audioBase/audio` ⇒ tách đôi. */
