@@ -1,0 +1,959 @@
+{
+  "examSlug": "part3-practice",
+  "examTitle": "Luyện nghe Part 3",
+  "testNumber": 7,
+  "slug": "part3-basic-6",
+  "title": "Luyện tập cơ bản · Test 6",
+  "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-5",
+  "locked": false,
+  "lockReason": null,
+  "stats": {
+    "questions": 30,
+    "answered": 30,
+    "missingAnswers": [],
+    "brokenQuestions": []
+  },
+  "groups": [
+    {
+      "part": 3,
+      "questionStart": 1,
+      "questionEnd": 3,
+      "audio": "q32-34.mp3",
+      "image": null,
+      "transcript": "W: Hello, Tariq. Could you do me a favor?\nM: Sure—what is it?\nW: I’m meeting with the Gerhard Group at ten A.M. for the product pitch, and I need copies of your market analysis report made for each representative.\nM: Aren’t you at the office right now?\nW: Actually, I came in early today, but I couldn’t get the copy machine to work.\nM: Seriously? We bought it last month!\nW: I’m afraid so.\nM: I just got off the train. I’ll stop at Business Express on McAllister Street and take care of it on my way to the office.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/2be81755-9864-43ca-8624-5a1b12810c15",
+      "questions": [
+        {
+          "number": 1,
+          "part": 3,
+          "prompt": "What does the woman ask the man to do for her?",
+          "options": {
+            "A": "Greet a client in the lobby",
+            "B": "Present a product pitch",
+            "C": "Organize some binders",
+            "D": "Make some photocopies"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ yêu cầu: 'I need copies of your market analysis report made for each representative.' (Tôi cần các bản sao báo cáo phân tích thị trường của bạn cho mỗi đại diện). Điều này tương ứng với đáp án D: Make some photocopies.",
+            "glossary": []
+          }
+        },
+        {
+          "number": 2,
+          "part": 3,
+          "prompt": "What does the man say about some equipment?",
+          "options": {
+            "A": "It is operating smoothly.",
+            "B": "It was purchased recently.",
+            "C": "It needs to be plugged in.",
+            "D": "It has not yet been updated."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Khi người phụ nữ nói máy photocopy không hoạt động, người đàn ông ngạc nhiên: 'Seriously? We bought it last month!' (Thật sao? Chúng ta vừa mua nó tháng trước mà!). Điều này cho thấy thiết bị mới được mua gần đây (It was purchased recently).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 3,
+          "part": 3,
+          "prompt": "Where is the man?",
+          "options": {
+            "A": "At the office",
+            "B": "At a train station",
+            "C": "At a store",
+            "D": "At a client's headquarters"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông cho biết vị trí hiện tại của mình: 'I just got off the train.' (Tôi vừa xuống tàu). Do đó anh ấy đang ở ga tàu (At a train station).\nĐoạn hội thoại (",
+            "glossary": [
+              {
+                "term": "favor",
+                "pos": "n",
+                "ipa": "ˈfeɪvər",
+                "meaning": "sự giúp đỡ"
+              },
+              {
+                "term": "product pitch",
+                "pos": "n",
+                "ipa": "ˈprɑːdʌkt pɪtʃ",
+                "meaning": "bài thuyết trình sản phẩm"
+              },
+              {
+                "term": "market analysis",
+                "pos": "n",
+                "ipa": "ˈmɑːrkɪt əˈnæləsɪs",
+                "meaning": "phân tích thị trường"
+              },
+              {
+                "term": "representative",
+                "pos": "n",
+                "ipa": "ˌreprɪˈzentətɪv",
+                "meaning": "người đại diện"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 4,
+      "questionEnd": 6,
+      "audio": "q35-37.mp3",
+      "image": null,
+      "transcript": "W: Delton Van Lines. How can I help you?\nM: Hello. I’m the office manager at Woodsom Insurance Company. We are relocating to a new office in June and would like to book your services.\nW: Certainly! But before we reserve a date for the move, we’ll need to come to your current location and estimate the cost of moving your furniture and equipment.\nM: We have a staff meeting tomorrow morning, so no one’s available to show you around then. But tomorrow afternoon works.\nW: Perfect! Our representative can be there at two. I’ll just need to know where you’re located.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/eda2b19d-94e3-40f9-8a59-77a4de5be852",
+      "questions": [
+        {
+          "number": 4,
+          "part": 3,
+          "prompt": "Where does the woman most likely work?",
+          "options": {
+            "A": "At a furniture store",
+            "B": "At a moving company",
+            "C": "At a post office",
+            "D": "At an office supply store"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ trả lời điện thoại: 'Delton Van Lines. How can I help you?' và nhắc đến việc 'estimate the cost of moving your furniture...' (ước tính chi phí di chuyển đồ đạc). Điều này cho thấy cô ấy làm việc tại một công ty chuyển nhà (At a moving company).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 5,
+          "part": 3,
+          "prompt": "Why will a representative visit the man's company tomorrow?",
+          "options": {
+            "A": "To provide an estimate",
+            "B": "To sign a contract",
+            "C": "To give a presentation",
+            "D": "To place an order"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nói: 'we'll need to come to your current location and estimate the cost... Our representative can be there at two.' (chúng tôi cần đến vị trí hiện tại của bạn và ước tính chi phí... Đại diện của chúng tôi có thể đến đó lúc hai giờ). Mục đích là để cung cấp bảng ước tính (To provide an estimate).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 6,
+          "part": 3,
+          "prompt": "What information will the man most likely provide next?",
+          "options": {
+            "A": "A company's operating hours",
+            "B": "An account number",
+            "C": "A street address",
+            "D": "A telephone number"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Cuối đoạn hội thoại, người phụ nữ nói: 'I'll just need to know where you're located.' (Tôi chỉ cần biết bạn đang ở đâu). Do đó người đàn ông sẽ cung cấp địa chỉ (A street address).\nĐoạn hội thoại (",
+            "glossary": [
+              {
+                "term": "relocate",
+                "pos": "v",
+                "ipa": "ˌriːˈloʊkeɪt",
+                "meaning": "chuyển địa điểm"
+              },
+              {
+                "term": "estimate",
+                "pos": "v",
+                "ipa": "ˈestɪmeɪt",
+                "meaning": "ước tính"
+              },
+              {
+                "term": "available",
+                "pos": "adj",
+                "ipa": "əˈveɪləbl",
+                "meaning": "có sẵn, rảnh rỗi"
+              },
+              {
+                "term": "locate",
+                "pos": "v",
+                "ipa": "ˈloʊkeɪt",
+                "meaning": "định vị, đặt ở"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 7,
+      "questionEnd": 9,
+      "audio": "q38-40.mp3",
+      "image": null,
+      "transcript": "M: Doctor MacMillan, I’m calling from the human resources department. I’m in charge of your onboarding, and I wanted to confirm your start date. It’s the first of April, right?\nW: Right. That’s when I’ll be joining the scientific research team. And as you probably know, I’m still finishing up a research paper with my current institution.\nM: Yes, the director did tell me that. Your contract includes time for you to finish up your previous commitments. I can send it to you this afternoon.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/1a3b0bd5-a262-4d72-977a-08ec944a6cb9",
+      "questions": [
+        {
+          "number": 7,
+          "part": 3,
+          "prompt": "What department does the man work in?",
+          "options": {
+            "A": "Legal",
+            "B": "Accounting",
+            "C": "Human resources",
+            "D": "Public relations"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông giới thiệu: 'I'm calling from the human resources department.' (Tôi gọi từ phòng nhân sự). Do đó anh ấy làm việc ở bộ phận Nhân sự (Human resources).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 8,
+          "part": 3,
+          "prompt": "What kind of work has the woman been hired to do?",
+          "options": {
+            "A": "Scientific research",
+            "B": "Book editing",
+            "C": "Office management",
+            "D": "Legal advising"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ xác nhận: 'That's when I'll be joining the scientific research team.' (Đó là lúc tôi sẽ tham gia nhóm nghiên cứu khoa học). Cô ấy được thuê để nghiên cứu khoa học (Scientific research).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 9,
+          "part": 3,
+          "prompt": "What will the man send the woman this afternoon?",
+          "options": {
+            "A": "A password",
+            "B": "A travel reimbursement",
+            "C": "A security badge",
+            "D": "A contract"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói: 'Your contract includes time... I can send it to you this afternoon.' (Hợp đồng của bạn bao gồm thời gian... Tôi có thể gửi nó cho bạn chiều nay). Anh ấy sẽ gửi bản hợp đồng (A contract).\nĐoạn hội thoại (",
+            "glossary": [
+              {
+                "term": "human resources",
+                "pos": "n",
+                "ipa": "ˈhjuːmən ˈriːsɔːrsɪz",
+                "meaning": "nhân sự"
+              },
+              {
+                "term": "onboarding",
+                "pos": "n",
+                "ipa": "ˈɑːnbɔːrdɪŋ",
+                "meaning": "quá trình hội nhập"
+              },
+              {
+                "term": "contract",
+                "pos": "n",
+                "ipa": "ˈkɑːntrækt",
+                "meaning": "hợp đồng"
+              },
+              {
+                "term": "commitment",
+                "pos": "n",
+                "ipa": "kəˈmɪtmənt",
+                "meaning": "cam kết"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 10,
+      "questionEnd": 12,
+      "audio": "q41-43.mp3",
+      "image": null,
+      "transcript": "W: We’ve been getting a lot of online orders for our chocolate candies lately. I’m glad to see the increase in orders, but I’m worried about meeting the demands. Are we going to be able to fill and ship all these orders?\nM: I think we should hire a few more people to work in the mornings. They could help with packaging and shipping. What do you think, Rebecca?\nW: I agree. I also think that we should ask if our delivery service can pick up our packages twice a day instead of just once a day—maybe every morning and afternoon. I’ll call them today.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/a49b3696-22f9-4d61-8ccc-5ccd0f3a80c4",
+      "questions": [
+        {
+          "number": 10,
+          "part": 3,
+          "prompt": "What recently happened at the business?",
+          "options": {
+            "A": "Its monthly rent increased.",
+            "B": "It received many orders.",
+            "C": "It was featured in a magazine.",
+            "D": "It passed an inspection."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ 1 nói: 'We've been getting a lot of online orders for our chocolate candies lately.' (Gần đây chúng tôi nhận được rất nhiều đơn đặt hàng trực tuyến...). Công ty nhận được nhiều đơn đặt hàng (It received many orders).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 11,
+          "part": 3,
+          "prompt": "According to the man, what will help the business?",
+          "options": {
+            "A": "Purchasing updated equipment",
+            "B": "Offering different products",
+            "C": "Extending store hours",
+            "D": "Hiring more employees"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đề xuất: 'I think we should hire a few more people to work in the mornings.' (Tôi nghĩ chúng ta nên thuê thêm vài người làm việc vào buổi sáng). Nghĩa là thuê thêm nhân viên (Hiring more employees).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 12,
+          "part": 3,
+          "prompt": "Who does Rebecca say she will call today?",
+          "options": {
+            "A": "A packaging designer",
+            "B": "An Internet service provider",
+            "C": "A delivery service",
+            "D": "A bank"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Rebecca (người phụ nữ 2) nói: 'we should ask if our delivery service can pick up our packages twice a day... I'll call them today.' (...hỏi xem dịch vụ giao hàng có thể lấy gói hàng hai lần một ngày không... Tôi sẽ gọi cho họ hôm nay). Cô ấy sẽ gọi dịch vụ giao hàng (A delivery service).\nĐoạn hội thoại (",
+            "glossary": [
+              {
+                "term": "demand",
+                "pos": "n",
+                "ipa": "dɪˈmænd",
+                "meaning": "nhu cầu"
+              },
+              {
+                "term": "fill and ship",
+                "pos": "phrase",
+                "ipa": "fɪl ænd ʃɪp",
+                "meaning": "đóng gói và gửi đi"
+              },
+              {
+                "term": "packaging",
+                "pos": "n",
+                "ipa": "ˈpækɪdʒɪŋ",
+                "meaning": "việc đóng gói"
+              },
+              {
+                "term": "delivery service",
+                "pos": "n",
+                "ipa": "dɪˈlɪvəri ˈsɜːrvɪs",
+                "meaning": "dịch vụ giao hàng"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 13,
+      "questionEnd": 15,
+      "audio": "q44-46.mp3",
+      "image": null,
+      "transcript": "W: I spoke to the Mancini brothers. They just shipped our leather order—the hazelnut color. But it’ll take a while to arrive. We don’t have enough in stock to complete the ten sofa orders that we’ve received the past few days.\nM: What about the local leather supplier that brought us some samples last week? We could ask them whether they have enough for ten sofas.\nW: To be honest, I wasn’t very impressed with the quality of their leather. I’d rather wait. I’ll reach out to the customers about the delay.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/7cf102f6-c96b-424f-b0eb-e537b53a5959",
+      "questions": [
+        {
+          "number": 13,
+          "part": 3,
+          "prompt": "What do the speakers manufacture?",
+          "options": {
+            "A": "Shoes",
+            "B": "Luggage",
+            "C": "Furniture",
+            "D": "Sports equipment"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nhắc đến: 'complete the ten sofa orders' (hoàn thành 10 đơn đặt hàng ghế sofa). Điều này cho thấy họ sản xuất đồ nội thất (Furniture).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 14,
+          "part": 3,
+          "prompt": "Who does the man suggest contacting?",
+          "options": {
+            "A": "A leather supplier",
+            "B": "A delivery driver",
+            "C": "An interior designer",
+            "D": "A machine technician"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông gợi ý: 'What about the local leather supplier that brought us some samples last week?' (Thế còn nhà cung cấp da địa phương mang cho chúng ta một số mẫu tuần trước thì sao?). Anh ấy khuyên liên hệ nhà cung cấp da (A leather supplier).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 15,
+          "part": 3,
+          "prompt": "Why is the woman opposed to making a change?",
+          "options": {
+            "A": "She has contracts with clients.",
+            "B": "She is concerned about quality.",
+            "C": "Overhead expenses will increase.",
+            "D": "A license will expire soon."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ từ chối vì lo ngại về chất lượng: 'To be honest, I wasn't very impressed with the quality of their leather.' (Thành thật mà nói, tôi không mấy ấn tượng với chất lượng da của họ). Đáp án B: She is concerned about quality.\nĐoạn hội thoại (",
+            "glossary": [
+              {
+                "term": "leather",
+                "pos": "n",
+                "ipa": "ˈleðər",
+                "meaning": "da"
+              },
+              {
+                "term": "in stock",
+                "pos": "phrase",
+                "ipa": "ɪn stɑːk",
+                "meaning": "còn hàng"
+              },
+              {
+                "term": "supplier",
+                "pos": "n",
+                "ipa": "səˈplaɪər",
+                "meaning": "nhà cung cấp"
+              },
+              {
+                "term": "delay",
+                "pos": "n",
+                "ipa": "dɪˈleɪ",
+                "meaning": "sự chậm trễ"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 16,
+      "questionEnd": 18,
+      "audio": "q47-49.mp3",
+      "image": null,
+      "transcript": "W: Thanks for coming in, Marcos. I just got the results from the consulting firm we hired. They have some ideas about how we can increase sales of our denim blue jeans.\nM: I hope so. What does our target audience want?\nW: Well, they think it’s time we updated our brand with new styles or colors.\nM: You know, it takes a lot of effort to develop and launch new styles.\nW: Yes. But if we don’t do it, another company will.\nM: You’re right. I’ll ask Junko to come up with some new designs for us to consider.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/e3e1085f-ff4e-4cce-b4d2-080628b10ce1",
+      "questions": [
+        {
+          "number": 16,
+          "part": 3,
+          "prompt": "What are the speakers meeting to discuss?",
+          "options": {
+            "A": "Safety regulations",
+            "B": "Equipment upgrades",
+            "C": "Budget cuts",
+            "D": "Consultant recommendations"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nói: 'I just got the results from the consulting firm we hired. They have some ideas...' (Tôi vừa nhận được kết quả từ công ty tư vấn. Họ có vài ý tưởng...). Họ đang thảo luận về đề xuất của nhà tư vấn (Consultant recommendations).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 17,
+          "part": 3,
+          "prompt": "What does the man mean when he says, \"it takes a lot of effort to develop and launch new styles\"?",
+          "options": {
+            "A": "He is excited about a challenge.",
+            "B": "He is surprised at a competitor's choices.",
+            "C": "He is doubtful about a suggestion.",
+            "D": "He thinks more employees should be hired."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Khi được khuyên cập nhật kiểu dáng, người đàn ông đáp: 'You know, it takes a lot of effort to develop and launch new styles.' (Bạn biết đấy, cần rất nhiều nỗ lực để phát triển và ra mắt các kiểu dáng mới). Ý anh là việc này rất khó và anh ấy nghi ngờ tính khả thi của đề xuất (He is doubtful about a suggestion).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 18,
+          "part": 3,
+          "prompt": "Who most likely is Junko?",
+          "options": {
+            "A": "A focus group leader",
+            "B": "A clothing designer",
+            "C": "A sales associate",
+            "D": "An accountant"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông chốt lại: 'I'll ask Junko to come up with some new designs for us to consider.' (Tôi sẽ yêu cầu Junko đưa ra vài thiết kế mới để xem xét). Do đó Junko là nhà thiết kế thời trang (A clothing designer).\nĐoạn hội thoại (",
+            "glossary": [
+              {
+                "term": "target audience",
+                "pos": "n",
+                "ipa": "ˈtɑːrɡɪt ˈɔːdiəns",
+                "meaning": "khách hàng mục tiêu"
+              },
+              {
+                "term": "brand",
+                "pos": "n",
+                "ipa": "brænd",
+                "meaning": "thương hiệu"
+              },
+              {
+                "term": "launch",
+                "pos": "v",
+                "ipa": "lɔːntʃ",
+                "meaning": "ra mắt, phát hành"
+              },
+              {
+                "term": "come up with",
+                "pos": "phrase",
+                "ipa": "kʌm ʌp wɪð",
+                "meaning": "nảy ra (ý tưởng)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 19,
+      "questionEnd": 21,
+      "audio": "q50-52.mp3",
+      "image": null,
+      "transcript": "M: Hi, Gabriela. Thanks for agreeing to give me the highlights of the budget discussion from the monthly meeting. I’m back from vacation and still catching up.\nW: Sure. Here’s a copy of the report. Everyone on our organization’s board at Tennis United agreed to the fee increase for the tennis camp for young players.\nM: Good. And why do we have T-shirts listed as an expense item?\nW: Although the next tournament’s in the fall, the T-shirts were ordered very early. That way we received half off the price, since the supplier wanted to get rid of his summer inventory.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/c8ca01d9-2c23-46ab-ad93-f9f32a946b75",
+      "questions": [
+        {
+          "number": 19,
+          "part": 3,
+          "prompt": "Why did the man miss a meeting?",
+          "options": {
+            "A": "He was stuck in traffic.",
+            "B": "He had a medical appointment.",
+            "C": "He was speaking with a client.",
+            "D": "He was away on vacation."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông giải thích lý do vắng mặt: 'I'm back from vacation and still catching up.' (Tôi vừa đi nghỉ mát về và vẫn đang bắt nhịp công việc). Anh ấy đi vắng do nghỉ phép (He was away on vacation).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 20,
+          "part": 3,
+          "prompt": "Which sport does the speakers' organization promote?",
+          "options": {
+            "A": "Tennis",
+            "B": "Volleyball",
+            "C": "Swimming",
+            "D": "Gymnastics"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nhắc đến: 'Everyone on the board of Tennis United agreed...' (Mọi người trong hội đồng quản trị của Tennis United đều đồng ý...). Tổ chức này liên quan đến bộ môn quần vợt (Tennis).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 21,
+          "part": 3,
+          "prompt": "Why were T-shirts ordered early?",
+          "options": {
+            "A": "To avoid potential delays",
+            "B": "To get free delivery",
+            "C": "To receive a discount",
+            "D": "To meet heavy demand"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ giải thích lý do đặt áo thun sớm: 'That way we received half off the price...' (Theo cách đó, chúng tôi được giảm một nửa giá...). Nhằm mục đích nhận được chiết khấu (To receive a discount).\nĐoạn hội thoại (",
+            "glossary": [
+              {
+                "term": "budget discussion",
+                "pos": "n",
+                "ipa": "ˈbʌdʒɪt dɪˈskʌʃn",
+                "meaning": "thảo luận về ngân sách"
+              },
+              {
+                "term": "board",
+                "pos": "n",
+                "ipa": "bɔːrd",
+                "meaning": "ban giám đốc, hội đồng"
+              },
+              {
+                "term": "expense item",
+                "pos": "n",
+                "ipa": "ɪkˈspens ˈaɪtəm",
+                "meaning": "hạng mục chi phí"
+              },
+              {
+                "term": "inventory",
+                "pos": "n",
+                "ipa": "ˈɪnvəntɔːri",
+                "meaning": "hàng tồn kho"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 22,
+      "questionEnd": 24,
+      "audio": "q53-55.mp3",
+      "image": null,
+      "transcript": "W: The first item on today’s meeting agenda is our bid to renovate the Morrisville Bridge. Do we have an update on that yet?\nM: Yes—unfortunately we didn’t get the contract.\nM: Yes, the only explanation given was that another construction company submitted a proposal with a shorter timeline.\nW: So, what do we know about this competitor? Have they worked on other local projects?\nM: The only thing I heard was their name—CDQ Construction Company.\nW: Well, I’d like to know more about them. Can you two do some research before our next meeting?",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/2dd3aaf2-4162-4aa0-9f69-0a5536cc80df",
+      "questions": [
+        {
+          "number": 22,
+          "part": 3,
+          "prompt": "What industry do the speakers most likely work in?",
+          "options": {
+            "A": "Energy",
+            "B": "Finance",
+            "C": "Construction",
+            "D": "Manufacturing"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Cuộc họp bắt đầu với: 'our bid to renovate the Morrisville Bridge' (hồ sơ dự thầu cải tạo cầu Morrisville) và nhắc đến đối thủ là 'CDQ Construction Company'. Họ làm việc trong ngành xây dựng (Construction).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 23,
+          "part": 3,
+          "prompt": "What is the reason a company did not get a contract?",
+          "options": {
+            "A": "Some costs were too high.",
+            "B": "A facility failed an inspection.",
+            "C": "Some paperwork was submitted late.",
+            "D": "A competitor can complete a project faster."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông 2 giải thích lý do thất bại: 'another construction company submitted a proposal with a shorter timeline.' (một công ty khác đã nộp đề xuất với tiến độ ngắn hơn). Đối thủ có thể hoàn thành nhanh hơn (A competitor can complete a project faster).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 24,
+          "part": 3,
+          "prompt": "What does the woman ask the men to do?",
+          "options": {
+            "A": "Visit a facility",
+            "B": "Conduct some research",
+            "C": "Rewrite a proposal",
+            "D": "Contact some vendors"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ yêu cầu hai người đàn ông: 'Can you two do some research before our next meeting?' (Hai bạn có thể thực hiện một số nghiên cứu trước cuộc họp tiếp theo không?). Đáp án B: Conduct some research.\nĐoạn hội thoại (",
+            "glossary": [
+              {
+                "term": "agenda",
+                "pos": "n",
+                "ipa": "əˈdʒendə",
+                "meaning": "chương trình nghị sự"
+              },
+              {
+                "term": "bid",
+                "pos": "n",
+                "ipa": "bɪd",
+                "meaning": "việc bỏ thầu"
+              },
+              {
+                "term": "renovate",
+                "pos": "v",
+                "ipa": "ˈrenəveɪt",
+                "meaning": "cải tạo"
+              },
+              {
+                "term": "competitor",
+                "pos": "n",
+                "ipa": "kəmˈpetɪtər",
+                "meaning": "đối thủ cạnh tranh"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 25,
+      "questionEnd": 27,
+      "audio": "q56-58.mp3",
+      "image": null,
+      "transcript": "W: Did you see that the results of last month’s employee survey have been compiled? All the staff feedback is available.\nM: Yes, and I just finished reviewing the comments.\nW: You know, I noticed one recurring complaint. The size of the break room is too small. Perhaps we could enlarge the break room by having the wall taken down between it and the meeting room next door.\nM: Well, we do have money available in the budget.\nW: Then could you reach out to your contact at the construction company?\nM: I can’t do it this afternoon, since I need to see a dentist, but I will definitely make the call.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/6855254e-44a0-465f-8363-9722dd8766c0",
+      "questions": [
+        {
+          "number": 25,
+          "part": 3,
+          "prompt": "What did the company do last month?",
+          "options": {
+            "A": "It opened a second location.",
+            "B": "It merged with another business.",
+            "C": "It launched a new product.",
+            "D": "It conducted an employee survey."
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nhắc đến: 'the results of last month's employee survey have been compiled' (kết quả cuộc khảo sát nhân viên tháng trước đã được tổng hợp). Công ty đã thực hiện khảo sát nhân viên (It conducted an employee survey).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 26,
+          "part": 3,
+          "prompt": "Why does the man say, \"we do have money available in the budget\"?",
+          "options": {
+            "A": "To request another budget analysis",
+            "B": "To suggest hiring additional employees",
+            "C": "To agree with a proposed renovation",
+            "D": "To recommend an increase in advertising"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Khi người phụ nữ đề xuất phá bỏ bức tường để mở rộng phòng nghỉ, người đàn ông đáp: 'Well, we do have money available in the budget.' (Chà, chúng ta có sẵn tiền trong ngân sách). Anh ấy đồng ý với đề xuất cải tạo vì có kinh phí (To agree with a proposed renovation).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 27,
+          "part": 3,
+          "prompt": "What does the man say he has to do this afternoon?",
+          "options": {
+            "A": "Have his car repaired",
+            "B": "Give a presentation",
+            "C": "Go to a dentist appointment",
+            "D": "Attend a reception"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông từ chối làm việc ngay buổi chiều vì: 'I can't do it this afternoon, since I need to see a dentist' (Chiều nay tôi không làm được vì phải đi khám nha sĩ). Đáp án C: Go to a dentist appointment.\nĐoạn hội thoại (",
+            "glossary": [
+              {
+                "term": "compile",
+                "pos": "v",
+                "ipa": "kəmˈpaɪl",
+                "meaning": "biên soạn, tổng hợp"
+              },
+              {
+                "term": "feedback",
+                "pos": "n",
+                "ipa": "ˈfiːdbæk",
+                "meaning": "phản hồi"
+              },
+              {
+                "term": "recurring",
+                "pos": "adj",
+                "ipa": "rɪˈkɜːrɪŋ",
+                "meaning": "lặp đi lặp lại"
+              },
+              {
+                "term": "enlarge",
+                "pos": "v",
+                "ipa": "ɪnˈlɑːrdʒ",
+                "meaning": "mở rộng"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "questionStart": 28,
+      "questionEnd": 30,
+      "audio": "q59-61.mp3",
+      "image": null,
+      "transcript": "W: Thanks for calling Hang’s Metal Recycling Company. How can I help you?\nM: Hi. I’m with Shannak Construction Company. We’ve got a lot of brass metal scrap from a recent remodeling job. Are you currently buying metal scrap?\nW: Yes, we are. We currently pay two dollars a pound.\nM: Oh, there’s another recycling center that pays two dollars and twenty-five cents a pound. Would you be willing to match their price?\nW: Yes, we have a price-match guarantee.\nM: Great. I’ll bring the metal to you this afternoon, then.",
+      "keywords": [],
+      "dictationHref": "/practice/part-3/15ac0d9f-64ba-403a-ab55-21108b5484de",
+      "questions": [
+        {
+          "number": 28,
+          "part": 3,
+          "prompt": "Where does the woman work?",
+          "options": {
+            "A": "At a recycling company",
+            "B": "At an appliance store",
+            "C": "At a manufacturing company",
+            "D": "At an architectural firm"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ chào: 'Thanks for calling Hang's Metal Recycling Company.' (Cảm ơn bạn đã gọi đến Công ty Tái chế Kim loại Hang). Do đó cô ấy làm ở công ty tái chế (At a recycling company).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 29,
+          "part": 3,
+          "prompt": "What does the man ask the woman to do?",
+          "options": {
+            "A": "Revise a contract",
+            "B": "Match a competitor's offer",
+            "C": "Refund a delivery fee",
+            "D": "Sign in at a security desk"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông hỏi: 'Would you be willing to match their price?' (Bạn có sẵn lòng đưa ra mức giá tương đương mức giá của họ không?). Yêu cầu khớp giá với đối thủ cạnh tranh (Match a competitor's offer).",
+            "glossary": []
+          }
+        },
+        {
+          "number": 30,
+          "part": 3,
+          "prompt": "What does the man say he will do this afternoon?",
+          "options": {
+            "A": "Conduct an inspection",
+            "B": "Sign a document",
+            "C": "Deliver some materials",
+            "D": "Update a Web site"
+          },
+          "showText": true,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông nói: 'I'll bring the metal to you this afternoon, then.' (Vậy tôi sẽ mang kim loại đến cho bạn vào chiều nay). Anh ấy sẽ giao vật liệu (Deliver some materials).\nĐoạn hội thoại (",
+            "glossary": [
+              {
+                "term": "recycling company",
+                "pos": "n",
+                "ipa": "ˌriːˈsaɪklɪŋ ˈkʌmpəni",
+                "meaning": "công ty tái chế"
+              },
+              {
+                "term": "scrap",
+                "pos": "n",
+                "ipa": "skræp",
+                "meaning": "phế liệu"
+              },
+              {
+                "term": "willing",
+                "pos": "adj",
+                "ipa": "ˈwɪlɪŋ",
+                "meaning": "sẵn sàng"
+              },
+              {
+                "term": "guarantee",
+                "pos": "n",
+                "ipa": "ˌɡærənˈtiː",
+                "meaning": "sự đảm bảo, cam kết"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

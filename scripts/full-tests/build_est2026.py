@@ -419,6 +419,21 @@ def apply_overrides(test_slug: str, questions: list[dict]) -> list[int]:
     return sorted(done)
 
 
+def apply_group_overrides(test_slug: str, groups: list[dict]) -> list[str]:
+    """Vá cấp nhóm (transcript, keywords) — khoá "_group_overrides" > testSlug > "32-34"."""
+    data = json.load(open(OVERRIDES_FILE, encoding="utf-8")) if OVERRIDES_FILE.is_file() else {}
+    patch = (data.get("_group_overrides") or {}).get(test_slug) or {}
+    by_range = {f"{g['questionStart']}-{g['questionEnd']}": g for g in groups}
+    done = []
+    for key, fields in patch.items():
+        target = by_range.get(key)
+        if target is None:
+            continue
+        target.update({k: v for k, v in fields.items() if not k.startswith("_")})
+        done.append(key)
+    return done
+
+
 def build(src: Src, n: int, image_map: dict[str, str]) -> dict:
     transcripts = read_transcripts(src, n)
     lcq = read_lc_questions(src, n)
@@ -551,6 +566,9 @@ def build(src: Src, n: int, image_map: dict[str, str]) -> dict:
     if patched:
         warnings.append(f"đã vá thủ công câu: {patched}")
         broken[:] = [q for q in broken if q not in patched]
+    patched_groups = apply_group_overrides(f"est-2026-test-{n}", groups)
+    if patched_groups:
+        warnings.append(f"đã vá thủ công nhóm: {patched_groups}")
 
     numbers = sorted(x["number"] for x in all_q)
     missing_q = sorted(set(range(1, 201)) - set(numbers))
