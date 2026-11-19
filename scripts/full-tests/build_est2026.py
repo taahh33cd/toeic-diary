@@ -103,6 +103,22 @@ class Src:
 # ─────────────────────────── transcript LC ──────────────────────────────────
 
 TRANS_RE = re.compile(r"^E26-T(\d{2})-(\d{1,3})-(\d{1,3})\.(txt|json)$")
+# Rác parse từ docx dính cuối transcript Part 3/4: dòng câu hỏi "32. What…",
+# tiêu đề "ĐOẠN HỘI THOẠI 3 (", "GIẢI THÍCH CHI TIẾT … PHẦN …".
+TRANS_JUNK_RE = re.compile(r"^\d{2,3}\.\s")
+TRANS_JUNK_WORDS = ("ĐOẠN", "GIẢI THÍCH", "PHẦN")
+
+
+def clean_group_transcript(text: str | None) -> str | None:
+    """Cắt transcript tại dòng rác đầu tiên (câu hỏi / tiêu đề lẫn vào)."""
+    if not text:
+        return None
+    lines = text.split("\n")
+    for i, line in enumerate(lines):
+        if TRANS_JUNK_RE.match(line) or any(w in line for w in TRANS_JUNK_WORDS):
+            lines = lines[:i]
+            break
+    return "\n".join(lines).rstrip() or None
 
 
 def read_transcripts(src: Src, n: int) -> dict[tuple[int, int], dict]:
@@ -526,7 +542,7 @@ def build(src: Src, n: int, image_map: dict[str, str]) -> dict:
             "questionEnd": b,
             "audio": f"q{a}-{b}.mp3",
             "image": img_url(f"{a}-{b}"),
-            "transcript": payload.get("transcript") or None,
+            "transcript": clean_group_transcript(payload.get("transcript")),
             "keywords": norm_keywords(payload.get("keywords")),
             "questions": [
                 mk_question(q, lcq.get(q, {}).get("prompt"), lcq.get(q, {}).get("options"), True)
