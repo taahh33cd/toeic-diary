@@ -10,7 +10,7 @@
 import { prisma } from "@/lib/db/prisma";
 import { countByPart, listPracticeTests, loadPracticeFullTest, practiceTestTitle } from "@/lib/listening-practice";
 import { parsePracticeAttemptSlug } from "@/lib/listening-practice/adapt";
-import { PART3_SETS } from "@/lib/listening-practice/part3";
+import { PART_SETS, isSetPart } from "@/lib/listening-practice/part-sets";
 import { getCatalogEntry, getExamSet, listTests, loadTest } from "@/lib/full-tests";
 import type { FullTest, PartNumber } from "@/lib/full-tests/types";
 import type { RunConfig } from "@/components/full-tests/SetupPanel";
@@ -545,10 +545,10 @@ export function describeAttemptGroups(groupKeys: string[]): AttemptGroupMeta[] {
     if (part) {
       const [, skill, nStr] = part;
       const n = Number(nStr);
-      // Part 1-2 đếm theo catalog CA, Part 3 theo số bộ riêng; part khác đếm 0.
+      // Part 1-2 đếm theo catalog CA, Part 3-4 theo số bộ riêng; part khác đếm 0.
       const totalTests = n === 1 || n === 2
         ? listPracticeTests().filter((t) => countByPart(t, n) > 0).length
-        : n === 3 && skill === "listening" ? PART3_SETS.length : 0;
+        : isSetPart(n) && skill === "listening" ? PART_SETS[n].length : 0;
       return { groupKey, href: `/skills/${skill}/part${n}`, totalTests };
     }
     const full = /^full-(.+)$/.exec(groupKey);
