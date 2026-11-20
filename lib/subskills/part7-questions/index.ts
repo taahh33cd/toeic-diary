@@ -4,6 +4,8 @@ import { notCoBan, notNangCao } from "./data/not";
 import { tongHop } from "./data/tong-hop";
 import { chiTietCoBan, chiTietNangCao } from "./data/chi-tiet";
 import { indicatedCoBan, indicatedNangCao } from "./data/indicated";
+import { suyLuanCoBan, suyLuanNangCao } from "./data/suy-luan";
+import { doiTuongCoBan, doiTuongNangCao } from "./data/doi-tuong";
 
 export const LESSONS: P7QLesson[] = [
   {
@@ -69,6 +71,38 @@ export const LESSONS: P7QLesson[] = [
     level: "nang-cao",
     description: "Câu dài, bị động, paraphrase, ghép 2 văn bản",
     items: notNangCao,
+  },
+  {
+    slug: "suy-luan-co-ban",
+    title: "Suy luận · Cơ bản",
+    type: "suy-luan",
+    level: "co-ban",
+    description: "suggested / implied / concluded / most likely true / do next",
+    items: suyLuanCoBan,
+  },
+  {
+    slug: "suy-luan-nang-cao",
+    title: "Suy luận · Nâng cao",
+    type: "suy-luan",
+    level: "nang-cao",
+    description: "suggest about vs suggest … do, tính ngày tháng, ghép manh mối",
+    items: suyLuanNangCao,
+  },
+  {
+    slug: "doi-tuong-co-ban",
+    title: "Đối tượng · Cơ bản",
+    type: "doi-tuong",
+    level: "co-ban",
+    description: "For whom … intended / What kind of business / Who most likely is",
+    items: doiTuongCoBan,
+  },
+  {
+    slug: "doi-tuong-nang-cao",
+    title: "Đối tượng · Nâng cao",
+    type: "doi-tuong",
+    level: "nang-cao",
+    description: "In what field / industry, câu đảo, đoán danh tính từ email",
+    items: doiTuongNangCao,
   },
   {
     slug: "tong-hop-1",
