@@ -93,6 +93,36 @@ export type P7QItem = {
   evidence: { doc: string; excerpt: string; note: string };
 };
 
+// ── Hướng dẫn: ví dụ mẫu + câu làm thử ──────────────────────────────────────
+
+/** Các bước trong ví dụ mẫu / làm thử: 4 bước đọc câu hỏi + áp dụng vào bài (A–D) */
+export type DemoStep = "dich" | "tu-khoa" | "dang" | "chien-luoc" | "ap-dung";
+export type ABCD = "A" | "B" | "C" | "D";
+
+export type P7QDemo = {
+  item: P7QItem;
+  /** Đoạn trích cho bước Áp dụng. `==…==` = căn cứ (chỉ tô sau khi xem / trả lời). */
+  passage: { doc: string; text: string };
+  options: Record<ABCD, string>;
+  answer: ABCD;
+  /** Vì sao từng phương án đúng / sai */
+  optionWhy: Record<ABCD, string>;
+  /** Ví dụ mẫu: lời "nghĩ thế nào" ở từng bước */
+  think?: Partial<Record<DemoStep, string>>;
+  /** Câu làm thử: 2 nấc gợi ý ở từng bước */
+  hints?: Partial<Record<DemoStep, [string, string]>>;
+  /** Đoạn văn tự soạn (không phải đề thật) */
+  invented?: boolean;
+};
+
+export type P7QGuide = {
+  example: P7QDemo;
+  /** Không có ở bài Tổng hợp */
+  practice?: P7QDemo;
+  /** Lưu ý thêm cho bài Nâng cao */
+  advancedNote?: string;
+};
+
 export type P7QLevel = "co-ban" | "nang-cao";
 
 export type P7QLesson = {
