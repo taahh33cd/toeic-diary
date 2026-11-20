@@ -30,6 +30,15 @@ const PARTS = [
     available: true,
     totalTenses: 7,
   },
+  {
+    part: "Part 7",
+    slug: "part7-questions",
+    title: "Đọc câu hỏi",
+    description: "Dịch đúng câu hỏi, đánh dấu từ khoá, nhận diện dạng và chọn chiến lược trước khi đọc bài.",
+    available: true,
+    totalTenses: 5,
+    unit: "bài",
+  },
 ];
 
 export default function ReadingSubskillsPage() {
@@ -148,7 +157,7 @@ export default function ReadingSubskillsPage() {
               </div>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: "0.75rem", borderTop: "1px solid var(--border)" }}>
                 <span style={{ fontSize: FS.xs, color: "var(--text-secondary)" }}>
-                  {p.totalTenses} chủ điểm
+                  {p.totalTenses} {"unit" in p ? p.unit : "chủ điểm"}
                 </span>
                 <span style={{ fontSize: FS.sm, color: "var(--accent-primary)", fontWeight: 600 }}>→</span>
               </div>

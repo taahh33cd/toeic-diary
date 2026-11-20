@@ -1,0 +1,97 @@
+import type { P7QItem, P7QLesson, P7QType } from "./types";
+import { mucDichCoBan, mucDichNangCao } from "./data/muc-dich";
+import { notCoBan, notNangCao } from "./data/not";
+import { tongHop } from "./data/tong-hop";
+
+export const LESSONS: P7QLesson[] = [
+  {
+    slug: "muc-dich-co-ban",
+    title: "Mục đích · Cơ bản",
+    type: "muc-dich",
+    level: "co-ban",
+    description: "purpose / main purpose / one purpose / Why did X write",
+    items: mucDichCoBan,
+  },
+  {
+    slug: "muc-dich-nang-cao",
+    title: "Mục đích · Nâng cao",
+    type: "muc-dich",
+    level: "nang-cao",
+    description: "Bộ nhiều văn bản, mục đích không nằm ở câu đầu, most likely",
+    items: mucDichNangCao,
+  },
+  {
+    slug: "not-co-ban",
+    title: "NOT · Cơ bản",
+    type: "not",
+    level: "co-ban",
+    description: "NOT mentioned / indicated / included, danh sách ngắn",
+    items: notCoBan,
+  },
+  {
+    slug: "not-nang-cao",
+    title: "NOT · Nâng cao",
+    type: "not",
+    level: "nang-cao",
+    description: "Câu dài, bị động, paraphrase, ghép 2 văn bản",
+    items: notNangCao,
+  },
+  {
+    slug: "tong-hop-1",
+    title: "Tổng hợp 1",
+    type: null,
+    level: "co-ban",
+    description: "Trộn Mục đích, NOT và câu Chi tiết có 'not' viết thường: có thêm bước nhận diện dạng",
+    items: tongHop,
+  },
+];
+
+/** Bài ôn câu sai: dựng động từ danh sách id, không có trong LESSONS */
+export const REVIEW_SLUG = "on-tap";
+
+export function getLesson(slug: string): P7QLesson | undefined {
+  return LESSONS.find((l) => l.slug === slug);
+}
+
+const ITEM_INDEX = new Map<string, { item: P7QItem; lesson: P7QLesson }>();
+for (const lesson of LESSONS) for (const item of lesson.items) ITEM_INDEX.set(item.id, { item, lesson });
+
+export function findItem(id: string) {
+  return ITEM_INDEX.get(id);
+}
+
+/** Thẻ chiến lược hiện ở đầu bài theo dạng (tóm tắt từ docs/part7-question-strategies.md) */
+export const TYPE_CARDS: Partial<Record<P7QType, { signs: string; how: string; traps: string[] }>> = {
+  "muc-dich": {
+    signs: "What is the (main / one) purpose of…? · Why did X write / send…? · What is … mainly about / discussing?",
+    how: "S1: đọc tiêu đề + 2–3 câu đầu. Mở đầu bằng lời cảm ơn / giới thiệu bản thân thì đọc tiếp đến câu 'I am writing to… / Please… / I am looking for…'.",
+    traps: [
+      "one purpose = MỘT TRONG các mục đích → có thể nằm giữa bài, phải đối chiếu từng phương án (S3).",
+      "Why did X send → X là người GỬI; đừng dịch thành người nhận.",
+      "Phương án lấy chi tiết nhỏ cuối bài: đúng thông tin nhưng không phải mục đích.",
+    ],
+  },
+  not: {
+    signs: "NOT viết hoa: What is NOT mentioned / indicated / included / listed…? · đôi khi 'does not need to'.",
+    how: "S3: tìm 3 phương án CÓ trong bài và gạch đi, còn lại là đáp án. Thông tin thường nằm trong danh sách, gạch đầu dòng hoặc một câu liệt kê.",
+    traps: [
+      "Từ của đáp án có xuất hiện trong bài nhưng nói về đối tượng / thời điểm khác (summer, Werribee…).",
+      "Bài diễn đạt lại (paraphrase): Setting schedules = Establish construction schedules.",
+      "'not' viết thường trong câu Why / What … about thường là câu Chi tiết, không phải dạng NOT.",
+    ],
+  },
+};
+
+/** Thứ tự dạng trên trang tổng quan */
+export const TYPE_ORDER: P7QType[] = [
+  "muc-dich",
+  "chi-tiet",
+  "indicated",
+  "not",
+  "suy-luan",
+  "doi-tuong",
+  "dong-nghia",
+  "y-dinh",
+  "dien-cau",
+  "lien-ket",
+];
