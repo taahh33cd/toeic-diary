@@ -283,7 +283,7 @@ export function Part7QuestionsClient({ lessonSlug, title, items, card, initialBe
               color: res === true ? "var(--accent-green)" : res === false ? "var(--accent-red)" : active ? "var(--accent-primary)" : "var(--text-muted)",
               background: active ? "var(--bg-elevated)" : "transparent",
             }}>
-              {i + 1}. {s === "can-cu" ? "Căn cứ" : STEP_LABEL[s]}
+              {i + 1}. {s === "can-cu" ? "Căn cứ" : s === "dich" && item.context ? "Nghĩa của từ" : s === "dich" && item.stem ? "Dịch câu cho sẵn" : STEP_LABEL[s]}
             </span>
           );
         })}

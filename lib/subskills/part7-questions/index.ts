@@ -1,7 +1,7 @@
 import type { P7QItem, P7QLesson, P7QType } from "./types";
 import { mucDichCoBan, mucDichNangCao } from "./data/muc-dich";
 import { notCoBan, notNangCao } from "./data/not";
-import { tongHop } from "./data/tong-hop";
+import { tongHop, tongHop2, tongHop3 } from "./data/tong-hop";
 import { chiTietCoBan, chiTietNangCao } from "./data/chi-tiet";
 import { indicatedCoBan, indicatedNangCao } from "./data/indicated";
 import { suyLuanCoBan, suyLuanNangCao } from "./data/suy-luan";
@@ -180,6 +180,22 @@ export const LESSONS: P7QLesson[] = [
     description: "Trộn Mục đích, NOT và câu Chi tiết có 'not' viết thường: có thêm bước nhận diện dạng",
     items: tongHop,
   },
+  {
+    slug: "tong-hop-2",
+    title: "Tổng hợp 2",
+    type: null,
+    level: "co-ban",
+    description: "Trộn 9 dạng, mỗi dạng 1 câu điển hình",
+    items: tongHop2,
+  },
+  {
+    slug: "tong-hop-3",
+    title: "Tổng hợp 3",
+    type: null,
+    level: "nang-cao",
+    description: "Cặp dễ nhầm: suggest … do / suggested about, What is true / most likely true, just = only / exactly",
+    items: tongHop3,
+  },
 ];
 
 /** Bài ôn câu sai: dựng động từ danh sách id, không có trong LESSONS */
@@ -205,6 +221,78 @@ export const TYPE_CARDS: Partial<Record<P7QType, { signs: string; how: string; t
       "one purpose = MỘT TRONG các mục đích → có thể nằm giữa bài, phải đối chiếu từng phương án (S3).",
       "Why did X send → X là người GỬI; đừng dịch thành người nhận.",
       "Phương án lấy chi tiết nhỏ cuối bài: đúng thông tin nhưng không phải mục đích.",
+    ],
+  },
+  "chi-tiet": {
+    signs: "Wh- + thông tin cụ thể: When / Where / How much / Why does X… · What does X ask / offer / suggest sb to do · According to…",
+    how: "S2: scan từ khoá nội dung (tên, số, ngày, danh từ chính), đọc kỹ 1–2 câu quanh đó. Đáp án thường là bản diễn đạt lại (paraphrase).",
+    traps: [
+      "ask / suggest / encourage sb to do: người yêu cầu ≠ người làm.",
+      "Bị động: be required of, be billed, be done by X → X là người làm / chịu.",
+      "Bài có nhiều ngày / giá / tên giống nhau: chỉ lấy đúng dòng của 🟩.",
+    ],
+  },
+  indicated: {
+    signs: "What is indicated / mentioned / stated / true about X? · What does the [văn bản] indicate about X?",
+    how: "S3: scan X để khoanh vùng, rồi đối chiếu lần lượt từng phương án. Thông tin về X có thể rải rác nhiều chỗ.",
+    traps: [
+      "'What is true' (Indicated) khác 'What is most likely true' (Suy luận).",
+      "Phương án đúng một nửa: đúng người nhưng sai số / sai thời điểm.",
+      "X là người viết hoặc người nhận → thông tin về X nằm ở chữ 'I' hoặc 'you'.",
+    ],
+  },
+  "suy-luan": {
+    signs: "suggested / implied / concluded about X · most likely / probably · What will X do next?",
+    how: "Có chi tiết cụ thể để dò → S2; chỉ 'about X' chung chung → S3. Đáp án không có nguyên văn, phải suy ra từ 1–2 câu.",
+    traps: [
+      "suggested ABOUT X = ngụ ý về X. Còn 'X suggest (that) sb do' = đề xuất → Chi tiết.",
+      "Phương án suy diễn quá xa hoặc dùng từ tuyệt đối (always, only, all).",
+      "do next → đọc câu CUỐI của người đó (I'll… / Let me…).",
+    ],
+  },
+  "doi-tuong": {
+    signs: "For whom is … (most likely) intended? · Who most likely is X? · What kind of business / In what industry…? · Where would … be found?",
+    how: "Hỏi người đọc / loại doanh nghiệp → S1 (tiêu đề, lời chào, 2–3 câu đầu). Hỏi danh tính một người → S2 (scan tên, chức danh, việc được nhờ).",
+    traps: [
+      "intended for = dành CHO ai (người đọc), không phải ai viết.",
+      "Tên công ty có chữ nghĩa thường (Covered Bridge, Financial…): đừng dịch theo nghĩa đen.",
+      "Người gửi ≠ người nhận: xem kỹ dòng From / To.",
+    ],
+  },
+  "dong-nghia": {
+    signs: "The word \"…\" in paragraph n, line m, is closest in meaning to",
+    how: "S5: đọc cả câu chứa từ, hiểu nghĩa theo ngữ cảnh, thay từng phương án vào. Không chọn theo nghĩa quen nhất.",
+    traps: [
+      "Luôn là từ đa nghĩa: just (only / exactly), last (previous), meet (satisfy), turn (gain)…",
+      "Phương án sai thường là một nghĩa ĐÚNG của từ nhưng không hợp câu này.",
+      "Nhìn từ đi kèm: meet the demand, turn a profit, corporate function.",
+    ],
+  },
+  "y-dinh": {
+    signs: "At [giờ], what does X (most likely) mean / imply when he writes, \"…\"?",
+    how: "S4: tìm tin nhắn theo giờ, đọc tin NGAY TRƯỚC (câu trích dẫn đang trả lời điều gì) và tin ngay sau (phản ứng của người kia).",
+    traps: [
+      "Nghĩa đen ≠ nghĩa thật: 'Can you give me 45 minutes?' = để lát nữa tôi giúp.",
+      "Đôi khi câu được trả lời nằm cách 2–3 tin (I saw those, That one is the best).",
+      "it / that / those trong câu trích dẫn trỏ về thứ gì → đó là chìa khoá.",
+    ],
+  },
+  "dien-cau": {
+    signs: "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong?",
+    how: "S6: tìm từ móc nối trong câu cho sẵn (this / these / she / also / otherwise / for instance…), xác định nó trỏ về đâu, đặt câu ngay sau chỗ đó; đọc thử câu sau.",
+    traps: [
+      "Không có đại từ → móc bằng chủ đề (lương → phúc lợi; trực tiếp → Alternatively trực tuyến).",
+      "Câu chủ đề ('The position features several duties…') đứng TRƯỚC câu liệt kê chi tiết.",
+      "Đọc cả câu ĐỨNG SAU vị trí: mạch văn phải liền.",
+    ],
+  },
+  "lien-ket": {
+    signs: "Bộ 2–3 văn bản, câu hỏi không ghi phạm vi, có mã sản phẩm / ngày / giờ / người xuất hiện ở cả hai văn bản.",
+    how: "S7: lấy chìa khoá ở văn bản 1 (tên, mã, giờ đi, loại khoá học…), dùng nó tra văn bản 2 (bảng, lịch, hoá đơn) để ra đáp án.",
+    traps: [
+      "Đáp án sai thường là con số / ngày CÓ trong bảng nhưng của dòng khác.",
+      "Có phạm vi (In the first e-mail / According to the schedule) → thường KHÔNG cần ghép.",
+      "Phải tự tính: ngày gửi + 'the very next day', tháng 11 + 'the following month'.",
     ],
   },
   not: {
