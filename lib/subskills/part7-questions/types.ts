@@ -70,6 +70,15 @@ export type P7QItem = {
    * `[[c?:word]]` = không bắt buộc: bỏ trống hoặc tô đúng lớp đều được.
    */
   prompt: string;
+  /**
+   * Câu hỏi gốc khi `prompt` KHÔNG phải câu hỏi (dạng Điền câu: `prompt` là câu
+   * cho sẵn cần dịch + tô từ móc nối, còn câu hỏi cố định hiện ở đây).
+   */
+  stem?: string;
+  /** Ngữ cảnh hiện kèm ở bước dịch (dạng Đồng nghĩa: câu trong bài chứa từ được hỏi) */
+  context?: { label: string; text: string };
+  /** Tiêu đề bước 1 nếu khác "Chọn bản dịch đúng" */
+  transLabel?: string;
   /** Bản dịch đúng */
   vi: string;
   /** Bản dịch sai, mỗi bản mang đúng 1 lỗi */

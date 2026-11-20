@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, BookOpen, Layers } from "lucide-react";
 import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
+import { LESSONS as P7Q_LESSONS } from "@/lib/subskills/part7-questions";
 
 export const metadata: Metadata = { title: "Reading Subskills — TOEIC" };
 
@@ -36,7 +37,7 @@ const PARTS = [
     title: "Đọc câu hỏi",
     description: "Dịch đúng câu hỏi, đánh dấu từ khoá, nhận diện dạng và chọn chiến lược trước khi đọc bài.",
     available: true,
-    totalTenses: 5,
+    totalTenses: P7Q_LESSONS.length,
     unit: "bài",
   },
 ];
