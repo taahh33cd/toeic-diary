@@ -163,10 +163,15 @@ export function AnnotateLayer() {
     if (!mounted) return;
     const update = () => {
       const de = document.documentElement;
-      setDocSize({
-        w: Math.max(de.scrollWidth, de.clientWidth),
-        h: Math.max(de.scrollHeight, de.clientHeight),
-      });
+      // Đo khi tạm ẩn overlay: nếu không, kích thước cũ của chính nó bị tính vào
+      // scrollWidth/Height và canvas không bao giờ co lại (khoá luôn tràn ngang).
+      const el = overlayRef.current;
+      const prevDisplay = el?.style.display ?? "";
+      if (el) el.style.display = "none";
+      const w = Math.max(de.scrollWidth, de.clientWidth);
+      const h = Math.max(de.scrollHeight, de.clientHeight);
+      if (el) el.style.display = prevDisplay;
+      setDocSize({ w, h });
       const vw = window.innerWidth;
       const vh = window.innerHeight;
       setViewport({ w: vw, h: vh });
