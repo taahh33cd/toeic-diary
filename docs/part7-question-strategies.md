@@ -18,7 +18,8 @@ Khung này là đáp án chuẩn cho bước 3 (nhận diện dạng) và bướ
 3. **Nhận diện dạng**: dựa vào lớp 🟨.
 4. **Chọn chiến lược**: dựa vào dạng + lớp 🟩 (có từ để scan hay không).
 
-> Quy tắc vàng: **có 🟩 cụ thể → scan; không có 🟩 → đọc ý chính hoặc loại trừ.**
+> Quy tắc vàng: **🟨 cho biết làm kiểu gì, 🟩 cho biết dò chỗ nào.** Câu chỉ có 🟨 mà không có 🟩 → đọc ý chính hoặc loại trừ.
+> Tên văn bản (*e-mail, notice, article, flyer…*) luôn là 🟨 phạm vi. Ngoại lệ: thứ được hỏi là nội dung trong bài, ví dụ *the purpose of the **event***, thì là 🟩.
 
 ## B. Bộ chiến lược chuẩn (dùng làm phương án trắc nghiệm ở bước 4)
 
@@ -41,7 +42,7 @@ Mỗi câu ở bước 4 sẽ có 4 phương án lấy từ bảng này (1 đún
 ### 1. Mục đích / chủ đề: khoảng 80 câu (7%)
 
 - **Dấu hiệu**: *What is the (main) purpose of…?*, *What is one purpose of…?*, *Why did X write/send…?*, *What is the article mainly about?*
-- **Từ khoá**: 🟦 What / Why · 🟨 purpose / mainly about / write·send · 🟩 tên văn bản (*the notice*, *the first e-mail*)
+- **Từ khoá**: 🟦 What / Why · 🟨 purpose / mainly about / write·send + tên văn bản (*the notice*, *the first e-mail*) · 🟩 tên người viết/nhận (nếu có)
 - **Chiến lược**: **S1**. Đáp án thường diễn đạt lại câu đầu hoặc câu chứa *I am writing to… / This is to inform…*
 - **Bẫy dịch**
   - *Why did Ms. Snow **send** the memo?* → Hỏi lý do *Ms. Snow gửi*, không phải lý do *nhận*. Lỗi nhầm chủ thể.
