@@ -84,7 +84,7 @@ export const mucDichCoBan: P7QItem[] = [
     strategy: { options: [...S1_OPTS], correct: "S1", why: "Tên doanh nghiệp ở tiêu đề + câu kêu gọi cuối bài đủ cho thấy đây là quảng cáo." },
     evidence: {
       doc: "Tờ rơi",
-      excerpt: "==Johan's Power Washing== — Serving the Meadowbrook community for over 25 years!… The services we offer include… ==Call now for a free estimate== or to schedule a cleaning.",
+      excerpt: "==Johan's Power Washing== … Serving the Meadowbrook community for over 25 years!… The services we offer include… ==Call now for a free estimate== or to schedule a cleaning.",
       note: "Giới thiệu dịch vụ + kêu gọi gọi điện → mục đích: quảng cáo một doanh nghiệp địa phương (advertise a local business).",
     },
   },
@@ -101,7 +101,7 @@ export const mucDichCoBan: P7QItem[] = [
     strategy: { options: [...S1_OPTS], correct: "S1", why: "Câu đầu thư: 'I have read your inquiry…' → đây là thư trả lời." },
     evidence: {
       doc: "Lá thư",
-      excerpt: "Dear Mr. Croft, ==I have read your inquiry about offering financial management courses== at libraries across Queensland.",
+      excerpt: "Dear Mr. Croft, … ==I have read your inquiry about offering financial management courses== at libraries across Queensland.",
       note: "Bà Otney trả lời thư hỏi của ông Croft → mục đích: trả lời câu hỏi của ông Croft (reply to a question from Mr. Croft).",
     },
   },

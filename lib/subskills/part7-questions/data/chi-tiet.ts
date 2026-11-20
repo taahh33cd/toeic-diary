@@ -101,7 +101,7 @@ export const chiTietCoBan: P7QItem[] = [
     strategy: { options: ["S2", "S3", "S1", "S7"], correct: "S2", why: "Scan đúng chữ 'Gold' trong bảng giá, đừng đọc nhầm sang dòng của gói bên cạnh." },
     evidence: {
       doc: "Thông tin",
-      excerpt: "TBC Gold Plan: ==$19/month== or $99/year",
+      excerpt: "TBC Gold Plan … ==$19/month== or $99/year",
       note: "$19 mỗi tháng → đáp án. Bẫy: các gói khác cũng có giá, chỉ lấy dòng Gold.",
     },
   },
@@ -152,7 +152,7 @@ export const chiTietCoBan: P7QItem[] = [
     strategy: { options: ["S2", "S1", "S4", "S3"], correct: "S2", why: "Scan 'lunch' trong chat → đọc tin nhắn ngay sau đó, nơi bà Walter giải thích lý do." },
     evidence: {
       doc: "Cuộc trò chuyện trực tuyến",
-      excerpt: "I just want to make sure that ==we're on the same page about the new marketing campaign==. ‖ The one for the line of summer shoes? — Yes.",
+      excerpt: "I just want to make sure that ==we're on the same page about the new marketing campaign==. ‖ The one for the line of summer shoes? ‖ Yes.",
       note: "Thống nhất về chiến dịch tiếp thị cho dòng giày mùa hè → to discuss a marketing campaign for a product.",
     },
   },
@@ -240,7 +240,7 @@ export const chiTietNangCao: P7QItem[] = [
     strategy: { options: ["S2", "S3", "S1", "S7"], correct: "S2", why: "Scan cụm diễn đạt lại 'one team': 'team of your choice / your favorite team' trong mô tả từng gói." },
     evidence: {
       doc: "Thông tin",
-      excerpt: "Silver Plan: ==Most live games played by a team of your choice== / ==Stream games played by your favorite TBC team==",
+      excerpt: "Silver Plan · ==Most live games played by a team of your choice== · ==Stream games played by your favorite TBC team==",
       note: "Chỉ theo dõi đội mình chọn → The TBC Silver Plan.",
     },
   },

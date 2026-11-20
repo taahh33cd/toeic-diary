@@ -241,7 +241,7 @@ export const doiTuongNangCao: P7QItem[] = [
     strategy: { options: ["S2", "S1", "S3", "S7"], correct: "S2", why: "Scan 'sent / readers / published by' → câu nói tạp chí gửi cho ai." },
     evidence: {
       doc: "Trang web",
-      excerpt: "published by Lorne Transportation, ==the largest freight vehicle corporation==… sent free… to managers of dealerships with fleets of 25 or more ==vehicles for transporting goods==",
+      excerpt: "published by Lorne Transportation, ==the largest freight vehicle corporation==… sent free upon request to mid- and upper-level managers of dealerships with fleets of 25 or more ==vehicles for transporting goods==",
       note: "Xe chở hàng, đội xe vận tải → Commercial trucking.",
     },
   },

@@ -135,7 +135,7 @@ export const notCoBan: P7QItem[] = [
     strategy: { options: ["S3", "S2", "S1", "S7"], correct: "S3", why: NOT_WHY },
     evidence: {
       doc: "Tờ rơi",
-      excerpt: "==The services we offer include:== • Power washing… • Window washing / Johan G. Matey / ==506-555-0193== / ==www.johanspowerwashing.ca==",
+      excerpt: "==The services we offer include:== • Power washing… • Window washing · Johan G. Matey · ==506-555-0193== · ==www.johanspowerwashing.ca==",
       note: "Có: danh sách dịch vụ, số điện thoại, địa chỉ web → không có địa chỉ gửi thư (a mailing address). Bẫy: Web address ≠ mailing address.",
     },
   },
@@ -206,7 +206,7 @@ export const notNangCao: P7QItem[] = [
     strategy: { options: ["S3", "S2", "S1", "S7"], correct: "S3", why: "4 phương án là 4 thời điểm → lấy giờ mở cửa rồi kiểm tra từng thời điểm. Đây vẫn là loại trừ (S3), dù chỉ có 1 chỗ trong bài." },
     evidence: {
       doc: "Quảng cáo",
-      excerpt: "during our business hours of ==8:00 A.M. to 8:00 P.M., Monday to Saturday==, and ==11:00 A.M. to 5:00 P.M. on Sunday==.",
+      excerpt: "during our business hours of ==8:00 A.M. to 8:00P.M., Monday to Saturday==, and ==11:00 A.M. to 5:00P.M. on Sunday==.",
       note: "Thứ Hai 8h sáng ✓, Thứ Tư 6h chiều ✓, Thứ Bảy 4h chiều ✓, Chủ nhật 6h chiều ✗ (Chủ nhật đóng cửa lúc 5h) → đáp án: On Sunday at 6:00 P.M.",
     },
   },
@@ -240,7 +240,7 @@ export const notNangCao: P7QItem[] = [
     strategy: { options: ["S3", "S7", "S2", "S1"], correct: "S3", why: "Có phạm vi rõ (schedule) nên KHÔNG cần ghép 2 văn bản (S7). Hoạt động nằm gọn ở đoạn đầu lịch trình → đối chiếu từng phương án." },
     evidence: {
       doc: "Lịch trình (văn bản 1)",
-      excerpt: "Mr. Darr will ==read an excerpt from his new novel==, followed by ==a question-and-answer session==. Afterward, Mr. Darr will be available ==to autograph copies of his books==.",
+      excerpt: "Mr. Darr will ==read an excerpt from his new novel==… followed by ==a question-and-answer session==. Afterward, Mr. Darr will be available ==to autograph copies of his books==.",
       note: "Có: đọc trích đoạn, hỏi đáp, ký sách → không có chụp ảnh với người tham dự (taking photos with participants).",
     },
   },
@@ -325,7 +325,7 @@ export const notNangCao: P7QItem[] = [
     strategy: { options: ["S7", "S2", "S1", "S4"], correct: "S7", why: "Email 1: khách đã mua màu chocolate, muốn đổi sang terracotta. Email 2: màu khách yêu cầu đã hết, còn sand và forest. Phải ghép 2 email mới ra màu hết hàng." },
     evidence: {
       doc: "Email 1 + Email 2",
-      excerpt: "I would like to exchange the boots… ==in the terracotta colour==. ‖ boots in the size, style, and colour you are requesting ==are out of stock==… Other than what you have purchased, we currently have the Erin boots… in ==sand and forest==.",
+      excerpt: "I would like to exchange the boots… ==in the terracotta colour==. ‖ boots in the size, style, and colour you are requesting ==are out of stock==… Other than what you have purchased, we currently have the Erin boots of your size in the following colours: ==sand and forest==.",
       note: "Còn hàng: chocolate (đã mua), sand, forest → hết hàng: terracotta.",
     },
   },

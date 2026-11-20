@@ -9,6 +9,7 @@ import { doiTuongCoBan, doiTuongNangCao } from "./data/doi-tuong";
 import { dongNghiaCoBan, dongNghiaNangCao } from "./data/dong-nghia";
 import { yDinhCoBan, yDinhNangCao } from "./data/y-dinh";
 import { dienCauCoBan, dienCauNangCao } from "./data/dien-cau";
+import { lienKetCoBan, lienKetNangCao } from "./data/lien-ket";
 
 export const LESSONS: P7QLesson[] = [
   {
@@ -154,6 +155,22 @@ export const LESSONS: P7QLesson[] = [
     level: "nang-cao",
     description: "Móc nối bằng chủ đề: Alternatively, Otherwise, that capacity, câu chủ đề",
     items: dienCauNangCao,
+  },
+  {
+    slug: "lien-ket-co-ban",
+    title: "Liên kết · Cơ bản",
+    type: "lien-ket",
+    level: "co-ban",
+    description: "Chìa khoá rõ: mã sản phẩm, giờ, ngày, giá, bộ phận",
+    items: lienKetCoBan,
+  },
+  {
+    slug: "lien-ket-nang-cao",
+    title: "Liên kết · Nâng cao",
+    type: "lien-ket",
+    level: "nang-cao",
+    description: "Ghép lý do, loại trừ ngày, văn bản không nêu tên / mã",
+    items: lienKetNangCao,
   },
   {
     slug: "tong-hop-1",

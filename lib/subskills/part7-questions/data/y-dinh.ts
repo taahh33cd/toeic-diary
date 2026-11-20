@@ -116,7 +116,7 @@ export const yDinhNangCao: P7QItem[] = [
   yd("2026-9-152", '[[t:At 9:36 A.M.,]] [[q:what]] does [[c:Mr. Dakers]] [[t:most likely mean]] when he writes, [[c?:"But I need to get to the office soon"]]?',
     "Lúc 9:36 sáng, nhiều khả năng ông Dakers có ý gì khi viết \"But I need to get to the office soon\"?",
     [["Lúc 9:36 sáng, ông Dakers cần lấy gì từ văn phòng?", "da-nghia", "get to + nơi chốn = đi đến; không phải 'lấy'."], ["Lúc 9:36 sáng, bộ phận chăm sóc khách hàng có ý gì?", "chu-the", "Người viết là ông Dakers."]],
-    "HVAC Customer Service: ==A technician will be there later today.== ‖ John Dakers: ==But I need to get to the office soon.== ‖ HVAC: I will see if we can make some schedule changes.",
+    "HVAC Customer Service: ==A technician will be there later today.== ‖ John Dakers: ==But I need to get to the office soon.== ‖ HVAC Customer Service: I will see if we can make some schedule changes.",
     "'But' phản đối lịch 'later today' → An afternoon appointment is unacceptable. Tin sau (đổi lịch) xác nhận."),
   yd("2026-10-151", '[[t:At 1:20 P.M.,]] [[q:what]] does [[c:Mr. Gerlin]] [[t:imply]] when he writes, [[c?:"Can you give me 45 minutes or so"]]?',
     "Lúc 1:20 chiều, ông Gerlin ngụ ý gì khi viết \"Can you give me 45 minutes or so\"?",
