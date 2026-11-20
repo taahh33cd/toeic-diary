@@ -26,6 +26,7 @@ const BG          = "#1E5F8E";
 const TEXT_ACTIVE   = "#fff";
 const TEXT_INACTIVE = "rgba(255,255,255,0.65)";
 const TEXT_EXTERNAL = "rgba(255,255,255,0.42)";
+const LINK_PAD      = "0 clamp(0.45rem, 0.6vw, 0.85rem)";
 
 const NAV_INTERNAL = [
   { href: "/subskills",          label: "Tổng quan", icon: LayoutGrid,  exact: true  },
@@ -84,7 +85,7 @@ export function SubskillsHeader({
           display: "flex",
           alignItems: "center",
           paddingInline: "clamp(1rem, 4vw, 1.5rem)",
-          gap: "1.5rem",
+          gap: "1rem",
         }}
       >
         {/* Brand */}
@@ -106,7 +107,14 @@ export function SubskillsHeader({
         {/* Desktop nav */}
         <nav
           className="hidden md:flex"
-          style={{ flex: 1, alignItems: "stretch", gap: 0 }}
+          style={{
+            flex: 1,
+            minWidth: 0,
+            overflowX: "auto",
+            scrollbarWidth: "none",
+            alignItems: "stretch",
+            gap: 0,
+          }}
         >
           {/* Home icon-only */}
           <Link
@@ -149,7 +157,7 @@ export function SubskillsHeader({
                   display: "flex",
                   alignItems: "center",
                   gap: "0.35rem",
-                  padding: "0 0.85rem",
+                  padding: LINK_PAD,
                   paddingBottom: "1px",
                   height: TOPBAR_H,
                   fontSize: FS.sm,
@@ -167,7 +175,7 @@ export function SubskillsHeader({
                   if (!on) (e.currentTarget as HTMLAnchorElement).style.color = TEXT_INACTIVE;
                 }}
               >
-                <Icon size={15} style={{ flexShrink: 0 }} />
+                <Icon size={15} className="hidden 2xl:block" style={{ flexShrink: 0 }} />
                 {label}
               </Link>
             );
@@ -184,7 +192,7 @@ export function SubskillsHeader({
                 display: "flex",
                 alignItems: "center",
                 gap: "0.35rem",
-                padding: "0 0.85rem",
+                padding: LINK_PAD,
                 paddingBottom: "1px",
                 height: TOPBAR_H,
                 fontSize: FS.sm,
@@ -206,14 +214,16 @@ export function SubskillsHeader({
                 el.style.borderBottomColor = "transparent";
               }}
             >
-              <Icon size={15} style={{ flexShrink: 0 }} />
+              <Icon size={15} className="hidden 2xl:block" style={{ flexShrink: 0 }} />
               {label}
             </Link>
           ))}
         </nav>
 
-        {/* Right side: theme toggle + avatar menu (all screens) + hamburger (mobile only) */}
-        <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: "0.5rem", flexShrink: 0 }}>
+        {/* Right side: theme toggle + avatar menu + menu button (all screens — the drawer
+            lists every link, so nothing is lost if the desktop nav is clipped) */}
+        {/* zIndex above the drawer overlay (40) so the close button stays clickable */}
+        <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: "0.5rem", flexShrink: 0, position: "relative", zIndex: 46 }}>
           <button
             onClick={toggleTheme}
             title={theme === "dark" ? "Light mode" : "Dark mode"}
@@ -239,7 +249,6 @@ export function SubskillsHeader({
             <UserAvatarMenu userEmail={userEmail} userDisplayName={userDisplayName} />
           )}
           <button
-            className="md:hidden"
             onClick={() => setMenuOpen((v) => !v)}
             style={{
               background: "none",
@@ -257,7 +266,7 @@ export function SubskillsHeader({
         </div>
       </div>
 
-      {/* Mobile overlay + drawer */}
+      {/* Overlay + drawer */}
       {menuOpen && (
         <>
           <div
