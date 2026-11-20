@@ -10,4 +10,4 @@ Test account: log in via the "Mã học viên" tab with student code `TEST` (no 
 
 # Deploy
 
-Always deploy once a goal is done and verified: open a PR to `main` and merge it (Vercel deploys `main` to production at https://toeic-dictation-diary.vercel.app), then check the change live with the `TEST` account.
+Always deploy once a goal is done and verified: push straight to `main` — no PR, no waiting for a preview build (the owner approved this). Vercel deploys `main` to production at https://toeic-dictation-diary.vercel.app; a failed build keeps the previous version live. Then check the change live with the `TEST` account.
