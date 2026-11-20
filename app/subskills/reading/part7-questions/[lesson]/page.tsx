@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { findItem, getLesson, REVIEW_SLUG, TYPE_CARDS } from "@/lib/subskills/part7-questions";
+import { GUIDES, MIXED_EXAMPLE, MIXED_TABLE } from "@/lib/subskills/part7-questions/guides";
 import { getP7QProgress } from "@/lib/subskills/part7-questions/progress";
 import { Part7QuestionsClient } from "@/components/subskills/reading/Part7QuestionsClient";
 import { FILL_SCREEN, FS } from "@/lib/ui/scale";
@@ -56,6 +57,16 @@ export default async function Part7QuestionsLessonPage({ params }: Props) {
       title={lesson.title}
       items={lesson.items}
       card={lesson.type ? TYPE_CARDS[lesson.type] ?? null : null}
+      guide={
+        lesson.type
+          ? {
+              kind: "type",
+              advancedNote: lesson.level === "nang-cao" ? GUIDES[lesson.type].advancedNote : undefined,
+              example: GUIDES[lesson.type].example,
+              practice: GUIDES[lesson.type].practice,
+            }
+          : { kind: "mixed", table: MIXED_TABLE, example: MIXED_EXAMPLE }
+      }
       initialBest={progress.best[lesson.slug] ?? null}
     />
   );
