@@ -256,7 +256,8 @@ export function Part7QuestionsClient({ lessonSlug, title, items, card, initialBe
   }
 
   // ── Quiz ──
-  const expected = <PromptView tokens={tokens} mode="answer" />;
+  const expected = <PromptView tokens={tokens} size={FS.lg} />;
+  const stepNo = stepIdx + 1;
 
   return (
     <div style={shell}>
@@ -305,11 +306,12 @@ export function Part7QuestionsClient({ lessonSlug, title, items, card, initialBe
       )}
 
       {step === "dich" && (
-        <TranslateStep item={item} choice={choice} onChoose={(i, ok) => { setChoice(i); record("dich", ok); }} />
+        <TranslateStep n={stepNo} item={item} choice={choice} onChoose={(i, ok) => { setChoice(i); record("dich", ok); }} />
       )}
 
       {step === "tu-khoa" && (
         <KeywordStep
+          n={stepNo}
           item={item}
           tokens={tokens}
           picked={picked}
@@ -333,9 +335,10 @@ export function Part7QuestionsClient({ lessonSlug, title, items, card, initialBe
 
       {step === "dang" && item.typeOptions && (
         <ChoiceStep
+          n={stepNo}
           prompt={expected}
           question="Câu hỏi này thuộc dạng nào?"
-          options={item.typeOptions.map((t) => ({ main: P7Q_TYPES[t].name, sub: P7Q_TYPES[t].signal }))}
+          options={item.typeOptions.map((t) => ({ main: P7Q_TYPES[t].name, sub: P7Q_TYPES[t].signal, short: P7Q_TYPES[t].name }))}
           correctIdx={item.typeOptions.indexOf(item.type)}
           choice={choice}
           why={item.typeWhy ?? ""}
@@ -345,9 +348,10 @@ export function Part7QuestionsClient({ lessonSlug, title, items, card, initialBe
 
       {step === "chien-luoc" && (
         <ChoiceStep
+          n={stepNo}
           prompt={expected}
           question="Nên đọc bài theo cách nào?"
-          options={item.strategy.options.map((s) => ({ main: `${s} · ${STRATEGIES[s]}` }))}
+          options={item.strategy.options.map((s) => ({ main: `${s} · ${STRATEGIES[s]}`, short: s }))}
           correctIdx={item.strategy.options.indexOf(item.strategy.correct)}
           choice={choice}
           why={item.strategy.why}
@@ -355,7 +359,7 @@ export function Part7QuestionsClient({ lessonSlug, title, items, card, initialBe
         />
       )}
 
-      {step === "can-cu" && <EvidenceStep item={item} prompt={expected} />}
+      {step === "can-cu" && <EvidenceStep n={stepNo} item={item} prompt={expected} />}
 
       <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "1.25rem" }}>
         <button type="button" onClick={next} disabled={!answered} style={{ ...primaryBtn, opacity: answered ? 1 : 0.45, cursor: answered ? "pointer" : "not-allowed" }}>
@@ -368,7 +372,8 @@ export function Part7QuestionsClient({ lessonSlug, title, items, card, initialBe
 
 // ── Steps ────────────────────────────────────────────────────────────────────
 
-function TranslateStep({ item, choice, onChoose }: {
+function TranslateStep({ n, item, choice, onChoose }: {
+  n: number;
   item: P7QItem;
   choice: number | null;
   onChoose: (i: number, ok: boolean) => void;
@@ -379,42 +384,42 @@ function TranslateStep({ item, choice, onChoose }: {
   );
   return (
     <>
-      <Box style={{ marginBottom: "1rem" }}>
-        <div style={label}>{item.stem ? "Câu cho sẵn" : "Câu hỏi"}</div>
-        <div style={{ fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.6 }}>{plainPrompt(item.prompt)}</div>
+      <QuestionBox label={item.stem ? "Câu cho sẵn" : "Câu hỏi"}>
+        <div style={{ fontSize: FS.lg, fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.55 }}>{plainPrompt(item.prompt)}</div>
         {item.context && (
-          <div style={{ marginTop: "0.7rem", paddingTop: "0.7rem", borderTop: "1px dashed var(--border)" }}>
+          <div style={{ marginTop: "0.8rem", paddingTop: "0.8rem", borderTop: "1px dashed var(--border)" }}>
             <div style={label}>{item.context.label}</div>
             <HighlightText text={item.context.text} />
           </div>
         )}
-      </Box>
-      <div style={{ ...label, marginBottom: "0.5rem" }}>{item.transLabel ?? "Chọn bản dịch đúng"}</div>
-      <div data-p7q="dich" style={{ display: "grid", gap: "0.5rem" }}>
+      </QuestionBox>
+      <StepHeading n={n} text={item.transLabel ?? "Chọn bản dịch đúng"} />
+      <div data-p7q="dich" style={{ display: "grid", gap: "0.6rem" }}>
         {options.map((o, i) => {
-          const done = choice !== null;
           const isRight = !o.error;
-          const chosen = choice === i;
           return (
-            <button key={i} type="button" disabled={done} onClick={() => onChoose(i, isRight)} style={optionStyle(done, isRight, chosen)}>
-              <div style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
-                {done && (isRight ? <CheckCircle2 size={16} color="var(--accent-green)" style={{ flexShrink: 0, marginTop: 3 }} /> : chosen ? <XCircle size={16} color="var(--accent-red)" style={{ flexShrink: 0, marginTop: 3 }} /> : null)}
-                <span>{o.text}</span>
-              </div>
-              {done && o.error && (
-                <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: "0.35rem", lineHeight: 1.55 }}>
-                  <strong style={{ color: chosen ? "var(--accent-red)" : "var(--text-secondary)" }}>{TRANS_ERROR_LABEL[o.error]}:</strong> {o.why}
+            <OptionButton key={i} done={choice !== null} isRight={isRight} chosen={choice === i} onClick={() => onChoose(i, isRight)}>
+              <div>{o.text}</div>
+              {choice !== null && o.error && (
+                <div style={{ fontSize: FS.xs, color: "var(--text-secondary)", marginTop: "0.35rem", lineHeight: 1.55, fontWeight: 400 }}>
+                  <strong style={{ color: choice === i ? "var(--accent-red)" : "var(--text-primary)" }}>{TRANS_ERROR_LABEL[o.error]}:</strong> {o.why}
                 </div>
               )}
-            </button>
+            </OptionButton>
           );
         })}
       </div>
+      {choice !== null && (
+        <ResultBox ok={!options[choice].error} title={!options[choice].error ? "Chính xác!" : `Chưa đúng — lỗi ${TRANS_ERROR_LABEL[options[choice].error!].toLowerCase()}`}>
+          {!options[choice].error ? "Bạn đã hiểu đúng câu hỏi." : "Xem bản dịch đúng (màu xanh) và lý do ở từng bản dịch sai."}
+        </ResultBox>
+      )}
     </>
   );
 }
 
-function KeywordStep({ item, tokens, picked, brush, checked, onBrush, onToggle, onCheck }: {
+function KeywordStep({ n, item, tokens, picked, brush, checked, onBrush, onToggle, onCheck }: {
+  n: number;
   item: P7QItem;
   tokens: Token[];
   picked: (KwLayer | null)[];
@@ -425,8 +430,15 @@ function KeywordStep({ item, tokens, picked, brush, checked, onBrush, onToggle, 
   onCheck: () => void;
 }) {
   const result = checked ? gradeKeywords(tokens, picked) : null;
+  const count = (k: string) => result?.marks.filter((m) => m === k).length ?? 0;
+  const problems = [
+    count("missed") && `thiếu ${count("missed")} từ`,
+    count("wrong") && `sai màu ${count("wrong")} từ`,
+    count("extra") && `thừa ${count("extra")} từ`,
+  ].filter(Boolean).join(", ");
   return (
     <>
+      <StepHeading n={n} text={item.stem ? "Tô từ móc nối trong câu cho sẵn" : "Tô từ khoá 3 lớp"} />
       {!checked && (
         <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.75rem" }}>
           {(Object.keys(KW_LAYERS) as KwLayer[]).map((k) => (
@@ -456,7 +468,7 @@ function KeywordStep({ item, tokens, picked, brush, checked, onBrush, onToggle, 
                 key={i}
                 type="button"
                 onClick={() => onToggle(i)}
-                disabled={checked}
+                aria-disabled={checked}
                 style={{
                   fontSize: FS.md,
                   fontWeight: 600,
@@ -468,12 +480,14 @@ function KeywordStep({ item, tokens, picked, brush, checked, onBrush, onToggle, 
                   borderBottom: `3px solid ${p ? KW_LAYERS[p].color : "transparent"}`,
                   background: p ? KW_LAYERS[p].bg : "transparent",
                   cursor: checked ? "default" : "pointer",
-                  outline: mark === "wrong" || mark === "extra" ? "2px solid var(--accent-red)" : mark === "missed" ? "2px dashed var(--accent-red)" : "none",
+                  outline: mark === "wrong" || mark === "extra" ? "2.5px solid var(--accent-red)" : mark === "missed" ? "2.5px dashed var(--accent-red)" : "none",
                   outlineOffset: 1,
                   textDecoration: mark === "extra" ? "line-through" : "none",
                 }}
               >
                 {t.text}
+                {mark === "right" && <span style={{ color: "var(--accent-green)", fontSize: FS.xs, fontWeight: 800, marginLeft: 3 }}>✔</span>}
+                {(mark === "wrong" || mark === "missed" || mark === "extra") && <span style={{ color: "var(--accent-red)", fontSize: FS.xs, fontWeight: 800, marginLeft: 3 }}>✘</span>}
               </button>
             );
           })}
@@ -486,15 +500,12 @@ function KeywordStep({ item, tokens, picked, brush, checked, onBrush, onToggle, 
         </button>
       ) : (
         <>
-          <Feedback ok={result!.ok}>
-            {result!.ok ? "Đạt." : "Chưa đạt."}{" "}
-            <span style={{ color: "var(--text-muted)" }}>
-              Viền đỏ liền = tô sai màu / tô thừa, viền đỏ đứt = bỏ sót. (Cho phép thừa tối đa 1 từ.)
-            </span>
-          </Feedback>
+          <ResultBox ok={result!.ok} title={result!.ok ? (problems ? `Đạt! (${problems})` : "Đạt!") : `Chưa đạt — ${problems}`}>
+            ✔ = tô đúng · viền đỏ liền = tô sai màu / tô thừa · viền đỏ đứt = bỏ sót. Cho phép thừa tối đa 1 từ.
+          </ResultBox>
           <Box style={{ marginTop: "0.75rem" }}>
             <div style={label}>Đáp án</div>
-            <PromptView tokens={tokens} mode="answer" />
+            <PromptView tokens={tokens} />
             <p style={{ fontSize: FS.xs, color: "var(--text-secondary)", margin: "0.6rem 0 0", lineHeight: 1.6 }}>{item.kwNote}</p>
           </Box>
         </>
@@ -503,10 +514,11 @@ function KeywordStep({ item, tokens, picked, brush, checked, onBrush, onToggle, 
   );
 }
 
-function ChoiceStep({ prompt, question, options, correctIdx, choice, why, onChoose }: {
+function ChoiceStep({ n, prompt, question, options, correctIdx, choice, why, onChoose }: {
+  n: number;
   prompt: ReactNode;
   question: string;
-  options: { main: string; sub?: string }[];
+  options: { main: string; sub?: string; short: string }[];
   correctIdx: number;
   choice: number | null;
   why: string;
@@ -515,17 +527,21 @@ function ChoiceStep({ prompt, question, options, correctIdx, choice, why, onChoo
   const done = choice !== null;
   return (
     <>
-      <Box style={{ marginBottom: "1rem" }}>{prompt}</Box>
-      <div style={{ ...label, marginBottom: "0.5rem" }}>{question}</div>
-      <div data-p7q="choice" style={{ display: "grid", gap: "0.5rem" }}>
+      <QuestionBox>{prompt}</QuestionBox>
+      <StepHeading n={n} text={question} />
+      <div data-p7q="choice" style={{ display: "grid", gap: "0.6rem" }}>
         {options.map((o, i) => (
-          <button key={i} type="button" disabled={done} onClick={() => onChoose(i)} style={optionStyle(done, i === correctIdx, choice === i)}>
+          <OptionButton key={i} done={done} isRight={i === correctIdx} chosen={choice === i} onClick={() => onChoose(i)}>
             <div>{o.main}</div>
-            {o.sub && <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: 2 }}>{o.sub}</div>}
-          </button>
+            {o.sub && <div style={{ fontSize: FS.xs, color: "var(--text-secondary)", marginTop: 2, fontWeight: 400 }}>{o.sub}</div>}
+          </OptionButton>
         ))}
       </div>
-      {done && <div style={{ marginTop: "0.75rem" }}><Feedback ok={choice === correctIdx}>{why}</Feedback></div>}
+      {done && (
+        <ResultBox ok={choice === correctIdx} title={choice === correctIdx ? "Chính xác!" : `Chưa đúng — đáp án là ${options[correctIdx].short}`}>
+          {why}
+        </ResultBox>
+      )}
     </>
   );
 }
@@ -546,10 +562,11 @@ function HighlightText({ text }: { text: string }) {
   );
 }
 
-function EvidenceStep({ item, prompt }: { item: P7QItem; prompt: ReactNode }) {
+function EvidenceStep({ n, item, prompt }: { n: number; item: P7QItem; prompt: ReactNode }) {
   return (
     <>
-      <Box style={{ marginBottom: "1rem" }}>{prompt}</Box>
+      <QuestionBox>{prompt}</QuestionBox>
+      <StepHeading n={n} text="Xem căn cứ trong bài" />
       <Box>
         <div style={label}>Căn cứ trong bài · {item.evidence.doc}</div>
         <blockquote style={{ margin: 0, padding: "0.6rem 0.9rem", borderLeft: "3px solid var(--accent-primary)", background: "var(--bg-secondary)", borderRadius: 6, fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.75 }}>
@@ -564,9 +581,9 @@ function EvidenceStep({ item, prompt }: { item: P7QItem; prompt: ReactNode }) {
 // ── Bits ─────────────────────────────────────────────────────────────────────
 
 /** Câu hỏi tô màu theo đáp án; từ không bắt buộc gạch chân chấm. */
-function PromptView({ tokens }: { tokens: Token[]; mode: "answer" }) {
+function PromptView({ tokens, size = FS.md }: { tokens: Token[]; size?: string }) {
   return (
-    <div style={{ fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.9 }}>
+    <div style={{ fontSize: size, fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.9 }}>
       {tokens.map((t, i) => (
         <span key={i}>
           <span style={t.layer ? {
@@ -607,26 +624,6 @@ function Chip({ layer }: { layer: KwLayer }) {
   );
 }
 
-function Feedback({ ok, children }: { ok: boolean; children: ReactNode }) {
-  return (
-    <div style={{
-      display: "flex",
-      gap: "0.5rem",
-      alignItems: "flex-start",
-      padding: "0.7rem 0.9rem",
-      borderRadius: 8,
-      fontSize: FS.sm,
-      lineHeight: 1.6,
-      color: "var(--text-primary)",
-      background: "var(--bg-secondary)",
-      border: `1px solid ${ok ? "var(--accent-green)" : "var(--accent-red)"}`,
-    }}>
-      {ok ? <CheckCircle2 size={17} color="var(--accent-green)" style={{ flexShrink: 0, marginTop: 2 }} /> : <XCircle size={17} color="var(--accent-red)" style={{ flexShrink: 0, marginTop: 2 }} />}
-      <div>{children}</div>
-    </div>
-  );
-}
-
 function Box({ children, style }: { children: ReactNode; style?: CSSProperties }) {
   return (
     <div style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 12, padding: "0.9rem 1rem", ...style }}>
@@ -635,19 +632,104 @@ function Box({ children, style }: { children: ReactNode; style?: CSSProperties }
   );
 }
 
-function optionStyle(done: boolean, isRight: boolean, chosen: boolean): CSSProperties {
-  return {
-    textAlign: "left",
-    width: "100%",
-    fontSize: FS.sm,
-    lineHeight: 1.55,
-    padding: "0.7rem 0.9rem",
-    borderRadius: 10,
-    color: "var(--text-primary)",
-    background: done && isRight ? "rgba(16,185,129,.1)" : done && chosen ? "rgba(239,68,68,.08)" : "var(--bg-elevated)",
-    border: `1.5px solid ${done && isRight ? "var(--accent-green)" : done && chosen ? "var(--accent-red)" : "var(--border)"}`,
-    cursor: done ? "default" : "pointer",
-  };
+/** Nhãn "BƯỚC n" + yêu cầu của bước, chữ lớn. */
+function StepHeading({ n, text }: { n: number; text: string }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", flexWrap: "wrap", margin: "0 0 0.75rem" }}>
+      <span style={{ fontSize: FS.xs, fontWeight: 800, letterSpacing: "0.06em", padding: "3px 9px", borderRadius: 6, background: "var(--accent-primary)", color: "#fff" }}>
+        BƯỚC {n}
+      </span>
+      <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>{text}</span>
+    </div>
+  );
+}
+
+/** Khung câu hỏi: chữ lớn, viền trái màu chủ đạo. */
+function QuestionBox({ label: lb, children }: { label?: string; children: ReactNode }) {
+  return (
+    <div style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)", borderLeft: "5px solid var(--accent-primary)", borderRadius: 12, padding: "0.9rem 1.1rem", marginBottom: "1.25rem" }}>
+      {lb && <div style={label}>{lb}</div>}
+      {children}
+    </div>
+  );
+}
+
+/**
+ * Phương án trắc nghiệm. Không dùng thuộc tính `disabled` vì trình duyệt sẽ làm
+ * xám chữ; sau khi chọn thì chặn click bằng code.
+ */
+function OptionButton({ done, isRight, chosen, onClick, children }: {
+  done: boolean;
+  isRight: boolean;
+  chosen: boolean;
+  onClick: () => void;
+  children: ReactNode;
+}) {
+  const right = done && isRight;
+  const wrongPick = done && chosen && !isRight;
+  const dim = done && !right && !wrongPick;
+  return (
+    <button
+      type="button"
+      aria-disabled={done}
+      onClick={() => { if (!done) onClick(); }}
+      style={{
+        textAlign: "left",
+        width: "100%",
+        fontSize: FS.sm,
+        lineHeight: 1.55,
+        fontWeight: right || wrongPick ? 600 : 500,
+        padding: "0.75rem 0.95rem",
+        borderRadius: 10,
+        color: "var(--text-primary)",
+        background: right ? "rgba(16,185,129,.2)" : wrongPick ? "rgba(239,68,68,.16)" : "var(--bg-elevated)",
+        border: `${right || wrongPick ? 2.5 : 1.5}px solid ${right ? "var(--accent-green)" : wrongPick ? "var(--accent-red)" : "var(--border)"}`,
+        boxShadow: right ? "0 0 0 3px rgba(16,185,129,.15)" : wrongPick ? "0 0 0 3px rgba(239,68,68,.12)" : "none",
+        opacity: dim ? 0.45 : 1,
+        cursor: done ? "default" : "pointer",
+        display: "flex",
+        gap: "0.6rem",
+        alignItems: "flex-start",
+      }}
+    >
+      {right && <CheckCircle2 size={19} color="var(--accent-green)" style={{ flexShrink: 0, marginTop: 2 }} />}
+      {wrongPick && <XCircle size={19} color="var(--accent-red)" style={{ flexShrink: 0, marginTop: 2 }} />}
+      <div style={{ flex: 1 }}>{children}</div>
+      {(right || wrongPick) && (
+        <span style={{
+          flexShrink: 0,
+          alignSelf: "center",
+          fontSize: FS.xs,
+          fontWeight: 700,
+          padding: "2px 8px",
+          borderRadius: 99,
+          color: "#fff",
+          background: right ? "var(--accent-green)" : "var(--accent-red)",
+          whiteSpace: "nowrap",
+        }}>
+          {right ? (chosen ? "Bạn chọn đúng" : "Đáp án đúng") : "Bạn chọn"}
+        </span>
+      )}
+    </button>
+  );
+}
+
+/** Hộp kết quả sau khi trả lời: tiêu đề Đúng / Chưa đúng + giải thích. */
+function ResultBox({ ok, title, children }: { ok: boolean; title: string; children: ReactNode }) {
+  return (
+    <div style={{
+      marginTop: "0.9rem",
+      padding: "0.8rem 1rem",
+      borderRadius: 10,
+      background: ok ? "rgba(16,185,129,.12)" : "rgba(239,68,68,.1)",
+      border: `2px solid ${ok ? "var(--accent-green)" : "var(--accent-red)"}`,
+    }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "0.45rem", fontSize: FS.md, fontWeight: 800, color: ok ? "var(--accent-green)" : "var(--accent-red)", marginBottom: "0.3rem" }}>
+        {ok ? <CheckCircle2 size={19} /> : <XCircle size={19} />} {title}
+      </div>
+      <div style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.6 }}>{children}</div>
+    </div>
+  );
 }
 
 const label: CSSProperties = {
