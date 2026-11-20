@@ -2,6 +2,8 @@ import type { P7QItem, P7QLesson, P7QType } from "./types";
 import { mucDichCoBan, mucDichNangCao } from "./data/muc-dich";
 import { notCoBan, notNangCao } from "./data/not";
 import { tongHop } from "./data/tong-hop";
+import { chiTietCoBan, chiTietNangCao } from "./data/chi-tiet";
+import { indicatedCoBan, indicatedNangCao } from "./data/indicated";
 
 export const LESSONS: P7QLesson[] = [
   {
@@ -19,6 +21,38 @@ export const LESSONS: P7QLesson[] = [
     level: "nang-cao",
     description: "Bộ nhiều văn bản, mục đích không nằm ở câu đầu, most likely",
     items: mucDichNangCao,
+  },
+  {
+    slug: "chi-tiet-co-ban",
+    title: "Chi tiết · Cơ bản",
+    type: "chi-tiet",
+    level: "co-ban",
+    description: "Wh- + thông tin cụ thể: ngày, giá, nơi chốn, lý do, yêu cầu",
+    items: chiTietCoBan,
+  },
+  {
+    slug: "chi-tiet-nang-cao",
+    title: "Chi tiết · Nâng cao",
+    type: "chi-tiet",
+    level: "nang-cao",
+    description: "be required of, be billed, suggest … do, câu điều kiện dài",
+    items: chiTietNangCao,
+  },
+  {
+    slug: "indicated-co-ban",
+    title: "Indicated / True · Cơ bản",
+    type: "indicated",
+    level: "co-ban",
+    description: "What is indicated / mentioned / true about X",
+    items: indicatedCoBan,
+  },
+  {
+    slug: "indicated-nang-cao",
+    title: "Indicated / True · Nâng cao",
+    type: "indicated",
+    level: "nang-cao",
+    description: "What does [văn bản] indicate about…, có phạm vi, mệnh đề bổ nghĩa",
+    items: indicatedNangCao,
   },
   {
     slug: "not-co-ban",

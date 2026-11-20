@@ -298,6 +298,12 @@ export function Part7QuestionsClient({ lessonSlug, title, items, card, initialBe
         </div>
       )}
 
+      {item.stem && (
+        <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.6 }}>
+          <strong style={{ color: "var(--text-secondary)" }}>Câu hỏi:</strong> {item.stem}
+        </div>
+      )}
+
       {step === "dich" && (
         <TranslateStep item={item} choice={choice} onChoose={(i, ok) => { setChoice(i); record("dich", ok); }} />
       )}
@@ -374,11 +380,17 @@ function TranslateStep({ item, choice, onChoose }: {
   return (
     <>
       <Box style={{ marginBottom: "1rem" }}>
-        <div style={label}>Câu hỏi</div>
+        <div style={label}>{item.stem ? "Câu cho sẵn" : "Câu hỏi"}</div>
         <div style={{ fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.6 }}>{plainPrompt(item.prompt)}</div>
+        {item.context && (
+          <div style={{ marginTop: "0.7rem", paddingTop: "0.7rem", borderTop: "1px dashed var(--border)" }}>
+            <div style={label}>{item.context.label}</div>
+            <HighlightText text={item.context.text} />
+          </div>
+        )}
       </Box>
-      <div style={{ ...label, marginBottom: "0.5rem" }}>Chọn bản dịch đúng</div>
-      <div style={{ display: "grid", gap: "0.5rem" }}>
+      <div style={{ ...label, marginBottom: "0.5rem" }}>{item.transLabel ?? "Chọn bản dịch đúng"}</div>
+      <div data-p7q="dich" style={{ display: "grid", gap: "0.5rem" }}>
         {options.map((o, i) => {
           const done = choice !== null;
           const isRight = !o.error;
@@ -435,7 +447,7 @@ function KeywordStep({ item, tokens, picked, brush, checked, onBrush, onToggle, 
 
       <Box style={{ marginBottom: "1rem" }}>
         <div style={label}>{checked ? "Bạn đánh dấu" : "Chạm vào từ để tô màu"}</div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem 0.25rem", lineHeight: 1.4 }}>
+        <div data-p7q="tokens" style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem 0.25rem", lineHeight: 1.4 }}>
           {tokens.map((t, i) => {
             const p = picked[i];
             const mark = result?.marks[i];
@@ -505,7 +517,7 @@ function ChoiceStep({ prompt, question, options, correctIdx, choice, why, onChoo
     <>
       <Box style={{ marginBottom: "1rem" }}>{prompt}</Box>
       <div style={{ ...label, marginBottom: "0.5rem" }}>{question}</div>
-      <div style={{ display: "grid", gap: "0.5rem" }}>
+      <div data-p7q="choice" style={{ display: "grid", gap: "0.5rem" }}>
         {options.map((o, i) => (
           <button key={i} type="button" disabled={done} onClick={() => onChoose(i)} style={optionStyle(done, i === correctIdx, choice === i)}>
             <div>{o.main}</div>
@@ -518,21 +530,30 @@ function ChoiceStep({ prompt, question, options, correctIdx, choice, why, onChoo
   );
 }
 
+/** Văn bản có `==…==` tô sáng; ` ‖ ` ngắt sang đoạn / văn bản khác. */
+function HighlightText({ text }: { text: string }) {
+  const parts = text.split(/==(.+?)==/g);
+  return (
+    <span style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.75 }}>
+      {parts.map((p, i) =>
+        i % 2 === 1 ? (
+          <mark key={i} style={{ background: "rgba(245,158,11,.28)", color: "inherit", padding: "0 2px", borderRadius: 3 }}>{p}</mark>
+        ) : (
+          <span key={i}>{p.split(" ‖ ").map((s, j) => (j ? [<br key={`b${j}`} />, <br key={`c${j}`} />, s] : s))}</span>
+        ),
+      )}
+    </span>
+  );
+}
+
 function EvidenceStep({ item, prompt }: { item: P7QItem; prompt: ReactNode }) {
-  const parts = item.evidence.excerpt.split(/==(.+?)==/g);
   return (
     <>
       <Box style={{ marginBottom: "1rem" }}>{prompt}</Box>
       <Box>
         <div style={label}>Căn cứ trong bài · {item.evidence.doc}</div>
         <blockquote style={{ margin: 0, padding: "0.6rem 0.9rem", borderLeft: "3px solid var(--accent-primary)", background: "var(--bg-secondary)", borderRadius: 6, fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.75 }}>
-          {parts.map((p, i) =>
-            i % 2 === 1 ? (
-              <mark key={i} style={{ background: "rgba(245,158,11,.28)", color: "inherit", padding: "0 2px", borderRadius: 3 }}>{p}</mark>
-            ) : (
-              <span key={i}>{p.split(" ‖ ").map((s, j) => (j ? [<br key={`b${j}`} />, <br key={`c${j}`} />, s] : s))}</span>
-            ),
-          )}
+          <HighlightText text={item.evidence.excerpt} />
         </blockquote>
         <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", margin: "0.75rem 0 0", lineHeight: 1.65 }}>{item.evidence.note}</p>
       </Box>
