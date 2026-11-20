@@ -6,6 +6,9 @@ import { chiTietCoBan, chiTietNangCao } from "./data/chi-tiet";
 import { indicatedCoBan, indicatedNangCao } from "./data/indicated";
 import { suyLuanCoBan, suyLuanNangCao } from "./data/suy-luan";
 import { doiTuongCoBan, doiTuongNangCao } from "./data/doi-tuong";
+import { dongNghiaCoBan, dongNghiaNangCao } from "./data/dong-nghia";
+import { yDinhCoBan, yDinhNangCao } from "./data/y-dinh";
+import { dienCauCoBan, dienCauNangCao } from "./data/dien-cau";
 
 export const LESSONS: P7QLesson[] = [
   {
@@ -103,6 +106,54 @@ export const LESSONS: P7QLesson[] = [
     level: "nang-cao",
     description: "In what field / industry, câu đảo, đoán danh tính từ email",
     items: doiTuongNangCao,
+  },
+  {
+    slug: "dong-nghia-co-ban",
+    title: "Đồng nghĩa · Cơ bản",
+    type: "dong-nghia",
+    level: "co-ban",
+    description: "Từ quen nhưng nghĩa khác: points, space, solid, reflects…",
+    items: dongNghiaCoBan,
+  },
+  {
+    slug: "dong-nghia-nang-cao",
+    title: "Đồng nghĩa · Nâng cao",
+    type: "dong-nghia",
+    level: "nang-cao",
+    description: "just, last, meet, turn, function, driven: nghĩa phụ hay bị bẫy",
+    items: dongNghiaNangCao,
+  },
+  {
+    slug: "y-dinh-co-ban",
+    title: "Ý định người viết · Cơ bản",
+    type: "y-dinh",
+    level: "co-ban",
+    description: "Câu trả lời ngắn trong chat: Consider it done, You got it, I'll handle it…",
+    items: yDinhCoBan,
+  },
+  {
+    slug: "y-dinh-nang-cao",
+    title: "Ý định người viết · Nâng cao",
+    type: "y-dinh",
+    level: "nang-cao",
+    description: "Câu trích dẫn cần đọc lùi xa hơn 1 tin, nghĩa đen ≠ nghĩa thật",
+    items: yDinhNangCao,
+  },
+  {
+    slug: "dien-cau-co-ban",
+    title: "Điền câu · Cơ bản",
+    type: "dien-cau",
+    level: "co-ban",
+    description: "Từ móc nối rõ: This / She also / these / for instance",
+    items: dienCauCoBan,
+  },
+  {
+    slug: "dien-cau-nang-cao",
+    title: "Điền câu · Nâng cao",
+    type: "dien-cau",
+    level: "nang-cao",
+    description: "Móc nối bằng chủ đề: Alternatively, Otherwise, that capacity, câu chủ đề",
+    items: dienCauNangCao,
   },
   {
     slug: "tong-hop-1",
