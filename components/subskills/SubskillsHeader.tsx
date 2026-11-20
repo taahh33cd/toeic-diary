@@ -124,7 +124,7 @@ export function SubskillsHeader({
             style={{
               display: "flex",
               alignItems: "center",
-              padding: "0 0.85rem",
+              padding: LINK_PAD,
               paddingBottom: "1px",
               height: TOPBAR_H,
               color: TEXT_INACTIVE,
