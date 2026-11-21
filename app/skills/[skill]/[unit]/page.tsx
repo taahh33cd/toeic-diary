@@ -110,58 +110,77 @@ export default async function SkillUnitPage({ params }: Props) {
       </>
     );
 
-    if (isSetPart(part)) {
-      const sets = PART_SETS[part];
+    // Bộ luyện riêng (Part 1/3/4), chia mục Luyện tập cơ bản / nâng cao
+    const sets = isSetPart(part) ? PART_SETS[part] : [];
+    const setSections = isSetPart(part)
+      ? SET_LEVELS.map(({ level, title }) => ({
+          title,
+          tests: sets.filter((s) => s.level === level).map((s) => ({
+            slug: s.slug,
+            testNumber: s.testNumber,
+            title: s.label,
+            detail: part === 1 ? `${s.questions} câu` : `${s.items} ${SET_ITEM_NOUN[part]} · ${s.questions} câu`,
+          })),
+        })).filter((sec) => sec.tests.length > 0)
+      : [];
+    const freeSets = sets.filter((s) => s.free);
+
+    if (part === 3 || part === 4) {
       const noun = SET_ITEM_NOUN[part];
       return (
         <PracticeTestList
           skill={found.skill}
           unit={found.unit}
-          sections={SET_LEVELS.map(({ level, title }) => ({
-            title,
-            tests: sets.filter((s) => s.level === level).map((s) => ({
-              slug: s.slug,
-              testNumber: s.testNumber,
-              title: s.label,
-              detail: `${s.items} ${noun} · ${s.questions} câu`,
-            })),
-          })).filter((sec) => sec.tests.length > 0)}
+          sections={setSections}
           intro={
             <>
               Đề chia hai mục <strong>Luyện tập cơ bản</strong> và <strong>Luyện tập nâng cao</strong>; mỗi {noun} 1–3 câu hỏi. {modes}{" "}
               Sau khi nộp bài có transcript, giải thích tiếng Việt và lối sang bài chép chính tả của từng {noun}.
             </>
           }
-          freeNote={`${sets.filter((s) => s.free).map((s) => s.title).join(", ")} mở cho mọi tài khoản. Các test còn lại cần đăng ký khoá học.`}
+          freeNote={`${freeSets.map((s) => s.title).join(", ")} mở cho mọi tài khoản. Các test còn lại cần đăng ký khoá học.`}
           unlocked={isUsageExempt(profile)}
-          freeTests={sets.filter((s) => s.free).map((s) => s.testNumber)}
+          freeTests={freeSets.map((s) => s.testNumber)}
           stats={stats}
         />
       );
     }
 
+    // Part 1/2: 9 đề CA (+ bộ luyện cơ bản của Part 1 phía trên)
+    const caTests = listPracticeTests().map((t) => {
+      // Part 1 luôn là câu 1..part1, phần còn lại là Part 2
+      const missing = t.missingAudio.filter((n) => (part === 1 ? n <= t.part1 : n > t.part1)).length;
+      return {
+        slug: t.slug,
+        testNumber: t.testNumber,
+        title: t.title,
+        detail: `${part === 1 ? t.part1 : t.part2} câu${missing > 0 ? ` · ${missing} câu thiếu audio` : ""}`,
+      };
+    });
+    const hasSets = setSections.length > 0;
+
     return (
       <PracticeTestList
         skill={found.skill}
         unit={found.unit}
-        sections={[{ tests: listPracticeTests().map((t) => {
-          // Part 1 luôn là câu 1..part1, phần còn lại là Part 2
-          const missing = t.missingAudio.filter((n) => (part === 1 ? n <= t.part1 : n > t.part1)).length;
-          return {
-            slug: t.slug,
-            testNumber: t.testNumber,
-            title: t.title,
-            detail: `${part === 1 ? t.part1 : t.part2} câu${missing > 0 ? ` · ${missing} câu thiếu audio` : ""}`,
-          };
-        }) }]}
+        sections={hasSets ? [...setSections, { title: "Luyện đề", tests: caTests }] : [{ tests: caTests }]}
         intro={
-          <>
-            {listPracticeTests().length} bộ đề · mỗi bộ {part === 1 ? "6" : "25"} câu. {modes}{" "}Script &amp; đáp án hiện sau khi nộp bài.
-          </>
+          hasSets ? (
+            <>
+              <strong>Luyện tập cơ bản</strong>: {sets.length} test × 10 câu, có giải thích tiếng Việt từng câu.{" "}
+              <strong>Luyện đề</strong>: {caTests.length} đề × {part === 1 ? "6" : "25"} câu. {modes}{" "}Script &amp; đáp án hiện sau khi nộp bài.
+            </>
+          ) : (
+            <>
+              {caTests.length} bộ đề · mỗi bộ {part === 1 ? "6" : "25"} câu. {modes}{" "}Script &amp; đáp án hiện sau khi nộp bài.
+            </>
+          )
         }
-        freeNote={`Đề ${FREE_PRACTICE_TESTS.join(" và ")} mở cho mọi tài khoản. Các đề còn lại cần đăng ký khoá học.`}
+        freeNote={hasSets
+          ? `${freeSets.map((s) => s.title).join(", ")} và Luyện đề · Test ${FREE_PRACTICE_TESTS.join(", ")} mở cho mọi tài khoản. Các test còn lại cần đăng ký khoá học.`
+          : `Đề ${FREE_PRACTICE_TESTS.join(" và ")} mở cho mọi tài khoản. Các đề còn lại cần đăng ký khoá học.`}
         unlocked={isUsageExempt(profile)}
-        freeTests={FREE_PRACTICE_TESTS}
+        freeTests={[...freeSets.map((s) => s.testNumber), ...FREE_PRACTICE_TESTS]}
         stats={stats}
       />
     );

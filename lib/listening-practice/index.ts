@@ -67,7 +67,10 @@ export async function loadPracticePart(
 // ── Gộp mọi part về một cửa: route lượt làm, sổ học tập và trang đề gọi qua đây ──
 
 export function practiceTestTitle(testNumber: number, part: PracticePart): string | undefined {
-  return isSetPart(part) ? getPartSet(part, testNumber)?.title : getPracticeEntry(testNumber)?.title;
+  const set = isSetPart(part) ? getPartSet(part, testNumber) : undefined;
+  if (set) return set.title;
+  // Part 1/2 còn 9 đề CA (testNumber 1–9) song song với bộ luyện riêng
+  return part === 1 || part === 2 ? getPracticeEntry(testNumber)?.title : undefined;
 }
 
 export function practiceTestExists(testNumber: number, part: PracticePart): boolean {
@@ -75,12 +78,14 @@ export function practiceTestExists(testNumber: number, part: PracticePart): bool
 }
 
 export function isPracticeFree(testNumber: number, part: PracticePart): boolean {
-  return isSetPart(part) ? Boolean(getPartSet(part, testNumber)?.free) : isPracticeTestFree(testNumber);
+  const set = isSetPart(part) ? getPartSet(part, testNumber) : undefined;
+  return set ? set.free : isPracticeTestFree(testNumber);
 }
 
 /** Đề ở shape FullTest để chạy bằng bộ máy làm bài/chấm điểm chung */
 export async function loadPracticeFullTest(testNumber: number, part: PracticePart): Promise<FullTest | null> {
-  if (isSetPart(part)) return loadPartSetTest(part, testNumber);
+  if (isSetPart(part) && getPartSet(part, testNumber)) return loadPartSetTest(part, testNumber);
+  if (part !== 1 && part !== 2) return null;
   const test = await loadPracticeTest(`test-${testNumber}`);
   return test ? toFullTest(test, part) : null;
 }

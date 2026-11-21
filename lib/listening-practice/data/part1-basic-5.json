@@ -1,0 +1,329 @@
+{
+  "examSlug": "part1-practice",
+  "examTitle": "Luyện nghe Part 1",
+  "testNumber": 105,
+  "slug": "part1-basic-5",
+  "title": "Luyện tập cơ bản · Test 5",
+  "audioBase": "/listening-practice/part1/basic",
+  "locked": false,
+  "lockReason": null,
+  "stats": {
+    "questions": 10,
+    "answered": 10,
+    "missingAnswers": [],
+    "brokenQuestions": []
+  },
+  "groups": [
+    {
+      "part": 1,
+      "questionStart": 1,
+      "questionEnd": 1,
+      "audio": "41.mp3",
+      "image": "/listening-practice/part1/basic/41.jpg",
+      "imageWidth": 663,
+      "transcript": "(A) She’s opening an umbrella over a dining area.\n(B) She’s standing on a patio near a house.\n(C) She’s taking a tool out of a storage cupboard.\n(D) She’s picking up some cushions off the ground.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 1,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "She’s opening an umbrella over a dining area.",
+            "B": "She’s standing on a patio near a house.",
+            "C": "She’s taking a tool out of a storage cupboard.",
+            "D": "She’s picking up some cushions off the ground."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ đứng ở sân hiên cạnh ngôi nhà ⇒ (B) standing on a patio near a house. Cô cầm vợt vớt lá, không mở ô (A).",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 2,
+      "questionEnd": 2,
+      "audio": "42.mp3",
+      "image": "/listening-practice/part1/basic/42.jpg",
+      "imageWidth": 656,
+      "transcript": "(A) They’re raking some leaves.\n(B) They’re shoveling soil into a bag.\n(C) They’re in a garden.\n(D) They’re watering some flowers.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 2,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "They’re raking some leaves.",
+            "B": "They’re shoveling soil into a bag.",
+            "C": "They’re in a garden.",
+            "D": "They’re watering some flowers."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Hai người đang làm việc trong vườn hoa ⇒ (C) They're in a garden. Không ai cào lá hay tưới hoa.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 3,
+      "questionEnd": 3,
+      "audio": "43.mp3",
+      "image": "/listening-practice/part1/basic/43.jpg",
+      "imageWidth": 652,
+      "transcript": "(A) A worker is changing a lightbulb.\n(B) A worker is handing a box to a customer.\n(C) A worker is crouching down behind a counter.\n(D) A worker is cleaning a window.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 3,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "A worker is changing a lightbulb.",
+            "B": "A worker is handing a box to a customer.",
+            "C": "A worker is crouching down behind a counter.",
+            "D": "A worker is cleaning a window."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Một nhân viên ngồi xổm phía sau quầy ⇒ (C) crouching down behind a counter.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 4,
+      "questionEnd": 4,
+      "audio": "44.mp3",
+      "image": "/listening-practice/part1/basic/44.jpg",
+      "imageWidth": 565,
+      "transcript": "(A) He is lifting a vase off the floor.\n(B) He is shaping a piece of pottery.\n(C) He is setting bowls onto a shelf.\n(D) He is wiping off his hands.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 4,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "He is lifting a vase off the floor.",
+            "B": "He is shaping a piece of pottery.",
+            "C": "He is setting bowls onto a shelf.",
+            "D": "He is wiping off his hands."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đang nặn bình gốm trên bàn xoay ⇒ (B) shaping a piece of pottery.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 5,
+      "questionEnd": 5,
+      "audio": "45.mp3",
+      "image": "/listening-practice/part1/basic/45.jpg",
+      "imageWidth": 800,
+      "transcript": "(A) They are preparing a meal.\n(B) They are rinsing some plates.\n(C) They are serving food to some guests.\n(D) They are facing each other.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 5,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "They are preparing a meal.",
+            "B": "They are rinsing some plates.",
+            "C": "They are serving food to some guests.",
+            "D": "They are facing each other."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Hai người đang nấu ăn trong bếp ⇒ (A) preparing a meal.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 6,
+      "questionEnd": 6,
+      "audio": "46.mp3",
+      "image": "/listening-practice/part1/basic/46.jpg",
+      "imageWidth": 800,
+      "transcript": "(A) She is picking up a backpack.\n(B) She is looking into a mirror.\n(C) She is packing items into a suitcase.\n(D) She is grasping onto a handle.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 6,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "She is picking up a backpack.",
+            "B": "She is looking into a mirror.",
+            "C": "She is packing items into a suitcase.",
+            "D": "She is grasping onto a handle."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ nắm tay kéo của chiếc vali ⇒ (D) grasping onto a handle.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 7,
+      "questionEnd": 7,
+      "audio": "47.mp3",
+      "image": "/listening-practice/part1/basic/47.jpg",
+      "imageWidth": 800,
+      "transcript": "(A) He’s facing a closed window.\n(B) He’s painting a portion of the wall.\n(C) He’s repositioning a stepladder.\n(D) He’s extending his arms upward.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 7,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "He’s facing a closed window.",
+            "B": "He’s painting a portion of the wall.",
+            "C": "He’s repositioning a stepladder.",
+            "D": "He’s extending his arms upward."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đứng trên thang, giơ hai tay lên trần nhà ⇒ (D) extending his arms upward.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 8,
+      "questionEnd": 8,
+      "audio": "48.mp3",
+      "image": "/listening-practice/part1/basic/48.jpg",
+      "imageWidth": 800,
+      "transcript": "(A) One of the women is cleaning a counter.\n(B) One of the women is filling plates with cupcakes.\n(C) One of the women is lifting a cup.\n(D) One of the women is taking baked goods out of a kitchen.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 8,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "One of the women is cleaning a counter.",
+            "B": "One of the women is filling plates with cupcakes.",
+            "C": "One of the women is lifting a cup.",
+            "D": "One of the women is taking baked goods out of a kitchen."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Một người phụ nữ đang cầm cốc trên tay ⇒ (C) lifting a cup.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 9,
+      "questionEnd": 9,
+      "audio": "49.mp3",
+      "image": "/listening-practice/part1/basic/49.jpg",
+      "imageWidth": 800,
+      "transcript": "(A) She’s paying for some jewelry at a checkout.\n(B) She’s trying on a necklace in a boutique.\n(C) She’s carrying a handbag on her shoulder.\n(D) She’s assembling one of the store shelves.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 9,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "She’s paying for some jewelry at a checkout.",
+            "B": "She’s trying on a necklace in a boutique.",
+            "C": "She’s carrying a handbag on her shoulder.",
+            "D": "She’s assembling one of the store shelves."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ đeo túi xách trên vai trong cửa hàng trang sức ⇒ (C) carrying a handbag on her shoulder.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 10,
+      "questionEnd": 10,
+      "audio": "50.mp3",
+      "image": "/listening-practice/part1/basic/50.jpg",
+      "imageWidth": 800,
+      "transcript": "(A) She is glancing toward a coworker.\n(B) She is removing eyeglasses from her face.\n(C) She is working near a sewing machine.\n(D) She is putting a watch on a workstation.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 10,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "She is glancing toward a coworker.",
+            "B": "She is removing eyeglasses from her face.",
+            "C": "She is working near a sewing machine.",
+            "D": "She is putting a watch on a workstation."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ làm việc cạnh chiếc máy may ⇒ (C) working near a sewing machine.",
+            "glossary": []
+          }
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -4,7 +4,7 @@ import { FAMILY } from "@/lib/skills/exam-theme";
 
 // Các unit mở được ngay → nhãn hiển thị
 const READY: Record<string, string> = {
-  "listening/part1": "9 đề",
+  "listening/part1": "14 test",
   "listening/part2": "9 đề",
   "listening/part3": "7 test",
   "listening/part4": "2 test",
