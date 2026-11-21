@@ -545,10 +545,12 @@ export function describeAttemptGroups(groupKeys: string[]): AttemptGroupMeta[] {
     if (part) {
       const [, skill, nStr] = part;
       const n = Number(nStr);
-      // Part 1-2 đếm theo catalog CA, Part 3-4 theo số bộ riêng; part khác đếm 0.
-      const totalTests = n === 1 || n === 2
+      // Đề CA (Part 1-2) + bộ luyện riêng (Part 1, 3, 4); part khác đếm 0.
+      const caTests = n === 1 || n === 2
         ? listPracticeTests().filter((t) => countByPart(t, n) > 0).length
-        : isSetPart(n) && skill === "listening" ? PART_SETS[n].length : 0;
+        : 0;
+      const setTests = isSetPart(n) && skill === "listening" ? PART_SETS[n].length : 0;
+      const totalTests = caTests + setTests;
       return { groupKey, href: `/skills/${skill}/part${n}`, totalTests };
     }
     const full = /^full-(.+)$/.exec(groupKey);

@@ -1,0 +1,329 @@
+{
+  "examSlug": "part1-practice",
+  "examTitle": "Luyện nghe Part 1",
+  "testNumber": 103,
+  "slug": "part1-basic-3",
+  "title": "Luyện tập cơ bản · Test 3",
+  "audioBase": "/listening-practice/part1/basic",
+  "locked": false,
+  "lockReason": null,
+  "stats": {
+    "questions": 10,
+    "answered": 10,
+    "missingAnswers": [],
+    "brokenQuestions": []
+  },
+  "groups": [
+    {
+      "part": 1,
+      "questionStart": 1,
+      "questionEnd": 1,
+      "audio": "21.mp3",
+      "image": "/listening-practice/part1/basic/21.jpg",
+      "imageWidth": 581,
+      "transcript": "(A) The man is cutting down a tree.\n(B) The man is fixing a machine.\n(C) The man is measuring a board.\n(D) The man is raking some leaves.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 1,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "The man is cutting down a tree.",
+            "B": "The man is fixing a machine.",
+            "C": "The man is measuring a board.",
+            "D": "The man is raking some leaves."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông dùng thước đo tấm ván đặt trên giá đỡ ⇒ (C) measuring a board.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 2,
+      "questionEnd": 2,
+      "audio": "22.mp3",
+      "image": "/listening-practice/part1/basic/22.jpg",
+      "imageWidth": 459,
+      "transcript": "(A) She’s eating in a picnic area.\n(B) She’s waiting in line at a food truck.\n(C) She’s wiping off a bench.\n(D) She’s throwing away a plate.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 2,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "She’s eating in a picnic area.",
+            "B": "She’s waiting in line at a food truck.",
+            "C": "She’s wiping off a bench.",
+            "D": "She’s throwing away a plate."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ ngồi ăn ở bàn dã ngoại ⇒ (A) eating in a picnic area.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 3,
+      "questionEnd": 3,
+      "audio": "23.mp3",
+      "image": "/listening-practice/part1/basic/23.jpg",
+      "imageWidth": 314,
+      "transcript": "(A) The man is brushing snow off the roof of a car.\n(B) The man is standing in the snow beside a car.\n(C) The man is shoveling snow from a walkway.\n(D) The man is running through the snow.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 3,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "The man is brushing snow off the roof of a car.",
+            "B": "The man is standing in the snow beside a car.",
+            "C": "The man is shoveling snow from a walkway.",
+            "D": "The man is running through the snow."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đứng trong tuyết cạnh chiếc ô tô phủ đầy tuyết ⇒ (B). Anh không cầm gì để phủi tuyết trên nóc xe (A).",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 4,
+      "questionEnd": 4,
+      "audio": "24.mp3",
+      "image": "/listening-practice/part1/basic/24.jpg",
+      "imageWidth": 337,
+      "transcript": "(A) She’s inserting a cord into an outlet.\n(B) She’s pressing a button on a machine.\n(C) She’s gripping the handle of a drawer.\n(D) She’s tacking a notice onto the wall.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 4,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "She’s inserting a cord into an outlet.",
+            "B": "She’s pressing a button on a machine.",
+            "C": "She’s gripping the handle of a drawer.",
+            "D": "She’s tacking a notice onto the wall."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ cắm dây điện vào ổ trên tường ⇒ (A) inserting a cord into an outlet.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 5,
+      "questionEnd": 5,
+      "audio": "25.mp3",
+      "image": "/listening-practice/part1/basic/25.jpg",
+      "imageWidth": 422,
+      "transcript": "(A) She’s cleaning an oven.\n(B) She’s moving a pot.\n(C) She’s opening a cabinet.\n(D) She’s holding a towel.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 5,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "She’s cleaning an oven.",
+            "B": "She’s moving a pot.",
+            "C": "She’s opening a cabinet.",
+            "D": "She’s holding a towel."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ cầm chiếc khăn bếp trên tay ⇒ (D) holding a towel.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 6,
+      "questionEnd": 6,
+      "audio": "26.mp3",
+      "image": "/listening-practice/part1/basic/26.jpg",
+      "imageWidth": 637,
+      "transcript": "(A) They’re putting trash in a bag.\n(B) They’re taking off their jackets.\n(C) They’re facing a shelving unit.\n(D) They’re painting a room.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 6,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "They’re putting trash in a bag.",
+            "B": "They’re taking off their jackets.",
+            "C": "They’re facing a shelving unit.",
+            "D": "They’re painting a room."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Hai người đàn ông đứng hướng về phía chiếc kệ ⇒ (C) facing a shelving unit.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 7,
+      "questionEnd": 7,
+      "audio": "27.mp3",
+      "image": "/listening-practice/part1/basic/27.jpg",
+      "imageWidth": 636,
+      "transcript": "(A) He’s cleaning the floor.\n(B) He’s setting a plant on a shelf.\n(C) He’s pouring some liquid into a cup.\n(D) He’s ironing a shirt.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 7,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "He’s cleaning the floor.",
+            "B": "He’s setting a plant on a shelf.",
+            "C": "He’s pouring some liquid into a cup.",
+            "D": "He’s ironing a shirt."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông rót chất lỏng từ bình vào cốc ⇒ (C) pouring some liquid into a cup.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 8,
+      "questionEnd": 8,
+      "audio": "28.mp3",
+      "image": "/listening-practice/part1/basic/28.jpg",
+      "imageWidth": 638,
+      "transcript": "(A) They’re glancing at a monitor.\n(B) They’re putting pens in a jar.\n(C) They’re wiping off a desk.\n(D) They’re examining a document.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 8,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "They’re glancing at a monitor.",
+            "B": "They’re putting pens in a jar.",
+            "C": "They’re wiping off a desk.",
+            "D": "They’re examining a document."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Hai người phụ nữ cùng xem một tờ tài liệu ⇒ (D) examining a document.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 9,
+      "questionEnd": 9,
+      "audio": "29.mp3",
+      "image": "/listening-practice/part1/basic/29.jpg",
+      "imageWidth": 433,
+      "transcript": "(A) The worker is carrying some plants.\n(B) The worker is reading a sign.\n(C) The worker is pushing a cart.\n(D) The worker is writing some notes.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 9,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "The worker is carrying some plants.",
+            "B": "The worker is reading a sign.",
+            "C": "The worker is pushing a cart.",
+            "D": "The worker is writing some notes."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người công nhân đứng ghi chép vào giấy, chiếc xe đẩy ở ngay trước mặt ⇒ (D). Anh không đẩy xe (C).",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 10,
+      "questionEnd": 10,
+      "audio": "30.mp3",
+      "image": "/listening-practice/part1/basic/30.jpg",
+      "imageWidth": 641,
+      "transcript": "(A) Some of the people are pulling suitcases.\n(B) Some of the people are relaxing on benches.\n(C) Some of the people are putting luggage onto a rack.\n(D) Some of the people are waiting in line to purchase a ticket.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 10,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "Some of the people are pulling suitcases.",
+            "B": "Some of the people are relaxing on benches.",
+            "C": "Some of the people are putting luggage onto a rack.",
+            "D": "Some of the people are waiting in line to purchase a ticket."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "A",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Nhiều người đang kéo vali trên đường ⇒ (A) pulling suitcases.",
+            "glossary": []
+          }
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

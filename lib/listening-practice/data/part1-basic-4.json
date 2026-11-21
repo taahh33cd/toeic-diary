@@ -1,0 +1,329 @@
+{
+  "examSlug": "part1-practice",
+  "examTitle": "Luyện nghe Part 1",
+  "testNumber": 104,
+  "slug": "part1-basic-4",
+  "title": "Luyện tập cơ bản · Test 4",
+  "audioBase": "/listening-practice/part1/basic",
+  "locked": false,
+  "lockReason": null,
+  "stats": {
+    "questions": 10,
+    "answered": 10,
+    "missingAnswers": [],
+    "brokenQuestions": []
+  },
+  "groups": [
+    {
+      "part": 1,
+      "questionStart": 1,
+      "questionEnd": 1,
+      "audio": "31.mp3",
+      "image": "/listening-practice/part1/basic/31.jpg",
+      "imageWidth": 646,
+      "transcript": "(A) She’s looking into her backpack.\n(B) She’s tying the laces of her boots.\n(C) She’s hiking on an outdoor path.\n(D) She’s walking out of a tunnel.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 1,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "She’s looking into her backpack.",
+            "B": "She’s tying the laces of her boots.",
+            "C": "She’s hiking on an outdoor path.",
+            "D": "She’s walking out of a tunnel."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ đi bộ trên con đường mòn ngoài trời ⇒ (C) hiking on an outdoor path.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 2,
+      "questionEnd": 2,
+      "audio": "32.mp3",
+      "image": "/listening-practice/part1/basic/32.jpg",
+      "imageWidth": 635,
+      "transcript": "(A) He’s holding the handle of a shopping cart.\n(B) He’s plugging a cord into a wall outlet.\n(C) He’s looking into a kitchen cupboard.\n(D) He’s kneeling down on a tile floor.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 2,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "He’s holding the handle of a shopping cart.",
+            "B": "He’s plugging a cord into a wall outlet.",
+            "C": "He’s looking into a kitchen cupboard.",
+            "D": "He’s kneeling down on a tile floor."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông quỳ trên sàn lát gạch ⇒ (D) kneeling down on a tile floor.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 3,
+      "questionEnd": 3,
+      "audio": "33.mp3",
+      "image": "/listening-practice/part1/basic/33.jpg",
+      "imageWidth": 644,
+      "transcript": "(A) She’s shoveling snow from a walkway.\n(B) She’s using walking sticks.\n(C) She’s removing her cap.\n(D) She’s drinking from a water bottle.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 3,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "She’s shoveling snow from a walkway.",
+            "B": "She’s using walking sticks.",
+            "C": "She’s removing her cap.",
+            "D": "She’s drinking from a water bottle."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ đi trên tuyết, hai tay chống gậy ⇒ (B) using walking sticks.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 4,
+      "questionEnd": 4,
+      "audio": "34.mp3",
+      "image": "/listening-practice/part1/basic/34.jpg",
+      "imageWidth": 415,
+      "transcript": "(A) The man is holding a bucket of water.\n(B) The man is replacing a tire.\n(C) The man is watering a tree.\n(D) The man is scrubbing the front of a car.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 4,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "The man is holding a bucket of water.",
+            "B": "The man is replacing a tire.",
+            "C": "The man is watering a tree.",
+            "D": "The man is scrubbing the front of a car."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đang chà rửa phần đầu ô tô ⇒ (D) scrubbing the front of a car. Anh cầm vòi nước, không phải xô nước (A).",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 5,
+      "questionEnd": 5,
+      "audio": "35.mp3",
+      "image": "/listening-practice/part1/basic/35.jpg",
+      "imageWidth": 641,
+      "transcript": "(A) He’s digging in a garden.\n(B) He’s stacking wooden pallets.\n(C) He’s emptying soil from a pot.\n(D) He’s examining some plants.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 5,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "He’s digging in a garden.",
+            "B": "He’s stacking wooden pallets.",
+            "C": "He’s emptying soil from a pot.",
+            "D": "He’s examining some plants."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đang xem xét các chậu cây ⇒ (D) examining some plants. Các pallet gỗ đã nằm sẵn, anh không xếp chúng (B).",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 6,
+      "questionEnd": 6,
+      "audio": "36.mp3",
+      "image": "/listening-practice/part1/basic/36.jpg",
+      "imageWidth": 389,
+      "transcript": "(A) She’s taking off her badge.\n(B) She’s leaning over a desk.\n(C) She’s locking a door.\n(D) She’s lifting a bin.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 6,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "She’s taking off her badge.",
+            "B": "She’s leaning over a desk.",
+            "C": "She’s locking a door.",
+            "D": "She’s lifting a bin."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ cúi xuống nhấc thùng rác ⇒ (D) lifting a bin.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 7,
+      "questionEnd": 7,
+      "audio": "37.mp3",
+      "image": "/listening-practice/part1/basic/37.jpg",
+      "imageWidth": 383,
+      "transcript": "(A) A man is repairing a railing.\n(B) A man is climbing some stairs.\n(C) A man is carrying a ladder.\n(D) A man is looking up at a roof.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 7,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "A man is repairing a railing.",
+            "B": "A man is climbing some stairs.",
+            "C": "A man is carrying a ladder.",
+            "D": "A man is looking up at a roof."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "B",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đang bước lên bậc cầu thang gỗ ⇒ (B) climbing some stairs.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 8,
+      "questionEnd": 8,
+      "audio": "38.mp3",
+      "image": "/listening-practice/part1/basic/38.jpg",
+      "imageWidth": 376,
+      "transcript": "(A) He’s standing on a rug.\n(B) He’s turning a doorknob.\n(C) He’s climbing a ladder.\n(D) He’s painting a wall.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 8,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "He’s standing on a rug.",
+            "B": "He’s turning a doorknob.",
+            "C": "He’s climbing a ladder.",
+            "D": "He’s painting a wall."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đang trèo lên thang ⇒ (C) climbing a ladder.",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 9,
+      "questionEnd": 9,
+      "audio": "39.mp3",
+      "image": "/listening-practice/part1/basic/39.jpg",
+      "imageWidth": 388,
+      "transcript": "(A) The woman is putting some papers into a file folder.\n(B) The woman is typing on a keyboard.\n(C) The woman is seated in front of a computer.\n(D) The woman is holding a cup.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 9,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "The woman is putting some papers into a file folder.",
+            "B": "The woman is typing on a keyboard.",
+            "C": "The woman is seated in front of a computer.",
+            "D": "The woman is holding a cup."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "C",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người phụ nữ ngồi trước màn hình máy tính ⇒ (C). Tay cô đặt trên chuột, không gõ phím (B).",
+            "glossary": []
+          }
+        }
+      ]
+    },
+    {
+      "part": 1,
+      "questionStart": 10,
+      "questionEnd": 10,
+      "audio": "40.mp3",
+      "image": "/listening-practice/part1/basic/40.jpg",
+      "imageWidth": 647,
+      "transcript": "(A) The man is reaching above a shelf.\n(B) The man is adjusting his glasses.\n(C) The man is paying for an item.\n(D) The man is trying on gloves.",
+      "keywords": [],
+      "questions": [
+        {
+          "number": 10,
+          "part": 1,
+          "prompt": null,
+          "options": {
+            "A": "The man is reaching above a shelf.",
+            "B": "The man is adjusting his glasses.",
+            "C": "The man is paying for an item.",
+            "D": "The man is trying on gloves."
+          },
+          "showText": false,
+          "broken": false,
+          "answer": "D",
+          "explanation": {
+            "translation": null,
+            "reasoning": "Người đàn ông đang thử găng tay trong cửa hàng ⇒ (D) trying on gloves.",
+            "glossary": []
+          }
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}
