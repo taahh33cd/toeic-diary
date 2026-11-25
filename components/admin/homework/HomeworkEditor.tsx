@@ -109,6 +109,47 @@ export default function HomeworkEditor({
   const [showTargets, setShowTargets] = useState(false);
   const [extras, setExtras] = useState<PickedTarget[]>([]);
   const [note, setNote] = useState<string | null>(null);
+  const [aiOpen, setAiOpen] = useState(false);
+  const [aiNote, setAiNote] = useState("");
+  const [aiBusy, setAiBusy] = useState(false);
+  const [aiMsg, setAiMsg] = useState<{ tone: "ok" | "warn"; text: string } | null>(null);
+
+  async function aiDraft() {
+    if (aiNote.trim().length < 5) return;
+    setAiBusy(true);
+    setAiMsg(null);
+    try {
+      const r = await fetch("/api/admin/homework/ai-draft", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ note: aiNote.trim() }),
+      });
+      const d = (await r.json().catch(() => ({}))) as {
+        items?: { section: HwCatKey; text: string; link: string; catalogId?: string; minutes?: number; why?: string }[];
+        error?: string;
+      };
+      if (!r.ok || !d.items) throw new Error(d.error ?? "AI không soạn được");
+      for (const it of d.items) {
+        addDrafts(it.section, [
+          {
+            text: it.text,
+            link: it.link,
+            desc: it.why ? `<i>${it.why.replace(/[<>&]/g, "")}</i>` : "",
+            ...(it.catalogId ? { catalogId: it.catalogId, minutes: it.minutes, srcLink: it.link } : {}),
+          },
+        ]);
+      }
+      const auto = d.items.filter((i) => i.catalogId).length;
+      setAiMsg({
+        tone: "ok",
+        text: `AI thêm ${d.items.length} bài (${auto} bài trong kho, tự chấm). Xem lại rồi xoá bài không hợp.`,
+      });
+    } catch (e) {
+      setAiMsg({ tone: "warn", text: e instanceof Error ? e.message : "AI không soạn được" });
+    } finally {
+      setAiBusy(false);
+    }
+  }
 
   const hwIdRef = useRef(initial?.id ?? `hw${Date.now()}`);
   const isNewRef = useRef(!isEdit);
@@ -455,6 +496,45 @@ export default function HomeworkEditor({
           )}
         </div>
 
+        {/* AI soạn nháp từ ghi chú buổi học */}
+        <div className="rounded-xl border" style={{ borderColor: "var(--border)", background: "var(--bg-primary)" }}>
+          <button
+            type="button"
+            onClick={() => setAiOpen((v) => !v)}
+            className="w-full flex items-center justify-between px-3 py-2 text-xs font-semibold"
+            style={{ color: "var(--text-primary)" }}
+          >
+            <span>✨ Soạn nháp từ ghi chú buổi học (AI)</span>
+            <span style={{ color: "var(--text-muted)" }}>{aiOpen ? "Thu gọn" : "Mở"}</span>
+          </button>
+          {aiOpen && (
+            <div className="px-3 pb-3 space-y-2">
+              <textarea
+                value={aiNote}
+                onChange={(e) => setAiNote(e.target.value)}
+                rows={3}
+                placeholder="VD: Hôm nay học Part 5 thì HTHT, HV còn nhầm với quá khứ đơn. Nghe Part 2 câu hỏi WHERE. Ôn 20 từ chủ đề văn phòng."
+                className="w-full px-3 py-2 text-sm rounded-lg border outline-none resize-y"
+                style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+              />
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <p className="text-[11px]" style={{ color: aiMsg ? (aiMsg.tone === "ok" ? "#4A7C59" : "#9A6A12") : "var(--text-muted)" }}>
+                  {aiMsg?.text ?? "AI chỉ chọn bài có thật trong kho, thêm vào form để bạn duyệt — không tự giao."}
+                </p>
+                <button
+                  type="button"
+                  disabled={aiBusy || aiNote.trim().length < 5}
+                  onClick={() => void aiDraft()}
+                  className="text-xs font-semibold px-3 py-1.5 rounded-lg disabled:opacity-50"
+                  style={{ background: "var(--accent-primary)", color: "#fff" }}
+                >
+                  {aiBusy ? "AI đang soạn…" : "Soạn nháp"}
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+
         {/* Các mục */}
         {HW_CATS.map(({ key, label, color, hint }) => {
           const items = sections[key];
@@ -690,6 +770,7 @@ function ItemCard({
       <div className="flex flex-wrap items-center gap-1">
         {linked ? <Tag tone="ok">Tự chấm</Tag> : <Tag tone="warn">HV tự tick</Tag>}
         {draft.deckId && linked && <Tag tone="info">Flashcard</Tag>}
+        {draft.personal && <Tag tone="info">🎯 Bài riêng</Tag>}
         {linked && draft.minutes ? <Tag>⏱ {draft.minutes}′</Tag> : null}
         {usedOn && <Tag tone="warn">Đã giao {ddmm(usedOn)}</Tag>}
         {wasLinked && !linked && (

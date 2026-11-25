@@ -10,6 +10,8 @@ export interface HwItem {
   deckId?: string;
   /** Số phút ước tính, để giáo viên thấy tổng khối lượng. */
   minutes?: number;
+  /** Bài riêng giao thêm cho HV này (không có trong bản BTVN của lớp). */
+  personal?: boolean;
 }
 
 export interface Homework {

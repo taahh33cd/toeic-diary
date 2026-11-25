@@ -18,6 +18,7 @@ const ItemSchema = z.object({
   catalogId: z.string().max(200).optional(),
   deckId: z.string().max(200).optional(),
   minutes: z.number().int().min(0).max(600).optional(),
+  personal: z.boolean().optional(),
 });
 
 export const ContentSchema = z.object({
@@ -62,4 +63,21 @@ export function mergeContent(a: HwContent, b: HwContent): HwContent {
 /** Nội dung → giá trị JSON cho Prisma. */
 export function toJson(c: HwContent): Prisma.InputJsonValue {
   return c as unknown as Prisma.InputJsonValue;
+}
+
+/**
+ * Bản BTVN của lớp vừa được sửa/đồng bộ xuống HV: giữ lại các bài riêng
+ * (`personal`) HV đó đang có, nối vào cuối đúng mục cũ. Không có thì trả nguyên.
+ */
+export function keepPersonal<T extends Partial<Homework>>(prev: Partial<Homework> | undefined, next: T): T {
+  if (!prev) return next;
+  let out: T | null = null;
+  for (const k of HW_SECTION_KEYS) {
+    const mine = ((prev[k] as HwItem[] | undefined) ?? []).filter((i) => i?.personal);
+    if (mine.length === 0) continue;
+    const base = ((next[k] as HwItem[] | undefined) ?? []).filter((i) => !i?.personal);
+    out ??= { ...next };
+    (out as Record<string, unknown>)[k] = [...base, ...mine];
+  }
+  return out ?? next;
 }

@@ -7,6 +7,7 @@ const TABS = [
   { href: "/admin/homework/drafts", label: "🗓️ Nháp tuần này" },
   { href: "/admin/homework/curricula", label: "📚 Giáo trình" },
   { href: "/admin/homework/templates", label: "📋 Mẫu BTVN" },
+  { href: "/admin/homework/personal", label: "🎯 Bài riêng từng HV" },
   { href: "/admin/homework", label: "👤 Giao cho 1 HV", exact: true },
 ];
 

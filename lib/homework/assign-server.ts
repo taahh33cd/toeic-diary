@@ -14,7 +14,7 @@ import { prisma } from "@/lib/db/prisma";
 import { getAdminDb } from "@/lib/firebase/admin";
 import { sendPushToUser } from "@/lib/push";
 import type { ClassSession, Homework, HwItem } from "@/lib/firebase/types";
-import { HW_SECTION_KEYS } from "./content";
+import { HW_SECTION_KEYS, keepPersonal } from "./content";
 import { shiftToSchedule } from "./schedule";
 
 export type HwTarget = { type: "class" | "student"; id: string };
@@ -32,7 +32,8 @@ async function upsertAt(path: string, hw: Homework): Promise<boolean> {
   const list = asList(snap.val());
   const idx = list.findIndex((h) => h?.id === hw.id);
   if (idx === -1) list.push(hw);
-  else list[idx] = hw;
+  // Bản HV: giữ bài riêng đã giao thêm cho HV đó.
+  else list[idx] = path.startsWith("students/") ? keepPersonal(list[idx], hw) : hw;
   await db.ref(path).set(list);
   return idx === -1;
 }

@@ -8,6 +8,7 @@ import {
 } from "firebase/database";
 import { ref as storageRef, uploadBytesResumable, getDownloadURL, deleteObject } from "firebase/storage";
 import { firebaseDb, firebaseStorage } from "./client";
+import { keepPersonal } from "@/lib/homework/content";
 import type {
   Student,
   Homework,
@@ -180,7 +181,9 @@ export async function pushHomework(
 export async function updateHomework(
   code: string,
   hwId: string,
-  hw: Homework
+  hw: Homework,
+  /** Bản của lớp đè xuống HV: giữ bài riêng của HV (xem keepPersonal). */
+  opts: { keepPersonal?: boolean } = {}
 ): Promise<void> {
   const snap = await get(ref(firebaseDb, `students/${code}/homework`));
   const existing: Homework[] = snap.val() ?? [];
@@ -189,7 +192,8 @@ export async function updateHomework(
     // Student doesn't have this hw yet (e.g. added to class after initial push) → upsert
     await set(ref(firebaseDb, `students/${code}/homework`), [...existing, hw]);
   } else {
-    await set(ref(firebaseDb, `students/${code}/homework`), existing.map((h) => h.id === hwId ? hw : h));
+    const next = opts.keepPersonal ? keepPersonal(existing[idx], hw) : hw;
+    await set(ref(firebaseDb, `students/${code}/homework`), existing.map((h) => h.id === hwId ? next : h));
   }
 }
 
