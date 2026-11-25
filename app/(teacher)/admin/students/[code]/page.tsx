@@ -12,6 +12,8 @@ import { useHwViewed } from "@/hooks/firebase/useHwViewed";
 import { useHwFiles } from "@/hooks/firebase/useHwFiles";
 import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { useClasses } from "@/hooks/firebase/useClasses";
+import HomeworkEditor from "@/components/admin/homework/HomeworkEditor";
+import { assignHomeworkDecks, useAutoDoneOnMount } from "@/lib/homework/client";
 import { HwExportModal } from "@/components/admin/HwExportModal";
 import { ZoomableImage } from "@/components/admin/ZoomableImage";
 import {
@@ -1083,100 +1085,6 @@ const HW_SECTIONS: {
 
 type HwSectionKey = keyof Omit<Homework, "id" | "date" | "endDate" | "title">;
 
-interface HwFormState {
-  date: string;
-  endDate: string;
-  title: string;
-  sections: Record<HwSectionKey, HwItem[]>;
-}
-
-function emptyHwForm(): HwFormState {
-  return {
-    date: today(),
-    endDate: "",
-    title: "",
-    sections: { vocab: [], listening: [], reading: [], practice: [], other: [] },
-  };
-}
-
-// ─── Rich-text toolbar input ──────────────────────────────────────────────────
-
-function RichTextInput({ value, onChange, placeholder }: {
-  value: string;
-  onChange: (v: string) => void;
-  placeholder?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const internalVal = useRef<string>("");
-
-  useEffect(() => {
-    if (ref.current && value !== internalVal.current) {
-      ref.current.innerHTML = value;
-      internalVal.current = value;
-    }
-  }, [value]);
-
-  function wrap(tag: string) {
-    const sel = window.getSelection();
-    if (!sel || !sel.rangeCount || sel.isCollapsed) return;
-    const range = sel.getRangeAt(0);
-    if (!ref.current?.contains(range.commonAncestorContainer)) return;
-    const wrapper = document.createElement(tag);
-    try {
-      range.surroundContents(wrapper);
-    } catch {
-      const fragment = range.extractContents();
-      wrapper.appendChild(fragment);
-      range.insertNode(wrapper);
-    }
-    sel.removeAllRanges();
-    const html = ref.current!.innerHTML;
-    internalVal.current = html;
-    onChange(html);
-  }
-
-  return (
-    <div style={{ border: "1px solid var(--border)", borderRadius: 8, overflow: "hidden" }}>
-      <div className="flex gap-1 px-2 py-1" style={{ background: "var(--bg-elevated)", borderBottom: "1px solid var(--border)" }}>
-        {[
-          { tag: "b",    label: "B",  s: { fontWeight: 700 } },
-          { tag: "i",    label: "I",  s: { fontStyle: "italic" } },
-          { tag: "u",    label: "U",  s: { textDecoration: "underline" } },
-          { tag: "mark", label: "HL", s: { background: "#fef08a", color: "#000", padding: "0 2px" } },
-        ].map(({ tag, label, s }) => (
-          <button
-            key={tag}
-            type="button"
-            onMouseDown={(e) => { e.preventDefault(); wrap(tag); }}
-            className="text-[11px] px-1.5 py-0.5 rounded font-semibold"
-            style={{ border: "1px solid var(--border)", background: "var(--bg-primary)", cursor: "pointer", color: "var(--text-primary)", ...s }}
-          >{label}</button>
-        ))}
-        <span className="text-[10px] self-center ml-1" style={{ color: "var(--text-muted)" }}>Bôi đen → format</span>
-      </div>
-      <div style={{ position: "relative" }}>
-        <div
-          ref={ref}
-          contentEditable
-          suppressContentEditableWarning
-          onInput={(e) => {
-            const html = (e.currentTarget as HTMLDivElement).innerHTML;
-            internalVal.current = html;
-            onChange(html);
-          }}
-          className="w-full px-3 py-2 text-xs outline-none min-h-[3rem]"
-          style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }}
-        />
-        {!value && (
-          <span className="absolute top-2 left-3 text-xs pointer-events-none" style={{ color: "var(--text-muted)" }}>
-            {placeholder}
-          </span>
-        )}
-      </div>
-    </div>
-  );
-}
-
 // ─── Homework progress helper ─────────────────────────────────────────────────
 
 const HW_KEYS = ["vocab", "listening", "reading", "practice", "other"] as const;
@@ -1200,231 +1108,11 @@ function calcHwProgress(
   return { done, total };
 }
 
-// Per-item component to keep desc-toggle state local
-function HwItemRow({ item, onUpdate, onRemove }: {
-  item: HwItem;
-  onUpdate: (field: "text" | "link" | "desc", val: string) => void;
-  onRemove: () => void;
-}) {
-  const [showDesc, setShowDesc] = useState(!!(item.desc));
-  return (
-    <div className="space-y-1.5 rounded-lg p-2" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
-      {/* Row 1: text + link + +Mô tả + X */}
-      <div className="flex gap-2 items-center">
-        <input
-          value={item.text}
-          onChange={(e) => onUpdate("text", e.target.value)}
-          placeholder="Nội dung bài tập..."
-          className="flex-1 min-w-0 px-2 py-1.5 text-xs rounded-lg border outline-none"
-          style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-        />
-        <input
-          value={item.link ?? ""}
-          onChange={(e) => onUpdate("link", e.target.value)}
-          placeholder="Link (paste vào đây)"
-          className="w-44 px-2 py-1.5 text-xs rounded-lg border outline-none shrink-0"
-          style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-        />
-        <button
-          type="button"
-          onClick={() => setShowDesc((v) => !v)}
-          className="text-[10px] px-2 py-1.5 rounded-lg border shrink-0 whitespace-nowrap"
-          style={{
-            borderColor: showDesc ? "var(--accent-primary)" : "var(--border)",
-            color: showDesc ? "var(--accent-primary)" : "var(--text-muted)",
-            background: showDesc ? "rgba(196,98,45,0.08)" : "transparent",
-          }}
-        >
-          {showDesc ? "✓ Mô tả" : "+ Mô tả"}
-        </button>
-        <button type="button" onClick={onRemove} className="p-1 shrink-0 hover:opacity-70" style={{ color: "rgb(239,68,68)" }}>
-          <Trash2 size={12} />
-        </button>
-      </div>
-      {/* Row 2: rich text desc (toggleable) */}
-      {showDesc && (
-        <RichTextInput
-          value={item.desc ?? ""}
-          onChange={(v) => onUpdate("desc", v)}
-          placeholder="Mô tả chi tiết (hỗ trợ B/I/U/HL)..."
-        />
-      )}
-    </div>
-  );
-}
-
-function buildHwFromForm(form: HwFormState, hwId: string): Homework {
-  const hw: Homework = {
-    id: hwId,
-    date: form.date,
-    ...(form.endDate ? { endDate: form.endDate } : {}),
-    ...(form.title.trim() ? { title: form.title.trim() } : {}),
-  };
-  HW_SECTIONS.forEach(({ key }) => {
-    const items = form.sections[key].filter((i) => i.text.trim());
-    if (items.length > 0) hw[key] = items.map((i) => ({
-      text: i.text,
-      ...(i.link ? { link: i.link } : {}),
-      ...(i.desc ? { desc: i.desc } : {}),
-    }));
-  });
-  return hw;
-}
-
-function HwModal({ initial, editId, targetLabel, onSave, onAutosave, onClose }: {
-  initial: HwFormState;
-  editId?: string;
-  targetLabel?: string;
-  onSave: (form: HwFormState, hwId: string) => Promise<void>;
-  onAutosave?: (hw: Homework, isNew: boolean) => Promise<void>;
-  onClose: () => void;
-}) {
-  const [form, setForm] = useState<HwFormState>(initial);
-  const [saving, setSaving] = useState(false);
-  const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved">("idle");
-  const hwIdRef = useRef(editId ?? `hw${Date.now()}`);
-  const isNewRef = useRef(!editId);
-  const onAutosaveRef = useRef(onAutosave);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-  useEffect(() => { onAutosaveRef.current = onAutosave; }, [onAutosave]);
-
-  useEffect(() => {
-    if (!onAutosaveRef.current) return;
-    clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(async () => {
-      if (!onAutosaveRef.current) return;
-      setSaveStatus("saving");
-      const hw = buildHwFromForm(form, hwIdRef.current);
-      await onAutosaveRef.current(hw, isNewRef.current);
-      isNewRef.current = false;
-      setSaveStatus("saved");
-    }, 1000);
-    return () => clearTimeout(timerRef.current);
-  }, [form]);
-
-  function addItem(sec: HwSectionKey) {
-    setForm((f) => ({ ...f, sections: { ...f.sections, [sec]: [...f.sections[sec], { text: "", link: "", desc: "" }] } }));
-  }
-  function updateItem(sec: HwSectionKey, idx: number, field: "text" | "link" | "desc", val: string) {
-    setForm((f) => {
-      const items = [...f.sections[sec]];
-      items[idx] = { ...items[idx], [field]: val };
-      return { ...f, sections: { ...f.sections, [sec]: items } };
-    });
-  }
-  function removeItem(sec: HwSectionKey, idx: number) {
-    setForm((f) => ({ ...f, sections: { ...f.sections, [sec]: f.sections[sec].filter((_, i) => i !== idx) } }));
-  }
-
-  async function handleSave() {
-    if (!form.date) return;
-    setSaving(true);
-    clearTimeout(timerRef.current);
-    try {
-      await onSave(form, hwIdRef.current);
-    } catch (err) {
-      console.error("[HwModal handleSave]", err);
-      const msg = err instanceof Error ? err.message : String(err);
-      alert("Lưu thất bại: " + msg);
-    } finally {
-      setSaving(false);
-    }
-  }
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center p-4 overflow-y-auto" style={{ background: "rgba(0,0,0,0.5)" }}>
-      <div className="w-full max-w-2xl my-8 rounded-2xl" style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}>
-        {/* Header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
-          <div>
-            <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>📋 {editId ? "Sửa BTVN" : "Thêm BTVN"}</h3>
-            {targetLabel && (
-              <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>→ {targetLabel}</p>
-            )}
-          </div>
-          <button onClick={onClose} className="text-xl" style={{ color: "var(--text-muted)" }}>×</button>
-        </div>
-
-        <div className="p-5 space-y-4">
-          {/* Dates + Title */}
-          <div className="grid grid-cols-3 gap-3">
-            <InputRow label="NGÀY BẮT ĐẦU">
-              <Input value={form.date} onChange={(v) => setForm((f) => ({ ...f, date: v }))} type="date" />
-            </InputRow>
-            <InputRow label="NGÀY KẾT THÚC (để trống = 1 ngày)">
-              <Input value={form.endDate} onChange={(v) => setForm((f) => ({ ...f, endDate: v }))} type="date" />
-            </InputRow>
-            <InputRow label="TIÊU ĐỀ (TUỲ CHỌN)">
-              <Input value={form.title} onChange={(v) => setForm((f) => ({ ...f, title: v }))} placeholder="VD: Ngày 24/3 – 26/3" />
-            </InputRow>
-          </div>
-
-          {/* Sections */}
-          {HW_SECTIONS.map(({ key, label, emoji, color, hint }) => (
-            <div key={key}>
-              <div className="flex items-center justify-between mb-2 pb-1.5 border-b" style={{ borderColor: "var(--border)" }}>
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full shrink-0" style={{ background: color }} />
-                  <span className="text-xs font-bold uppercase tracking-wider" style={{ color }}>{emoji} {label.toUpperCase()}</span>
-                </div>
-                <button
-                  onClick={() => addItem(key)}
-                  className="text-xs px-2 py-0.5 rounded-lg flex items-center gap-1"
-                  style={{ color: "var(--accent-primary)", background: "rgba(196,98,45,0.08)" }}
-                >
-                  <Plus size={10} /> Thêm mục
-                </button>
-              </div>
-
-              {hint && (
-                <p className="text-[10px] mb-2 px-2 py-1 rounded" style={{ color, background: `${color}12` }}>{hint}</p>
-              )}
-
-              {form.sections[key].length === 0 ? (
-                <button
-                  onClick={() => addItem(key)}
-                  className="w-full text-xs py-1.5 rounded-lg border-dashed border"
-                  style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "transparent" }}
-                >
-                  + Thêm mục
-                </button>
-              ) : (
-                <div className="space-y-2">
-                  {form.sections[key].map((item, idx) => (
-                    <HwItemRow
-                      key={idx}
-                      item={item}
-                      onUpdate={(field, val) => updateItem(key, idx, field, val)}
-                      onRemove={() => removeItem(key, idx)}
-                    />
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div className="flex items-center justify-between px-5 py-4 border-t" style={{ borderColor: "var(--border)" }}>
-          <span className="text-xs" style={{ color: "var(--text-muted)" }}>
-            {saveStatus === "saving" ? "Đang lưu tự động..." : saveStatus === "saved" ? "✓ Đã lưu tự động" : ""}
-          </span>
-          <div className="flex gap-2">
-            <button onClick={onClose} className="px-4 py-2 rounded-xl text-sm border" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>Hủy</button>
-            <button onClick={handleSave} disabled={saving || !form.date} className="px-4 py-2 rounded-xl text-sm font-semibold disabled:opacity-50" style={{ background: "var(--accent-primary)", color: "#fff" }}>
-              {saving ? "Đang lưu..." : "💾 Lưu BTVN"}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 // ─── Duplicate BTVN: target picker ────────────────────────────────────────────
 
 type DupTarget =
-  | { type: "student"; code: string; label: string }
-  | { type: "class"; classId: string; members: string[]; label: string };
+  | { type: "student"; code: string; label: string; schedule?: ClassSession[] }
+  | { type: "class"; classId: string; members: string[]; label: string; schedule?: ClassSession[] };
 
 function DuplicateTargetModal({ hw, currentCode, onConfirm, onClose }: {
   hw: Homework;
@@ -1451,10 +1139,10 @@ function DuplicateTargetModal({ hw, currentCode, onConfirm, onClose }: {
       onConfirm({ type: "student", code: currentCode, label: "Học viên này" });
     } else if (scope === "student" && selectedCode) {
       const s = students.find((s) => s.id === selectedCode);
-      onConfirm({ type: "student", code: selectedCode, label: s ? `${s.name} (${s.id})` : selectedCode });
+      onConfirm({ type: "student", code: selectedCode, label: s ? `${s.name} (${s.id})` : selectedCode, schedule: s?.weeklySchedule });
     } else if (scope === "class" && selectedClassId) {
       const c = classes.find((c) => c.id === selectedClassId);
-      if (c) onConfirm({ type: "class", classId: c.id, members: c.members ?? [], label: `${c.name} (${c.members?.length ?? 0} học viên)` });
+      if (c) onConfirm({ type: "class", classId: c.id, members: c.members ?? [], label: `${c.name} (${c.members?.length ?? 0} học viên)`, schedule: c.weeklySchedule });
     }
   }
 
@@ -1561,19 +1249,25 @@ function PersonalHWSection({
   submissions,
   dayLinks,
   hwFiles,
+  ownSchedule,
 }: {
   homework: Homework[];
   code: string;
   submissions: Record<string, { ticked?: boolean; url?: string; updatedAt?: string }>;
   dayLinks: Record<string, { link?: string }>;
   hwFiles: HwFilesMap;
+  ownSchedule?: ClassSession[];
 }) {
+  // HV thuộc lớp thì theo lịch lớp, không thì lịch riêng — giống mục Lịch học cố định.
+  const { classes: allClasses } = useClasses();
+  const schedule = allClasses.find((c) => c.members?.includes(code))?.weeklySchedule ?? ownSchedule;
+  useAutoDoneOnMount(true, [code]);
   const [filter, setFilter] = useState<"active" | "all" | "done" | "expired">("all");
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
-  const [modal, setModal] = useState<{ mode: "add" | "edit"; initial: HwFormState; editId?: string } | null>(null);
+  const [modal, setModal] = useState<{ mode: "add" | "edit"; initial?: Homework } | null>(null);
   const [dupPick, setDupPick] = useState<Homework | null>(null);
   const [exporting, setExporting] = useState<Homework | null>(null);
-  const [dupModal, setDupModal] = useState<{ initial: HwFormState; target: DupTarget } | null>(null);
+  const [dupModal, setDupModal] = useState<{ initial: Homework; target: DupTarget } | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
   const [fileModal, setFileModal] = useState<{ hwId: string; index: number } | null>(null);
   const [noteInput, setNoteInput] = useState("");
@@ -1660,42 +1354,20 @@ function PersonalHWSection({
     setExpanded((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
   }
 
-  function formFromHw(hw: Homework): HwFormState {
-    const sections: Record<HwSectionKey, HwItem[]> = { vocab: [], listening: [], reading: [], practice: [], other: [] };
-    HW_SECTIONS.forEach(({ key }) => {
-      sections[key] = (hw[key] ?? []).map((i) => ({ text: i.text, link: i.link ?? "", desc: i.desc ?? "" }));
-    });
-    return { date: hw.date, endDate: hw.endDate ?? "", title: hw.title ?? "", sections };
-  }
-
-  async function handleAutosaveHw(hw: Homework, isNew: boolean, editId?: string) {
+  async function handleAutosaveHw(hw: Homework, isNew: boolean) {
     if (isNew) {
       await pushHomework(code, hw);
       autosavedHwIdRef.current = hw.id;
     } else {
-      await updateHomework(code, editId ?? hw.id, hw);
+      await updateHomework(code, hw.id, hw);
     }
   }
 
-  async function handleSaveHw(form: HwFormState, editId?: string, modalHwId?: string) {
-    const resolvedId = editId ?? modalHwId ?? `hw${Date.now()}`;
-    const hwBase = {
-      id: resolvedId,
-      date: form.date,
-      endDate: form.endDate || undefined,
-      ...(form.title.trim() ? { title: form.title.trim() } : {}),
-    } as Homework;
-    HW_SECTIONS.forEach(({ key }) => {
-      const items = form.sections[key].filter((i) => i.text.trim());
-      if (items.length > 0) hwBase[key] = items.map((i) => ({
-        text: i.text,
-        ...(i.link ? { link: i.link } : {}),
-        ...(i.desc ? { desc: i.desc } : {}),
-      }));
-    });
-    const alreadyPushed = !editId && autosavedHwIdRef.current === resolvedId;
-    if (editId || alreadyPushed) await updateHomework(code, resolvedId, hwBase);
-    else await pushHomework(code, hwBase);
+  async function handleSaveHw(hw: Homework, isEdit: boolean) {
+    const alreadyPushed = !isEdit && autosavedHwIdRef.current === hw.id;
+    if (isEdit || alreadyPushed) await updateHomework(code, hw.id, hw);
+    else await pushHomework(code, hw);
+    await assignHomeworkDecks(hw, [code]);
     autosavedHwIdRef.current = null;
     setModal(null);
   }
@@ -1708,18 +1380,20 @@ function PersonalHWSection({
   }
 
   function handleDupTargetConfirm(hw: Homework, target: DupTarget) {
-    setDupModal({ initial: { ...formFromHw(hw), date: "", endDate: "" }, target });
+    const copy: Homework = { ...hw, id: `hw${Date.now()}`, date: "" };
+    delete copy.endDate;
+    setDupModal({ initial: copy, target });
     setDupPick(null);
   }
 
-  async function handleSaveDuplicate(form: HwFormState, hwId: string, target: DupTarget) {
-    const hw = buildHwFromForm(form, hwId);
+  async function handleSaveDuplicate(hw: Homework, target: DupTarget) {
     if (target.type === "student") {
       await pushHomework(target.code, hw);
     } else {
       await pushClassHomework(target.classId, hw);
       await Promise.all(target.members.map((memberCode) => pushHomework(memberCode, hw)));
     }
+    await assignHomeworkDecks(hw, target.type === "class" ? target.members : [target.code]);
     setDupModal(null);
   }
 
@@ -1733,11 +1407,16 @@ function PersonalHWSection({
   return (
     <>
       {modal && (
-        <HwModal
+        <HomeworkEditor
           initial={modal.initial}
-          editId={modal.editId}
-          onSave={(form, hwId) => handleSaveHw(form, modal.editId, hwId)}
-          onAutosave={(hw, isNew) => handleAutosaveHw(hw, isNew, modal.editId)}
+          isEdit={modal.mode === "edit"}
+          heading={modal.mode === "edit" ? "Sửa BTVN" : "Thêm BTVN"}
+          targetLabel={code}
+          schedule={schedule}
+          history={homework}
+          saveLabel="💾 Lưu BTVN"
+          onSave={(hw) => handleSaveHw(hw, modal.mode === "edit")}
+          onAutosave={handleAutosaveHw}
           onClose={() => { setModal(null); autosavedHwIdRef.current = null; }}
         />
       )}
@@ -1756,10 +1435,13 @@ function PersonalHWSection({
       )}
 
       {dupModal && (
-        <HwModal
+        <HomeworkEditor
           initial={dupModal.initial}
+          heading="Nhân bản BTVN"
           targetLabel={dupModal.target.label}
-          onSave={(form, hwId) => handleSaveDuplicate(form, hwId, dupModal.target)}
+          schedule={dupModal.target.schedule ?? (dupModal.target.type === "student" && dupModal.target.code === code ? schedule : undefined)}
+          saveLabel="💾 Lưu BTVN"
+          onSave={(hw) => handleSaveDuplicate(hw, dupModal.target)}
           onClose={() => setDupModal(null)}
         />
       )}
@@ -1768,7 +1450,7 @@ function PersonalHWSection({
         title="📋 BTVN (Bài tập về nhà)"
         action={
           <button
-            onClick={() => setModal({ mode: "add", initial: emptyHwForm() })}
+            onClick={() => setModal({ mode: "add" })}
             className="text-xs px-2.5 py-1.5 rounded-lg font-medium flex items-center gap-1"
             style={{ background: "var(--accent-primary)", color: "#fff" }}
           >
@@ -1865,7 +1547,7 @@ function PersonalHWSection({
                   )}
 
                   <button
-                    onClick={(e) => { e.stopPropagation(); setModal({ mode: "edit", initial: formFromHw(hw), editId: hw.id }); }}
+                    onClick={(e) => { e.stopPropagation(); setModal({ mode: "edit", initial: hw }); }}
                     className="p-1 hover:opacity-70 shrink-0" style={{ color: "var(--text-muted)" }}
                   >
                     <ChevronDown size={12} style={{ display: "none" }} />✏️
@@ -2617,6 +2299,7 @@ export default function StudentEditorPage() {
             submissions={submissions}
             dayLinks={dayLinks}
             hwFiles={hwFiles}
+            ownSchedule={student.weeklySchedule}
           />
         </div>
 

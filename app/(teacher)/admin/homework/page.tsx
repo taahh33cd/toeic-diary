@@ -3,214 +3,47 @@
 import { useState } from "react";
 import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { useHomework } from "@/hooks/firebase/useHomework";
+import { useClasses } from "@/hooks/firebase/useClasses";
 import { pushHomework, setHomework } from "@/lib/firebase/helpers";
-import type { Homework, HwItem } from "@/lib/firebase/types";
-import DeckAssignPicker from "@/components/vocab/DeckAssignPicker";
 import AssignmentTracker from "@/components/vocab/AssignmentTracker";
-import type { DeckSummary } from "@/lib/vocab/client";
+import HomeworkEditor from "@/components/admin/homework/HomeworkEditor";
+import { assignHomeworkDecks } from "@/lib/homework/client";
 
 const SECTIONS = ["vocab", "listening", "reading", "practice", "other"] as const;
-const SECTION_LABELS: Record<string, string> = {
-  vocab: "Từ vựng", listening: "Nghe", reading: "Đọc", practice: "Luyện tập", other: "Khác",
-};
 
-function ItemRow({
-  item,
-  onChange,
-  onRemove,
-}: {
-  item: HwItem;
-  onChange: (val: HwItem) => void;
-  onRemove: () => void;
-}) {
-  return (
-    <div className="flex gap-2 items-start">
-      <input
-        type="text"
-        placeholder="Tên bài tập *"
-        value={item.text}
-        onChange={(e) => onChange({ ...item, text: e.target.value })}
-        className="flex-1 px-2 py-1.5 rounded-lg text-xs border outline-none"
-        style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-      />
-      <input
-        type="url"
-        placeholder="Link"
-        value={item.link ?? ""}
-        onChange={(e) => onChange({ ...item, link: e.target.value || undefined })}
-        className="w-36 px-2 py-1.5 rounded-lg text-xs border outline-none"
-        style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-      />
-      <button
-        type="button"
-        onClick={onRemove}
-        className="text-xs px-2 py-1.5 min-h-[44px] rounded-lg"
-        style={{ color: "rgb(220,38,38)", background: "rgba(239,68,68,0.08)" }}
-      >
-        ✕
-      </button>
-    </div>
-  );
-}
-
-type SectionKey = typeof SECTIONS[number];
-
-type FormSections = { [K in SectionKey]: HwItem[] };
-
+/**
+ * Giao bài cho một học viên — dùng chung khung soạn với trang lớp và trang HV.
+ * Chờ dữ liệu lớp tải xong rồi mới mở để hạn nộp tự điền đúng theo lịch học.
+ */
 function HomeworkForm({ code, onSaved }: { code: string; onSaved: () => void }) {
-  const today = new Date().toISOString().slice(0, 10);
-  const [date, setDate] = useState(today);
-  const [endDate, setEndDate] = useState("");
-  const [sections, setSections] = useState<FormSections>({
-    vocab: [], listening: [], reading: [], practice: [], other: [],
-  });
-  const [saving, setSaving] = useState(false);
-  /** Bộ thẻ đã chèn — tạo assignment sau khi lưu bài tập, để có đúng homeworkId. */
-  const [boThe, setBoThe] = useState<DeckSummary[]>([]);
+  const { homework } = useHomework(code);
+  const { students } = useAllStudents();
+  const { classes, loading } = useClasses();
+  const student = students.find((s) => s.id === code);
+  const schedule = classes.find((c) => c.members?.includes(code))?.weeklySchedule ?? student?.weeklySchedule;
 
-  function addItem(section: SectionKey) {
-    setSections((s) => ({ ...s, [section]: [...s[section], { text: "" }] }));
-  }
-
-  function updateItem(section: SectionKey, i: number, val: HwItem) {
-    setSections((s) => {
-      const arr = [...s[section]];
-      arr[i] = val;
-      return { ...s, [section]: arr };
-    });
-  }
-
-  function removeItem(section: SectionKey, i: number) {
-    setSections((s) => {
-      const arr = [...s[section]];
-      arr.splice(i, 1);
-      return { ...s, [section]: arr };
-    });
-  }
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!date) return;
-
-    const hw: Homework = {
-      id: `hw${Date.now()}`,
-      date,
-      endDate: endDate || undefined,
-      ...Object.fromEntries(
-        SECTIONS.map((s) => [s, sections[s].filter((i) => i.text.trim()).length > 0
-          ? sections[s].filter((i) => i.text.trim())
-          : undefined
-        ])
-      ) as Partial<Homework>,
-    };
-
-    setSaving(true);
-    await pushHomework(code, hw);
-
-    // Giao bộ thẻ sau khi bài tập đã có id. Lỗi ở đây không được làm hỏng bài
-    // tập vừa lưu — giáo viên giao lại được, còn bài tập thì không nên mất.
-    for (const d of boThe) {
-      await fetch("/api/flashcards/assignments", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          deckId: d.id,
-          studentCode: code,
-          activity: "study",
-          dueDate: endDate || date,
-          homeworkId: hw.id,
-        }),
-      }).catch(() => {});
-    }
-    // Fire-and-forget web push — don't block UI on delivery
-    fetch("/api/push/homework-new", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ studentCode: code, hwTitle: hw.title }),
-    }).catch(() => {});
-    setSaving(false);
-
-    // Reset
-    setSections({ vocab: [], listening: [], reading: [], practice: [], other: [] });
-    setBoThe([]);
-    setDate(today);
-    setEndDate("");
-    onSaved();
-  }
+  if (loading) return <div className="h-40 animate-pulse rounded-xl" style={{ background: "var(--border)" }} />;
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="flex gap-3 flex-wrap">
-        <div>
-          <label className="text-xs mb-1 block" style={{ color: "var(--text-muted)" }}>Ngày bắt đầu *</label>
-          <input type="date" required value={date} onChange={(e) => setDate(e.target.value)}
-            className="px-3 py-2 rounded-lg text-sm border outline-none"
-            style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-          />
-        </div>
-        <div>
-          <label className="text-xs mb-1 block" style={{ color: "var(--text-muted)" }}>Ngày kết thúc</label>
-          <input type="date" value={endDate} min={date} onChange={(e) => setEndDate(e.target.value)}
-            className="px-3 py-2 rounded-lg text-sm border outline-none"
-            style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-          />
-        </div>
-      </div>
-
-      {SECTIONS.map((section) => (
-        <div key={section} className="space-y-2">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold" style={{ color: "var(--text-secondary)" }}>
-              {SECTION_LABELS[section]}
-            </span>
-            <div className="flex items-center gap-1.5">
-              {section === "vocab" && (
-                <DeckAssignPicker
-                  onPick={(d) => {
-                    setBoThe((b) => (b.some((x) => x.id === d.id) ? b : [...b, d]));
-                    setSections((s) => ({
-                      ...s,
-                      vocab: [
-                        ...s.vocab,
-                        {
-                          text: `Flashcard: ${d.title} (${d.cardCount} thẻ)`,
-                          link: `/flashcards/d/${d.slug}`,
-                        },
-                      ],
-                    }));
-                  }}
-                />
-              )}
-              <button
-                type="button"
-                onClick={() => addItem(section)}
-                className="text-[11px] px-2 py-1 min-h-[44px] rounded"
-                style={{ color: "var(--accent-primary)", background: "rgba(196,98,45,0.08)" }}
-              >
-                + Thêm
-              </button>
-            </div>
-          </div>
-          {sections[section].map((item, i) => (
-            <ItemRow
-              key={i}
-              item={item}
-              onChange={(v) => updateItem(section, i, v)}
-              onRemove={() => removeItem(section, i)}
-            />
-          ))}
-        </div>
-      ))}
-
-      <button
-        type="submit"
-        disabled={saving || !date}
-        className="text-sm font-semibold px-4 py-2 rounded-lg"
-        style={{ background: "var(--accent-primary)", color: "#fff", opacity: saving ? 0.6 : 1 }}
-      >
-        {saving ? "Đang lưu..." : "💾 Lưu bài tập"}
-      </button>
-    </form>
+    <HomeworkEditor
+      inline
+      heading="Giao bài mới"
+      targetLabel={student ? `${student.name} (${code})` : code}
+      schedule={schedule}
+      history={homework}
+      saveLabel="💾 Lưu bài tập"
+      onSave={async (hw) => {
+        await pushHomework(code, hw);
+        await assignHomeworkDecks(hw, [code]);
+        // Web push chạy nền — không chặn giao diện chờ gửi xong.
+        fetch("/api/push/homework-new", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ studentCode: code, hwTitle: hw.title }),
+        }).catch(() => {});
+      }}
+      onClose={onSaved}
+    />
   );
 }
 

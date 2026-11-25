@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db/prisma";
 import { getAdminDb } from "@/lib/firebase/admin";
 import { sendPushToUser } from "@/lib/push";
 import { overdueHomework } from "@/lib/journal/homework";
+import { syncHomeworkAutoDone } from "@/lib/homework/auto-done";
 import type { Homework, SubmissionsMap, DayLinksMap } from "@/lib/firebase/types";
 
 export const runtime = "nodejs";
@@ -62,6 +63,8 @@ export async function POST(request: NextRequest) {
   const settled = await Promise.all(
     codes.map(async (code): Promise<Result> => {
       try {
+        // Đánh dấu trước các mục làm trong web để không nhắc nhầm HV đã làm.
+        await syncHomeworkAutoDone(code).catch(() => 0);
         const [profile, hwSnap, subSnap, dlSnap, frozenSnap] = await Promise.all([
           prisma.profile.findFirst({ where: { studentCode: code }, select: { id: true } }),
           db.ref(`students/${code}/homework`).get(),

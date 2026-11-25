@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useProfile } from "@/hooks/useProfile";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { useHomework } from "@/hooks/firebase/useHomework";
+import { useAutoDoneOnMount } from "@/lib/homework/client";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useDayLinks } from "@/hooks/firebase/useDayLinks";
@@ -179,7 +180,7 @@ function HwCard({
   hw: Homework; isCurrent: boolean; studentCode: string;
   submitted: boolean; submittedUrl?: string; dayLinkUrl?: string;
   onDone?: () => void;
-  allSubmissions: Record<string, { ticked?: boolean }>;
+  allSubmissions: Record<string, { ticked?: boolean; auto?: boolean }>;
   hwFilesForHw: HwFilesForHw;
   hwViewedForHw?: HwViewed;
 }) {
@@ -208,6 +209,21 @@ function HwCard({
     }
     return init;
   });
+
+  // Hệ thống tự đánh dấu (bài làm trong web) về sau khi thẻ đã mở → cập nhật theo.
+  // Chỉ THÊM dấu tick, không gỡ: gỡ là việc của học viên.
+  useEffect(() => {
+    setChecked(prev => {
+      let next: Record<string, boolean> | null = null;
+      for (const sec of SECTIONS) {
+        (hw[sec] ?? []).forEach((_, i) => {
+          const k = `${sec}-${i}`;
+          if (!prev[k] && allSubmissions[`${hw.id}_${sec}_${i}`]?.ticked) (next ??= { ...prev })[k] = true;
+        });
+      }
+      return next ?? prev;
+    });
+  }, [allSubmissions, hw]);
 
   const startDate = new Date(hw.date + "T00:00:00");
   const endDate   = hw.endDate ? new Date(hw.endDate + "T00:00:00") : null;
@@ -740,6 +756,20 @@ function HwCard({
                                 dangerouslySetInnerHTML={{ __html: item.text }}
                               />
 
+                              {/* Bài trong web: hệ thống tự đánh dấu khi làm xong */}
+                              {(item.catalogId || item.deckId) && (
+                                <span
+                                  title="Làm xong bài trên web là tự được đánh dấu"
+                                  style={{
+                                    flexShrink: 0, fontSize: ".66rem", fontWeight: 600,
+                                    padding: ".15rem .45rem", whiteSpace: "nowrap",
+                                    background: "rgba(74,124,89,.12)", color: "#4A7C59",
+                                  }}
+                                >
+                                  {isChecked && allSubmissions[`${hw.id}_${sec}_${i}`]?.auto ? "✓ Hệ thống ghi nhận" : "⚡ Tự chấm"}
+                                </span>
+                              )}
+
                               {/* Link button */}
                               {item.link && (
                                 <a
@@ -861,6 +891,8 @@ export default function MissionsPage() {
   const { dayLinks } = useDayLinks(profile?.studentCode);
   const { hwFiles } = useHwFiles(profile?.studentCode);
   const { hwViewed } = useHwViewed(profile?.studentCode);
+  // Đối chiếu bài làm trong web → tự đánh dấu các mục lấy từ kho bài.
+  useAutoDoneOnMount(!!profile?.studentCode);
   const [showCongrats, setShowCongrats] = useState(false); // G11
 
   const loading = profileLoading || hwLoading || goalLoading || subLoading;

@@ -5,6 +5,7 @@ import { useMemo, useState, useEffect } from "react";
 import { useProfile } from "@/hooks/useProfile";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useHomework } from "@/hooks/firebase/useHomework";
+import { useAutoDoneOnMount } from "@/lib/homework/client";
 import { useHwViewed } from "@/hooks/firebase/useHwViewed";
 import { useDayLinks } from "@/hooks/firebase/useDayLinks";
 import { useGoal } from "@/hooks/firebase/useGoal";
@@ -1203,6 +1204,7 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
   const { profile, loading: profileLoading } = useProfile();
   const { student, loading: studentLoading } = useStudent(profile?.studentCode);
   const { homework } = useHomework(profile?.studentCode);
+  useAutoDoneOnMount(!!profile?.studentCode);
   const { goal } = useGoal(profile?.studentCode);
   const { submissions } = useSubmissions(profile?.studentCode);
   const { stats: vocab } = useVocabDue(!!profile?.studentCode);

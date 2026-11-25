@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback, useEffect, useRef } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { get, ref as dbRef } from "firebase/database";
 import { firebaseDb } from "@/lib/firebase/client";
 import { useParams, useRouter } from "next/navigation";
@@ -23,6 +23,8 @@ import { useClass, useClasses } from "@/hooks/firebase/useClasses";
 import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { useClassAttendance } from "@/hooks/firebase/useClassAttendance";
 import { HwExportModal } from "@/components/admin/HwExportModal";
+import HomeworkEditor from "@/components/admin/homework/HomeworkEditor";
+import { assignHomeworkDecks, useAutoDoneOnMount } from "@/lib/homework/client";
 import { useAllSubmissions } from "@/hooks/firebase/useAllSubmissions";
 import { useAllDayLinks } from "@/hooks/firebase/useAllDayLinks";
 import {
@@ -46,6 +48,7 @@ import type {
   Student,
   SubmissionsMap,
   DayLinksMap,
+  ClassSession,
 } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -254,287 +257,6 @@ const HW_CATS: { key: HwCatKey; label: string; color: string; hint?: string }[] 
   { key: "practice", label: "Đề luyện thi", color: "#EF4444",
     hint: "Học viên mở đề → làm → nộp link → nhập điểm ở Tab Điểm số" },
 ];
-
-type HwItemDraft = { text: string; link: string; desc: string };
-type HwSections = Record<HwCatKey, HwItemDraft[]>;
-
-function emptyHwSections(): HwSections {
-  return { vocab: [], reading: [], listening: [], practice: [], other: [] };
-}
-
-function hwToSections(hw: Homework): HwSections {
-  const s = emptyHwSections();
-  for (const cat of HW_CATS) {
-    s[cat.key] = (hw[cat.key] ?? []).map((i) => ({ text: i.text, link: i.link ?? "", desc: i.desc ?? "" }));
-  }
-  return s;
-}
-
-function sectionsToHw(id: string, date: string, endDate: string, sections: HwSections, title?: string): Homework {
-  const hw: Homework = {
-    id,
-    date,
-    endDate: endDate || undefined,
-    ...(title?.trim() ? { title: title.trim() } : {}),
-  };
-  for (const cat of HW_CATS) {
-    const items = sections[cat.key]
-      .filter((i) => i.text.trim())
-      .map((i) => ({
-        text: i.text.trim(),
-        ...(i.link.trim() ? { link: i.link.trim() } : {}),
-        ...(i.desc.trim() ? { desc: i.desc.trim() } : {}),
-      }));
-    if (items.length > 0) hw[cat.key] = items;
-  }
-  return hw;
-}
-
-function RichTextInput({ value, onChange, placeholder }: { value: string; onChange: (v: string) => void; placeholder?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const internalVal = useRef<string>("");
-  useEffect(() => {
-    if (ref.current && value !== internalVal.current) {
-      ref.current.innerHTML = value;
-      internalVal.current = value;
-    }
-  }, [value]);
-  function wrap(tag: string) {
-    const sel = window.getSelection();
-    if (!sel || !sel.rangeCount || sel.isCollapsed) return;
-    const range = sel.getRangeAt(0);
-    if (!ref.current?.contains(range.commonAncestorContainer)) return;
-    const wrapper = document.createElement(tag);
-    try { range.surroundContents(wrapper); }
-    catch { const fragment = range.extractContents(); wrapper.appendChild(fragment); range.insertNode(wrapper); }
-    sel.removeAllRanges();
-    const html = ref.current!.innerHTML;
-    internalVal.current = html;
-    onChange(html);
-  }
-  return (
-    <div style={{ border: "1px solid var(--border)", borderRadius: 8, overflow: "hidden" }}>
-      <div className="flex gap-1 px-2 py-1" style={{ background: "var(--bg-elevated)", borderBottom: "1px solid var(--border)" }}>
-        {[{ tag: "b", label: "B" }, { tag: "i", label: "I" }, { tag: "u", label: "U" }, { tag: "mark", label: "HL" }].map(({ tag, label }) => (
-          <button key={tag} type="button" onMouseDown={(e) => { e.preventDefault(); wrap(tag); }}
-            className="text-[11px] px-1.5 py-0.5 rounded font-semibold"
-            style={{ border: "1px solid var(--border)", background: "var(--bg-primary)", cursor: "pointer", color: "var(--text-primary)" }}>
-            {label}
-          </button>
-        ))}
-        <span className="text-[10px] self-center ml-1" style={{ color: "var(--text-muted)" }}>Bôi đen → format</span>
-      </div>
-      <div style={{ position: "relative" }}>
-        <div ref={ref} contentEditable suppressContentEditableWarning
-          onInput={(e) => {
-            const html = (e.currentTarget as HTMLDivElement).innerHTML;
-            internalVal.current = html;
-            onChange(html);
-          }}
-          className="w-full px-3 py-2 text-xs outline-none min-h-[3rem]"
-          style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }}
-        />
-        {!value && <span className="absolute top-2 left-3 text-xs pointer-events-none" style={{ color: "var(--text-muted)" }}>{placeholder}</span>}
-      </div>
-    </div>
-  );
-}
-
-function HwItemRow({ item, onUpdate, onRemove }: {
-  item: HwItemDraft;
-  onUpdate: (field: keyof HwItemDraft, val: string) => void;
-  onRemove: () => void;
-}) {
-  const [showDesc, setShowDesc] = useState(!!item.desc);
-  return (
-    <div className="space-y-1.5 rounded-lg p-2" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
-      <div className="flex gap-2 items-center">
-        <input
-          value={item.text}
-          onChange={(e) => onUpdate("text", e.target.value)}
-          placeholder="Nội dung bài tập..."
-          className="flex-1 min-w-0 px-2 py-1.5 text-xs rounded-lg border outline-none"
-          style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-        />
-        <input
-          value={item.link}
-          onChange={(e) => onUpdate("link", e.target.value)}
-          placeholder="Link (paste vào đây)"
-          className="w-44 px-2 py-1.5 text-xs rounded-lg border outline-none shrink-0"
-          style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-        />
-        <button
-          type="button"
-          onClick={() => setShowDesc((v) => !v)}
-          className="text-[10px] px-2 py-1.5 rounded-lg border shrink-0 whitespace-nowrap"
-          style={{
-            borderColor: showDesc ? "var(--accent-primary)" : "var(--border)",
-            color: showDesc ? "var(--accent-primary)" : "var(--text-muted)",
-            background: showDesc ? "rgba(196,98,45,0.08)" : "transparent",
-          }}
-        >
-          {showDesc ? "✓ Mô tả" : "+ Mô tả"}
-        </button>
-        <button type="button" onClick={onRemove} className="p-1 shrink-0 hover:opacity-70" style={{ color: "rgb(239,68,68)" }}>
-          <Trash2 size={12} />
-        </button>
-      </div>
-      {showDesc && (
-        <RichTextInput
-          value={item.desc}
-          onChange={(v) => onUpdate("desc", v)}
-          placeholder="Mô tả chi tiết (hỗ trợ B/I/U/HL)..."
-        />
-      )}
-    </div>
-  );
-}
-
-function HomeworkModal({
-  initial,
-  onSave,
-  onAutosave,
-  onClose,
-  headerOverride,
-  targetLabel,
-}: {
-  initial?: Homework;
-  onSave: (hw: Homework) => Promise<void>;
-  onAutosave?: (hw: Homework, isNew: boolean) => Promise<void>;
-  onClose: () => void;
-  headerOverride?: string;
-  targetLabel?: string;
-}) {
-  const [date, setDate] = useState(initial?.date ?? today());
-  const [endDate, setEndDate] = useState(initial?.endDate ?? "");
-  const [title, setTitle] = useState(initial?.title ?? "");
-  const [sections, setSections] = useState<HwSections>(initial ? hwToSections(initial) : emptyHwSections());
-  const [saving, setSaving] = useState(false);
-  const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved">("idle");
-  const hwIdRef = useRef(initial?.id ?? `hw${Date.now()}`);
-  const isNewRef = useRef(!initial);
-  const onAutosaveRef = useRef(onAutosave);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-  useEffect(() => { onAutosaveRef.current = onAutosave; }, [onAutosave]);
-
-  useEffect(() => {
-    if (!onAutosaveRef.current) return;
-    clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(async () => {
-      if (!onAutosaveRef.current) return;
-      setSaveStatus("saving");
-      const hw = sectionsToHw(hwIdRef.current, date, endDate, sections, title);
-      await onAutosaveRef.current(hw, isNewRef.current);
-      isNewRef.current = false;
-      setSaveStatus("saved");
-    }, 1000);
-    return () => clearTimeout(timerRef.current);
-  }, [date, endDate, title, sections]);
-
-  function addItem(key: HwCatKey) {
-    setSections((s) => ({ ...s, [key]: [...s[key], { text: "", link: "", desc: "" }] }));
-  }
-  function updateItem(key: HwCatKey, idx: number, field: keyof HwItemDraft, val: string) {
-    setSections((s) => { const items = [...s[key]]; items[idx] = { ...items[idx], [field]: val }; return { ...s, [key]: items }; });
-  }
-  function removeItem(key: HwCatKey, idx: number) {
-    setSections((s) => ({ ...s, [key]: s[key].filter((_, i) => i !== idx) }));
-  }
-
-  async function handleSave() {
-    if (!date) return;
-    setSaving(true);
-    clearTimeout(timerRef.current);
-    await onSave(sectionsToHw(hwIdRef.current, date, endDate, sections, title));
-    setSaving(false);
-    onClose();
-  }
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center p-4 overflow-y-auto"
-      style={{ background: "rgba(0,0,0,0.5)" }}>
-      <div className="w-full max-w-2xl my-8 rounded-2xl border shadow-xl overflow-hidden"
-        style={{ background: "var(--bg-elevated)", borderColor: "var(--border)" }}>
-        <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
-          <div>
-            <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>
-              📋 {headerOverride ?? (initial ? "Sửa BTVN lớp" : "Thêm BTVN lớp")}
-            </h3>
-            {targetLabel && (
-              <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>→ {targetLabel}</p>
-            )}
-          </div>
-          <button onClick={onClose} style={{ color: "var(--text-muted)" }}><X size={18} /></button>
-        </div>
-
-        <div className="p-5 space-y-4 max-h-[70vh] overflow-y-auto">
-          <div className="grid grid-cols-3 gap-3">
-            <div>
-              <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>NGÀY BẮT ĐẦU</label>
-              <TextInput type="date" value={date} onChange={setDate} />
-            </div>
-            <div>
-              <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>NGÀY KẾT THÚC (để trống = 1 ngày)</label>
-              <TextInput type="date" value={endDate} onChange={setEndDate} />
-            </div>
-            <div>
-              <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>TIÊU ĐỀ (TUỲ CHỌN)</label>
-              <TextInput value={title} onChange={setTitle} placeholder="VD: Ngày 24/3 – 26/3" />
-            </div>
-          </div>
-
-          {HW_CATS.map(({ key, label, color, hint }) => (
-            <div key={key}>
-              <div className="flex items-center justify-between mb-2 pb-1.5 border-b" style={{ borderColor: "var(--border)" }}>
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full shrink-0" style={{ background: color }} />
-                  <span className="text-xs font-bold uppercase tracking-wider" style={{ color }}>{label}</span>
-                </div>
-                <button
-                  onClick={() => addItem(key)}
-                  className="text-xs px-2 py-0.5 rounded-lg flex items-center gap-1"
-                  style={{ color: "var(--accent-primary)", background: "rgba(196,98,45,0.08)" }}
-                >
-                  <Plus size={10} /> Thêm mục
-                </button>
-              </div>
-              {hint && <p className="text-[10px] mb-2 px-2 py-1 rounded" style={{ color, background: `${color}12` }}>{hint}</p>}
-              {sections[key].length === 0 ? (
-                <button onClick={() => addItem(key)} className="w-full text-xs py-1.5 rounded-lg border-dashed border"
-                  style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "transparent" }}>
-                  + Thêm mục
-                </button>
-              ) : (
-                <div className="space-y-2">
-                  {sections[key].map((item, idx) => (
-                    <HwItemRow
-                      key={idx}
-                      item={item}
-                      onUpdate={(field, val) => updateItem(key, idx, field, val)}
-                      onRemove={() => removeItem(key, idx)}
-                    />
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div className="flex items-center justify-between px-5 py-4 border-t" style={{ borderColor: "var(--border)" }}>
-          <span className="text-xs" style={{ color: "var(--text-muted)" }}>
-            {saveStatus === "saving" ? "Đang lưu tự động..." : saveStatus === "saved" ? "✓ Đã lưu tự động" : ""}
-          </span>
-          <div className="flex gap-2">
-            <Btn onClick={onClose}>Huỷ</Btn>
-            <Btn onClick={handleSave} variant="primary" disabled={!date || saving}>
-              {saving ? "Đang lưu..." : "💾 Lưu & Giao cho HV"}
-            </Btn>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 // ─── ClassInfoSection ─────────────────────────────────────────────────────────
 
@@ -942,8 +664,8 @@ function StudentGridSection({
 // ─── Duplicate BTVN: target picker ────────────────────────────────────────────
 
 type DupTarget =
-  | { type: "class"; classId: string; members: string[]; label: string }
-  | { type: "student"; code: string; label: string };
+  | { type: "class"; classId: string; members: string[]; label: string; schedule?: ClassSession[] }
+  | { type: "student"; code: string; label: string; schedule?: ClassSession[] };
 
 function ClassDupTargetModal({ hw, currentClassId, currentMembers, onConfirm, onClose }: {
   hw: Homework;
@@ -970,13 +692,19 @@ function ClassDupTargetModal({ hw, currentClassId, currentMembers, onConfirm, on
 
   function handleConfirm() {
     if (scope === "self") {
-      onConfirm({ type: "class", classId: currentClassId, members: currentMembers, label: "Lớp này" });
+      onConfirm({
+        type: "class",
+        classId: currentClassId,
+        members: currentMembers,
+        label: "Lớp này",
+        schedule: classes.find((c) => c.id === currentClassId)?.weeklySchedule,
+      });
     } else if (scope === "class" && selectedClassId) {
       const c = classes.find((c) => c.id === selectedClassId);
-      if (c) onConfirm({ type: "class", classId: c.id, members: c.members ?? [], label: `${c.name} (${c.members?.length ?? 0} học viên)` });
+      if (c) onConfirm({ type: "class", classId: c.id, members: c.members ?? [], label: `${c.name} (${c.members?.length ?? 0} học viên)`, schedule: c.weeklySchedule });
     } else if (scope === "student" && selectedCode) {
       const s = students.find((s) => s.id === selectedCode);
-      onConfirm({ type: "student", code: selectedCode, label: s ? `${s.name} (${s.id})` : selectedCode });
+      onConfirm({ type: "student", code: selectedCode, label: s ? `${s.name} (${s.id})` : selectedCode, schedule: s?.weeklySchedule });
     }
   }
 
@@ -1253,14 +981,18 @@ function ClassHomeworkSection({
   homework,
   memberCodes,
   allStudents,
+  schedule,
 }: {
   classId: string;
   classLabel: string;
   homework: Homework[];
   memberCodes: string[];
   allStudents: (Student & { id: string })[];
+  schedule?: ClassSession[];
 }) {
   const { allSubmissions } = useAllSubmissions();
+  // Mở trang là đối chiếu luôn bài làm trong web → tiến độ bên dưới là tiến độ thật.
+  useAutoDoneOnMount(true, memberCodes);
   const { allDayLinks } = useAllDayLinks();
 
   const members = useMemo(
@@ -1309,6 +1041,7 @@ function ClassHomeworkSection({
       await pushClassHomework(classId, hw);
       await Promise.all(memberCodes.map((code) => pushHomework(code, hw)));
     }
+    await assignHomeworkDecks(hw, memberCodes);
     autosavedHwIdRef.current = null;
     setPropagating(false);
   }
@@ -1334,6 +1067,7 @@ function ClassHomeworkSection({
     } else {
       await pushHomework(target.code, hw);
     }
+    await assignHomeworkDecks(hw, target.type === "class" ? target.members : [target.code]);
     setPropagating(false);
     setDupModal(null);
   }
@@ -1537,8 +1271,13 @@ function ClassHomeworkSection({
       </SectionCard>
 
       {modal && (
-        <HomeworkModal
+        <HomeworkEditor
           initial={modal.mode === "edit" ? modal.hw : undefined}
+          isEdit={modal.mode === "edit"}
+          heading={modal.mode === "edit" ? "Sửa BTVN lớp" : "Thêm BTVN lớp"}
+          targetLabel={`${classLabel} · ${memberCodes.length} HV`}
+          schedule={schedule}
+          history={homework}
           onSave={handleSave}
           onAutosave={handleAutosave}
           onClose={() => { setModal(null); autosavedHwIdRef.current = null; }}
@@ -1560,10 +1299,11 @@ function ClassHomeworkSection({
       )}
 
       {dupModal && (
-        <HomeworkModal
+        <HomeworkEditor
           initial={dupModal.initial}
-          headerOverride="Nhân bản BTVN"
+          heading="Nhân bản BTVN"
           targetLabel={dupModal.target.label}
+          schedule={dupModal.target.schedule}
           onSave={(hw) => handleSaveDuplicate(hw, dupModal.target)}
           onClose={() => setDupModal(null)}
         />
@@ -2151,6 +1891,7 @@ export default function ClassDetailPage() {
             homework={homework}
             memberCodes={memberCodes}
             allStudents={allStudents as (Student & { id: string })[]}
+            schedule={schoolClass.weeklySchedule}
           />
         </div>
       </div>

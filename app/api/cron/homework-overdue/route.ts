@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db/prisma";
 import { getAdminDb } from "@/lib/firebase/admin";
 import { sendPushToUser } from "@/lib/push";
+import { syncHomeworkAutoDone } from "@/lib/homework/auto-done";
 import type { Homework, HwItem, SubmissionsMap, DayLinksMap } from "@/lib/firebase/types";
 
 export const runtime = "nodejs";
@@ -59,6 +60,8 @@ export async function GET(request: NextRequest) {
   await Promise.allSettled(
     students.map(async (student) => {
       const code = student.studentCode!;
+      // Đánh dấu trước các mục làm trong web, kẻo nhắc nhầm HV đã làm mà quên tick.
+      await syncHomeworkAutoDone(code, student.id).catch(() => 0);
       const [hwSnap, subSnap, dlSnap] = await Promise.all([
         db.ref(`students/${code}/homework`).get(),
         db.ref(`submissions/${code}`).get(),

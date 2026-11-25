@@ -4,6 +4,12 @@ export interface HwItem {
   text: string;
   link?: string;
   desc?: string;
+  /** Bài lấy từ kho (lib/roadmap/catalog) — có thì hệ thống tự đánh dấu xong. */
+  catalogId?: string;
+  /** Bộ flashcard của giáo viên — tự đánh dấu xong khi ôn đủ 70% số thẻ. */
+  deckId?: string;
+  /** Số phút ước tính, để giáo viên thấy tổng khối lượng. */
+  minutes?: number;
 }
 
 export interface Homework {
@@ -178,6 +184,8 @@ export interface Submission {
   ticked?: boolean;
   url?: string;
   updatedAt?: string;
+  /** true = hệ thống tự đánh dấu dựa trên dữ liệu làm bài thật. */
+  auto?: boolean;
 }
 
 export type SubmissionsMap = Record<string, Submission>;
