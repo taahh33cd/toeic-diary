@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db/prisma";
 import { requireVocabUser } from "@/lib/vocab/guard";
 import { makeId, makeSlug, moTaLoi } from "@/lib/vocab/deck";
 import { normalizeWord } from "@/lib/vocab/normalize";
+import { nhapTuKhoCu } from "@/lib/vocab/rtdb-import";
 
 export const dynamic = "force-dynamic";
 
@@ -21,6 +22,9 @@ export async function GET() {
   if (!gate.ok) return NextResponse.json({ error: gate.error }, { status: gate.status });
 
   try {
+    // Từ lưu bằng bôi đen trước đây bị ghi nhầm vào RTDB — nhập một lần rồi thôi.
+    await nhapTuKhoCu(gate.userId, gate.studentCode);
+
     const [progress, cards] = await Promise.all([
       prisma.vocabProgress.findMany({
         where: { userId: gate.userId },
@@ -39,6 +43,9 @@ export async function GET() {
           example: true,
           imageUrl: true,
           audioUrl: true,
+          context: true,
+          sourceUrl: true,
+          sourceLabel: true,
           createdAt: true,
           deck: { select: { part: true } },
         },
@@ -46,9 +53,11 @@ export async function GET() {
     ]);
 
     const noiDung = new Map<string, (typeof cards)[number]>();
+    const nguCanh = new Map<string, (typeof cards)[number]>();
     const deckIds = new Map<string, string[]>();
     for (const c of cards) {
       if (!noiDung.has(c.wordKey)) noiDung.set(c.wordKey, c);
+      if (c.context && !nguCanh.has(c.wordKey)) nguCanh.set(c.wordKey, c);
       const arr = deckIds.get(c.wordKey) ?? [];
       arr.push(c.deckId);
       deckIds.set(c.wordKey, arr);
@@ -85,6 +94,9 @@ export async function GET() {
         example: c?.example ?? null,
         imageUrl: c?.imageUrl ?? null,
         audioUrl: c?.audioUrl ?? null,
+        context: nguCanh.get(wordKey)?.context ?? null,
+        sourceUrl: nguCanh.get(wordKey)?.sourceUrl ?? null,
+        sourceLabel: nguCanh.get(wordKey)?.sourceLabel ?? null,
         part: c?.deck.part ?? null,
         level: capTheoKey.get(wordKey) ?? null,
         addedDate: (c?.createdAt ?? p!.createdAt).toISOString().slice(0, 10),
@@ -121,6 +133,11 @@ const quickAdd = z.object({
   part: z.number().int().min(1).max(7).optional(),
   /** Bộ đích do học viên chọn. Bỏ trống = theo Part, không Part = "Từ mới". */
   deckId: z.string().trim().min(1).max(60).optional(),
+  /** Câu gốc chứa từ (lưu bằng bôi đen) */
+  context: z.string().trim().max(400).optional(),
+  /** Chỉ nhận đường dẫn nội bộ — không lưu link ra ngoài */
+  sourceUrl: z.string().trim().max(300).regex(/^\/(?!\/)/, "sourceUrl phải là đường dẫn nội bộ").optional(),
+  sourceLabel: z.string().trim().max(120).optional(),
 });
 
 /**
@@ -199,6 +216,9 @@ export async function POST(req: NextRequest) {
           definition: b.def,
           example: b.example,
           audioUrl: b.audioUrl,
+          context: b.context,
+          sourceUrl: b.sourceUrl,
+          sourceLabel: b.sourceLabel,
           order: 9999, // xuống cuối; thứ tự chỉ quan trọng khi soạn bộ
         },
       }),

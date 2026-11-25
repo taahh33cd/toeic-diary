@@ -1,6 +1,8 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { requireVocabUser } from "@/lib/vocab/guard";
+import { prisma } from "@/lib/db/prisma";
 import { lookupEn, lookupVi } from "@/lib/vocab/lexicon";
+import { normalizeWord } from "@/lib/vocab/normalize";
 
 export const dynamic = "force-dynamic";
 
@@ -21,7 +23,15 @@ export async function GET(req: NextRequest) {
 
   try {
     if (dir === "vi") return NextResponse.json({ dir, ...(await lookupVi(q, gate.userId)) });
-    return NextResponse.json({ dir, ...(await lookupEn(q, gate.userId)) });
+    const res = await lookupEn(q, gate.userId);
+    // Từ đã có trong sổ thì báo luôn — popup bôi đen dùng để thay nút Lưu
+    const owned = res.found
+      ? await prisma.vocabCard.findFirst({
+          where: { wordKey: normalizeWord(res.entry.word), deck: { ownerId: gate.userId } },
+          select: { deck: { select: { id: true, title: true } } },
+        })
+      : null;
+    return NextResponse.json({ dir, ...res, owned: owned ? owned.deck : null });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     console.error("[vocab/lookup]", msg);

@@ -621,20 +621,22 @@ function Glossary({
   async function save(t: GlossaryTerm) {
     setSaved((s) => ({ ...s, [t.term]: "saving" }));
     try {
-      const r = await fetch("/api/vocab/save", {
+      const r = await fetch("/api/flashcards/words", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           word: t.term,
-          vi: t.meaning,
-          ipa: t.ipa,
-          pos: t.pos,
-          part,
-          addedDate: new Date().toISOString().slice(0, 10),
-          repCount: 0,
+          vi: t.meaning || undefined,
+          ipa: t.ipa || undefined,
+          pos: t.pos || undefined,
+          sourceUrl: (location.pathname + location.search).slice(0, 300),
+          sourceLabel: `Giải thích đề · Part ${part}`,
         }),
       });
-      setSaved((s) => ({ ...s, [t.term]: r.ok ? "ok" : "err" }));
+      // 409 = từ đã có trong sổ — với học viên thế là "đã lưu"
+      const ok = r.ok || r.status === 409;
+      if (ok) window.dispatchEvent(new Event("vocab:changed"));
+      setSaved((s) => ({ ...s, [t.term]: ok ? "ok" : "err" }));
     } catch {
       setSaved((s) => ({ ...s, [t.term]: "err" }));
     }

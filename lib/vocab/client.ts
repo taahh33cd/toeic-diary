@@ -131,6 +131,11 @@ export interface WordRow {
   part: number | null;
   /** Cấp độ TOEIC do AI gắn: "550" | "650" | "750" | "850"; null = chưa gắn */
   level: string | null;
+  /** Câu gốc nơi học viên gặp từ (lưu bằng bôi đen) */
+  context: string | null;
+  /** Đường dẫn nội bộ của bài gặp từ */
+  sourceUrl: string | null;
+  sourceLabel: string | null;
   /** YYYY-MM-DD — ngày thẻ được tạo */
   addedDate: string;
   deckIds: string[];
@@ -159,6 +164,9 @@ export async function quickAddWord(body: {
   audioUrl?: string;
   part?: number;
   deckId?: string;
+  context?: string;
+  sourceUrl?: string;
+  sourceLabel?: string;
 }) {
   const r = await call<{ ok: true; deckId: string; deckTitle: string }>("/api/flashcards/words", {
     method: "POST",
@@ -212,7 +220,7 @@ export interface ViCandidate {
 }
 
 export type LookupResponse =
-  | { dir: "en"; found: true; entry: LexEntry; aiNote?: string }
+  | { dir: "en"; found: true; entry: LexEntry; aiNote?: string; owned?: { id: string; title: string } | null }
   | { dir: "en"; found: false; reason: string }
   | { dir: "vi"; ok: true; candidates: ViCandidate[] }
   | { dir: "vi"; ok: false; reason: string };

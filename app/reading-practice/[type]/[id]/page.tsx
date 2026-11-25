@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/db/prisma";
 import { PracticeClient } from "./PracticeClient";
-import { WordLookupActive } from "@/components/shared/WordLookupProvider";
 
 export default async function PracticePage({
   params,
@@ -39,7 +38,6 @@ export default async function PracticePage({
 
   return (
     <>
-      <WordLookupActive />
       <PracticeClient
         passage={{
           id: passage.id,

@@ -3,7 +3,6 @@ import { redirect, notFound } from "next/navigation";
 import { TOPICS, getTestSlice } from "@/lib/grammar/topics";
 import { grammarQuestions } from "@/lib/grammar/questions";
 import { QuizClient } from "@/components/grammar/QuizClient";
-import { WordLookupActive } from "@/components/shared/WordLookupProvider";
 import type { Metadata } from "next";
 
 interface Params { topic: string; test: string }
@@ -49,7 +48,6 @@ export default async function GrammarTestPage({
 
   return (
     <>
-      <WordLookupActive />
       <QuizClient
         questions={testQuestions}
         topicSlug={topic}

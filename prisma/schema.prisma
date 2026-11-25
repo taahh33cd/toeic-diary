@@ -747,6 +747,13 @@ model VocabCard {
   imagePublicId String? @map("image_public_id")
   audioUrl      String? @map("audio_url")
 
+  /// Câu gốc chứa từ, lấy lúc học viên bôi đen để lưu
+  context     String? @db.Text
+  /// Đường dẫn nội bộ của bài gặp từ (bắt đầu bằng "/")
+  sourceUrl   String? @map("source_url")
+  /// Tên bài để hiện "Gặp trong: …"
+  sourceLabel String? @map("source_label")
+
   order     Int      @default(0)
   createdAt DateTime @default(now()) @map("created_at")
 
@@ -902,6 +909,15 @@ model VocabLexicon {
   updatedAt    DateTime @updatedAt @map("updated_at")
 
   @@map("vocab_lexicon")
+}
+
+/// Đánh dấu học viên đã được nhập các từ lưu nhầm vào kho RTDB cũ (một lần).
+model VocabRtdbSync {
+  userId   String   @id @map("user_id")
+  imported Int      @default(0)
+  syncedAt DateTime @default(now()) @map("synced_at")
+
+  @@map("vocab_rtdb_sync")
 }
 
 /// Cache tra Việt → Anh, khoá theo cụm tiếng Việt đã chuẩn hoá.

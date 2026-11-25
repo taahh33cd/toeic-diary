@@ -1,5 +1,6 @@
 "use client";
 
+import { WordLookupOff } from "@/components/shared/WordLookupProvider";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import FlipCard from "@/components/vocab/FlipCard";
 import { LevelBadge, SpeakButton, chipStyle, fmtIpa } from "@/components/vocab/home/shared";
@@ -302,6 +303,8 @@ export default function SessionRunner({
   // ── Trong phiên ──────────────────────────────────────────────────────────
   return (
     <div className="max-w-xl mx-auto flex flex-col gap-3">
+      {/* Đang ôn: tắt tra từ kẻo lộ đáp án */}
+      <WordLookupOff />
       <div className="flex items-center gap-3">
         <button type="button" onClick={() => setPhase(ketQua.size ? "done" : "pick")} aria-label="Dừng phiên" className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ color: "var(--text-primary)" }}>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>

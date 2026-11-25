@@ -1,5 +1,6 @@
 "use client";
 
+import { WordLookupOff } from "@/components/shared/WordLookupProvider";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { playWord } from "@/lib/vocab/audio";
 import {
@@ -559,6 +560,8 @@ export default function QuizRunner({
 
   return (
     <div style={{ maxWidth: 640, margin: "0 auto" }}>
+      {/* Đang làm quiz: tắt tra từ kẻo lộ đáp án */}
+      <WordLookupOff />
       <div className="flex items-center gap-3 mb-3">
         <button
           onClick={nop}

@@ -392,6 +392,17 @@ export default function WordsTab({
                   {ipa && <p className="md:hidden" style={{ color: "var(--text-muted)" }}>{ipa}{w.pos ? ` · ${w.pos}` : ""}</p>}
                   {w.definition && <p style={{ color: "var(--text-muted)" }}>{w.definition}</p>}
                   {w.example && <p className="italic">“{w.example}”</p>}
+                  {(w.context || w.sourceLabel) && (
+                    <p className="rounded-lg px-3 py-2" style={{ background: "var(--bg-secondary)" }}>
+                      <b>Gặp trong{w.sourceLabel ? `: ${w.sourceLabel}` : ""}</b>
+                      {w.context && <span className="block italic mt-0.5">“{w.context}”</span>}
+                      {w.sourceUrl && (
+                        <Link href={w.sourceUrl} className="inline-block mt-1 text-xs font-semibold underline" style={{ color: "var(--accent-primary)" }}>
+                          Mở lại bài ›
+                        </Link>
+                      )}
+                    </p>
+                  )}
                   <p className="text-xs" style={{ color: "var(--text-muted)" }}>
                     Lưu ngày {w.addedDate}
                     {w.deckIds.length > 0 && ` · Bộ: ${w.deckIds.map(deckTitle).filter(Boolean).join(", ")}`}

@@ -1,5 +1,6 @@
 "use client";
 
+import { WordLookupOff } from "@/components/shared/WordLookupProvider";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { FullTest, PartNumber } from "@/lib/full-tests/types";
 import { PALETTE, type Skin } from "@/components/full-tests/theme";
@@ -178,6 +179,9 @@ export function PartPracticeRunner({
 
   if (phase === "exam" && config) {
     return (
+      <>
+      {/* Đang làm bài: tắt tra từ kẻo lộ đáp án — bật lại ở màn kết quả */}
+      <WordLookupOff />
       <ExamScreen
         test={test}
         config={config}
@@ -193,6 +197,7 @@ export function PartPracticeRunner({
         realLabel="Thi thử"
         exitHref={backHref}
       />
+      </>
     );
   }
 

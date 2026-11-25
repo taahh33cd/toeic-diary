@@ -1,5 +1,6 @@
 "use client";
 
+import { WordLookupOff } from "@/components/shared/WordLookupProvider";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { FullTest } from "@/lib/full-tests/types";
 import { PALETTE, type Skin } from "./theme";
@@ -157,6 +158,9 @@ export function FullTestRunner({
 
   if (phase === "exam" && config) {
     return (
+      <>
+      {/* Đang làm bài: tắt tra từ kẻo lộ đáp án — bật lại ở màn kết quả */}
+      <WordLookupOff />
       <ExamScreen
         test={test}
         config={config}
@@ -170,6 +174,7 @@ export function FullTestRunner({
         saveState={attempt.saveState}
         onProgress={attempt.save}
       />
+      </>
     );
   }
 
