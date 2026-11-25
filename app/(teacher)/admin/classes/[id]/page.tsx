@@ -1278,6 +1278,7 @@ function ClassHomeworkSection({
           targetLabel={`${classLabel} · ${memberCodes.length} HV`}
           schedule={schedule}
           history={homework}
+          extraTargets={{ exclude: [{ type: "class", id: classId }] }}
           onSave={handleSave}
           onAutosave={handleAutosave}
           onClose={() => { setModal(null); autosavedHwIdRef.current = null; }}

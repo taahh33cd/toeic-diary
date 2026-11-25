@@ -30,6 +30,9 @@ import {
 } from "@/lib/homework/library";
 import RichTextInput from "./RichTextInput";
 import LibraryDrawer, { Tag } from "./LibraryDrawer";
+import TemplatePicker, { saveTemplate } from "./TemplatePicker";
+import TargetPicker, { targetKey, type PickedTarget } from "./TargetPicker";
+import { contentOf } from "@/lib/homework/content";
 import {
   ddmm,
   emptySections,
@@ -61,6 +64,13 @@ export type HomeworkEditorProps = {
   inline?: boolean;
   /** Đang sửa BTVN đã lưu (autosave chỉ cập nhật, không tạo mới). */
   isEdit?: boolean;
+  /** Chỉ soạn nội dung (buổi giáo trình, mẫu) — ẩn ngày giao/hạn nộp/tiêu đề. */
+  contentOnly?: boolean;
+  /**
+   * Cho phép "Giao thêm cho" lớp/HV khác ngay khi lưu. `exclude` = đối tượng
+   * chính (đã được trang gọi tự giao).
+   */
+  extraTargets?: { exclude: { type: "class" | "student"; id: string }[] };
 };
 
 const SECTION_ORDER: HwCatKey[] = HW_CATS.map((c) => c.key);
@@ -77,6 +87,8 @@ export default function HomeworkEditor({
   onClose,
   inline = false,
   isEdit = false,
+  contentOnly = false,
+  extraTargets,
 }: HomeworkEditorProps) {
   const days = useMemo(() => (schedule ?? []).map((s) => s.day), [schedule]);
   const fresh = !initial?.date;
@@ -93,6 +105,10 @@ export default function HomeworkEditor({
   const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved">("idle");
   const [drawer, setDrawer] = useState<{ section: HwCatKey; query?: string } | null>(null);
   const [flash, setFlash] = useState<string | null>(null);
+  const [showTemplates, setShowTemplates] = useState(false);
+  const [showTargets, setShowTargets] = useState(false);
+  const [extras, setExtras] = useState<PickedTarget[]>([]);
+  const [note, setNote] = useState<string | null>(null);
 
   const hwIdRef = useRef(initial?.id ?? `hw${Date.now()}`);
   const isNewRef = useRef(!isEdit);
@@ -227,7 +243,27 @@ export default function HomeworkEditor({
     setSaving(true);
     clearTimeout(timerRef.current);
     try {
-      await onSave(sectionsToHw(hwIdRef.current, date, endDate, title, sections));
+      const hw = sectionsToHw(hwIdRef.current, date, endDate, title, sections);
+      await onSave(hw);
+      if (extras.length) {
+        const r = await fetch("/api/admin/homework/assign", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            hw: { id: hw.id, date: hw.date, endDate: hw.endDate, title: hw.title, content: contentOf(hw) },
+            targets: extras.map(({ type, id }) => ({ type, id })),
+          }),
+        });
+        const d = (await r.json().catch(() => ({}))) as { results?: { ok: boolean; id: string }[]; error?: string };
+        const failed = (d.results ?? []).filter((x) => !x.ok);
+        if (!r.ok || failed.length) {
+          alert(
+            `Đã lưu BTVN chính, nhưng giao thêm lỗi ở ${failed.length || extras.length} nơi` +
+              (d.error ? `: ${d.error}` : "") +
+              ". Có thể dùng Nhân bản để giao lại.",
+          );
+        }
+      }
       onClose();
     } catch (err) {
       console.error("[HomeworkEditor save]", err);
@@ -248,6 +284,7 @@ export default function HomeworkEditor({
     <>
       <div className="p-5 space-y-4">
         {/* Ngày + tiêu đề */}
+        {!contentOnly && (
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <Field label="NGÀY BẮT ĐẦU">
             <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className={inputCls} style={inputStyle} />
@@ -287,6 +324,77 @@ export default function HomeworkEditor({
               style={inputStyle}
             />
           </Field>
+        </div>
+        )}
+
+        {/* Giao thêm cho lớp/HV khác */}
+        {extraTargets && !contentOnly && (
+          <div className="rounded-xl px-3 py-2 space-y-1.5" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
+            <div className="flex flex-wrap items-center gap-1.5">
+              <span className="text-xs font-medium" style={{ color: "var(--text-secondary)" }}>Giao thêm cho:</span>
+              {extras.map((t) => (
+                <span
+                  key={targetKey(t)}
+                  className="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full border"
+                  style={{ borderColor: "var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)" }}
+                >
+                  {t.type === "class" ? "👥" : "👤"} {t.label}
+                  <button
+                    type="button"
+                    onClick={() => setExtras((x) => x.filter((y) => targetKey(y) !== targetKey(t)))}
+                    style={{ color: "var(--text-muted)" }}
+                    aria-label="Bỏ"
+                  >
+                    ✕
+                  </button>
+                </span>
+              ))}
+              <button
+                type="button"
+                onClick={() => setShowTargets(true)}
+                className="text-xs px-2 py-0.5 rounded-full border border-dashed"
+                style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
+              >
+                ＋ Lớp / HV
+              </button>
+            </div>
+            {extras.length > 0 && (
+              <p className="text-[11px]" style={{ color: "var(--text-muted)" }}>
+                Ngày giao và hạn nộp tự dời theo lịch học của từng lớp/HV.
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Mẫu BTVN */}
+        <div className="flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setShowTemplates(true)}
+            className="text-xs px-2.5 py-1.5 rounded-lg border"
+            style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
+          >
+            📋 Dùng mẫu
+          </button>
+          <button
+            type="button"
+            disabled={all.length === 0}
+            onClick={async () => {
+              const name = window.prompt("Tên mẫu BTVN:", title || "");
+              if (!name?.trim()) return;
+              try {
+                await saveTemplate(name.trim(), contentOf(sectionsToHw("t", date, "", "", sections)));
+                setNote(`Đã lưu mẫu “${name.trim()}”.`);
+              } catch (e) {
+                setNote(e instanceof Error ? e.message : "Lưu mẫu thất bại");
+              }
+            }}
+            className="text-xs px-2.5 py-1.5 rounded-lg border disabled:opacity-50"
+            style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
+          >
+            💾 Lưu thành mẫu
+          </button>
+          {note && <span className="text-[11px]" style={{ color: "#4A7C59" }}>{note}</span>}
         </div>
 
         {/* Dán link */}
@@ -448,10 +556,44 @@ export default function HomeworkEditor({
             className="px-4 py-2 rounded-xl text-sm font-semibold disabled:opacity-50"
             style={{ background: "var(--accent-primary)", color: "#fff" }}
           >
-            {saving ? "Đang lưu..." : saveLabel}
+            {saving ? "Đang lưu..." : extras.length ? `${saveLabel} + ${extras.length} nơi` : saveLabel}
           </button>
         </div>
       </div>
+
+      {showTemplates && (
+        <TemplatePicker
+          onClose={() => setShowTemplates(false)}
+          onPick={(t) => {
+            const add = hwToSections({ id: "", date: "", ...t.content });
+            setSections((s) => {
+              const out = { ...s };
+              for (const k of SECTION_ORDER) out[k] = [...s[k], ...add[k]];
+              return out;
+            });
+            setShowTemplates(false);
+            setNote(`Đã thêm bài từ mẫu “${t.title}”.`);
+            fetch(`/api/admin/hw-templates/${t.id}`, {
+              method: "PATCH",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ used: true }),
+            }).catch(() => {});
+          }}
+        />
+      )}
+
+      {showTargets && extraTargets && (
+        <TargetPicker
+          title="Giao thêm cho"
+          initial={extras}
+          exclude={extraTargets.exclude}
+          onClose={() => setShowTargets(false)}
+          onDone={(t) => {
+            setExtras(t);
+            setShowTargets(false);
+          }}
+        />
+      )}
 
       {drawer && (
         <LibraryDrawer
