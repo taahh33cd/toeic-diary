@@ -160,7 +160,7 @@ export default function LookupBox({
     >
       <div className="flex gap-2 items-stretch flex-wrap">
         <div
-          className="flex-1 flex items-center gap-2 rounded-xl px-3"
+          className="flex-1 flex items-center gap-2 rounded-xl px-3 focus-within:ring-2 focus-within:ring-[var(--accent-primary)]"
           style={{ background: "var(--bg-primary)", minHeight: 52, flexBasis: 260 }}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
@@ -184,7 +184,7 @@ export default function LookupBox({
             autoCapitalize="off"
             spellCheck={false}
             enterKeyHint="search"
-            className="flex-1 min-w-0 bg-transparent outline-none text-base"
+            className="flex-1 min-w-0 bg-transparent !outline-none !border-0 !shadow-none !ring-0 text-base"
             style={{ color: "var(--text-primary)", minHeight: 48 }}
           />
           {q && (
