@@ -65,6 +65,13 @@ export async function GET() {
       ...[...noiDung.keys()].filter((k) => !tdTheoKey.has(k)),
     ];
 
+    // Cấp độ TOEIC nằm ở từ điển dùng chung, không nằm trên thẻ
+    const lex = await prisma.vocabLexicon.findMany({
+      where: { wordKey: { in: moiKhoa }, level: { not: null } },
+      select: { wordKey: true, level: true },
+    });
+    const capTheoKey = new Map(lex.map((l) => [l.wordKey, l.level]));
+
     const words = moiKhoa.map((wordKey) => {
       const p = tdTheoKey.get(wordKey);
       const c = noiDung.get(wordKey);
@@ -79,6 +86,7 @@ export async function GET() {
         imageUrl: c?.imageUrl ?? null,
         audioUrl: c?.audioUrl ?? null,
         part: c?.deck.part ?? null,
+        level: capTheoKey.get(wordKey) ?? null,
         addedDate: (c?.createdAt ?? p!.createdAt).toISOString().slice(0, 10),
         deckIds: deckIds.get(wordKey) ?? [],
         // Chưa ôn lần nào → tiến độ 0 và dueAt null, tức đến hạn ngay.
@@ -111,14 +119,15 @@ const quickAdd = z.object({
   example: z.string().trim().max(1000).optional(),
   audioUrl: z.string().trim().url().max(600).optional(),
   part: z.number().int().min(1).max(7).optional(),
+  /** Bộ đích do học viên chọn. Bỏ trống = theo Part, không Part = "Từ mới". */
+  deckId: z.string().trim().min(1).max(60).optional(),
 });
 
 /**
- * Thêm nhanh MỘT từ, không cần chọn bộ trước.
+ * Thêm nhanh MỘT từ.
  *
- * Từ được bỏ vào bộ "Từ vựng Part N" của học viên, tạo mới nếu chưa có — đúng
- * cách kho từ cũ gom theo Part, nên thói quen thêm từ lẻ không đổi. Từ không
- * có Part vào bộ "Từ vựng khác".
+ * Có deckId thì vào đúng bộ đó (phải là bộ của mình). Không thì vào bộ
+ * "Từ vựng Part N" nếu có Part, hoặc bộ mặc định "Từ mới" — tạo mới nếu chưa có.
  */
 export async function POST(req: NextRequest) {
   const gate = await requireVocabUser();
@@ -135,20 +144,31 @@ export async function POST(req: NextRequest) {
   const word = b.word.trim();
   const wordKey = normalizeWord(word);
   const part = b.part ?? null;
-  const tieuDe = part === null ? "Từ vựng khác" : `Từ vựng Part ${part}`;
+  let tieuDe = part === null ? "Từ mới" : `Từ vựng Part ${part}`;
 
   try {
-    let deck = await prisma.vocabDeck.findFirst({
-      where: { ownerId: gate.userId, title: tieuDe },
-      select: { id: true },
-    });
+    let deck: { id: string } | null;
+    if (b.deckId) {
+      const chon = await prisma.vocabDeck.findFirst({
+        where: { id: b.deckId, ownerId: gate.userId },
+        select: { id: true, title: true },
+      });
+      if (!chon) return NextResponse.json({ error: "Không tìm thấy bộ thẻ" }, { status: 404 });
+      deck = { id: chon.id };
+      tieuDe = chon.title;
+    } else {
+      deck = await prisma.vocabDeck.findFirst({
+        where: { ownerId: gate.userId, title: tieuDe },
+        select: { id: true },
+      });
+    }
     if (!deck) {
       deck = await prisma.vocabDeck.create({
         data: {
           id: makeId("vd"),
           ownerId: gate.userId,
           title: tieuDe,
-          description: "Từ thêm lẻ",
+          description: part === null ? "Từ tra & lưu nhanh" : "Từ thêm lẻ",
           slug: makeSlug(),
           part: part ?? undefined,
           source: "manual",

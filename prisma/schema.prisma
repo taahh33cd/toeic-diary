@@ -877,6 +877,43 @@ model VocabDeckAssignment {
   @@map("vocab_deck_assignments")
 }
 
+/// Từ điển dùng chung cho trang Sổ từ vựng: tra từ + cấp độ TOEIC.
+/// Một dòng mỗi TỪ cho mọi học viên — AI soạn một lần rồi dùng mãi, nên chi phí
+/// AI tỉ lệ với số từ khác nhau chứ không với số lượt tra.
+model VocabLexicon {
+  wordKey      String   @id @map("word_key")
+  word         String
+  ipa          String?
+  pos          String?
+  meaningVi    String?  @map("meaning_vi")
+  definition   String?  @db.Text
+  example      String?  @db.Text
+  /// Cụm hay gặp trong đề, vd "negotiate a contract"
+  collocations String[] @default([])
+  /// Họ từ dạng "negotiation (n)"
+  family       String[] @default([])
+  /// "550" | "650" | "750" | "850" — AI gắn
+  level        String?
+  audioUk      String?  @map("audio_uk")
+  audioUs      String?  @map("audio_us")
+  /// false = mới chỉ gắn cấp hàng loạt, chưa có nghĩa/cụm/họ từ đầy đủ
+  complete     Boolean  @default(false)
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("vocab_lexicon")
+}
+
+/// Cache tra Việt → Anh, khoá theo cụm tiếng Việt đã chuẩn hoá.
+model VocabViLookup {
+  queryKey  String   @id @map("query_key")
+  query     String
+  results   Json
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("vocab_vi_lookup")
+}
+
 /// Bộ phương án cho dạng quiz "chọn dạng từ" (Part 5 word form).
 ///
 /// KHÔNG gắn vào VocabCard mà khoá theo (wordKey, exampleHash): cùng một câu

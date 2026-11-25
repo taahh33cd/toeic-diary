@@ -35,18 +35,40 @@ const contentLimit = taoLimit(5, "1 d", "content");
 /** Tìm ảnh: 60 lượt/giờ — Pexels free cho 200 req/giờ cho TOÀN hệ thống. */
 const imageLimit = taoLimit(60, "1 h", "image");
 
-export type LimitKind = "enrich" | "content" | "image";
+/**
+ * Tra từ ở Sổ từ vựng. Chỉ tính lượt PHẢI gọi AI — từ đã có trong
+ * vocab_lexicon thì tra bao nhiêu cũng được.
+ */
+const lookupLimit = taoLimit(50, "1 d", "lookup");
+const lookupViLimit = taoLimit(30, "1 d", "lookup-vi");
+/** Gắn cấp hàng loạt: mỗi lượt tối đa 40 từ. */
+const levelsLimit = taoLimit(30, "1 d", "levels");
+/**
+ * Trần chung cho MỌI lượt gọi AI của khu tra từ, cả hệ thống (userId = "all").
+ * Chạm trần thì tra từ vẫn chạy bằng từ điển miễn phí, chỉ thiếu phần AI.
+ */
+const aiGlobalLimit = taoLimit(4000, "1 d", "ai-global");
+
+export type LimitKind = "enrich" | "content" | "image" | "lookup" | "lookup-vi" | "levels" | "ai-global";
 
 const BANG: Record<LimitKind, Ratelimit | null> = {
   enrich: enrichLimit,
   content: contentLimit,
   image: imageLimit,
+  lookup: lookupLimit,
+  "lookup-vi": lookupViLimit,
+  levels: levelsLimit,
+  "ai-global": aiGlobalLimit,
 };
 
 const NHAN: Record<LimitKind, string> = {
   enrich: "điền nghĩa tự động",
   content: "sinh bộ từ bài học",
   image: "tìm ảnh",
+  lookup: "tra từ mới bằng AI",
+  "lookup-vi": "tra Việt → Anh",
+  levels: "gắn cấp độ",
+  "ai-global": "AI của hệ thống",
 };
 
 export interface LimitResult {

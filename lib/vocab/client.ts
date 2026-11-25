@@ -127,6 +127,8 @@ export interface WordRow {
   imageUrl: string | null;
   audioUrl: string | null;
   part: number | null;
+  /** Cấp độ TOEIC do AI gắn: "550" | "650" | "750" | "850"; null = chưa gắn */
+  level: string | null;
   /** YYYY-MM-DD — ngày thẻ được tạo */
   addedDate: string;
   deckIds: string[];
@@ -154,6 +156,7 @@ export async function quickAddWord(body: {
   example?: string;
   audioUrl?: string;
   part?: number;
+  deckId?: string;
 }) {
   const r = await call<{ ok: true; deckId: string; deckTitle: string }>("/api/flashcards/words", {
     method: "POST",
@@ -178,6 +181,49 @@ export async function deleteWord(word: string) {
 export function wordIsDue(w: Pick<WordRow, "mastered" | "dueAt">): boolean {
   if (w.mastered) return false;
   return w.dueAt === null || new Date(w.dueAt) <= new Date();
+}
+
+// ── Tra từ & cấp độ ─────────────────────────────────────────────────────────
+
+export type Level = "550" | "650" | "750" | "850";
+
+export interface LexEntry {
+  word: string;
+  wordKey: string;
+  ipa: string | null;
+  pos: string | null;
+  meaningVi: string | null;
+  definition: string | null;
+  example: string | null;
+  collocations: string[];
+  family: string[];
+  level: Level | null;
+  audioUk: string | null;
+  audioUs: string | null;
+}
+
+export interface ViCandidate {
+  word: string;
+  pos: string;
+  level: Level | null;
+  note: string;
+}
+
+export type LookupResponse =
+  | { dir: "en"; found: true; entry: LexEntry; aiNote?: string }
+  | { dir: "en"; found: false; reason: string }
+  | { dir: "vi"; ok: true; candidates: ViCandidate[] }
+  | { dir: "vi"; ok: false; reason: string };
+
+export function lookupWord(q: string, dir: "en" | "vi", signal?: AbortSignal) {
+  return call<LookupResponse>(`/api/vocab/lookup?dir=${dir}&q=${encodeURIComponent(q)}`, { signal });
+}
+
+export function tagWordLevels(words: string[]) {
+  return call<{ levels: Record<string, Level>; message?: string }>("/api/vocab/levels", {
+    method: "POST",
+    body: JSON.stringify({ words }),
+  });
 }
 
 // ── AI điền nghĩa ───────────────────────────────────────────────────────────

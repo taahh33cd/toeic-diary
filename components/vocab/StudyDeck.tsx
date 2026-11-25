@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import type { CardRow, ProgressRow } from "@/lib/vocab/client";
 import { recordVocabReview } from "@/lib/vocab/review-client";
 import { playWord } from "@/lib/vocab/audio";
+import FlipCard from "./FlipCard";
 
 const GREEN = "var(--accent-green, #4A7C59)";
 const RED = "var(--accent-red, #B94040)";
@@ -24,6 +25,8 @@ interface Props {
   onReview?: (word: string, known: boolean) => Promise<boolean>;
   /** Hiện ở màn kết thúc — dùng cho lời mời đăng ký trên trang công khai. */
   ketThuc?: React.ReactNode;
+  /** Chữ trên nút thoát ở màn kết thúc. */
+  exitLabel?: string;
 }
 
 /**
@@ -42,6 +45,7 @@ export default function StudyDeck({
   onExit,
   onReview,
   ketThuc,
+  exitLabel = "← Về bộ thẻ",
 }: Props) {
   const progressByKey = useMemo(
     () => new Map(progress.map((p) => [p.wordKey, p])),
@@ -65,6 +69,8 @@ export default function StudyDeck({
   const [thuoc, setThuoc] = useState<string[]>([]);
   const [latLai, setLatLai] = useState(0);
   const [dangLuu, setDangLuu] = useState(false);
+  /** Tăng mỗi lượt đánh dấu — làm khoá cho thẻ để thẻ kế tiếp vào ở mặt trước. */
+  const [luot, setLuot] = useState(0);
   /**
    * Thông báo sau khi ghi tiến độ.
    *
@@ -99,6 +105,7 @@ export default function StudyDeck({
               : { text: "Chưa lưu được tiến độ (mất mạng?)", mat: true };
       }
       setLoi(bao);
+      setLuot((n) => n + 1);
       if (known) {
         setThuoc((l) => [...l, card.id]);
         setQueue((q) => q.slice(1));
@@ -138,7 +145,7 @@ export default function StudyDeck({
         </p>
         <button onClick={onExit} className="mt-4 px-4 py-2 rounded-lg text-sm font-semibold"
           style={{ background: "var(--bg-elevated)", color: "var(--text-primary)" }}>
-          ← Về bộ thẻ
+          {exitLabel}
         </button>
       </div>
     );
@@ -159,7 +166,7 @@ export default function StudyDeck({
         {ketThuc}
         <button onClick={onExit} className="mt-4 px-4 py-2 rounded-lg text-sm font-semibold"
           style={{ background: "var(--accent-primary)", color: "#fff" }}>
-          ← Về bộ thẻ
+          {exitLabel}
         </button>
       </div>
     );
@@ -201,65 +208,63 @@ export default function StudyDeck({
         </p>
       )}
 
-      {/* Thẻ: bấm để lật */}
-      <button
-        onClick={() => setFlipped((f) => !f)}
-        className="w-full text-left rounded-2xl p-6 mb-4"
-        style={{
-          minHeight: 220,
-          background: "var(--bg-elevated)",
-          border: "1.5px solid var(--border)",
-          boxShadow: "var(--shadow-sm)",
-        }}
-      >
-        {!flipped ? (
-          <div className="flex flex-col items-center justify-center text-center" style={{ minHeight: 170 }}>
-            <p className="hand" style={{ fontSize: "2.2rem", color: "var(--accent-primary)", lineHeight: 1.1 }}>
-              {card.word}
-            </p>
-            {card.ipa && (
-              <p className="mt-1.5 font-mono text-sm" style={{ color: "var(--text-muted)" }}>{card.ipa}</p>
-            )}
-            <span
-              role="button"
-              tabIndex={0}
-              onClick={(e) => { e.stopPropagation(); playWord(card.word, card.audioUrl ?? undefined); }}
-              onKeyDown={(e) => { if (e.key === "Enter") { e.stopPropagation(); playWord(card.word, card.audioUrl ?? undefined); } }}
-              className="mt-3 px-3 py-1.5 rounded-full text-xs font-semibold cursor-pointer"
-              style={{ background: "var(--bg-secondary)", color: "var(--text-primary)" }}
+      {/* Thẻ: bấm để lật — lật quanh trục ngang như Quizlet */}
+      <div className="mb-4">
+        <FlipCard
+          cardKey={`${card.id}-${luot}`}
+          flipped={flipped}
+          onFlip={() => setFlipped((f) => !f)}
+          height={card.imageUrl ? 360 : 300}
+          overlay={
+            <button
+              type="button"
+              onClick={() => playWord(card.word, card.audioUrl ?? undefined)}
+              aria-label={`Nghe ${card.word}`}
+              className="w-11 h-11 rounded-full flex items-center justify-center"
+              style={{ background: "var(--bg-secondary)", color: "var(--text-primary)", border: "1px solid var(--border)" }}
             >
-              🔊 Nghe
-            </span>
-            <p className="text-xs mt-4" style={{ color: "var(--text-light, var(--text-muted))" }}>
-              Bấm thẻ hoặc Space để lật
-            </p>
-          </div>
-        ) : (
-          <div style={{ minHeight: 170 }}>
-            <p className="text-xl font-bold mb-2" style={{ color: "var(--text-primary)" }}>
-              {card.meaningVi || <span style={{ color: "var(--text-muted)" }}>(chưa có nghĩa)</span>}
-            </p>
-            {card.imageUrl && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={card.imageUrl} alt={card.meaningVi ?? card.word}
-                className="rounded-lg mb-2" style={{ maxHeight: 180, objectFit: "contain" }} />
-            )}
-            {card.example && (
-              <p className="text-sm italic px-3 py-2 rounded-lg"
-                style={{ background: "var(--bg-secondary)", color: "var(--text-primary)" }}>
-                “{card.example}”
-              </p>
-            )}
-            {p && (
-              <p className="text-xs mt-3" style={{ color: "var(--text-muted)" }}>
-                đã ôn ×{p.repCount}
-                {p.intervalDays > 0 && ` · giãn cách ${p.intervalDays} ngày`}
-                {p.wrongCount > 0 && ` · sai ${p.wrongCount} lần`}
-              </p>
-            )}
-          </div>
-        )}
-      </button>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M4 10v4h4l5 4V6L8 10H4z" /><path d="M16 9a4 4 0 010 6" /></svg>
+            </button>
+          }
+          front={
+            <>
+              <span className="hand" style={{ fontSize: "2.4rem", color: "var(--accent-primary)", lineHeight: 1.1 }}>
+                {card.word}
+              </span>
+              {card.ipa && (
+                <span className="font-mono text-sm" style={{ color: "var(--text-muted)" }}>{card.ipa}</span>
+              )}
+              <span className="text-xs mt-3" style={{ color: "var(--text-muted)" }}>
+                Bấm thẻ hoặc Space để lật
+              </span>
+            </>
+          }
+          back={
+            <>
+              <span className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>
+                {card.meaningVi || <span style={{ color: "var(--text-muted)" }}>(chưa có nghĩa)</span>}
+              </span>
+              {card.imageUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={card.imageUrl} alt="" className="rounded-lg" style={{ maxHeight: 140, objectFit: "contain" }} />
+              )}
+              {card.example && (
+                <span className="text-sm italic px-3 py-2 rounded-lg"
+                  style={{ background: "var(--bg-secondary)", color: "var(--text-primary)" }}>
+                  “{card.example}”
+                </span>
+              )}
+              {p && (
+                <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+                  đã ôn ×{p.repCount}
+                  {p.intervalDays > 0 && ` · giãn cách ${p.intervalDays} ngày`}
+                  {p.wrongCount > 0 && ` · sai ${p.wrongCount} lần`}
+                </span>
+              )}
+            </>
+          }
+        />
+      </div>
 
       {flipped && (
         <div className="grid grid-cols-2 gap-3">
