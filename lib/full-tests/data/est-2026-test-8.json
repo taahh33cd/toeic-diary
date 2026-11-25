@@ -6674,7 +6674,8 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-147-148.jpg"
   },
   {
    "part": 7,
@@ -6770,7 +6771,8 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-149-150.jpg"
   },
   {
    "part": 7,
@@ -6860,7 +6862,8 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-151-152.jpg"
   },
   {
    "part": 7,
@@ -6950,7 +6953,8 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-153-154.jpg"
   },
   {
    "part": 7,
@@ -7078,7 +7082,8 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-155-157.jpg"
   },
   {
    "part": 7,
@@ -7206,7 +7211,8 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-158-160.jpg"
   },
   {
    "part": 7,
@@ -7340,7 +7346,8 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-161-163.jpg"
   },
   {
    "part": 7,
@@ -7506,7 +7513,8 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-164-167.jpg"
   },
   {
    "part": 7,
@@ -7678,7 +7686,8 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-168-171.jpg"
   },
   {
    "part": 7,
@@ -7844,7 +7853,8 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-172-175.jpg"
   },
   {
    "part": 7,
@@ -8052,7 +8062,9 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-176-180.jpg",
+   "imagePassages": 1
   },
   {
    "part": 7,
@@ -8260,7 +8272,9 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-181-185.jpg",
+   "imagePassages": 1
   },
   {
    "part": 7,
@@ -8478,7 +8492,9 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-186-190.jpg",
+   "imagePassages": 1
   },
   {
    "part": 7,
@@ -8690,7 +8706,9 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-191-195.jpg",
+   "imagePassages": 1
   },
   {
    "part": 7,
@@ -8908,7 +8926,9 @@
       ]
      }
     }
-   ]
+   ],
+   "image": "/images/full-tests/est-2026/test-8/p7-196-200.jpg",
+   "imagePassages": 1
   }
  ],
  "warnings": []

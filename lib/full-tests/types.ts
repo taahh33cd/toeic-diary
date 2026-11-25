@@ -54,6 +54,8 @@ export interface FullTestGroup {
   /** Part 6/7 */
   intro?: string;
   passages?: Passage[];
+  /** Part 7: số bài đọc đầu tiên đã nằm trong `image`; các bài sau vẫn hiện chữ. Thiếu = ảnh có đủ */
+  imagePassages?: number;
   questions: FullTestQuestion[];
 }
 
