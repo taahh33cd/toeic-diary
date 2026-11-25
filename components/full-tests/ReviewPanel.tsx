@@ -9,6 +9,7 @@ import type {
 } from "@/lib/full-tests/types";
 import { PALETTE, type Palette, type Skin } from "./theme";
 import type { RunConfig } from "./SetupPanel";
+import ImageZoom from "./ImageZoom";
 
 type Filter = "wrong" | "marked" | "blank" | "all";
 
@@ -457,6 +458,11 @@ function ReviewGroup({
   const meta = partMeta(group.part);
   const [openMedia, setOpenMedia] = useState(false);
   const hasMedia = Boolean(group.audio || group.transcript || group.image || group.passages?.length);
+  // Bài đọc có ảnh scan: hiện ảnh, văn bản mở bằng nút riêng
+  const scanned = Boolean(group.image && group.passages?.length);
+  const inImage = scanned ? (group.imagePassages ?? group.passages!.length) : 0;
+  const [showText, setShowText] = useState(false);
+  const [zoomed, setZoomed] = useState<string | null>(null);
 
   return (
     <section
@@ -502,14 +508,28 @@ function ReviewGroup({
           )}
           {group.image && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={group.image} alt="" style={{ width: "100%", maxWidth: 460, borderRadius: 8, border: `1px solid ${P.border}`, background: "#fff", marginBottom: "0.7rem" }} />
+            <img
+              src={group.image}
+              alt=""
+              onClick={() => setZoomed(group.image!)}
+              style={{ width: "100%", maxWidth: scanned ? 760 : 460, display: "block", borderRadius: 8, border: `1px solid ${P.border}`, background: "#fff", marginBottom: "0.7rem", cursor: "zoom-in" }}
+            />
+          )}
+          {scanned && (
+            <button
+              type="button"
+              onClick={() => setShowText((v) => !v)}
+              style={{ background: "transparent", border: `1px solid ${P.border}`, borderRadius: 7, padding: "4px 11px", color: P.inkSoft, fontFamily: P.sans, fontSize: "0.78rem", fontWeight: 700, cursor: "pointer", marginBottom: "0.7rem" }}
+            >
+              {showText ? "Ẩn văn bản" : "Xem văn bản"}
+            </button>
           )}
           {group.transcript && (
             <div style={{ fontSize: "0.9rem", lineHeight: 1.7, whiteSpace: "pre-wrap", color: P.inkSoft }}>
               {group.transcript}
             </div>
           )}
-          {group.passages?.map((ps, i) => (
+          {group.passages?.map((ps, i) => (i < inImage && !showText ? null : (
             <div key={i} style={{ marginBottom: "0.8rem" }}>
               {(group.passages?.length ?? 0) > 1 && (
                 <p style={{ fontSize: "0.7rem", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", color: P.primary, margin: "0 0 0.4rem" }}>
@@ -518,9 +538,11 @@ function ReviewGroup({
               )}
               <div style={{ fontSize: "0.9rem", lineHeight: 1.7, whiteSpace: "pre-wrap" }}>{ps.text}</div>
             </div>
-          ))}
+          )))}
         </div>
       )}
+
+      {zoomed && <ImageZoom src={zoomed} onClose={() => setZoomed(null)} />}
 
       <div style={{ display: "grid", gap: "1rem" }}>
         {questions.map((q) => (

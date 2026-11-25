@@ -9,6 +9,7 @@ import type {
 } from "@/lib/full-tests/types";
 import { PALETTE, type Palette, type Skin } from "./theme";
 import type { RunConfig } from "./SetupPanel";
+import ImageZoom from "./ImageZoom";
 
 /** Giai đoạn của chế độ thi thật: Listening chạy theo audio rồi khoá, Reading tính giờ riêng. */
 type Stage = "listening" | "reading";
@@ -686,15 +687,7 @@ export function ExamScreen({
         </div>
       )}
 
-      {zoomed && (
-        <div
-          onClick={() => setZoomed(null)}
-          style={{ position: "fixed", inset: 0, background: "rgba(6,10,20,.82)", zIndex: 60, display: "grid", placeItems: "center", padding: "2rem", cursor: "zoom-out" }}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={zoomed} alt="" style={{ maxWidth: "100%", maxHeight: "100%", borderRadius: 8, background: "#fff" }} />
-        </div>
-      )}
+      {zoomed && <ImageZoom src={zoomed} onClose={() => setZoomed(null)} />}
 
       {confirming && (
         <div style={{ position: "fixed", inset: 0, background: "rgba(6,10,20,.6)", zIndex: 70, display: "grid", placeItems: "center", padding: "1.5rem" }}>
@@ -940,7 +933,9 @@ function MediaBlock({
         />
       )}
 
-      {g.passages?.map((ps, i) => (
+      {/* Part 7 có ảnh scan bài đọc ⇒ chỉ hiện ảnh; văn bản dành cho phần giải thích.
+          Bài đọc chưa có trong ảnh (imagePassages) vẫn hiện chữ. */}
+      {g.passages?.map((ps, i) => (g.image && i < (g.imagePassages ?? g.passages!.length) ? null : (
         <article
           key={i}
           style={{ background: P.panel, border: `1px solid ${P.border}`, borderRadius: 10, padding: "1rem 1.1rem", marginBottom: "0.8rem" }}
@@ -954,7 +949,7 @@ function MediaBlock({
             {ps.text}
           </div>
         </article>
-      ))}
+      )))}
     </div>
   );
 }
