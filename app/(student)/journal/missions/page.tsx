@@ -756,6 +756,19 @@ function HwCard({
                                 dangerouslySetInnerHTML={{ __html: item.text }}
                               />
 
+                              {item.personal && (
+                                <span
+                                  title="Thầy giao riêng cho bạn, dựa trên phần bạn còn yếu"
+                                  style={{
+                                    flexShrink: 0, fontSize: ".66rem", fontWeight: 600,
+                                    padding: ".15rem .45rem", whiteSpace: "nowrap",
+                                    background: "rgba(176,122,26,.12)", color: "#9A6A12",
+                                  }}
+                                >
+                                  🎯 Bài riêng
+                                </span>
+                              )}
+
                               {/* Bài trong web: hệ thống tự đánh dấu khi làm xong */}
                               {(item.catalogId || item.deckId) && (
                                 <span

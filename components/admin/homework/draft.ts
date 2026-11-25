@@ -11,6 +11,7 @@ export type Draft = {
   deckId?: string;
   minutes?: number;
   srcLink?: string;
+  personal?: boolean;
 };
 
 export type NewDraft = Omit<Draft, "uid">;
@@ -43,6 +44,7 @@ export function hwToSections(hw: Homework): Sections {
       deckId: i.deckId,
       minutes: i.minutes,
       srcLink: i.catalogId || i.deckId ? (i.link ?? "") : undefined,
+      personal: i.personal,
     }));
   }
   return s;
@@ -77,6 +79,7 @@ export function sectionsToHw(
           ...(linked && d.catalogId ? { catalogId: d.catalogId } : {}),
           ...(linked && d.deckId ? { deckId: d.deckId } : {}),
           ...(linked && d.minutes ? { minutes: d.minutes } : {}),
+          ...(d.personal ? { personal: true } : {}),
         };
       });
     if (items.length > 0) hw[key] = items;

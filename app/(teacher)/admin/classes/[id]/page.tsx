@@ -18,6 +18,7 @@ import {
   RefreshCw,
   Copy,
   ImageDown,
+  Target,
 } from "lucide-react";
 import { useClass, useClasses } from "@/hooks/firebase/useClasses";
 import { useAllStudents } from "@/hooks/firebase/useAllStudents";
@@ -1032,7 +1033,7 @@ function ClassHomeworkSection({
     if (modal?.mode === "edit") {
       // Edit mode: class record + student records both already exist
       await updateClassHomework(classId, hw.id, hw);
-      await Promise.all(memberCodes.map((code) => updateHomework(code, hw.id, hw)));
+      await Promise.all(memberCodes.map((code) => updateHomework(code, hw.id, hw, { keepPersonal: true })));
     } else if (alreadyCreated) {
       // Autosave created the class record but never pushed to students
       await updateClassHomework(classId, hw.id, hw);
@@ -1049,7 +1050,7 @@ function ClassHomeworkSection({
   async function handleSync(hw: Homework) {
     if (!confirm(`Đồng bộ BTVN "${hw.title ?? fmtDate(hw.date)}" sang ${memberCodes.length} học viên?`)) return;
     setPropagating(true);
-    await Promise.all(memberCodes.map((code) => updateHomework(code, hw.id, hw)));
+    await Promise.all(memberCodes.map((code) => updateHomework(code, hw.id, hw, { keepPersonal: true })));
     setPropagating(false);
   }
 
@@ -1224,6 +1225,15 @@ function ClassHomeworkSection({
                       >
                         <Copy size={13} />
                       </button>
+                      <Link
+                        href={`/admin/homework/personal?classId=${classId}&hwId=${hw.id}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="p-1.5 rounded-lg hover:opacity-70"
+                        style={{ color: "#B07A1A", background: "rgba(176,122,26,0.08)" }}
+                        title="Gợi ý bài riêng cho từng HV"
+                      >
+                        <Target size={13} />
+                      </Link>
                       <button
                         onClick={(e) => { e.stopPropagation(); handleSync(hw); }}
                         className="p-1.5 rounded-lg hover:opacity-70"
@@ -1278,6 +1288,7 @@ function ClassHomeworkSection({
           targetLabel={`${classLabel} · ${memberCodes.length} HV`}
           schedule={schedule}
           history={homework}
+          extraTargets={{ exclude: [{ type: "class", id: classId }] }}
           onSave={handleSave}
           onAutosave={handleAutosave}
           onClose={() => { setModal(null); autosavedHwIdRef.current = null; }}

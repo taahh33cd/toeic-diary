@@ -1414,6 +1414,7 @@ function PersonalHWSection({
           targetLabel={code}
           schedule={schedule}
           history={homework}
+          extraTargets={{ exclude: [{ type: "student", id: code }] }}
           saveLabel="💾 Lưu BTVN"
           onSave={(hw) => handleSaveHw(hw, modal.mode === "edit")}
           onAutosave={handleAutosaveHw}

@@ -31,6 +31,7 @@ function HomeworkForm({ code, onSaved }: { code: string; onSaved: () => void }) 
       targetLabel={student ? `${student.name} (${code})` : code}
       schedule={schedule}
       history={homework}
+      extraTargets={{ exclude: [{ type: "student", id: code }] }}
       saveLabel="💾 Lưu bài tập"
       onSave={async (hw) => {
         await pushHomework(code, hw);
@@ -104,10 +105,6 @@ export default function HomeworkAdminPage() {
 
   return (
     <div className="space-y-5">
-      <h1 className="text-xl font-bold" style={{ color: "var(--text-primary)" }}>
-        📝 Bài tập
-      </h1>
-
       {/* Student picker */}
       <div>
         <label className="text-xs font-medium mb-1.5 block" style={{ color: "var(--text-muted)" }}>

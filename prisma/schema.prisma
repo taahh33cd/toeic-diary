@@ -1088,3 +1088,96 @@ model PlanEvent {
   @@index([userId, type, aiCalledAt])
   @@map("plan_events")
 }
+
+// ─────────────────────────────────────
+// SOẠN BTVN — mẫu, giáo trình, nháp (giai đoạn 2)
+// Nội dung (content) luôn cùng shape với các mục của Homework ở RTDB:
+// { vocab?: HwItem[], reading?: HwItem[], listening?: HwItem[], practice?: HwItem[], other?: HwItem[] }
+// ─────────────────────────────────────
+
+/// Mẫu BTVN — một khung bài dùng lại nhiều lần.
+model HwTemplate {
+  id        String   @id @default(uuid())
+  ownerId   String   @map("owner_id")
+  title     String
+  content   Json
+  useCount  Int      @default(0) @map("use_count")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("hw_templates")
+}
+
+/// Giáo trình: danh sách buổi do giáo viên tự gắn bài, sửa lúc nào cũng được.
+model HwCurriculum {
+  id        String   @id @default(uuid())
+  ownerId   String   @map("owner_id")
+  title     String
+  /// [{ id, topic, content }] — thứ tự trong mảng là thứ tự buổi
+  lessons   Json     @default("[]")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  runs HwRun[]
+
+  @@map("hw_curricula")
+}
+
+/// Một giáo trình đang chạy cho một lớp hoặc một HV lẻ.
+model HwRun {
+  id           String       @id @default(uuid())
+  curriculumId String       @map("curriculum_id")
+  curriculum   HwCurriculum @relation(fields: [curriculumId], references: [id], onDelete: Cascade)
+
+  /// "class" | "student"
+  targetType  String @map("target_type")
+  /// id lớp hoặc mã HV ở RTDB
+  targetId    String @map("target_id")
+  targetLabel String @map("target_label")
+
+  /// Ngày (YYYY-MM-DD) của buổi số `startLesson`
+  startDate   String   @map("start_date")
+  startLesson Int      @default(1) @map("start_lesson")
+  /// Ngày nghỉ — không tính là buổi học, các buổi sau tự lùi
+  skipDates   String[] @default([]) @map("skip_dates")
+  /// Nháp đã duyệt thì tự giao vào tối ngày buổi học
+  autoAssign  Boolean  @default(false) @map("auto_assign")
+  /// "active" | "ended"
+  status      String   @default("active")
+
+  createdBy String   @map("created_by")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  drafts HwDraft[]
+
+  @@index([status])
+  @@map("hw_runs")
+}
+
+/// Nháp BTVN sinh từ giáo trình + lịch học. Giao xong thì thành Homework ở RTDB.
+model HwDraft {
+  id    String @id @default(uuid())
+  runId String @map("run_id")
+  run   HwRun  @relation(fields: [runId], references: [id], onDelete: Cascade)
+
+  lessonId String  @map("lesson_id")
+  lessonNo Int     @map("lesson_no")
+  date     String
+  endDate  String? @map("end_date")
+  title    String?
+  content  Json
+  /// Giáo viên đã sửa nội dung → không ghi đè bằng nội dung giáo trình nữa
+  edited   Boolean @default(false)
+  /// "draft" | "approved" | "assigned" | "skipped"
+  status   String  @default("draft")
+
+  homeworkId String?   @map("homework_id")
+  assignedAt DateTime? @map("assigned_at")
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime  @updatedAt @map("updated_at")
+
+  @@unique([runId, lessonId])
+  @@index([date])
+  @@map("hw_drafts")
+}
