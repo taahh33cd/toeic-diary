@@ -174,6 +174,7 @@ export function WordLookupProvider({ children }: { children: React.ReactNode }) 
     }
 
     function tryCapture() {
+      if (popupOpenRef.current) return;
       const s = window.getSelection();
       if (!s || s.isCollapsed || !s.rangeCount) return;
       const text = normalizeQuery(s.toString().trim());
@@ -194,6 +195,9 @@ export function WordLookupProvider({ children }: { children: React.ReactNode }) 
 
     // Điện thoại: chạm đúp vào một từ thì tra ngay; nhấn giữ để bôi đen vẫn dùng được
     let lanCham: { t: number; x: number; y: number } | null = null;
+    // Lượt dò vùng chọn hẹn từ cú chạm trước — phải huỷ khi nhận ra chạm đúp,
+    // kẻo nó chạy sau và đóng popup vừa mở thành nút "Tra nghĩa".
+    let henGio: ReturnType<typeof setTimeout> | undefined;
     const onTouchEnd = (e: TouchEvent) => {
       if (popupRef.current?.contains(e.target as Node) || iconRef.current?.contains(e.target as Node)) return;
       const t = e.changedTouches[0];
@@ -201,6 +205,7 @@ export function WordLookupProvider({ children }: { children: React.ReactNode }) 
       const now = Date.now();
       if (lanCham && now - lanCham.t < 320 && Math.hypot(t.clientX - lanCham.x, t.clientY - lanCham.y) < 30) {
         lanCham = null;
+        clearTimeout(henGio);
         const target = document.elementFromPoint(t.clientX, t.clientY);
         if (!target || target.closest("a, button, label, input, textarea, select, [contenteditable='true'], [data-no-lookup]")) return;
         const range = tuTaiDiem(t.clientX, t.clientY);
@@ -215,7 +220,7 @@ export function WordLookupProvider({ children }: { children: React.ReactNode }) 
         return;
       }
       lanCham = { t: now, x: t.clientX, y: t.clientY };
-      setTimeout(tryCapture, 150);
+      henGio = setTimeout(tryCapture, 150);
     };
 
     const onDocClick = (e: MouseEvent) => {
@@ -241,6 +246,7 @@ export function WordLookupProvider({ children }: { children: React.ReactNode }) 
       document.removeEventListener("click", onDocClick);
       document.removeEventListener("keydown", onKeyDown);
       document.removeEventListener("scroll", onScroll, true);
+      clearTimeout(henGio);
     };
   }, [mounted, enabled, dismiss]);
 

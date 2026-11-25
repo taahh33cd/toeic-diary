@@ -57,7 +57,7 @@ export async function GET() {
     const deckIds = new Map<string, string[]>();
     for (const c of cards) {
       if (!noiDung.has(c.wordKey)) noiDung.set(c.wordKey, c);
-      if (c.context && !nguCanh.has(c.wordKey)) nguCanh.set(c.wordKey, c);
+      if ((c.context || c.sourceLabel) && !nguCanh.has(c.wordKey)) nguCanh.set(c.wordKey, c);
       const arr = deckIds.get(c.wordKey) ?? [];
       arr.push(c.deckId);
       deckIds.set(c.wordKey, arr);
