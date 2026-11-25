@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useProfile } from "@/hooks/useProfile";
 import { Sheet } from "@/components/journal/paper/Sheet";
-import StudyDeck from "@/components/vocab/StudyDeck";
+import SessionRunner, { fromCard } from "@/components/vocab/session/SessionRunner";
 import DeckEditor from "@/components/vocab/DeckEditor";
 import ShareDeck from "@/components/vocab/ShareDeck";
 import QuizRunner from "@/components/vocab/QuizRunner";
@@ -132,13 +132,17 @@ export default function DeckDetailPage() {
 
   if (man !== "danhsach") {
     return (
-      <StudyDeck
-        title={deck.title}
-        cards={deck.cards}
-        progress={progress}
-        dueOnly={man === "hoc-den-han"}
-        onExit={() => setMan("danhsach")}
-      />
+      <div className="py-2">
+        <SessionRunner
+          title={deck.title}
+          words={deck.cards
+            .filter((c) => man === "hoc" || trangThai(tdTheoKey.get(c.wordKey)) === "due")
+            .map((c) => fromCard(c, tdTheoKey.get(c.wordKey), levels[c.wordKey]))}
+          pool={deck.cards.map((c) => fromCard(c, tdTheoKey.get(c.wordKey), levels[c.wordKey]))}
+          exitLabel="← Về bộ thẻ"
+          onExit={() => setMan("danhsach")}
+        />
+      </div>
     );
   }
 

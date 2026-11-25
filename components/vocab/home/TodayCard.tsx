@@ -1,15 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
-export type StudyMode = "flip" | "write" | "listen";
-
-const MODES: { id: StudyMode; label: string }[] = [
-  { id: "flip", label: "Lật thẻ" },
-  { id: "write", label: "Gõ từ (nhìn nghĩa)" },
-  { id: "listen", label: "Nghe – viết" },
-];
-
 /** Mục tiêu mỗi ngày tính theo số từ đã ôn. */
 export const DAILY_GOAL = 20;
 
@@ -26,9 +16,8 @@ export default function TodayCard({
   dueCount: number;
   reviewedToday: number;
   upcomingCount: number;
-  onStart: (mode: StudyMode, scope: "due" | "upcoming") => void;
+  onStart: (scope: "due" | "upcoming") => void;
 }) {
-  const [mode, setMode] = useState<StudyMode>("flip");
   const done = Math.min(reviewedToday, DAILY_GOAL);
   const C = 2 * Math.PI * 26;
   const phut = Math.max(1, Math.ceil((Math.min(dueCount, 20) * 25) / 60));
@@ -68,22 +57,10 @@ export default function TodayCard({
 
       {(!hetHan || upcomingCount > 0) && (
         <div className="flex gap-2 flex-wrap w-full sm:w-auto">
-          <label htmlFor="vocab-mode" className="sr-only">Chế độ ôn</label>
-          <select
-            id="vocab-mode"
-            value={mode}
-            onChange={(e) => setMode(e.target.value as StudyMode)}
-            className="rounded-xl px-3 text-sm flex-1 sm:flex-none"
-            style={{ minHeight: 48, background: "#4A372A", color: "#FBF4EA", border: "1px solid #6B5442" }}
-          >
-            {MODES.map((m) => (
-              <option key={m.id} value={m.id}>{m.label}</option>
-            ))}
-          </select>
           <button
             type="button"
-            onClick={() => onStart(mode, hetHan ? "upcoming" : "due")}
-            className="rounded-xl px-6 font-bold flex-1 sm:flex-none"
+            onClick={() => onStart(hetHan ? "upcoming" : "due")}
+            className="rounded-xl px-8 font-bold flex-1 sm:flex-none"
             style={{ minHeight: 48, background: "#F0A36B", color: "#2B2118" }}
           >
             {hetHan ? "Học trước" : "Bắt đầu ôn"}

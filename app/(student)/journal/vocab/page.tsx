@@ -7,60 +7,15 @@ import { useVocabWords } from "@/hooks/useVocabWords";
 import { useDecks } from "@/hooks/useDecks";
 import { useVocabQueue } from "@/hooks/useVocabQueue";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
-import StudyDeck from "@/components/vocab/StudyDeck";
+import SessionRunner, { fromWordRow } from "@/components/vocab/session/SessionRunner";
 import LookupBox from "@/components/vocab/home/LookupBox";
-import TodayCard, { type StudyMode } from "@/components/vocab/home/TodayCard";
+import TodayCard from "@/components/vocab/home/TodayCard";
 import WordsTab from "@/components/vocab/home/WordsTab";
 import DecksTab from "@/components/vocab/home/DecksTab";
 import LibraryTab from "@/components/vocab/home/LibraryTab";
-import { ListenWriteModal, WriteModal, type PracticeWord } from "@/components/vocab/practice/TypingModals";
-import { tagWordLevels, wordIsDue, type CardRow, type ProgressRow, type WordRow } from "@/lib/vocab/client";
-
-/** Mỗi lượt ôn tối đa bấy nhiêu từ — đủ ngắn để làm xong trong vài phút. */
-const SESSION_SIZE = 20;
+import { tagWordLevels, wordIsDue, type WordRow } from "@/lib/vocab/client";
 
 type Tab = "words" | "decks" | "library";
-
-function toCard(w: WordRow): CardRow {
-  return {
-    id: w.wordKey,
-    word: w.word,
-    wordKey: w.wordKey,
-    ipa: w.ipa,
-    pos: w.pos,
-    meaningVi: w.meaningVi,
-    definition: w.definition,
-    example: w.example,
-    imageUrl: w.imageUrl,
-    audioUrl: w.audioUrl,
-    order: 0,
-  };
-}
-
-function toProgress(w: WordRow): ProgressRow {
-  return {
-    wordKey: w.wordKey,
-    repCount: w.repCount,
-    intervalDays: w.intervalDays,
-    mastered: w.mastered,
-    wrongCount: w.wrongCount,
-    seenCount: w.seenCount,
-    lastReview: w.lastReview,
-    dueAt: w.dueAt,
-  };
-}
-
-function toPractice(w: WordRow): PracticeWord {
-  return {
-    id: w.wordKey,
-    word: w.word,
-    vi: w.meaningVi ?? undefined,
-    ipa: w.ipa ?? undefined,
-    example: w.example ?? undefined,
-    audioUrl: w.audioUrl ?? undefined,
-    part: w.part ?? undefined,
-  };
-}
 
 const isToday = (iso: string | null) => !!iso && new Date(iso).toDateString() === new Date().toDateString();
 
@@ -82,7 +37,7 @@ export default function VocabPage() {
     const t = new URLSearchParams(window.location.search).get("tab");
     return t === "decks" || t === "library" ? t : "words";
   });
-  const [study, setStudy] = useState<{ mode: StudyMode; words: WordRow[]; title: string } | null>(null);
+  const [study, setStudy] = useState<{ words: WordRow[]; title: string } | null>(null);
   const [levels, setLevels] = useState<Record<string, string>>({});
 
   const words = useMemo(
@@ -130,8 +85,8 @@ export default function VocabPage() {
   const reviewedToday = useMemo(() => words.filter((w) => isToday(w.lastReview)).length, [words]);
   const mastered = words.filter((w) => w.mastered).length;
 
-  function startStudy(list: WordRow[], mode: StudyMode = "flip", title = "Ôn từ vựng") {
-    if (list.length) setStudy({ mode, words: list.slice(0, SESSION_SIZE), title });
+  function startStudy(list: WordRow[], title = "Ôn từ vựng") {
+    if (list.length) setStudy({ words: list, title });
   }
 
   if (profileLoading || vocabLoading) {
@@ -156,15 +111,14 @@ export default function VocabPage() {
     );
   }
 
-  // Lật thẻ chiếm trọn màn hình để tập trung, thoát là về đúng chỗ cũ.
-  if (study?.mode === "flip") {
+  // Phiên ôn chiếm trọn màn hình để tập trung, thoát là về đúng chỗ cũ.
+  if (study) {
     return (
       <div className="py-2">
-        <StudyDeck
+        <SessionRunner
           title={study.title}
-          cards={study.words.map(toCard)}
-          progress={study.words.map(toProgress)}
-          exitLabel="← Về sổ từ vựng"
+          words={study.words.map(fromWordRow)}
+          pool={words.map(fromWordRow)}
           onExit={() => setStudy(null)}
         />
       </div>
@@ -221,16 +175,14 @@ export default function VocabPage() {
         </div>
       )}
 
-      <LookupBox words={words} decks={decks} onStudyWord={(w) => startStudy([w], "flip", w.word)} />
+      <LookupBox words={words} decks={decks} onStudyWord={(w) => startStudy([w], w.word)} />
 
       {words.length > 0 && (
         <TodayCard
           dueCount={due.length}
           reviewedToday={reviewedToday}
           upcomingCount={upcoming.length}
-          onStart={(mode, scope) =>
-            startStudy(scope === "due" ? due : upcoming, mode, scope === "due" ? "Ôn hôm nay" : "Học trước")
-          }
+          onStart={(scope) => startStudy(scope === "due" ? due : upcoming, scope === "due" ? "Ôn hôm nay" : "Học trước")}
         />
       )}
 
@@ -240,14 +192,12 @@ export default function VocabPage() {
         {tabBtn("library", "Thư viện")}
       </div>
 
-      {tab === "words" && <WordsTab words={words} decks={decks} onStudy={(list) => startStudy(list, "flip", "Học các từ đã chọn")} />}
+      {tab === "words" && <WordsTab words={words} decks={decks} onStudy={(list) => startStudy(list, "Học các từ đã chọn")} />}
 
-      {tab === "decks" && <DecksTab words={words} decks={decks} onStudy={(list, title) => startStudy(list, "flip", title)} />}
+      {tab === "decks" && <DecksTab words={words} decks={decks} onStudy={(list, title) => startStudy(list, title)} />}
 
       {tab === "library" && <LibraryTab />}
 
-      {study?.mode === "write" && <WriteModal words={study.words.map(toPractice)} onClose={() => setStudy(null)} />}
-      {study?.mode === "listen" && <ListenWriteModal words={study.words.map(toPractice)} onClose={() => setStudy(null)} />}
     </div>
   );
 }
