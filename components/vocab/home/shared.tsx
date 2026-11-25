@@ -17,7 +17,8 @@ export function statusOf(w: WordRow): Status {
   return wordIsDue(w) ? "due" : "learning";
 }
 
-export const isLeech = (w: WordRow) => w.wrongCount >= LEECH_AT;
+/** Từ đã thuộc thì thôi coi là hay quên, dù lịch sử sai nhiều. */
+export const isLeech = (w: WordRow) => !w.mastered && w.wrongCount >= LEECH_AT;
 
 /** Số ngày tới lần ôn kế tiếp, làm tròn lên; 0 = hôm nay. */
 export function daysUntil(iso: string | null): number {

@@ -116,6 +116,23 @@ async function tuDien(word: string) {
   }
 }
 
+/** IPA dự phòng khi dictionaryapi trượt (hay gặp với cụm từ và một số từ). */
+async function datamuseIpa(word: string): Promise<string | null> {
+  try {
+    const res = await fetch(
+      `https://api.datamuse.com/words?sp=${encodeURIComponent(word.toLowerCase())}&md=r&ipa=1&max=1`,
+      { signal: AbortSignal.timeout(5000) }
+    );
+    if (!res.ok) return null;
+    const data = (await res.json()) as Array<{ word?: string; tags?: string[] }>;
+    if (data[0]?.word?.toLowerCase() !== word.toLowerCase()) return null;
+    const tag = data[0]?.tags?.find((t) => t.startsWith("ipa_pron:"));
+    return tag ? chuanIpa(tag.slice("ipa_pron:".length)) : null;
+  } catch {
+    return null;
+  }
+}
+
 function chuanIpa(raw?: string | null): string | null {
   if (!raw) return null;
   const s = raw.trim().replace(/^\/+|\/+$/g, "");
@@ -157,9 +174,22 @@ export async function lookupEn(raw: string, userId: string): Promise<LookupResul
   const wordKey = normalizeWord(word);
 
   const cu = await prisma.vocabLexicon.findUnique({ where: { wordKey } });
-  if (cu?.complete) return { found: true, entry: toEntry(cu) };
+  if (cu?.complete) {
+    if (cu.ipa) return { found: true, entry: toEntry(cu) };
+    // Mục cũ thiếu IPA: bù bằng nguồn miễn phí, không gọi lại AI
+    const ipa = (await tuDien(word))?.ipa ?? (await datamuseIpa(word));
+    if (!ipa) return { found: true, entry: toEntry(cu) };
+    const moi = await prisma.vocabLexicon.update({ where: { wordKey }, data: { ipa } });
+    return { found: true, entry: toEntry(moi) };
+  }
 
-  const dict = await tuDien(word);
+  const tuDienGoc = await tuDien(word);
+  const ipaDuPhong = tuDienGoc?.ipa ? null : await datamuseIpa(word);
+  const dict = tuDienGoc
+    ? { ...tuDienGoc, ipa: tuDienGoc.ipa ?? ipaDuPhong }
+    : ipaDuPhong
+      ? { ipa: ipaDuPhong, pos: null, definition: null, audioUk: null, audioUs: null }
+      : null;
   const duoc = await duocGoiAi("lookup", userId);
 
   if (!duoc.ok) {
