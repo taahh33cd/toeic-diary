@@ -71,9 +71,33 @@ function cauChua(node: Node, text: string): string | undefined {
   return s.split(" ").length >= 4 && s.toLowerCase() !== text.toLowerCase() ? s : undefined;
 }
 
-/** Bài đang học: đường dẫn nội bộ + tên bài. */
+/** Khu học theo đường dẫn — dùng khi trang không có tiêu đề bài rõ ràng. */
+const KHU: [string, string][] = [
+  ["/reading-practice", "Reading"],
+  ["/dictation", "Dictation"],
+  ["/grammar", "Grammar"],
+  ["/subskills", "Subskills"],
+  ["/practice", "Luyện Part"],
+  ["/skills/full-tests", "Full test"],
+  ["/skills", "Skills"],
+  ["/test", "Bài luyện"],
+  ["/course", "Khoá học"],
+  ["/series", "Series"],
+  ["/journal", "Sổ học tập"],
+];
+
+/**
+ * Bài đang học: đường dẫn nội bộ + tên bài.
+ * Bỏ qua tiêu đề nằm trong header/nav — h1 ở thanh trên cùng là tên web
+ * ("TOEIC Diary"), không phải tên bài.
+ */
 function nguon(): { url: string; label: string } {
-  const label = (document.querySelector("main h1, h1")?.textContent || document.title || "").replace(/\s+/g, " ").trim();
+  const khu = KHU.find(([p]) => location.pathname === p || location.pathname.startsWith(p + "/"))?.[1];
+  const tieuDe = [...document.querySelectorAll("main h1, main h2, h1, h2")]
+    .find((el) => !el.closest("header, nav, [role='dialog']") && (el.textContent ?? "").trim().length > 2)
+    ?.textContent?.replace(/\s+/g, " ")
+    .trim();
+  const label = [khu, tieuDe && tieuDe !== khu ? tieuDe : null].filter(Boolean).join(" · ");
   return { url: (location.pathname + location.search).slice(0, 300), label: label.slice(0, 120) };
 }
 
