@@ -44,6 +44,8 @@ export interface ProgressRow {
 export interface DeckDetail {
   deck: DeckSummary & { cards: CardRow[] };
   progress: ProgressRow[];
+  /** wordKey → cấp TOEIC (chỉ những từ đã gắn cấp) */
+  levels?: Record<string, string>;
 }
 
 export interface CardDraft {
@@ -226,6 +228,21 @@ export function tagWordLevels(words: string[]) {
   });
 }
 
+export interface SuggestedCard {
+  word: string;
+  pos?: string;
+  meaningVi?: string;
+  example?: string;
+  level: Level | null;
+}
+
+export function suggestDeckWords(topic: string, level: Level, count: number) {
+  return call<{ ok: true; cards: SuggestedCard[] } | { ok: false; reason: string }>("/api/vocab/suggest", {
+    method: "POST",
+    body: JSON.stringify({ topic, level, count }),
+  });
+}
+
 // ── AI điền nghĩa ───────────────────────────────────────────────────────────
 
 export interface EnrichedWord {
@@ -266,6 +283,8 @@ export interface LibraryDeck {
   slug: string;
   part: number | null;
   cardCount: number;
+  /** Cấp chiếm nhiều nhất trong bộ; null = chưa gắn cấp */
+  level: string | null;
   tacGia: string | null;
   capNhat: string;
   /** Số từ trong bộ mà mình đã học rồi — tiến độ gắn theo từ nên không mất. */

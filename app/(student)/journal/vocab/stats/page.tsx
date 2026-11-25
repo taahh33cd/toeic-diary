@@ -109,7 +109,7 @@ export default function VocabStatsPage() {
               style={{ background: "var(--bg-elevated)", color: "var(--text-primary)" }}>
               ← Sổ từ vựng
             </Link>
-            <Link href="/journal/vocab/decks" className="px-3 py-2 rounded-lg text-sm font-semibold"
+            <Link href="/journal/vocab?tab=decks" className="px-3 py-2 rounded-lg text-sm font-semibold"
               style={{ background: "var(--bg-elevated)", color: "var(--text-primary)" }}>
               🗂️ Bộ thẻ
             </Link>

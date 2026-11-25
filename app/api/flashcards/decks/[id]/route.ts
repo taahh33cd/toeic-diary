@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { prisma } from "@/lib/db/prisma";
 import { requireVocabUser } from "@/lib/vocab/guard";
 import { deckPatchInput, moTaLoi } from "@/lib/vocab/deck";
+import { levelsFor } from "@/lib/vocab/lexicon";
 
 export const dynamic = "force-dynamic";
 
@@ -40,7 +41,9 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       },
     });
 
-    return NextResponse.json({ deck, progress });
+    const levels = await levelsFor(deck.cards.map((c) => c.wordKey));
+
+    return NextResponse.json({ deck, progress, levels });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     console.error("[flashcards/decks/:id GET]", msg);

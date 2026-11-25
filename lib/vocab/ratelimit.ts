@@ -41,6 +41,8 @@ const imageLimit = taoLimit(60, "1 h", "image");
  */
 const lookupLimit = taoLimit(50, "1 d", "lookup");
 const lookupViLimit = taoLimit(30, "1 d", "lookup-vi");
+/** AI gợi ý bộ theo chủ đề: mỗi lượt tối đa 30 từ. */
+const suggestLimit = taoLimit(3, "1 d", "suggest");
 /** Gắn cấp hàng loạt: mỗi lượt tối đa 40 từ. */
 const levelsLimit = taoLimit(30, "1 d", "levels");
 /**
@@ -49,7 +51,7 @@ const levelsLimit = taoLimit(30, "1 d", "levels");
  */
 const aiGlobalLimit = taoLimit(4000, "1 d", "ai-global");
 
-export type LimitKind = "enrich" | "content" | "image" | "lookup" | "lookup-vi" | "levels" | "ai-global";
+export type LimitKind = "enrich" | "content" | "image" | "lookup" | "lookup-vi" | "levels" | "suggest" | "ai-global";
 
 const BANG: Record<LimitKind, Ratelimit | null> = {
   enrich: enrichLimit,
@@ -58,6 +60,7 @@ const BANG: Record<LimitKind, Ratelimit | null> = {
   lookup: lookupLimit,
   "lookup-vi": lookupViLimit,
   levels: levelsLimit,
+  suggest: suggestLimit,
   "ai-global": aiGlobalLimit,
 };
 
@@ -68,6 +71,7 @@ const NHAN: Record<LimitKind, string> = {
   lookup: "tra từ mới bằng AI",
   "lookup-vi": "tra Việt → Anh",
   levels: "gắn cấp độ",
+  suggest: "AI gợi ý bộ từ",
   "ai-global": "AI của hệ thống",
 };
 

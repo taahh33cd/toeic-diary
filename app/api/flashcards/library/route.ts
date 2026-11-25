@@ -1,6 +1,7 @@
-import { NextResponse, type NextRequest } from "next/server";
+import { NextResponse, after, type NextRequest } from "next/server";
 import { prisma } from "@/lib/db/prisma";
 import { requireVocabUser } from "@/lib/vocab/guard";
+import { LEVEL_BATCH, levelsFor, tagLevels, type Level } from "@/lib/vocab/lexicon";
 
 export const dynamic = "force-dynamic";
 
@@ -36,7 +37,7 @@ export async function GET(req: NextRequest) {
         cardCount: true,
         updatedAt: true,
         owner: { select: { displayName: true } },
-        cards: { select: { wordKey: true } },
+        cards: { select: { wordKey: true, word: true } },
       },
     });
     if (decks.length === 0) return NextResponse.json({ decks: [] });
@@ -53,6 +54,20 @@ export async function GET(req: NextRequest) {
       }),
     ]);
     const tapDaHoc = new Set(daHoc.map((p) => p.wordKey));
+
+    // Cấp của bộ = cấp chiếm nhiều nhất trong các từ đã gắn cấp.
+    const capTu = await levelsFor(moiKhoa);
+    const capBo = (keys: string[]): Level | null => {
+      const dem = new Map<Level, number>();
+      for (const k of keys) if (capTu[k]) dem.set(capTu[k], (dem.get(capTu[k]) ?? 0) + 1);
+      return [...dem.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
+    };
+    // Từ chưa có cấp: gắn sau khi trả lời để lần mở sau thư viện lọc được theo cấp
+    const thieuCap = decks.flatMap((d) => d.cards).filter((c) => !capTu[c.wordKey]).map((c) => c.word);
+    if (thieuCap.length) {
+      const userId = gate.userId;
+      after(() => tagLevels([...new Set(thieuCap)].slice(0, LEVEL_BATCH), userId).catch(() => undefined));
+    }
     const banSao = new Map(daLay.map((d) => [d.clonedFrom!, d.id]));
 
     return NextResponse.json({
@@ -65,6 +80,7 @@ export async function GET(req: NextRequest) {
         cardCount: d.cardCount,
         tacGia: d.owner.displayName,
         capNhat: d.updatedAt,
+        level: capBo(d.cards.map((c) => c.wordKey)),
         daHocTrongBo: d.cards.filter((c) => tapDaHoc.has(c.wordKey)).length,
         banSaoCuaToi: banSao.get(d.id) ?? null,
       })),

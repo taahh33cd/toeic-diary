@@ -7,11 +7,12 @@ import { useVocabWords } from "@/hooks/useVocabWords";
 import { useDecks } from "@/hooks/useDecks";
 import { useVocabQueue } from "@/hooks/useVocabQueue";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
-import DeckGrid from "@/components/vocab/DeckGrid";
 import StudyDeck from "@/components/vocab/StudyDeck";
 import LookupBox from "@/components/vocab/home/LookupBox";
 import TodayCard, { type StudyMode } from "@/components/vocab/home/TodayCard";
 import WordsTab from "@/components/vocab/home/WordsTab";
+import DecksTab from "@/components/vocab/home/DecksTab";
+import LibraryTab from "@/components/vocab/home/LibraryTab";
 import { ListenWriteModal, WriteModal, type PracticeWord } from "@/components/vocab/practice/TypingModals";
 import { tagWordLevels, wordIsDue, type CardRow, type ProgressRow, type WordRow } from "@/lib/vocab/client";
 
@@ -127,11 +128,6 @@ export default function VocabPage() {
     [words]
   );
   const reviewedToday = useMemo(() => words.filter((w) => isToday(w.lastReview)).length, [words]);
-  const dueByDeck = useMemo(() => {
-    const m = new Map<string, number>();
-    for (const w of due) for (const d of w.deckIds) m.set(d, (m.get(d) ?? 0) + 1);
-    return m;
-  }, [due]);
   const mastered = words.filter((w) => w.mastered).length;
 
   function startStudy(list: WordRow[], mode: StudyMode = "flip", title = "Ôn từ vựng") {
@@ -246,36 +242,9 @@ export default function VocabPage() {
 
       {tab === "words" && <WordsTab words={words} decks={decks} onStudy={(list) => startStudy(list, "flip", "Học các từ đã chọn")} />}
 
-      {tab === "decks" && (
-        <div className="flex flex-col gap-3">
-          <div className="flex justify-end">
-            <Link
-              href="/journal/vocab/decks/new"
-              className="px-4 rounded-lg text-sm font-bold flex items-center"
-              style={{ minHeight: 44, background: "var(--accent-primary)", color: "#fff" }}
-            >
-              + Tạo bộ
-            </Link>
-          </div>
-          <DeckGrid decks={decks} dueByDeck={dueByDeck} />
-        </div>
-      )}
+      {tab === "decks" && <DecksTab words={words} decks={decks} onStudy={(list, title) => startStudy(list, "flip", title)} />}
 
-      {tab === "library" && (
-        <Link
-          href="/journal/vocab/library"
-          className="rounded-2xl p-5 flex items-center gap-4"
-          style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)", color: "var(--text-primary)" }}
-        >
-          <div className="flex-1">
-            <p className="font-bold">Thư viện bộ mẫu</p>
-            <p className="text-sm mt-1" style={{ color: "var(--text-muted)" }}>
-              Bộ từ do admin soạn — lấy về kho của bạn rồi sửa tuỳ ý.
-            </p>
-          </div>
-          <span aria-hidden="true" className="text-xl">›</span>
-        </Link>
-      )}
+      {tab === "library" && <LibraryTab />}
 
       {study?.mode === "write" && <WriteModal words={study.words.map(toPractice)} onClose={() => setStudy(null)} />}
       {study?.mode === "listen" && <ListenWriteModal words={study.words.map(toPractice)} onClose={() => setStudy(null)} />}

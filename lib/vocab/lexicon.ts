@@ -404,3 +404,101 @@ Trả về DUY NHẤT một mảng JSON đúng ${thieu.length} phần tử, theo
     return { levels };
   }
 }
+
+// ── Cấp độ có sẵn ──────────────────────────────────────────────────────────
+
+/** Đọc cấp đã gắn của một loạt từ (không gọi AI). */
+export async function levelsFor(wordKeys: string[]): Promise<Record<string, Level>> {
+  if (!wordKeys.length) return {};
+  const rows = await prisma.vocabLexicon.findMany({
+    where: { wordKey: { in: [...new Set(wordKeys)] }, level: { not: null } },
+    select: { wordKey: true, level: true },
+  });
+  const out: Record<string, Level> = {};
+  for (const r of rows) {
+    const l = asLevel(r.level);
+    if (l) out[r.wordKey] = l;
+  }
+  return out;
+}
+
+// ── AI gợi ý bộ theo chủ đề ─────────────────────────────────────────────────
+
+export interface SuggestedCard {
+  word: string;
+  pos?: string;
+  meaningVi?: string;
+  example?: string;
+  level: Level | null;
+}
+
+export type SuggestResult =
+  | { ok: true; cards: SuggestedCard[] }
+  | { ok: false; reason: string };
+
+/**
+ * Một lần gọi AI cho cả bộ: từ/cụm theo chủ đề + cấp, kèm nghĩa và ví dụ.
+ * Bỏ qua từ học viên đã có trong sổ. Ghi cấp vào vocab_lexicon (chỉ tạo mới,
+ * không đè mục đã có) để lần sau khỏi gắn lại.
+ */
+export async function suggestDeck(
+  topic: string,
+  level: Level,
+  count: number,
+  excludeWords: string[],
+  userId: string
+): Promise<SuggestResult> {
+  const t = topic.trim().replace(/\s+/g, " ");
+  if (t.length < 2 || t.length > 80) return { ok: false, reason: "Nhập chủ đề ngắn gọn, 2–80 ký tự." };
+  if (!process.env.GEMINI_API_KEY) return { ok: false, reason: "Chưa cấu hình AI" };
+  const rieng = await checkLimit("suggest", userId);
+  if (!rieng.ok) return { ok: false, reason: rieng.message ?? "Hết lượt hôm nay." };
+  const chung = await checkLimit("ai-global", "all");
+  if (!chung.ok) return { ok: false, reason: "AI tạm hết lượt trong hôm nay, thử lại ngày mai." };
+
+  const n = Math.max(5, Math.min(30, Math.round(count)));
+  const tranh = excludeWords.slice(0, 200).join(", ");
+  const prompt = `Bạn là giáo viên TOEIC người Việt. Soạn bộ ${n} từ/cụm tiếng Anh chủ đề "${t}" ở cấp ${level === "850" ? "850+" : level}, đúng những từ hay xuất hiện trong đề TOEIC thật.
+
+${MO_TA_CAP}
+${tranh ? `\nKHÔNG dùng các từ học viên đã biết: ${tranh}\n` : ""}
+Trả về DUY NHẤT một mảng JSON đúng ${n} phần tử:
+[{"word":"...","pos":"n|v|adj|adv|phrase","vi":"nghĩa tiếng Việt ngắn gọn","example":"câu tiếng Anh văn phong TOEIC, dưới 18 từ, dùng chính từ đó","level":"550|650|750|850"}]`;
+
+  try {
+    const res = await ai().models.generateContent({
+      model: MODEL,
+      contents: prompt,
+      config: { responseMimeType: "application/json" },
+    });
+    const arr = parseJson(res.text ?? "");
+    const daCo = new Set(excludeWords.map(normalizeWord));
+    const seen = new Set<string>();
+    const cards: SuggestedCard[] = (Array.isArray(arr) ? arr : [])
+      .map((x) => x as Record<string, unknown>)
+      .filter((x) => typeof x.word === "string" && looksEnglish(x.word))
+      .map((x) => ({
+        word: String(x.word).trim(),
+        pos: typeof x.pos === "string" ? x.pos : undefined,
+        meaningVi: typeof x.vi === "string" && x.vi.trim() ? x.vi.trim() : undefined,
+        example: typeof x.example === "string" && x.example.trim() ? x.example.trim() : undefined,
+        level: asLevel(x.level),
+      }))
+      .filter((c) => {
+        const k = normalizeWord(c.word);
+        if (daCo.has(k) || seen.has(k)) return false;
+        seen.add(k);
+        return true;
+      })
+      .slice(0, n);
+    if (!cards.length) return { ok: false, reason: "AI không gợi ý được — thử chủ đề cụ thể hơn." };
+    await prisma.vocabLexicon.createMany({
+      data: cards.filter((c) => c.level).map((c) => ({ wordKey: normalizeWord(c.word), word: c.word, level: c.level })),
+      skipDuplicates: true,
+    });
+    return { ok: true, cards };
+  } catch (e) {
+    console.error("[lexicon] suggestDeck:", e instanceof Error ? e.message : String(e));
+    return { ok: false, reason: "Không gợi ý được lúc này, thử lại sau." };
+  }
+}
