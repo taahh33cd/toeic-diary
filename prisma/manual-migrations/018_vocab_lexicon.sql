@@ -1,4 +1,4 @@
--- 017_vocab_lexicon.sql — Từ điển dùng chung cho trang Sổ từ vựng (tra từ + cấp độ TOEIC).
+-- 018_vocab_lexicon.sql — Từ điển dùng chung cho trang Sổ từ vựng (tra từ + cấp độ TOEIC).
 --
 -- Chạy tay trên Supabase. An toàn khi chạy lại (IF NOT EXISTS).
 -- Đã chạy qua Supabase MCP trên project tcpolxjxtgptbzpbtwvq.
