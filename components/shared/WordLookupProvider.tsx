@@ -58,9 +58,15 @@ function cauChua(node: Node, text: string): string | undefined {
   const el = (node.nodeType === Node.TEXT_NODE ? node.parentElement : (node as Element))?.closest(
     "p, li, td, th, blockquote, dd, h1, h2, h3, h4, h5, h6, div, span"
   );
-  const full = (el?.textContent ?? "").replace(/\s+/g, " ").trim();
+  // innerText giữ xuống dòng giữa tiêu đề và đoạn văn — textContent nối liền
+  // "STAFF" với "Beginning" thành "STAFFBeginning".
+  const full = ((el as HTMLElement | null)?.innerText ?? el?.textContent ?? "").trim();
   if (!full) return undefined;
-  const cau = full.split(/(?<=[.!?])\s+/).find((c) => c.toLowerCase().includes(text.toLowerCase())) ?? full;
+  const cau =
+    full
+      .split(/(?<=[.!?])\s+|\n+/)
+      .map((c) => c.replace(/\s+/g, " ").trim())
+      .find((c) => c.toLowerCase().includes(text.toLowerCase())) ?? full.replace(/\s+/g, " ");
   const s = cau.trim().slice(0, 300);
   return s.split(" ").length >= 4 && s.toLowerCase() !== text.toLowerCase() ? s : undefined;
 }
