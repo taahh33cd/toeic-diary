@@ -237,6 +237,9 @@ export interface Goal {
   /** S&W: Writing 0–200. */
   swTargetW?: number;
   swDeadline?: string;
+  /** Ai lưu lần gần nhất — để HV thấy "GV đặt ngày …". Thiếu = HV tự đặt (dữ liệu cũ). */
+  setByRole?: "student" | "teacher";
+  setByName?: string;
   studentId: string;
   studentName: string;
   updatedAt: string;

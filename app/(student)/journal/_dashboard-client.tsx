@@ -23,6 +23,7 @@ import { useVocabDue } from "@/hooks/useVocabDue";
 import type { XpStats, SwWorkStats } from "./page";
 import type { ScheduleItem, Goal, ToeicScore, SwScore } from "@/lib/firebase/types";
 import { EXAM_MAX, examScores, goalExamType, goalTotal } from "@/lib/exam-goal";
+import { GoalHero, type OnlineLatest } from "@/components/journal/GoalHero";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -1200,7 +1201,9 @@ function LoadingSkeleton() {
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
-export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats | null; swWork?: SwWorkStats | null }) {
+export default function DashboardClient({ xpStats, swWork, onlineLatest = null }: {
+  xpStats: XpStats | null; swWork?: SwWorkStats | null; onlineLatest?: OnlineLatest | null;
+}) {
   const { profile, loading: profileLoading } = useProfile();
   const { student, loading: studentLoading } = useStudent(profile?.studentCode);
   const { homework } = useHomework(profile?.studentCode);
@@ -1365,6 +1368,9 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
           </div>
         </div>
       )}
+
+      {/* Mục tiêu điểm — trên cùng để mở sổ là thấy */}
+      <GoalHero goal={goal} scores={scores} swScores={swScores} onlineLatest={onlineLatest} />
 
       {/* Trang hôm nay: lời chào + con dấu tiến độ + việc cần làm */}
       <TodaySheet

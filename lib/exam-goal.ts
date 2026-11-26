@@ -41,3 +41,21 @@ export function examScores(
   }
   return (scores ?? []).map((s) => ({ score: s.score, date: s.date }));
 }
+
+/**
+ * Số ngày còn lại tới hết tháng hạn (hạn lưu dạng "YYYY-MM-01" hoặc "YYYY-MM").
+ * Tính theo ngày lịch của máy người xem; âm = đã quá hạn.
+ */
+export function daysUntilDeadline(deadline: string, now: Date = new Date()): number | null {
+  const m = /^(\d{4})-(\d{2})/.exec(deadline);
+  if (!m) return null;
+  const end = new Date(Number(m[1]), Number(m[2]), 0); // ngày cuối tháng hạn
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.round((end.getTime() - today.getTime()) / 86_400_000);
+}
+
+/** "12/2026" từ "2026-12-01". */
+export function deadlineLabel(deadline: string): string {
+  const [y, m] = deadline.split("-");
+  return `${m}/${y}`;
+}

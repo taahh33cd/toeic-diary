@@ -166,7 +166,7 @@ function GoalEditForm({
     try {
       await setGoal(studentCode, {
         examType: "lr", target: numTarget, deadline: deadline || undefined,
-        studentId, studentName, updatedAt: new Date().toISOString(),
+        studentId, studentName, setByRole: "student", setByName: undefined, updatedAt: new Date().toISOString(),
       });
       onDone();
     } finally { setSaving(false); }
@@ -323,7 +323,7 @@ function SwGoalEditForm({
       await setGoal(studentCode, {
         examType: "sw", swTargetS: numS, swTargetW: numW,
         swDeadline: deadline || undefined,
-        studentId, studentName, updatedAt: new Date().toISOString(),
+        studentId, studentName, setByRole: "student", setByName: undefined, updatedAt: new Date().toISOString(),
       });
       onDone();
     } finally { setSaving(false); }
