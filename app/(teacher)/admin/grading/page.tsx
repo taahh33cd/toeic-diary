@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 type Row = {
@@ -74,11 +75,22 @@ function groupByDay(rows: Row[]) {
 }
 
 export default function GradingPage() {
+  return (
+    <Suspense>
+      <GradingList />
+    </Suspense>
+  );
+}
+
+function GradingList() {
   const [tab, setTab] = useState<"submitted" | "ai" | "graded">("submitted");
   const [order, setOrder] = useState<Order>("asc");
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  // ?code=XXX — mở từ trang chi tiết HV: chỉ hiện bài của HV đó.
+  const router = useRouter();
+  const onlyCode = useSearchParams().get("code");
 
   const load = useCallback(async (status: string, sort: Order) => {
     setLoading(true);
@@ -105,7 +117,12 @@ export default function GradingPage() {
 
   useEffect(() => { load(tab, order); }, [load, tab, order]);
 
-  const groups = groupByDay(rows);
+  const shown = onlyCode ? rows.filter((r) => r.profile?.studentCode === onlyCode) : rows;
+  const groups = groupByDay(shown);
+
+  function clearFilter() {
+    router.replace("/admin/grading");
+  }
 
   return (
     <div className="space-y-4">
@@ -114,6 +131,14 @@ export default function GradingPage() {
         <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>
           Bài học viên gửi từ khu Luyện đề, nhóm theo ngày nộp.
         </p>
+        {onlyCode && (
+          <p className="text-xs mt-2 flex items-center gap-2" style={{ color: "var(--text-secondary)" }}>
+            Đang lọc học viên <strong>{onlyCode}</strong>
+            <button onClick={clearFilter} className="underline" style={{ background: "none", border: "none", cursor: "pointer", color: "var(--accent-primary)" }}>
+              Xem tất cả
+            </button>
+          </p>
+        )}
       </div>
 
       <div className="flex gap-1 border-b items-end" style={{ borderColor: "var(--border)" }}>
@@ -163,7 +188,7 @@ export default function GradingPage() {
           <p className="font-semibold m-0 mb-1">Không tải được danh sách bài</p>
           <p className="m-0 text-xs break-words" style={{ opacity: 0.85 }}>{error}</p>
         </div>
-      ) : rows.length === 0 ? (
+      ) : shown.length === 0 ? (
         <p className="text-sm py-8 text-center" style={{ color: "var(--text-muted)" }}>
           {tab === "submitted"
             ? "Không có bài nào chờ chấm."

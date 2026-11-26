@@ -59,7 +59,10 @@ export function GoalEditor({
   const existing = single ? goals[single.code] ?? null : null;
   const prev = single ? prevGoals[single.code] ?? null : null;
 
-  const [rows, setRows] = useState<Rows>(() => toRows(existing?.parts ?? null));
+  // Tháng chưa đặt mà HV đã có mục tiêu L&R → điền sẵn bảng gợi ý theo điểm đó.
+  const [rows, setRows] = useState<Rows>(() => toRows(
+    existing?.parts ?? (!readOnly && typeof single?.goal?.target === "number" ? suggestParts(single.goal.target) : null),
+  ));
   const [suggestFrom, setSuggestFrom] = useState(String(single?.goal?.target ?? 600));
   const [allTimes, setAllTimes] = useState(String(DEFAULT_TIMES));
   const [saving, setSaving] = useState(false);

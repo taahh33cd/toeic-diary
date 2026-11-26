@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Copy, Check, Plus, Trash2, ChevronDown, ChevronUp, ExternalLink, ImageDown } from "lucide-react";
+import { Copy, Plus, Trash2, ChevronDown, ChevronUp, ImageDown } from "lucide-react";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useHomework } from "@/hooks/firebase/useHomework";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
@@ -19,9 +19,6 @@ import { ZoomableImage } from "@/components/admin/ZoomableImage";
 import {
   updateStudent,
   deleteStudent,
-  setStudentFrozen,
-  pushComment,
-  sendNotification,
   pushStudentScore,
   updateStudentScore,
   deleteStudentScore,
@@ -39,6 +36,11 @@ import {
   deleteHwFile,
 } from "@/lib/firebase/helpers";
 import { calcEtsScore } from "@/lib/ets-scale";
+import { StudentHeader } from "./_header";
+import { StudentGoalPanel } from "./_goal-panel";
+import { MessageSection } from "./_message";
+import type { StudentOverview } from "@/app/api/admin/students/[code]/overview/route";
+import { overdueHomework, shiftDay } from "@/lib/journal/homework";
 import type {
   Student,
   ToeicScore,
@@ -117,115 +119,6 @@ function Input({ value, onChange, type = "text", placeholder = "" }: {
   );
 }
 
-// ─── 1. BasicInfo ─────────────────────────────────────────────────────────────
-
-function BasicInfoSection({ student, code, saveRef }: {
-  student: Student;
-  code: string;
-  saveRef?: React.MutableRefObject<(() => Promise<void>) | null>;
-}) {
-  const [name, setName] = useState(student.name ?? "");
-  const [week, setWeek] = useState(String(student.currentWeek ?? 1));
-  const [courseType, setCourseType] = useState<"group" | "per-session" | "package">(student.courseType ?? "per-session");
-  const [price, setPrice] = useState(String(student.pricePerSession ?? ""));
-  const [totalFee, setTotalFee] = useState(String(student.totalFee ?? ""));
-  const [paid, setPaid] = useState(String(student.paidAmount ?? ""));
-  const [saving, setSaving] = useState(false);
-  const [saved, setSaved] = useState(false);
-
-  async function handleSave() {
-    setSaving(true);
-    try {
-      await updateStudent(code, {
-        name: name.trim(),
-        currentWeek: parseInt(week) || 1,
-        courseType: courseType as Student["courseType"],
-        pricePerSession: courseType !== "package" ? (parseInt(price) || undefined) : undefined,
-        totalFee: courseType === "package" ? (parseInt(totalFee) || undefined) : undefined,
-        paidAmount: courseType === "package" ? (parseInt(paid) || undefined) : undefined,
-      });
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2000);
-    } catch (err) {
-      console.error("[handleSave]", err);
-      alert("Lưu thất bại. Vui lòng thử lại.");
-    } finally {
-      setSaving(false);
-    }
-  }
-
-  // L14: expose save fn to parent via ref
-  useEffect(() => {
-    if (saveRef) saveRef.current = handleSave;
-  });
-
-
-  return (
-    <SectionCard
-      title="📋 Thông tin cơ bản"
-      action={
-        <button
-          onClick={handleSave}
-          disabled={saving}
-          className="text-xs px-3 py-1.5 rounded-lg font-semibold disabled:opacity-60"
-          style={{ background: saved ? "rgba(16,185,129,0.15)" : "var(--accent-primary)", color: saved ? "rgb(5,150,105)" : "#fff" }}
-        >
-          {saving ? "Đang lưu..." : saved ? "✓ Đã lưu" : "Lưu tất cả"}
-        </button>
-      }
-    >
-      <div className="grid grid-cols-2 gap-3">
-        <div className="col-span-2">
-          <InputRow label="HỌ VÀ TÊN">
-            <Input value={name} onChange={setName} placeholder="Tên học viên" />
-          </InputRow>
-        </div>
-        <InputRow label="MÃ HỌC VIÊN">
-          <input
-            value={code}
-            disabled
-            className="w-full px-3 py-2 rounded-lg text-sm border"
-            style={{ background: "var(--border)", borderColor: "var(--border)", color: "var(--text-muted)" }}
-          />
-        </InputRow>
-        <InputRow label="TUẦN HIỆN TẠI">
-          <Input value={week} onChange={setWeek} type="number" placeholder="1" />
-        </InputRow>
-        <div className="col-span-2">
-          <InputRow label="LOẠI KHOÁ HỌC">
-            <select
-              value={courseType}
-              onChange={(e) => setCourseType(e.target.value as "group" | "per-session" | "package")}
-              className="w-full px-3 py-2 rounded-lg text-sm border outline-none"
-              style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-            >
-              <option value="per-session">1-1 theo buổi</option>
-              <option value="group">Lớp nhóm</option>
-              <option value="package">1-1 Trọn gói</option>
-            </select>
-          </InputRow>
-        </div>
-        {courseType !== "package" ? (
-          <div className="col-span-2">
-            <InputRow label="ĐƠN GIÁ / BUỔI (VND)">
-              <Input value={price} onChange={setPrice} type="number" placeholder="vd. 150000" />
-            </InputRow>
-          </div>
-        ) : (
-          <>
-            <InputRow label="TỔNG HỌC PHÍ (VND)">
-              <Input value={totalFee} onChange={setTotalFee} type="number" placeholder="vd. 3000000" />
-            </InputRow>
-            <InputRow label="ĐÃ THANH TOÁN (VND)">
-              <Input value={paid} onChange={setPaid} type="number" placeholder="vd. 1500000" />
-            </InputRow>
-          </>
-        )}
-      </div>
-    </SectionCard>
-  );
-}
-
 // ─── 2. InternalNote ──────────────────────────────────────────────────────────
 
 function InternalNoteSection({ student, code }: { student: Student; code: string }) {
@@ -262,117 +155,6 @@ function InternalNoteSection({ student, code }: { student: Student; code: string
         className="w-full px-3 py-2 rounded-lg text-sm border outline-none resize-none"
         style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
       />
-    </SectionCard>
-  );
-}
-
-// ─── 3. Comments ─────────────────────────────────────────────────────────────
-
-function CommentsSection({ student, code }: { student: Student; code: string }) {
-  const [text, setText] = useState("");
-  const [sending, setSending] = useState(false);
-
-  const comments = Object.entries(student.comments ?? {})
-    .map(([k, v]) => ({ key: k, ...v }))
-    .sort((a, b) => b.ts - a.ts)
-    .slice(0, 10);
-
-  async function handleSend() {
-    if (!text.trim()) return;
-    setSending(true);
-    const commentText = text.trim();
-    await pushComment(code, commentText);
-    fetch("/api/push/comment-new", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ studentCode: code, comment: commentText }),
-    }).catch(() => {});
-    setText("");
-    setSending(false);
-  }
-
-  return (
-    <SectionCard title="💬 Nhận xét">
-      <div className="space-y-3">
-        <textarea
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          rows={3}
-          placeholder="Viết nhận xét cho học viên..."
-          className="w-full px-3 py-2 rounded-lg text-sm border outline-none resize-none"
-          style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-        />
-        <button
-          onClick={handleSend}
-          disabled={sending || !text.trim()}
-          className="w-full py-2.5 rounded-xl text-sm font-semibold disabled:opacity-50"
-          style={{ background: "var(--accent-primary)", color: "#fff" }}
-        >
-          {sending ? "Đang gửi..." : "📨 Gửi nhận xét & thông báo"}
-        </button>
-        {comments.length > 0 && (
-          <div className="space-y-2 pt-1">
-            <p className="text-xs font-medium" style={{ color: "var(--text-muted)" }}>Lịch sử nhận xét</p>
-            {comments.map((c) => (
-              <div key={c.key} className="rounded-lg p-3" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
-                <p className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>
-                  {new Date(c.ts).toLocaleString("vi-VN")}
-                </p>
-                <p className="text-sm" style={{ color: "var(--text-primary)" }}>{c.text}</p>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    </SectionCard>
-  );
-}
-
-// ─── 4. SendNotification ─────────────────────────────────────────────────────
-
-function SendNotifSection({ student, code }: { student: Student; code: string }) {
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
-  const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
-
-  async function handleSend() {
-    if (!title.trim()) return;
-    setSending(true);
-    await sendNotification(code, { type: "manual", title: title.trim(), body: body.trim(), createdAt: new Date().toISOString() });
-    setTitle(""); setBody("");
-    setSending(false); setSent(true);
-    setTimeout(() => setSent(false), 2000);
-  }
-
-  return (
-    <SectionCard title="🔔 Gửi thông báo">
-      <div className="space-y-2">
-        <InputRow label="TIÊU ĐỀ">
-          <Input value={title} onChange={setTitle} placeholder="VD: Nhớ làm bài nhé!" />
-        </InputRow>
-        <InputRow label="NỘI DUNG">
-          <textarea
-            value={body}
-            onChange={(e) => setBody(e.target.value)}
-            rows={2}
-            placeholder={`VD: Bài TOEIC Part 5 hạn nộp Chủ nhật này đó nhé~`}
-            className="w-full px-3 py-2 rounded-lg text-sm border outline-none resize-none"
-            style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-          />
-        </InputRow>
-        <button
-          onClick={handleSend}
-          disabled={sending || !title.trim()}
-          className="w-full py-2 rounded-xl text-sm font-semibold disabled:opacity-50"
-          style={{
-            background: sent ? "rgba(16,185,129,0.15)" : "var(--accent-primary)",
-            color: sent ? "rgb(5,150,105)" : "#fff",
-          }}
-        >
-          {sending ? "Đang gửi..." : sent ? `✓ Đã gửi cho ${student.name}` : `Gửi cho ${student.name}`}
-        </button>
-      </div>
     </SectionCard>
   );
 }
@@ -838,90 +620,6 @@ function ErrorLogSection({ student }: { student: Student }) {
   );
 }
 
-// ─── 7. Homework Progress (read-only) ─────────────────────────────────────────
-
-function HomeworkProgressSection({ homework, dayLinks, hwFiles }: { homework: Homework[]; dayLinks: Record<string, unknown>; hwFiles: HwFilesMap }) {
-  const recent = homework.slice(0, 7);
-
-  if (recent.length === 0) {
-    return (
-      <SectionCard title="📊 Tiến độ nhiệm vụ">
-        <p className="text-sm text-center py-3" style={{ color: "var(--text-muted)" }}>Chưa có bài tập</p>
-      </SectionCard>
-    );
-  }
-
-  return (
-    <SectionCard title="📊 Tiến độ nhiệm vụ">
-      <div className="space-y-2">
-        {recent.map((hw) => {
-          const submitted = !!dayLinks[hw.id] || Object.keys(hwFiles[hw.id] ?? {}).length > 0;
-          const allItems = [
-            ...(hw.vocab ?? []), ...(hw.listening ?? []),
-            ...(hw.reading ?? []), ...(hw.practice ?? []), ...(hw.other ?? []),
-          ];
-          const label = hw.endDate ? `${fmtDate(hw.date)} → ${fmtDate(hw.endDate)}` : fmtDate(hw.date);
-          return (
-            <div key={hw.id} className="flex items-center gap-3">
-              <div className="flex-1 min-w-0">
-                <p className="text-xs truncate" style={{ color: "var(--text-secondary)" }}>{label}</p>
-                <p className="text-xs truncate" style={{ color: "var(--text-muted)" }}>
-                  {allItems.length > 0 ? `${allItems.length} mục` : "Không có mục"}
-                </p>
-              </div>
-              <div className="shrink-0">
-                {submitted ? (
-                  <span className="text-[10px] px-2 py-1 rounded-full font-medium" style={{ background: "rgba(16,185,129,0.12)", color: "rgb(5,150,105)" }}>
-                    ✓ Có file
-                  </span>
-                ) : (
-                  <span className="text-[10px] px-2 py-1 rounded-full font-medium" style={{ background: "var(--border)", color: "var(--text-muted)" }}>
-                    Chưa có file
-                  </span>
-                )}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </SectionCard>
-  );
-}
-
-// ─── 8. Student Link ──────────────────────────────────────────────────────────
-
-function StudentLinkSection({ code }: { code: string }) {
-  const [copied, setCopied] = useState(false);
-  const url = `${process.env.NEXT_PUBLIC_STUDENT_URL ?? "https://toeic-dictation-diary.vercel.app"}/auth/login?auto=${code}`;
-
-  async function handleCopy() {
-    await navigator.clipboard.writeText(url);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  }
-
-  return (
-    <SectionCard title="🔗 Link học viên">
-      <div className="space-y-2">
-        <div className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-mono break-all" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)", color: "var(--text-muted)" }}>
-          <span className="flex-1 truncate">{url}</span>
-        </div>
-        <button
-          onClick={handleCopy}
-          className="w-full flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-medium"
-          style={{
-            background: copied ? "rgba(16,185,129,0.1)" : "var(--border)",
-            color: copied ? "rgb(5,150,105)" : "var(--text-secondary)",
-          }}
-        >
-          {copied ? <Check size={14} /> : <Copy size={14} />}
-          {copied ? "Đã sao chép!" : "Sao chép link"}
-        </button>
-      </div>
-    </SectionCard>
-  );
-}
-
 // ─── 9. Modules ───────────────────────────────────────────────────────────────
 
 const MODULE_STATUSES = [
@@ -1250,6 +948,8 @@ function PersonalHWSection({
   dayLinks,
   hwFiles,
   ownSchedule,
+  pendingGrading = 0,
+  lastHwReminderAt,
 }: {
   homework: Homework[];
   code: string;
@@ -1257,13 +957,29 @@ function PersonalHWSection({
   dayLinks: Record<string, { link?: string }>;
   hwFiles: HwFilesMap;
   ownSchedule?: ClassSession[];
+  /** Bài Speaking/Writing HV đã nộp, chờ chấm (Postgres). */
+  pendingGrading?: number;
+  lastHwReminderAt?: string;
 }) {
   // HV thuộc lớp thì theo lịch lớp, không thì lịch riêng — giống mục Lịch học cố định.
   const { classes: allClasses } = useClasses();
   const schedule = allClasses.find((c) => c.members?.includes(code))?.weeklySchedule ?? ownSchedule;
   useAutoDoneOnMount(true, [code]);
-  const [filter, setFilter] = useState<"active" | "all" | "done" | "expired">("all");
+  const [filter, setFilter] = useState<"active" | "all" | "done" | "expired">("active");
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
+  // Mở sẵn ngày BTVN gần nhất đang chạy (một lần, khi dữ liệu về).
+  const [autoOpened, setAutoOpened] = useState(false);
+  if (!autoOpened && homework.length > 0) {
+    const t = today();
+    const running = homework
+      .filter((hw) => hw.date <= t && (hw.endDate ?? hw.date) >= t)
+      .sort((a, b) => b.date.localeCompare(a.date))[0]
+      ?? [...homework].sort((a, b) => b.date.localeCompare(a.date))[0];
+    setAutoOpened(true);
+    if (running) setExpanded(new Set([running.id]));
+  }
+  const [reminding, setReminding] = useState(false);
+  const [remindMsg, setRemindMsg] = useState<string | null>(null);
   const [modal, setModal] = useState<{ mode: "add" | "edit"; initial?: Homework } | null>(null);
   const [dupPick, setDupPick] = useState<Homework | null>(null);
   const [exporting, setExporting] = useState<Homework | null>(null);
@@ -1349,6 +1065,35 @@ function PersonalHWSection({
     if (filter === "done")    return isDone(hw);
     return (hw.endDate ?? hw.date) < todayStr;
   });
+
+  // Tóm tắt: bài quá hạn (cùng định nghĩa với nút nhắc), tỉ lệ hoàn thành đầu việc 4 tuần.
+  const overdueCount = overdueHomework(homework, submissions, dayLinks, todayStr).length;
+  const since28 = shiftDay(todayStr, -28);
+  const recent4w = homework.filter((hw) => hw.date >= since28 && hw.date <= todayStr)
+    .reduce((a, hw) => { const p = calcHwProgress(hw, submissions, dayLinks); return { done: a.done + p.done, total: a.total + p.total }; }, { done: 0, total: 0 });
+  const rate4w = recent4w.total > 0 ? Math.round((recent4w.done / recent4w.total) * 100) : null;
+
+  async function remind() {
+    setReminding(true); setRemindMsg(null);
+    try {
+      const res = await fetch("/api/admin/homework-remind", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ studentCodes: [code] }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { results?: { status: string }[]; error?: string };
+      const st = data.results?.[0]?.status;
+      setRemindMsg(!res.ok ? `Không gửi được: ${data.error ?? res.status}`
+        : st === "sent" ? "Đã nhắc ✓"
+        : st === "no-subs" ? "Đã vào chuông (HV chưa bật thông báo)"
+        : st === "no-profile" ? "Đã vào chuông (HV chưa có tài khoản)"
+        : st === "clear" ? "HV đã làm xong, không cần nhắc"
+        : "Lỗi, thử lại");
+    } catch {
+      setRemindMsg("Lỗi mạng, thử lại");
+    } finally {
+      setReminding(false);
+    }
+  }
 
   function toggle(id: string) {
     setExpanded((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
@@ -1460,6 +1205,33 @@ function PersonalHWSection({
         }
       >
         <div className="space-y-3">
+          {/* Tóm tắt + nhắc làm bài */}
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs rounded-lg px-3 py-2"
+            style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
+            <span style={{ color: overdueCount > 0 ? "#dc2626" : "var(--text-secondary)", fontWeight: overdueCount > 0 ? 600 : 400 }}>
+              {overdueCount > 0 ? `⏰ ${overdueCount} bài quá hạn` : "✓ Không có bài quá hạn"}
+            </span>
+            <Link href={`/admin/grading?code=${encodeURIComponent(code)}`} className="hover:underline"
+              style={{ color: pendingGrading > 0 ? "#b45309" : "var(--text-secondary)", fontWeight: pendingGrading > 0 ? 600 : 400 }}>
+              🖊️ {pendingGrading} bài S/W chờ chấm
+            </Link>
+            <span style={{ color: "var(--text-secondary)" }}>
+              📈 Hoàn thành 4 tuần: <strong style={{ color: "var(--text-primary)" }}>{rate4w === null ? "—" : `${rate4w}%`}</strong>
+              {recent4w.total > 0 && <span style={{ color: "var(--text-muted)" }}> ({recent4w.done}/{recent4w.total} việc)</span>}
+            </span>
+            <span className="ml-auto flex items-center gap-2">
+              {remindMsg
+                ? <span style={{ color: "var(--text-muted)" }}>{remindMsg}</span>
+                : lastHwReminderAt && <span style={{ color: "var(--text-muted)" }}>Nhắc lần cuối {new Date(lastHwReminderAt).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })}</span>}
+              <button type="button" onClick={remind} disabled={reminding || overdueCount === 0}
+                title={overdueCount === 0 ? "Không có bài quá hạn để nhắc" : "Gửi chuông + push nhắc HV làm bài quá hạn"}
+                className="px-2.5 py-1 rounded-lg font-semibold disabled:opacity-50"
+                style={{ background: "#f59e0b", color: "#fff" }}>
+                {reminding ? "Đang nhắc…" : "🔔 Nhắc làm bài"}
+              </button>
+            </span>
+          </div>
+
           {/* Filter tabs */}
           <div className="flex flex-wrap gap-1">
             {FILTER_TABS.map(({ key, label }) => (
@@ -2145,6 +1917,56 @@ function FixedScheduleSection({ student, code }: { student: Student; code: strin
 }
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
+//
+// Bố cục (chốt 26/11): header gọn dính đầu trang → Mục tiêu (full) → BTVN (2/3)
+// + Nhắn HV / Ghi chú nội bộ (1/3) → tab các mục ít dùng. Thông tin cơ bản sửa
+// trong ngăn kéo từ nút "Sửa thông tin" ở header.
+
+type TabKey = "scores" | "errors" | "modules" | "schedule";
+const TAB_STORE = "admin.student.tab";
+
+function BottomTabs({ student, code }: { student: Student; code: string }) {
+  const [tab, setTab] = useState<TabKey>(() => {
+    try {
+      const v = typeof window !== "undefined" ? localStorage.getItem(TAB_STORE) : null;
+      return v === "errors" || v === "modules" || v === "schedule" ? v : "scores";
+    } catch { return "scores"; }
+  });
+  function pick(t: TabKey) {
+    setTab(t);
+    try { localStorage.setItem(TAB_STORE, t); } catch { /* ignore */ }
+  }
+  const tabs: { key: TabKey; label: string; count?: number }[] = [
+    { key: "scores", label: "🎯 Điểm TOEIC", count: student.scores?.length ?? 0 },
+    { key: "errors", label: "📒 Nhật ký lỗi", count: Object.keys(student.errorLog ?? {}).length },
+    { key: "modules", label: "📚 Học phần", count: student.modules?.length ?? 0 },
+    { key: "schedule", label: "🗓 Lịch học" },
+  ];
+  return (
+    <div className="space-y-3">
+      <div role="tablist" aria-label="Mục khác" className="flex flex-wrap gap-1.5">
+        {tabs.map((t) => (
+          <button key={t.key} type="button" role="tab" aria-selected={tab === t.key} onClick={() => pick(t.key)}
+            className="text-sm px-3 py-1.5 rounded-lg font-semibold"
+            style={tab === t.key
+              ? { background: "var(--accent-primary)", color: "#fff" }
+              : { background: "var(--bg-elevated)", border: "1px solid var(--border)", color: "var(--text-secondary)" }}>
+            {t.label}{t.count !== undefined && <span className="ml-1.5 opacity-75">{t.count}</span>}
+          </button>
+        ))}
+      </div>
+      {tab === "scores" && <ToeicScoresSection student={student} code={code} />}
+      {tab === "errors" && <ErrorLogSection student={student} />}
+      {tab === "modules" && <ModulesSection student={student} code={code} />}
+      {tab === "schedule" && (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+          <FixedScheduleSection student={student} code={code} />
+          <PersonalScheduleSection student={student} code={code} />
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function StudentEditorPage() {
   const params = useParams();
@@ -2157,26 +1979,18 @@ export default function StudentEditorPage() {
   const { submissions } = useSubmissions(code);
   const { hwFiles } = useHwFiles(code);
 
-  const [freezing, setFreezing] = useState(false);
   const [deleting, setDeleting] = useState(false);
-  const [batchSaving, setBatchSaving] = useState(false);
-  const [batchSaved, setBatchSaved] = useState(false);
-  const basicInfoSaveRef = useRef<(() => Promise<void>) | null>(null);
+  const [overview, setOverview] = useState<StudentOverview | null>(null);
 
-  async function handleToggleFreeze() {
-    if (!student) return;
-    setFreezing(true);
-    await setStudentFrozen(code, !student.frozen);
-    setFreezing(false);
-  }
-
-  async function handleBatchSave() {
-    setBatchSaving(true);
-    if (basicInfoSaveRef.current) await basicInfoSaveRef.current();
-    setBatchSaving(false);
-    setBatchSaved(true);
-    setTimeout(() => setBatchSaved(false), 2000);
-  }
+  useEffect(() => {
+    if (!code) return;
+    let alive = true;
+    fetch(`/api/admin/students/${encodeURIComponent(code)}/overview`, { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => { if (alive) setOverview(d); })
+      .catch(() => {});
+    return () => { alive = false; };
+  }, [code]);
 
   async function handleDelete() {
     if (!confirm(`Xoá học viên "${student?.name ?? code}"?\nHành động này không thể hoàn tác.`)) return;
@@ -2210,98 +2024,13 @@ export default function StudentEditorPage() {
   }
 
   return (
-    <div className="space-y-5">
-      {/* Top bar */}
-      <div className="flex items-center gap-3 flex-wrap">
-        <Link
-          href="/admin/students"
-          className="flex items-center gap-1.5 text-sm font-medium hover:opacity-80"
-          style={{ color: "var(--text-secondary)" }}
-        >
-          <ArrowLeft size={16} /> Danh sách
-        </Link>
-        <div className="flex-1 min-w-0">
-          <h1 className="text-xl font-bold" style={{ color: "var(--text-primary)" }}>{student.name}</h1>
-          <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-            ID: {code} · Tuần {student.currentWeek} ·{" "}
-            {/* Lộ trình AI nằm ở Postgres chứ không phải RTDB như trang này, nên
-                để riêng một trang — xem ghi chú ở app/(teacher)/.../roadmap/page.tsx */}
-            <Link
-              href={`/admin/students/${code}/roadmap`}
-              className="underline"
-              style={{ color: "var(--accent-primary)" }}
-            >
-              Lộ trình học
-            </Link>
-            {" · "}
-            <Link
-              href={`/admin/students/${code}/results`}
-              className="underline font-semibold"
-              style={{ color: "var(--accent-primary)" }}
-            >
-              Kết quả luyện đề &amp; thi thử
-            </Link>
-            {" · "}
-            <Link
-              href={`/admin/goals?code=${encodeURIComponent(code)}`}
-              className="underline font-semibold"
-              style={{ color: "var(--accent-primary)" }}
-            >
-              Mục tiêu
-            </Link>
-          </p>
-        </div>
-        <button
-          onClick={handleToggleFreeze}
-          disabled={freezing}
-          className="text-sm px-4 py-2 rounded-xl font-semibold border disabled:opacity-60"
-          style={student.frozen ? {
-            borderColor: "rgba(16,185,129,0.4)",
-            color: "rgb(5,150,105)",
-            background: "rgba(16,185,129,0.06)",
-          } : {
-            borderColor: "rgba(239,68,68,0.4)",
-            color: "rgb(220,38,38)",
-            background: "rgba(239,68,68,0.06)",
-          }}
-        >
-          {student.frozen ? "✓ Bỏ đóng băng" : "❄️ Đóng băng"}
-        </button>
-        {/* L14: Batch save */}
-        <button
-          onClick={handleBatchSave}
-          disabled={batchSaving}
-          className="text-sm px-4 py-2 rounded-xl font-semibold disabled:opacity-60"
-          style={batchSaved ? {
-            background: "rgba(16,185,129,0.12)", color: "rgb(5,150,105)",
-          } : {
-            background: "var(--accent-primary)", color: "#fff",
-          }}
-        >
-          {batchSaving ? "Đang lưu..." : batchSaved ? "✓ Đã lưu" : "Lưu tất cả"}
-        </button>
-        {/* L3: Delete student */}
-        <button
-          onClick={handleDelete}
-          disabled={deleting}
-          className="text-sm px-3 py-2 rounded-xl font-semibold border disabled:opacity-60"
-          style={{ borderColor: "rgba(239,68,68,0.4)", color: "rgb(220,38,38)", background: "rgba(239,68,68,0.06)" }}
-          title="Xoá học viên"
-        >
-          <Trash2 size={15} />
-        </button>
-      </div>
+    <div className="space-y-5 -mt-6 md:-mt-8">
+      <StudentHeader code={code} student={student} overview={overview} onDelete={handleDelete} deleting={deleting} />
 
-      {/* 2-col layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-        {/* Left column (2/3 width) */}
-        <div className="lg:col-span-2 space-y-5">
-          <BasicInfoSection student={student} code={code} saveRef={basicInfoSaveRef} />
-          <InternalNoteSection student={student} code={code} />
-          <CommentsSection student={student} code={code} />
-          <SendNotifSection student={student} code={code} />
-          <ToeicScoresSection student={student} code={code} />
-          <ErrorLogSection student={student} />
+      <StudentGoalPanel code={code} student={student} overview={overview} />
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-start">
+        <div className="lg:col-span-2">
           <PersonalHWSection
             homework={homework}
             code={code}
@@ -2309,17 +2038,17 @@ export default function StudentEditorPage() {
             dayLinks={dayLinks}
             hwFiles={hwFiles}
             ownSchedule={student.weeklySchedule}
+            pendingGrading={overview?.pendingGrading ?? 0}
+            lastHwReminderAt={student.lastHwReminderAt}
           />
         </div>
-
-        {/* Right column (1/3 width) */}
         <div className="space-y-5">
-          <StudentLinkSection code={code} />
-          <ModulesSection student={student} code={code} />
-          <FixedScheduleSection student={student} code={code} />
-          <PersonalScheduleSection student={student} code={code} />
+          <MessageSection student={student} code={code} />
+          <InternalNoteSection student={student} code={code} />
         </div>
       </div>
+
+      <BottomTabs student={student} code={code} />
     </div>
   );
 }
