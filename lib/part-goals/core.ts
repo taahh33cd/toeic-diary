@@ -3,8 +3,6 @@
  * Quy tắc: docs/goals-spec.md §3.
  */
 
-import { rawNeeded } from "@/lib/ets-scale";
-
 export const PART_KEYS = ["p1", "p2", "p3", "p4", "p5", "p6", "p7"] as const;
 export type PartKey = (typeof PART_KEYS)[number];
 
@@ -159,7 +157,7 @@ export function sanitizeParts(raw: unknown): PartTargets | null {
 
 /**
  * Lệch tỷ lệ đúng từng part so với trung bình cả phần. Part 1 và Part 5 thường
- * dễ hơn, Part 2 và Part 7 khó giữ hơn — GV duyệt lại bảng ở docs/goals-spec.md.
+ * dễ hơn, Part 2 và Part 7 khó giữ hơn.
  */
 const PART_OFFSET: Record<PartKey, number> = {
   p1: 0.15, p2: -0.05, p3: 0, p4: 0.02,
@@ -170,24 +168,49 @@ function spread(keys: PartKey[], raw: number): Record<string, number> {
   const base = raw / 100;
   // Dưới 90% cả phần thì không đòi tuyệt đối ở part nào (P1 6/6 quá gắt cho HV 600).
   const cap = (k: PartKey) => (base >= 0.9 ? PART_STD[k] : PART_STD[k] - 1);
+  const ideal: Record<string, number> = {};
   const res: Record<string, number> = {};
   for (const k of keys) {
-    const acc = Math.min(1, Math.max(0, base + PART_OFFSET[k]));
-    res[k] = Math.min(cap(k), Math.round(acc * PART_STD[k]));
+    ideal[k] = Math.min(1, Math.max(0, base + PART_OFFSET[k])) * PART_STD[k];
+    res[k] = Math.min(cap(k), Math.round(ideal[k]));
   }
-  // Cân lại cho tổng đúng bằng số câu cần của cả phần.
+  // Cân lại cho tổng đúng bằng số câu cần của cả phần: mỗi bước sửa part đang
+  // lệch xa nhất so với tỷ lệ dự kiến của chính nó, để mức tăng dần đều theo điểm.
   let sum = keys.reduce((a, k) => a + res[k], 0);
   let guard = 200;
   while (sum !== raw && guard-- > 0) {
     const up = sum < raw;
+    const gap = (k: PartKey) => (up ? ideal[k] - res[k] : res[k] - ideal[k]);
     const pick = keys
-      .filter((k) => (up ? res[k] < cap(k) : res[k] > 0))
-      .sort((a, b) => (up ? 1 : -1) * (res[a] / PART_STD[a] - res[b] / PART_STD[b]))[0];
+      .filter((k) => (up ? res[k] < cap(k) : res[k] > 1))
+      .sort((a, b) => gap(b) - gap(a))[0];
     if (!pick) break;
     res[pick] += up ? 1 : -1;
     sum += up ? 1 : -1;
   }
   return res;
+}
+
+/**
+ * Số câu đúng (trên 100) gợi ý cho một điểm quy đổi của phần — mốc nội suy.
+ * Mềm hơn bảng lib/ets-scale.ts ở vùng thấp/giữa: bảng đó chấm chặt, đem làm
+ * mục tiêu tháng thì HV 450 bị đòi ~60–67% mỗi part — quá cao (GV duyệt 26/11).
+ */
+const RAW_CURVE: Record<"listening" | "reading", [number, number][]> = {
+  listening: [[5, 0], [100, 25], [150, 33], [200, 42], [250, 50], [300, 58], [350, 66], [400, 78], [450, 90], [495, 97]],
+  reading:   [[5, 0], [100, 28], [150, 38], [200, 47], [250, 55], [300, 63], [350, 72], [400, 82], [450, 92], [495, 98]],
+};
+
+function suggestRaw(section: "listening" | "reading", scaled: number): number {
+  const pts = RAW_CURVE[section];
+  for (let i = 1; i < pts.length; i++) {
+    const [x1, y1] = pts[i];
+    if (scaled <= x1) {
+      const [x0, y0] = pts[i - 1];
+      return Math.round(y0 + ((scaled - x0) / (x1 - x0)) * (y1 - y0));
+    }
+  }
+  return pts[pts.length - 1][1];
 }
 
 /** Bộ mục tiêu part gợi ý cho một mục tiêu tổng L&R (10–990). */
@@ -196,8 +219,8 @@ export function suggestParts(total: number, times = DEFAULT_TIMES): PartTargets 
   // Listening thường cao hơn Reading ~50 điểm ở cùng trình độ.
   const listening = Math.min(495, Math.max(5, Math.round((t / 2 + 25) / 5) * 5));
   const reading = Math.min(495, Math.max(5, t - listening));
-  const l = spread(["p1", "p2", "p3", "p4"], rawNeeded("listening", listening));
-  const r = spread(["p5", "p6", "p7"], rawNeeded("reading", reading));
+  const l = spread(["p1", "p2", "p3", "p4"], suggestRaw("listening", listening));
+  const r = spread(["p5", "p6", "p7"], suggestRaw("reading", reading));
   const out: PartTargets = {};
   for (const k of PART_KEYS) {
     const c = Math.max(1, (l[k] ?? r[k]) as number);

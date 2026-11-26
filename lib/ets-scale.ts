@@ -63,9 +63,3 @@ export function calcEtsScore(
   return { ls, rd, total: ls + rd };
 }
 
-/** Số câu đúng tối thiểu (trên 100) để một phần đạt điểm quy đổi `scaled`. */
-export function rawNeeded(section: "listening" | "reading", scaled: number): number {
-  const table = section === "listening" ? LS : RD;
-  const i = table.findIndex((v) => v >= scaled);
-  return i === -1 ? 100 : i;
-}
