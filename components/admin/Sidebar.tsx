@@ -5,6 +5,7 @@ import Link from "next/link";
 import { signOutAll } from "@/hooks/firebase/useFirebaseAuthBridge";
 import { useRouter } from "next/navigation";
 import { usePendingPurchases } from "@/hooks/usePendingPurchases";
+import { useGoalReminders } from "@/hooks/useGoalReminders";
 
 const NAV = [
   { href: "/admin",            icon: "dashboard",    label: "Dashboard",  exact: true },
@@ -15,6 +16,7 @@ const NAV = [
   { href: "/admin/progress",   icon: "trending_up",  label: "Tiến độ" },
   { href: "/admin/classes",    icon: "school",       label: "Lớp học" },
   { href: "/admin/scores",     icon: "analytics",    label: "Điểm số" },
+  { href: "/admin/goals",      icon: "flag_circle",  label: "Mục tiêu" },
   { href: "/admin/bookings",   icon: "event",        label: "Lịch hẹn" },
   { href: "/admin/slots",      icon: "schedule",     label: "Khung giờ" },
   { href: "/admin/attendance", icon: "fact_check",   label: "Điểm danh" },
@@ -33,6 +35,7 @@ export function Sidebar({ role = "teacher" }: SidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
   const pendingPurchases = usePendingPurchases();
+  const goalMissing = useGoalReminders()?.count ?? 0;
 
   async function handleSignOut() {
     await signOutAll();
@@ -106,6 +109,15 @@ export function Sidebar({ role = "teacher" }: SidebarProps) {
                 {item.icon}
               </span>
               <span className="text-[13px] font-semibold tracking-[0.04em]">{item.label}</span>
+              {item.href === "/admin/goals" && goalMissing > 0 && (
+                <span
+                  className="ml-auto min-w-[18px] h-[18px] rounded-full text-white text-[10px] font-bold flex items-center justify-center px-1 leading-none shrink-0"
+                  style={{ background: "#f59e0b" }}
+                  aria-label={`${goalMissing} học viên còn thiếu mục tiêu`}
+                >
+                  {goalMissing > 99 ? "99+" : goalMissing}
+                </span>
+              )}
               {item.href === "/admin/purchases" && pendingPurchases > 0 && (
                 <span
                   className="ml-auto min-w-[18px] h-[18px] rounded-full text-white text-[10px] font-bold flex items-center justify-center px-1 leading-none shrink-0"

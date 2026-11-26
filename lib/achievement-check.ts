@@ -18,7 +18,7 @@ export async function computeUnlocked(userId: string): Promise<UnlockedSet> {
   const ids = new Set<string>();
   const progress: Record<string, string> = {};
 
-  const [profile, completedAll, xpVocabReview, xpVocabMaster, xpHomework, xpTestScore, completedToday, partsHit] =
+  const [profile, completedAll, xpVocabReview, xpVocabMaster, xpHomework, xpTestScore, completedToday, partsHit, xpMonthGoal] =
     await Promise.all([
       prisma.profile.findUnique({
         where: { id: userId },
@@ -45,6 +45,7 @@ export async function computeUnlocked(userId: string): Promise<UnlockedSet> {
         distinct: ["lessonId"],
         select: { lesson: { select: { partId: true } } },
       }),
+      prisma.xpEvent.count({ where: { userId, source: "part_goal_month" } }),
     ]);
 
   const completedHi = completedAll.filter((c) => c.bestScore >= 70).length;
@@ -83,6 +84,8 @@ export async function computeUnlocked(userId: string): Promise<UnlockedSet> {
     xpVocabReview >= 50 && completedAll.length >= 50,
     `${Math.min(xpVocabReview, 50)}+${Math.min(completedAll.length, 50)}/50+50`
   );
+
+  check("month_goal", xpMonthGoal >= 1, `${xpMonthGoal}/1`);
 
   return { ids, progress };
 }

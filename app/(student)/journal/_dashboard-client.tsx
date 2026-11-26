@@ -24,6 +24,9 @@ import type { XpStats, SwWorkStats } from "./page";
 import type { ScheduleItem, Goal, ToeicScore, SwScore } from "@/lib/firebase/types";
 import { EXAM_MAX, examScores, goalExamType, goalTotal } from "@/lib/exam-goal";
 import { GoalHero, type OnlineLatest } from "@/components/journal/GoalHero";
+import { MonthPartGoals, MonthGoalCelebration } from "@/components/journal/MonthPartGoals";
+import { usePartGoals } from "@/hooks/usePartGoals";
+import { vnMonth } from "@/lib/part-goals/core";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -1214,6 +1217,7 @@ export default function DashboardClient({ xpStats, swWork, onlineLatest = null }
   const { classes } = useClasses();
   const { hwViewed } = useHwViewed(profile?.studentCode);
   const { dayLinks } = useDayLinks(profile?.studentCode);
+  const partGoals = usePartGoals(null, !!profile?.studentCode);
 
   const loading = profileLoading || studentLoading;
 
@@ -1232,6 +1236,7 @@ export default function DashboardClient({ xpStats, swWork, onlineLatest = null }
   }
 
   const td = localToday();
+  const thisMonthGoal = partGoals.months.find((m) => m.goal.month === vnMonth()) ?? null;
   const scores = student?.scores ?? [];
   const swScores = student?.swScores ?? [];
   const personalSchedule: ScheduleItem[] = Array.isArray(student?.schedule) ? student!.schedule : [];
@@ -1370,7 +1375,12 @@ export default function DashboardClient({ xpStats, swWork, onlineLatest = null }
       )}
 
       {/* Mục tiêu điểm — trên cùng để mở sổ là thấy */}
-      <GoalHero goal={goal} scores={scores} swScores={swScores} onlineLatest={onlineLatest} />
+      <GoalHero goal={goal} scores={scores} swScores={swScores} onlineLatest={onlineLatest}>
+        {thisMonthGoal && <MonthPartGoals data={thisMonthGoal} />}
+      </GoalHero>
+      {partGoals.celebrate && (
+        <MonthGoalCelebration month={partGoals.celebrate} onClose={partGoals.dismissCelebrate} />
+      )}
 
       {/* Trang hôm nay: lời chào + con dấu tiến độ + việc cần làm */}
       <TodaySheet

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { signOutAll } from "@/hooks/firebase/useFirebaseAuthBridge";
 import { useRouter } from "next/navigation";
 import { usePendingPurchases } from "@/hooks/usePendingPurchases";
+import { useGoalReminders } from "@/hooks/useGoalReminders";
 
 const FOCUSABLE_SELECTORS =
   'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
@@ -19,6 +20,7 @@ const NAV = [
   { href: "/admin/progress",   emoji: "📈", label: "Tiến độ" },
   { href: "/admin/classes",    emoji: "🏫", label: "Lớp học" },
   { href: "/admin/scores",     emoji: "🎯", label: "Điểm số" },
+  { href: "/admin/goals",      emoji: "🏁", label: "Mục tiêu" },
   { href: "/admin/bookings",   emoji: "📅", label: "Lịch hẹn" },
   { href: "/admin/slots",      emoji: "⏰", label: "Khung giờ" },
   { href: "/admin/attendance", emoji: "✅", label: "Điểm danh" },
@@ -37,6 +39,7 @@ export function MobileNav({ role = "teacher" }: { role?: string }) {
   const pathname = usePathname();
   const router = useRouter();
   const pendingPurchases = usePendingPurchases();
+  const goalMissing = useGoalReminders()?.count ?? 0;
   const triggerRef = useRef<HTMLButtonElement>(null);
   const drawerRef = useRef<HTMLDivElement>(null);
 
@@ -185,7 +188,16 @@ export function MobileNav({ role = "teacher" }: { role?: string }) {
               >
                 <span className="text-base w-5 text-center" aria-hidden="true">{item.emoji}</span>
                 {item.label}
-                {item.href === "/admin/purchases" && pendingPurchases > 0 && (
+                {item.href === "/admin/goals" && goalMissing > 0 && (
+                <span
+                  className="ml-auto min-w-[18px] h-[18px] rounded-full text-white text-[10px] font-bold flex items-center justify-center px-1 leading-none shrink-0"
+                  style={{ background: "#f59e0b" }}
+                  aria-label={`${goalMissing} học viên còn thiếu mục tiêu`}
+                >
+                  {goalMissing > 99 ? "99+" : goalMissing}
+                </span>
+              )}
+              {item.href === "/admin/purchases" && pendingPurchases > 0 && (
                   <span
                     className="ml-auto min-w-[18px] h-[18px] rounded-full text-white text-[10px] font-bold flex items-center justify-center px-1 leading-none shrink-0"
                     style={{ background: "#ef4444" }}

@@ -16,6 +16,7 @@ import {
 import type { ToeicScore, SwScore, ExamType, ErrorLogEntry, ErrorDetail, ParaphraseEntry } from "@/lib/firebase/types";
 import { calcEtsScore } from "@/lib/ets-scale";
 import { goalExamType, goalTotal } from "@/lib/exam-goal";
+import { PartGoalHistorySection } from "@/components/journal/MonthPartGoals";
 import ReviewDrawer from "@/components/journal/ReviewDrawer";
 import {
   ScoreChart, KindBadge, RowShell, UnfinishedList, NextUp, LrHistory,
@@ -1926,6 +1927,9 @@ export function ScoresClient({ attempts: attemptsProp, groupMeta, attemptsError 
 
           {examType === "lr" ? (
             <>
+              {/* Mục tiêu part theo tháng (GV đặt) */}
+              <PartGoalHistorySection />
+
               {/* ── 2. Đang làm dở · 3. Nên luyện gì tiếp ── */}
               <UnfinishedList attempts={attempts} />
               <NextUp attempts={attempts} groupMeta={groupMeta} onPick={pickGroup} />

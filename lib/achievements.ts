@@ -30,5 +30,6 @@ export const ACHIEVEMENTS: Omit<Achievement, "unlocked" | "progress">[] = [
   { id: "early_bird",     icon: "🌅", label: "Dậy sớm",         desc: "Login 7 ngày trước 8h sáng" },
   { id: "night_owl",      icon: "🌙", label: "Cú đêm",          desc: "Login 7 ngày sau 22h" },
   { id: "polyglot",       icon: "🗣️", label: "Đa năng",         desc: "50 vocab + 50 lessons" },
+  { id: "month_goal",     icon: "🏁", label: "Về đích tháng",  desc: "Đạt trọn mục tiêu part của một tháng" },
   { id: "class_star",     icon: "⭐", label: "Sao của lớp",     desc: "Top 1 lớp trong tuần" },
 ];

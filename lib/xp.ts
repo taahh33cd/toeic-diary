@@ -27,6 +27,7 @@ export type XpSource =
   | "shadow_day"
   | "homework_submit"
   | "test_score"
+  | "part_goal_month"
   | "daily_login"
   | "streak_7"
   | "streak_30"
@@ -47,6 +48,7 @@ export const XP_RULES: Record<XpSource, number> = {
   shadow_day: 10,           // shadow đủ 5 câu đạt trong ngày (giờ VN) — tính là hoạt động học cho streak
   homework_submit: 30,
   test_score: 15,
+  part_goal_month: 100,     // đạt trọn mục tiêu part của một tháng (GV đặt) — mỗi tháng một lần
   daily_login: 5,
   streak_7: 50,
   streak_30: 200,

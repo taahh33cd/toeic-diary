@@ -106,14 +106,14 @@ function modeLabel(config: unknown): string {
  * Tên đề thi trọn bộ đã kèm tên bộ đề ("PRACTICE TEST EST 2026 — Test 1"),
  * mà nhãn nhóm bên ngoài cũng là tên bộ đề ⇒ cắt phần lặp cho gọn.
  */
-function shortTestTitle(title: string, examTitle?: string): string {
+export function shortTestTitle(title: string, examTitle?: string): string {
   if (!examTitle || !title.startsWith(examTitle)) return title;
   const rest = title.slice(examTitle.length).replace(/^[\s—–-]+/, "");
   return rest || title;
 }
 
 /** Đọc số đề từ khoá lượt thi trọn đề, vd "est-2026-test-7" → 7. */
-function fullTestNumber(testSlug: string): number | null {
+export function fullTestNumber(testSlug: string): number | null {
   const m = /-test-(\d+)$/.exec(testSlug);
   return m ? Number(m[1]) : null;
 }

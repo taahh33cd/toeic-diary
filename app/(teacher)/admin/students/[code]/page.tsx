@@ -2241,6 +2241,14 @@ export default function StudentEditorPage() {
             >
               Kết quả luyện đề &amp; thi thử
             </Link>
+            {" · "}
+            <Link
+              href={`/admin/goals?code=${encodeURIComponent(code)}`}
+              className="underline font-semibold"
+              style={{ color: "var(--accent-primary)" }}
+            >
+              Mục tiêu
+            </Link>
           </p>
         </div>
         <button

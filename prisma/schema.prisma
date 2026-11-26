@@ -1197,3 +1197,19 @@ model HwDraft {
   @@index([date])
   @@map("hw_drafts")
 }
+
+/// Mục tiêu part theo tháng — GV đặt, HV chỉ xem (docs/goals-spec.md).
+/// parts: { p1: { correct, of, times }, ... } — chỉ các part được đặt.
+model PartGoal {
+  studentCode String   @map("student_code")
+  month       String // "YYYY-MM"
+  parts       Json
+  setById     String?  @map("set_by_id")
+  setByName   String?  @map("set_by_name")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@id([studentCode, month])
+  @@index([month])
+  @@map("part_goals")
+}
