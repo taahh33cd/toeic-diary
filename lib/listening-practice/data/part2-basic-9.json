@@ -1,0 +1,503 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 109,
+ "slug": "part2-basic-9",
+ "title": "Luyện tập cơ bản · Why – How · Test 3",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q21.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/33e25cce-d773-4031-98e8-ae5c5b5d0861",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "How many clients will be visiting?",
+     "options": {
+      "A": "Yes, there are.",
+      "B": "At two o'clock.",
+      "C": "About a dozen."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "clients",
+        "pos": "noun",
+        "ipa": "/ˈklaɪənts/",
+        "meaning": "khách hàng"
+       },
+       {
+        "term": "visiting",
+        "pos": "verb",
+        "ipa": "/ˈvɪzɪtɪŋ/",
+        "meaning": "thăm viếng"
+       },
+       {
+        "term": "about a dozen",
+        "pos": "phrase",
+        "ipa": "/əˈbaʊt ə ˈdʌzn/",
+        "meaning": "khoảng một tá"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q22.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/2151de3d-78f5-401c-979a-d6b3645cebae",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Why did Yumi leave the seminar early?",
+     "options": {
+      "A": "Seven o'clock this morning.",
+      "B": "Some are in Room 26.",
+      "C": "She had a doctor's appointment."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "seminar",
+        "pos": "noun",
+        "ipa": "/ˈsɛmɪnɑːr/",
+        "meaning": "buổi hội thảo"
+       },
+       {
+        "term": "leave early",
+        "pos": "phrase",
+        "ipa": "/liːv ˈɜːli/",
+        "meaning": "rời đi sớm"
+       },
+       {
+        "term": "doctor's appointment",
+        "pos": "noun phrase",
+        "ipa": "/ˈdɒktərz əˈpɔɪntmənt/",
+        "meaning": "cuộc hẹn bác sĩ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q23.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/c4ae218b-c7ec-404e-9eef-ec6602b88a4e",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "Why are our supplies so low?",
+     "options": {
+      "A": "I'm surprised to see you!",
+      "B": "The bottom shelf.",
+      "C": "The delivery's been delayed."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "supplies",
+        "pos": "noun",
+        "ipa": "/səˈplaɪz/",
+        "meaning": "hàng tiếp tế"
+       },
+       {
+        "term": "low",
+        "pos": "adjective",
+        "ipa": "/loʊ/",
+        "meaning": "thấp, ít"
+       },
+       {
+        "term": "delivery",
+        "pos": "noun",
+        "ipa": "/dɪˈlɪvəri/",
+        "meaning": "sự giao hàng"
+       },
+       {
+        "term": "delayed",
+        "pos": "adjective",
+        "ipa": "/dɪˈleɪd/",
+        "meaning": "bị hoãn, bị trễ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q24.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/3a47fd7b-4f50-4ad9-967c-b7808401a9d3",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "Why don't we go out for some fresh air?",
+     "options": {
+      "A": "It is out of stock.",
+      "B": "Yes, I'd like to take a break.",
+      "C": "The chairs go over there."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "fresh air",
+        "pos": "noun phrase",
+        "ipa": "/frɛʃ ɛər/",
+        "meaning": "không khí trong lành"
+       },
+       {
+        "term": "go out",
+        "pos": "phrasal verb",
+        "ipa": "/ɡoʊ aʊt/",
+        "meaning": "đi ra ngoài"
+       },
+       {
+        "term": "take a break",
+        "pos": "phrase",
+        "ipa": "/teɪk ə breɪk/",
+        "meaning": "nghỉ ngơi một chút"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q25.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/5d391388-9a7a-4536-bd04-ff7d9c45ccc7",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "How was your stay at the hotel?",
+     "options": {
+      "A": "I'm sorry, I can't.",
+      "B": "Near Fourth Avenue.",
+      "C": "I enjoyed it."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "stay at",
+        "pos": "verb",
+        "ipa": "/steɪ æt/",
+        "meaning": "ở tại, lưu trú tại"
+       },
+       {
+        "term": "hotel",
+        "pos": "noun",
+        "ipa": "/hoʊˈtɛl/",
+        "meaning": "khách sạn"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q26.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/9d56110a-5553-4b84-9a33-bc3e34d39a0f",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Why did you get a new mobile phone?",
+     "options": {
+      "A": "In my briefcase.",
+      "B": "I lost my old one.",
+      "C": "Next September."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "mobile phone",
+        "pos": "noun",
+        "ipa": "/ˈmoʊbəl foʊn/",
+        "meaning": "điện thoại di động"
+       },
+       {
+        "term": "lost",
+        "pos": "verb",
+        "ipa": "/lɒst/",
+        "meaning": "mất, bị mất"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q27.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/2f123110-6a05-41a4-bbd0-3fb7c2107980",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "Why's the shopping center so busy?",
+     "options": {
+      "A": "I have to buy food for dinner.",
+      "B": "A new store opened there last week.",
+      "C": "A business proposal."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "shopping center",
+        "pos": "noun phrase",
+        "ipa": "/ˈʃɑːpɪŋ ˈsɛntər/",
+        "meaning": "trung tâm mua sắm"
+       },
+       {
+        "term": "busy",
+        "pos": "adjective",
+        "ipa": "/ˈbɪzi/",
+        "meaning": "bận rộn, đông đúc"
+       },
+       {
+        "term": "new store",
+        "pos": "noun phrase",
+        "ipa": "/nuː stɔːr/",
+        "meaning": "cửa hàng mới"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q28.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/c477e0d8-4d0d-4298-9db0-1a502a2cf3aa",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "How much do the theater tickets cost?",
+     "options": {
+      "A": "Only sixteen dollars.",
+      "B": "I'm sure they're not lost.",
+      "C": "There's a concert at the theater."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "theater tickets",
+        "pos": "noun phrase",
+        "ipa": "/ˈθɪətər ˈtɪkəts/",
+        "meaning": "vé xem nhà hát"
+       },
+       {
+        "term": "cost",
+        "pos": "verb",
+        "ipa": "/kɒst/",
+        "meaning": "giá bao nhiêu"
+       },
+       {
+        "term": "dollars",
+        "pos": "noun",
+        "ipa": "/ˈdɒlərz/",
+        "meaning": "đô la Mỹ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q29.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/3cab7fa4-3612-4c62-9255-fabde3371fd1",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "How did you find out about that movie?",
+     "options": {
+      "A": "To the cinema.",
+      "B": "We have a good view.",
+      "C": "Marco mentioned it."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "find out",
+        "pos": "phrasal verb",
+        "ipa": "/faɪnd aʊt/",
+        "meaning": "tìm hiểu, biết được"
+       },
+       {
+        "term": "movie",
+        "pos": "noun",
+        "ipa": "/ˈmuːvi/",
+        "meaning": "phim chiếu rạp"
+       },
+       {
+        "term": "mentioned",
+        "pos": "verb",
+        "ipa": "/ˈmɛnʃənd/",
+        "meaning": "đã đề cập"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q30.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/7efb61b6-ef9a-4597-a612-5d26fc233a78",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "Why has the train been delayed?",
+     "options": {
+      "A": "For about two hours.",
+      "B": "Lay it over there.",
+      "C": "They're repairing the tracks."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "train delay",
+        "pos": "noun phrase",
+        "ipa": "/treɪn ˈdeɪleɪ/",
+        "meaning": "sự chậm trễ tàu"
+       },
+       {
+        "term": "repairing the tracks",
+        "pos": "verb phrase",
+        "ipa": "/rɪˈperɪŋ ðə træks/",
+        "meaning": "sửa chữa đường ray"
+       },
+       {
+        "term": "delayed",
+        "pos": "verb",
+        "ipa": "/dɪˈleɪd/",
+        "meaning": "bị trì hoãn"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,491 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 105,
+ "slug": "part2-basic-5",
+ "title": "Luyện tập cơ bản · Where – When · Test 2",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q11.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/8f18d7f0-cdc3-45ed-88a9-e18ba39015df",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "When will we be seated?",
+     "options": {
+      "A": "They'll arrive later.",
+      "B": "At the table near the door.",
+      "C": "Very soon."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "be seated",
+        "pos": "phrase",
+        "ipa": "/bi ˈsiːtɪd/",
+        "meaning": "được xếp chỗ ngồi"
+       },
+       {
+        "term": "arrive later",
+        "pos": "phrase",
+        "ipa": "/əˈraɪv ˈleɪtər/",
+        "meaning": "đến muộn hơn"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q12.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/7079266e-7aa0-457c-be4d-98a57743593c",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Where do you want me to send the catalog?",
+     "options": {
+      "A": "To my work address.",
+      "B": "Today would be great.",
+      "C": "The summer edition."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "send",
+        "pos": "verb",
+        "ipa": "/sɛnd/",
+        "meaning": "gửi"
+       },
+       {
+        "term": "catalog",
+        "pos": "noun",
+        "ipa": "/ˈkætəlɔːɡ/",
+        "meaning": "danh mục sản phẩm"
+       },
+       {
+        "term": "work address",
+        "pos": "phrase",
+        "ipa": "/wɜːrk əˈdres/",
+        "meaning": "địa chỉ công ty"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q13.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/94d2197b-fead-4867-8d50-9ff7b4523e6c",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "When did I see you last?",
+     "options": {
+      "A": "No, at the cinema.",
+      "B": "I think it was February.",
+      "C": "You can go first."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "cinema",
+        "pos": "noun",
+        "ipa": "/ˈsɪnəmə/",
+        "meaning": "rạp chiếu phim"
+       },
+       {
+        "term": "february",
+        "pos": "noun",
+        "ipa": "/ˈfɛbruəri/",
+        "meaning": "tháng Hai"
+       },
+       {
+        "term": "go first",
+        "pos": "phrase",
+        "ipa": "/ɡoʊ fɜːrst/",
+        "meaning": "đi trước, làm trước"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q14.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/5a073434-f6d6-4cab-b0ee-8fcffa727afa",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "Where are Cindy Garza's medical records?",
+     "options": {
+      "A": "In the folder on top of my desk.",
+      "B": "Yes, Dr. Deluca's patient.",
+      "C": "For her next appointment."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "medical records",
+        "pos": "noun phrase",
+        "ipa": "/ˈmɛdɪkl ˈrɛkərdz/",
+        "meaning": "hồ sơ bệnh án"
+       },
+       {
+        "term": "folder",
+        "pos": "noun",
+        "ipa": "/ˈfoʊldər/",
+        "meaning": "bìa hồ sơ"
+       },
+       {
+        "term": "appointment",
+        "pos": "noun",
+        "ipa": "/əˈpɔɪntmənt/",
+        "meaning": "cuộc hẹn"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q15.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/49962f74-0957-4871-be43-fd60c09c3e83",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "When will Doctor Hunt be available?",
+     "options": {
+      "A": "She's busy all day, I'm afraid.",
+      "B": "Just down the hall.",
+      "C": "Because she's stuck in traffic."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "available",
+        "pos": "adjective",
+        "ipa": "/əˈveɪləbəl/",
+        "meaning": "có sẵn"
+       },
+       {
+        "term": "busy all day",
+        "pos": "phrase",
+        "ipa": "/ˈbɪzi ɔːl deɪ/",
+        "meaning": "bận cả ngày"
+       },
+       {
+        "term": "stuck in traffic",
+        "pos": "idiom",
+        "ipa": "/stʌk ɪn ˈtræfɪk/",
+        "meaning": "bị kẹt xe"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q16.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/7f9e2e61-13c3-49d0-ac9e-afae75274f65",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Where are the people from marketing?",
+     "options": {
+      "A": "They're in a meeting right now.",
+      "B": "The reports are in my office.",
+      "C": "Because the Internet isn't working."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "marketing",
+        "pos": "noun",
+        "ipa": "/ˈmɑːkɪtɪŋ/",
+        "meaning": "tiếp thị, quảng bá"
+       },
+       {
+        "term": "in a meeting",
+        "pos": "phrase",
+        "ipa": "/ɪn ə ˈmiːtɪŋ/",
+        "meaning": "đang họp"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q17.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/1ced97b1-6718-4b03-a91e-4e7710f456d0",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "Where should I leave these design sketches?",
+     "options": {
+      "A": "Right there on the desk is fine.",
+      "B": "By Thursday at the latest.",
+      "C": "Mr. Jones approved it"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "design sketches",
+        "pos": "noun phrase",
+        "ipa": "/dɪˈzaɪn ˈskɛtʃɪz/",
+        "meaning": "bản phác thảo thiết kế"
+       },
+       {
+        "term": "leave",
+        "pos": "verb",
+        "ipa": "/liːv/",
+        "meaning": "để lại"
+       },
+       {
+        "term": "on the desk",
+        "pos": "phrase",
+        "ipa": "/ɒn ðə dɛsk/",
+        "meaning": "trên bàn làm việc"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q18.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/bce6cf0b-2fc8-42fc-a098-76e73ff7c03c",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "When is the best time to send out this press release?",
+     "options": {
+      "A": "First thing on Tuesday.",
+      "B": "For a business magazine.",
+      "C": "To get the most readers."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "press release",
+        "pos": "noun phrase",
+        "ipa": "/ˈprɛs rɪˌliːs/",
+        "meaning": "thông cáo báo chí"
+       },
+       {
+        "term": "best time",
+        "pos": "noun phrase",
+        "ipa": "/bɛst taɪm/",
+        "meaning": "thời điểm tốt nhất"
+       },
+       {
+        "term": "send out",
+        "pos": "verb phrase",
+        "ipa": "/sɛnd aʊt/",
+        "meaning": "gửi đi, phát hành"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q19.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/ac854bfe-b27c-4aca-9a94-99cbcdcf42eb",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "Where are we meeting our clients for lunch?",
+     "options": {
+      "A": "They had to cancel.",
+      "B": "About an account.",
+      "C": "Today, at noon."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "meeting clients",
+        "pos": "phrase",
+        "ipa": "/ˈmiːtɪŋ ˈklaɪənts/",
+        "meaning": "gặp gỡ khách hàng"
+       },
+       {
+        "term": "cancel",
+        "pos": "verb",
+        "ipa": "/ˈkænsəl/",
+        "meaning": "hủy bỏ"
+       },
+       {
+        "term": "account",
+        "pos": "noun",
+        "ipa": "/əˈkaʊnt/",
+        "meaning": "tài khoản, vụ việc"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q20.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/43962815-fa7a-417e-80ca-ba043a180bfa",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "When's a convenient time to stop by your office?",
+     "options": {
+      "A": "Mornings are usually best.",
+      "B": "It's up on the second floor.",
+      "C": "We should get some of those."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "convenient time",
+        "pos": "phrase",
+        "ipa": "/kənˈviː.ni.ənt taɪm/",
+        "meaning": "thời gian thuận tiện"
+       },
+       {
+        "term": "stop by",
+        "pos": "verb",
+        "ipa": "/stɒp baɪ/",
+        "meaning": "ghé qua, ghé thăm"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,503 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 107,
+ "slug": "part2-basic-7",
+ "title": "Luyện tập cơ bản · Why – How · Test 1",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q01.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/e1103d2d-98fa-4d77-8cb5-b1fb9117f127",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "How did your job interview go?",
+     "options": {
+      "A": "For production manager.",
+      "B": "Fine, I think.",
+      "C": "With Ms. Wilde."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "job interview",
+        "pos": "noun phrase",
+        "ipa": "/dʒɒb ɪnˈtərˌvjuː/",
+        "meaning": "buổi phỏng vấn xin việc"
+       },
+       {
+        "term": "production manager",
+        "pos": "noun phrase",
+        "ipa": "/prəˈdʌkʃən ˈmænədʒər/",
+        "meaning": "quản lý sản xuất"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q02.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/2b3e93c6-b61d-4e02-ab9c-091108da4c6d",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Why are you looking at the furniture catalog?",
+     "options": {
+      "A": "A small armchair.",
+      "B": "I'm ordering a new lamp.",
+      "C": "In the mailbox."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "furniture catalog",
+        "pos": "noun phrase",
+        "ipa": "/ˈfɜːrnɪtʃər ˈkætəlɔːɡ/",
+        "meaning": "danh mục đồ nội thất"
+       },
+       {
+        "term": "armchair",
+        "pos": "noun",
+        "ipa": "/ˈɑːmtʃɛər/",
+        "meaning": "ghế bành"
+       },
+       {
+        "term": "ordering",
+        "pos": "verb",
+        "ipa": "/ˈɔːrdərɪŋ/",
+        "meaning": "đặt hàng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q03.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/9be0a00b-74d1-4a90-94c5-2c6cca39f5aa",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "How did you hear about the job?",
+     "options": {
+      "A": "The volume is too low.",
+      "B": "Yes, I believe he started last week.",
+      "C": "It was advertised in the newspaper."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "hear about",
+        "pos": "verb",
+        "ipa": "/hɪər əˈbaʊt/",
+        "meaning": "nghe nói về"
+       },
+       {
+        "term": "advertised",
+        "pos": "verb",
+        "ipa": "/ˈædvərtaɪzd/",
+        "meaning": "được quảng cáo"
+       },
+       {
+        "term": "newspaper",
+        "pos": "noun",
+        "ipa": "/ˈnjuːzpeɪpər/",
+        "meaning": "tờ báo"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q04.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/ff1fdb77-d298-44f0-bb14-679930bde927",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "Why is the park so crowded today?",
+     "options": {
+      "A": "There's a free concert later.",
+      "B": "A nearby parking area.",
+      "C": "No, not too cloudy."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "crowded",
+        "pos": "adjective",
+        "ipa": "/ˈkraʊ.dɪd/",
+        "meaning": "đông đúc"
+       },
+       {
+        "term": "concert",
+        "pos": "noun",
+        "ipa": "/ˈkɒn.sə t/",
+        "meaning": "buổi hòa nhạc"
+       },
+       {
+        "term": "nearby",
+        "pos": "adjective",
+        "ipa": "/ˈnɪə.baɪ/",
+        "meaning": "gần đây"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q05.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/234296df-1dba-4fd9-a389-9b33770eba6b",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "How many packages did your company ship last month?",
+     "options": {
+      "A": "No, I don't need any.",
+      "B": "You can take the bus to the port.",
+      "C": "About 5,000."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "packages",
+        "pos": "noun",
+        "ipa": "/ˈpækɪdʒɪz/",
+        "meaning": "bưu kiện"
+       },
+       {
+        "term": "company",
+        "pos": "noun",
+        "ipa": "/ˈkʌmpəni/",
+        "meaning": "công ty"
+       },
+       {
+        "term": "ship",
+        "pos": "verb",
+        "ipa": "/ʃɪp/",
+        "meaning": "vận chuyển"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q06.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6b089c93-6b45-4381-902a-12283e667abf",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Why was the price of this computer reduced?",
+     "options": {
+      "A": "Can I help you find something?",
+      "B": "At least fifty dollars.",
+      "C": "Because a newer model just came out."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "price",
+        "pos": "noun",
+        "ipa": "/praɪs/",
+        "meaning": "giá cả"
+       },
+       {
+        "term": "computer",
+        "pos": "noun",
+        "ipa": "/kəmˈpjuːtər/",
+        "meaning": "máy vi tính"
+       },
+       {
+        "term": "reduced",
+        "pos": "verb",
+        "ipa": "/rɪˈdjuːst/",
+        "meaning": "được giảm"
+       },
+       {
+        "term": "model",
+        "pos": "noun",
+        "ipa": "/ˈmɒdl/",
+        "meaning": "kiểu dáng, mẫu mã"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q07.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/df765b26-1467-46be-ae42-5d013a9fed56",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "How often are tours of the gallery given?",
+     "options": {
+      "A": "At the front desk.",
+      "B": "Sculptures and paintings.",
+      "C": "Twice a day."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "gallery",
+        "pos": "noun",
+        "ipa": "/ˈɡæləri/",
+        "meaning": "phòng trưng bày nghệ thuật"
+       },
+       {
+        "term": "tours",
+        "pos": "noun",
+        "ipa": "/tɔːrz/",
+        "meaning": "các chuyến tham quan"
+       },
+       {
+        "term": "twice a day",
+        "pos": "phrase",
+        "ipa": "/twaɪs ə deɪ/",
+        "meaning": "hai lần một ngày"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q08.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/88a7a42f-9166-42f7-8373-1377549f03c0",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "How is Marco getting to Shanghai?",
+     "options": {
+      "A": "He's flying there from New York.",
+      "B": "Sure, I'll return the key.",
+      "C": "Only for a few days."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "getting to",
+        "pos": "phrase",
+        "ipa": "/ˈɡɛtɪŋ tuː/",
+        "meaning": "đến nơi nào đó"
+       },
+       {
+        "term": "fly there",
+        "pos": "verb",
+        "ipa": "/flaɪ ðɛr/",
+        "meaning": "bay đến đó"
+       },
+       {
+        "term": "return the key",
+        "pos": "phrase",
+        "ipa": "/rɪˈtɜːrn ðə kiː/",
+        "meaning": "trả lại chìa khóa"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q09.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6e80cb25-f2d0-403c-bc5f-aab206efc63b",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "Why are the new employees out of the office?",
+     "options": {
+      "A": "It's in the center of town.",
+      "B": "Because they're at a training session.",
+      "C": "No thanks, we have enough."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "new employees",
+        "pos": "noun phrase",
+        "ipa": "/ˌnjuː ɪmˈplɔɪ.iːz/",
+        "meaning": "những nhân viên mới"
+       },
+       {
+        "term": "training session",
+        "pos": "noun phrase",
+        "ipa": "/ˈtreɪ.nɪŋ ˌseʃ.ən/",
+        "meaning": "buổi tập huấn"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q10.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/421ad60b-69bb-4baf-b3bd-5ed885c3eafc",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "How was your first week working at the radio station?",
+     "options": {
+      "A": "Could you turn the radio up?",
+      "B": "On the morning news.",
+      "C": "I really learned a lot."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "radio station",
+        "pos": "noun phrase",
+        "ipa": "/ˈreɪdioʊ ˌsteɪʃən/",
+        "meaning": "đài phát thanh"
+       },
+       {
+        "term": "morning news",
+        "pos": "noun phrase",
+        "ipa": "/ˈmɔːrnɪŋ njuːz/",
+        "meaning": "tin tức buổi sáng"
+       },
+       {
+        "term": "learned a lot",
+        "pos": "phrase",
+        "ipa": "/lɜːrnd ə lɑːt/",
+        "meaning": "học được nhiều điều"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,485 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 108,
+ "slug": "part2-basic-8",
+ "title": "Luyện tập cơ bản · Why – How · Test 2",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q11.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/d103aa34-fc27-433b-b08d-2afeb8c0a48f",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "How often do you travel for work?",
+     "options": {
+      "A": "I'll be back soon.",
+      "B": "Those will be shipped on Tuesday.",
+      "C": "Every couple of months."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "travel for work",
+        "pos": "phrase",
+        "ipa": "/ˈtræv.əl fɔːr wɜːrk/",
+        "meaning": "đi công tác"
+       },
+       {
+        "term": "shipped",
+        "pos": "verb",
+        "ipa": "/ʃɪpt/",
+        "meaning": "được vận chuyển"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q12.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/ca6f7071-e117-4d7b-aab0-b23ccea57b7a",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Why did she leave the meeting so early?",
+     "options": {
+      "A": "By taxi",
+      "B": "Didn't she tell you?",
+      "C": "In half an hour."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "leave the meeting",
+        "pos": "phrase",
+        "ipa": "/liːv ðə ˈmiːtɪŋ/",
+        "meaning": "rời khỏi cuộc họp"
+       },
+       {
+        "term": "so early",
+        "pos": "adverb",
+        "ipa": "/səʊ ˈɜːli/",
+        "meaning": "quá sớm"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q13.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/8efdd722-5940-46e5-a4c2-1b937f28892c",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "How did you find a local distributor?",
+     "options": {
+      "A": "I don't recall where it is.",
+      "B": "I searched online.",
+      "C": "On platform four."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "find a distributor",
+        "pos": "phrase",
+        "ipa": "/faɪnd ə dɪˈstrɪbjʊtər/",
+        "meaning": "tìm nhà phân phối"
+       },
+       {
+        "term": "search online",
+        "pos": "phrase",
+        "ipa": "/sɜːrtʃ ˈɒnlaɪn/",
+        "meaning": "tìm kiếm trực tuyến"
+       },
+       {
+        "term": "platform",
+        "pos": "noun",
+        "ipa": "/ˈplætfɔːrm/",
+        "meaning": "nền tảng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q14.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/2c4476e4-3f0f-4fb6-a202-61ae27a2c449",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "Why is the restaurant closed today?",
+     "options": {
+      "A": "There's a private party.",
+      "B": "Some water, please.",
+      "C": "Not until Tuesday night."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "restaurant closed",
+        "pos": "phrase",
+        "ipa": "/ˈrɛs.tər.ənt kləʊzd/",
+        "meaning": "nhà hàng đóng cửa"
+       },
+       {
+        "term": "private party",
+        "pos": "phrase",
+        "ipa": "/ˈpraɪ.vət ˈpɑː.ti/",
+        "meaning": "buổi tiệc riêng"
+       },
+       {
+        "term": "until tuesday",
+        "pos": "phrase",
+        "ipa": "/ənˈtɪl ˈtjuːz.deɪ/",
+        "meaning": "cho đến thứ Ba"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q15.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/ab5547fb-e217-4af2-8434-b63721d61e80",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "How much does this watch cost?",
+     "options": {
+      "A": "Not very often these days.",
+      "B": "It's quarter to eleven.",
+      "C": "Is the price tag missing?"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "cost",
+        "pos": "verb",
+        "ipa": "/kɒst/",
+        "meaning": "có giá là"
+       },
+       {
+        "term": "price tag",
+        "pos": "noun",
+        "ipa": "/ˈpraɪs tæɡ/",
+        "meaning": "nhãn giá"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q16.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/8ea55c6e-0bd3-458c-8c50-c081bd66c082",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Why is Ms. Jimenes in Moscow?",
+     "options": {
+      "A": "She's attending an economics forum.",
+      "B": "It's a nonstop flight.",
+      "C": "A few more months."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "economics forum",
+        "pos": "noun phrase",
+        "ipa": "/ˌiːkəˈnɒmɪks ˈfɔːrəm/, /ˌiːkəˈnɑːmɪks ˈfɔːrəm/",
+        "meaning": "diễn đàn kinh tế"
+       },
+       {
+        "term": "attending",
+        "pos": "verb",
+        "ipa": "/əˈtendɪŋ/",
+        "meaning": "tham dự"
+       },
+       {
+        "term": "nonstop",
+        "pos": "adjective",
+        "ipa": "/ˈnɒn stɒp/",
+        "meaning": "không ngừng nghỉ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q17.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/13729293-124d-4533-8343-e8d0f50b256d",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "How do I submit an invoice for this editing project?",
+     "options": {
+      "A": "Three hundred dollars.",
+      "B": "Thanks, but only minor revisions.",
+      "C": "Fax it to Mr. Sakda."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "submit an invoice",
+        "pos": "phrase",
+        "ipa": "/səbˈmɪt ən ˈɪnvɔɪs/",
+        "meaning": "gửi hóa đơn"
+       },
+       {
+        "term": "editing project",
+        "pos": "noun",
+        "ipa": "/ˈɛdɪtɪŋ ˈprɒdʒɛkt/",
+        "meaning": "dự án biên tập"
+       },
+       {
+        "term": "minor revisions",
+        "pos": "noun",
+        "ipa": "/ˈmaɪnər rɪˈvɪʒənz/",
+        "meaning": "sửa đổi nhỏ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q18.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/87d60796-a386-490d-84b5-5a757b39fa58",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "Why didn't Jim accept the vice president position?",
+     "options": {
+      "A": "In his office.",
+      "B": "Except for the night shift.",
+      "C": "Because he wants to retire."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "accept",
+        "pos": "verb",
+        "ipa": "/əkˈsɛpt/",
+        "meaning": "chấp nhận"
+       },
+       {
+        "term": "vice president",
+        "pos": "noun phrase",
+        "ipa": "/ˌvaɪs ˈprɛzɪdənt/",
+        "meaning": "phó chủ tịch"
+       },
+       {
+        "term": "retire",
+        "pos": "verb",
+        "ipa": "/rɪˈtaɪər/",
+        "meaning": "về hưu"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q19.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/29dbf857-0e96-4181-b4aa-f8a7595b909e",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "How long will the morning training session last?",
+     "options": {
+      "A": "Almost every Monday.",
+      "B": "Probably about an hour.",
+      "C": "It was very informative."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "training session",
+        "pos": "noun",
+        "ipa": "/ˈtreɪnɪŋ ˈsɛʃn/",
+        "meaning": "buổi tập huấn"
+       },
+       {
+        "term": "informative",
+        "pos": "adjective",
+        "ipa": "/ɪnˈfɔːrmətɪv/",
+        "meaning": "nhiều thông tin bổ ích"
+       },
+       {
+        "term": "probably",
+        "pos": "adverb",
+        "ipa": "/ˈprɒbəbli/",
+        "meaning": "có lẽ, chắc là"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q20.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/e15ff7ba-b490-468a-8881-134a56ccc9ea",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "Why did you come to the office early today?",
+     "options": {
+      "A": "Because I had to finish a report.",
+      "B": "Usually at eight-thirty in the morning.",
+      "C": "I'm sorry, but I can't."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "had to finish",
+        "pos": "phrase",
+        "ipa": "/hæd tə ˈfɪnɪʃ/",
+        "meaning": "phải hoàn thành"
+       },
+       {
+        "term": "a report",
+        "pos": "noun phrase",
+        "ipa": "/ə rɪˈpɔːrt/",
+        "meaning": "một báo cáo"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

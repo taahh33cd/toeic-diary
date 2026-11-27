@@ -1,0 +1,491 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 104,
+ "slug": "part2-basic-4",
+ "title": "Luyện tập cơ bản · Where – When · Test 1",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q01.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/76c18f1c-5b5a-40c7-bb21-cc0564864395",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "When is Ms. Carney's flight arriving?",
+     "options": {
+      "A": "With a stop in Denver.",
+      "B": "A window seat.",
+      "C": "At 4:15 P.M."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "flight arriving",
+        "pos": "phrase",
+        "ipa": "/flaɪt əˈraɪvɪŋ/",
+        "meaning": "chuyến bay đến"
+       },
+       {
+        "term": "stop in",
+        "pos": "phrase",
+        "ipa": "/stɒp ɪn/",
+        "meaning": "dừng lại ở"
+       },
+       {
+        "term": "window seat",
+        "pos": "phrase",
+        "ipa": "/ˈwɪndoʊ siːt/",
+        "meaning": "chỗ ngồi cạnh cửa sổ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q02.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/bb0f076e-98f9-4696-a312-e14ea163a9b6",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Where's the cafeteria?",
+     "options": {
+      "A": "On the lower level",
+      "B": "No, it wasn't very good.",
+      "C": "Soup and salad, please."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "cafeteria",
+        "pos": "noun",
+        "ipa": "/ˌkæfəˈtɪəriə/",
+        "meaning": "quán ăn tự phục vụ"
+       },
+       {
+        "term": "lower level",
+        "pos": "phrase",
+        "ipa": "/ˌloʊər ˈlevəl/",
+        "meaning": "tầng dưới"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q03.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/bb4fc81f-2178-49d2-9fd7-ca27719eb0ce",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "When does the community center open?",
+     "options": {
+      "A": "To add a new wing.",
+      "B": "On May first.",
+      "C": "It's on Main Street."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "community center",
+        "pos": "noun",
+        "ipa": "/kəˈmjuːnɪti ˈsɛntər/",
+        "meaning": "trung tâm cộng đồng"
+       },
+       {
+        "term": "open",
+        "pos": "verb",
+        "ipa": "/ˈoʊpən/",
+        "meaning": "mở cửa"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q04.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/8f2fd8ed-d320-493c-a027-4b7d7d07e71b",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "Where does Hiroshi keep our company brochures?",
+     "options": {
+      "A": "No, it's locked.",
+      "B": "In the top drawer.",
+      "C": "Yes, I'm sure."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "company brochures",
+        "pos": "noun phrase",
+        "ipa": "/ˈkʌmpəni ˈbroʊʃərz/",
+        "meaning": "tờ thông tin công ty"
+       },
+       {
+        "term": "keep",
+        "pos": "verb",
+        "ipa": "/kiːp/",
+        "meaning": "cất giữ"
+       },
+       {
+        "term": "top drawer",
+        "pos": "noun phrase",
+        "ipa": "/tɒp ˈdrɔːər/",
+        "meaning": "ngăn kéo trên cùng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q05.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/fd3d9e97-d7fc-4640-93d4-ac0969897539",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "When will today's training session end?",
+     "options": {
+      "A": "At the central station.",
+      "B": "Mr. Lowry trained us.",
+      "C": "Around noon."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "training session",
+        "pos": "noun phrase",
+        "ipa": "/ˈtreɪnɪŋ ˈsɛʃən/",
+        "meaning": "buổi huấn luyện"
+       },
+       {
+        "term": "end",
+        "pos": "verb",
+        "ipa": "/ɛnd/",
+        "meaning": "kết thúc"
+       },
+       {
+        "term": "around noon",
+        "pos": "phrase",
+        "ipa": "/əˈraʊnd nuːn/",
+        "meaning": "khoảng giữa trưa"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q06.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/a2d214ea-8bc8-46e0-931a-ea31251e0435",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Where did you get the flowers for the luncheon?",
+     "options": {
+      "A": "I'll have some, thanks.",
+      "B": "They're from my garden.",
+      "C": "In a couple of hours."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "luncheon",
+        "pos": "noun",
+        "ipa": "/ˈlʌn.tʃən/",
+        "meaning": "bữa trưa thân mật"
+       },
+       {
+        "term": "garden",
+        "pos": "noun",
+        "ipa": "/ˈɡɑː.dən/",
+        "meaning": "vườn"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q07.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/405adf01-b945-4bc5-99a2-a0e1d665ace1",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "When will you finish editing the final draft of my article?",
+     "options": {
+      "A": "Yes, I think so.",
+      "B": "At the publisher's.",
+      "C": "By Friday evening."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "finish editing",
+        "pos": "verb",
+        "ipa": "/ˈfɪnɪʃ ˈɛdɪtɪŋ/",
+        "meaning": "hoàn thành biên tập"
+       },
+       {
+        "term": "final draft",
+        "pos": "noun phrase",
+        "ipa": "/ˈfaɪnəl dræft/",
+        "meaning": "bản thảo cuối cùng"
+       },
+       {
+        "term": "by friday evening",
+        "pos": "phrase",
+        "ipa": "/baɪ ˈfraɪdeɪ ˈivnɪŋ/",
+        "meaning": "trước tối thứ Sáu"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q08.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/10d84567-fc02-428d-a0da-46e0406387ad",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "Where's the job fair taking place?",
+     "options": {
+      "A": "On the twenty-fifth.",
+      "B": "Just a few employees.",
+      "C": "At the convention center."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "job fair",
+        "pos": "noun",
+        "ipa": "/dʒɒb feər/",
+        "meaning": "hội chợ việc làm"
+       },
+       {
+        "term": "taking place",
+        "pos": "phrase",
+        "ipa": "/ˈteɪkɪŋ pleɪs/",
+        "meaning": "diễn ra, xảy ra"
+       },
+       {
+        "term": "convention center",
+        "pos": "noun",
+        "ipa": "/kənˈvɛnʃən ˈsɛntər/",
+        "meaning": "trung tâm hội nghị"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q09.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/2cbdc2b7-21fb-48cd-b961-4ab54b6f2ca0",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "When did you speak with Dr. Rolio?",
+     "options": {
+      "A": "He gave an interesting speech.",
+      "B": "OK, I'll call the clinic.",
+      "C": "Actually I talked with his nurse."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "speak with",
+        "pos": "verb",
+        "ipa": "/spik wɪð/",
+        "meaning": "nói chuyện với"
+       },
+       {
+        "term": "interesting speech",
+        "pos": "noun phrase",
+        "ipa": "/ˈɪntrəstɪŋ spitʃ/",
+        "meaning": "bài phát biểu thú vị"
+       },
+       {
+        "term": "call the clinic",
+        "pos": "verb phrase",
+        "ipa": "/kɔl ðə ˈklɪnɪk/",
+        "meaning": "gọi phòng khám"
+       },
+       {
+        "term": "talked with",
+        "pos": "verb",
+        "ipa": "/tɔkt wɪð/",
+        "meaning": "nói chuyện với"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q10.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/27f6042d-678c-4789-b4cc-66ce935aaa50",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "Where did you buy that picture frame?",
+     "options": {
+      "A": "With my new camera.",
+      "B": "A silver one.",
+      "C": "I didn't buy it — it was a gift"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "picture frame",
+        "pos": "noun",
+        "ipa": "/ˈpɪktʃər freɪm/",
+        "meaning": "khung ảnh"
+       },
+       {
+        "term": "gift",
+        "pos": "noun",
+        "ipa": "/ɡɪft/",
+        "meaning": "món quà"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,503 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 114,
+ "slug": "part2-basic-14",
+ "title": "Luyện tập cơ bản · Câu hỏi đuôi – Câu trần thuật · Test 2",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q11.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/5fee4566-34e4-47fc-b8e8-02c62db7e674",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "There were more people at the trade show this year, weren't there?",
+     "options": {
+      "A": "An additional session",
+      "B": "No. I won’t be able to come.",
+      "C": "Yes, it was a big success."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "trade show",
+        "pos": "noun phrase",
+        "ipa": "/treɪd ʃoʊ/",
+        "meaning": "hội chợ thương mại"
+       },
+       {
+        "term": "more people",
+        "pos": "noun phrase",
+        "ipa": "/mɔr ˈpipəl/",
+        "meaning": "nhiều người hơn"
+       },
+       {
+        "term": "big success",
+        "pos": "noun phrase",
+        "ipa": "/bɪɡ səkˈsɛs/",
+        "meaning": "thành công lớn"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q12.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/efc716e8-a95c-405b-9e42-63aab1d3aa23",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "It's time for a break, isn't it?",
+     "options": {
+      "A": "Well, they're too fragile to ship.",
+      "B": "Some afternoon appointments.",
+      "C": "Let's finish up this proposal."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "fragile",
+        "pos": "adjective",
+        "ipa": "/ˈfrædʒaɪl/",
+        "meaning": "dễ vỡ"
+       },
+       {
+        "term": "ship",
+        "pos": "verb",
+        "ipa": "/ʃɪp/",
+        "meaning": "vận chuyển"
+       },
+       {
+        "term": "proposal",
+        "pos": "noun",
+        "ipa": "/prəˈpəʊzl/",
+        "meaning": "đề xuất"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q13.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/84b53d02-2f20-4fff-9063-372039de0be1",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "You didn't leave your mobile phone on the train, did you?",
+     "options": {
+      "A": "It's 555-0126.",
+      "B": "A ticket to Amsterdam.",
+      "C": "No, I have it right here."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "leave behind",
+        "pos": "phrasal verb",
+        "ipa": "/liːv bɪˈhaɪnd/",
+        "meaning": "quên mang theo"
+       },
+       {
+        "term": "mobile phone",
+        "pos": "noun phrase",
+        "ipa": "/ˈmoʊbəl foʊn/",
+        "meaning": "điện thoại di động"
+       },
+       {
+        "term": "right here",
+        "pos": "adverb phrase",
+        "ipa": "/raɪt hɪər/",
+        "meaning": "ngay tại đây"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q14.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/5df37db7-2916-497c-ab7d-b4a1c0c27975",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "The meeting's in Busan, isn't it?",
+     "options": {
+      "A": "It isn't a company I've heard of.",
+      "B": "Yes. I hope we can participate by phone.",
+      "C": "The attendance sheet."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "meeting",
+        "pos": "noun",
+        "ipa": "/ˈmiːtɪŋ/",
+        "meaning": "cuộc họp"
+       },
+       {
+        "term": "participate by phone",
+        "pos": "phrase",
+        "ipa": "/pɑːrˈtɪsɪpeɪt baɪ foʊn/",
+        "meaning": "tham gia qua điện thoại"
+       },
+       {
+        "term": "attendance sheet",
+        "pos": "noun phrase",
+        "ipa": "/əˈtɛndəns ʃiːt/",
+        "meaning": "bảng điểm danh"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q15.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/f644e73c-12c6-4799-9500-d46a6c63358b",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "We've met these clients before, haven't we?",
+     "options": {
+      "A": "Sure, I'd be happy to.",
+      "B": "Actually, we shipped them already.",
+      "C": "The manager is new, though."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "met before",
+        "pos": "phrase",
+        "ipa": "/mɛt bɪˈfɔːr/",
+        "meaning": "gặp trước đây"
+       },
+       {
+        "term": "clients",
+        "pos": "noun",
+        "ipa": "/ˈklaɪənts/",
+        "meaning": "khách hàng"
+       },
+       {
+        "term": "shipped",
+        "pos": "verb",
+        "ipa": "/ʃɪpt/",
+        "meaning": "đã vận chuyển"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q16.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/4321648b-41d8-4f04-8b31-1bb7920368d6",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Melissa gave the contract to her clients already, didn't she?",
+     "options": {
+      "A": "Please contact me.",
+      "B": "Yes, she just did.",
+      "C": "I'm almost ready."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "contract",
+        "pos": "noun",
+        "ipa": "/ˈkɒntrækt/",
+        "meaning": "hợp đồng"
+       },
+       {
+        "term": "clients",
+        "pos": "noun",
+        "ipa": "/ˈklaɪənts/",
+        "meaning": "khách hàng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q17.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6fa98df1-cdd8-4482-9b37-2bfa373be826",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "This battery is rechargeable, right?",
+     "options": {
+      "A": "Three yellow cables.",
+      "B": "Let me read the packaging.",
+      "C": "No, In the left drawer."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "rechargeable battery",
+        "pos": "noun phrase",
+        "ipa": "/rɪˈtʃɑːrdʒəbəl ˈbætəri/",
+        "meaning": "pin sạc dự phòng"
+       },
+       {
+        "term": "read the packaging",
+        "pos": "verb phrase",
+        "ipa": "/riːd ðə ˈpækɪdʒɪŋ/",
+        "meaning": "đọc bao bì"
+       },
+       {
+        "term": "left drawer",
+        "pos": "noun phrase",
+        "ipa": "/lɛft ˈdrɔːr/",
+        "meaning": "ngăn kéo bên trái"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q18.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/b0c0c6c2-4074-47c7-b617-8cc8372c206c",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "You went to the soccer match last week, didn't you?",
+     "options": {
+      "A": "These socks don't match.",
+      "B": "A local sports writer.",
+      "C": "I did. My favorite team won!"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "soccer match",
+        "pos": "noun",
+        "ipa": "/ˈsɑːkər mætʃ/",
+        "meaning": "trận đấu bóng đá"
+       },
+       {
+        "term": "favorite team",
+        "pos": "noun",
+        "ipa": "/ˈfeɪvərɪt tiːm/",
+        "meaning": "đội yêu thích"
+       },
+       {
+        "term": "won",
+        "pos": "verb",
+        "ipa": "/wʌn/",
+        "meaning": "thắng, đã thắng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q19.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/80227016-f99e-4a8a-b2a2-ac6b6930a17c",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "We can have the replacement parts by Friday, right?",
+     "options": {
+      "A": "Put it on the lowest shelf.",
+      "B": "Yes — but shipping costs more.",
+      "C": "No, at the next traffic light."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "replacement part",
+        "pos": "noun phrase",
+        "ipa": "/rɪˈpleɪs.mənt pɑːrt/",
+        "meaning": "linh kiện thay thế"
+       },
+       {
+        "term": "by friday",
+        "pos": "phrase",
+        "ipa": "/baɪ ˈfraɪ.deɪ/",
+        "meaning": "trước thứ Sáu"
+       },
+       {
+        "term": "shipping costs",
+        "pos": "noun phrase",
+        "ipa": "/ˈʃɪp.ɪŋ kɒsts/",
+        "meaning": "chi phí vận chuyển"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q20.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/70f9d233-2dda-4520-be04-d69fcbc949ff",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "Takumi's going to the conference, isn't he?",
+     "options": {
+      "A": "How many were there?",
+      "B": "It was nice, thanks.",
+      "C": "Yes, he's leading a workshop."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "conference",
+        "pos": "noun",
+        "ipa": "/ˈkɑːnfərəns/",
+        "meaning": "cuộc hội nghị"
+       },
+       {
+        "term": "leading",
+        "pos": "verb",
+        "ipa": "/ˈliːdɪŋ/",
+        "meaning": "chủ trì, dẫn đầu"
+       },
+       {
+        "term": "workshop",
+        "pos": "noun",
+        "ipa": "/ˈwɜːrkʃɑːp/",
+        "meaning": "buổi hội thảo"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,491 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 111,
+ "slug": "part2-basic-11",
+ "title": "Luyện tập cơ bản · Yes/No – Lựa chọn · Test 2",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q11.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/19f2f6bd-0ac3-4919-ab0f-a0d97d24b2e5",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "Isn’t Ken going on vacation soon?",
+     "options": {
+      "A": "Sure, I'd like some.",
+      "B": "On Monday, I think.",
+      "C": "No, it's not too late."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "vacation",
+        "pos": "noun",
+        "ipa": "/veɪˈkeɪʃən/",
+        "meaning": "kỳ nghỉ"
+       },
+       {
+        "term": "on vacation",
+        "pos": "phrase",
+        "ipa": "/ɒn veɪˈkeɪʃən/",
+        "meaning": "đang đi nghỉ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q12.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/0ea3698b-16da-447c-b3d3-c6b1bc8fddf2",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Shouldn't we order some more photocopier paper?",
+     "options": {
+      "A": "No, they're not.",
+      "B": "Yes, we're running out.",
+      "C": "A fair price."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "photocopier paper",
+        "pos": "noun phrase",
+        "ipa": "/ˈfəʊtəʊˌkɒpiə ˈpeɪpə/",
+        "meaning": "giấy photocopy"
+       },
+       {
+        "term": "order some more",
+        "pos": "phrase",
+        "ipa": "/ˈɔːdə sʌm mɔː/",
+        "meaning": "đặt thêm"
+       },
+       {
+        "term": "running out",
+        "pos": "idiom",
+        "ipa": "/ˌrʌnɪŋ ˈaʊt/",
+        "meaning": "sắp hết"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q13.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/5166e2c7-8af5-4e8f-81e0-bdcddb8e6705",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "Didn't you make a copy of the menu?",
+     "options": {
+      "A": "A reservation for four people.",
+      "B": "No thanks, I already ordered something.",
+      "C": "Yes, it's posted on the bulletin board."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "make a copy",
+        "pos": "phrase",
+        "ipa": "/meɪk ə ˈkɒpi/",
+        "meaning": "tạo một bản sao"
+       },
+       {
+        "term": "reservation",
+        "pos": "noun",
+        "ipa": "/ˌrɛzərˈveɪʃən/",
+        "meaning": "sự đặt chỗ"
+       },
+       {
+        "term": "bulletin board",
+        "pos": "noun phrase",
+        "ipa": "/ˈbʊlɪtɪn bɔːrd/",
+        "meaning": "bảng thông báo"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q14.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/0e2b3cee-a10d-4dab-ade8-c4ce52229119",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "Don't you and Kirsten belong to the same gym?",
+     "options": {
+      "A": "Usually for an hour.",
+      "B": "Yes, I always see her there.",
+      "C": "The membership coordinator."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "belong to",
+        "pos": "verb",
+        "ipa": "/bɪˈlɒŋ tu/",
+        "meaning": "thuộc về, là thành viên của"
+       },
+       {
+        "term": "gym",
+        "pos": "noun",
+        "ipa": "/dʒɪm/",
+        "meaning": "phòng tập thể hình"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q15.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6005ec3a-882d-43f2-94bc-479ae0965059",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "Aren't you going to see that action movie with Mei this weekend?",
+     "options": {
+      "A": "I bought several of them.",
+      "B": "A newly remodeled theater.",
+      "C": "Actually, we just saw it."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "action movie",
+        "pos": "noun phrase",
+        "ipa": "/ˈækʃən ˈmuːvi/",
+        "meaning": "phim hành động"
+       },
+       {
+        "term": "this weekend",
+        "pos": "phrase",
+        "ipa": "/ðɪs ˈwiːkɛnd/",
+        "meaning": "cuối tuần này"
+       },
+       {
+        "term": "newly remodeled",
+        "pos": "adjective",
+        "ipa": "/ˈnjuːli rɪˈmɒdld/",
+        "meaning": "mới được tu sửa"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q16.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/c6778daf-163b-4656-96b4-c9c11963f338",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Haven't the new uniforms for the kitchen staff arrived?",
+     "options": {
+      "A": "I have them right here.",
+      "B": "It's company policy.",
+      "C": "I'll check the menu."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "kitchen staff",
+        "pos": "noun phrase",
+        "ipa": "/ˈkɪtʃən stɑːf/",
+        "meaning": "nhân viên nhà bếp"
+       },
+       {
+        "term": "uniforms",
+        "pos": "noun",
+        "ipa": "/ˈjuːnɪfɔːrm/",
+        "meaning": "đồng phục"
+       },
+       {
+        "term": "arrived",
+        "pos": "verb",
+        "ipa": "/əˈraɪvd/",
+        "meaning": "đã đến, đã tới"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q17.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/bdfa304c-d9e9-4d1a-b42f-2e90fa70326c",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "Isn't the inspector supposed to come to the factory today?",
+     "options": {
+      "A": "Six new facilities.",
+      "B": "Yes, he's on his way.",
+      "C": "Every day last year."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "inspector",
+        "pos": "noun",
+        "ipa": "/ɪnˈspɛktər/",
+        "meaning": "thanh tra, kiểm tra viên"
+       },
+       {
+        "term": "factory",
+        "pos": "noun",
+        "ipa": "/ˈfæktəri/",
+        "meaning": "nhà máy"
+       },
+       {
+        "term": "on his way",
+        "pos": "phrase",
+        "ipa": "/ɒn hɪz weɪ/",
+        "meaning": "đang trên đường"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q18.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/f73aea6f-cbd3-4391-8697-d23cacb7b481",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "Didn't you have a dentist appointment yesterday?",
+     "options": {
+      "A": "I see your point.",
+      "B": "I had to change it to next week.",
+      "C": "It's on 12th Avenue."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "dentist appointment",
+        "pos": "noun",
+        "ipa": "/ˈdɛntɪst əˈpɔɪntmənt/",
+        "meaning": "lịch hẹn nha sĩ"
+       },
+       {
+        "term": "see your point",
+        "pos": "idiom",
+        "ipa": "/siː jɔːr pɔɪnt/",
+        "meaning": "hiểu ý của bạn"
+       },
+       {
+        "term": "avenue",
+        "pos": "noun",
+        "ipa": "/ˈævənuː/",
+        "meaning": "đại lộ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q19.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/4d9e1d9b-b053-48f9-a936-62e54689f5fc",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "Our parking permits are valid for two years, aren't they?",
+     "options": {
+      "A": "No, I came by car.",
+      "B": "The park opened last year.",
+      "C": "Yes, I just renewed mine."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "parking permit",
+        "pos": "noun phrase",
+        "ipa": "/ˈpɑːrkɪŋ pərˌmɪt/",
+        "meaning": "giấy phép đậu xe"
+       },
+       {
+        "term": "valid",
+        "pos": "adjective",
+        "ipa": "/ˈvælɪd/",
+        "meaning": "có hiệu lực"
+       },
+       {
+        "term": "renewed",
+        "pos": "verb",
+        "ipa": "/rɪˈnjuːd/",
+        "meaning": "gia hạn"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q20.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/b8c28b53-e71d-4691-844e-1396ea66d36b",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "Isn't there usually a calculator in the bottom drawer?",
+     "options": {
+      "A": "The folder on top of the pile.",
+      "B": "I have time to work on the budget.",
+      "C": "Yes, but Julio's using it at the moment."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "calculator",
+        "pos": "noun",
+        "ipa": "/ˈkælkjuleɪtər/",
+        "meaning": "máy tính bỏ túi"
+       },
+       {
+        "term": "bottom drawer",
+        "pos": "noun",
+        "ipa": "/ˈbɒtəm drɔːr/",
+        "meaning": "ngăn kéo dưới cùng"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

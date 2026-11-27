@@ -1,0 +1,473 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 106,
+ "slug": "part2-basic-6",
+ "title": "Luyện tập cơ bản · Where – When · Test 3",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q21.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/22d692a7-ad20-4b6f-9805-cc5dabe951d4",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "When did you join the company?",
+     "options": {
+      "A": "Yes, I'm enjoying it here.",
+      "B": "Three years ago.",
+      "C": "The Strauss Company."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "join the company",
+        "pos": "verb",
+        "ipa": "/dʒɔɪn ðə ˈkʌmpəni/",
+        "meaning": "tham gia công ty"
+       },
+       {
+        "term": "three years ago",
+        "pos": "phrase",
+        "ipa": "/θriː jɪərz əˈɡoʊ/",
+        "meaning": "ba năm trước"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q22.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/5b3398e2-94e6-44cf-adb4-32060358cb88",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Where are you staying in town?",
+     "options": {
+      "A": "Yes, often",
+      "B": "At the Lakeside Hotel.",
+      "C": "For a conference."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "staying in town",
+        "pos": "phrase",
+        "ipa": "/ˈsteɪɪŋ ɪn taʊn/",
+        "meaning": "ở trong thị trấn"
+       },
+       {
+        "term": "for a conference",
+        "pos": "phrase",
+        "ipa": "/fɔːr ə ˈkɒnfərəns/",
+        "meaning": "cho một hội nghị"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q23.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/78f3146a-2b47-485c-a78e-68ef95b1f41a",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "Where can I get a copy of the weekly newsletter?",
+     "options": {
+      "A": "Every other week.",
+      "B": "I read that, too.",
+      "C": "On our Web site."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "copy of",
+        "pos": "phrase",
+        "ipa": "/ˈkɑpi ʌv/",
+        "meaning": "bản sao của"
+       },
+       {
+        "term": "weekly newsletter",
+        "pos": "noun",
+        "ipa": "/ˈwiːkli ˈnjuːzˌlɛtər/",
+        "meaning": "bản tin hàng tuần"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q24.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/0d538d0d-f5b8-47cd-b83e-28ac5958f56f",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "When do you expect the merger to be approved?",
+     "options": {
+      "A": "By the end of the month.",
+      "B": "I expect so.",
+      "C": "Yes, sales ought to improve."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "expect",
+        "pos": "verb",
+        "ipa": "/ɪkˈspɛkt/",
+        "meaning": "mong đợi"
+       },
+       {
+        "term": "merger",
+        "pos": "noun",
+        "ipa": "/ˈmɜːrdʒər/",
+        "meaning": "sự sáp nhập"
+       },
+       {
+        "term": "approved",
+        "pos": "adjective",
+        "ipa": "/əˈpruːvd/",
+        "meaning": "đã được phê duyệt"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q25.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/71cdb3aa-15f4-41e9-b887-1b065d14f699",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "When should I have this paperwork ready?",
+     "options": {
+      "A": "As soon as possible.",
+      "B": "At the print shop.",
+      "C": "A billing form."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "paperwork",
+        "pos": "noun",
+        "ipa": "/ˈpeɪpərˌwɜːrk/",
+        "meaning": "giấy tờ liên quan"
+       },
+       {
+        "term": "ready",
+        "pos": "adjective",
+        "ipa": "/ˈrɛdi/",
+        "meaning": "sẵn sàng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q26.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/8a78425f-518f-49c7-88ab-1055d0c32d47",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Where was Mr. Wagner yesterday?",
+     "options": {
+      "A": "The whole department.",
+      "B": "No, that's tomorrow.",
+      "C": "With a client."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "department",
+        "pos": "noun",
+        "ipa": "/dɪˈpɑːrtmənt/",
+        "meaning": "phòng ban"
+       },
+       {
+        "term": "with a client",
+        "pos": "phrase",
+        "ipa": "/wɪð ə ˈklaɪənt/",
+        "meaning": "với một khách hàng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q27.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/eaaaca81-afeb-4062-9c3e-604d3ed16d29",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "When is the Morrison Bridge going to be repaired?",
+     "options": {
+      "A": "A pair of them.",
+      "B": "He was stuck in traffic.",
+      "C": "Sometime next spring."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "repaired",
+        "pos": "verb",
+        "ipa": "/rɪˈpeər/",
+        "meaning": "Sửa chữa"
+       },
+       {
+        "term": "next spring",
+        "pos": "phrase",
+        "ipa": "/nɛkst sprɪŋ/",
+        "meaning": "Vào mùa xuân tới"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q28.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/93489b30-6ceb-4cd0-8590-7c33134a99ae",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "Where will the training session be held?",
+     "options": {
+      "A": "I'll check the e-mail Erika sent us.",
+      "B": "Safety procedures.",
+      "C": "Because of a schedule change."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "training session",
+        "pos": "noun phrase",
+        "ipa": "/ˈtreɪnɪŋ ˈsɛʃən/",
+        "meaning": "buổi huấn luyện"
+       },
+       {
+        "term": "check the e-mail",
+        "pos": "verb phrase",
+        "ipa": "/tʃɛk ðə ˈiːmeɪl/",
+        "meaning": "kiểm tra thư điện tử"
+       },
+       {
+        "term": "schedule change",
+        "pos": "noun phrase",
+        "ipa": "/ˈskɛdʒuːl tʃeɪndʒ/",
+        "meaning": "thay đổi lịch trình"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q29.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6f5f76e8-569f-44fe-8824-2bcc13700e44",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "When do you start work in the morning?",
+     "options": {
+      "A": "Yes, I do.",
+      "B": "At eight o'clock.",
+      "C": "She just started."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "start work",
+        "pos": "verb",
+        "ipa": "/stɑːrt wɜːrk/",
+        "meaning": "bắt đầu công việc"
+       },
+       {
+        "term": "in the morning",
+        "pos": "phrase",
+        "ipa": "/ɪn ðə ˈmɔːrnɪŋ/",
+        "meaning": "vào buổi sáng"
+       },
+       {
+        "term": "eight o'clock",
+        "pos": "phrase",
+        "ipa": "/eɪt əˈklɒk/",
+        "meaning": "tám giờ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q30.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/2bcc4ade-52c1-4eb9-9a78-e06adccb6ba0",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "Where's the nearest supermarket?",
+     "options": {
+      "A": "He asked about marketing.",
+      "B": "Just down the street.",
+      "C": "No, there isn't."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "nearest supermarket",
+        "pos": "noun phrase",
+        "ipa": "/ˈnɪərɪst ˈsuːpəˌmɑːkɪt/",
+        "meaning": "siêu thị gần nhất"
+       },
+       {
+        "term": "down the street",
+        "pos": "phrase",
+        "ipa": "/daʊn ðə striːt/",
+        "meaning": "dọc theo đường phố"
+       },
+       {
+        "term": "asked about",
+        "pos": "verb",
+        "ipa": "/ɑːskt əˈbaʊt/",
+        "meaning": "hỏi về"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

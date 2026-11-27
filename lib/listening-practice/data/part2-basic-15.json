@@ -1,0 +1,497 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 115,
+ "slug": "part2-basic-15",
+ "title": "Luyện tập cơ bản · Câu hỏi đuôi – Câu trần thuật · Test 3",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q21.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/0fd33a76-ed47-4017-b811-d2c8b30c8f1e",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "Let's end early today.",
+     "options": {
+      "A": "Only in the beginning.",
+      "B": "That's a good idea.",
+      "C": "I already sent it."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "end early",
+        "pos": "verb",
+        "ipa": "/ɛnd ˈɜːli/",
+        "meaning": "kết thúc sớm"
+       },
+       {
+        "term": "already sent",
+        "pos": "verb phrase",
+        "ipa": "/ɔːlˈrɛdi sɛnt/",
+        "meaning": "đã gửi rồi"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q22.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/7ab43cab-10ce-4a18-bb57-410a6708d08f",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "The personnel director can see you now.",
+     "options": {
+      "A": "OK, thank you.",
+      "B": "Let's schedule a time.",
+      "C": "I see your point."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "personnel director",
+        "pos": "noun phrase",
+        "ipa": "/ˌpɜːrsəˈnel dɪˈrektər/",
+        "meaning": "giám đốc nhân sự"
+       },
+       {
+        "term": "see you now",
+        "pos": "phrase",
+        "ipa": "/siː juː naʊ/",
+        "meaning": "gặp bạn bây giờ"
+       },
+       {
+        "term": "schedule a time",
+        "pos": "phrase",
+        "ipa": "/ˈskedʒuːl ə taɪm/",
+        "meaning": "lên lịch một thời gian"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q23.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/768a91c3-6e21-47c0-8523-409458036bd3",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "We need to replace batteries in clock.",
+     "options": {
+      "A": "Yes, I locked it.",
+      "B": "It was placed beside the door.",
+      "C": "I did it last week."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "replace batteries",
+        "pos": "phrase",
+        "ipa": "/rɪˈpleɪs ˈbætəriz/",
+        "meaning": "thay pin"
+       },
+       {
+        "term": "clock",
+        "pos": "noun",
+        "ipa": "/klɒk/",
+        "meaning": "đồng hồ"
+       },
+       {
+        "term": "last week",
+        "pos": "phrase",
+        "ipa": "/læst wiːk/",
+        "meaning": "tuần trước"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q24.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6e7dbde2-25f6-4978-a64d-ccb2a4604d0e",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "I heard that Route 4 is closed for construction.",
+     "options": {
+      "A": "Yes, until the twenty-fifth.",
+      "B": "Every day on my way to work.",
+      "C": "I can help you open it."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "closed for construction",
+        "pos": "phrase",
+        "ipa": "/kloʊzd fɔr kənˈstrʌkʃən/",
+        "meaning": "đóng cửa vì công trình"
+       },
+       {
+        "term": "route",
+        "pos": "noun",
+        "ipa": "/ruːt/",
+        "meaning": "tuyến đường"
+       },
+       {
+        "term": "heard that",
+        "pos": "phrase",
+        "ipa": "/hɜrd ðæt/",
+        "meaning": "nghe nói rằng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q25.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/cb92762b-8d04-4d98-9b08-9b4bea7ece21",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "I don't seem to be able to find my glasses?",
+     "options": {
+      "A": "Have you looked on your desk?",
+      "B": "I picked up my prescription yesterday.",
+      "C": "We haven't seen the latest report."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "find my glasses",
+        "pos": "phrase",
+        "ipa": "/faɪnd maɪ ˈɡlæsɪz/",
+        "meaning": "tìm kính của tôi"
+       },
+       {
+        "term": "looked on",
+        "pos": "verb",
+        "ipa": "/lʊkt ɒn/",
+        "meaning": "nhìn trên"
+       },
+       {
+        "term": "prescription",
+        "pos": "noun",
+        "ipa": "/prɪˈskrɪpʃən/",
+        "meaning": "đơn thuốc"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q26.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/94b85378-1634-4c9c-8b34-6d52e8cddd46",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "We bought the wrong kind of toner cartridge for the printer.",
+     "options": {
+      "A": "How many hours?",
+      "B": "I can exchange it.",
+      "C": "And in color, too."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "toner cartridge",
+        "pos": "noun",
+        "ipa": "/ˈtoʊnər ˈkɑːrtrɪdʒ/",
+        "meaning": "hộp mực máy in"
+       },
+       {
+        "term": "wrong kind",
+        "pos": "phrase",
+        "ipa": "/rɔːŋ kaɪnd/",
+        "meaning": "loại sai, không phù hợp"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q27.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/5db122b3-6776-4dcc-bb91-76253273eec6",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "Mr. Yamada's laboratory is down the hall.",
+     "options": {
+      "A": "Ask Mr. Bryant.",
+      "B": "Yes, he's quite tall.",
+      "C": "Let's stop by and say hello."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "laboratory",
+        "pos": "noun",
+        "ipa": "/ˈlæbrətɔːri/",
+        "meaning": "phòng thí nghiệm"
+       },
+       {
+        "term": "down the hall",
+        "pos": "phrase",
+        "ipa": "/daʊn ðə hɔːl/",
+        "meaning": "cuối hành lang"
+       },
+       {
+        "term": "say hello",
+        "pos": "phrase",
+        "ipa": "/seɪ həˈləʊ/",
+        "meaning": "chào hỏi"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q28.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6e452d77-1700-4652-975e-3ac9378f64d5",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "Let's meet in the hotel lobby at eight o'clock.",
+     "options": {
+      "A": "Yes, I have one.",
+      "B": "A reservation for two nights.",
+      "C": "See you then"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "meet in",
+        "pos": "verb",
+        "ipa": "/miːt ɪn/",
+        "meaning": "gặp tại địa điểm"
+       },
+       {
+        "term": "hotel lobby",
+        "pos": "noun",
+        "ipa": "/hoʊˈtɛl ˈlɑːbi/",
+        "meaning": "sảnh khách sạn"
+       },
+       {
+        "term": "eight o'clock",
+        "pos": "phrase",
+        "ipa": "/eɪt əˈklɑːk/",
+        "meaning": "tám giờ"
+       },
+       {
+        "term": "reservation",
+        "pos": "noun",
+        "ipa": "/ˌrɛzərˈveɪʃən/",
+        "meaning": "sự đặt trước"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q29.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/782c79d3-3810-4f2f-894e-a902619069a0",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "You should try the new salad bar in the cafeteria.",
+     "options": {
+      "A": "That's after lunch.",
+      "B": "I have, and it's great!",
+      "C": "With lettuce and tomato."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "salad bar",
+        "pos": "noun",
+        "ipa": "/ˈsæləd bɑːr/",
+        "meaning": "quầy bán xà lách"
+       },
+       {
+        "term": "cafeteria",
+        "pos": "noun",
+        "ipa": "/ˌkæfəˈtɪəriə/",
+        "meaning": "nhà ăn tập thể"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q30.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/b7d5e509-4e43-43d4-8ba7-d7862b1de959",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "The factory will be shut down for the January.",
+     "options": {
+      "A": "Just down the street.",
+      "B": "The latest shipment.",
+      "C": "Do you know why?"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "shut down",
+        "pos": "verb",
+        "ipa": "/ʃʌt daʊn/",
+        "meaning": "đóng cửa, ngừng hoạt động"
+       },
+       {
+        "term": "factory",
+        "pos": "noun",
+        "ipa": "/ˈfæktəri/",
+        "meaning": "nhà máy"
+       },
+       {
+        "term": "shipment",
+        "pos": "noun",
+        "ipa": "/ˈʃɪpmənt/",
+        "meaning": "lô hàng"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

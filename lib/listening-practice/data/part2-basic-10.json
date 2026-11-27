@@ -1,0 +1,491 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 110,
+ "slug": "part2-basic-10",
+ "title": "Luyện tập cơ bản · Yes/No – Lựa chọn · Test 1",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q01.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/aa2443c6-29a4-4150-a0e6-04db5070533f",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "Do you know of a good doctor in this area?",
+     "options": {
+      "A": "On the way back.",
+      "B": "Sure, I'll give you her phone number.",
+      "C": "He'd prefer a corner office."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "good doctor",
+        "pos": "noun phrase",
+        "ipa": "/ɡʊd ˈdɒktə/",
+        "meaning": "bác sĩ giỏi"
+       },
+       {
+        "term": "in this area",
+        "pos": "phrase",
+        "ipa": "/ɪn ðɪs ˈɛəriə/",
+        "meaning": "trong khu vực này"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q02.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/cb6ae441-70e8-4b7e-a2e2-d9052a94d32b",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Have you met with the event planner yet?",
+     "options": {
+      "A": "We're meeting tomorrow.",
+      "B": "Fifty invitations.",
+      "C": "That's a good plan."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "event planner",
+        "pos": "noun phrase",
+        "ipa": "/ɪˈvɛnt ˈplænər/",
+        "meaning": "người/công ty tổ chức sự kiện"
+       },
+       {
+        "term": "meet with",
+        "pos": "verb",
+        "ipa": "/miːt wɪð/",
+        "meaning": "gặp gỡ ai đó"
+       },
+       {
+        "term": "meeting",
+        "pos": "noun",
+        "ipa": "/ˈmiːtɪŋ/",
+        "meaning": "cuộc họp, buổi gặp mặt"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q03.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/d95f9375-59ba-4a4e-8e86-9ccb29d48fda",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "Does this mobile phone come with headphones?",
+     "options": {
+      "A": "Yes, it does.",
+      "B": "Thanks, I'm fine.",
+      "C": "About two days."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "mobile phone",
+        "pos": "noun",
+        "ipa": "/ˈmoʊbəl foʊn/",
+        "meaning": "điện thoại di động"
+       },
+       {
+        "term": "come with",
+        "pos": "verb",
+        "ipa": "/kʌm wɪð/",
+        "meaning": "đi kèm với"
+       },
+       {
+        "term": "headphones",
+        "pos": "noun",
+        "ipa": "/ˈhɛdˌfoʊnz/",
+        "meaning": "tai nghe"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q04.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/86b5af5f-5880-4644-9aae-f81f6b35e5ef",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "Did you watch the football match yesterday?",
+     "options": {
+      "A": "No, I missed it.",
+      "B": "It's 4:45.",
+      "C": "I've been training every day"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "watch",
+        "pos": "verb",
+        "ipa": "/wɒtʃ/",
+        "meaning": "xem"
+       },
+       {
+        "term": "football match",
+        "pos": "noun",
+        "ipa": "/ˈfʊtbɔːl mætʃ/",
+        "meaning": "trận đấu bóng đá"
+       },
+       {
+        "term": "missed",
+        "pos": "verb",
+        "ipa": "/mɪst/",
+        "meaning": "bỏ lỡ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q05.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6a08d7b8-1e72-4bbc-acb6-6966340119fc",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "Did I already give you my business card?",
+     "options": {
+      "A": "No, Mr. Cho has a car.",
+      "B": "Yes, I have it right here.",
+      "C": "Business is good, thanks."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "business card",
+        "pos": "noun phrase",
+        "ipa": "/ˈbɪznəs kɑːrd/",
+        "meaning": "danh thiếp"
+       },
+       {
+        "term": "business",
+        "pos": "noun",
+        "ipa": "/ˈbɪznəs/",
+        "meaning": "việc kinh doanh"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q06.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/0f65c49b-477e-4704-ba1d-b36369db9091",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Have the landscapers finished the garden?",
+     "options": {
+      "A": "They need a couple more days.",
+      "B": "Flowering trees and shrubs.",
+      "C": "A security guard."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "landscaper",
+        "pos": "noun",
+        "ipa": "/ˈlænsˌkeɪpər/",
+        "meaning": "người làm vườn"
+       },
+       {
+        "term": "finished",
+        "pos": "verb",
+        "ipa": "/ˈfɪnɪʃt/",
+        "meaning": "hoàn thành"
+       },
+       {
+        "term": "couple more days",
+        "pos": "phrase",
+        "ipa": "/ˈkʌpəl mɔːr deɪz/",
+        "meaning": "thêm vài ngày"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q07.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/619800af-80fe-47e8-8ae9-d2bcd6dd83de",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "Do you enjoy your job as a bank teller?",
+     "options": {
+      "A": "I'll tell her tomorrow.",
+      "B": "A different account.",
+      "C": "I like it a lot."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "enjoy your job",
+        "pos": "verb",
+        "ipa": "/ɪnˈdʒɔɪ jɔːr dʒɒb/",
+        "meaning": "thích công việc của bạn"
+       },
+       {
+        "term": "bank teller",
+        "pos": "noun",
+        "ipa": "/bæŋk ˈtɛlə/",
+        "meaning": "nhân viên giao dịch ngân hàng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q08.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/ecd9b1a1-2240-46ea-ba5f-61c2e6ec3bef",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "Did Mr. Lee approve the text for the brochure?",
+     "options": {
+      "A": "Yes, I can.",
+      "B": "He hasn't seen it yet.",
+      "C": "A few more copies."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "approve the text",
+        "pos": "phrase",
+        "ipa": "/əˈpruːv ðə tɛkst/",
+        "meaning": "phê duyệt nội dung"
+       },
+       {
+        "term": "brochure",
+        "pos": "noun",
+        "ipa": "/broʊˈʃʊr/",
+        "meaning": "tờ rơi quảng cáo"
+       },
+       {
+        "term": "seen it yet",
+        "pos": "phrase",
+        "ipa": "/siːn ɪt jɛt/",
+        "meaning": "chưa xem nó"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q09.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/64fdb4f9-087f-4993-adb6-282ac0043d54",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "Do you usually eat lunch in the company cafeteria?",
+     "options": {
+      "A": "No, I bring food from home.",
+      "B": "I'll have my coffee with cream and sugar thanks.",
+      "C": "It's for the company picnic."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "company cafeteria",
+        "pos": "noun phrase",
+        "ipa": "/ˈkʌmpəni kæfəˈtɪəriə/",
+        "meaning": "nhà ăn công ty"
+       },
+       {
+        "term": "eat lunch",
+        "pos": "verb phrase",
+        "ipa": "/iːt lʌntʃ/",
+        "meaning": "ăn trưa"
+       },
+       {
+        "term": "bring food",
+        "pos": "verb phrase",
+        "ipa": "/brɪŋ fuːd/",
+        "meaning": "mang thức ăn"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q10.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/2eebdeec-438b-4576-b1f2-9f2270108a35",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "Have you completed the reimbursement form?",
+     "options": {
+      "A": "Yes, I've filled it out.",
+      "B": "Travel expenses.",
+      "C": "He's a former colleague"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "reimbursement form",
+        "pos": "noun phrase",
+        "ipa": "/ˌriːəmˈbɜːrsmənt fɔːrm/",
+        "meaning": "phiếu yêu cầu hoàn tiền"
+       },
+       {
+        "term": "completed",
+        "pos": "verb",
+        "ipa": "/kəmˈpliːtɪd/",
+        "meaning": "hoàn thành"
+       },
+       {
+        "term": "filled out",
+        "pos": "verb",
+        "ipa": "/fɪld aʊt/",
+        "meaning": "điền vào (biểu mẫu)"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

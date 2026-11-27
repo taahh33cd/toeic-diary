@@ -1,0 +1,509 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 103,
+ "slug": "part2-basic-3",
+ "title": "Luyện tập cơ bản · Who – What – Which · Test 3",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q21.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/ba9d0d1a-f84d-4f6e-b99b-73d7ffc4b614",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "Who is Mr. Park meeting at the airport?",
+     "options": {
+      "A": "Inside the terminal.",
+      "B": "They called a taxi.",
+      "C": "A new client."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "meeting",
+        "pos": "noun",
+        "ipa": "/ˈmiːtɪŋ/",
+        "meaning": "cuộc gặp gỡ"
+       },
+       {
+        "term": "airport",
+        "pos": "noun",
+        "ipa": "/ˈɛəpɔːt/",
+        "meaning": "sân bay"
+       },
+       {
+        "term": "client",
+        "pos": "noun",
+        "ipa": "/ˈklaɪənt/",
+        "meaning": "khách hàng (cá nhân)"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q22.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/a01e0b01-8c31-48fb-8829-015cd310ae35",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Which of these notebooks is yours?",
+     "options": {
+      "A": "At the library.",
+      "B": "The black one's mine.",
+      "C": "Thanks, it is."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "notebook",
+        "pos": "noun",
+        "ipa": "/ˈnoʊtbʊk/",
+        "meaning": "sổ tay"
+       },
+       {
+        "term": "black",
+        "pos": "adjective",
+        "ipa": "/blæk/",
+        "meaning": "màu đen"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q23.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6edcadb8-93fa-4386-847c-1963b424f3a3",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "Who's been selected to lead the design team?",
+     "options": {
+      "A": "Sign here, please.",
+      "B": "Will he read it?",
+      "C": "Ms. Lee was chosen"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "selected",
+        "pos": "verb",
+        "ipa": "/səˈlɛktɪd/",
+        "meaning": "được chọn"
+       },
+       {
+        "term": "lead",
+        "pos": "verb",
+        "ipa": "/liːd/",
+        "meaning": "lãnh đạo, dẫn dắt"
+       },
+       {
+        "term": "design team",
+        "pos": "noun",
+        "ipa": "/dɪˈzaɪn tiːm/",
+        "meaning": "đội thiết kế"
+       },
+       {
+        "term": "chosen",
+        "pos": "verb",
+        "ipa": "/ˈtʃəʊzən/",
+        "meaning": "được chọn"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q24.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6caf8cbf-49fb-4f4f-a534-474eda2df0c1",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "Who's retiring next month?",
+     "options": {
+      "A": "No, we're not tired.",
+      "B": "I believe Caroline is.",
+      "C": "It's due in four weeks."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "retiring",
+        "pos": "verb",
+        "ipa": "/rɪˈtaɪərɪŋ/",
+        "meaning": "nghỉ hưu"
+       },
+       {
+        "term": "tired",
+        "pos": "adjective",
+        "ipa": "/ˈtaɪərd/",
+        "meaning": "mệt mỏi"
+       },
+       {
+        "term": "due",
+        "pos": "adjective",
+        "ipa": "/duː/",
+        "meaning": "đến hạn, tới kỳ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q25.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/8312eb77-f5ba-45a6-8be3-6ae4d4c5c047",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "Which paint color did you choose for the waiting room?",
+     "options": {
+      "A": "He didn't see the memo.",
+      "B": "A shade of pale green.",
+      "C": "I don't mind waiting."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "paint color",
+        "pos": "noun",
+        "ipa": "/peɪnt ˈkʌlər/",
+        "meaning": "màu sơn"
+       },
+       {
+        "term": "choose",
+        "pos": "verb",
+        "ipa": "/tʃuːz/",
+        "meaning": "chọn lựa"
+       },
+       {
+        "term": "waiting room",
+        "pos": "noun",
+        "ipa": "/ˈweɪtɪŋ ruːm/",
+        "meaning": "phòng chờ"
+       },
+       {
+        "term": "shade",
+        "pos": "noun",
+        "ipa": "/ʃeɪd/",
+        "meaning": "sắc thái, tông màu"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q26.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/53653b45-f47c-4e42-98ab-7ced8784d42e",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "What was the article about?",
+     "options": {
+      "A": "I didn't read it.",
+      "B": "No, not recently.",
+      "C": "That's about it."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "article",
+        "pos": "noun",
+        "ipa": "/ˈɑːrtɪkl/",
+        "meaning": "bài báo"
+       },
+       {
+        "term": "recently",
+        "pos": "adverb",
+        "ipa": "/ˈriːsntli/",
+        "meaning": "gần đây"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q27.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/2be967bb-569e-4ce8-a82c-24210e931a28",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "Who was in your office this morning?",
+     "options": {
+      "A": "In the other building.",
+      "B": "I have time tomorrow.",
+      "C": "My manager, Mr. Lao"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "office",
+        "pos": "noun",
+        "ipa": "/ˈɒfɪs/",
+        "meaning": "văn phòng"
+       },
+       {
+        "term": "manager",
+        "pos": "noun",
+        "ipa": "/ˈmænɪdʒər/",
+        "meaning": "người quản lý"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q28.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/862f721f-3bdf-4fd9-9585-62d0b5ea872f",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "Who's leading the orientation?",
+     "options": {
+      "A": "He read it recently.",
+      "B": "The human resources team.",
+      "C": "Some training manuals."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "leading",
+        "pos": "verb",
+        "ipa": "/ˈliːdɪŋ/",
+        "meaning": "dẫn đầu, chỉ đạo"
+       },
+       {
+        "term": "orientation",
+        "pos": "noun",
+        "ipa": "/ˌɔːriənˈteɪʃn/",
+        "meaning": "buổi định hướng"
+       },
+       {
+        "term": "human resources",
+        "pos": "noun",
+        "ipa": "/ˌhjuːmən rɪˈzɔːsɪz/",
+        "meaning": "bộ phận nhân sự"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q29.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/7127895f-619d-4700-81cb-8f4c4962d2d4",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "What should I bring to the trade show?",
+     "options": {
+      "A": "Your business cards.",
+      "B": "At the conference center.",
+      "C": "Sorry, I have it."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "trade show",
+        "pos": "noun phrase",
+        "ipa": "/treɪd ʃoʊ/",
+        "meaning": "hội chợ thương mại"
+       },
+       {
+        "term": "business card",
+        "pos": "noun phrase",
+        "ipa": "/ˈbɪz nəs kɑːrd/",
+        "meaning": "danh thiếp"
+       },
+       {
+        "term": "conference center",
+        "pos": "noun phrase",
+        "ipa": "/ˈkɑːn fər əns ˈsɛntər/",
+        "meaning": "trung tâm hội nghị"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q30.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/b3a78f5b-fccb-40bb-932a-0c9b845ce630",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "What kind of company does Mr. Perez manage?",
+     "options": {
+      "A": "For twenty years.",
+      "B": "I can manage that.",
+      "C": "An advertising agency."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "company",
+        "pos": "noun",
+        "ipa": "/ˈkʌmpəni/",
+        "meaning": "công ty"
+       },
+       {
+        "term": "manage",
+        "pos": "verb",
+        "ipa": "/ˈmænɪdʒ/",
+        "meaning": "quản lý"
+       },
+       {
+        "term": "advertising",
+        "pos": "noun",
+        "ipa": "/ˈædvərtaɪzɪŋ/",
+        "meaning": "quảng cáo"
+       },
+       {
+        "term": "agency",
+        "pos": "noun",
+        "ipa": "/ˈeɪdʒənsi/",
+        "meaning": "đại lý, cơ quan"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

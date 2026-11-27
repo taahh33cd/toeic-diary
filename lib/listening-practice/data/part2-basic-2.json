@@ -1,0 +1,497 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 102,
+ "slug": "part2-basic-2",
+ "title": "Luyện tập cơ bản · Who – What – Which · Test 2",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q11.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/c25e5d08-3c20-4520-9fc9-b30379d40528",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "Who are you going to hire for the position?",
+     "options": {
+      "A": "Our standards are higher.",
+      "B": "At the end of the month.",
+      "C": "I've decided on Mr. Smith."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "hire",
+        "pos": "verb",
+        "ipa": "/haɪər/",
+        "meaning": "thuê người làm"
+       },
+       {
+        "term": "position",
+        "pos": "noun",
+        "ipa": "/pəˈzɪʃən/",
+        "meaning": "vị trí công việc"
+       },
+       {
+        "term": "decided",
+        "pos": "verb",
+        "ipa": "/dɪˈsaɪdɪd/",
+        "meaning": "quyết định rồi"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q12.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/e8330912-ad96-48a0-9cb3-c68b3f95c5c8",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Who's invited the lecturer tonight?",
+     "options": {
+      "A": "It's open to the public.",
+      "B": "Yes, they were.",
+      "C": "Conference room B."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "invite",
+        "pos": "verb",
+        "ipa": "/ɪnˈvaɪt/",
+        "meaning": "mời ai đó"
+       },
+       {
+        "term": "lecturer",
+        "pos": "noun",
+        "ipa": "/ˈlɛkʧərər/",
+        "meaning": "người thuyết trình"
+       },
+       {
+        "term": "open to",
+        "pos": "phrase",
+        "ipa": "/ˈoʊpən tu/",
+        "meaning": "mở cho mọi người"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q13.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/a9454fbf-d071-4031-91c5-ef547d47a8f5",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "Who was the last person to review these files?",
+     "options": {
+      "A": "No, the first one.",
+      "B": "The accountant.",
+      "C": "At four o'clock."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "last person",
+        "pos": "noun phrase",
+        "ipa": "/læst ˈpɜːsən/",
+        "meaning": "người cuối cùng"
+       },
+       {
+        "term": "review files",
+        "pos": "verb phrase",
+        "ipa": "/rɪˈvjuː faɪlz/",
+        "meaning": "xem lại hồ sơ"
+       },
+       {
+        "term": "accountant",
+        "pos": "noun",
+        "ipa": "/əˈkaʊntənt/",
+        "meaning": "kế toán"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q14.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/675014d2-6a19-4eb2-89ea-c77ac36e7dda",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "What's the price of part number 136?",
+     "options": {
+      "A": "Let me check the pricing list.",
+      "B": "A credit-card number.",
+      "C": "In boxes of twenty-five."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "price",
+        "pos": "noun",
+        "ipa": "/praɪs/",
+        "meaning": "giá cả"
+       },
+       {
+        "term": "part number",
+        "pos": "noun",
+        "ipa": "/pɑːrt ˈnʌmbər/",
+        "meaning": "số hiệu bộ phận"
+       },
+       {
+        "term": "check pricing",
+        "pos": "phrase",
+        "ipa": "/tʃɛk ˈpraɪsɪŋ/",
+        "meaning": "kiểm tra bảng giá"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q15.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/e9e735bc-5433-4d77-8604-db42735ca157",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "What flight is he arriving on?",
+     "options": {
+      "A": "Flight 48.",
+      "B": "Only an hour.",
+      "C": "At the airport."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "flight",
+        "pos": "noun",
+        "ipa": "/flaɪt/",
+        "meaning": "chuyến bay"
+       },
+       {
+        "term": "arriving",
+        "pos": "verb",
+        "ipa": "/əˈraɪvɪŋ/",
+        "meaning": "đến nơi"
+       },
+       {
+        "term": "airport",
+        "pos": "noun",
+        "ipa": "/ˈɛərˌpɔːrt/",
+        "meaning": "sân bay"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q16.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6481c92b-fbaa-4e66-a9fa-0b45de134ac6",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Who's meeting with Ms. Clark right now?",
+     "options": {
+      "A": "The accountant.",
+      "B": "The meeting was rather short.",
+      "C": "Yes, you're quite right."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "meeting with",
+        "pos": "phrase",
+        "ipa": "/ˈmiːtɪŋ wɪð/",
+        "meaning": "gặp gỡ với ai đó"
+       },
+       {
+        "term": "accountant",
+        "pos": "noun",
+        "ipa": "/əˈkaʊntənt/",
+        "meaning": "kế toán"
+       },
+       {
+        "term": "rather short",
+        "pos": "phrase",
+        "ipa": "/ˈrɑːðər ʃɔːrt/",
+        "meaning": "khá ngắn"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q17.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/3c5adae7-db8a-4d67-83a0-bd76d31adab0",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "Who will replace Mr. Fernandez when he retires?",
+     "options": {
+      "A": "I've never been there.",
+      "B": "I heard that Maria Ortega will.",
+      "C": "No, I'm not tired."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "replace",
+        "pos": "verb",
+        "ipa": "/rɪˈpleɪs/",
+        "meaning": "thay thế"
+       },
+       {
+        "term": "retires",
+        "pos": "verb",
+        "ipa": "/rɪˈtaɪərz/",
+        "meaning": "về hưu"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q18.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/63c8b622-b672-4639-89b1-5facfeca3187",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "What time is it?",
+     "options": {
+      "A": "Just a few minutes.",
+      "B": "Almost five o'clock.",
+      "C": "Yes, it is."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "few minutes",
+        "pos": "phrase",
+        "ipa": "/fjuː ˈmɪnɪts/",
+        "meaning": "vài phút"
+       },
+       {
+        "term": "almost five",
+        "pos": "phrase",
+        "ipa": "/ˈɔːlməʊst faɪv/",
+        "meaning": "gần năm giờ"
+       },
+       {
+        "term": "o'clock",
+        "pos": "phrase",
+        "ipa": "/əˈklɒk/",
+        "meaning": "giờ (chỉ giờ)"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q19.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/04cf5142-2cf8-4a78-a94a-d75f34078e58",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "Who can I ask to revise our orientation materials?",
+     "options": {
+      "A": "I just realized that.",
+      "B": "An earlier version.",
+      "C": "Yoko has the time."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "orientation materials",
+        "pos": "phrase",
+        "ipa": "/ˌɔːriənˈteɪʃn məˈtɪəriəlz/",
+        "meaning": "tài liệu định hướng"
+       },
+       {
+        "term": "revise",
+        "pos": "verb",
+        "ipa": "/rɪˈvaɪz/",
+        "meaning": "sửa đổi, xem lại"
+       },
+       {
+        "term": "earlier version",
+        "pos": "phrase",
+        "ipa": "/ˈɜːliər ˈvɜːʃn/",
+        "meaning": "phiên bản trước"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q20.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/19e41f49-ef7d-4ec6-97d2-f281bdf1ab05",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "What's on the agenda for the staff meeting?",
+     "options": {
+      "A": "Next to the lobby.",
+      "B": "Attendance was good.",
+      "C": "It hasn't been finalized."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "staff meeting",
+        "pos": "noun",
+        "ipa": "/stɑːf ˈmiːtɪŋ/",
+        "meaning": "cuộc họp nhân viên"
+       },
+       {
+        "term": "finalized",
+        "pos": "verb",
+        "ipa": "/ˈfaɪnəlaɪzd/",
+        "meaning": "hoàn tất, chốt lại"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

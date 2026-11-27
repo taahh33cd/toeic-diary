@@ -1,0 +1,515 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 112,
+ "slug": "part2-basic-12",
+ "title": "Luyện tập cơ bản · Yes/No – Lựa chọn · Test 3",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q21.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/f6e51bdc-1ec0-4b9f-a710-307f1ebb1ca1",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "Are you a member of the gym or are you a guest?",
+     "options": {
+      "A": "Did she remember?",
+      "B": "I'm just visiting.",
+      "C": "I guessed right."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "member",
+        "pos": "noun",
+        "ipa": "/ˈmɛmbər/",
+        "meaning": "thành viên"
+       },
+       {
+        "term": "gym",
+        "pos": "noun",
+        "ipa": "/dʒɪm/",
+        "meaning": "phòng tập thể hình"
+       },
+       {
+        "term": "guest",
+        "pos": "noun",
+        "ipa": "/ɡɛst/",
+        "meaning": "khách"
+       },
+       {
+        "term": "visiting",
+        "pos": "verb",
+        "ipa": "/ˈvɪzɪtɪŋ/",
+        "meaning": "thăm viếng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q22.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/32606c7d-3f40-4e33-a20c-0d8e4af7bab4",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Does our company recycle paper and plastic or just paper?",
+     "options": {
+      "A": "Trash is collected weekly.",
+      "B": "We recycle both.",
+      "C": "Ten plastic bottles."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "recycle paper",
+        "pos": "verb",
+        "ipa": "/rɪˈsaɪkl ˈpeɪpər/",
+        "meaning": "tái chế giấy"
+       },
+       {
+        "term": "recycle plastic",
+        "pos": "verb",
+        "ipa": "/rɪˈsaɪkl ˈplæstɪk/",
+        "meaning": "tái chế nhựa"
+       },
+       {
+        "term": "collect weekly",
+        "pos": "verb",
+        "ipa": "/kəˈlɛkt ˈwiːkli/",
+        "meaning": "thu gom hàng tuần"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q23.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/0fde9ba4-3d43-4c66-92de-3acaf3659084",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "Will the carpenters be working the first or second shift?",
+     "options": {
+      "A": "First would be better.",
+      "B": "I'm sorry we were tired.",
+      "C": "Making new window frames."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "working",
+        "pos": "verb",
+        "ipa": "/ˈwɜːrkɪŋ/",
+        "meaning": "đang làm việc"
+       },
+       {
+        "term": "first shift",
+        "pos": "noun phrase",
+        "ipa": "/ˈfɜːrst ʃɪft/",
+        "meaning": "ca làm việc đầu tiên"
+       },
+       {
+        "term": "second shift",
+        "pos": "noun phrase",
+        "ipa": "/ˈsɛkənd ʃɪft/",
+        "meaning": "ca làm việc thứ hai"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q24.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6d0d4661-2e3a-4b11-85b8-b742d837cdb2",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "Can I e-mail you my resume, or would you prefer hard copy?",
+     "options": {
+      "A": "I checked the mail already.",
+      "B": "Just an e-mail will be fine.",
+      "C": "No thanks, it's not very difficult."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "e-mail",
+        "pos": "noun",
+        "ipa": "/ˈiːmeɪl/",
+        "meaning": "thư điện tử"
+       },
+       {
+        "term": "resume",
+        "pos": "noun",
+        "ipa": "/ˈrɛzəmeɪ/",
+        "meaning": "sơ yếu lý lịch"
+       },
+       {
+        "term": "hard copy",
+        "pos": "noun",
+        "ipa": "/hɑːrd ˈkɒpi/",
+        "meaning": "bản in cứng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q25.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/39b42a08-e156-4777-9a9a-c810f751a74c",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "Is the convention in New York or San Francisco this year?",
+     "options": {
+      "A": "They decided on Toronto instead.",
+      "B": "For medical equipment.",
+      "C": "It starts on September third."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "convention",
+        "pos": "noun",
+        "ipa": "/kənˈvɛnʃən/",
+        "meaning": "cuộc hội nghị, hội nghị"
+       },
+       {
+        "term": "decided on",
+        "pos": "phrase",
+        "ipa": "/dɪˈsaɪdɪd ɒn/",
+        "meaning": "quyết định về"
+       },
+       {
+        "term": "medical equipment",
+        "pos": "noun phrase",
+        "ipa": "/ˈmɛdɪkl ɪˈkwɪpmənt/",
+        "meaning": "thiết bị y tế"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q26.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/b3d87f51-a309-4987-ac7e-3e5e238f7ed1",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Should I hang the paintings on this wall or on that one?",
+     "options": {
+      "A": "I have some more paint here.",
+      "B": "We're still deciding where to put them.",
+      "C": "Some beautiful artwork."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "hang the paintings",
+        "pos": "verb phrase",
+        "ipa": "/hæŋ ðə ˈpeɪntɪŋz/",
+        "meaning": "treo những bức tranh"
+       },
+       {
+        "term": "on this wall",
+        "pos": "phrase",
+        "ipa": "/ɒn ðɪs wɔːl/",
+        "meaning": "trên bức tường này"
+       },
+       {
+        "term": "deciding where",
+        "pos": "verb phrase",
+        "ipa": "/dɪˈsaɪdɪŋ wɛr/",
+        "meaning": "quyết định ở đâu"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q27.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/919eca97-9e9f-4176-b746-dc3f0e8d03c1",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "Is the orientation session in this building or in the Carson Building?",
+     "options": {
+      "A": "Starting on Monday.",
+      "B": "It's just upstairs.",
+      "C": "For the new employees."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "orientation session",
+        "pos": "noun",
+        "ipa": "/ˌɔːriɛnˈteɪʃən ˈsɛʃən/",
+        "meaning": "buổi định hướng"
+       },
+       {
+        "term": "upstairs",
+        "pos": "adverb",
+        "ipa": "/ʌpˈsteərz/",
+        "meaning": "ở tầng trên"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q28.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/12f70f1e-8e25-4bcd-9a51-2d21e558ed29",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "Which flavor of ice cream would you prefer, vanilla or chocolate?",
+     "options": {
+      "A": "I'll refer him to you.",
+      "B": "Some of each, if there's enough.",
+      "C": "It's next to the café."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "flavor",
+        "pos": "noun",
+        "ipa": "/ˈfleɪvər/",
+        "meaning": "hương vị"
+       },
+       {
+        "term": "prefer",
+        "pos": "verb",
+        "ipa": "/prɪˈfɜːr/",
+        "meaning": "thích hơn"
+       },
+       {
+        "term": "vanilla",
+        "pos": "noun",
+        "ipa": "/vəˈnɪlə/",
+        "meaning": "vani"
+       },
+       {
+        "term": "chocolate",
+        "pos": "noun",
+        "ipa": "/ˈtʃɔːklət/",
+        "meaning": "sô cô la"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q29.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/e06af3b9-4bf1-481e-9606-8eed9fb31bc3",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "Will the seminar be a full day or a half day?",
+     "options": {
+      "A": "I haven't received the schedule yet.",
+      "B": "The third door on the left.",
+      "C": "Why was it moved?"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "seminar",
+        "pos": "noun",
+        "ipa": "/ˈsɛmɪnɑːr/",
+        "meaning": "hội thảo"
+       },
+       {
+        "term": "full day",
+        "pos": "phrase",
+        "ipa": "/fʊl deɪ/",
+        "meaning": "cả ngày"
+       },
+       {
+        "term": "half day",
+        "pos": "phrase",
+        "ipa": "/hɑːf deɪ/",
+        "meaning": "nửa ngày"
+       },
+       {
+        "term": "schedule",
+        "pos": "noun",
+        "ipa": "/ˈskɛdʒuːl/",
+        "meaning": "lịch trình"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q30.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/d10bfcb3-5dfb-4024-9eab-8b543d9b1c28",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "Would you like a room on the first or one of the upper floors?",
+     "options": {
+      "A": "It's just around the corner.",
+      "B": "I like the floor plan.",
+      "C": "Either one is fine."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "upper floors",
+        "pos": "noun phrase",
+        "ipa": "/ˈʌpər flɔːrz/",
+        "meaning": "các tầng trên"
+       },
+       {
+        "term": "floor plan",
+        "pos": "noun phrase",
+        "ipa": "/ˈflɔːr plæn/",
+        "meaning": "bản vẽ mặt bằng"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

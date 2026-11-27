@@ -110,17 +110,22 @@ export default async function SkillUnitPage({ params }: Props) {
       </>
     );
 
-    // Bộ luyện riêng (Part 1/3/4), chia mục Luyện tập cơ bản / nâng cao
+    // Bộ luyện riêng (Part 1–4), chia mục Luyện tập cơ bản / nâng cao (Part 2: theo dạng câu hỏi)
     const sets = isSetPart(part) ? PART_SETS[part] : [];
-    const setSections = isSetPart(part)
+    const toCard = (s: (typeof sets)[number]) => ({
+      slug: s.slug,
+      testNumber: s.testNumber,
+      title: s.label,
+      detail: part === 1 || part === 2 ? `${s.questions} câu` : `${s.items} ${SET_ITEM_NOUN[part]} · ${s.questions} câu`,
+    });
+    // Part 2: mỗi dạng câu hỏi một mục (3 test × 10 câu)
+    const part2Groups = part === 2 ? [...new Set(sets.map((s) => s.group ?? ""))] : [];
+    const setSections = part === 2
+      ? part2Groups.map((g) => ({ title: `Luyện tập cơ bản · ${g}`, tests: sets.filter((s) => s.group === g).map(toCard) }))
+      : isSetPart(part)
       ? SET_LEVELS.map(({ level, title }) => ({
           title,
-          tests: sets.filter((s) => s.level === level).map((s) => ({
-            slug: s.slug,
-            testNumber: s.testNumber,
-            title: s.label,
-            detail: part === 1 ? `${s.questions} câu` : `${s.items} ${SET_ITEM_NOUN[part]} · ${s.questions} câu`,
-          })),
+          tests: sets.filter((s) => s.level === level).map(toCard),
         })).filter((sec) => sec.tests.length > 0)
       : [];
     const freeSets = sets.filter((s) => s.free);
@@ -167,7 +172,10 @@ export default async function SkillUnitPage({ params }: Props) {
         intro={
           hasSets ? (
             <>
-              <strong>Luyện tập cơ bản</strong>: {sets.length} test × 10 câu, có giải thích tiếng Việt từng câu.{" "}
+              <strong>Luyện tập cơ bản</strong>: {sets.length} test × 10 câu
+              {part === 2
+                ? `, chia theo ${part2Groups.length} dạng câu hỏi; xem lại có script, đáp án, từ vựng và lối sang bài chép chính tả từng câu.`
+                : ", có giải thích tiếng Việt từng câu."}{" "}
               <strong>Luyện đề</strong>: {caTests.length} đề × {part === 1 ? "6" : "25"} câu. {modes}{" "}Script &amp; đáp án hiện sau khi nộp bài.
             </>
           ) : (

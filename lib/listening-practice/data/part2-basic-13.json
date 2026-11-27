@@ -1,0 +1,503 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 113,
+ "slug": "part2-basic-13",
+ "title": "Luyện tập cơ bản · Câu hỏi đuôi – Câu trần thuật · Test 1",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q01.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/ddfc1ae1-7672-4b4d-bf9a-2798eff81d34",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "That jacket is too small, isn't it?",
+     "options": {
+      "A": "It's rather cold today.",
+      "B": "Yes, it's a little tight.",
+      "C": "Cash or credit?"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "too small",
+        "pos": "phrase",
+        "ipa": "/tu smɔl/",
+        "meaning": "quá nhỏ"
+       },
+       {
+        "term": "rather cold",
+        "pos": "phrase",
+        "ipa": "/ˈrɑːðər koʊld/",
+        "meaning": "khá lạnh"
+       },
+       {
+        "term": "a little tight",
+        "pos": "phrase",
+        "ipa": "/ə ˈlɪtəl taɪt/",
+        "meaning": "hơi chật"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q02.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/b319f718-d7e2-4816-8d58-eeb9f086fc3c",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "You're going to the office picnic, aren't you?",
+     "options": {
+      "A": "Ms. Cho, the head of marketing.",
+      "B": "Yes, I'll be there.",
+      "C": "A large catering order."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "office picnic",
+        "pos": "noun phrase",
+        "ipa": "/ˈɒfɪs ˈpɪknɪk/",
+        "meaning": "bữa tiệc ở văn phòng"
+       },
+       {
+        "term": "head of marketing",
+        "pos": "noun phrase",
+        "ipa": "/hɛd ɒv ˈmɑːkɪtɪŋ/",
+        "meaning": "trưởng phòng marketing"
+       },
+       {
+        "term": "catering order",
+        "pos": "noun phrase",
+        "ipa": "/ˈkeɪtərɪŋ ˈɔːdə/",
+        "meaning": "đơn hàng dịch vụ ăn uống"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q03.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/0f3871e0-f2e4-4f10-ad88-b147fc256a22",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "The shoe sale lasts until Thursday, doesn't it?",
+     "options": {
+      "A": "I'll try them on.",
+      "B": "Do you have the receipt?",
+      "C": "No, it ends on Wednesday."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "shoe sale",
+        "pos": "noun phrase",
+        "ipa": "/ˈʃuː seɪl/",
+        "meaning": "buổi bán giày giảm giá"
+       },
+       {
+        "term": "lasts until",
+        "pos": "verb phrase",
+        "ipa": "/lɑːsts ˈʌntɪl/",
+        "meaning": "kéo dài cho đến"
+       },
+       {
+        "term": "end on",
+        "pos": "verb phrase",
+        "ipa": "/ɛnd ɒn/",
+        "meaning": "kết thúc vào ngày"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q04.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/1dc814b0-eb7f-4f3b-bfa3-2f9b5983efb2",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "You already signed the lease to your house, didn't you?",
+     "options": {
+      "A": "A dozen at least.",
+      "B": "Yes, last week.",
+      "C": "It's on Alder Street."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "sign the lease",
+        "pos": "phrase",
+        "ipa": "/saɪn ðə liːs/",
+        "meaning": "ký hợp đồng thuê nhà"
+       },
+       {
+        "term": "house",
+        "pos": "noun",
+        "ipa": "/haʊs/",
+        "meaning": "nhà ở"
+       },
+       {
+        "term": "last week",
+        "pos": "phrase",
+        "ipa": "/læst wiːk/",
+        "meaning": "tuần trước"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q05.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/c4c6a2a7-89e0-4d90-9311-bce5b9b3622f",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "We'll need umbrellas, won't we?",
+     "options": {
+      "A": "She stayed inside all day.",
+      "B": "No, the weather's supposed to be nice.",
+      "C": "It takes about two hours."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "umbrellas",
+        "pos": "noun",
+        "ipa": "/ʌmˈbrɛləz/",
+        "meaning": "cái ô, cây dù"
+       },
+       {
+        "term": "stayed inside",
+        "pos": "verb",
+        "ipa": "/steɪd ɪnˈsaɪd/",
+        "meaning": "ở trong nhà"
+       },
+       {
+        "term": "supposed to be",
+        "pos": "phrase",
+        "ipa": "/səˈpoʊzd tə bi/",
+        "meaning": "được cho là, dự kiến là"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q06.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/f6dbce58-3277-473a-892a-8275a91c2a45",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "The Franklin Bridge isn't far from here, is it?",
+     "options": {
+      "A": "Probably around midnight.",
+      "B": "Two should be plenty.",
+      "C": "No, just a few kilometers away."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "far from",
+        "pos": "phrase",
+        "ipa": "/fɑː frɒm/",
+        "meaning": "xa khỏi"
+       },
+       {
+        "term": "kilometers away",
+        "pos": "phrase",
+        "ipa": "/kɪˈlɒmɪtərz əˈweɪ/",
+        "meaning": "cách vài kilômét"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q07.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/3791ea30-8030-4ef6-b1c3-919c48471876",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "This is your suitcase, right?",
+     "options": {
+      "A": "It looks like mine.",
+      "B": "Just in case.",
+      "C": "At the train station."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "suitcase",
+        "pos": "noun",
+        "ipa": "/ˈsuːtkeɪs/",
+        "meaning": "vali, va li"
+       },
+       {
+        "term": "looks like",
+        "pos": "verb",
+        "ipa": "/lʊks laɪk/",
+        "meaning": "trông giống như"
+       },
+       {
+        "term": "train station",
+        "pos": "noun",
+        "ipa": "/treɪn ˈsteɪʃn/",
+        "meaning": "nhà ga xe lửa"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q08.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/909415e7-42cc-4bc5-b77e-676532c50c98",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "Our parking permits are valid for two years, aren't they?",
+     "options": {
+      "A": "No, I came by car.",
+      "B": "The park opened last year.",
+      "C": "Yes, I just renewed mine."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "parking permits",
+        "pos": "noun",
+        "ipa": "/ˈpɑːkɪŋ ˌpɜːmɪt/",
+        "meaning": "giấy phép đậu xe"
+       },
+       {
+        "term": "valid for",
+        "pos": "phrase",
+        "ipa": "/ˈvælɪd fɔː/",
+        "meaning": "có hiệu lực cho"
+       },
+       {
+        "term": "renewed",
+        "pos": "verb",
+        "ipa": "/rɪˈnjuːd/",
+        "meaning": "gia hạn, làm mới"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q09.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/102924e0-753e-44cc-bcbd-908e1d57cb21",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "Flowers will be delivered for tonight's banquet, won't they?",
+     "options": {
+      "A": "No, the bank is closed.",
+      "B": "Dinner for eight.",
+      "C": "We'll drop them off by four o'clock."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "deliver",
+        "pos": "verb",
+        "ipa": "/dɪˈlɪvər/",
+        "meaning": "giao hàng"
+       },
+       {
+        "term": "banquet",
+        "pos": "noun",
+        "ipa": "/ˈbæŋkwɪt/",
+        "meaning": "bữa tiệc lớn"
+       },
+       {
+        "term": "drop off",
+        "pos": "verb",
+        "ipa": "/drɒp ɒf/",
+        "meaning": "gửi lại, trả lại"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q10.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/f7085877-3638-416d-a2f1-6f87179f407b",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "You've already explained the task to the interns, haven't you?",
+     "options": {
+      "A": "No, could you do it?",
+      "B": "Twenty-seven pages.",
+      "C": "That's a good explanation."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "explain the task",
+        "pos": "phrase",
+        "ipa": "/ɪkˈspleɪn ðə tɑːsk/",
+        "meaning": "giải thích nhiệm vụ"
+       },
+       {
+        "term": "interns",
+        "pos": "noun",
+        "ipa": "/ˈɪntɜːrnz/",
+        "meaning": "thực tập sinh"
+       },
+       {
+        "term": "good explanation",
+        "pos": "phrase",
+        "ipa": "/ɡʊd ˌɛk.spləˈneɪ.ʃən/",
+        "meaning": "sự giải thích tốt"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

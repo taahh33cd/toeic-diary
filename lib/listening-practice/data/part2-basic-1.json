@@ -1,0 +1,491 @@
+{
+ "examSlug": "part2-practice",
+ "examTitle": "Luyện nghe Part 2",
+ "testNumber": 101,
+ "slug": "part2-basic-1",
+ "title": "Luyện tập cơ bản · Who – What – Which · Test 1",
+ "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which",
+ "locked": false,
+ "lockReason": null,
+ "stats": {
+  "questions": 10,
+  "answered": 10,
+  "missingAnswers": [],
+  "brokenQuestions": []
+ },
+ "warnings": [],
+ "groups": [
+  {
+   "part": 2,
+   "questionStart": 1,
+   "questionEnd": 1,
+   "audio": "Q01.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/86df5cb3-67e8-452d-8eb3-426a1f1ea7f9",
+   "questions": [
+    {
+     "number": 1,
+     "part": 2,
+     "prompt": "Who's setting up the projector?",
+     "options": {
+      "A": "Ali from technical support.",
+      "B": "Yes, it's been turned on.",
+      "C": "With the orange cable"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "set up",
+        "pos": "verb",
+        "ipa": "/sɛt ʌp/",
+        "meaning": "chuẩn bị, sắp đặt"
+       },
+       {
+        "term": "projector",
+        "pos": "noun",
+        "ipa": "/prəˈdʒɛktər/",
+        "meaning": "máy chiếu"
+       },
+       {
+        "term": "technical support",
+        "pos": "noun",
+        "ipa": "/ˈtɛknɪkl səˈpɔːrt/",
+        "meaning": "hỗ trợ kỹ thuật"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 2,
+   "questionEnd": 2,
+   "audio": "Q02.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/6de006fc-ef08-4d7f-8cfa-23c5ce5d017b",
+   "questions": [
+    {
+     "number": 2,
+     "part": 2,
+     "prompt": "Which hotel did you go to?",
+     "options": {
+      "A": "I can't remember the name.",
+      "B": "Swimming and hiking.",
+      "C": "The room has a view."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "hotel",
+        "pos": "noun",
+        "ipa": "/hoʊˈtɛl/",
+        "meaning": "khách sạn"
+       },
+       {
+        "term": "remember",
+        "pos": "verb",
+        "ipa": "/rɪˈmɛmbər/",
+        "meaning": "nhớ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 3,
+   "questionEnd": 3,
+   "audio": "Q03.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/f626b6aa-d384-4ed8-83d0-6a11c44e1eb5",
+   "questions": [
+    {
+     "number": 3,
+     "part": 2,
+     "prompt": "What did you buy at the bookstore?",
+     "options": {
+      "A": "Just a gift card.",
+      "B": "Yesterday afternoon.",
+      "C": "It was never published."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "bookstore",
+        "pos": "noun",
+        "ipa": "/ˈbʊkstɔːr/",
+        "meaning": "nhà sách"
+       },
+       {
+        "term": "gift card",
+        "pos": "noun",
+        "ipa": "/ˈɡɪft kɑːrd/",
+        "meaning": "thẻ quà tặng"
+       },
+       {
+        "term": "published",
+        "pos": "adjective",
+        "ipa": "/ˈpʌblɪʃt/",
+        "meaning": "đã xuất bản"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 4,
+   "questionEnd": 4,
+   "audio": "Q04.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/a00172fd-354b-42fe-a95a-0a7c34443faf",
+   "questions": [
+    {
+     "number": 4,
+     "part": 2,
+     "prompt": "Who attended the trade show last year?",
+     "options": {
+      "A": "Nearly half past six",
+      "B": "Sure, we can share a car.",
+      "C": "The sales team."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "attended",
+        "pos": "verb",
+        "ipa": "/əˈtɛndɪd/",
+        "meaning": "đã tham dự"
+       },
+       {
+        "term": "trade show",
+        "pos": "noun",
+        "ipa": "/treɪd ʃoʊ/",
+        "meaning": "hội chợ thương mại"
+       },
+       {
+        "term": "sales team",
+        "pos": "noun",
+        "ipa": "/seɪlz tim/",
+        "meaning": "đội ngũ bán hàng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 5,
+   "questionEnd": 5,
+   "audio": "Q05.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/c3f59237-b2d5-4127-9dee-53c51761d548",
+   "questions": [
+    {
+     "number": 5,
+     "part": 2,
+     "prompt": "Who bought the tickets?",
+     "options": {
+      "A": "My assistant did.",
+      "B": "That's too expensive.",
+      "C": "Tomorrow's show."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "assistant",
+        "pos": "noun",
+        "ipa": "/əˈsɪstənt/",
+        "meaning": "trợ lý"
+       },
+       {
+        "term": "expensive",
+        "pos": "adjective",
+        "ipa": "/ɪkˈspɛnsɪv/",
+        "meaning": "đắt tiền"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 6,
+   "questionEnd": 6,
+   "audio": "Q06.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/01c08c7f-9898-450a-9ff7-ead2cb4cc857",
+   "questions": [
+    {
+     "number": 6,
+     "part": 2,
+     "prompt": "Which flight are you taking?",
+     "options": {
+      "A": "Sure, I'll take it.",
+      "B": "No, are you?",
+      "C": "The one at seven."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "taking",
+        "pos": "verb",
+        "ipa": "/teɪkɪŋ/",
+        "meaning": "đang đi, đang sử dụng"
+       },
+       {
+        "term": "flight",
+        "pos": "noun",
+        "ipa": "/flaɪt/",
+        "meaning": "chuyến bay"
+       },
+       {
+        "term": "at seven",
+        "pos": "phrase",
+        "ipa": "/æt ˈsɛvən/",
+        "meaning": "vào lúc bảy giờ"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 7,
+   "questionEnd": 7,
+   "audio": "Q07.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/1c8402b6-6a94-4e36-b5c8-e97123e62315",
+   "questions": [
+    {
+     "number": 7,
+     "part": 2,
+     "prompt": "What time do you usually get to work?",
+     "options": {
+      "A": "Between eight-thirty and nine.",
+      "B": "I usually take the train.",
+      "C": "I was hired three months ago."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "A",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "get to work",
+        "pos": "phrase",
+        "ipa": "/ɡɛt tuː wɜːrk/",
+        "meaning": "đến chỗ làm"
+       },
+       {
+        "term": "take the train",
+        "pos": "phrase",
+        "ipa": "/teɪk ðə treɪn/",
+        "meaning": "đi tàu, bắt tàu"
+       },
+       {
+        "term": "hired",
+        "pos": "verb",
+        "ipa": "/ˈhaɪərd/",
+        "meaning": "được tuyển dụng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 8,
+   "questionEnd": 8,
+   "audio": "Q08.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/73fba3c3-3fea-4413-9365-d5f258d24807",
+   "questions": [
+    {
+     "number": 8,
+     "part": 2,
+     "prompt": "Who supervises this production line?",
+     "options": {
+      "A": "A thousand bottles per hour.",
+      "B": "Normally Mr. Patel does.",
+      "C": "It'll be a long wait."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "supervise",
+        "pos": "verb",
+        "ipa": "/ˈsuːpəvaɪz/",
+        "meaning": "giám sát, điều hành"
+       },
+       {
+        "term": "production line",
+        "pos": "noun",
+        "ipa": "/prəˈdʌkʃən laɪn/",
+        "meaning": "dây chuyền sản xuất"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 9,
+   "questionEnd": 9,
+   "audio": "Q09.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/64e76f76-46e2-4f81-81e8-7635e5d3cbf9",
+   "questions": [
+    {
+     "number": 9,
+     "part": 2,
+     "prompt": "Which event is Marco planning?",
+     "options": {
+      "A": "The list of new staff.",
+      "B": "The luncheon next Thursday.",
+      "C": "When can I check it?"
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "planning",
+        "pos": "noun",
+        "ipa": "/ˈplænɪŋ/",
+        "meaning": "việc lên kế hoạch"
+       },
+       {
+        "term": "event",
+        "pos": "noun",
+        "ipa": "/ɪˈvɛnt/",
+        "meaning": "sự kiện"
+       },
+       {
+        "term": "luncheon",
+        "pos": "noun",
+        "ipa": "/ˈlʌntʃən/",
+        "meaning": "bữa trưa trang trọng"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "questionStart": 10,
+   "questionEnd": 10,
+   "audio": "Q10.mp3",
+   "image": null,
+   "transcript": null,
+   "keywords": [],
+   "dictationHref": "/practice/part-2/866bc60d-bfa1-409c-88fa-35f8478dba6b",
+   "questions": [
+    {
+     "number": 10,
+     "part": 2,
+     "prompt": "Which design proposal did the client prefer?",
+     "options": {
+      "A": "They described it well.",
+      "B": "Because it's new.",
+      "C": "She liked the first one."
+     },
+     "showText": false,
+     "broken": false,
+     "answer": "C",
+     "explanation": {
+      "translation": null,
+      "reasoning": null,
+      "glossary": [
+       {
+        "term": "design proposal",
+        "pos": "noun phrase",
+        "ipa": "/dɪˈzaɪn prəˈpoʊzəl/",
+        "meaning": "đề xuất thiết kế"
+       },
+       {
+        "term": "prefer",
+        "pos": "verb",
+        "ipa": "/prɪˈfɜːr/",
+        "meaning": "thích hơn"
+       },
+       {
+        "term": "described",
+        "pos": "verb",
+        "ipa": "/dɪˈskraɪbd/",
+        "meaning": "mô tả"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}
