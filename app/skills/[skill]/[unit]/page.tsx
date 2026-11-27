@@ -6,7 +6,7 @@ import { createClient } from "@/lib/supabase/server";
 import { SkillComingSoon } from "@/components/skills/SkillComingSoon";
 import { WritingSentenceClient } from "@/components/skills/WritingSentenceClient";
 import { McqExamClient } from "@/components/skills/exam/McqExamClient";
-import { PracticeTestList } from "@/components/skills/listening/PracticeTestList";
+import { PracticeTestList, type PracticeSection } from "@/components/skills/listening/PracticeTestList";
 import { FREE_PRACTICE_TESTS, listPracticeTests } from "@/lib/listening-practice";
 import { PART_SETS, SET_ITEM_NOUN, SET_LEVELS, isSetPart } from "@/lib/listening-practice/part-sets";
 import { WRITING_Q1_5, Q15_PART_KEY } from "@/lib/skills/writing-q1-5";
@@ -118,10 +118,13 @@ export default async function SkillUnitPage({ params }: Props) {
       title: s.label,
       detail: part === 1 || part === 2 ? `${s.questions} câu` : `${s.items} ${SET_ITEM_NOUN[part]} · ${s.questions} câu`,
     });
-    // Part 2: mỗi dạng câu hỏi một mục (3 test × 10 câu)
+    // Part 2: một thư mục "Luyện tập cơ bản", bên trong chia theo dạng câu hỏi (3 test × 10 câu)
     const part2Groups = part === 2 ? [...new Set(sets.map((s) => s.group ?? ""))] : [];
-    const setSections = part === 2
-      ? part2Groups.map((g) => ({ title: `Luyện tập cơ bản · ${g}`, tests: sets.filter((s) => s.group === g).map(toCard) }))
+    const setSections: PracticeSection[] = part === 2
+      ? [{
+          title: "Luyện tập cơ bản",
+          groups: part2Groups.map((g) => ({ title: g, tests: sets.filter((s) => s.group === g).map(toCard) })),
+        }]
       : isSetPart(part)
       ? SET_LEVELS.map(({ level, title }) => ({
           title,
@@ -174,7 +177,7 @@ export default async function SkillUnitPage({ params }: Props) {
             <>
               <strong>Luyện tập cơ bản</strong>: {sets.length} test × 10 câu
               {part === 2
-                ? `, chia theo ${part2Groups.length} dạng câu hỏi; xem lại có script, đáp án, từ vựng và lối sang bài chép chính tả từng câu.`
+                ? `, chia theo ${part2Groups.length} dạng câu hỏi (bấm vào thư mục để mở); xem lại có script, đáp án, từ vựng và lối sang bài chép chính tả từng câu.`
                 : ", có giải thích tiếng Việt từng câu."}{" "}
               <strong>Luyện đề</strong>: {caTests.length} đề × {part === 1 ? "6" : "25"} câu. {modes}{" "}Script &amp; đáp án hiện sau khi nộp bài.
             </>

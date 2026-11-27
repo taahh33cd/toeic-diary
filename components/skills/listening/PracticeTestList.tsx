@@ -3,6 +3,10 @@ import type { Skill, SkillUnit } from "@/lib/skills/structure";
 import type { PracticeListItem } from "@/lib/listening-practice/types";
 import type { TestStat } from "@/lib/journal/attempts";
 
+export type PracticeSection =
+  | { title?: string; tests: PracticeListItem[]; groups?: undefined }
+  | { title: string; groups: { title: string; tests: PracticeListItem[] }[]; tests?: undefined };
+
 export function PracticeTestList({
   skill,
   unit,
@@ -15,8 +19,11 @@ export function PracticeTestList({
 }: {
   skill: Skill;
   unit: SkillUnit;
-  /** Các mục đề (vd "Luyện tập cơ bản", "Luyện tập nâng cao"); một mục không tên = một lưới phẳng */
-  sections: { title?: string; tests: PracticeListItem[] }[];
+  /**
+   * Các mục đề (vd "Luyện tập cơ bản", "Luyện tập nâng cao"); một mục không tên = một lưới phẳng.
+   * Mục có `groups` là một thư mục: đóng sẵn, bấm vào mới hiện các nhóm đề bên trong.
+   */
+  sections: PracticeSection[];
   /** Đoạn giới thiệu số đề/chế độ làm bài phía trên lưới đề */
   intro: React.ReactNode;
   /** Dòng báo đề nào mở miễn phí — chỉ hiện khi chưa mở khoá */
@@ -28,63 +35,9 @@ export function PracticeTestList({
   /** Lịch sử của học viên theo số đề — rỗng khi chưa đăng nhập */
   stats?: Map<number, TestStat>;
 }) {
-  return (
-    <div
-      style={{
-        minHeight: "100%",
-        background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 860,
-        margin: "0 auto",
-        width: "100%",
-        boxSizing: "border-box",
-      }}
-    >
-      {/* Breadcrumb */}
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
-        <Link href="/skills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Luyện đề</Link>
-        <span>›</span>
-        <Link href={`/skills/${skill.slug}`} style={{ color: "var(--text-muted)", textDecoration: "none" }}>{skill.label}</Link>
-        <span>›</span>
-        <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>{unit.label}</span>
-      </div>
-
-      {/* Header */}
-      <div style={{ marginBottom: "1.75rem" }}>
-        <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
-          {skill.emoji} {skill.label} · {unit.label}
-        </p>
-        <h1 style={{ fontSize: "clamp(1.3rem, 3vw, 1.7rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2, margin: "0 0 0.5rem" }}>
-          {unit.labelVi}{" "}
-          <span style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontWeight: 500, fontStyle: "italic" }}>({unit.labelEn})</span>
-        </h1>
-        <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
-          {unit.description}
-        </p>
-      </div>
-
-      <div style={{ height: 1, background: "var(--border)", marginBottom: "1.5rem" }} />
-
-      <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6, margin: "0 0 1.1rem" }}>
-        {intro}
-      </p>
-
-      {!unlocked && (
-        <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", lineHeight: 1.6, margin: "0 0 1.1rem" }}>
-          🔓 {freeNote}
-        </p>
-      )}
-
-      {sections.map((sec, si) => (
-      <section key={sec.title ?? si} style={{ marginBottom: "1.6rem" }}>
-      {sec.title && (
-        <h2 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.7rem" }}>
-          {sec.title}{" "}
-          <span style={{ fontSize: "0.78rem", fontWeight: 500, color: "var(--text-muted)" }}>· {sec.tests.length} test</span>
-        </h2>
-      )}
+  const grid = (tests: PracticeListItem[]) => (
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "0.7rem" }}>
-        {sec.tests.map((t) => {
+        {tests.map((t) => {
           const locked = !unlocked && !freeTests.includes(t.testNumber);
           const box: React.CSSProperties = {
             display: "block",
@@ -137,6 +90,86 @@ export function PracticeTestList({
           );
         })}
       </div>
+  );
+
+  return (
+    <div
+      style={{
+        minHeight: "100%",
+        background: "var(--bg-primary)",
+        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
+        maxWidth: 860,
+        margin: "0 auto",
+        width: "100%",
+        boxSizing: "border-box",
+      }}
+    >
+      {/* Breadcrumb */}
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+        <Link href="/skills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Luyện đề</Link>
+        <span>›</span>
+        <Link href={`/skills/${skill.slug}`} style={{ color: "var(--text-muted)", textDecoration: "none" }}>{skill.label}</Link>
+        <span>›</span>
+        <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>{unit.label}</span>
+      </div>
+
+      {/* Header */}
+      <div style={{ marginBottom: "1.75rem" }}>
+        <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
+          {skill.emoji} {skill.label} · {unit.label}
+        </p>
+        <h1 style={{ fontSize: "clamp(1.3rem, 3vw, 1.7rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2, margin: "0 0 0.5rem" }}>
+          {unit.labelVi}{" "}
+          <span style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontWeight: 500, fontStyle: "italic" }}>({unit.labelEn})</span>
+        </h1>
+        <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+          {unit.description}
+        </p>
+      </div>
+
+      <div style={{ height: 1, background: "var(--border)", marginBottom: "1.5rem" }} />
+
+      <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6, margin: "0 0 1.1rem" }}>
+        {intro}
+      </p>
+
+      {!unlocked && (
+        <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", lineHeight: 1.6, margin: "0 0 1.1rem" }}>
+          🔓 {freeNote}
+        </p>
+      )}
+
+      {sections.map((sec, si) => (
+      <section key={sec.title ?? si} style={{ marginBottom: "1.6rem" }}>
+      {sec.title && !sec.groups && (
+        <h2 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.7rem" }}>
+          {sec.title}{" "}
+          <span style={{ fontSize: "0.78rem", fontWeight: 500, color: "var(--text-muted)" }}>· {sec.tests.length} test</span>
+        </h2>
+      )}
+      {sec.groups ? (
+        <details style={{ border: "1px solid var(--border)", borderRadius: 12, background: "var(--bg-secondary)" }}>
+          <summary style={{ cursor: "pointer", padding: "0.95rem 1.1rem", fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", listStyle: "revert" }}>
+            📁 {sec.title}{" "}
+            <span style={{ fontSize: "0.78rem", fontWeight: 500, color: "var(--text-muted)" }}>
+              · {sec.groups.length} dạng · {sec.groups.reduce((n, g) => n + g.tests.length, 0)} test
+            </span>
+          </summary>
+          <div style={{ padding: "0.2rem 1.1rem 1.1rem" }}>
+            {sec.groups.map((g) => (
+              <div key={g.title} style={{ marginTop: "0.9rem" }}>
+                <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.55rem" }}>
+                  {g.title}{" "}
+                  <span style={{ fontSize: "0.75rem", fontWeight: 500, color: "var(--text-muted)" }}>· {g.tests.length} test</span>
+                </h3>
+                {grid(g.tests)}
+              </div>
+            ))}
+          </div>
+        </details>
+      ) : (
+        grid(sec.tests)
+      )}
       </section>
       ))}
     </div>
